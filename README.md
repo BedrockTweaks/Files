@@ -16,3 +16,5 @@ Note: not accepting Addons PR at the moment.
 By contributing to Bedrock Tweaks, you agree that your contributions will be licensed under the [License](LICENSE).
 
 ### Thanks to all the Contributors!
+<!-- readme: collaborators,contributors -start -->
+<!-- readme: collaborators,contributors -end -->
