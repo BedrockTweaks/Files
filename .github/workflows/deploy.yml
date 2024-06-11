@@ -53,8 +53,6 @@ jobs:
         run: |
           status=${{ job.status }}
           echo "::set-output name=status::$status"
-    
-          - uses: akhilmhdh/contributors-readme-action@v2.3.10
           
   contrib-readme-job:
         runs-on: ubuntu-latest
