@@ -45,7 +45,9 @@ jobs:
           host: ${{ secrets.SERVER_ADDRESS }}
           username: ${{ secrets.SERVER_USER }}
           password: ${{ secrets.SERVER_PASSWORD }}
-          script: cd /opt/bedrock_tweaks/files && git reset --hard && git pull
+          script: |
+            git config --global --add safe.directory /opt/bedrock_tweaks/files
+            cd /opt/bedrock_tweaks/files && git reset --hard && git pull
 
 
       - name: Output job status
