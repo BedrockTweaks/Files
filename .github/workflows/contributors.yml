@@ -1,27 +1,17 @@
-name: Add contributors
-
 on:
-  schedule:
-    - cron: '0 0 * * *'
-  workflow_dispatch:
+    push:
+        branches:
+            - main
 
 jobs:
-  add-contributors:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-
-      - name: Add contributors
-        uses: BobAnkh/add-contributors@master
-        with:
-          CONTRIBUTOR: '### Thanks to all the Contributors!'
-          COLUMN_PER_ROW: '6'
-          ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          IMG_WIDTH: '100'
-          FONT_SIZE: '14'
-          PATH: 'main:/README.md'
-          COMMIT_MESSAGE: 'chore(files): update contributors'
-          AVATAR_SHAPE: 'round'
+    contrib-readme-job:
+        runs-on: ubuntu-latest
+        name: A job to automate contrib in readme
+        permissions:
+            contents: write
+            pull-requests: write
+        steps:
+            - name: Contribute List
+              uses: akhilmhdh/contributors-readme-action@v2.3.10
+              env:
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
