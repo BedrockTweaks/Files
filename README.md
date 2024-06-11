@@ -1,4 +1,9 @@
-# Bedrock Tweaks Files
+<p align="center">
+    <img src="logo.svg"
+        height="130">
+</p>
+
+# Files
 The packs source code and directory from https://bedrocktweaks.net
 
 ## Contact
