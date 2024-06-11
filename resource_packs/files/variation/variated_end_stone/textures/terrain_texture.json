@@ -1,0 +1,32 @@
+{
+	"num_mip_levels": 4,
+	"padding": 8,
+	"resource_pack_name": "vanilla",
+	"texture_name": "atlas.terrain",
+	"texture_data": {
+		"end_stone": {
+			"textures": {
+				"variations": [
+					{
+						"path": "textures/blocks/end_stone/0"
+					},
+					{
+						"path": "textures/blocks/end_stone/1"
+					},
+					{
+						"path": "textures/blocks/end_stone/2"
+					},
+					{
+						"path": "textures/blocks/end_stone/3"
+					},
+					{
+						"path": "textures/blocks/end_stone/4"
+					},
+					{
+						"path": "textures/blocks/end_stone/5"
+					}
+				]
+			}
+		}
+	}
+}

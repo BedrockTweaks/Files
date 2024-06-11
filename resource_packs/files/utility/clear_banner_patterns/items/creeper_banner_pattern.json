@@ -1,0 +1,12 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "minecraft:creeper_banner_pattern",
+			"category": "Equipment"
+		},
+		"components": {
+			"minecraft:icon": "creeper_banner_pattern"
+		}
+	}
+}

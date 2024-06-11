@@ -1,0 +1,18 @@
+{
+	"format_version": "1.19.0",
+	"minecraft:recipe_furnace": {
+		"description": {
+			"identifier": "bt:white.powder_to_glass"
+		},
+		"tags": ["furnace"],
+		"input": {
+			"item": "minecraft:concrete_powder",
+			"data": 0
+		},
+		"output": {
+			"item": "minecraft:stained_glass",
+			"data": 0
+		},
+		"group": "powder_to_glass"
+	}
+}

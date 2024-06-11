@@ -1,0 +1,23 @@
+{
+	"format_version": "1.19.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "minecraft:spruce_wood"
+		},
+		"tags": ["crafting_table"],
+		"priority": 0,
+		"group": "wood",
+		"pattern": ["##", "##"],
+		"key": {
+			"#": {
+				"item": "minecraft:log",
+				"data": 1
+			}
+		},
+		"result": {
+			"item": "minecraft:wood",
+			"data": 1,
+			"count": 4
+		}
+	}
+}

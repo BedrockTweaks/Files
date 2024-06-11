@@ -1,0 +1,30 @@
+{
+	"format_version": "1.19.0",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "bt:andesite.from_stair"
+		},
+		"tags": ["crafting_table"],
+		"priority": 0,
+		"ingredients": [
+			{
+				"item": "minecraft:andesite_stairs"
+			},
+			{
+				"item": "minecraft:andesite_stairs"
+			},
+			{
+				"item": "minecraft:andesite_stairs"
+			},
+			{
+				"item": "minecraft:andesite_stairs"
+			}
+		],
+		"result": {
+			"item": "minecraft:stone",
+			"count": 3,
+			"data": 5
+		},
+		"group": "stairs_to_block"
+	}
+}

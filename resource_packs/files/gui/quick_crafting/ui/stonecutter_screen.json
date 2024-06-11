@@ -1,0 +1,14 @@
+{
+	"namespace": "stonecutter",
+
+	"arrow_icon": {
+		"controls": [
+			{
+				"stonecutter_quick_craft_button@bt_quick_crafting.stonecutter_quick_craft_button": {
+					"size": [24, 24],
+					"offset": [4, 6]
+				}
+			}
+		]
+	}
+}

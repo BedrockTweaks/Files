@@ -1,0 +1,24 @@
+{
+	"resource_pack_name": "vanilla",
+	"texture_name": "atlas.terrain",
+	"padding": 8,
+	"num_mip_levels": 4,
+	"texture_data": {
+		"infested_blocks": {
+			"textures": [
+				"textures/blocks/infested/cobblestone",
+				"textures/blocks/infested/stone_bricks",
+				"textures/blocks/infested/mossy_stone_bricks",
+				"textures/blocks/infested/cracked_stone_bricks",
+				"textures/blocks/infested/chiseled_stone_bricks",
+				"textures/blocks/infested/stone"
+			]
+		},
+		"infested_deepslate": {
+			"textures": "textures/blocks/infested/deepslate"
+		},
+		"infested_deepslate_top": {
+			"textures": "textures/blocks/infested/deepslate_top"
+		}
+	}
+}

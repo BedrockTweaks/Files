@@ -1,0 +1,30 @@
+{
+	"format_version": "1.19.0",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "bt:prismarine_bricks.from_stair"
+		},
+		"tags": ["crafting_table"],
+		"priority": 0,
+		"ingredients": [
+			{
+				"item": "minecraft:prismarine_bricks_stairs"
+			},
+			{
+				"item": "minecraft:prismarine_bricks_stairs"
+			},
+			{
+				"item": "minecraft:prismarine_bricks_stairs"
+			},
+			{
+				"item": "minecraft:prismarine_bricks_stairs"
+			}
+		],
+		"result": {
+			"item": "minecraft:prismarine",
+			"count": 3,
+			"data": 2
+		},
+		"group": "stairs_to_block"
+	}
+}

@@ -1,0 +1,22 @@
+{
+	"namespace": "brewing_stand",
+
+	"brewing_panel_top_half": {
+		"modifications": [
+			{
+				"array_name": "controls",
+				"operation": "insert_back",
+				"value": {
+					"brewing_modifiers_panel@bt_brewing_guide.brewing_modifiers_panel": {}
+				}
+			},
+			{
+				"array_name": "controls",
+				"operation": "insert_back",
+				"value": {
+					"brewing_ingredients_panel@bt_brewing_guide.brewing_ingredients_panel": {}
+				}
+			}
+		]
+	}
+}

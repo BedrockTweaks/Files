@@ -1,0 +1,116 @@
+{
+	"num_mip_levels": 4,
+	"padding": 8,
+	"resource_pack_name": "vanilla",
+	"texture_name": "atlas.terrain",
+	"texture_data": {
+		"dirt": {
+			"textures": [
+				{
+					"variations": [
+						{
+							"path": "textures/blocks/dirt/0"
+						},
+						{
+							"path": "textures/blocks/dirt/1"
+						},
+						{
+							"path": "textures/blocks/dirt/2"
+						},
+						{
+							"path": "textures/blocks/dirt/3"
+						},
+						{
+							"path": "textures/blocks/dirt/4"
+						},
+						{
+							"path": "textures/blocks/dirt/5"
+						},
+						{
+							"path": "textures/blocks/dirt/6"
+						},
+						{
+							"path": "textures/blocks/dirt/7"
+						},
+						{
+							"path": "textures/blocks/dirt/8"
+						},
+						{
+							"path": "textures/blocks/dirt/9"
+						},
+						{
+							"path": "textures/blocks/dirt/10"
+						},
+						{
+							"path": "textures/blocks/dirt/11"
+						},
+						{
+							"path": "textures/blocks/dirt/12"
+						},
+						{
+							"path": "textures/blocks/dirt/13"
+						},
+						{
+							"path": "textures/blocks/dirt/14"
+						},
+						{
+							"path": "textures/blocks/dirt/15"
+						}
+					]
+				},
+				{
+					"variations": [
+						{
+							"path": "textures/blocks/coarse_dirt/0"
+						},
+						{
+							"path": "textures/blocks/coarse_dirt/1"
+						},
+						{
+							"path": "textures/blocks/coarse_dirt/2"
+						},
+						{
+							"path": "textures/blocks/coarse_dirt/3"
+						},
+						{
+							"path": "textures/blocks/coarse_dirt/4"
+						},
+						{
+							"path": "textures/blocks/coarse_dirt/5"
+						},
+						{
+							"path": "textures/blocks/coarse_dirt/6"
+						},
+						{
+							"path": "textures/blocks/coarse_dirt/7"
+						},
+						{
+							"path": "textures/blocks/coarse_dirt/8"
+						},
+						{
+							"path": "textures/blocks/coarse_dirt/9"
+						},
+						{
+							"path": "textures/blocks/coarse_dirt/10"
+						},
+						{
+							"path": "textures/blocks/coarse_dirt/11"
+						},
+						{
+							"path": "textures/blocks/coarse_dirt/12"
+						},
+						{
+							"path": "textures/blocks/coarse_dirt/13"
+						},
+						{
+							"path": "textures/blocks/coarse_dirt/14"
+						},
+						{
+							"path": "textures/blocks/coarse_dirt/15"
+						}
+					]
+				}
+			]
+		}
+	}
+}

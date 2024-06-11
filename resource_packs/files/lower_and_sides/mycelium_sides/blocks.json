@@ -1,0 +1,15 @@
+{
+	"format_version": "1.1.0",
+	"mycelium": {
+		"isotropic": {
+			"down": true,
+			"up": true
+		},
+		"sound": "grass",
+		"textures": {
+			"down": "mycelium_bottom",
+			"side": "mycelium_top",
+			"up": "mycelium_top"
+		}
+	}
+}

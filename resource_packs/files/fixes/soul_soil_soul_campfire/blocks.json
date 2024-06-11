@@ -1,0 +1,11 @@
+{
+	"format_version": "1.1.0",
+	"soul_campfire": {
+		"sound": "wood",
+		"textures": {
+			"down": "soul_campfire_log",
+			"side": "soul_campfire_log_lit",
+			"up": "soul_campfire_fire"
+		}
+	}
+}

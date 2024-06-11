@@ -1,0 +1,25 @@
+{
+	"namespace": "trade2_pocket",
+
+	"trade_and_help_buttons/how_to_play_button_holder": {
+		"modifications": [
+			{
+				"control_name": "how_to_play_button",
+				"operation": "remove"
+			},
+			{
+				"array_name": "controls",
+				"operation": "insert_back",
+				"value": [
+					{
+						"quick_trade_button@bt_quick_crafting.quick_trade_button": {
+							"size": [32, 32],
+							"anchor_from": "right_middle",
+							"anchor_to": "right_middle"
+						}
+					}
+				]
+			}
+		]
+	}
+}

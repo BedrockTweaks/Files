@@ -1,0 +1,86 @@
+{
+	"pools": [
+		{
+			"rolls": {
+				"min": 1,
+				"max": 2
+			},
+			"entries": [
+				{
+					"type": "loot_table",
+					"weight": 1,
+					"name": "loot_tables/treasure_gems/sapphire_gem.json",
+					"functions": [
+						{
+							"function": "set_count",
+							"count": {
+								"min": 1,
+								"max": 2
+							}
+						}
+					]
+				},
+				{
+					"type": "loot_table",
+					"weight": 1,
+					"name": "loot_tables/treasure_gems/amber_gem.json",
+					"functions": [
+						{
+							"function": "set_count",
+							"count": {
+								"min": 1,
+								"max": 2
+							}
+						}
+					]
+				},
+				{
+					"type": "loot_table",
+					"weight": 1,
+					"name": "loot_tables/treasure_gems/aquamarine_gem.json",
+					"functions": [
+						{
+							"function": "set_count",
+							"count": {
+								"min": 1,
+								"max": 2
+							}
+						}
+					]
+				},
+				{
+					"type": "loot_table",
+					"weight": 1,
+					"name": "loot_tables/treasure_gems/ruby_gem.json",
+					"functions": [
+						{
+							"function": "set_count",
+							"count": {
+								"min": 1,
+								"max": 2
+							}
+						}
+					]
+				},
+				{
+					"type": "loot_table",
+					"weight": 1,
+					"name": "loot_tables/treasure_gems/topaz_gem.json",
+					"functions": [
+						{
+							"function": "set_count",
+							"count": {
+								"min": 1,
+								"max": 2
+							}
+						}
+					]
+				}
+				// {
+				// 	"type": "empty",
+				// 	"weight": 2
+				// }
+			]
+		}
+	]
+}

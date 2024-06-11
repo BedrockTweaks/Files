@@ -1,0 +1,74 @@
+{
+	"num_mip_levels": 4,
+	"padding": 8,
+	"resource_pack_name": "vanilla",
+	"texture_name": "atlas.terrain",
+	"texture_data": {
+		"log_side": {
+			"textures": [
+				"textures/blocks/log_oak",
+				"textures/blocks/log_spruce",
+				{
+					"variations": [
+						{
+							"path": "textures/blocks/birch_log/0"
+						},
+						{
+							"path": "textures/blocks/birch_log/1"
+						},
+						{
+							"path": "textures/blocks/birch_log/2"
+						},
+						{
+							"path": "textures/blocks/birch_log/3"
+						},
+						{
+							"path": "textures/blocks/birch_log/4"
+						},
+						{
+							"path": "textures/blocks/birch_log/5"
+						}
+					]
+				},
+				"textures/blocks/log_jungle"
+			]
+		},
+		"wood": {
+			"textures": [
+				"textures/blocks/log_oak",
+				"textures/blocks/stripped_oak_log",
+				"textures/blocks/log_spruce",
+				"textures/blocks/stripped_spruce_log",
+				{
+					"variations": [
+						{
+							"path": "textures/blocks/birch_log/0"
+						},
+						{
+							"path": "textures/blocks/birch_log/1"
+						},
+						{
+							"path": "textures/blocks/birch_log/2"
+						},
+						{
+							"path": "textures/blocks/birch_log/3"
+						},
+						{
+							"path": "textures/blocks/birch_log/4"
+						},
+						{
+							"path": "textures/blocks/birch_log/5"
+						}
+					]
+				},
+				"textures/blocks/stripped_birch_log",
+				"textures/blocks/log_jungle",
+				"textures/blocks/stripped_jungle_log",
+				"textures/blocks/log_acacia",
+				"textures/blocks/stripped_acacia_log",
+				"textures/blocks/log_big_oak",
+				"textures/blocks/stripped_dark_oak_log"
+			]
+		}
+	}
+}

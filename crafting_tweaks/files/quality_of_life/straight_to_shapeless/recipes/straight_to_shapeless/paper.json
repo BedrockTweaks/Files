@@ -1,0 +1,26 @@
+{
+	"format_version": "1.19.0",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "bt:paper.straight_to_shapeless"
+		},
+		"tags": ["crafting_table"],
+		"priority": 0,
+		"ingredients": [
+			{
+				"item": "minecraft:reeds"
+			},
+			{
+				"item": "minecraft:reeds"
+			},
+			{
+				"item": "minecraft:reeds"
+			}
+		],
+		"result": {
+			"item": "minecraft:paper",
+			"count": 3
+		},
+		"group": "straight_to_shapeless"
+	}
+}

@@ -1,0 +1,1 @@
+summon bt:gv.gem_collector "§6Gem Collector§r"

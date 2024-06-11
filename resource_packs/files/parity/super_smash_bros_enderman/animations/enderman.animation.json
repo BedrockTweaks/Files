@@ -1,0 +1,16 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.rp.bt.enderman.scary_face": {
+			"loop": true,
+			"bones": {
+				"hat": {
+					"position": [0.0, "-5.0 - this", 0.0]
+				},
+				"head": {
+					"position": [0.0, "-10.0 - this", 0.0]
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,21 @@
+{
+	"format_version": "1.19.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "minecraft:warped_stairs"
+		},
+		"tags": ["crafting_table"],
+		"priority": 0,
+		"group": "wooden_stairs",
+		"pattern": ["#  ", "## ", "###"],
+		"key": {
+			"#": {
+				"item": "minecraft:warped_planks"
+			}
+		},
+		"result": {
+			"item": "minecraft:warped_stairs",
+			"count": 8
+		}
+	}
+}

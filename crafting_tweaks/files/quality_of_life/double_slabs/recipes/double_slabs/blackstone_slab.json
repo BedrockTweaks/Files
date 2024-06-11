@@ -1,0 +1,21 @@
+{
+	"format_version": "1.19.0",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "bt:blackstone.to_2_slabs"
+		},
+		"tags": ["crafting_table"],
+		"priority": 0,
+		"ingredients": [
+			{
+				"item": "minecraft:blackstone",
+				"data": 5
+			}
+		],
+		"result": {
+			"item": "minecraft:blackstone_slab",
+			"count": 2
+		},
+		"group": "block_to_2_slabs"
+	}
+}

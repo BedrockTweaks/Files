@@ -1,0 +1,21 @@
+{
+    "format_version": "1.8.0",
+    "animations": {
+        "animation.bp.player.afk_timer": {
+            "loop": true,
+            "animation_length": 1.0,
+            "timeline": {
+                "0.0": [
+                    "/scoreboard objectives add afk_time dummy",
+                    "/scoreboard objectives add afk_display dummy \"§l§7Player AFK\"",
+                    "/scoreboard objectives setdisplay list afk_display",
+                    "/scoreboard objectives setdisplay belowname afk_display",
+                    "/scoreboard players add @s afk_time 1",
+                    "/scoreboard players reset * afk_display",
+                    //300 Seconds -> 5 Minutes
+                    "/execute @a[scores={afk_time=300..}] ~ ~ ~ scoreboard players set @s afk_display 1"
+                ]
+            }
+        }
+    }
+}

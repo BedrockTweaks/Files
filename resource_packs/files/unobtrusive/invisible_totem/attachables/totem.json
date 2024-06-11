@@ -1,0 +1,36 @@
+{
+	"format_version": "1.16.0",
+	"minecraft:attachable": {
+		"description": {
+			"identifier": "minecraft:totem_of_undying",
+			"materials": {
+				"default": "entity_alphatest",
+				"enchanted": "entity_alphatest_glint"
+			},
+			"textures": {
+				"default": "textures/items/totem",
+				"enchanted": "textures/misc/enchanted_item_glint"
+			},
+			"geometry": {
+				"default": "geometry.totem"
+			},
+			"render_controllers": [
+				{
+					"controller.render.bt.totem.first_person": "c.is_first_person"
+				},
+				{
+					"controller.render.bt.totem.any_person": "!c.is_first_person"
+				}
+			]
+			// "scripts": {
+			//   "pre_animation": [
+			//     "v.main_hand = c.item_slot == 'main_hand';",
+			//     "v.off_hand = c.item_slot == 'off_hand';",
+			//     "v.head = c.item_slot == 'head';"
+			//     //in theory, you could obviously apply this to any slot
+			//     //I've chosen these because they are what java displays 3D items in
+			//   ]
+			// }
+		}
+	}
+}

@@ -1,0 +1,18 @@
+{
+	"format_version": "1.1.0",
+	"warped_nylium": {
+		"isotropic": {
+			"down": true,
+			"up": true
+		},
+		"sound": "nylium",
+		"textures": {
+			"down": "netherrack",
+			"east": "warped_nylium_top",
+			"north": "warped_nylium_top",
+			"south": "warped_nylium_top",
+			"up": "warped_nylium_top",
+			"west": "warped_nylium_top"
+		}
+	}
+}

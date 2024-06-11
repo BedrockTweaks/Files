@@ -1,0 +1,1 @@
+kill @e[type=bt:gv.hermit_heads,c=1]

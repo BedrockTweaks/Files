@@ -1,0 +1,30 @@
+{
+	"format_version": "1.19.0",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "bt:smooth_red_sandstone_dyeing"
+		},
+		"tags": ["crafting_table"],
+		"priority": 0,
+		"result": {
+			"item": "minecraft:red_sandstone",
+			"count": 2,
+			"data": 3
+		},
+		"ingredients": [
+			{
+				"item": "minecraft:sandstone",
+				"data": 3
+			},
+			{
+				"item": "minecraft:sandstone",
+				"data": 3
+			},
+			{
+				"item": "minecraft:dye",
+				"data": 1
+			}
+		],
+		"group": "sandstone_dyeing"
+	}
+}

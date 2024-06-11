@@ -1,0 +1,25 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:item": {
+    "description": {
+      "identifier": "bt:mb.bone_block_helmet",
+      "category": "Equipment"
+    },
+    "components": {
+      "minecraft:max_stack_size": 1,
+      "minecraft:creative_category": {
+        "parent": "itemGroup.name.helmet"
+      },
+      "minecraft:wearable": {
+        "slot": "slot.armor.head"
+      },
+      "minecraft:armor": {
+        "protection": 0,
+        "texture_type": "none"
+      },
+      "minecraft:icon": {
+        "texture": "mb.bone_block.helmet"
+      }
+    }
+  }
+}

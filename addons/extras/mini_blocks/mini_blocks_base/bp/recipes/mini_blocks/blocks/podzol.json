@@ -1,0 +1,18 @@
+{
+  "format_version": "1.12.0",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "bt:mb.podzol"
+    },
+    "tags": ["crafting_table"],
+    "ingredients": [
+      {
+        "item": "bt:mb.podzol_helmet"
+      }
+    ],
+    "result": {
+      "item": "bt:mb.podzol",
+      "count": 1
+    }
+  }
+}

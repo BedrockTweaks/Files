@@ -1,0 +1,23 @@
+{
+	"format_version": "1.19.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "bt:cut_red_sandstone.from_slab"
+		},
+		"tags": ["crafting_table"],
+		"priority": 0,
+		"pattern": ["##"],
+		"key": {
+			"#": {
+				"item": "minecraft:stone_slab4",
+				"data": 4
+			}
+		},
+		"result": {
+			"item": "minecraft:red_sandstone",
+			"count": 1,
+			"data": 2
+		},
+		"group": "slabs_to_blocks"
+	}
+}

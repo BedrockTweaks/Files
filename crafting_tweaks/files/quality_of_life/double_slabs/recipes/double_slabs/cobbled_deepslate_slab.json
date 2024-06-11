@@ -1,0 +1,21 @@
+{
+	"format_version": "1.19.0",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "bt:cobbled_deepslate.to_2_slabs"
+		},
+		"tags": ["crafting_table"],
+		"priority": 0,
+		"ingredients": [
+			{
+				"item": "minecraft:cobbled_deepslate",
+				"data": 5
+			}
+		],
+		"result": {
+			"item": "minecraft:cobbled_deepslate_slab",
+			"count": 2
+		},
+		"group": "block_to_2_slabs"
+	}
+}

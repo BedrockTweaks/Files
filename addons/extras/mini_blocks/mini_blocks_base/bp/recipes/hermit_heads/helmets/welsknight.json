@@ -1,0 +1,18 @@
+{
+  "format_version": "1.12.0",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "bt:hh.welsknight_helmet"
+    },
+    "tags": ["crafting_table"],
+    "ingredients": [
+      {
+        "item": "bt:hh.welsknight"
+      }
+    ],
+    "result": {
+      "item": "bt:hh.welsknight_helmet",
+      "count": 1
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+	"biomes": {
+		"default": {
+			"fog_identifier": "bt:old_water_fog",
+			"fog_ids_to_merge": ["bt:old_water_fog"],
+			"inherit_from_prior_fog": false,
+			"remove_all_prior_fog": true,
+			"water_surface_color": "#0056FF",
+			"water_surface_transparency": 0.65
+		}
+	}
+}

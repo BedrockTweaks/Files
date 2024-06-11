@@ -1,0 +1,18 @@
+{
+  "format_version": "1.12.0",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "bt:mb.crimson_stem"
+    },
+    "tags": ["crafting_table"],
+    "ingredients": [
+      {
+        "item": "bt:mb.crimson_stem_helmet"
+      }
+    ],
+    "result": {
+      "item": "bt:mb.crimson_stem",
+      "count": 1
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "format_version": "1.12.0",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "bt:mb.glowstone"
+    },
+    "tags": ["crafting_table"],
+    "ingredients": [
+      {
+        "item": "bt:mb.glowstone_helmet"
+      }
+    ],
+    "result": {
+      "item": "bt:mb.glowstone",
+      "count": 1
+    }
+  }
+}

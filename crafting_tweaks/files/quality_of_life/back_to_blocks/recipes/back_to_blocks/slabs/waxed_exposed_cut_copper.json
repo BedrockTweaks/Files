@@ -1,0 +1,23 @@
+{
+	"format_version": "1.19.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "bt:waxed_exposed_cut_copper.from_slab"
+		},
+		"tags": ["crafting_table"],
+		"priority": 0,
+		"pattern": ["##"],
+		"key": {
+			"#": {
+				"item": "minecraft:waxed_exposed_cut_copper_slab",
+				"data": 4
+			}
+		},
+		"result": {
+			"item": "minecraft:waxed_exposed_cut_copper",
+			"count": 1,
+			"data": 4
+		},
+		"group": "slabs_to_blocks"
+	}
+}

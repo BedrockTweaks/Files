@@ -1,0 +1,18 @@
+{
+  "format_version": "1.12.0",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "bt:tg.topaz_gem"
+    },
+    "tags": ["crafting_table"],
+    "ingredients": [
+      {
+        "item": "bt:tg.topaz_gem_helmet"
+      }
+    ],
+    "result": {
+      "item": "bt:tg.topaz_gem",
+      "count": 1
+    }
+  }
+}

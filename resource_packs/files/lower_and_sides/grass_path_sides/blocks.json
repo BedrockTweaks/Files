@@ -1,0 +1,15 @@
+{
+	"format_version": "1.1.0",
+	"grass_path": {
+		"isotropic": {
+			"down": true,
+			"up": true
+		},
+		"sound": "grass",
+		"textures": {
+			"down": "dirt",
+			"side": "grass_path_top",
+			"up": "grass_path_top"
+		}
+	}
+}

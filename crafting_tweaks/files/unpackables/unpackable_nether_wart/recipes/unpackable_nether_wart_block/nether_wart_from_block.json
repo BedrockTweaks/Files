@@ -1,0 +1,19 @@
+{
+	"format_version": "1.19.0",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "bt:nether_wart_from_block"
+		},
+		"tags": ["crafting_table"],
+		"priority": 0,
+		"ingredients": [
+			{
+				"item": "minecraft:nether_wart_block"
+			}
+		],
+		"result": {
+			"item": "minecraft:nether_wart",
+			"count": 9
+		}
+	}
+}

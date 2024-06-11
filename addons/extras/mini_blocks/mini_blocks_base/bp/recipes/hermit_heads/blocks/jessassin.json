@@ -1,0 +1,18 @@
+{
+  "format_version": "1.12.0",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "bt:hh.jessassin"
+    },
+    "tags": ["crafting_table"],
+    "ingredients": [
+      {
+        "item": "bt:hh.jessassin_helmet"
+      }
+    ],
+    "result": {
+      "item": "bt:hh.jessassin",
+      "count": 1
+    }
+  }
+}

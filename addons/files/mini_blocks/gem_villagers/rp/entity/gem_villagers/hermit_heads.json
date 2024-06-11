@@ -1,0 +1,36 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "bt:gv.hermit_heads",
+			"materials": {
+				"default": "villager_v2",
+				"head": "villager_v2"
+			},
+			"textures": {
+				"base": "textures/entity/gem_villagers/base",
+				"head": "textures/entity/gem_villagers/heads/hermit_heads"
+			},
+			"geometry": {
+				"default": "geometry.villager_v2"
+			},
+			"scripts": {
+				"scale": "0.9375",
+				"animate": ["general_controller"]
+			},
+			"animations": {
+				"general": "animation.villager.general",
+				"look_at_target": "animation.common.look_at_target",
+				"general_controller": "controller.animation.villager_v2.general"
+			},
+			"render_controllers": [
+				"controller.render.bt.gem_villagers.base",
+				"controller.render.bt.gem_villagers.head"
+			],
+			"spawn_egg": {
+				"texture": "spawn_egg",
+				"texture_index": 14
+			}
+		}
+	}
+}

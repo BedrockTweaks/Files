@@ -1,0 +1,31 @@
+{
+	"format_version": "1.10.0",
+	"animations": {
+		"animation.bt.spyglass.holding": {
+			"loop": true,
+			"bones": {
+				"rightitem": {
+					"position": [
+						"c.is_first_person ? -5.5 : -1.5",
+						"c.is_first_person ? -3.0 : 1.5",
+						"c.is_first_person ? -3.0 : -8.0"
+					],
+					"rotation": [
+						"c.is_first_person ? 38.0 : 180.0",
+						"c.is_first_person ? -120.0 : 0.0",
+						"c.is_first_person ? -63.0 : 0.0"
+					]
+				}
+			}
+		},
+		"animation.bt.spyglass.scoping": {
+			"loop": true,
+			"bones": {
+				"rightitem": {
+					"position": [-1.5, -8.5, 0.0],
+					"rotation": [-45.0, 0.0, 0.0]
+				}
+			}
+		}
+	}
+}

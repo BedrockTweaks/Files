@@ -1,0 +1,26 @@
+{
+	"format_version": "1.19.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "bt:universal_dyeing.red_stained_glass"
+		},
+		"tags": ["crafting_table"],
+		"priority": 0,
+		"group": "universal_dyeing_stained_glass",
+		"pattern": ["EEE", "E0E", "EEE"],
+		"key": {
+			"E": {
+				"item": "minecraft:stained_glass"
+			},
+			"0": {
+				"item": "minecraft:dye",
+				"data": 1
+			}
+		},
+		"result": {
+			"item": "minecraft:stained_glass",
+			"data": 14,
+			"count": 8
+		}
+	}
+}
