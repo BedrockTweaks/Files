@@ -1,0 +1,18 @@
+{
+  "format_version": "1.12.0",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "bt:mb.stone_bricks"
+    },
+    "tags": ["crafting_table"],
+    "ingredients": [
+      {
+        "item": "bt:mb.stone_bricks_helmet"
+      }
+    ],
+    "result": {
+      "item": "bt:mb.stone_bricks",
+      "count": 1
+    }
+  }
+}

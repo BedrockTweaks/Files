@@ -1,0 +1,22 @@
+{
+	"format_version": "1.19.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "minecraft:boat"
+		},
+
+		"tags": ["crafting_table"],
+		"priority": 0,
+		"pattern": ["# #", "###"],
+		"key": {
+			"#": {
+				"item": "minecraft:planks",
+				"data": 0
+			}
+		},
+		"result": {
+			"item": "minecraft:boat",
+			"data": 0
+		}
+	}
+}

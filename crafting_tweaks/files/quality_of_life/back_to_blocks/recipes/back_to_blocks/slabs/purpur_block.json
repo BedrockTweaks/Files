@@ -1,0 +1,23 @@
+{
+	"format_version": "1.19.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "bt:purpur_block.from_slab"
+		},
+		"tags": ["crafting_table"],
+		"priority": 0,
+		"pattern": ["##"],
+		"key": {
+			"#": {
+				"item": "minecraft:stone_slab2",
+				"data": 1
+			}
+		},
+		"result": {
+			"item": "minecraft:purpur_block",
+			"count": 1,
+			"data": 0
+		},
+		"group": "slabs_to_blocks"
+	}
+}

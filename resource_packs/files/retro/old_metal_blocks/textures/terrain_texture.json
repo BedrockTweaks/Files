@@ -1,0 +1,26 @@
+{
+	"resource_pack_name": "vanilla",
+	"texture_name": "atlas.terrain",
+	"padding": 8,
+	"num_mip_levels": 4,
+	"texture_data": {
+		"iron_block_bottom": {
+			"textures": "textures/blocks/iron_block_bottom"
+		},
+		"gold_block_bottom": {
+			"textures": "textures/blocks/gold_block_bottom"
+		},
+		"diamond_block_bottom": {
+			"textures": "textures/blocks/diamond_block_bottom"
+		},
+		"iron_block_side": {
+			"textures": "textures/blocks/iron_block_side"
+		},
+		"gold_block_side": {
+			"textures": "textures/blocks/gold_block_side"
+		},
+		"diamond_block_side": {
+			"textures": "textures/blocks/diamond_block_side"
+		}
+	}
+}

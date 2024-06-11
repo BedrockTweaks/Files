@@ -1,0 +1,23 @@
+{
+	"format_version": "1.19.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "bt:notch_apple"
+		},
+		"tags": ["crafting_table"],
+		"priority": 0,
+		"result": {
+			"item": "minecraft:appleenchanted",
+			"count": 1
+		},
+		"pattern": ["GGG", "G#G", "GGG"],
+		"key": {
+			"G": {
+				"item": "minecraft:gold_block"
+			},
+			"#": {
+				"item": "minecraft:apple"
+			}
+		}
+	}
+}

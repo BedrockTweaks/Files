@@ -1,0 +1,26 @@
+{
+	"format_version": "1.19.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "bt:universal_dyeing.brown_stained_glass_pane"
+		},
+		"tags": ["crafting_table"],
+		"priority": 0,
+		"group": "universal_dyeing_stained_glass_pane",
+		"pattern": ["EEE", "E0E", "EEE"],
+		"key": {
+			"E": {
+				"item": "minecraft:stained_glass_pane"
+			},
+			"0": {
+				"item": "minecraft:dye",
+				"data": 3
+			}
+		},
+		"result": {
+			"item": "minecraft:stained_glass_pane",
+			"data": 12,
+			"count": 8
+		}
+	}
+}

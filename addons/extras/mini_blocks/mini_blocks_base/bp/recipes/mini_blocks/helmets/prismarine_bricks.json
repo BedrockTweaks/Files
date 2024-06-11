@@ -1,0 +1,18 @@
+{
+  "format_version": "1.12.0",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "bt:mb.prismarine_bricks_helmet"
+    },
+    "tags": ["crafting_table"],
+    "ingredients": [
+      {
+        "item": "bt:mb.prismarine_bricks"
+      }
+    ],
+    "result": {
+      "item": "bt:mb.prismarine_bricks_helmet",
+      "count": 1
+    }
+  }
+}

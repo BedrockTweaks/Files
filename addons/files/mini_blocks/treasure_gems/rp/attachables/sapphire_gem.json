@@ -1,0 +1,18 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:attachable": {
+    "description": {
+      "identifier": "bt:tg.sapphire_gem_helmet",
+      "materials": {
+        "default": "armor"
+      },
+      "textures": {
+        "default": "textures/treasure_gems/blocks/sapphire_gem"
+      },
+      "geometry": {
+        "default": "geometry.player.armor.helmet"
+      },
+      "render_controllers": ["controller.render.default"]
+    }
+  }
+}

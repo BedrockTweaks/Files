@@ -1,0 +1,1 @@
+summon bt:gv.precious "§cPrecious§r"

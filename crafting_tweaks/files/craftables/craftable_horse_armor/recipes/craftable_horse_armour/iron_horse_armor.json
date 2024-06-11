@@ -1,0 +1,23 @@
+{
+	"format_version": "1.19.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "bt:horsearmoriron"
+		},
+		"tags": ["crafting_table"],
+		"priority": 0,
+		"pattern": ["  #", "###", "#_#"],
+		"key": {
+			"#": {
+				"item": "minecraft:iron_ingot"
+			},
+			"_": {
+				"item": "minecraft:saddle"
+			}
+		},
+		"result": {
+			"item": "minecraft:horsearmoriron"
+		},
+		"group": "horse_armor"
+	}
+}

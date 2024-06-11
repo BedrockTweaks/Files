@@ -1,0 +1,35 @@
+{
+	"format_version": "1.10.0",
+	"render_controllers": {
+		"controller.render.bt.totem.any_person": {
+			"geometry": "geometry.default",
+			"materials": [
+				{ "*": "variable.is_enchanted ? material.enchanted : material.default" }
+			],
+			"textures": ["texture.default", "texture.enchanted"],
+			"part_visibility": [
+				{
+					"rightitem": "q.get_equipped_item_name('main_hand') == 'totem_of_undying'"
+				},
+				{
+					"leftitem": "q.get_equipped_item_name('off_hand') == 'totem_of_undying'"
+				}
+			]
+		},
+		"controller.render.bt.totem.first_person": {
+			"geometry": "geometry.default",
+			"materials": [
+				{ "*": "variable.is_enchanted ? material.enchanted : material.default" }
+			],
+			"textures": ["texture.default", "texture.enchanted"],
+			"part_visibility": [
+				{
+					"rightitem": false
+				},
+				{
+					"leftitem": false
+				}
+			]
+		}
+	}
+}

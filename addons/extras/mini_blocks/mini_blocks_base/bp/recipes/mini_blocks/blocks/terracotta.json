@@ -1,0 +1,18 @@
+{
+  "format_version": "1.12.0",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "bt:mb.terracotta"
+    },
+    "tags": ["crafting_table"],
+    "ingredients": [
+      {
+        "item": "bt:mb.terracotta_helmet"
+      }
+    ],
+    "result": {
+      "item": "bt:mb.terracotta",
+      "count": 1
+    }
+  }
+}

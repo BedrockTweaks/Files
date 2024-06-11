@@ -1,0 +1,18 @@
+{
+  "format_version": "1.12.0",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "bt:mb.pumpkin_helmet"
+    },
+    "tags": ["crafting_table"],
+    "ingredients": [
+      {
+        "item": "bt:mb.pumpkin"
+      }
+    ],
+    "result": {
+      "item": "bt:mb.pumpkin_helmet",
+      "count": 1
+    }
+  }
+}

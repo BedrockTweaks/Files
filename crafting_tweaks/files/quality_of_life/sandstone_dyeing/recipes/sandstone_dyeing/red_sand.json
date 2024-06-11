@@ -1,0 +1,54 @@
+{
+	"format_version": "1.19.0",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "bt:red_sand_dyeing"
+		},
+		"tags": ["crafting_table"],
+		"priority": 0,
+		"result": {
+			"item": "minecraft:sand",
+			"count": 8,
+			"data": 1
+		},
+		"ingredients": [
+			{
+				"item": "minecraft:sand",
+				"data": 0
+			},
+			{
+				"item": "minecraft:sand",
+				"data": 0
+			},
+			{
+				"item": "minecraft:sand",
+				"data": 0
+			},
+			{
+				"item": "minecraft:sand",
+				"data": 0
+			},
+			{
+				"item": "minecraft:sand",
+				"data": 0
+			},
+			{
+				"item": "minecraft:sand",
+				"data": 0
+			},
+			{
+				"item": "minecraft:sand",
+				"data": 0
+			},
+			{
+				"item": "minecraft:sand",
+				"data": 0
+			},
+			{
+				"item": "minecraft:dye",
+				"data": 1
+			}
+		],
+		"group": "sandstone_dyeing"
+	}
+}

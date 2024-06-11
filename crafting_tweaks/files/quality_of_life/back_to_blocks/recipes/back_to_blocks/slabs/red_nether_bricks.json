@@ -1,0 +1,23 @@
+{
+	"format_version": "1.19.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "bt:red_nether_brick.from_slab"
+		},
+		"tags": ["crafting_table"],
+		"priority": 0,
+		"pattern": ["##"],
+		"key": {
+			"#": {
+				"item": "minecraft:stone_slab2",
+				"data": 7
+			}
+		},
+		"result": {
+			"item": "minecraft:red_nether_brick",
+			"count": 1,
+			"data": 0
+		},
+		"group": "slabs_to_blocks"
+	}
+}

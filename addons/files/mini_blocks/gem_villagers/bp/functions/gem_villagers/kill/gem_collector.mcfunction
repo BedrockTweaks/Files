@@ -1,0 +1,1 @@
+kill @e[type=bt:gv.gem_collector,c=1]

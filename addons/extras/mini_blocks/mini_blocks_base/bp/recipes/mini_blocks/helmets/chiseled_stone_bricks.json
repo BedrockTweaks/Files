@@ -1,0 +1,18 @@
+{
+  "format_version": "1.12.0",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "bt:mb.chiseled_stone_bricks_helmet"
+    },
+    "tags": ["crafting_table"],
+    "ingredients": [
+      {
+        "item": "bt:mb.chiseled_stone_bricks"
+      }
+    ],
+    "result": {
+      "item": "bt:mb.chiseled_stone_bricks_helmet",
+      "count": 1
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+	"namespace": "trade2",
+
+	"hover_button": {
+		"modifications": [
+			{
+				"array_name": "bindings",
+				"operation": "remove",
+				"where": {
+					"binding_name": "(not #using_touch)"
+				}
+			}
+		]
+	},
+
+	"trade_icons@trade2.toggle_content": {
+		"layer": 11,
+		"offset": [0, 4],
+		"$template_toggle": "trade2.toggle_content"
+	},
+
+	"trade_toggle_holder": {
+		"size": ["100%", "60%c - 1px"],
+		"modifications": [
+			{
+				"array_name": "controls",
+				"operation": "insert_back",
+				"value": [
+					{
+						"trade_icons@trade2.trade_icons": {
+							"anchor_from": "top_middle",
+							"anchor_to": "top_middle"
+						}
+					}
+				]
+			}
+		]
+	},
+
+	"tier_stack_panel": {
+		"modifications": [
+			{
+				"array_name": "bindings",
+				"operation": "remove",
+				"where": {
+					"binding_name": "#tier_visible"
+				}
+			}
+		]
+	}
+}

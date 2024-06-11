@@ -1,0 +1,13 @@
+{
+	"format_version": "1.1.0",
+	"moss_block": {
+		"isotropic": true,
+		"sound": "moss_block",
+		"textures": "moss_block"
+	},
+	"moss_carpet": {
+		"isotropic": true,
+		"sound": "moss_carpet",
+		"textures": "moss_block"
+	}
+}

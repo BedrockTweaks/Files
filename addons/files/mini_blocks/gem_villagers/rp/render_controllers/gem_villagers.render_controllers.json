@@ -1,0 +1,15 @@
+{
+	"format_version": "1.8.0",
+	"render_controllers": {
+		"controller.render.bt.gem_villagers.base": {
+			"geometry": "Geometry.default",
+			"materials": [{ "*": "Material.default" }],
+			"textures": ["Texture.base"]
+		},
+		"controller.render.bt.gem_villagers.head": {
+			"geometry": "Geometry.default",
+			"materials": [{ "*": "Material.head" }],
+			"textures": ["Texture.head"]
+		}
+	}
+}

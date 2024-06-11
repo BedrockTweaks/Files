@@ -1,0 +1,72 @@
+{
+	"num_mip_levels": 4,
+	"padding": 8,
+	"resource_pack_name": "vanilla",
+	"texture_data": {
+		"stone_slab_side": {
+			"textures": [
+				"textures/blocks/stone_slab_side",
+				"textures/blocks/slab_sides/sandstone_slab_side",
+				"textures/blocks/planks_oak",
+				"textures/blocks/cobblestone",
+				"textures/blocks/brick",
+				"textures/blocks/stonebrick",
+				"textures/blocks/slab_sides/quartz_block_slab_side",
+				"textures/blocks/nether_brick"
+			]
+		},
+		"stone_slab_side_2": {
+			"textures": [
+				"textures/blocks/slab_sides/red_sandstone_slab_side",
+				"textures/blocks/purpur_block",
+				"textures/blocks/prismarine_rough",
+				"textures/blocks/prismarine_dark",
+				"textures/blocks/slab_sides/prismarine_brick_slab_side",
+				"textures/blocks/cobblestone_mossy",
+				"textures/blocks/sandstone_top",
+				"textures/blocks/red_nether_brick"
+			]
+		},
+		"stone_slab_side_3": {
+			"textures": [
+				"textures/blocks/end_bricks",
+				"textures/blocks/red_sandstone_top",
+				"textures/blocks/slab_sides/polished_andesite_slab_side",
+				"textures/blocks/stone_andesite",
+				"textures/blocks/stone_diorite",
+				"textures/blocks/slab_sides/polished_diorite_slab_side",
+				"textures/blocks/stone_granite",
+				"textures/blocks/slab_sides/polished_granite_slab_side"
+			]
+		},
+		"stone_slab_side_4": {
+			"textures": [
+				"textures/blocks/stonebrick_mossy",
+				"textures/blocks/quartz_block_bottom",
+				"textures/blocks/stone",
+				"textures/blocks/slab_sides/cut_sandstone_slab_side",
+				"textures/blocks/slab_sides/cut_red_sandstone_slab_side"
+			]
+		},
+		"polished_blackstone_double_slab": {
+			"textures": "textures/blocks/slab_sides/polished_blackstone_slab_side"
+		},
+		"polished_deepslate_double_slab": {
+			"textures": "textures/blocks/slab_sides/polished_deepslate_slab_side"
+		},
+
+		"cut_copper_double_slab": {
+			"textures": "textures/blocks/slab_sides/cut_copper_slab_double"
+		},
+		"exposed_cut_copper_double_slab": {
+			"textures": "textures/blocks/slab_sides/exposed_cut_copper_slab_double"
+		},
+		"oxidized_cut_copper_double_slab": {
+			"textures": "textures/blocks/slab_sides/oxidized_cut_copper_slab_double"
+		},
+		"weathered_cut_copper_double_slab": {
+			"textures": "textures/blocks/slab_sides/weathered_cut_copper_slab_double"
+		}
+	},
+	"texture_name": "atlas.terrain"
+}

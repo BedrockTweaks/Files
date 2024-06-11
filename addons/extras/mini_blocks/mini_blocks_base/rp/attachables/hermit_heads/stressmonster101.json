@@ -1,0 +1,18 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:attachable": {
+    "description": {
+      "identifier": "bt:hh.stressmonster101_helmet",
+      "materials": {
+        "default": "armor"
+      },
+      "textures": {
+        "default": "textures/hermit_heads/blocks/stressmonster101"
+      },
+      "geometry": {
+        "default": "geometry.player.armor.helmet"
+      },
+      "render_controllers": ["controller.render.default"]
+    }
+  }
+}

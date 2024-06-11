@@ -1,0 +1,26 @@
+{
+	"format_version": "1.19.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "bt:name_tag"
+		},
+		"tags": ["crafting_table"],
+		"priority": 0,
+		"result": {
+			"item": "minecraft:name_tag",
+			"count": 1
+		},
+		"pattern": [" IS", " PI", "P  "],
+		"key": {
+			"I": {
+				"item": "minecraft:iron_ingot"
+			},
+			"P": {
+				"item": "minecraft:paper"
+			},
+			"S": {
+				"item": "minecraft:string"
+			}
+		}
+	}
+}

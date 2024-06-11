@@ -1,0 +1,108 @@
+{
+	"resource_pack_name": "vanilla",
+	"texture_name": "atlas.terrain",
+	"padding": 8,
+	"num_mip_levels": 4,
+	"texture_data": {
+		"hopper_top": {
+			"textures": [
+				"textures/blocks/hopper_top/hopper_top_down",
+				"textures/blocks/hopper_top/hopper_top_up",
+				"textures/blocks/hopper_top/hopper_top_north",
+				"textures/blocks/hopper_top/hopper_top_south",
+				"textures/blocks/hopper_top/hopper_top_west",
+				"textures/blocks/hopper_top/hopper_top_east",
+				"textures/blocks/hopper_top",
+				"textures/blocks/hopper_top",
+				"textures/blocks/hopper_top/hopper_top_down_powered",
+				"textures/blocks/hopper_top/hopper_top_up_powered",
+				"textures/blocks/hopper_top/hopper_top_north_powered",
+				"textures/blocks/hopper_top/hopper_top_south_powered",
+				"textures/blocks/hopper_top/hopper_top_west_powered",
+				"textures/blocks/hopper_top/hopper_top_east_powered",
+				"textures/blocks/hopper_top",
+				"textures/blocks/hopper_top"
+			]
+		},
+		"hopper_outside_east": {
+			"textures": [
+				"textures/blocks/hopper_outside",
+				"textures/blocks/hopper_outside",
+				"textures/blocks/hopper_outside/hopper_outside_right",
+				"textures/blocks/hopper_outside/hopper_outside_left",
+				"textures/blocks/hopper_outside",
+				"textures/blocks/hopper_outside",
+				"textures/blocks/hopper_outside",
+				"textures/blocks/hopper_outside",
+				"textures/blocks/hopper_outside",
+				"textures/blocks/hopper_outside",
+				"textures/blocks/hopper_outside/hopper_outside_right_powered",
+				"textures/blocks/hopper_outside/hopper_outside_left_powered",
+				"textures/blocks/hopper_outside",
+				"textures/blocks/hopper_outside",
+				"textures/blocks/hopper_outside",
+				"textures/blocks/hopper_outside"
+			]
+		},
+		"hopper_outside_north": {
+			"textures": [
+				"textures/blocks/hopper_outside",
+				"textures/blocks/hopper_outside",
+				"textures/blocks/hopper_outside",
+				"textures/blocks/hopper_outside",
+				"textures/blocks/hopper_outside/hopper_outside_right",
+				"textures/blocks/hopper_outside/hopper_outside_left",
+				"textures/blocks/hopper_outside",
+				"textures/blocks/hopper_outside",
+				"textures/blocks/hopper_outside",
+				"textures/blocks/hopper_outside",
+				"textures/blocks/hopper_outside",
+				"textures/blocks/hopper_outside",
+				"textures/blocks/hopper_outside/hopper_outside_right_powered",
+				"textures/blocks/hopper_outside/hopper_outside_left_powered",
+				"textures/blocks/hopper_outside",
+				"textures/blocks/hopper_outside"
+			]
+		},
+		"hopper_outside_south": {
+			"textures": [
+				"textures/blocks/hopper_outside",
+				"textures/blocks/hopper_outside",
+				"textures/blocks/hopper_outside",
+				"textures/blocks/hopper_outside",
+				"textures/blocks/hopper_outside/hopper_outside_left",
+				"textures/blocks/hopper_outside/hopper_outside_right",
+				"textures/blocks/hopper_outside",
+				"textures/blocks/hopper_outside",
+				"textures/blocks/hopper_outside",
+				"textures/blocks/hopper_outside",
+				"textures/blocks/hopper_outside",
+				"textures/blocks/hopper_outside",
+				"textures/blocks/hopper_outside/hopper_outside_left_powered",
+				"textures/blocks/hopper_outside/hopper_outside_right_powered",
+				"textures/blocks/hopper_outside",
+				"textures/blocks/hopper_outside"
+			]
+		},
+		"hopper_outside_west": {
+			"textures": [
+				"textures/blocks/hopper_outside",
+				"textures/blocks/hopper_outside",
+				"textures/blocks/hopper_outside/hopper_outside_left",
+				"textures/blocks/hopper_outside/hopper_outside_right",
+				"textures/blocks/hopper_outside",
+				"textures/blocks/hopper_outside",
+				"textures/blocks/hopper_outside",
+				"textures/blocks/hopper_outside",
+				"textures/blocks/hopper_outside",
+				"textures/blocks/hopper_outside",
+				"textures/blocks/hopper_outside/hopper_outside_left_powered",
+				"textures/blocks/hopper_outside/hopper_outside_right_powered",
+				"textures/blocks/hopper_outside",
+				"textures/blocks/hopper_outside",
+				"textures/blocks/hopper_outside",
+				"textures/blocks/hopper_outside"
+			]
+		}
+	}
+}

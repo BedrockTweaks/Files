@@ -1,0 +1,121 @@
+{
+	"section": "addons",
+	"categories": [
+		{
+			"id": "survival",
+			"name": "Survival",
+			"packs": [
+				{
+					"id": "afk_display",
+					"name": "AFK Display",
+					"description": "Greys out a player's name that is not moving for 5 minutes.",
+					"version": "1.19 - 1.0.0"
+				},
+				{
+					"id": "multiplayer_sleep",
+					"name": "Multiplayer Sleep",
+					"description": "Not all players in the overworld must sleep to skip the night and the rain. /function multiplayer_sleep/config for settings.",
+					"version": "1.19 - 1.0.0"
+				}
+			]
+		},
+		{
+			"id": "mobs",
+			"name": "Mobs",
+			"packs": [
+				{
+					"id": "anti_creeper_grief",
+					"name": "Anti Creeper Grief",
+					"description": "Prevents creepers from blowing up blocks.",
+					"version": "1.19 - 1.0.0"
+				},
+				{
+					"id": "anti_enderman_grief",
+					"name": "Anti Enderman Grief",
+					"description": "Prevents endermen from picking up blocks.",
+					"version": "1.19 - 1.0.0"
+				},
+				{
+					"id": "anti_ghast_grief",
+					"name": "Anti Ghast Grief",
+					"description": "Prevents ghasts from blowing up blocks.",
+					"version": "1.19 - 1.0.0"
+				},
+				{
+					"id": "double_shulker_shells",
+					"name": "Double Shulker Shells",
+					"description": "Makes all shulkers drop 2 shells.",
+					"version": "1.19 - 1.0.0"
+				},
+				{
+					"id": "bat_membranes",
+					"name": "Bat Membranes",
+					"description": "Disable phantoms and get membranes from bats instead.",
+					"version": "1.19 - 1.0.0"
+				},
+				{
+					"id": "dragon_drops",
+					"name": "Dragon Drops",
+					"description": "Makes the Ender Dragon drop a dragon egg and elytra on death.",
+					"version": "1.19 - 1.0.0"
+				},
+				{
+					"id": "larger_phantoms",
+					"name": "Larger Phantoms",
+					"description": "Makes naturally spawning phantoms larger the longer you do not sleep.",
+					"version": "1.19 - 1.0.0"
+				},
+				{
+					"id": "villager_death_messages",
+					"name": "Villager Death Messages",
+					"description": "Notifies the server in chat when a villager is killed.",
+					"version": "1.19 - 1.0.0"
+				}
+			]
+		},
+		{
+			"id": "utilities",
+			"name": "Utilities",
+			"packs": [
+				{
+					"id": "kill_empty_boats",
+					"name": "Kill Empty Boats",
+					"description": "Adds an admin command to kill all boats without passengers.",
+					"version": "1.19 - 1.0.0"
+				}
+			]
+		},
+		{
+			"id": "mini_blocks",
+			"name": "Mini Blocks",
+			"packs": [
+				{
+					"id": "gem_villagers",
+					"name": "Gem Villagers",
+					"description": "Adds functions to spawn villagers that include custom mini-block trades.<br><span style='color: #ff0000'>Needs Holiday Creator Features Experimental toggle enabled.</span>",
+					"version": "1.19 - 1.0.0"
+				},
+				{
+					"id": "treasure_gems",
+					"name": "Treasure Gems",
+					"description": "Adds the chance for treasure gems to spawn inside loot chests. Used to trade with Gem Villagers.<br><span style='color: #ff0000'>Needs Holiday Creator Features Experimental toggle enabled.</span>",
+					"version": "1.19 - 1.0.0"
+				},
+				{
+					"id": "wandering_trades",
+					"name": "Wandering Trades",
+					"description": "Adds Mini Blocks to the Wandering Trader's trades.<br><span style='color: #ff0000'>Needs Holiday Creator Features Experimental toggle enabled.</span>",
+					"version": "1.19 - 1.0.0"
+				},
+				{
+					"id": "wandering_trades_hermit_edition",
+					"name": "Wandering Trades (Hermit Edition)",
+					"description": "Adds Hermit heads and Mini Blocks to the Wandering Trader's trades.<br><span style='color: #ff0000'>Needs Holiday Creator Features Experimental toggle enabled.</span>",
+					"version": "1.19 - 1.0.0"
+				}
+			]
+		}
+	],
+	"combinations": [],
+	"deepMergeFiles": []
+}

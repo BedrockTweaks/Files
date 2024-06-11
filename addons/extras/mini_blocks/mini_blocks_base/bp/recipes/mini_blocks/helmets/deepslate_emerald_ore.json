@@ -1,0 +1,18 @@
+{
+  "format_version": "1.12.0",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "bt:mb.deepslate_emerald_ore_helmet"
+    },
+    "tags": ["crafting_table"],
+    "ingredients": [
+      {
+        "item": "bt:mb.deepslate_emerald_ore"
+      }
+    ],
+    "result": {
+      "item": "bt:mb.deepslate_emerald_ore_helmet",
+      "count": 1
+    }
+  }
+}

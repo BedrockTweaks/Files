@@ -1,0 +1,12 @@
+{
+	"namespace": "trade2_pocket",
+
+	"trade_and_help_buttons/how_to_play_button_holder": {
+		"modifications": [
+			{
+				"control_name": "how_to_play_button",
+				"operation": "remove"
+			}
+		]
+	}
+}

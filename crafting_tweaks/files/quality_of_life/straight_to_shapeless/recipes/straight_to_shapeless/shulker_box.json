@@ -1,0 +1,26 @@
+{
+	"format_version": "1.19.0",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "bt:shulker_box.straight_to_shapeless"
+		},
+		"tags": ["crafting_table"],
+		"priority": 0,
+		"ingredients": [
+			{
+				"item": "minecraft:shulker_shell"
+			},
+			{
+				"item": "minecraft:shulker_shell"
+			},
+			{
+				"item": "minecraft:chest"
+			}
+		],
+		"result": {
+			"item": "minecraft:undyed_shulker_box",
+			"count": 1
+		},
+		"group": "straight_to_shapeless"
+	}
+}

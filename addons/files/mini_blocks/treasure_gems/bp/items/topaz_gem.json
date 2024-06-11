@@ -1,0 +1,21 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:item": {
+    "description": {
+      "identifier": "bt:tg.topaz_gem_helmet"
+    },
+    "components": {
+      "minecraft:max_stack_size": 1,
+      "minecraft:armor": {
+				"texture_type": "none",
+        "protection": 0
+      },
+      "minecraft:wearable": {
+        "slot": "slot.armor.head"
+      },
+      "minecraft:icon": {
+        "texture": "tg.topaz_gem.helmet"
+      }
+    }
+  }
+}

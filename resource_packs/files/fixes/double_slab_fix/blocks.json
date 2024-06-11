@@ -1,0 +1,58 @@
+{
+	"format_version": "1.1.0",
+	"polished_blackstone_double_slab": {
+		"sound": "stone",
+		"textures": {
+			"down": "polished_blackstone",
+			"side": "polished_blackstone_double_slab",
+			"up": "polished_blackstone"
+		}
+	},
+	"polished_deepslate_double_slab": {
+		"isotropic": false,
+		"sound": "deepslate",
+		"textures": "polished_deepslate_double_slab"
+	},
+
+	"double_cut_copper_slab": {
+		"isotropic": false,
+		"sound": "copper",
+		"textures": "cut_copper_double_slab"
+	},
+	"exposed_double_cut_copper_slab": {
+		"isotropic": false,
+		"sound": "copper",
+		"textures": "exposed_cut_copper_double_slab"
+	},
+	"oxidized_double_cut_copper_slab": {
+		"isotropic": false,
+		"sound": "copper",
+		"textures": "oxidized_cut_copper_double_slab"
+	},
+	"weathered_double_cut_copper_slab": {
+		"isotropic": false,
+		"sound": "copper",
+		"textures": "weathered_cut_copper_double_slab"
+	},
+
+	"waxed_double_cut_copper_slab": {
+		"isotropic": false,
+		"sound": "copper",
+		"textures": "cut_copper_double_slab"
+	},
+	"waxed_exposed_double_cut_copper_slab": {
+		"isotropic": false,
+		"sound": "copper",
+		"textures": "exposed_cut_copper_double_slab"
+	},
+	"waxed_oxidized_double_cut_copper_slab": {
+		"isotropic": false,
+		"sound": "copper",
+		"textures": "oxidized_cut_copper_double_slab"
+	},
+	"waxed_weathered_double_cut_copper_slab": {
+		"isotropic": false,
+		"sound": "copper",
+		"textures": "weathered_cut_copper_double_slab"
+	}
+}

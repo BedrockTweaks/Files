@@ -1,0 +1,29 @@
+{
+	"format_version": "1.19.0",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "bt:crimson_planks.from_stair"
+		},
+		"tags": ["crafting_table"],
+		"priority": 0,
+		"ingredients": [
+			{
+				"item": "minecraft:crimson_stairs"
+			},
+			{
+				"item": "minecraft:crimson_stairs"
+			},
+			{
+				"item": "minecraft:crimson_stairs"
+			},
+			{
+				"item": "minecraft:crimson_stairs"
+			}
+		],
+		"result": {
+			"item": "minecraft:crimson_planks",
+			"count": 3
+		},
+		"group": "stairs_to_block"
+	}
+}

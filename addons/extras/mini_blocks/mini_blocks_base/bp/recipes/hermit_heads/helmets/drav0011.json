@@ -1,0 +1,18 @@
+{
+  "format_version": "1.12.0",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "bt:hh.drav0011_helmet"
+    },
+    "tags": ["crafting_table"],
+    "ingredients": [
+      {
+        "item": "bt:hh.drav0011"
+      }
+    ],
+    "result": {
+      "item": "bt:hh.drav0011_helmet",
+      "count": 1
+    }
+  }
+}

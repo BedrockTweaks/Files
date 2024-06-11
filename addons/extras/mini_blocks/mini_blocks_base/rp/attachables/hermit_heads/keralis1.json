@@ -1,0 +1,18 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:attachable": {
+    "description": {
+      "identifier": "bt:hh.keralis1_helmet",
+      "materials": {
+        "default": "armor"
+      },
+      "textures": {
+        "default": "textures/hermit_heads/blocks/keralis1"
+      },
+      "geometry": {
+        "default": "geometry.player.armor.helmet"
+      },
+      "render_controllers": ["controller.render.default"]
+    }
+  }
+}

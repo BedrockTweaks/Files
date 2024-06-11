@@ -1,0 +1,18 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:attachable": {
+    "description": {
+      "identifier": "bt:mb.crafting_table_helmet",
+      "materials": {
+        "default": "armor"
+      },
+      "textures": {
+        "default": "textures/mini_blocks/blocks/crafting_table"
+      },
+      "geometry": {
+        "default": "geometry.player.armor.helmet"
+      },
+      "render_controllers": ["controller.render.default"]
+    }
+  }
+}

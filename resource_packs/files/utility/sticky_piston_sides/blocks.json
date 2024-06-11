@@ -1,0 +1,16 @@
+{
+	"format_version": [1, 1, 0],
+	"sticky_piston": {
+		"carried_textures": {
+			"down": "piston_bottom",
+			"side": "piston_side_sticky",
+			"up": "piston_top_sticky"
+		},
+		"sound": "stone",
+		"textures": {
+			"down": "piston_bottom",
+			"side": "piston_side_sticky",
+			"up": "piston_top"
+		}
+	}
+}

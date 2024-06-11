@@ -1,0 +1,1 @@
+kill @e[type=bt:gv.concrete,c=1]

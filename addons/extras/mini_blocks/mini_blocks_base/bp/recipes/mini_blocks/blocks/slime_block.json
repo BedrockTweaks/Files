@@ -1,0 +1,18 @@
+{
+  "format_version": "1.12.0",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "bt:mb.slime_block"
+    },
+    "tags": ["crafting_table"],
+    "ingredients": [
+      {
+        "item": "bt:mb.slime_block_helmet"
+      }
+    ],
+    "result": {
+      "item": "bt:mb.slime_block",
+      "count": 1
+    }
+  }
+}

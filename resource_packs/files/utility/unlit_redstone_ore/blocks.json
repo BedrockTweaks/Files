@@ -1,0 +1,12 @@
+{
+	"format_version": "1.1.0",
+	"redstone_ore": {
+		"sound": "stone",
+		"textures": "redstone_ore_off"
+	},
+	"deepslate_redstone_ore": {
+		"isotropic": false,
+		"sound": "deepslate",
+		"textures": "deepslate_redstone_ore_off"
+	}
+}

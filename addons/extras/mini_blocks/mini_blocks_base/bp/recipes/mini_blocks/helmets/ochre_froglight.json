@@ -1,0 +1,18 @@
+{
+  "format_version": "1.12.0",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "bt:mb.ochre_froglight_helmet"
+    },
+    "tags": ["crafting_table"],
+    "ingredients": [
+      {
+        "item": "bt:mb.ochre_froglight"
+      }
+    ],
+    "result": {
+      "item": "bt:mb.ochre_froglight_helmet",
+      "count": 1
+    }
+  }
+}

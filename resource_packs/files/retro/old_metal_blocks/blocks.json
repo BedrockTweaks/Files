@@ -1,0 +1,30 @@
+{
+	"format_version": "1.1.0",
+	"diamond_block": {
+		"isotropic": false,
+		"textures": {
+			"up": "diamond_block",
+			"down": "diamond_block_bottom",
+			"side": "diamond_block_side"
+		},
+		"sound": "metal"
+	},
+	"gold_block": {
+		"isotropic": false,
+		"textures": {
+			"up": "gold_block",
+			"down": "gold_block_bottom",
+			"side": "gold_block_side"
+		},
+		"sound": "metal"
+	},
+	"iron_block": {
+		"isotropic": false,
+		"textures": {
+			"up": "iron_block",
+			"down": "iron_block_bottom",
+			"side": "iron_block_side"
+		},
+		"sound": "metal"
+	}
+}

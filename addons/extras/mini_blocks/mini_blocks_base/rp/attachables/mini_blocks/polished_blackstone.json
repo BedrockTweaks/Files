@@ -1,0 +1,18 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:attachable": {
+    "description": {
+      "identifier": "bt:mb.polished_blackstone_helmet",
+      "materials": {
+        "default": "armor"
+      },
+      "textures": {
+        "default": "textures/mini_blocks/blocks/polished_blackstone"
+      },
+      "geometry": {
+        "default": "geometry.player.armor.helmet"
+      },
+      "render_controllers": ["controller.render.default"]
+    }
+  }
+}

@@ -1,0 +1,55 @@
+{
+	"namespace": "bt_quick_crafting",
+
+	"quick_craft_icon": {
+		"type": "image",
+		"size": [16, 16],
+		"texture": "textures/ui/quick_craft"
+	},
+
+	"quick_craft_button@common_buttons.light_content_button": {
+		"size": [18, 18],
+		"offset": [1, 2],
+		"anchor_from": "bottom_right",
+		"anchor_to": "bottom_right",
+		"$button_content": "bt_quick_crafting.quick_craft_icon",
+		"property_bag": {
+			"#collection_name": "crafting_output_items",
+			"#collection_index": 0
+		},
+		"button_mappings": [
+			{
+				"from_button_id": "button.menu_select",
+				"to_button_id": "button.crafting_output_tertiary",
+				"mapping_type": "pressed"
+			}
+		]
+	},
+
+	"stonecutter_quick_craft_button@quick_craft_button": {
+		"property_bag": {
+			"#collection_name": "stonecutter_result_items"
+		},
+		"button_mappings": [
+			{
+				"from_button_id": "button.menu_select",
+				"to_button_id": "button.container_auto_place",
+				"mapping_type": "pressed"
+			}
+		]
+	},
+
+	"quick_trade_button@quick_craft_button": {
+		"offset": [2, 0],
+		"property_bag": {
+			"#collection_name": "trade2_result_item"
+		},
+		"button_mappings": [
+			{
+				"from_button_id": "button.menu_select",
+				"to_button_id": "button.container_auto_place",
+				"mapping_type": "pressed"
+			}
+		]
+	}
+}

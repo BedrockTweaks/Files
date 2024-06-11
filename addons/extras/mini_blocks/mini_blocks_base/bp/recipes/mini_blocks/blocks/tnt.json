@@ -1,0 +1,18 @@
+{
+  "format_version": "1.12.0",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "bt:mb.tnt"
+    },
+    "tags": ["crafting_table"],
+    "ingredients": [
+      {
+        "item": "bt:mb.tnt_helmet"
+      }
+    ],
+    "result": {
+      "item": "bt:mb.tnt",
+      "count": 1
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "format_version": "1.12.0",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "bt:mb.emerald_block_helmet"
+    },
+    "tags": ["crafting_table"],
+    "ingredients": [
+      {
+        "item": "bt:mb.emerald_block"
+      }
+    ],
+    "result": {
+      "item": "bt:mb.emerald_block_helmet",
+      "count": 1
+    }
+  }
+}

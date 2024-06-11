@@ -1,0 +1,204 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:block": {
+    "description": {
+      "identifier": "bt:mb.noteblock",
+      "properties": {
+        "bt:head_side": [0, 1, 2, 3, 4, 5, 6],
+        "bt:head_rotation": [
+          "2700",
+          "2475",
+          "2250",
+          "2025",
+          "1800",
+          "1575",
+          "1350",
+          "1125",
+          "900",
+          "675",
+          "450",
+          "225",
+          "bt_head_base",
+          "3375",
+          "3150",
+          "2925"
+        ]
+      }
+    },
+    "components": {
+      "minecraft:geometry": "geometry.bt_head_base",
+      "minecraft:material_instances": {
+        "*": {
+          "texture": "mb.noteblock",
+          "render_method": "blend",
+          "face_dimming": false,
+          "ambient_occlusion": false
+        }
+      },
+      "minecraft:loot": "loot_tables/mini_blocks/noteblock.json",
+      "minecraft:entity_collision": {
+        "origin": [-4, 0, -4],
+        "size": [8, 8, 8]
+      },
+      "minecraft:pick_collision": {
+        "origin": [-4, 0, -4],
+        "size": [8, 8, 8]
+      },
+      "minecraft:destroy_time": 1,
+      "minecraft:block_light_filter": 0,
+      "minecraft:on_player_placing": {
+        "event": "set_side"
+      }
+    },
+    "events": {
+      "set_side": {
+        "sequence": [
+          {
+            "set_block_property": {
+              "bt:head_side": "q.block_face"
+            }
+          },
+          {
+            "set_block_property": {
+              "bt:head_rotation": "((q.head_y_rotation(0) >= -11.5 && q.head_y_rotation(0) < 0.0) ? 'bt_head_base' :((q.head_y_rotation(0) >= 0.0 && q.head_y_rotation(0) < 11.5) ? 'bt_head_base' :((q.head_y_rotation(0) >= 11.5 && q.head_y_rotation(0) < 34.5) ? '225' :((q.head_y_rotation(0) >= 34.5 && q.head_y_rotation(0) < 56.5) ? '450' :((q.head_y_rotation(0) >= 56.5 && q.head_y_rotation(0) < 79.5) ? '675' :((q.head_y_rotation(0) >= 79.5 && q.head_y_rotation(0) < 101.5) ? '900' :((q.head_y_rotation(0) >= 101.5 && q.head_y_rotation(0) < 123.5) ? '1125' :((q.head_y_rotation(0) >= 123.5 && q.head_y_rotation(0) < 146.5) ? '1350' :((q.head_y_rotation(0) >= 146.5 && q.head_y_rotation(0) < 169.5) ? '1575' :((q.head_y_rotation(0) >= 169.5 && q.head_y_rotation(0) < 180.0) ? '1800' :((q.head_y_rotation(0) >= -180.0 && q.head_y_rotation(0) < -169.5) ? '1800' :((q.head_y_rotation(0) >= -169.5 && q.head_y_rotation(0) < -146.5) ? '2025' :((q.head_y_rotation(0) >= -146.5 && q.head_y_rotation(0) < -123.5) ? '2250' :((q.head_y_rotation(0) >= -123.5 && q.head_y_rotation(0) < -101.5) ? '2475' :((q.head_y_rotation(0) >= -101.5 && q.head_y_rotation(0) < -79.5) ? '2700' :((q.head_y_rotation(0) >= -79.5 && q.head_y_rotation(0) < -56.5) ? '2925' :((q.head_y_rotation(0) >= -56.5 && q.head_y_rotation(0) < -34.5) ? '3150' :((q.head_y_rotation(0) >= -34.5 && q.head_y_rotation(0) < -11.5) ? '3375' : 'bt_head_base'))))))))))))))))))"
+            }
+          }
+        ]
+      }
+    },
+    "permutations": [
+      {
+        "condition": "q.block_property('bt:head_side') == 2",
+        "components": {
+          "minecraft:rotation": [0, 0, 0],
+          "minecraft:geometry": "geometry.bt_head_wall",
+          "minecraft:entity_collision": {
+            "origin": [-4, 4, 0],
+            "size": [8, 8, 8]
+          },
+          "minecraft:pick_collision": {
+            "origin": [-4, 4, 0],
+            "size": [8, 8, 8]
+          }
+        }
+      },
+      {
+        "condition": "q.block_property('bt:head_side') == 3",
+        "components": {
+          "minecraft:rotation": [0, 180, 0],
+          "minecraft:geometry": "geometry.bt_head_wall",
+          "minecraft:entity_collision": {
+            "origin": [-4, 4, 0],
+            "size": [8, 8, 8]
+          },
+          "minecraft:pick_collision": {
+            "origin": [-4, 4, 0],
+            "size": [8, 8, 8]
+          }
+        }
+      },
+      {
+        "condition": "q.block_property('bt:head_side') == 4",
+        "components": {
+          "minecraft:rotation": [0, 90, 0],
+          "minecraft:geometry": "geometry.bt_head_wall",
+          "minecraft:entity_collision": {
+            "origin": [-4, 4, 0],
+            "size": [8, 8, 8]
+          },
+          "minecraft:pick_collision": {
+            "origin": [-4, 4, 0],
+            "size": [8, 8, 8]
+          }
+        }
+      },
+      {
+        "condition": "q.block_property('bt:head_side') == 5",
+        "components": {
+          "minecraft:rotation": [0, 270, 0],
+          "minecraft:geometry": "geometry.bt_head_wall",
+          "minecraft:entity_collision": {
+            "origin": [-4, 4, 0],
+            "size": [8, 8, 8]
+          },
+          "minecraft:pick_collision": {
+            "origin": [-4, 4, 0],
+            "size": [8, 8, 8]
+          }
+        }
+      },
+
+      {
+        "condition": "q.block_property('bt:head_rotation') == '2700' && q.block_property('bt:head_side') == 0",
+        "components": {
+          "minecraft:geometry": "geometry.bt_head_2700",
+          "minecraft:rotation": [0, 90, 0]
+        }
+      },
+      {
+        "condition": "q.block_property('bt:head_rotation') == '2700' && (q.block_property('bt:head_side') == 1 || q.block_property('bt:head_side') == 6)",
+        "components": { "minecraft:geometry": "geometry.bt_head_2700" }
+      },
+      {
+        "condition": "q.block_property('bt:head_rotation') == '2475' && (q.block_property('bt:head_side') == 0 || q.block_property('bt:head_side') == 1 || q.block_property('bt:head_side') == 6)",
+        "components": { "minecraft:geometry": "geometry.bt_head_2475" }
+      },
+      {
+        "condition": "q.block_property('bt:head_rotation') == '2250' && (q.block_property('bt:head_side') == 0 || q.block_property('bt:head_side') == 1 || q.block_property('bt:head_side') == 6)",
+        "components": { "minecraft:geometry": "geometry.bt_head_2250" }
+      },
+      {
+        "condition": "q.block_property('bt:head_rotation') == '2025' && (q.block_property('bt:head_side') == 0 || q.block_property('bt:head_side') == 1 || q.block_property('bt:head_side') == 6)",
+        "components": { "minecraft:geometry": "geometry.bt_head_2025" }
+      },
+      {
+        "condition": "q.block_property('bt:head_rotation') == '1800' && (q.block_property('bt:head_side') == 0 || q.block_property('bt:head_side') == 1 || q.block_property('bt:head_side') == 6)",
+        "components": { "minecraft:geometry": "geometry.bt_head_1800" }
+      },
+      {
+        "condition": "q.block_property('bt:head_rotation') == '1575' && (q.block_property('bt:head_side') == 0 || q.block_property('bt:head_side') == 1 || q.block_property('bt:head_side') == 6)",
+        "components": { "minecraft:geometry": "geometry.bt_head_1575" }
+      },
+      {
+        "condition": "q.block_property('bt:head_rotation') == '1350' && (q.block_property('bt:head_side') == 0 || q.block_property('bt:head_side') == 1 || q.block_property('bt:head_side') == 6)",
+        "components": { "minecraft:geometry": "geometry.bt_head_1350" }
+      },
+      {
+        "condition": "q.block_property('bt:head_rotation') == '1125' && (q.block_property('bt:head_side') == 0 || q.block_property('bt:head_side') == 1 || q.block_property('bt:head_side') == 6)",
+        "components": { "minecraft:geometry": "geometry.bt_head_1125" }
+      },
+      {
+        "condition": "q.block_property('bt:head_rotation') == '900' && (q.block_property('bt:head_side') == 0 || q.block_property('bt:head_side') == 1 || q.block_property('bt:head_side') == 6)",
+        "components": { "minecraft:geometry": "geometry.bt_head_900" }
+      },
+      {
+        "condition": "q.block_property('bt:head_rotation') == '675' && (q.block_property('bt:head_side') == 0 || q.block_property('bt:head_side') == 1 || q.block_property('bt:head_side') == 6)",
+        "components": { "minecraft:geometry": "geometry.bt_head_675" }
+      },
+      {
+        "condition": "q.block_property('bt:head_rotation') == '450' && (q.block_property('bt:head_side') == 0 || q.block_property('bt:head_side') == 1 || q.block_property('bt:head_side') == 6)",
+        "components": { "minecraft:geometry": "geometry.bt_head_450" }
+      },
+      {
+        "condition": "q.block_property('bt:head_rotation') == '225' && (q.block_property('bt:head_side') == 0 || q.block_property('bt:head_side') == 1 || q.block_property('bt:head_side') == 6)",
+        "components": { "minecraft:geometry": "geometry.bt_head_225" }
+      },
+      {
+        "condition": "q.block_property('bt:head_rotation') == 'bt_head_base' && (q.block_property('bt:head_side') == 0 || q.block_property('bt:head_side') == 1 || q.block_property('bt:head_side') == 6)",
+        "components": { "minecraft:geometry": "geometry.bt_head_base" }
+      },
+      {
+        "condition": "q.block_property('bt:head_rotation') == '3375' && (q.block_property('bt:head_side') == 0 || q.block_property('bt:head_side') == 1 || q.block_property('bt:head_side') == 6)",
+        "components": { "minecraft:geometry": "geometry.bt_head_3375" }
+      },
+      {
+        "condition": "q.block_property('bt:head_rotation') == '3150' && (q.block_property('bt:head_side') == 0 || q.block_property('bt:head_side') == 1 || q.block_property('bt:head_side') == 6)",
+        "components": { "minecraft:geometry": "geometry.bt_head_3150" }
+      },
+      {
+        "condition": "q.block_property('bt:head_rotation') == '2925' && (q.block_property('bt:head_side') == 0 || q.block_property('bt:head_side') == 1 || q.block_property('bt:head_side') == 6)",
+        "components": { "minecraft:geometry": "geometry.bt_head_2925" }
+      }
+    ]
+  }
+}

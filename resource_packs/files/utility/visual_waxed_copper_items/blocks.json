@@ -1,0 +1,143 @@
+{
+	"format_version": "1.1.0",
+	"waxed_copper": {
+		"isotropic": false,
+		"carried_textures": "waxed_copper_block",
+		"textures": "copper_block",
+		"sound": "copper"
+	},
+	"waxed_exposed_copper": {
+		"isotropic": false,
+		"carried_textures": "waxed_exposed_copper",
+		"textures": "exposed_copper",
+		"sound": "copper"
+	},
+	"waxed_weathered_copper": {
+		"isotropic": false,
+		"carried_textures": "waxed_weathered_copper",
+		"textures": "weathered_copper",
+		"sound": "copper"
+	},
+	"waxed_oxidized_copper": {
+		"isotropic": false,
+		"carried_textures": "waxed_oxidized_copper",
+		"textures": "oxidized_copper",
+		"sound": "copper"
+	},
+	"waxed_cut_copper": {
+		"isotropic": false,
+		"carried_textures": "waxed_cut_copper",
+		"textures": "cut_copper",
+		"sound": "copper"
+	},
+	"waxed_exposed_cut_copper": {
+		"isotropic": false,
+		"carried_textures": "waxed_exposed_cut_copper",
+		"textures": "exposed_cut_copper",
+		"sound": "copper"
+	},
+	"waxed_weathered_cut_copper": {
+		"isotropic": false,
+		"carried_textures": "waxed_weathered_cut_copper",
+		"textures": "weathered_cut_copper",
+		"sound": "copper"
+	},
+	"waxed_oxidized_cut_copper": {
+		"isotropic": false,
+		"carried_textures": "waxed_oxidized_cut_copper",
+		"textures": "oxidized_cut_copper",
+		"sound": "copper"
+	},
+	"waxed_cut_copper_slab": {
+		"isotropic": false,
+		"carried_textures": {
+			"up": "waxed_cut_copper",
+			"down": "waxed_cut_copper",
+			"side": "waxed_copper_double1"
+		},
+		"textures": "cut_copper",
+		"sound": "copper"
+	},
+	"waxed_exposed_cut_copper_slab": {
+		"isotropic": false,
+		"carried_textures": {
+			"up": "waxed_exposed_cut_copper",
+			"down": "waxed_exposed_cut_copper",
+			"side": "waxed_exposed_copper_double1"
+		},
+		"textures": "exposed_cut_copper",
+		"sound": "copper"
+	},
+	"waxed_weathered_cut_copper_slab": {
+		"isotropic": false,
+		"carried_textures": {
+			"up": "waxed_weathered_cut_copper",
+			"down": "waxed_weathered_cut_copper",
+			"side": "waxed_weathered_copper_double1"
+		},
+		"textures": "weathered_cut_copper",
+		"sound": "copper"
+	},
+	"waxed_oxidized_cut_copper_slab": {
+		"isotropic": false,
+		"carried_textures": {
+			"up": "waxed_oxidized_cut_copper",
+			"down": "waxed_oxidized_cut_copper",
+			"side": "waxed_oxidized_copper_double1"
+		},
+		"textures": "oxidized_cut_copper",
+		"sound": "copper"
+	},
+	"waxed_cut_copper_stairs": {
+		"isotropic": false,
+		"carried_textures": {
+			"east": "waxed_copper_stairs2",
+			"west": "waxed_copper_stairs1",
+			"south": "waxed_copper_double1",
+			"up": "waxed_copper_double1",
+			"north": "waxed_cut_copper",
+			"down": "waxed_copper_double2"
+		},
+		"textures": "cut_copper",
+		"sound": "copper"
+	},
+	"waxed_exposed_cut_copper_stairs": {
+		"isotropic": false,
+		"carried_textures": {
+			"east": "waxed_exposed_copper_stairs2",
+			"west": "waxed_exposed_copper_stairs1",
+			"south": "waxed_exposed_copper_double1",
+			"up": "waxed_exposed_copper_double1",
+			"north": "waxed_exposed_cut_copper",
+			"down": "waxed_exposed_copper_double2"
+		},
+		"textures": "exposed_cut_copper",
+		"sound": "copper"
+	},
+	"waxed_weathered_cut_copper_stairs": {
+		"isotropic": false,
+		"carried_textures": {
+			"east": "waxed_weathered_copper_stairs2",
+			"west": "waxed_weathered_copper_stairs1",
+			"south": "waxed_weathered_copper_double1",
+			"up": "waxed_weathered_copper_double1",
+			"north": "waxed_weathered_cut_copper",
+			"down": "waxed_weathered_copper_double2"
+		},
+		"textures": "weathered_cut_copper",
+		"sound": "copper"
+	},
+	"waxed_oxidized_cut_copper_stairs": {
+		"isotropic": false,
+		"carried_textures": {
+			"east": "waxed_oxidized_copper_stairs2",
+			"west": "waxed_oxidized_copper_stairs1",
+			"south": "waxed_oxidized_copper_double1",
+			"up": "waxed_oxidized_copper_double1",
+			"north": "waxed_oxidized_cut_copper",
+			"down": "waxed_oxidized_copper_double2"
+		},
+		"textures": "oxidized_cut_copper",
+		"sound": "copper"
+	}
+}

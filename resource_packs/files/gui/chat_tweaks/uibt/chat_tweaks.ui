@@ -1,0 +1,100 @@
+{
+	"namespace": "bt_chat_tweaks",
+
+	"bt_chat_tweaks_ac_image": {
+		"type": "image",
+		"size": [15, 15],
+		"texture": "textures/ui/tab_icon"
+	},
+
+	"tab_icon@bt_chat_tweaks_ac_image": {
+		"texture": "textures/ui/tab_icon"
+	},
+	"shift_tab_icon@bt_chat_tweaks_ac_image": {
+		"texture": "textures/ui/shift_tab_icon"
+	},
+	"up_icon@bt_chat_tweaks_ac_image": {
+		"texture": "textures/ui/up_icon"
+	},
+	"down_icon@bt_chat_tweaks_ac_image": {
+		"texture": "textures/ui/down_icon"
+	},
+
+	"bt_chat_tweaks_ac_button@common_buttons.light_glyph_button": {
+		"size": [24, 24],
+		"anchor_from": "bottom_right",
+		"anchor_to": "bottom_right"
+	},
+
+	"tab@bt_chat_tweaks_ac_button": {
+		"$button_content": "bt_chat_tweaks.tab_icon",
+		"$pressed_button_name": "button.chat_autocomplete"
+	},
+	"shift_tab@bt_chat_tweaks_ac_button": {
+		"$button_content": "bt_chat_tweaks.shift_tab_icon",
+		"$pressed_button_name": "button.chat_autocomplete_back"
+	},
+	"up@bt_chat_tweaks_ac_button": {
+		"$button_content": "bt_chat_tweaks.up_icon",
+		"$pressed_button_name": "button.chat_previous_message"
+	},
+	"down@bt_chat_tweaks_ac_button": {
+		"$button_content": "bt_chat_tweaks.down_icon",
+		"$pressed_button_name": "button.chat_next_message"
+	},
+
+	"bt_chat_tweaks_ac_panel": {
+		"type": "panel",
+		"anchor_from": "bottom_left",
+		"anchor_to": "bottom_left",
+		"offset": [-40, -80],
+		"controls": [
+			{
+				"tab@tab": {
+					"offset": [-12, 12]
+				}
+			},
+			{
+				"shift_tab@shift_tab": {
+					"offset": [-12, -12]
+				}
+			},
+			{
+				"up@up": {
+					"offset": [12, -12]
+				}
+			},
+			{
+				"down@down": {
+					"offset": [12, 12]
+				}
+			}
+		]
+	},
+
+	"bt_chat_tweaks_cmd_ac_panel": {
+		"type": "panel",
+		"anchor_from": "bottom_left",
+		"anchor_to": "bottom_left",
+		"layer": 18,
+		"offset": [-40, -80],
+		"controls": [
+			{
+				"tab@tab": {
+					"offset": [0, 12]
+				}
+			},
+			{
+				"shift_tab@shift_tab": {
+					"offset": [0, -12]
+				}
+			}
+		],
+		"bindings": [
+			{
+				"binding_name": "#maximized_input_visible",
+				"binding_name_override": "#visible"
+			}
+		]
+	}
+}

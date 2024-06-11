@@ -1,0 +1,23 @@
+{
+	"format_version": "1.19.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "bt:mossy_stone_bricks.from_slab"
+		},
+		"tags": ["crafting_table"],
+		"priority": 0,
+		"pattern": ["##"],
+		"key": {
+			"#": {
+				"item": "minecraft:stone_slab4",
+				"data": 0
+			}
+		},
+		"result": {
+			"item": "minecraft:stonebrick",
+			"count": 1,
+			"data": 1
+		},
+		"group": "slabs_to_blocks"
+	}
+}

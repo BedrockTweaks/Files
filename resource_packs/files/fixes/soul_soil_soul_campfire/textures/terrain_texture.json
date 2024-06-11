@@ -1,0 +1,11 @@
+{
+	"num_mip_levels": 4,
+	"padding": 8,
+	"resource_pack_name": "vanilla",
+	"texture_data": {
+		"soul_campfire_log": {
+			"textures": "textures/blocks/soul_campfire_log"
+		}
+	},
+	"texture_name": "atlas.terrain"
+}

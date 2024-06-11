@@ -1,0 +1,14 @@
+{
+	"num_mip_levels": 4,
+	"padding": 8,
+	"resource_pack_name": "vanilla",
+	"texture_data": {
+		"redstone_ore_off": {
+			"textures": "textures/blocks/redstone_ore_off"
+		},
+		"deepslate_redstone_ore_off": {
+			"textures": "textures/blocks/deepslate/deepslate_redstone_ore_off"
+		}
+	},
+	"texture_name": "atlas.terrain"
+}

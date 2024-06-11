@@ -1,0 +1,202 @@
+{
+	"num_mip_levels": 4,
+	"padding": 8,
+	"resource_pack_name": "vanilla",
+	"texture_name": "atlas.terrain",
+	"texture_data": {
+		"stone": {
+			"textures": [
+				{
+					"variations": [
+						{
+							"path": "textures/blocks/stone/0"
+						},
+						{
+							"path": "textures/blocks/stone/1"
+						},
+						{
+							"path": "textures/blocks/stone/2"
+						},
+						{
+							"path": "textures/blocks/stone/3"
+						},
+						{
+							"path": "textures/blocks/stone/4"
+						},
+						{
+							"path": "textures/blocks/stone/5"
+						},
+						{
+							"path": "textures/blocks/stone/6"
+						},
+						{
+							"path": "textures/blocks/stone/7"
+						},
+						{
+							"path": "textures/blocks/stone/8"
+						},
+						{
+							"path": "textures/blocks/stone/9"
+						},
+						{
+							"path": "textures/blocks/stone/10"
+						},
+						{
+							"path": "textures/blocks/stone/11"
+						}
+					]
+				},
+				"textures/blocks/stone_granite",
+				"textures/blocks/stone_granite_smooth",
+				"textures/blocks/stone_diorite",
+				"textures/blocks/stone_diorite_smooth",
+				"textures/blocks/stone_andesite",
+				"textures/blocks/stone_andesite_smooth"
+			]
+		},
+		"stone_slab_top_4": {
+			"textures": [
+				"textures/blocks/stonebrick_mossy",
+				"textures/blocks/quartz_block_bottom",
+				{
+					"variations": [
+						{
+							"path": "textures/blocks/stone/0"
+						},
+						{
+							"path": "textures/blocks/stone/1"
+						},
+						{
+							"path": "textures/blocks/stone/2"
+						},
+						{
+							"path": "textures/blocks/stone/3"
+						},
+						{
+							"path": "textures/blocks/stone/4"
+						},
+						{
+							"path": "textures/blocks/stone/5"
+						},
+						{
+							"path": "textures/blocks/stone/6"
+						},
+						{
+							"path": "textures/blocks/stone/7"
+						},
+						{
+							"path": "textures/blocks/stone/8"
+						},
+						{
+							"path": "textures/blocks/stone/9"
+						},
+						{
+							"path": "textures/blocks/stone/10"
+						},
+						{
+							"path": "textures/blocks/stone/11"
+						}
+					]
+				},
+				"textures/blocks/sandstone_top",
+				"textures/blocks/red_sandstone_top"
+			]
+		},
+		"stone_slab_side_4": {
+			"textures": [
+				"textures/blocks/stonebrick_mossy",
+				"textures/blocks/quartz_block_bottom",
+				{
+					"variations": [
+						{
+							"path": "textures/blocks/stone/0"
+						},
+						{
+							"path": "textures/blocks/stone/1"
+						},
+						{
+							"path": "textures/blocks/stone/2"
+						},
+						{
+							"path": "textures/blocks/stone/3"
+						},
+						{
+							"path": "textures/blocks/stone/4"
+						},
+						{
+							"path": "textures/blocks/stone/5"
+						},
+						{
+							"path": "textures/blocks/stone/6"
+						},
+						{
+							"path": "textures/blocks/stone/7"
+						},
+						{
+							"path": "textures/blocks/stone/8"
+						},
+						{
+							"path": "textures/blocks/stone/9"
+						},
+						{
+							"path": "textures/blocks/stone/10"
+						},
+						{
+							"path": "textures/blocks/stone/11"
+						}
+					]
+				},
+				"textures/blocks/sandstone_smooth",
+				"textures/blocks/red_sandstone_smooth"
+			]
+		},
+		"stone_slab_bottom_4": {
+			"textures": [
+				"textures/blocks/stonebrick_mossy",
+				"textures/blocks/quartz_block_bottom",
+				{
+					"variations": [
+						{
+							"path": "textures/blocks/stone/0"
+						},
+						{
+							"path": "textures/blocks/stone/1"
+						},
+						{
+							"path": "textures/blocks/stone/2"
+						},
+						{
+							"path": "textures/blocks/stone/3"
+						},
+						{
+							"path": "textures/blocks/stone/4"
+						},
+						{
+							"path": "textures/blocks/stone/5"
+						},
+						{
+							"path": "textures/blocks/stone/6"
+						},
+						{
+							"path": "textures/blocks/stone/7"
+						},
+						{
+							"path": "textures/blocks/stone/8"
+						},
+						{
+							"path": "textures/blocks/stone/9"
+						},
+						{
+							"path": "textures/blocks/stone/10"
+						},
+						{
+							"path": "textures/blocks/stone/11"
+						}
+					]
+				},
+				"textures/blocks/sandstone_top",
+				"textures/blocks/red_sandstone_top"
+			]
+		}
+	}
+}

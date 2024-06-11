@@ -1,0 +1,18 @@
+{
+  "format_version": "1.12.0",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "bt:mb.red_sandstone"
+    },
+    "tags": ["crafting_table"],
+    "ingredients": [
+      {
+        "item": "bt:mb.red_sandstone_helmet"
+      }
+    ],
+    "result": {
+      "item": "bt:mb.red_sandstone",
+      "count": 1
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+	"num_mip_levels": 4,
+	"padding": 8,
+	"resource_pack_name": "vanilla",
+	"texture_data": {
+		"lodestone_east": {
+			"textures": "textures/blocks/lodestone_east"
+		},
+		"lodestone_north": {
+			"textures": "textures/blocks/lodestone_north"
+		},
+		"lodestone_south": {
+			"textures": "textures/blocks/lodestone_south"
+		},
+		"lodestone_west": {
+			"textures": "textures/blocks/lodestone_west"
+		}
+	},
+	"texture_name": "atlas.terrain"
+}

@@ -1,0 +1,91 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "bt:gv.hermit_heads",
+			"is_spawnable": true,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"component_groups": {
+			"trade_resupply_component_group": {
+				"minecraft:trade_resupply": {}
+			}
+		},
+		"components": {
+			"minecraft:type_family": {
+				"family": ["bt_villager", "mob"]
+			},
+			"minecraft:health": {
+				"value": 20,
+				"max": 20
+			},
+			"minecraft:conditional_bandwidth_optimization": {},
+			"minecraft:collision_box": {
+				"width": 0.6,
+				"height": 1.9
+			},
+			"minecraft:nameable": {
+				"always_show": true
+			},
+			"minecraft:movement": {
+				"value": 0.0
+			},
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"cause": "all",
+						"deals_damage": false
+					}
+				]
+			},
+			"minecraft:persistent": {},
+			"minecraft:behavior.float": {
+				"priority": 0
+			},
+			"minecraft:behavior.trade_with_player": {
+				"priority": 2
+			},
+			"minecraft:behavior.look_at_trading_player": {
+				"priority": 7
+			},
+			"minecraft:behavior.look_at_player": {
+				"priority": 8,
+				"look_distance": 8,
+				"probability": 0.02
+			},
+			"minecraft:physics": {},
+			"minecraft:pushable": {
+				"is_pushable": false,
+				"is_pushable_by_piston": false
+			},
+			"minecraft:behavior.trade_interest": {
+				"priority": 5,
+				"within_radius": 6.0,
+				"interest_time": 45.0,
+				"remove_item_time": 1.0,
+				"carried_item_switch_time": 2.0,
+				"cooldown": 2.0
+			},
+			"minecraft:economy_trade_table": {
+				"display_name": "entity.bt:gv.hermit_heads.name",
+				"table": "trading/gem_villagers/hermit_heads.json",
+				"new_screen": true,
+				"persist_trades": true
+			},
+			"minecraft:timer": {
+				"looping": true,
+				"time": [600, 600],
+				"time_down_event": {
+					"event": "minecraft:resupply_trades",
+					"target": "self"
+				}
+			}
+		},
+		"events": {
+			"minecraft:resupply_trades": {
+				"add": { "component_groups": ["trade_resupply_component_group"] }
+			}
+		}
+	}
+}

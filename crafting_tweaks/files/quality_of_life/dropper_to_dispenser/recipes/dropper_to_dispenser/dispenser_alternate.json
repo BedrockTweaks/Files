@@ -1,0 +1,23 @@
+{
+	"format_version": "1.19.0",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "bt:dropper_to_dispenser_bow"
+		},
+		"tags": ["crafting_table"],
+		"priority": 0,
+		"result": {
+			"item": "minecraft:dispenser",
+			"count": 1
+		},
+		"ingredients": [
+			{
+				"item": "minecraft:dropper"
+			},
+			{
+				"item": "minecraft:bow"
+			}
+		],
+		"group": "dispenser"
+	}
+}

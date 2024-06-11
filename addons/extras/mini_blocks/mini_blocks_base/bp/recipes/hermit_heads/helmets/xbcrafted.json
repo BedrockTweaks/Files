@@ -1,0 +1,18 @@
+{
+  "format_version": "1.12.0",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "bt:hh.xbcrafted_helmet"
+    },
+    "tags": ["crafting_table"],
+    "ingredients": [
+      {
+        "item": "bt:hh.xbcrafted"
+      }
+    ],
+    "result": {
+      "item": "bt:hh.xbcrafted_helmet",
+      "count": 1
+    }
+  }
+}

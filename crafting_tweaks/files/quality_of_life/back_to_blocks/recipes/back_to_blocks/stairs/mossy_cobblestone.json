@@ -1,0 +1,29 @@
+{
+	"format_version": "1.19.0",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "bt:mossy_cobblestone.from_stair"
+		},
+		"tags": ["crafting_table"],
+		"priority": 0,
+		"ingredients": [
+			{
+				"item": "minecraft:mossy_cobblestone_stairs"
+			},
+			{
+				"item": "minecraft:mossy_cobblestone_stairs"
+			},
+			{
+				"item": "minecraft:mossy_cobblestone_stairs"
+			},
+			{
+				"item": "minecraft:mossy_cobblestone_stairs"
+			}
+		],
+		"result": {
+			"item": "minecraft:mossy_cobblestone",
+			"count": 3
+		},
+		"group": "stairs_to_block"
+	}
+}
