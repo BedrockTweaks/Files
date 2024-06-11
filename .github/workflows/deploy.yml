@@ -1,9 +1,8 @@
 name: Build and Deploy Site
 
 on:
-  push:
-    branches:
-      - main
+  release:
+    types: [published]
 
 jobs:
   check-branch-build:
