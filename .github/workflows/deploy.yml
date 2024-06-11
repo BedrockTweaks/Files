@@ -16,6 +16,7 @@ jobs:
         uses: actions/checkout@v2
         with:
           fetch-depth: 0
+          ref: 'main'
 
       - name: Get current branch and repo
         id: check_step
@@ -38,6 +39,7 @@ jobs:
         uses: actions/checkout@v2
         with:
           fetch-depth: 0
+          ref: 'main'
 
       - name: Contribute List
         uses: akhilmhdh/contributors-readme-action@v2.3.10
@@ -55,6 +57,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          ref: 'main'
 
       - name: Update files
         if: needs.check-branch-build.outputs.branch == 'main'
