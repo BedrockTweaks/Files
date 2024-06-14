@@ -94,7 +94,7 @@
 					"id": "more_stairs",
 					"name": "More Stairs",
 					"description": "Creates 8 Stairs instead of 4.",
-					"version": "1.19 - 1.0.0"
+					"version": "1.21 - 1.0.0"
 				},
 				{
 					"id": "more_bricks",

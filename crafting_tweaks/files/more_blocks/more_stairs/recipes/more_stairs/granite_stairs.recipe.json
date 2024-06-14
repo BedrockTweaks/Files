@@ -1,0 +1,31 @@
+{
+	"format_version": "1.21.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "bt:ms.granite_stairs"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"priority": -1,
+		"pattern": [
+			"#",
+			"##",
+			"###"
+		],
+		"key": {
+			"#": {
+				"item": "minecraft:granite"
+			}
+		},
+		"unlock": [
+			{
+				"item": "minecraft:granite"
+			}
+		],
+		"result": {
+			"item": "minecraft:granite_stairs",
+			"count": 8
+		}
+	}
+}

@@ -1,0 +1,33 @@
+{
+	"format_version": "1.21.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "bt:ms.stone_stairs"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"priority": -1,
+		"pattern": [
+			"#",
+			"##",
+			"###"
+		],
+		"key": {
+			"#": {
+				"item": "minecraft:stone",
+				"data": 0
+			}
+		},
+		"unlock": [
+			{
+				"item": "minecraft:stone",
+				"data": 0
+			}
+		],
+		"result": {
+			"item": "minecraft:normal_stone_stairs",
+			"count": 8
+		}
+	}
+}
