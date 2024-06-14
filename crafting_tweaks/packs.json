@@ -81,8 +81,8 @@
 				{
 					"id": "more_trapdoors",
 					"name": "More Trapdoors",
-					"description": "Creates 12 Trapdoors instead of 3.",
-					"version": "1.19 - 1.0.0"
+					"description": "Creates 12 Trapdoors instead of 2.",
+					"version": "1.21 - 1.0.0"
 				},
 				{
 					"id": "more_bark",
