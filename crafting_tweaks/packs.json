@@ -111,13 +111,13 @@
 					"id": "craftable_gravel",
 					"name": "Craftable Gravel",
 					"description": "Allows you to craft Gravel from Flint.",
-					"version": "1.19 - 1.0.0"
+					"version": "1.21 - 1.0.0"
 				},
 				{
 					"id": "craftable_horse_armor",
 					"name": "Craftable Horse Armor",
 					"description": "Allows you to craft Horse Armor.",
-					"version": "1.19 - 1.0.0"
+					"version": "1.21 - 1.0.0"
 				},
 				{
 					"id": "craftable_coral_blocks_2x2",
@@ -132,22 +132,22 @@
 					"version": "1.21 - 1.0.0"
 				},
 				{
-					"id": "craftable_enchanted_golden_apples",
-					"name": "Craftable Enchanted Golden Apples",
+					"id": "craftable_enchanted_golden_apple",
+					"name": "Craftable Enchanted Golden Apple",
 					"description": "Allows you to craft Enchanted Golden Apples.",
-					"version": "1.19 - 1.0.0"
+					"version": "1.21 - 1.0.0"
 				},
 				{
 					"id": "craftable_name_tags",
 					"name": "Craftable Name Tags",
 					"description": "Allows you to craft Name Tags.",
-					"version": "1.19 - 1.0.0"
+					"version": "1.21 - 1.0.0"
 				},
 				{
 					"id": "craftable_blackstone",
 					"name": "Craftable Blackstone",
 					"description": "Allows you to craft Blackstone or Polished Blackstone, using Basalt & Coal/Charcoal.",
-					"version": "1.19 - 1.0.0"
+					"version": "1.21 - 1.0.0"
 				}
 			]
 		},

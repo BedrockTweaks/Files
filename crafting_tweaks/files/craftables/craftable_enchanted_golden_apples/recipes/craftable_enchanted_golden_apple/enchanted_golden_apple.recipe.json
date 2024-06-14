@@ -1,0 +1,36 @@
+{
+	"format_version": "1.21.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "bt:cega.enchanted_golden_apple"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"priority": -1,
+		"pattern": [
+			"GGG",
+			"G#G",
+			"GGG"
+		],
+		"key": {
+			"G": {
+				"item": "minecraft:gold_block"
+			},
+			"#": {
+				"item": "minecraft:apple"
+			}
+		},
+		"unlock": [
+			{
+				"item": "minecraft:gold_block"
+			},
+			{
+				"item": "minecraft:apple"
+			}
+		],
+		"result": {
+			"item": "minecraft:enchanted_golden_apple"
+		}
+	}
+}
