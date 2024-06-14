@@ -1,0 +1,42 @@
+{
+	"format_version": "1.21.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "bt:cnt.name_tag"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"priority": -1,
+		"pattern": [
+			" IS",
+			" PI",
+			"P  "
+		],
+		"key": {
+			"I": {
+				"item": "minecraft:iron_ingot"
+			},
+			"P": {
+				"item": "minecraft:paper"
+			},
+			"S": {
+				"item": "minecraft:string"
+			}
+		},
+		"unlock": [
+			{
+				"item": "minecraft:iron_ingot"
+			},
+			{
+				"item": "minecraft:paper"
+			},
+			{
+				"item": "minecraft:string"
+			}
+		],
+		"result": {
+			"item": "minecraft:name_tag"
+		}
+	}
+}
