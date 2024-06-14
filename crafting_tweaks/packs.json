@@ -26,8 +26,8 @@
 				{
 					"id": "rotten_flesh_to_leather",
 					"name": "Rotten Flesh to Leather",
-					"description": "Allows you to smelt Rotten Flesh into Leather.",
-					"version": "1.19 - 1.0.0"
+					"description": "Allows you to smelt Rotten Flesh into Leather in Furnaces, Smokers or Campfires.",
+					"version": "1.21 - 1.0.0"
 				},
 				{
 					"id": "charcoal_to_black_dye",
