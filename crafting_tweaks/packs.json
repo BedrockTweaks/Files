@@ -1,5 +1,6 @@
 {
 	"section": "crafting_tweaks",
+	"version": [1, 21, 0],
 	"categories": [
 		{
 			"id": "quality_of_life",
