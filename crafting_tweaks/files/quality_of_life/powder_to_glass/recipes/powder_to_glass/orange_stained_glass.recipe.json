@@ -1,0 +1,18 @@
+{
+	"format_version": "1.21.0",
+	"minecraft:recipe_furnace": {
+		"description": {
+			"identifier": "bt:pg.orange_stained_glass"
+		},
+		"tags": [
+			"furnace"
+		],
+		"group": "powder_to_glass",
+		"input": {
+			"item": "minecraft:orange_concrete_powder"
+		},
+		"output": {
+			"item": "minecraft:orange_stained_glass"
+		}
+	}
+}
