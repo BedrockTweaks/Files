@@ -50,8 +50,8 @@
 				{
 					"id": "universal_dyeing",
 					"name": "Universal Dyeing",
-					"description": "Allows you to dye any dyeable block to another color, no matter what color it is (does not include Wool and Concrete).",
-					"version": "1.19 - 1.0.0"
+					"description": "Allows you to dye any dyeable block to another color, no matter what color it is (does not include, Concrete, Candles or Glazed Terracotta).",
+					"version": "1.21 - 1.0.0"
 				},
 				{
 					"id": "straight_to_shapeless",

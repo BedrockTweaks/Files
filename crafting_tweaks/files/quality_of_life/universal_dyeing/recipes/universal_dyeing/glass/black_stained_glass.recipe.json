@@ -1,0 +1,33 @@
+{
+	"format_version": "1.21.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "bt:ud.black_stained_glass"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"group": "bt_ud_glass",
+		"priority": -1,
+		"pattern": [
+			"EEE",
+			"E0E",
+			"EEE"
+		],
+		"key": {
+			"E": {
+				"item": "minecraft:stained_glass"
+			},
+			"0": {
+				"item": "minecraft:black_dye"
+			}
+		},
+		"unlock": {
+			"context": "AlwaysUnlocked"
+		},
+		"result": {
+			"item": "minecraft:black_stained_glass",
+			"count": 8
+		}
+	}
+}
