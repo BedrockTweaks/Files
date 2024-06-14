@@ -1,11 +1,13 @@
 {
-	"format_version": "1.19.0",
+	"format_version": "1.21.0",
 	"minecraft:recipe_shapeless": {
 		"description": {
-			"identifier": "bt:bread.straight_to_shapeless"
+			"identifier": "bt:ss.bread"
 		},
-		"tags": ["crafting_table"],
-		"priority": 0,
+		"tags": [
+			"crafting_table"
+		],
+		"priority": -1,
 		"ingredients": [
 			{
 				"item": "minecraft:wheat"
@@ -17,10 +19,13 @@
 				"item": "minecraft:wheat"
 			}
 		],
+		"unlock": [
+			{
+				"item": "minecraft:wheat"
+			}
+		],
 		"result": {
-			"item": "minecraft:bread",
-			"count": 1
-		},
-		"group": "straight_to_shapeless"
+			"item": "minecraft:bread"
+		}
 	}
 }
