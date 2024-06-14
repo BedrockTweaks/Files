@@ -106,9 +106,11 @@ By checking the following boxes with an X, you ensure that:
 ##### Type
 Must be one of the following:
 
-- feat: A new feature
+- feat: A new feature 
+  - Only new/missing vanilla tweaks packs or packs accepted in [discussions](https://github.com/BedrockTweaks/Files/discussions) PR's will be accepted.
 - update: An update to an existing feature
-- fix: A bug fix
+- fix: A bug fix 
+  - Only PR's from a confirmed [issue](https://github.com/BedrockTweaks/Files/issues) will be accepted.
 - chore: Changes to the build process, tools, documentation...
 
 ##### Scope
