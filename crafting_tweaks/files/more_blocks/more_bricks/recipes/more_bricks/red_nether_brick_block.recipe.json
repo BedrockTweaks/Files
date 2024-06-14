@@ -1,0 +1,36 @@
+{
+	"format_version": "1.21.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "bt:mb.red_nether_brick_block"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"priority": -1,
+		"pattern": [
+			"#W",
+			"W#"
+		],
+		"key": {
+			"#": {
+				"item": "minecraft:netherbrick"
+			},
+			"W": {
+				"item": "minecraft:nether_wart"
+			}
+		},
+		"unlock": [
+			{
+				"item": "minecraft:netherbrick"
+			},
+			{
+				"item": "minecraft:nether_wart"
+			}
+		],
+		"result": {
+			"item": "minecraft:red_nether_brick",
+			"count": 4
+		}
+	}
+}

@@ -1,0 +1,30 @@
+{
+	"format_version": "1.21.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "bt:mb.nether_brick_block"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"priority": -1,
+		"pattern": [
+			"##",
+			"##"
+		],
+		"key": {
+			"#": {
+				"item": "minecraft:netherbrick"
+			}
+		},
+		"unlock": [
+			{
+				"item": "minecraft:netherbrick"
+			}
+		],
+		"result": {
+			"item": "minecraft:nether_brick",
+			"count": 4
+		}
+	}
+}
