@@ -1,0 +1,31 @@
+{
+    "format_version": "1.21.0",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "bt:ms.deepslate_brick_stairs"
+        },
+        "key": {
+            "#": {
+                "item": "minecraft:deepslate_bricks"
+            }
+        },
+        "priority": -1,
+		"pattern": [
+			"#",
+			"##",
+			"###"
+		],
+        "result": {
+            "count": 8,
+            "item": "minecraft:deepslate_brick_stairs"
+        },
+        "unlock": [
+            {
+                "item": "minecraft:deepslate_bricks"
+            }
+        ],
+        "tags": [
+            "crafting_table"
+        ]
+    }
+}
