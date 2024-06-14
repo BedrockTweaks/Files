@@ -70,12 +70,6 @@
 					"name": "Powder to Glass",
 					"description": "Smelt all colors of Concrete Powder into their respective Stained Glass color.",
 					"version": "1.19 - 1.0.0"
-				},
-				{
-					"id": "java_boat_recipe",
-					"name": "Java Boat Recipe",
-					"description": "Changes boat recipes to not use a shovel in them same as in Minecraft: Java Edition.",
-					"version": "1.19 - 1.0.0"
 				}
 			]
 		},
