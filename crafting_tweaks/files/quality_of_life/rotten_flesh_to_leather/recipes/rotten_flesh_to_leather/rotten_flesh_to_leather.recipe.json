@@ -1,0 +1,21 @@
+{
+	"format_version": "1.21.0",
+	"minecraft:recipe_furnace": {
+		"description": {
+			"identifier": "bt:rfl.leather"
+		},
+		"tags": [
+			"furnace",
+			"smoker",
+			"campfire",
+			"soul_campfire"
+		],
+		"input": "minecraft:rotten_flesh",
+		"unlock": [
+			{
+				"item": "minecraft:rotten_flesh"
+			}
+		],
+		"output": "minecraft:leather"
+	}
+}
