@@ -122,14 +122,14 @@
 				{
 					"id": "craftable_coral_blocks_2x2",
 					"name": "Craftable Coral Blocks 2x2",
-					"description": "Allows you to craft Coral Blocks from their Coral Plant in a 2x2. Both Tubes and Fans may be used interchangably.",
-					"version": "1.19 - 1.0.0"
+					"description": "Allows you to craft Coral Blocks and their dead variants from their Coral Plant or Coral Tube in a 2x2. Tubes and Fans are not interchangeable.",
+					"version": "1.21 - 1.0.0"
 				},
 				{
 					"id": "craftable_coral_blocks_3x3",
 					"name": "Craftable Coral Blocks 3x3",
-					"description": "Allows you to craft Coral Blocks from their Coral Plant in a 3x3. Both Tubes and Fans may be used interchangably.",
-					"version": "1.19 - 1.0.0"
+					"description": "Allows you to craft Coral Blocks and their dead variants from their Coral Plant or Coral Tube in a 3x3. Tubes and Fans are not interchangeable.",
+					"version": "1.21 - 1.0.0"
 				},
 				{
 					"id": "craftable_enchanted_golden_apples",
