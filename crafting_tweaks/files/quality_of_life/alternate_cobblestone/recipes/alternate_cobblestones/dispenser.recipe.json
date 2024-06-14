@@ -1,0 +1,37 @@
+{
+	"format_version": "1.21.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "bt:ac.dispenser"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"priority": -1,
+		"pattern": [
+			"###",
+			"#X#",
+			"#R#"
+		],
+		"key": {
+			"R": {
+				"item": "minecraft:redstone"
+			},
+			"#": {
+				"tag": "minecraft:stone_crafting_materials"
+			},
+			"X": {
+				"item": "minecraft:bow"
+			}
+		},
+		"unlock": [
+			{
+				"item": "minecraft:bow"
+			}
+		],
+		"result": {
+			"item": "minecraft:dispenser",
+			"data": 3
+		}
+	}
+}

@@ -60,10 +60,10 @@
 					"version": "1.19 - 1.0.0"
 				},
 				{
-					"id": "blackstone_cobblestone",
-					"name": "Blackstone Cobblestone",
-					"description": "Craft all items that require Cobblestone, using Blackstone.",
-					"version": "1.19 - 1.0.0"
+					"id": "alternate_cobblestone",
+					"name": "Alternate Cobblestone",
+					"description": "Craft all items that require Cobblestone, using Blackstone or Cobbled Deepslate.",
+					"version": "1.21 - 1.0.0"
 				},
 				{
 					"id": "powder_to_glass",
