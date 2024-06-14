@@ -33,13 +33,13 @@
 					"id": "charcoal_to_black_dye",
 					"name": "Charcoal to Black Dye",
 					"description": "Allows you to craft Charcoal into Black Dye.",
-					"version": "1.19 - 1.0.0"
+					"version": "1.21 - 1.0.0"
 				},
 				{
 					"id": "coal_to_black_dye",
 					"name": "Coal to Black Dye",
 					"description": "Allows you to craft Coal into Black Dye.",
-					"version": "1.19 - 1.0.0"
+					"version": "1.21 - 1.0.0"
 				},
 				{
 					"id": "sandstone_dyeing",
