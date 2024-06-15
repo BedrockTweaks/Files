@@ -10,6 +10,9 @@ To get started with contributing, follow these steps:
 2. Clone the forked repository to your local machine.
 3. Create a new branch for your changes.
 4. Make your desired changes.
+   - Before making a pack make sure:
+     - There is not an existing [Pull Request](https://github.com/BedrockTweaks/Files/pulls) for the same pack.
+     - The pack is a confirmed [Issue](https://github.com/BedrockTweaks/Files/issues) or [Discussion](https://github.com/BedrockTweaks/Files/discussions)
 5. Test your changes thoroughly.
    - For consoles, you can test by joining a world with the pack applied hosted in another device (phone/computer) in the same network.
    - At least need to be tested in 1 device.
@@ -52,7 +55,7 @@ We discourage the use of deprecated code and carefully review the use of experim
  | Particles            | dragon_magic.particle.json    | 
  | Texture              | dragon.png                    | 
 
-\* md referers to the pack name initials, in this example "**M**agical **D**ragons", another example would be `bt:mb.ancient_debris` Bedrock Tweaks Mini Blocks Ancient Debris.
+\* md refers to the pack name initials, in this example "**M**agical **D**ragons", another example would be `bt:mb.ancient_debris` Bedrock Tweaks Mini Blocks Ancient Debris.
 
 Vanilla files should stay the same.
 
@@ -61,7 +64,7 @@ JSON UI must follow [Bedrock Wiki JSON UI Best Practices](https://wiki.bedrock.d
 
 #
 
-If you notice any files not following the Style Guide it feel free to open a PR. 
+If you notice any files not following the Style Guide feel free to open a PR. 
 
 Note: not accepting Addons PR at the moment.
 

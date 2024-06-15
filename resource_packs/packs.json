@@ -1,6 +1,10 @@
 {
 	"section": "resource_packs",
-	"version": [1, 21, 0],
+	"version": [
+		1,
+		21,
+		0
+	],
 	"categories": [
 		{
 			"id": "aesthetic",
@@ -473,7 +477,8 @@
 				{
 					"id": "quieter_blazes",
 					"name": "Quieter Blazes",
-					"description": "Decreases Blaze sounds by 75%.<br><span style='color: #f98100'>The fire crackling sounds that Blazes emit are not affected by this pack. You will need to install Quieter Fire to make those sounds quieter as well.</span>"
+					"description": "Decreases Blaze sounds by 75%.",
+					"version": "The fire crackling sounds that Blazes emit are not affected by this pack. You will need to install Quieter Fire to make those sounds quieter as well."
 				},
 				{
 					"id": "quieter_cats",
@@ -719,12 +724,14 @@
 				{
 					"id": "visual_infested_stone_items",
 					"name": "Visual Infested Stone (Items)",
-					"description": "Adds a border around Infested Stone in the inventory.<br><span style='color: #ff0000'>This will NOT affect the placed blocks.</span>"
+					"description": "Adds a border around Infested Stone in the inventory.",
+					"version": "This will NOT affect the placed blocks."
 				},
 				{
 					"id": "visual_waxed_copper_items",
 					"name": "Visual Waxed Copper (Items)",
-					"description": "Adds a border around Waxed Copper in the inventory. <br><span style='color: #ff0000'>This will NOT affect the placed blocks.</span>"
+					"description": "Adds a border around Waxed Copper in the inventory.",
+					"version": "This will NOT affect the placed blocks."
 				},
 				{
 					"id": "age_25_kelp",
