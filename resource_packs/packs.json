@@ -875,11 +875,6 @@
 					"description": "Removes the Pumpkin overlay completely when worn."
 				},
 				{
-					"id": "orange_pumpkin_overlay",
-					"name": "Orange Pumpkin Overlay",
-					"description": "Makes Pumpkin overlay orange coloured."
-				},
-				{
 					"id": "translucent_spyglass_overlay",
 					"name": "Translucent Spyglass Overlay",
 					"description": "Increases visibility when zooming in with a Spyglass."
