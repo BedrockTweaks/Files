@@ -1,0 +1,31 @@
+{
+	"format_version": "1.21.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "bt:bb.stairs.cobblestone"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"group": "stairs_to_blocks",
+		"priority": -1,
+		"pattern": [
+			"##",
+			"##"
+		],
+		"key": {
+			"#": {
+				"item": "minecraft:stone_stairs"
+			}
+		},
+		"unlock": [
+			{
+				"item": "minecraft:stone_stairs"
+			}
+		],
+		"result": {
+			"item": "minecraft:cobblestone",
+			"count": 3
+		}
+	}
+}

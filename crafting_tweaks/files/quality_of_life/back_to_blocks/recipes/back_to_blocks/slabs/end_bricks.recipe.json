@@ -1,0 +1,32 @@
+{
+	"format_version": "1.21.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "bt:bb.slabs.end_bricks"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"group": "slabs_to_blocks",
+		"priority": -1,
+		"pattern": [
+			"##"
+		],
+		"key": {
+			"#": {
+				"item": "minecraft:stone_block_slab3",
+				"data": 0
+			}
+		},
+		"unlock": [
+			{
+				"item": "minecraft:stone_block_slab3",
+				"data": 0
+			}
+		],
+		"result": {
+			"item": "minecraft:end_bricks",
+			"count": 3
+		}
+	}
+}

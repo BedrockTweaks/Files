@@ -10,7 +10,7 @@
 					"id": "back_to_blocks",
 					"name": "Back to Blocks",
 					"description": "Allows you to craft full blocks from stairs and slabs.",
-					"version": "1.19 - 1.0.0"
+					"version": "1.21 - 1.0.0"
 				},
 				{
 					"id": "double_slabs",
