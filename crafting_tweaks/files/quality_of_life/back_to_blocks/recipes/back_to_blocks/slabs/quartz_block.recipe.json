@@ -1,0 +1,31 @@
+{
+	"format_version": "1.21.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "bt:bb.slabs.quartz_block"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"group": "slabs_to_blocks",
+		"priority": -1,
+		"pattern": [
+			"##"
+		],
+		"key": {
+			"#": {
+				"item": "minecraft:quartz_slab"
+			}
+		},
+		"unlock": [
+			{
+				"item": "minecraft:quartz_slab"
+			}
+		],
+		"result": {
+			"item": "minecraft:quartz_block",
+			"data": 0,
+			"count": 3
+		}
+	}
+}

@@ -1,0 +1,33 @@
+{
+	"format_version": "1.21.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "bt:bb.slabs.cut_sandstone"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"group": "slabs_to_blocks",
+		"priority": -1,
+		"pattern": [
+			"##"
+		],
+		"key": {
+			"#": {
+				"item": "minecraft:stone_block_slab4",
+				"data": 3
+			}
+		},
+		"unlock": [
+			{
+				"item": "minecraft:stone_block_slab4",
+				"data": 3
+			}
+		],
+		"result": {
+			"item": "minecraft:sandstone",
+			"data": 2,
+			"count": 3
+		}
+	}
+}

@@ -1,0 +1,32 @@
+{
+	"format_version": "1.21.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "bt:bb.stairs.stone"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"group": "stairs_to_blocks",
+		"priority": -1,
+		"pattern": [
+			"##",
+			"##"
+		],
+		"key": {
+			"#": {
+				"item": "minecraft:normal_stone_stairs"
+			}
+		},
+		"unlock": [
+			{
+				"item": "minecraft:normal_stone_stairs"
+			}
+		],
+		"result": {
+			"item": "minecraft:stone",
+			"data": 0,
+			"count": 3
+		}
+	}
+}
