@@ -23,33 +23,34 @@ As a base we use the [Bedrock Wiki Style Guide](https://wiki.bedrock.dev/meta/st
 We discourage the use of deprecated code and carefully review the use of experimental code.
 
 ### Files, Folders and Namespaces
- | Concept | Example Identifier | 
- | ------------- | ------------- |
- | Bedrock Tweaks | BT |
- | Vanilla Tweaks | VT |
- | Behavior Pack | BP | 
- | Resource Pack | RP | 
- | Geometry | dragon.geo.json | 
- | Geometry ID | geometry.bt_dragon |
- | Animation | dragon.animation.json | 
- | Animation RP ID | animation.rp.bt.dragon_fly |
- | Animation BP ID | animation.bp.bt.dragon_fly |
- | Animation Controller | dragon.ac.json | 
- | AC RP ID | animation.rp.bt.dragon_flight |
- | AC BP ID | animation.bp.bt.dragon_flight |
- | RP Entity | dragon.entity.json | 
- | BP Entity | dragon.json | 
- | ID | bt:md.dragon * |
- | Item 1.16.100+ | dragon_tooth.item.json | 
- | BP Item | dragon_tooth.item.bp.json | 
- | RP Item | dragon_tooth.item.rp.json | 
- | Render Controller | dragon.rc.json | 
- | Loot Table | dragon.loot.json | 
- | Recipe | dragon_saddle.recipe.json | 
- | Spawn Rules | dragon.spawn.json | 
- | Trade Table | dragon.trade.json | 
- | Particles | dragon_magic.particle.json | 
- | Texture | dragon.png | 
+ | Concept              | Example Identifier            | 
+ |----------------------|-------------------------------|
+ | Bedrock Tweaks       | BT                            |
+ | Vanilla Tweaks       | VT                            |
+ | Behavior Pack        | BP                            | 
+ | Resource Pack        | RP                            | 
+ | Crafting Tweak       | CT                            | 
+ | Geometry             | dragon.geo.json               | 
+ | Geometry ID          | geometry.bt_dragon            |
+ | Animation            | dragon.animation.json         | 
+ | Animation RP ID      | animation.rp.bt.dragon_fly    |
+ | Animation BP ID      | animation.bp.bt.dragon_fly    |
+ | Animation Controller | dragon.ac.json                | 
+ | AC RP ID             | animation.rp.bt.dragon_flight |
+ | AC BP ID             | animation.bp.bt.dragon_flight |
+ | RP Entity            | dragon.entity.json            | 
+ | BP Entity            | dragon.json                   | 
+ | ID                   | bt:md.dragon *                |
+ | Item 1.16.100+       | dragon_tooth.item.json        | 
+ | BP Item              | dragon_tooth.item.bp.json     | 
+ | RP Item              | dragon_tooth.item.rp.json     | 
+ | Render Controller    | dragon.rc.json                | 
+ | Loot Table           | dragon.loot.json              | 
+ | Recipe               | dragon_saddle.recipe.json     | 
+ | Spawn Rules          | dragon.spawn.json             | 
+ | Trade Table          | dragon.trade.json             | 
+ | Particles            | dragon_magic.particle.json    | 
+ | Texture              | dragon.png                    | 
 
 \* md referers to the pack name initials, in this example "**M**agical **D**ragons", another example would be `bt:mb.ancient_debris` Bedrock Tweaks Mini Blocks Ancient Debris.
 
