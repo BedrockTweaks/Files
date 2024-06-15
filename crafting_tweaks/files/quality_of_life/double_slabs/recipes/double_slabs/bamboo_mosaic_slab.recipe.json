@@ -1,0 +1,26 @@
+{
+	"format_version": "1.21.0",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "bt:ds.bamboo_mosaic_slab"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"priority": -1,
+		"ingredients": [
+			{
+				"item": "minecraft:bamboo_mosaic"
+			}
+		],
+		"unlock": [
+			{
+				"item": "minecraft:bamboo_mosaic"
+			}
+		],
+		"result": {
+			"item": "minecraft:bamboo_mosaic_slab",
+			"count": 2
+		}
+	}
+}
