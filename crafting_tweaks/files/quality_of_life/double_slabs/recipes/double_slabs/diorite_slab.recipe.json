@@ -1,0 +1,27 @@
+{
+	"format_version": "1.21.0",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "bt:ds.diorite_slab"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"priority": -1,
+		"ingredients": [
+			{
+				"item": "minecraft:diorite"
+			}
+		],
+		"unlock": [
+			{
+				"item": "minecraft:diorite"
+			}
+		],
+		"result": {
+			"item": "minecraft:stone_block_slab3",
+			"data": 4,
+			"count": 2
+		}
+	}
+}

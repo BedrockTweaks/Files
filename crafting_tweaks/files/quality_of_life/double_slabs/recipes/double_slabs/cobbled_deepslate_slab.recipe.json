@@ -1,0 +1,26 @@
+{
+	"format_version": "1.21.0",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "bt:ds.cobbled_deepslate_slab"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"priority": -1,
+		"ingredients": [
+			{
+				"item": "minecraft:cobbled_deepslate"
+			}
+		],
+		"unlock": [
+			{
+				"item": "minecraft:cobbled_deepslate"
+			}
+		],
+		"result": {
+			"item": "minecraft:cobbled_deepslate_slab",
+			"count": 2
+		}
+	}
+}
