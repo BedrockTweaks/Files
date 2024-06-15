@@ -156,11 +156,6 @@
 					"description": "Recolors the Spyglass to use Copper and Amethyst colors, to reflect its crafting recipe."
 				},
 				{
-					"id": "crimsoner_crimson",
-					"name": "Crimsoner Crimson",
-					"description": "Recolours all Crimson Wood related blocks and items to be redder, matching the shades in Crimson Nylium and Wart blocks closer."
-				},
-				{
 					"id": "smoother_warped_planks",
 					"name": "Smoother Warped Planks",
 					"description": "Removes the harsh contrast from Warped Planks."
@@ -1721,27 +1716,6 @@
 		}
 	],
 	"combinations": [
-		{
-			"id": "extras/crimson/crimsoner_glass_doors",
-			"combines": [
-				"aesthetic/crimsoner_crimson",
-				"aesthetic/glass_doors"
-			]
-		},
-		{
-			"id": "extras/crimson/crimsoner_glass_trapdoors",
-			"combines": [
-				"aesthetic/crimsoner_crimson",
-				"aesthetic/glass_trapdoors"
-			]
-		},
-		{
-			"id": "extras/crimson/crimsoner_log_tops",
-			"combines": [
-				"aesthetic/crimsoner_crimson",
-				"terrain/circular_log_tops"
-			]
-		},
 		{
 			"id": "extras/dirt/pebbleless_dungeons_dirt",
 			"combines": [
