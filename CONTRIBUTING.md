@@ -11,7 +11,7 @@ To get started with contributing, follow these steps:
 3. Create a new branch for your changes.
 4. Make your desired changes.
 5. Test your changes thoroughly.
-   - For consoles you can test by joining a world with the pack applied hosted in another device (phone/computer) in the same network.
+   - For consoles, you can test by joining a world with the pack applied hosted in another device (phone/computer) in the same network.
    - At least need to be tested in 1 device.
 6. Commit your changes with the following format.
 7. Push your changes to your forked repository.
