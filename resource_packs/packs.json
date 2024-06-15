@@ -111,11 +111,6 @@
 					"description": "Changes the gray base of End Rods to pink."
 				},
 				{
-					"id": "unique_dyes",
-					"name": "Unique Dyes",
-					"description": "Adds variation to the dyes by making each one different."
-				},
-				{
 					"id": "ashless_campfires",
 					"name": "Ashless Campfires",
 					"description": "Removes the 'ash' from unlit Campfires and Soul Campfires."
@@ -294,8 +289,8 @@
 			]
 		},
 		{
-			"id": "lower_and_sides",
-			"name": "Lower and Sides",
+			"id": "terrain/lower_and_sides",
+			"name": "Terrain / Lower and Sides",
 			"packs": [
 				{
 					"id": "lower_grass",
@@ -453,6 +448,52 @@
 		{
 			"id": "peace_and_quiet",
 			"name": "Peace and Quiet",
+			"packs": [
+				{
+					"id": "quieter_rain",
+					"name": "Quieter Rain",
+					"description": "Makes rain quieter."
+				},
+				{
+					"id": "quieter_dispensers_and_droppers",
+					"name": "Quieter Dispensers and Droppers",
+					"description": "Makes Dispensers and Droppers quieter. Also affects menu clicks."
+				},
+				{
+					"id": "quieter_minecarts",
+					"name": "Quieter Minecarts",
+					"description": "Makes Minecarts quieter."
+				},
+				{
+					"id": "quieter_fire",
+					"name": "Quieter Fire",
+					"description": "Makes Fire quieter."
+				},
+				{
+					"id": "quieter_nether_portals",
+					"name": "Quieter Nether Portals",
+					"description": "Makes Nether Portals quieter."
+				},
+				{
+					"id": "quieter_water",
+					"name": "Quieter Water",
+					"description": "Makes Flowing Water quieter."
+				},
+				{
+					"id": "quieter_pistons",
+					"name": "Quieter Pistons",
+					"description": "Makes Pistons quieter."
+				},
+				{
+					"id": "no_cave_sounds",
+					"name": "No Cave Sounds",
+					"description": "Removes the spooky cave sounds."
+				}
+			]
+		},
+		{
+			"id": "peace_and_quiet/mobs",
+			"name": "Peace and Quiet / Mobs",
 			"packs": [
 				{
 					"id": "quieter_axolotls",
@@ -659,46 +700,6 @@
 					"id": "quieter_zombies",
 					"name": "Quieter Zombies",
 					"description": "Decreases Zombie, Zombie Villager, Husk and Drowned sounds by 75%."
-				},
-				{
-					"id": "quieter_rain",
-					"name": "Quieter Rain",
-					"description": "Makes rain quieter."
-				},
-				{
-					"id": "quieter_dispensers_and_droppers",
-					"name": "Quieter Dispensers and Droppers",
-					"description": "Makes Dispensers and Droppers quieter. Also affects menu clicks."
-				},
-				{
-					"id": "quieter_minecarts",
-					"name": "Quieter Minecarts",
-					"description": "Makes Minecarts quieter."
-				},
-				{
-					"id": "quieter_fire",
-					"name": "Quieter Fire",
-					"description": "Makes Fire quieter."
-				},
-				{
-					"id": "quieter_nether_portals",
-					"name": "Quieter Nether Portals",
-					"description": "Makes Nether Portals quieter."
-				},
-				{
-					"id": "quieter_water",
-					"name": "Quieter Water",
-					"description": "Makes Flowing Water quieter."
-				},
-				{
-					"id": "quieter_pistons",
-					"name": "Quieter Pistons",
-					"description": "Makes Pistons quieter."
-				},
-				{
-					"id": "no_cave_sounds",
-					"name": "No Cave Sounds",
-					"description": "Removes the spooky cave sounds."
 				}
 			]
 		},
@@ -912,8 +913,64 @@
 			]
 		},
 		{
-			"id": "hud",
-			"name": "HUD",
+			"id": "gui",
+			"name": "GUI",
+			"packs": [
+				{
+					"id": "dark_ui",
+					"name": "Dark UI",
+					"description": "Changes all inventories and UIs to be darker."
+				},
+				{
+					"id": "numbered_hotbar",
+					"name": "Numbered Hotbar",
+					"description": "Adds numbers to the hotbar slots."
+				},
+				{
+					"id": "bedrock_edition_title",
+					"name": "Bedrock Edition Title",
+					"description": "Add a Bedrock Edition Logo to the Minecraft Title."
+				},
+				{
+					"id": "wither_hearts",
+					"name": "Wither Hearts",
+					"description": "Makes Hearts more visible when under the 'Wither' effect."
+				},
+				{
+					"id": "rainbow_experience_bar",
+					"name": "Rainbow Experience Bar",
+					"description": "Changes the default green XP bar to a rainbow XP bar."
+				},
+				{
+					"id": "translucent_tooltips",
+					"name": "Translucent Tooltips",
+					"description": "Makes item tooltips translucent."
+				},
+				{
+					"id": "trading_helper",
+					"name": "Trading Helper",
+					"description": "Makes all locked trades visibles and allows to see the locked item names and enchantments."
+				},
+				{
+					"id": "quick_crafting",
+					"name": "Quick Crafting",
+					"description": "Adds a button to stack craft items in the inventory, crafting table, stonecutter, and trade faster with villagers."
+				},
+				{
+					"id": "chat_tweaks",
+					"name": "Chat Tweaks",
+					"description": "Allows mobile users to easily tab and move between previous and next messages sent in chat and command blocks."
+				},
+				{
+					"id": "no_how_to_play",
+					"name": "No How To Play",
+					"description": "Removes the 'How to Play' Button from all screens so you do not accidentally misclick it."
+				}
+			]
+		},
+		{
+			"id": "gui/crosshairs",
+			"name": "GUI / Crosshairs",
 			"packs": [
 				{
 					"id": "no_crosshair",
@@ -984,68 +1041,12 @@
 					"id": "arrow_crosshair",
 					"name": "Arrow Crosshair",
 					"description": "Changes the '+' crosshair to an arrow."
-				},
-				{
-					"id": "wither_hearts",
-					"name": "Wither Hearts",
-					"description": "Makes Hearts more visible when under the 'Wither' effect."
-				},
-				{
-					"id": "rainbow_experience_bar",
-					"name": "Rainbow Experience Bar",
-					"description": "Changes the default green XP bar to a rainbow XP bar."
 				}
 			]
 		},
 		{
-			"id": "gui",
-			"name": "GUI",
-			"packs": [
-				{
-					"id": "quick_crafting",
-					"name": "Quick Crafting",
-					"description": "Adds a button to stack craft items in the inventory, crafting table, stonecutter, and trade faster with villagers."
-				},
-				{
-					"id": "chat_tweaks",
-					"name": "Chat Tweaks",
-					"description": "Allows mobile users to easily tab and move between previous and next messages sent in chat and command blocks."
-				},
-				{
-					"id": "bedrock_edition_title",
-					"name": "Bedrock Edition Title",
-					"description": "Add a Bedrock Edition Logo to the Minecraft Title."
-				},
-				{
-					"id": "numbered_hotbar",
-					"name": "Numbered Hotbar",
-					"description": "Adds numbers to the hotbar slots."
-				},
-				{
-					"id": "translucent_tooltips",
-					"name": "Translucent Tooltips",
-					"description": "Makes item tooltips translucent."
-				},
-				{
-					"id": "dark_ui",
-					"name": "Dark UI",
-					"description": "Changes all inventories and UIs to be darker."
-				},
-				{
-					"id": "trading_helper",
-					"name": "Trading Helper",
-					"description": "Makes all locked trades visibles and allows to see the locked item names and enchantments."
-				},
-				{
-					"id": "no_how_to_play",
-					"name": "No How To Play",
-					"description": "Removes the 'How to Play' Button from all screens so you do not accidentally misclick it."
-				}
-			]
-		},
-		{
-			"id": "menu_panoramas",
-			"name": "Menu Panoramas",
+			"id": "gui/menu_panoramas",
+			"name": "GUI / Menu Panoramas",
 			"packs": [
 				{
 					"id": "no_panorama_overlay",
@@ -1123,6 +1124,17 @@
 					"description": "Replaces the default Minecraft menu panorama with a 360° view of Minecraft: Console Edition TU69's tutorial world."
 				},
 				{
+					"id": "strideys_resource_pack_development_world",
+					"name": "Stridey's Resource Pack Development World",
+					"description": "Replaces the default Minecraft menu panorama with a 360° view of Stridey's resource pack development world."
+				}
+			]
+		},
+		{
+			"id": "gui/menu_panoramas/xisumas_hermitcraft_bases",
+			"name": "GUI / Menu Panoramas / Xisuma's Hermitcraft Bases",
+			"packs": [
+				{
 					"id": "xisumas_hermitcraft_base_season_1",
 					"name": "Xisuma's Hermitcraft Base (Season 1)",
 					"description": "Replaces the default Minecraft menu panorama with a 360° view of Xisuma's base from Hermitcraft Season 1."
@@ -1161,11 +1173,6 @@
 					"id": "xisumas_hermitcraft_base_season_8",
 					"name": "Xisuma's Hermitcraft Base (Season 8)",
 					"description": "Replaces the default Minecraft menu panorama with a 360° view of Xisuma's base from Hermitcraft Season 8."
-				},
-				{
-					"id": "strideys_resource_pack_development_world",
-					"name": "Stridey's Resource Pack Development World",
-					"description": "Replaces the default Minecraft menu panorama with a 360° view of Stridey's resource pack development world."
 				}
 			]
 		},
@@ -1320,6 +1327,21 @@
 			"name": "Fun",
 			"packs": [
 				{
+					"id": "smiley_axolotls",
+					"name": "Smiley Axolotls",
+					"description": "Gives Axolotls a smiley face. :)"
+				},
+				{
+					"id": "green_axolotl",
+					"name": "Green Axolotl",
+					"description": "Replaces the rare blue variant of the Axolotl with the unused green Axolotl skin."
+				},
+				{
+					"id": "beeralis",
+					"name": "Beeralis",
+					"description": "Look into my eyes, and nothing but my eyes!"
+				},
+				{
 					"id": "xisuma_turtle",
 					"name": "Xisuma Turtle",
 					"description": "Changes the Turtle texture to the well-known Xisuma Turtle."
@@ -1340,24 +1362,19 @@
 					"description": "Changes Piglins, Zombified Piglins and Piglin Brutes' textures to Xisuma's Darth Vader skin."
 				},
 				{
+					"id": "technoblade_pigs",
+					"name": "Technoblade Pigs",
+					"description": "In honor of Technoblade. RIP"
+				},
+				{
+					"id": "stridey_striders",
+					"name": "Stridey Striders",
+					"description": "Awful pack that makes Striders look like Stridey. Sorry."
+				},
+				{
 					"id": "emeralds_to_rubies",
 					"name": "Emeralds to Rubies",
 					"description": "Replaces all Emerald items and blocks with Rubies!"
-				},
-				{
-					"id": "smiley_axolotls",
-					"name": "Smiley Axolotls",
-					"description": "Gives Axolotls a smiley face. :)"
-				},
-				{
-					"id": "green_axolotl",
-					"name": "Green Axolotl",
-					"description": "Replaces the rare blue variant of the Axolotl with the unused green Axolotl skin."
-				},
-				{
-					"id": "beeralis",
-					"name": "Beeralis",
-					"description": "Look into my eyes, and nothing but my eyes!"
 				},
 				{
 					"id": "wither_bee",
@@ -1368,16 +1385,6 @@
 					"id": "ilmango_golden_apples",
 					"name": "ilmango Golden Apples",
 					"description": "Changes Golden Apples to ilmango's icon to celebrate the digging of a perimeter in under 12 hours."
-				},
-				{
-					"id": "technoblade_pigs",
-					"name": "Technoblade Pigs",
-					"description": "In honor of Technoblade. RIP"
-				},
-				{
-					"id": "stridey_striders",
-					"name": "Stridey Striders",
-					"description": "Awful pack that makes Striders look like Stridey. Sorry."
 				},
 				{
 					"id": "english_enchanting_table_translation",
@@ -1427,8 +1434,19 @@
 			]
 		},
 		{
-			"id": "colorful_slime",
-			"name": "Colorful Slime",
+			"id": "world_of_color",
+			"name": "World of Color",
+			"packs": [
+				{
+					"id": "unique_dyes",
+					"name": "Unique Dyes",
+					"description": "Adds variation to the dyes by making each one different."
+				}
+			]
+		},
+		{
+			"id": "world_of_color/colorful_slime",
+			"name": "World of Color / Colorful Slime",
 			"packs": [
 				{
 					"id": "white_slime",
@@ -1751,14 +1769,14 @@
 			"id": "extras/snow/whiter_lower_snow",
 			"combines": [
 				"terrain/whiter_snow",
-				"lower_and_sides/lower_snow"
+				"terrain/lower_and_sides/lower_snow"
 			]
 		},
 		{
 			"id": "extras/snow/whiter_snow_sides",
 			"combines": [
 				"terrain/whiter_snow",
-				"lower_and_sides/snow_sides"
+				"terrain/lower_and_sides/snow_sides"
 			]
 		},
 		{
