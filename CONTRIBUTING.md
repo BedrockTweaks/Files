@@ -170,6 +170,63 @@ added CONTRIBUTING.md
 updated pull_request_template.md
 ```
 
+## packs.json
+These are the TS interfaces for the packs.json file.
+```ts
+export interface PacksJSON {
+  section: Section;
+  // Global pack version, this will be the header.min_engine_version in the manifest.json
+  // example: [1, 21, 0]
+  version: number[];
+  categories: Category[];
+  combinations: Combination[];
+  deepMergeFiles: DeepMergeFile[];
+}
+
+export enum Section {
+  ResourcePacks = 'resource_packs',
+  Addons = 'addons',
+  CraftingTweaks = 'crafting_tweaks'
+}
+
+export interface Category {
+  id: string;
+  name: string;
+  packs: Pack[];
+}
+
+export interface Pack {
+  id: string;
+  name: string;
+  description: string;
+  version?: string; // * only Addons and CT
+}
+/*
+ * Pack Version is a string as follows: "<minecraft_version> - <pack_version>"
+ * minecraft_version is the minumin major version of the game the pack is compatible with
+ * pack_version is the version of the pack for that minecraft update, each mc update it resets
+ * example:
+ * (version update)     "1.21 - 1.0.0"
+ * (bug fix)            "1.21 - 1.0.1"
+ * (pack major revamp)  "1.21 - 2.0.0"
+ * (pack improvements)  "1.21 - 2.1.0"
+ * (version update)     "1.22 - 1.0.0"
+ */
+
+export interface Combination {
+  // Path to the combination pack
+  id: string;
+  // Contains an array of <pack_category>/<pack_id> of the packs which make the combination
+  combines: string[];
+}
+
+// JSON files which will be deep merged into a single file
+export interface DeepMergeFile {
+  filename: string;
+  filepath: string;
+}
+```
+
 ## Reporting Issues
 Before opening a new issue, please check if there is already an existing issue that addresses your problem in our [Issues](https://github.com/Bedrock-Tweaks/Bedrock-Tweaks-Files/issues) page. If there isn't, feel free to open a new one on our GitHub repository. Provide as much detail as possible, including steps to reproduce the issue and any relevant error messages.
 
