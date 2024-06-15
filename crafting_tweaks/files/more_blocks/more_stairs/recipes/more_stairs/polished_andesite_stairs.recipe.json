@@ -1,0 +1,31 @@
+{
+	"format_version": "1.21.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "bt:ms.polished_andesite_stairs"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"priority": -1,
+		"pattern": [
+			"#",
+			"##",
+			"###"
+		],
+		"key": {
+			"#": {
+				"item": "minecraft:polished_andesite"
+			}
+		},
+		"unlock": [
+			{
+				"item": "minecraft:polished_andesite"
+			}
+		],
+		"result": {
+			"item": "minecraft:polished_andesite_stairs",
+			"count": 8
+		}
+	}
+}

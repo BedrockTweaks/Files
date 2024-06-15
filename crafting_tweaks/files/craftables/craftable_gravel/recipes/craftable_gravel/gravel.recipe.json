@@ -1,0 +1,29 @@
+{
+	"format_version": "1.21.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "bt:cg.gravel"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"priority": -1,
+		"pattern": [
+			"##",
+			"##"
+		],
+		"key": {
+			"#": {
+				"item": "minecraft:flint"
+			}
+		},
+		"unlock": [
+			{
+				"item": "minecraft:flint"
+			}
+		],
+		"result": {
+			"item": "minecraft:gravel"
+		}
+	}
+}

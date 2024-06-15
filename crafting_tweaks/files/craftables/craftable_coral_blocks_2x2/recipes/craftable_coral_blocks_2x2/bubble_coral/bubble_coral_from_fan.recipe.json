@@ -1,0 +1,30 @@
+{
+	"format_version": "1.21.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "bt:cc2.bubble_coral_block_from_fan"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"group": "coral_blocks",
+		"priority": -1,
+		"pattern": [
+			"##",
+			"##"
+		],
+		"key": {
+			"#": {
+				"item": "minecraft:bubble_coral_fan"
+			}
+		},
+		"unlock": [
+			{
+				"item": "minecraft:bubble_coral_fan"
+			}
+		],
+		"result": {
+			"item": "minecraft:bubble_coral_block"
+		}
+	}
+}

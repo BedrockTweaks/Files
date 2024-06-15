@@ -1,0 +1,31 @@
+{
+	"format_version": "1.21.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "bt:bb.stairs.polished_blackstone"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"group": "stairs_to_blocks",
+		"priority": -1,
+		"pattern": [
+			"##",
+			"##"
+		],
+		"key": {
+			"#": {
+				"item": "minecraft:polished_blackstone_stairs"
+			}
+		},
+		"unlock": [
+			{
+				"item": "minecraft:polished_blackstone_stairs"
+			}
+		],
+		"result": {
+			"item": "minecraft:polished_blackstone",
+			"count": 3
+		}
+	}
+}

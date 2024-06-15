@@ -1,0 +1,26 @@
+{
+	"format_version": "1.21.0",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "bt:ds.waxed_weathered_cut_copper_slab"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"priority": -1,
+		"ingredients": [
+			{
+				"item": "minecraft:waxed_weathered_cut_copper"
+			}
+		],
+		"unlock": [
+			{
+				"item": "minecraft:waxed_weathered_cut_copper"
+			}
+		],
+		"result": {
+			"item": "minecraft:waxed_weathered_cut_copper_slab",
+			"count": 2
+		}
+	}
+}

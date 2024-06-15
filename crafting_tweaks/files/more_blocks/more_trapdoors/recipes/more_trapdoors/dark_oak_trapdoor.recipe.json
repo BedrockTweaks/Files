@@ -1,0 +1,31 @@
+{
+	"format_version": "1.21.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "bt:mt.dark_oak_trapdoor"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"group": "wooden_trap_door",
+		"priority": -1,
+		"pattern": [
+			"###",
+			"###"
+		],
+		"key": {
+			"#": {
+				"item": "minecraft:dark_oak_planks"
+			}
+		},
+		"unlock": [
+			{
+				"item": "minecraft:dark_oak_planks"
+			}
+		],
+		"result": {
+			"item": "minecraft:dark_oak_trapdoor",
+			"count": 12
+		}
+	}
+}

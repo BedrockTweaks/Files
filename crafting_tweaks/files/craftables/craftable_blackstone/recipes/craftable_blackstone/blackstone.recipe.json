@@ -1,0 +1,36 @@
+{
+	"format_version": "1.21.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "bt:cb.blackstone"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"priority": -1,
+		"pattern": [
+			"$#",
+			"#$"
+		],
+		"key": {
+			"#": {
+				"item": "minecraft:basalt"
+			},
+			"$": {
+				"tag": "minecraft:coals"
+			}
+		},
+		"unlock": [
+			{
+				"item": "minecraft:basalt"
+			},
+			{
+				"tag": "minecraft:coals"
+			}
+		],
+		"result": {
+			"item": "minecraft:blackstone",
+			"count": 4
+		}
+	}
+}

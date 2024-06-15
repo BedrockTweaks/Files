@@ -1,0 +1,31 @@
+{
+	"format_version": "1.21.0",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "bt:ss.bread"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"priority": -1,
+		"ingredients": [
+			{
+				"item": "minecraft:wheat"
+			},
+			{
+				"item": "minecraft:wheat"
+			},
+			{
+				"item": "minecraft:wheat"
+			}
+		],
+		"unlock": [
+			{
+				"item": "minecraft:wheat"
+			}
+		],
+		"result": {
+			"item": "minecraft:bread"
+		}
+	}
+}

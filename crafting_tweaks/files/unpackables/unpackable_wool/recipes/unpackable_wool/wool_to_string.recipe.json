@@ -1,0 +1,26 @@
+{
+	"format_version": "1.21.0",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "bt:uw.wool_to_string"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"priority": -1,
+		"ingredients": [
+			{
+				"tag": "minecraft:wool"
+			}
+		],
+		"unlock": [
+			{
+				"tag": "minecraft:wool"
+			}
+		],
+		"result": {
+			"item": "minecraft:string",
+			"count": 4
+		}
+	}
+}
