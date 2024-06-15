@@ -1,0 +1,18 @@
+{
+	"format_version": "1.21.0",
+	"minecraft:recipe_furnace": {
+		"description": {
+			"identifier": "bt:pg.brown_stained_glass"
+		},
+		"tags": [
+			"furnace"
+		],
+		"group": "powder_to_glass",
+		"input": {
+			"item": "minecraft:brown_concrete_powder"
+		},
+		"output": {
+			"item": "minecraft:brown_stained_glass"
+		}
+	}
+}

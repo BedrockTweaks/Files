@@ -1,0 +1,38 @@
+{
+	"format_version": "1.21.0",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "bt:sd.red_sandstone"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"group": "sandstone_dyeing",
+		"priority": -1,
+		"ingredients": [
+			{
+				"item": "minecraft:sandstone",
+				"data": 0
+			},
+			{
+				"item": "minecraft:sandstone",
+				"data": 0
+			},
+			{
+				"item": "minecraft:red_dye"
+			}
+		],
+		"unlock": [
+			{
+				"item": "minecraft:sandstone"
+			},
+			{
+				"item": "minecraft:red_dye"
+			}
+		],
+		"result": {
+			"item": "minecraft:red_sandstone",
+			"count": 2
+		}
+	}
+}

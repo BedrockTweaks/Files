@@ -1,0 +1,26 @@
+{
+	"format_version": "1.21.0",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "bt:ds.deepslate_tile_slab"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"priority": -1,
+		"ingredients": [
+			{
+				"item": "minecraft:deepslate_tiles"
+			}
+		],
+		"unlock": [
+			{
+				"item": "minecraft:deepslate_tiles"
+			}
+		],
+		"result": {
+			"item": "minecraft:deepslate_tile_slab",
+			"count": 2
+		}
+	}
+}

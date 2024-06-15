@@ -1,0 +1,27 @@
+{
+	"format_version": "1.21.0",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "bt:ds.granite"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"priority": -1,
+		"ingredients": [
+			{
+				"item": "minecraft:granite"
+			}
+		],
+		"unlock": [
+			{
+				"item": "minecraft:granite"
+			}
+		],
+		"result": {
+			"item": "minecraft:stone_block_slab3",
+			"data": 6,
+			"count": 2
+		}
+	}
+}

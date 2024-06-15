@@ -1,0 +1,26 @@
+{
+	"format_version": "1.21.0",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "bt:ds.smooth_stone_slab"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"priority": -1,
+		"ingredients": [
+			{
+				"item": "minecraft:smooth_stone"
+			}
+		],
+		"unlock": [
+			{
+				"item": "minecraft:smooth_stone"
+			}
+		],
+		"result": {
+			"item": "minecraft:smooth_stone_slab",
+			"count": 2
+		}
+	}
+}

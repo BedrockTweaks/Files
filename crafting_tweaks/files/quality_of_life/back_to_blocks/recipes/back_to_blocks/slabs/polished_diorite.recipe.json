@@ -1,0 +1,32 @@
+{
+	"format_version": "1.21.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "bt:bb.slabs.polished_diorite"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"group": "slabs_to_blocks",
+		"priority": -1,
+		"pattern": [
+			"##"
+		],
+		"key": {
+			"#": {
+				"item": "minecraft:stone_block_slab3",
+				"data": 5
+			}
+		},
+		"unlock": [
+			{
+				"item": "minecraft:stone_block_slab3",
+				"data": 5
+			}
+		],
+		"result": {
+			"item": "minecraft:polished_diorite",
+			"count": 3
+		}
+	}
+}

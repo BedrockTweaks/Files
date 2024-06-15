@@ -1,0 +1,31 @@
+{
+	"format_version": "1.21.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "bt:ms.deepslate_tile_stairs"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"priority": -1,
+		"pattern": [
+			"#",
+			"##",
+			"###"
+		],
+		"key": {
+			"#": {
+				"item": "minecraft:deepslate_tiles"
+			}
+		},
+		"unlock": [
+			{
+				"item": "minecraft:deepslate_tiles"
+			}
+		],
+		"result": {
+			"item": "minecraft:deepslate_tile_stairs",
+			"count": 8
+		}
+	}
+}

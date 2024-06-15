@@ -1,0 +1,32 @@
+{
+	"format_version": "1.21.0",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "bt:dd.dispenser_alternate"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"group": "dispenser",
+		"priority": -1,
+		"ingredients": [
+			{
+				"item": "minecraft:dropper"
+			},
+			{
+				"item": "minecraft:bow"
+			}
+		],
+		"unlock": [
+			{
+				"item": "minecraft:dropper"
+			},
+			{
+				"item": "minecraft:bow"
+			}
+		],
+		"result": {
+			"item": "minecraft:dispenser"
+		}
+	}
+}

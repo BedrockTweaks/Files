@@ -1,0 +1,26 @@
+{
+	"format_version": "1.21.0",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "bt:ds.cut_copper_slab"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"priority": -1,
+		"ingredients": [
+			{
+				"item": "minecraft:cut_copper"
+			}
+		],
+		"unlock": [
+			{
+				"item": "minecraft:cut_copper"
+			}
+		],
+		"result": {
+			"item": "minecraft:cut_copper_slab",
+			"count": 2
+		}
+	}
+}

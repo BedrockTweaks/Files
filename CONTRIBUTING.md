@@ -23,33 +23,34 @@ As a base we use the [Bedrock Wiki Style Guide](https://wiki.bedrock.dev/meta/st
 We discourage the use of deprecated code and carefully review the use of experimental code.
 
 ### Files, Folders and Namespaces
- | Concept | Example Identifier | 
- | ------------- | ------------- |
- | Bedrock Tweaks | BT |
- | Vanilla Tweaks | VT |
- | Behavior Pack | BP | 
- | Resource Pack | RP | 
- | Geometry | dragon.geo.json | 
- | Geometry ID | geometry.bt_dragon |
- | Animation | dragon.animation.json | 
- | Animation RP ID | animation.rp.bt.dragon_fly |
- | Animation BP ID | animation.bp.bt.dragon_fly |
- | Animation Controller | dragon.ac.json | 
- | AC RP ID | animation.rp.bt.dragon_flight |
- | AC BP ID | animation.bp.bt.dragon_flight |
- | RP Entity | dragon.entity.json | 
- | BP Entity | dragon.json | 
- | ID | bt:md.dragon * |
- | Item 1.16.100+ | dragon_tooth.item.json | 
- | BP Item | dragon_tooth.item.bp.json | 
- | RP Item | dragon_tooth.item.rp.json | 
- | Render Controller | dragon.rc.json | 
- | Loot Table | dragon.loot.json | 
- | Recipe | dragon_saddle.recipe.json | 
- | Spawn Rules | dragon.spawn.json | 
- | Trade Table | dragon.trade.json | 
- | Particles | dragon_magic.particle.json | 
- | Texture | dragon.png | 
+ | Concept              | Example Identifier            | 
+ |----------------------|-------------------------------|
+ | Bedrock Tweaks       | BT                            |
+ | Vanilla Tweaks       | VT                            |
+ | Behavior Pack        | BP                            | 
+ | Resource Pack        | RP                            | 
+ | Crafting Tweak       | CT                            | 
+ | Geometry             | dragon.geo.json               | 
+ | Geometry ID          | geometry.bt_dragon            |
+ | Animation            | dragon.animation.json         | 
+ | Animation RP ID      | animation.rp.bt.dragon_fly    |
+ | Animation BP ID      | animation.bp.bt.dragon_fly    |
+ | Animation Controller | dragon.ac.json                | 
+ | AC RP ID             | animation.rp.bt.dragon_flight |
+ | AC BP ID             | animation.bp.bt.dragon_flight |
+ | RP Entity            | dragon.entity.json            | 
+ | BP Entity            | dragon.json                   | 
+ | ID                   | bt:md.dragon *                |
+ | Item 1.16.100+       | dragon_tooth.item.json        | 
+ | BP Item              | dragon_tooth.item.bp.json     | 
+ | RP Item              | dragon_tooth.item.rp.json     | 
+ | Render Controller    | dragon.rc.json                | 
+ | Loot Table           | dragon.loot.json              | 
+ | Recipe               | dragon_saddle.recipe.json     | 
+ | Spawn Rules          | dragon.spawn.json             | 
+ | Trade Table          | dragon.trade.json             | 
+ | Particles            | dragon_magic.particle.json    | 
+ | Texture              | dragon.png                    | 
 
 \* md referers to the pack name initials, in this example "**M**agical **D**ragons", another example would be `bt:mb.ancient_debris` Bedrock Tweaks Mini Blocks Ancient Debris.
 
@@ -106,9 +107,11 @@ By checking the following boxes with an X, you ensure that:
 ##### Type
 Must be one of the following:
 
-- feat: A new feature
+- feat: A new feature 
+  - Only new/missing vanilla tweaks packs or packs accepted in [discussions](https://github.com/BedrockTweaks/Files/discussions) PR's will be accepted.
 - update: An update to an existing feature
-- fix: A bug fix
+- fix: A bug fix 
+  - Only PR's from a confirmed [issue](https://github.com/BedrockTweaks/Files/issues) will be accepted.
 - chore: Changes to the build process, tools, documentation...
 
 ##### Scope
@@ -166,6 +169,63 @@ chore(files): documentation update
 added README.md
 added CONTRIBUTING.md
 updated pull_request_template.md
+```
+
+## packs.json
+These are the TS interfaces for the packs.json file.
+```ts
+export interface PacksJSON {
+  section: Section;
+  // Global pack version, this will be the header.min_engine_version in the manifest.json
+  // example: [1, 21, 0]
+  version: number[];
+  categories: Category[];
+  combinations: Combination[];
+  deepMergeFiles: DeepMergeFile[];
+}
+
+export enum Section {
+  ResourcePacks = 'resource_packs',
+  Addons = 'addons',
+  CraftingTweaks = 'crafting_tweaks'
+}
+
+export interface Category {
+  id: string;
+  name: string;
+  packs: Pack[];
+}
+
+export interface Pack {
+  id: string;
+  name: string;
+  description: string;
+  version?: string; // * only Addons and CT
+}
+/*
+ * Pack Version is a string as follows: "<minecraft_version> - <pack_version>"
+ * minecraft_version is the minumin major version of the game the pack is compatible with
+ * pack_version is the version of the pack for that minecraft update, each mc update it resets
+ * example:
+ * (version update)     "1.21 - 1.0.0"
+ * (bug fix)            "1.21 - 1.0.1"
+ * (pack major revamp)  "1.21 - 2.0.0"
+ * (pack improvements)  "1.21 - 2.1.0"
+ * (version update)     "1.22 - 1.0.0"
+ */
+
+export interface Combination {
+  // Path to the combination pack
+  id: string;
+  // Contains an array of <pack_category>/<pack_id> of the packs which make the combination
+  combines: string[];
+}
+
+// JSON files which will be deep merged into a single file
+export interface DeepMergeFile {
+  filename: string;
+  filepath: string;
+}
 ```
 
 ## Reporting Issues
