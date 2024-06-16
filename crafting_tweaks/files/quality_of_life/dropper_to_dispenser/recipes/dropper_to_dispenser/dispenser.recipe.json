@@ -1,0 +1,43 @@
+{
+	"format_version": "1.21.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "bt:dd.dispenser"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"group": "dispenser",
+		"priority": -1,
+		"pattern": [
+			" S/",
+			"S#/",
+			" S/"
+		],
+		"key": {
+			"/": {
+				"item": "minecraft:string"
+			},
+			"S": {
+				"item": "minecraft:stick"
+			},
+			"#": {
+				"item": "minecraft:dropper"
+			}
+		},
+		"unlock": [
+			{
+				"item": "minecraft:string"
+			},
+			{
+				"item": "minecraft:stick"
+			},
+			{
+				"item": "minecraft:dropper"
+			}
+		],
+		"result": {
+			"item": "minecraft:dispenser"
+		}
+	}
+}

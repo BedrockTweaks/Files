@@ -1,0 +1,26 @@
+{
+	"format_version": "1.21.0",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "bt:ds.brick_slab"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"priority": -1,
+		"ingredients": [
+			{
+				"item": "minecraft:brick_block"
+			}
+		],
+		"unlock": [
+			{
+				"item": "minecraft:brick_block"
+			}
+		],
+		"result": {
+			"item": "minecraft:brick_slab",
+			"count": 2
+		}
+	}
+}

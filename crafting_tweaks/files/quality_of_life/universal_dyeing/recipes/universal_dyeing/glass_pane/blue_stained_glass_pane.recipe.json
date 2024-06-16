@@ -1,0 +1,33 @@
+{
+	"format_version": "1.21.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "bt:ud.blue_stained_glass_pane"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"group": "bt_ud_glass_pane",
+		"priority": -1,
+		"pattern": [
+			"EEE",
+			"E0E",
+			"EEE"
+		],
+		"key": {
+			"E": {
+				"item": "minecraft:stained_glass_pane"
+			},
+			"0": {
+				"item": "minecraft:blue_dye"
+			}
+		},
+		"unlock": {
+			"context": "AlwaysUnlocked"
+		},
+		"result": {
+			"item": "minecraft:blue_stained_glass_pane",
+			"count": 8
+		}
+	}
+}

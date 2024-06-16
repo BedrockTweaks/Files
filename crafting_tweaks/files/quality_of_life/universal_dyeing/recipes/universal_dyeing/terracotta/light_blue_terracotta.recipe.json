@@ -1,0 +1,33 @@
+{
+	"format_version": "1.21.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "bt:ud.light_blue_terracotta"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"group": "bt_ud_terracotta",
+		"priority": -1,
+		"pattern": [
+			"EEE",
+			"E0E",
+			"EEE"
+		],
+		"key": {
+			"E": {
+				"item": "minecraft:stained_hardened_clay"
+			},
+			"0": {
+				"item": "minecraft:light_blue_dye"
+			}
+		},
+		"unlock": {
+			"context": "AlwaysUnlocked"
+		},
+		"result": {
+			"item": "minecraft:light_blue_terracotta",
+			"count": 8
+		}
+	}
+}

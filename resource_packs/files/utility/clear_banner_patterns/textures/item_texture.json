@@ -11,20 +11,26 @@
 		"flower_banner_pattern": {
 			"textures": "textures/items/flower_banner_pattern"
 		},
+		"flow_banner_pattern": {
+			"textures": "textures/items/flow_banner_pattern"
+		},
 		"field_masoned_banner_pattern": {
 			"textures": "textures/items/field_masoned_banner_pattern"
 		},
 		"globe_banner_pattern": {
 			"textures": "textures/items/globe_banner_pattern"
 		},
-		"skull_banner_pattern": {
-			"textures": "textures/items/skull_banner_pattern"
+		"guster_banner_pattern": {
+			"textures": "textures/items/guster_banner_pattern"
+		},
+		"mojang_banner_pattern": {
+			"textures": "textures/items/mojang_banner_pattern"
 		},
 		"piglin_banner_pattern": {
 			"textures": "textures/items/piglin_banner_pattern"
 		},
-		"mojang_banner_pattern": {
-			"textures": "textures/items/mojang_banner_pattern"
+		"skull_banner_pattern": {
+			"textures": "textures/items/skull_banner_pattern"
 		}
 	}
 }

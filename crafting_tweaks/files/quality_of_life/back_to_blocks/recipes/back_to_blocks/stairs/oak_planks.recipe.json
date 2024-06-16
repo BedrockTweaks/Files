@@ -1,0 +1,31 @@
+{
+	"format_version": "1.21.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "bt:bb.stairs.oak_planks"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"group": "stairs_to_blocks",
+		"priority": -1,
+		"pattern": [
+			"##",
+			"##"
+		],
+		"key": {
+			"#": {
+				"item": "minecraft:oak_stairs"
+			}
+		},
+		"unlock": [
+			{
+				"item": "minecraft:oak_stairs"
+			}
+		],
+		"result": {
+			"item": "minecraft:oak_planks",
+			"count": 3
+		}
+	}
+}

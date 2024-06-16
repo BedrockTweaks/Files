@@ -1,0 +1,30 @@
+{
+	"format_version": "1.21.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "bt:cc2.fire_coral_block_from_coral"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"group": "coral_blocks",
+		"priority": -1,
+		"pattern": [
+			"##",
+			"##"
+		],
+		"key": {
+			"#": {
+				"item": "minecraft:fire_coral"
+			}
+		},
+		"unlock": [
+			{
+				"item": "minecraft:fire_coral"
+			}
+		],
+		"result": {
+			"item": "minecraft:fire_coral_block"
+		}
+	}
+}

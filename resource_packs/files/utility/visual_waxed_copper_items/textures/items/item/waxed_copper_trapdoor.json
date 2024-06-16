@@ -1,0 +1,23 @@
+{
+	"credit": "Created by Stridey",
+	"parent": "block/thin_block",
+	"textures": {
+		"particle": "#ends",
+		"ends": "item/waxed_copper_trapdoor",
+		"sides": "item/waxed_copper_trapdoor_side"
+	},
+	"elements": [
+		{
+			"from": [0, 0, 0],
+			"to": [16, 3, 16],
+			"faces": {
+				"north": {"uv": [0, 3, 16, 0], "texture": "#sides"},
+				"east": {"uv": [0, 3, 16, 0], "texture": "#sides"},
+				"south": {"uv": [0, 3, 16, 0], "texture": "#sides"},
+				"west": {"uv": [0, 3, 16, 0], "texture": "#sides"},
+				"up": {"uv": [0, 0, 16, 16], "texture": "#ends"},
+				"down": {"uv": [0, 0, 16, 16], "texture": "#ends"}
+			}
+		}
+	]
+}

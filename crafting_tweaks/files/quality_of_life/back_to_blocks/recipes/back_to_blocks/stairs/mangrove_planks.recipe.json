@@ -1,0 +1,31 @@
+{
+	"format_version": "1.21.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "bt:bb.stairs.mangrove_planks"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"group": "stairs_to_blocks",
+		"priority": -1,
+		"pattern": [
+			"##",
+			"##"
+		],
+		"key": {
+			"#": {
+				"item": "minecraft:mangrove_stairs"
+			}
+		},
+		"unlock": [
+			{
+				"item": "minecraft:mangrove_stairs"
+			}
+		],
+		"result": {
+			"item": "minecraft:mangrove_planks",
+			"count": 3
+		}
+	}
+}

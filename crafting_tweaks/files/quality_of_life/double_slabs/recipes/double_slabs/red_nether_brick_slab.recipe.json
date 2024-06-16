@@ -1,0 +1,27 @@
+{
+	"format_version": "1.21.0",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "bt:ds.red_nether_brick_slab"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"priority": -1,
+		"ingredients": [
+			{
+				"item": "minecraft:red_nether_brick"
+			}
+		],
+		"unlock": [
+			{
+				"item": "minecraft:red_nether_brick"
+			}
+		],
+		"result": {
+			"item": "minecraft:stone_block_slab2",
+			"data": 7,
+			"count": 2
+		}
+	}
+}

@@ -1,0 +1,31 @@
+{
+	"format_version": "1.21.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "bt:ms.cut_copper_stairs"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"priority": -1,
+		"pattern": [
+			"#",
+			"##",
+			"###"
+		],
+		"key": {
+			"#": {
+				"item": "minecraft:cut_copper"
+			}
+		},
+		"unlock": [
+			{
+				"item": "minecraft:cut_copper"
+			}
+		],
+		"result": {
+			"item": "minecraft:cut_copper_stairs",
+			"count": 8
+		}
+	}
+}

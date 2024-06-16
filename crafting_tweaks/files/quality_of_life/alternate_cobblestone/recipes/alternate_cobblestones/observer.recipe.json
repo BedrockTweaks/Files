@@ -1,0 +1,36 @@
+{
+	"format_version": "1.21.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "minecraft:observer"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"priority": -1,
+		"pattern": [
+			"###",
+			"RRQ",
+			"###"
+		],
+		"key": {
+			"Q": {
+				"item": "minecraft:quartz"
+			},
+			"R": {
+				"item": "minecraft:redstone"
+			},
+			"#": {
+				"tag": "minecraft:stone_crafting_materials"
+			}
+		},
+		"unlock": [
+			{
+				"item": "minecraft:quartz"
+			}
+		],
+		"result": {
+			"item": "minecraft:observer"
+		}
+	}
+}

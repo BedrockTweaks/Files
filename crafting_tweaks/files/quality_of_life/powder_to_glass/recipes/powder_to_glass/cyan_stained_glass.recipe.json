@@ -1,0 +1,18 @@
+{
+	"format_version": "1.21.0",
+	"minecraft:recipe_furnace": {
+		"description": {
+			"identifier": "bt:pg.cyan_stained_glass"
+		},
+		"tags": [
+			"furnace"
+		],
+		"group": "powder_to_glass",
+		"input": {
+			"item": "minecraft:cyan_concrete_powder"
+		},
+		"output": {
+			"item": "minecraft:cyan_stained_glass"
+		}
+	}
+}
