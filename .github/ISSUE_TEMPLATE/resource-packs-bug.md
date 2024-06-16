@@ -1,7 +1,7 @@
 ---
 name: Resource Packs Bug
 about: Template for resource pack bugs
-title: ''
+title: "[CATEGORY] PACK"
 labels: bug, resource_packs
 assignees: ''
 

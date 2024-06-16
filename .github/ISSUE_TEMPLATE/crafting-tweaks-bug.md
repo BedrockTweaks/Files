@@ -1,7 +1,7 @@
 ---
 name: Crafting Tweaks Bug
 about: Template for crafting tweaks bugs, for suggestions use Discussions
-title: ''
+title: "[CATEGORY] PACK"
 labels: bug, crafting_tweaks
 assignees: ''
 
