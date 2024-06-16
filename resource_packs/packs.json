@@ -116,9 +116,9 @@
 					"description": "Removes the 'ash' from unlit Campfires and Soul Campfires."
 				},
 				{
-					"id": "glass_doors",
-					"name": "Glass Doors",
-					"description": "Adds uniquely shaped glass windows into every door type."
+					"id": "glass_doors_and_trapdoors",
+					"name": "Glass Doors & Trapdoors",
+					"description": "Adds uniquely shaped glass windows into Doors and Trapdoors."
 				},
 				{
 					"id": "glass_trapdoors",
