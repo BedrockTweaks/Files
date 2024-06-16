@@ -1,174 +1,24 @@
 {
-	"num_mip_levels": 4,
-	"padding": 8,
 	"resource_pack_name": "vanilla",
 	"texture_name": "atlas.terrain",
+	"padding": 8,
+	"num_mip_levels": 4,
 	"texture_data": {
 		"planks": {
 			"textures": [
-				{
-					"variations": [
-						{
-							"path": "textures/blocks/oak_planks/0"
-						},
-						{
-							"path": "textures/blocks/oak_planks/1"
-						},
-						{
-							"path": "textures/blocks/oak_planks/2"
-						},
-						{
-							"path": "textures/blocks/oak_planks/3"
-						},
-						{
-							"path": "textures/blocks/oak_planks/4"
-						}
-					]
-				},
-				{
-					"variations": [
-						{
-							"path": "textures/blocks/spruce_planks/0"
-						},
-						{
-							"path": "textures/blocks/spruce_planks/1"
-						},
-						{
-							"path": "textures/blocks/spruce_planks/2"
-						},
-						{
-							"path": "textures/blocks/spruce_planks/3"
-						},
-						{
-							"path": "textures/blocks/spruce_planks/4"
-						}
-					]
-				},
-				{
-					"variations": [
-						{
-							"path": "textures/blocks/birch_planks/0"
-						},
-						{
-							"path": "textures/blocks/birch_planks/1"
-						},
-						{
-							"path": "textures/blocks/birch_planks/2"
-						},
-						{
-							"path": "textures/blocks/birch_planks/3"
-						},
-						{
-							"path": "textures/blocks/birch_planks/4"
-						}
-					]
-				},
-				{
-					"variations": [
-						{
-							"path": "textures/blocks/jungle_planks/0"
-						},
-						{
-							"path": "textures/blocks/jungle_planks/1"
-						},
-						{
-							"path": "textures/blocks/jungle_planks/2"
-						},
-						{
-							"path": "textures/blocks/jungle_planks/3"
-						},
-						{
-							"path": "textures/blocks/jungle_planks/4"
-						}
-					]
-				},
-				{
-					"variations": [
-						{
-							"path": "textures/blocks/acacia_planks/0"
-						},
-						{
-							"path": "textures/blocks/acacia_planks/1"
-						},
-						{
-							"path": "textures/blocks/acacia_planks/2"
-						},
-						{
-							"path": "textures/blocks/acacia_planks/3"
-						},
-						{
-							"path": "textures/blocks/acacia_planks/4"
-						}
-					]
-				},
-				{
-					"variations": [
-						{
-							"path": "textures/blocks/dark_oak_planks/0"
-						},
-						{
-							"path": "textures/blocks/dark_oak_planks/1"
-						},
-						{
-							"path": "textures/blocks/dark_oak_planks/2"
-						},
-						{
-							"path": "textures/blocks/dark_oak_planks/3"
-						},
-						{
-							"path": "textures/blocks/dark_oak_planks/4"
-						}
-					]
-				}
+				"textures/blocks/amethyst_block",
+				"textures/blocks/amethyst_block",
+				"textures/blocks/amethyst_block",
+				"textures/blocks/amethyst_block",
+				"textures/blocks/amethyst_block",
+				"textures/blocks/amethyst_block"
 			]
 		},
-		"crimson_planks": {
+		"acacia_planks": {
 			"textures": {
 				"variations": [
 					{
-						"path": "textures/blocks/crimson_planks/0"
-					},
-					{
-						"path": "textures/blocks/crimson_planks/1"
-					},
-					{
-						"path": "textures/blocks/crimson_planks/2"
-					},
-					{
-						"path": "textures/blocks/crimson_planks/3"
-					},
-					{
-						"path": "textures/blocks/crimson_planks/4"
-					}
-				]
-			}
-		},
-		"warped_planks": {
-			"textures": {
-				"variations": [
-					{
-						"path": "textures/blocks/warped_planks/0"
-					},
-					{
-						"path": "textures/blocks/warped_planks/1"
-					},
-					{
-						"path": "textures/blocks/warped_planks/2"
-					},
-					{
-						"path": "textures/blocks/warped_planks/3"
-					},
-					{
-						"path": "textures/blocks/warped_planks/4"
-					}
-				]
-			}
-		},
-		"wood_acacia": {
-			"textures": {
-				"variations": [
-					{
-						"path": "textures/blocks/acacia_planks/0"
+						"path": "textures/blocks/planks_acacia"
 					},
 					{
 						"path": "textures/blocks/acacia_planks/1"
@@ -181,99 +31,42 @@
 					},
 					{
 						"path": "textures/blocks/acacia_planks/4"
+					},
+					{
+						"path": "textures/blocks/acacia_planks/5"
 					}
 				]
 			}
 		},
-		"wood_big_oak": {
+		"bamboo_planks": {
 			"textures": {
 				"variations": [
 					{
-						"path": "textures/blocks/dark_oak_planks/0"
+						"path": "textures/blocks/bamboo_planks"
 					},
 					{
-						"path": "textures/blocks/dark_oak_planks/1"
+						"path": "textures/blocks/bamboo_planks/1"
 					},
 					{
-						"path": "textures/blocks/dark_oak_planks/2"
+						"path": "textures/blocks/bamboo_planks/2"
 					},
 					{
-						"path": "textures/blocks/dark_oak_planks/3"
+						"path": "textures/blocks/bamboo_planks/3"
 					},
 					{
-						"path": "textures/blocks/dark_oak_planks/4"
+						"path": "textures/blocks/bamboo_planks/4"
+					},
+					{
+						"path": "textures/blocks/bamboo_planks/5"
 					}
 				]
 			}
 		},
-		"wood_spruce": {
+		"birch_planks": {
 			"textures": {
 				"variations": [
 					{
-						"path": "textures/blocks/spruce_planks/0"
-					},
-					{
-						"path": "textures/blocks/spruce_planks/1"
-					},
-					{
-						"path": "textures/blocks/spruce_planks/2"
-					},
-					{
-						"path": "textures/blocks/spruce_planks/3"
-					},
-					{
-						"path": "textures/blocks/spruce_planks/4"
-					}
-				]
-			}
-		},
-		"wood_jungle": {
-			"textures": {
-				"variations": [
-					{
-						"path": "textures/blocks/jungle_planks/0"
-					},
-					{
-						"path": "textures/blocks/jungle_planks/1"
-					},
-					{
-						"path": "textures/blocks/jungle_planks/2"
-					},
-					{
-						"path": "textures/blocks/jungle_planks/3"
-					},
-					{
-						"path": "textures/blocks/jungle_planks/4"
-					}
-				]
-			}
-		},
-		"wood_oak": {
-			"textures": {
-				"variations": [
-					{
-						"path": "textures/blocks/oak_planks/0"
-					},
-					{
-						"path": "textures/blocks/oak_planks/1"
-					},
-					{
-						"path": "textures/blocks/oak_planks/2"
-					},
-					{
-						"path": "textures/blocks/oak_planks/3"
-					},
-					{
-						"path": "textures/blocks/oak_planks/4"
-					}
-				]
-			}
-		},
-		"wood_birch": {
-			"textures": {
-				"variations": [
-					{
-						"path": "textures/blocks/birch_planks/0"
+						"path": "textures/blocks/planks_birch"
 					},
 					{
 						"path": "textures/blocks/birch_planks/1"
@@ -286,6 +79,201 @@
 					},
 					{
 						"path": "textures/blocks/birch_planks/4"
+					},
+					{
+						"path": "textures/blocks/birch_planks/5"
+					}
+				]
+			}
+		},
+		"cherry_planks": {
+			"textures": {
+				"variations": [
+					{
+						"path": "textures/blocks/cherry_planks"
+					},
+					{
+						"path": "textures/blocks/cherry_planks/1"
+					},
+					{
+						"path": "textures/blocks/cherry_planks/2"
+					},
+					{
+						"path": "textures/blocks/cherry_planks/3"
+					},
+					{
+						"path": "textures/blocks/cherry_planks/4"
+					},
+					{
+						"path": "textures/blocks/cherry_planks/5"
+					}
+				]
+			}
+		},
+		"crimson_planks": {
+			"textures": {
+				"variations": [
+					{
+						"path": "textures/blocks/huge_fungus/crimson_planks"
+					},
+					{
+						"path": "textures/blocks/crimson_planks/1"
+					},
+					{
+						"path": "textures/blocks/crimson_planks/2"
+					},
+					{
+						"path": "textures/blocks/crimson_planks/3"
+					},
+					{
+						"path": "textures/blocks/crimson_planks/4"
+					},
+					{
+						"path": "textures/blocks/crimson_planks/5"
+					}
+				]
+			}
+		},
+		"dark_oak_planks": {
+			"textures": {
+				"variations": [
+					{
+						"path": "textures/blocks/planks_big_oak"
+					},
+					{
+						"path": "textures/blocks/dark_oak_planks/1"
+					},
+					{
+						"path": "textures/blocks/dark_oak_planks/2"
+					},
+					{
+						"path": "textures/blocks/dark_oak_planks/3"
+					},
+					{
+						"path": "textures/blocks/dark_oak_planks/4"
+					},
+					{
+						"path": "textures/blocks/dark_oak_planks/5"
+					}
+				]
+			}
+		},
+		"jungle_planks": {
+			"textures": {
+				"variations": [
+					{
+						"path": "textures/blocks/planks_jungle"
+					},
+					{
+						"path": "textures/blocks/jungle_planks/1"
+					},
+					{
+						"path": "textures/blocks/jungle_planks/2"
+					},
+					{
+						"path": "textures/blocks/jungle_planks/3"
+					},
+					{
+						"path": "textures/blocks/jungle_planks/4"
+					},
+					{
+						"path": "textures/blocks/jungle_planks/5"
+					}
+				]
+			}
+		},
+		"mangrove_planks": {
+			"textures": {
+				"variations": [
+					{
+						"path": "textures/blocks/mangrove_planks"
+					},
+					{
+						"path": "textures/blocks/mangrove_planks/1"
+					},
+					{
+						"path": "textures/blocks/mangrove_planks/2"
+					},
+					{
+						"path": "textures/blocks/mangrove_planks/3"
+					},
+					{
+						"path": "textures/blocks/mangrove_planks/4"
+					},
+					{
+						"path": "textures/blocks/mangrove_planks/5"
+					}
+				]
+			}
+		},
+		"oak_planks": {
+			"textures": {
+				"variations": [
+					{
+						"path": "textures/blocks/planks_oak"
+					},
+					{
+						"path": "textures/blocks/oak_planks/1"
+					},
+					{
+						"path": "textures/blocks/oak_planks/2"
+					},
+					{
+						"path": "textures/blocks/oak_planks/3"
+					},
+					{
+						"path": "textures/blocks/oak_planks/4"
+					},
+					{
+						"path": "textures/blocks/oak_planks/5"
+					}
+				]
+			}
+		},
+		"spruce_planks": {
+			"textures": {
+				"variations": [
+					{
+						"path": "textures/blocks/planks_spruce"
+					},
+					{
+						"path": "textures/blocks/spruce_planks/1"
+					},
+					{
+						"path": "textures/blocks/spruce_planks/2"
+					},
+					{
+						"path": "textures/blocks/spruce_planks/3"
+					},
+					{
+						"path": "textures/blocks/spruce_planks/4"
+					},
+					{
+						"path": "textures/blocks/spruce_planks/5"
+					}
+				]
+			}
+		},
+		"warped_planks": {
+			"textures": {
+				"variations": [
+					{
+						"path": "textures/blocks/huge_fungus/warped_planks"
+					},
+					{
+						"path": "textures/blocks/warped_planks/1"
+					},
+					{
+						"path": "textures/blocks/warped_planks/2"
+					},
+					{
+						"path": "textures/blocks/warped_planks/3"
+					},
+					{
+						"path": "textures/blocks/warped_planks/4"
+					},
+					{
+						"path": "textures/blocks/warped_planks/5"
 					}
 				]
 			}
