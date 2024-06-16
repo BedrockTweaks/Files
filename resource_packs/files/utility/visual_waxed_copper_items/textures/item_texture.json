@@ -1,0 +1,18 @@
+{
+    "resource_pack_name": "vanilla",
+    "texture_name": "atlas.items",
+    "texture_data": {
+        "waxed_copper_door": {
+            "textures": "textures/items/waxed_copper_door"
+        },
+        "waxed_exposed_copper_door": {
+            "textures": "textures/items/waxed_exposed_copper_door"
+        },
+        "waxed_weathered_copper_door": {
+            "textures": "textures/items/waxed_weathered_copper_door"
+        },
+        "waxed_oxidized_copper_door": {
+            "textures": "textures/items/waxed_oxidized_copper_door"
+        }
+    }
+}

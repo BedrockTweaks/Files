@@ -1,0 +1,12 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "minecraft:flow_banner_pattern",
+			"category": "Equipment"
+		},
+		"components": {
+			"minecraft:icon": "flow_banner_pattern"
+		}
+	}
+}
