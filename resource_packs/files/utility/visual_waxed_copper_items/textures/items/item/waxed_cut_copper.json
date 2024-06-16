@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/copper_block",
+  "textures": {
+    "all": "minecraft:item/waxed_cut_copper"
+  }
+}
