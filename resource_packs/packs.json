@@ -933,8 +933,8 @@
 					"description": "Add a Bedrock Edition Logo to the Minecraft Title."
 				},
 				{
-					"id": "wither_hearts",
-					"name": "Wither Hearts",
+					"id": "clearer_wither_hearts",
+					"name": "Clearer Wither Hearts",
 					"description": "Makes Hearts more visible when under the 'Wither' effect."
 				},
 				{
