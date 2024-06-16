@@ -1926,8 +1926,160 @@
 	],
 	"deepMergeFiles": [
 		{
+			"filename": "terrain_texture.json",
+			"filepath": "/textures/terrain_texture.json"
+		},
+		{
+			"filename": "flipbook_textures.json",
+			"filepath": "/textures/flipbook_textures.json"
+		},
+		{
+			"filename": "item_texture.json",
+			"filepath": "/textures/item_texture.json"
+		},
+		{
+			"filename": "blocks.json",
+			"filepath": "/blocks.json"
+		},
+		{
 			"filename": "trade_2_screen.json",
 			"filepath": "/ui/trade_2_screen.json"
+		},
+		{
+			"filename": "trade_2_screen_pocket.json",
+			"filepath": "/ui/trade_2_screen_pocket.json"
+		},
+		{
+			"filename": "inventory_screen.json",
+			"filepath": "/ui/inventory_screen.json"
+		},
+		{
+			"filename": "inventory_screen_pocket.json",
+			"filepath": "/ui/inventory_screen_pocket.json"
+		},
+		{
+			"filename": "stonecutter_screen.json",
+			"filepath": "/ui/stonecutter_screen.json"
+		},
+		{
+			"filename": "_ui_defs.json",
+			"filepath": "/ui/_ui_defs.json"
+		},
+		{
+			"filename": "bg_BG",
+			"filepath": "/texts/bg_BG.lang"
+		},
+		{
+			"filename": "cs_CZ",
+			"filepath": "/texts/cs_CZ.lang"
+		},
+		{
+			"filename": "da_DK",
+			"filepath": "/texts/da_DK.lang"
+		},
+		{
+			"filename": "de_DE",
+			"filepath": "/texts/de_DE.lang"
+		},
+		{
+			"filename": "el_GR",
+			"filepath": "/texts/el_GR.lang"
+		},
+		{
+			"filename": "en_GB",
+			"filepath": "/texts/en_GB.lang"
+		},
+		{
+			"filename": "en_US",
+			"filepath": "/texts/en_US.lang"
+		},
+		{
+			"filename": "es_ES",
+			"filepath": "/texts/es_ES.lang"
+		},
+		{
+			"filename": "es_MX",
+			"filepath": "/texts/es_MX.lang"
+		},
+		{
+			"filename": "fi_FI",
+			"filepath": "/texts/fi_FI.lang"
+		},
+		{
+			"filename": "fr_CA",
+			"filepath": "/texts/fr_CA.lang"
+		},
+		{
+			"filename": "fr_FR",
+			"filepath": "/texts/fr_FR.lang"
+		},
+		{
+			"filename": "hu_HU",
+			"filepath": "/texts/hu_HU.lang"
+		},
+		{
+			"filename": "id_ID",
+			"filepath": "/texts/id_ID.lang"
+		},
+		{
+			"filename": "it_IT",
+			"filepath": "/texts/it_IT.lang"
+		},
+		{
+			"filename": "ja_JP",
+			"filepath": "/texts/ja_JP.lang"
+		},
+		{
+			"filename": "ko_KR",
+			"filepath": "/texts/ko_KR.lang"
+		},
+		{
+			"filename": "nb_NO",
+			"filepath": "/texts/nb_NO.lang"
+		},
+		{
+			"filename": "nl_NL",
+			"filepath": "/texts/nl_NL.lang"
+		},
+		{
+			"filename": "pl_PL",
+			"filepath": "/texts/pl_PL.lang"
+		},
+		{
+			"filename": "pt_BR",
+			"filepath": "/texts/pt_BR.lang"
+		},
+		{
+			"filename": "pt_PT",
+			"filepath": "/texts/pt_PT.lang"
+		},
+		{
+			"filename": "ru_RU",
+			"filepath": "/texts/ru_RU.lang"
+		},
+		{
+			"filename": "sk_SK",
+			"filepath": "/texts/sk_SK.lang"
+		},
+		{
+			"filename": "sv_SE",
+			"filepath": "/texts/sv_SE.lang"
+		},
+		{
+			"filename": "tr_TR",
+			"filepath": "/texts/tr_TR.lang"
+		},
+		{
+			"filename": "uk_UA",
+			"filepath": "/texts/uk_UA.lang"
+		},
+		{
+			"filename": "zh_CN",
+			"filepath": "/texts/zh_CN.lang"
+		},
+		{
+			"filename": "zh_TW",
+			"filepath": "/texts/zh_TW.lang"
 		}
 	]
 }
