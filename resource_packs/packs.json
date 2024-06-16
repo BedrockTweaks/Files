@@ -116,11 +116,6 @@
 					"description": "Adds uniquely shaped glass windows into Doors and Trapdoors."
 				},
 				{
-					"id": "glass_trapdoors",
-					"name": "Glass Trapdoors",
-					"description": "Adds uniquely shaped glass windows into every trapdoor type."
-				},
-				{
 					"id": "flint_tipped_arrows",
 					"name": "Flint Tipped Arrows",
 					"description": "Changes arrow sprites and entities to have Flint colored tips."
