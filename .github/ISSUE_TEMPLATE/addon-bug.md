@@ -2,7 +2,7 @@
 name: Addon Bug
 about: Template for addon bugs
 title: "[CATEGORY] PACK"
-labels: addons, bug, site
+labels: addons, bug
 assignees: ''
 
 ---
