@@ -422,7 +422,7 @@
 				{
 					"id": "variated_planks",
 					"name": "Variated Planks",
-					"description": "All planks will be randomized using a selection of 5 textures."
+					"description": "All planks will be randomized using a selection of 6 textures."
 				},
 				{
 					"id": "variated_stone",
