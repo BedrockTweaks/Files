@@ -31,11 +31,6 @@
 					"description": "Changes the texture of cake to remove the large cherry in the center."
 				},
 				{
-					"id": "different_stems",
-					"name": "Different Stems",
-					"description": "Changes Melon and Pumpkin stems to reflect their fruit color."
-				},
-				{
 					"id": "unbundled_hay_bales",
 					"name": "Unbundled Hay Bales",
 					"description": "Gets rid of the red strings around Hay Bales."
@@ -729,6 +724,11 @@
 					"name": "Visual Waxed Copper (Items)",
 					"description": "Adds a border around Waxed Copper in the inventory.",
 					"version": "This will NOT affect the placed blocks."
+				},
+				{
+					"id": "different_stems",
+					"name": "Different Stems",
+					"description": "Changes Melon and Pumpkin stems to reflect their fruit color."
 				},
 				{
 					"id": "age_25_kelp",
