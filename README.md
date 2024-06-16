@@ -37,8 +37,8 @@ abc55, WavePlayz, r4isen1920, randomityguy, LukasPlaysGames, TheBlueShadow and a
 	<tbody>
 		<tr>
             <td align="center">
-                <a href="https://github.com/DrAv0011">
-                    <img src="https://avatars.githubusercontent.com/u/43525295?v=4" width="100;" alt="DrAv0011"/>
+                <a href="https://github.com/drav0011">
+                    <img src="https://avatars.githubusercontent.com/u/43525295?v=4" width="100;" alt="drav0011"/>
                     <br />
                     <sub><b>DrAv0011</b></sub>
                 </a>
