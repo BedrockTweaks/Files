@@ -1,2 +1,4 @@
 entity.zombie_pigman.name=Zombie Pigman
 item.spawn_egg.entity.zombie_pigman.name=Spawn Zombie Pigman
+midgameTips.23=Pigs that are struck by lightning become zombie pigmen.
+lategameTips.1=Zombie pigmen won't attack you - unless you make them angry.
