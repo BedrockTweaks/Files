@@ -1,0 +1,32 @@
+{
+	"format_version": "1.21.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "bt:ms.spruce_stairs"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"group": "wooden_stairs",
+		"priority": -1,
+		"pattern": [
+			"#",
+			"##",
+			"###"
+		],
+		"key": {
+			"#": {
+				"item": "minecraft:spruce_planks"
+			}
+		},
+		"unlock": [
+			{
+				"item": "minecraft:spruce_planks"
+			}
+		],
+		"result": {
+			"item": "minecraft:spruce_stairs",
+			"count": 8
+		}
+	}
+}

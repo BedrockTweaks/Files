@@ -1,0 +1,31 @@
+{
+	"format_version": "1.21.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "bt:bb.stairs.exposed_cut_copper"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"group": "stairs_to_blocks",
+		"priority": -1,
+		"pattern": [
+			"##",
+			"##"
+		],
+		"key": {
+			"#": {
+				"item": "minecraft:exposed_cut_copper_stairs"
+			}
+		},
+		"unlock": [
+			{
+				"item": "minecraft:exposed_cut_copper_stairs"
+			}
+		],
+		"result": {
+			"item": "minecraft:exposed_cut_copper",
+			"count": 3
+		}
+	}
+}

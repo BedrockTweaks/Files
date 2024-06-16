@@ -1,0 +1,33 @@
+{
+	"format_version": "1.21.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "bt:ud.lime_concrete_powder"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"group": "bt_ud_concrete_powder",
+		"priority": -1,
+		"pattern": [
+			"EEE",
+			"E0E",
+			"EEE"
+		],
+		"key": {
+			"E": {
+				"item": "minecraft:concrete_powder"
+			},
+			"0": {
+				"item": "minecraft:lime_dye"
+			}
+		},
+		"unlock": {
+			"context": "AlwaysUnlocked"
+		},
+		"result": {
+			"item": "minecraft:lime_concrete_powder",
+			"count": 8
+		}
+	}
+}

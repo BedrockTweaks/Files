@@ -1,0 +1,31 @@
+{
+	"format_version": "1.21.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "bt:cc3.fire_coral_block_from_fan"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"group": "coral_blocks",
+		"priority": -1,
+		"pattern": [
+			"###",
+			"###",
+			"###"
+		],
+		"key": {
+			"#": {
+				"item": "minecraft:fire_coral_fan"
+			}
+		},
+		"unlock": [
+			{
+				"item": "minecraft:fire_coral_fan"
+			}
+		],
+		"result": {
+			"item": "minecraft:fire_coral_block"
+		}
+	}
+}

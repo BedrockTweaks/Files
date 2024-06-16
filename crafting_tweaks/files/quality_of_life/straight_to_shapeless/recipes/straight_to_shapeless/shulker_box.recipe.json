@@ -1,0 +1,31 @@
+{
+	"format_version": "1.21.0",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "bt:ss.shulker_box"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"priority": -1,
+		"ingredients": [
+			{
+				"item": "minecraft:shulker_shell"
+			},
+			{
+				"item": "minecraft:shulker_shell"
+			},
+			{
+				"item": "minecraft:chest"
+			}
+		],
+		"unlock": [
+			{
+				"item": "minecraft:sugar_cane"
+			}
+		],
+		"result": {
+			"item": "minecraft:undyed_shulker_box"
+		}
+	}
+}

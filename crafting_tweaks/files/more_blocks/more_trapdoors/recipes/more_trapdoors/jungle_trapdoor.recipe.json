@@ -1,0 +1,31 @@
+{
+	"format_version": "1.21.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "bt:mt.jungle_trapdoor"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"group": "wooden_trap_door",
+		"priority": -1,
+		"pattern": [
+			"###",
+			"###"
+		],
+		"key": {
+			"#": {
+				"item": "minecraft:jungle_planks"
+			}
+		},
+		"unlock": [
+			{
+				"item": "minecraft:jungle_planks"
+			}
+		],
+		"result": {
+			"item": "minecraft:jungle_trapdoor",
+			"count": 12
+		}
+	}
+}

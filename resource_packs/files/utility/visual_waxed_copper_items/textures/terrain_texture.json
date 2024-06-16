@@ -16,7 +16,6 @@
 		"waxed_oxidized_copper": {
 			"textures": "textures/blocks/waxed/waxed_oxidized_copper"
 		},
-
 		"waxed_cut_copper": {
 			"textures": "textures/blocks/waxed/waxed_cut_copper"
 		},
@@ -29,7 +28,6 @@
 		"waxed_oxidized_cut_copper": {
 			"textures": "textures/blocks/waxed/waxed_oxidized_cut_copper"
 		},
-
 		"waxed_copper_double1": {
 			"textures": "textures/blocks/waxed/waxed_copper_double1"
 		},
@@ -42,7 +40,6 @@
 		"waxed_weathered_copper_double1": {
 			"textures": "textures/blocks/waxed/waxed_weathered_copper_double1"
 		},
-
 		"waxed_copper_stairs1": {
 			"textures": "textures/blocks/waxed/waxed_copper_stairs1"
 		},
@@ -52,7 +49,6 @@
 		"waxed_copper_double2": {
 			"textures": "textures/blocks/waxed/waxed_copper_double2"
 		},
-
 		"waxed_exposed_copper_stairs1": {
 			"textures": "textures/blocks/waxed/waxed_exposed_copper_stairs1"
 		},
@@ -62,7 +58,6 @@
 		"waxed_exposed_copper_double2": {
 			"textures": "textures/blocks/waxed/waxed_exposed_copper_double2"
 		},
-
 		"waxed_weathered_copper_stairs1": {
 			"textures": "textures/blocks/waxed/waxed_weathered_copper_stairs1"
 		},
@@ -72,7 +67,6 @@
 		"waxed_weathered_copper_double2": {
 			"textures": "textures/blocks/waxed/waxed_weathered_copper_double2"
 		},
-
 		"waxed_oxidized_copper_stairs1": {
 			"textures": "textures/blocks/waxed/waxed_oxidized_copper_stairs1"
 		},
@@ -81,6 +75,54 @@
 		},
 		"waxed_oxidized_copper_double2": {
 			"textures": "textures/blocks/waxed/waxed_oxidized_copper_double2"
+		},
+		"waxed_chiseled_copper": {
+			"textures": "textures/blocks/waxed/waxed_chiseled_copper"
+		},
+		"waxed_exposed_chiseled_copper": {
+			"textures": "textures/blocks/waxed/waxed_exposed_chiseled_copper"
+		},
+		"waxed_oxidized_chiseled_copper": {
+			"textures": "textures/blocks/waxed/waxed_oxidized_chiseled_copper"
+		},
+		"waxed_weathered_chiseled_copper": {
+			"textures": "textures/blocks/waxed/waxed_weathered_chiseled_copper"
+		},
+		"waxed_copper_bulb": {
+			"textures": "textures/blocks/waxed/waxed_copper_bulb"
+		},
+		"waxed_exposed_copper_bulb": {
+			"textures": "textures/blocks/waxed/waxed_exposed_copper_bulb"
+		},
+		"waxed_oxidized_copper_bulb": {
+			"textures": "textures/blocks/waxed/waxed_oxidized_copper_bulb"
+		},
+		"waxed_weathered_copper_bulb": {
+			"textures": "textures/blocks/waxed/waxed_weathered_copper_bulb"
+		},
+		"waxed_copper_grate": {
+			"textures": "textures/blocks/waxed/waxed_copper_grate"
+		},
+		"waxed_exposed_copper_grate": {
+			"textures": "textures/blocks/waxed/waxed_exposed_copper_grate"
+		},
+		"waxed_oxidized_copper_grate": {
+			"textures": "textures/blocks/waxed/waxed_oxidized_copper_grate"
+		},
+		"waxed_weathered_copper_grate": {
+			"textures": "textures/blocks/waxed/waxed_weathered_copper_grate"
+		},
+		"waxed_copper_trapdoor": {
+			"textures": "textures/blocks/waxed/waxed_copper_trapdoor"
+		},
+		"waxed_exposed_copper_trapdoor": {
+			"textures": "textures/blocks/waxed/waxed_exposed_copper_trapdoor"
+		},
+		"waxed_oxidized_copper_trapdoor": {
+			"textures": "textures/blocks/waxed/waxed_oxidized_copper_trapdoor"
+		},
+		"waxed_weathered_copper_trapdoor": {
+			"textures": "textures/blocks/waxed/waxed_weathered_copper_trapdoor"
 		}
 	}
 }

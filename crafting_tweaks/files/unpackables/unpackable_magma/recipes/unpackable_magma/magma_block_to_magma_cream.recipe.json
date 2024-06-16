@@ -1,0 +1,26 @@
+{
+	"format_version": "1.21.0",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "bt:um.magma_block_to_magma_cream"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"priority": -1,
+		"ingredients": [
+			{
+				"item": "minecraft:magma"
+			}
+		],
+		"unlock": [
+			{
+				"item": "minecraft:magma"
+			}
+		],
+		"result": {
+			"item": "minecraft:magma_cream",
+			"count": 4
+		}
+	}
+}

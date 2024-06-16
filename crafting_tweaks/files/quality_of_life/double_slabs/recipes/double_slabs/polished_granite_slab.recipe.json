@@ -1,0 +1,27 @@
+{
+	"format_version": "1.21.0",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "bt:ds.polished_granite_slab"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"priority": -1,
+		"ingredients": [
+			{
+				"item": "minecraft:polished_granite"
+			}
+		],
+		"unlock": [
+			{
+				"item": "minecraft:polished_granite"
+			}
+		],
+		"result": {
+			"item": "minecraft:stone_block_slab3",
+			"data": 7,
+			"count": 2
+		}
+	}
+}

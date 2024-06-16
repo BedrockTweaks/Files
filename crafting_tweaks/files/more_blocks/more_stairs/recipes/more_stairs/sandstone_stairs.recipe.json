@@ -1,0 +1,33 @@
+{
+	"format_version": "1.21.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "bt:ms.sandstone_stairs"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"priority": -1,
+		"pattern": [
+			"#",
+			"##",
+			"###"
+		],
+		"key": {
+			"#": {
+				"item": "minecraft:sandstone",
+				"data": 0
+			}
+		},
+		"unlock": [
+			{
+				"item": "minecraft:sandstone",
+				"data": 0
+			}
+		],
+		"result": {
+			"item": "minecraft:sandstone_stairs",
+			"count": 8
+		}
+	}
+}

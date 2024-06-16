@@ -1,0 +1,31 @@
+{
+	"format_version": "1.21.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "bt:ms.brick_stairs"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"priority": -1,
+		"pattern": [
+			"#",
+			"##",
+			"###"
+		],
+		"key": {
+			"#": {
+				"item": "minecraft:brick_block"
+			}
+		},
+		"unlock": [
+			{
+				"item": "minecraft:brick_block"
+			}
+		],
+		"result": {
+			"item": "minecraft:brick_stairs",
+			"count": 8
+		}
+	}
+}

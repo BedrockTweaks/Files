@@ -1,5 +1,10 @@
 {
 	"section": "resource_packs",
+	"version": [
+		1,
+		21,
+		0
+	],
 	"categories": [
 		{
 			"id": "aesthetic",
@@ -24,11 +29,6 @@
 					"id": "cherry_picking",
 					"name": "Cherry Picking",
 					"description": "Changes the texture of cake to remove the large cherry in the center."
-				},
-				{
-					"id": "different_stems",
-					"name": "Different Stems",
-					"description": "Changes Melon and Pumpkin stems to reflect their fruit color."
 				},
 				{
 					"id": "unbundled_hay_bales",
@@ -106,19 +106,14 @@
 					"description": "Changes the gray base of End Rods to pink."
 				},
 				{
-					"id": "unique_dyes",
-					"name": "Unique Dyes",
-					"description": "Adds variation to the dyes by making each one different."
-				},
-				{
 					"id": "ashless_campfires",
 					"name": "Ashless Campfires",
 					"description": "Removes the 'ash' from unlit Campfires and Soul Campfires."
 				},
 				{
-					"id": "glass_doors",
-					"name": "Glass Doors",
-					"description": "Adds uniquely shaped glass windows into every door type."
+					"id": "glass_doors_and_trapdoors",
+					"name": "Glass Doors & Trapdoors",
+					"description": "Adds uniquely shaped glass windows into Doors and Trapdoors."
 				},
 				{
 					"id": "glass_trapdoors",
@@ -129,11 +124,6 @@
 					"id": "flint_tipped_arrows",
 					"name": "Flint Tipped Arrows",
 					"description": "Changes arrow sprites and entities to have Flint colored tips."
-				},
-				{
-					"id": "bed_icons",
-					"name": "Bed Icons",
-					"description": "Changes Bed item models to look like regular items (with updated textures) like before 1.12."
 				},
 				{
 					"id": "splash_bottle_o_enchanting",
@@ -149,11 +139,6 @@
 					"id": "accurate_spyglass",
 					"name": "Accurate Spyglass",
 					"description": "Recolors the Spyglass to use Copper and Amethyst colors, to reflect its crafting recipe."
-				},
-				{
-					"id": "crimsoner_crimson",
-					"name": "Crimsoner Crimson",
-					"description": "Recolours all Crimson Wood related blocks and items to be redder, matching the shades in Crimson Nylium and Wart blocks closer."
 				},
 				{
 					"id": "smoother_warped_planks",
@@ -218,8 +203,9 @@
 				},
 				{
 					"id": "lush_grass_all_round",
-					"name": "Lush Grass All 'Round!",
-					"description": "Makes the entire world use the Mushroom Biome's colormap. (With the exception of mesa/badlands)"
+					"name": "Lush Grass (Mostly) All 'Round",
+					"description": "Makes most of the world use a lush green colormap.",
+					"version": "This affects the majority of biomes, but Minecraft has moved away from their previous method of coloring biomes, meaning its not as easy to change the colormap for many of the modern biomes."
 				},
 				{
 					"id": "alternate_bedrock",
@@ -228,7 +214,7 @@
 				},
 				{
 					"id": "circular_sun_and_moon",
-					"name": "Circular Sun and Moon",
+					"name": "Circular Sun & Moon",
 					"description": "Replaces the default square sun and moon, with a circular sun and moon."
 				},
 				{
@@ -277,14 +263,14 @@
 					"description": "Retextures the heads of Sunflowers to bloom a bit more."
 				},
 				{
-					"id": "shorter_grass",
-					"name": "Shorter Grass",
-					"description": "Makes grass slightly shorter."
+					"id": "shorter_short_grass",
+					"name": "Shorter Short Grass",
+					"description": "Makes Short Grass slightly shorter."
 				},
 				{
 					"id": "shorter_tall_grass",
 					"name": "Shorter Tall Grass",
-					"description": "Makes tall grass slightly shorter."
+					"description": "Makes Tall Grass slightly shorter."
 				},
 				{
 					"id": "whiter_snow",
@@ -294,8 +280,8 @@
 			]
 		},
 		{
-			"id": "lower_and_sides",
-			"name": "Lower and Sides",
+			"id": "terrain/lower_and_sides",
+			"name": "Terrain / Lower and Sides",
 			"packs": [
 				{
 					"id": "lower_grass",
@@ -426,7 +412,7 @@
 				{
 					"id": "variated_planks",
 					"name": "Variated Planks",
-					"description": "All planks will be randomized using a selection of 5 textures."
+					"description": "All planks will be randomized using a selection of 6 textures."
 				},
 				{
 					"id": "variated_stone",
@@ -455,6 +441,52 @@
 			"name": "Peace and Quiet",
 			"packs": [
 				{
+					"id": "quieter_rain",
+					"name": "Quieter Rain",
+					"description": "Makes rain quieter."
+				},
+				{
+					"id": "quieter_dispensers_and_droppers",
+					"name": "Quieter Dispensers and Droppers",
+					"description": "Makes Dispensers and Droppers quieter. Also affects menu clicks."
+				},
+				{
+					"id": "quieter_minecarts",
+					"name": "Quieter Minecarts",
+					"description": "Makes Minecarts quieter."
+				},
+				{
+					"id": "quieter_fire",
+					"name": "Quieter Fire",
+					"description": "Makes Fire quieter."
+				},
+				{
+					"id": "quieter_nether_portals",
+					"name": "Quieter Nether Portals",
+					"description": "Makes Nether Portals quieter."
+				},
+				{
+					"id": "quieter_water",
+					"name": "Quieter Water",
+					"description": "Makes Flowing Water quieter."
+				},
+				{
+					"id": "quieter_pistons",
+					"name": "Quieter Pistons",
+					"description": "Makes Pistons quieter."
+				},
+				{
+					"id": "no_cave_sounds",
+					"name": "No Cave Sounds",
+					"description": "Removes the spooky cave sounds."
+				}
+			]
+		},
+		{
+			"id": "peace_and_quiet/mobs",
+			"name": "Peace and Quiet / Mobs",
+			"packs": [
+				{
 					"id": "quieter_axolotls",
 					"name": "Quieter Axolotls",
 					"description": "Decreases Axolotl sounds by 75%."
@@ -472,7 +504,8 @@
 				{
 					"id": "quieter_blazes",
 					"name": "Quieter Blazes",
-					"description": "Decreases Blaze sounds by 75%.<br><span style='color: #f98100'>The fire crackling sounds that Blazes emit are not affected by this pack. You will need to install Quieter Fire to make those sounds quieter as well.</span>"
+					"description": "Decreases Blaze sounds by 75%.",
+					"version": "The fire crackling sounds that Blazes emit are not affected by this pack. You will need to install Quieter Fire to make those sounds quieter as well."
 				},
 				{
 					"id": "quieter_cats",
@@ -658,46 +691,6 @@
 					"id": "quieter_zombies",
 					"name": "Quieter Zombies",
 					"description": "Decreases Zombie, Zombie Villager, Husk and Drowned sounds by 75%."
-				},
-				{
-					"id": "quieter_rain",
-					"name": "Quieter Rain",
-					"description": "Makes rain quieter."
-				},
-				{
-					"id": "quieter_dispensers_and_droppers",
-					"name": "Quieter Dispensers and Droppers",
-					"description": "Makes Dispensers and Droppers quieter. Also affects menu clicks."
-				},
-				{
-					"id": "quieter_minecarts",
-					"name": "Quieter Minecarts",
-					"description": "Makes Minecarts quieter."
-				},
-				{
-					"id": "quieter_fire",
-					"name": "Quieter Fire",
-					"description": "Makes Fire quieter."
-				},
-				{
-					"id": "quieter_nether_portals",
-					"name": "Quieter Nether Portals",
-					"description": "Makes Nether Portals quieter."
-				},
-				{
-					"id": "quieter_water",
-					"name": "Quieter Water",
-					"description": "Makes Flowing Water quieter."
-				},
-				{
-					"id": "quieter_pistons",
-					"name": "Quieter Pistons",
-					"description": "Makes Pistons quieter."
-				},
-				{
-					"id": "no_cave_sounds",
-					"name": "No Cave Sounds",
-					"description": "Removes the spooky cave sounds."
 				}
 			]
 		},
@@ -718,12 +711,19 @@
 				{
 					"id": "visual_infested_stone_items",
 					"name": "Visual Infested Stone (Items)",
-					"description": "Adds a border around Infested Stone in the inventory.<br><span style='color: #ff0000'>This will NOT affect the placed blocks.</span>"
+					"description": "Adds a border around Infested Stone in the inventory.",
+					"version": "This will NOT affect the placed blocks."
 				},
 				{
 					"id": "visual_waxed_copper_items",
 					"name": "Visual Waxed Copper (Items)",
-					"description": "Adds a border around Waxed Copper in the inventory. <br><span style='color: #ff0000'>This will NOT affect the placed blocks.</span>"
+					"description": "Adds a border around Waxed Copper in the inventory.",
+					"version": "This will NOT affect the placed blocks."
+				},
+				{
+					"id": "different_stems",
+					"name": "Different Stems",
+					"description": "Changes Melon and Pumpkin stems to reflect their fruit color."
 				},
 				{
 					"id": "age_25_kelp",
@@ -872,11 +872,6 @@
 					"description": "Removes the Pumpkin overlay completely when worn."
 				},
 				{
-					"id": "orange_pumpkin_overlay",
-					"name": "Orange Pumpkin Overlay",
-					"description": "Makes Pumpkin overlay orange coloured."
-				},
-				{
 					"id": "translucent_spyglass_overlay",
 					"name": "Translucent Spyglass Overlay",
 					"description": "Increases visibility when zooming in with a Spyglass."
@@ -899,7 +894,7 @@
 				{
 					"id": "smaller_utilities",
 					"name": "Smaller Utilities",
-					"description": "Makes utility items such as food, Totems, Firework Rockets and Potions smaller in your mainhand and offhand."
+					"description": "Makes utility items such as food, Totems and Firework Rockets smaller in your mainhand and offhand."
 				},
 				{
 					"id": "short_swords",
@@ -914,8 +909,64 @@
 			]
 		},
 		{
-			"id": "hud",
-			"name": "HUD",
+			"id": "gui",
+			"name": "GUI",
+			"packs": [
+				{
+					"id": "dark_ui",
+					"name": "Dark UI",
+					"description": "Changes all inventories and UIs to be darker."
+				},
+				{
+					"id": "numbered_hotbar",
+					"name": "Numbered Hotbar",
+					"description": "Adds numbers to the hotbar slots."
+				},
+				{
+					"id": "bedrock_edition_title",
+					"name": "Bedrock Edition Title",
+					"description": "Add a Bedrock Edition Logo to the Minecraft Title."
+				},
+				{
+					"id": "clearer_wither_hearts",
+					"name": "Clearer Wither Hearts",
+					"description": "Makes Hearts more visible when under the 'Wither' effect."
+				},
+				{
+					"id": "rainbow_experience_bar",
+					"name": "Rainbow Experience Bar",
+					"description": "Changes the default green XP bar to a rainbow XP bar."
+				},
+				{
+					"id": "translucent_tooltips",
+					"name": "Translucent Tooltips",
+					"description": "Makes item tooltips translucent."
+				},
+				{
+					"id": "trading_helper",
+					"name": "Trading Helper",
+					"description": "Makes all locked trades visibles and allows to see the locked item names and enchantments."
+				},
+				{
+					"id": "quick_crafting",
+					"name": "Quick Crafting",
+					"description": "Adds a button to stack craft items in the inventory, crafting table, stonecutter, and trade faster with villagers."
+				},
+				{
+					"id": "chat_tweaks",
+					"name": "Chat Tweaks",
+					"description": "Allows mobile users to easily tab and move between previous and next messages sent in chat and command blocks."
+				},
+				{
+					"id": "no_how_to_play",
+					"name": "No How To Play",
+					"description": "Removes the 'How to Play' Button from all screens so you do not accidentally misclick it."
+				}
+			]
+		},
+		{
+			"id": "gui/crosshairs",
+			"name": "GUI / Crosshairs",
 			"packs": [
 				{
 					"id": "no_crosshair",
@@ -986,68 +1037,12 @@
 					"id": "arrow_crosshair",
 					"name": "Arrow Crosshair",
 					"description": "Changes the '+' crosshair to an arrow."
-				},
-				{
-					"id": "wither_hearts",
-					"name": "Wither Hearts",
-					"description": "Makes Hearts more visible when under the 'Wither' effect."
-				},
-				{
-					"id": "rainbow_experience_bar",
-					"name": "Rainbow Experience Bar",
-					"description": "Changes the default green XP bar to a rainbow XP bar."
 				}
 			]
 		},
 		{
-			"id": "gui",
-			"name": "GUI",
-			"packs": [
-				{
-					"id": "quick_crafting",
-					"name": "Quick Crafting",
-					"description": "Adds a button to stack craft items in the inventory, crafting table, stonecutter, and trade faster with villagers."
-				},
-				{
-					"id": "chat_tweaks",
-					"name": "Chat Tweaks",
-					"description": "Allows mobile users to easily tab and move between previous and next messages sent in chat and command blocks."
-				},
-				{
-					"id": "bedrock_edition_title",
-					"name": "Bedrock Edition Title",
-					"description": "Add a Bedrock Edition Logo to the Minecraft Title."
-				},
-				{
-					"id": "numbered_hotbar",
-					"name": "Numbered Hotbar",
-					"description": "Adds numbers to the hotbar slots."
-				},
-				{
-					"id": "translucent_tooltips",
-					"name": "Translucent Tooltips",
-					"description": "Makes item tooltips translucent."
-				},
-				{
-					"id": "dark_ui",
-					"name": "Dark UI",
-					"description": "Changes all inventories and UIs to be darker."
-				},
-				{
-					"id": "trading_helper",
-					"name": "Trading Helper",
-					"description": "Makes all locked trades visibles and allows to see the locked item names and enchantments."
-				},
-				{
-					"id": "no_how_to_play",
-					"name": "No How To Play",
-					"description": "Removes the 'How to Play' Button from all screens so you do not accidentally misclick it."
-				}
-			]
-		},
-		{
-			"id": "menu_panoramas",
-			"name": "Menu Panoramas",
+			"id": "gui/menu_panoramas",
+			"name": "GUI / Menu Panoramas",
 			"packs": [
 				{
 					"id": "no_panorama_overlay",
@@ -1125,6 +1120,17 @@
 					"description": "Replaces the default Minecraft menu panorama with a 360° view of Minecraft: Console Edition TU69's tutorial world."
 				},
 				{
+					"id": "strideys_resource_pack_development_world",
+					"name": "Stridey's Resource Pack Development World",
+					"description": "Replaces the default Minecraft menu panorama with a 360° view of Stridey's resource pack development world."
+				}
+			]
+		},
+		{
+			"id": "gui/menu_panoramas/xisumas_hermitcraft_bases",
+			"name": "GUI / Menu Panoramas / Xisuma's Hermitcraft Bases",
+			"packs": [
+				{
 					"id": "xisumas_hermitcraft_base_season_1",
 					"name": "Xisuma's Hermitcraft Base (Season 1)",
 					"description": "Replaces the default Minecraft menu panorama with a 360° view of Xisuma's base from Hermitcraft Season 1."
@@ -1163,11 +1169,6 @@
 					"id": "xisumas_hermitcraft_base_season_8",
 					"name": "Xisuma's Hermitcraft Base (Season 8)",
 					"description": "Replaces the default Minecraft menu panorama with a 360° view of Xisuma's base from Hermitcraft Season 8."
-				},
-				{
-					"id": "strideys_resource_pack_development_world",
-					"name": "Stridey's Resource Pack Development World",
-					"description": "Replaces the default Minecraft menu panorama with a 360° view of Stridey's resource pack development world."
 				}
 			]
 		},
@@ -1176,8 +1177,8 @@
 			"name": "Retro",
 			"packs": [
 				{
-					"id": "old_minecraft_logo",
-					"name": "Old Minecraft Logo",
+					"id": "alpha_minecraft_logo",
+					"name": "Alpha Minecraft Logo",
 					"description": "Brings back the old hand-built Cobblestone Minecraft logo from the Alpha days!"
 				},
 				{
@@ -1201,8 +1202,8 @@
 					"description": "Reverts Cobblestone to its Alpha texture."
 				},
 				{
-					"id": "pre_1_17_ores",
-					"name": "Pre-1.17 Ores",
+					"id": "classic_ores",
+					"name": "Classic Ores",
 					"description": "Reverts all ores to their pre-1.17 textures, including Deepslate and Copper ores."
 				},
 				{
@@ -1261,19 +1262,24 @@
 					"description": "Reverts the texture of Sponges to the beta texture."
 				},
 				{
-					"id": "1_11_wool_colors",
-					"name": "1.11 Wool Colors",
+					"id": "old_wool_colors",
+					"name": "Old Wool Colors",
 					"description": "Reverts the textures of Wool and Carpet to their pre-1.12 variants."
 				},
 				{
-					"id": "1_11_shulker_boxes",
-					"name": "1.11 Shulker Boxes",
-					"description": "Reverts the textures of Shulkers and Shulker Boxes to their pre-1.12 variants."
+					"id": "old_shulker_boxes",
+					"name": "Old Shulker Boxes",
+					"description": "Recolors Shulkers and Shulker Boxes to their pre-1.12 colors."
 				},
 				{
 					"id": "poppy_to_rose",
 					"name": "Poppy to Rose",
 					"description": "Changes the texture of the Poppy to that of the Rose from before 1.7.2."
+				},
+				{
+					"id": "bed_icons",
+					"name": "Bed Icons",
+					"description": "Reverts Bed items to icons rather than models, like they were prior to 1.12."
 				},
 				{
 					"id": "rename_terracotta_to_hardened_clay",
@@ -1314,6 +1320,11 @@
 					"id": "old_level_up_sound",
 					"name": "Old Level Up Sound",
 					"description": "Brings back the old level up jingle when you hit increment of 5 XP levels."
+				},
+				{
+					"id": "legacy_bedrock_dried_kelp",
+					"name": "Legacy Bedrock Dried Kelp",
+					"description": "Gives the Dried Kelp item its texture from previous versions of Minecraft: Bedrock Edition."
 				}
 			]
 		},
@@ -1321,6 +1332,21 @@
 			"id": "fun",
 			"name": "Fun",
 			"packs": [
+				{
+					"id": "smiley_axolotls",
+					"name": "Smiley Axolotls",
+					"description": "Gives Axolotls a smiley face. :)"
+				},
+				{
+					"id": "green_axolotl",
+					"name": "Green Axolotl",
+					"description": "Replaces the rare blue variant of the Axolotl with the unused green Axolotl skin."
+				},
+				{
+					"id": "beeralis",
+					"name": "Beeralis",
+					"description": "Look into my eyes, and nothing but my eyes!"
+				},
 				{
 					"id": "xisuma_turtle",
 					"name": "Xisuma Turtle",
@@ -1342,24 +1368,19 @@
 					"description": "Changes Piglins, Zombified Piglins and Piglin Brutes' textures to Xisuma's Darth Vader skin."
 				},
 				{
+					"id": "technoblade_pigs",
+					"name": "Technoblade Pigs",
+					"description": "In honor of Technoblade. RIP"
+				},
+				{
+					"id": "stridey_striders",
+					"name": "Stridey Striders",
+					"description": "Awful pack that makes Striders look like Stridey. Sorry."
+				},
+				{
 					"id": "emeralds_to_rubies",
 					"name": "Emeralds to Rubies",
 					"description": "Replaces all Emerald items and blocks with Rubies!"
-				},
-				{
-					"id": "smiley_axolotls",
-					"name": "Smiley Axolotls",
-					"description": "Gives Axolotls a smiley face. :)"
-				},
-				{
-					"id": "green_axolotl",
-					"name": "Green Axolotl",
-					"description": "Replaces the rare blue variant of the Axolotl with the unused green Axolotl skin."
-				},
-				{
-					"id": "beeralis",
-					"name": "Beeralis",
-					"description": "Look into my eyes, and nothing but my eyes!"
 				},
 				{
 					"id": "wither_bee",
@@ -1370,16 +1391,6 @@
 					"id": "ilmango_golden_apples",
 					"name": "ilmango Golden Apples",
 					"description": "Changes Golden Apples to ilmango's icon to celebrate the digging of a perimeter in under 12 hours."
-				},
-				{
-					"id": "technoblade_pigs",
-					"name": "Technoblade Pigs",
-					"description": "In honor of Technoblade. RIP"
-				},
-				{
-					"id": "stridey_striders",
-					"name": "Stridey Striders",
-					"description": "Awful pack that makes Striders look like Stridey. Sorry."
 				},
 				{
 					"id": "english_enchanting_table_translation",
@@ -1429,8 +1440,19 @@
 			]
 		},
 		{
-			"id": "colorful_slime",
-			"name": "Colorful Slime",
+			"id": "world_of_color",
+			"name": "World of Color",
+			"packs": [
+				{
+					"id": "unique_dyes",
+					"name": "Unique Dyes",
+					"description": "Adds variation to the dyes by making each one different."
+				}
+			]
+		},
+		{
+			"id": "world_of_color/colorful_slime",
+			"name": "World of Color / Colorful Slime",
 			"packs": [
 				{
 					"id": "white_slime",
@@ -1522,11 +1544,6 @@
 					"id": "java_boom",
 					"name": "Java Boom",
 					"description": "Gives Explosion particles their texture from Minecraft: Java Edition."
-				},
-				{
-					"id": "java_dried_kelp",
-					"name": "Java Dried Kelp",
-					"description": "Gives the Dried Kelp item its texture from Minecraft: Java Edition."
 				},
 				{
 					"id": "java_map",
@@ -1714,27 +1731,6 @@
 	],
 	"combinations": [
 		{
-			"id": "extras/crimson/crimsoner_glass_doors",
-			"combines": [
-				"aesthetic/crimsoner_crimson",
-				"aesthetic/glass_doors"
-			]
-		},
-		{
-			"id": "extras/crimson/crimsoner_glass_trapdoors",
-			"combines": [
-				"aesthetic/crimsoner_crimson",
-				"aesthetic/glass_trapdoors"
-			]
-		},
-		{
-			"id": "extras/crimson/crimsoner_log_tops",
-			"combines": [
-				"aesthetic/crimsoner_crimson",
-				"terrain/circular_log_tops"
-			]
-		},
-		{
 			"id": "extras/dirt/pebbleless_dungeons_dirt",
 			"combines": [
 				"terrain/pebbleless_dirt",
@@ -1774,14 +1770,14 @@
 			"id": "extras/snow/whiter_lower_snow",
 			"combines": [
 				"terrain/whiter_snow",
-				"lower_and_sides/lower_snow"
+				"terrain/lower_and_sides/lower_snow"
 			]
 		},
 		{
 			"id": "extras/snow/whiter_snow_sides",
 			"combines": [
 				"terrain/whiter_snow",
-				"lower_and_sides/snow_sides"
+				"terrain/lower_and_sides/snow_sides"
 			]
 		},
 		{
@@ -1930,8 +1926,160 @@
 	],
 	"deepMergeFiles": [
 		{
+			"filename": "terrain_texture.json",
+			"filepath": "/textures/terrain_texture.json"
+		},
+		{
+			"filename": "flipbook_textures.json",
+			"filepath": "/textures/flipbook_textures.json"
+		},
+		{
+			"filename": "item_texture.json",
+			"filepath": "/textures/item_texture.json"
+		},
+		{
+			"filename": "blocks.json",
+			"filepath": "/blocks.json"
+		},
+		{
 			"filename": "trade_2_screen.json",
 			"filepath": "/ui/trade_2_screen.json"
+		},
+		{
+			"filename": "trade_2_screen_pocket.json",
+			"filepath": "/ui/trade_2_screen_pocket.json"
+		},
+		{
+			"filename": "inventory_screen.json",
+			"filepath": "/ui/inventory_screen.json"
+		},
+		{
+			"filename": "inventory_screen_pocket.json",
+			"filepath": "/ui/inventory_screen_pocket.json"
+		},
+		{
+			"filename": "stonecutter_screen.json",
+			"filepath": "/ui/stonecutter_screen.json"
+		},
+		{
+			"filename": "_ui_defs.json",
+			"filepath": "/ui/_ui_defs.json"
+		},
+		{
+			"filename": "bg_BG",
+			"filepath": "/texts/bg_BG.lang"
+		},
+		{
+			"filename": "cs_CZ",
+			"filepath": "/texts/cs_CZ.lang"
+		},
+		{
+			"filename": "da_DK",
+			"filepath": "/texts/da_DK.lang"
+		},
+		{
+			"filename": "de_DE",
+			"filepath": "/texts/de_DE.lang"
+		},
+		{
+			"filename": "el_GR",
+			"filepath": "/texts/el_GR.lang"
+		},
+		{
+			"filename": "en_GB",
+			"filepath": "/texts/en_GB.lang"
+		},
+		{
+			"filename": "en_US",
+			"filepath": "/texts/en_US.lang"
+		},
+		{
+			"filename": "es_ES",
+			"filepath": "/texts/es_ES.lang"
+		},
+		{
+			"filename": "es_MX",
+			"filepath": "/texts/es_MX.lang"
+		},
+		{
+			"filename": "fi_FI",
+			"filepath": "/texts/fi_FI.lang"
+		},
+		{
+			"filename": "fr_CA",
+			"filepath": "/texts/fr_CA.lang"
+		},
+		{
+			"filename": "fr_FR",
+			"filepath": "/texts/fr_FR.lang"
+		},
+		{
+			"filename": "hu_HU",
+			"filepath": "/texts/hu_HU.lang"
+		},
+		{
+			"filename": "id_ID",
+			"filepath": "/texts/id_ID.lang"
+		},
+		{
+			"filename": "it_IT",
+			"filepath": "/texts/it_IT.lang"
+		},
+		{
+			"filename": "ja_JP",
+			"filepath": "/texts/ja_JP.lang"
+		},
+		{
+			"filename": "ko_KR",
+			"filepath": "/texts/ko_KR.lang"
+		},
+		{
+			"filename": "nb_NO",
+			"filepath": "/texts/nb_NO.lang"
+		},
+		{
+			"filename": "nl_NL",
+			"filepath": "/texts/nl_NL.lang"
+		},
+		{
+			"filename": "pl_PL",
+			"filepath": "/texts/pl_PL.lang"
+		},
+		{
+			"filename": "pt_BR",
+			"filepath": "/texts/pt_BR.lang"
+		},
+		{
+			"filename": "pt_PT",
+			"filepath": "/texts/pt_PT.lang"
+		},
+		{
+			"filename": "ru_RU",
+			"filepath": "/texts/ru_RU.lang"
+		},
+		{
+			"filename": "sk_SK",
+			"filepath": "/texts/sk_SK.lang"
+		},
+		{
+			"filename": "sv_SE",
+			"filepath": "/texts/sv_SE.lang"
+		},
+		{
+			"filename": "tr_TR",
+			"filepath": "/texts/tr_TR.lang"
+		},
+		{
+			"filename": "uk_UA",
+			"filepath": "/texts/uk_UA.lang"
+		},
+		{
+			"filename": "zh_CN",
+			"filepath": "/texts/zh_CN.lang"
+		},
+		{
+			"filename": "zh_TW",
+			"filepath": "/texts/zh_TW.lang"
 		}
 	]
 }

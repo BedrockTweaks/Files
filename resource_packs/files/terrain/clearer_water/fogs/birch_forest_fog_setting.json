@@ -1,0 +1,16 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:fog_settings": {
+		"description": {
+			"identifier": "bt:fog_birch_forest"
+		},
+		"distance": {
+			"water": {
+				"fog_start": 32.0,
+				"fog_end": 64.0,
+				"fog_color": "#0677ce",
+				"render_distance_type": "fixed"
+			}
+		}
+	}
+}
