@@ -273,14 +273,14 @@
 					"description": "Retextures the heads of Sunflowers to bloom a bit more."
 				},
 				{
-					"id": "shorter_grass",
-					"name": "Shorter Grass",
-					"description": "Makes grass slightly shorter."
+					"id": "shorter_short_grass",
+					"name": "Shorter Short Grass",
+					"description": "Makes Short Grass slightly shorter."
 				},
 				{
 					"id": "shorter_tall_grass",
 					"name": "Shorter Tall Grass",
-					"description": "Makes tall grass slightly shorter."
+					"description": "Makes Tall Grass slightly shorter."
 				},
 				{
 					"id": "whiter_snow",
