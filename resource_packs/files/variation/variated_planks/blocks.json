@@ -52,7 +52,6 @@
         "sound": "wood",
         "textures": "jungle_planks"
     },
-    // oak_fence_gate
     "fence_gate": {
         "sound": "wood",
         "textures": "oak_planks"
@@ -65,12 +64,10 @@
         "sound": "wood",
         "textures": "oak_planks"
     },
-    // oak_button
     "wooden_button": {
         "sound": "wood",
         "textures": "oak_planks"
     },
-    // oak_pressure_plate
     "wooden_pressure_plate": {
         "sound": "wood",
         "textures": "oak_planks"
