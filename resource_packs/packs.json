@@ -1320,6 +1320,11 @@
 					"id": "old_level_up_sound",
 					"name": "Old Level Up Sound",
 					"description": "Brings back the old level up jingle when you hit increment of 5 XP levels."
+				},
+				{
+					"id": "legacy_bedrock_dried_kelp",
+					"name": "Legacy Bedrock Dried Kelp",
+					"description": "Gives the Dried Kelp item its texture from previous versions of Minecraft: Bedrock Edition."
 				}
 			]
 		},
@@ -1539,11 +1544,6 @@
 					"id": "java_boom",
 					"name": "Java Boom",
 					"description": "Gives Explosion particles their texture from Minecraft: Java Edition."
-				},
-				{
-					"id": "java_dried_kelp",
-					"name": "Java Dried Kelp",
-					"description": "Gives the Dried Kelp item its texture from Minecraft: Java Edition."
 				},
 				{
 					"id": "java_map",
