@@ -1,8 +1,8 @@
 ---
 name: Addon Bug
 about: Template for addon bugs
-title: ''
-labels: addons, bug
+title: "[CATEGORY] PACK"
+labels: addons, bug, site
 assignees: ''
 
 ---
