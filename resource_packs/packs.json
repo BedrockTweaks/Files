@@ -126,11 +126,6 @@
 					"description": "Changes arrow sprites and entities to have Flint colored tips."
 				},
 				{
-					"id": "bed_icons",
-					"name": "Bed Icons",
-					"description": "Changes Bed item models to look like regular items (with updated textures) like before 1.12."
-				},
-				{
 					"id": "splash_bottle_o_enchanting",
 					"name": "Splash Bottle o' Enchanting",
 					"description": "Makes the Bottle o' Enchanting take the same shape as a splash potion."
@@ -1182,8 +1177,8 @@
 			"name": "Retro",
 			"packs": [
 				{
-					"id": "old_minecraft_logo",
-					"name": "Old Minecraft Logo",
+					"id": "alpha_minecraft_logo",
+					"name": "Alpha Minecraft Logo",
 					"description": "Brings back the old hand-built Cobblestone Minecraft logo from the Alpha days!"
 				},
 				{
@@ -1207,8 +1202,8 @@
 					"description": "Reverts Cobblestone to its Alpha texture."
 				},
 				{
-					"id": "pre_1_17_ores",
-					"name": "Pre-1.17 Ores",
+					"id": "classic_ores",
+					"name": "Classic Ores",
 					"description": "Reverts all ores to their pre-1.17 textures, including Deepslate and Copper ores."
 				},
 				{
@@ -1267,19 +1262,24 @@
 					"description": "Reverts the texture of Sponges to the beta texture."
 				},
 				{
-					"id": "1_11_wool_colors",
-					"name": "1.11 Wool Colors",
+					"id": "old_wool_colors",
+					"name": "Old Wool Colors",
 					"description": "Reverts the textures of Wool and Carpet to their pre-1.12 variants."
 				},
 				{
-					"id": "1_11_shulker_boxes",
-					"name": "1.11 Shulker Boxes",
-					"description": "Reverts the textures of Shulkers and Shulker Boxes to their pre-1.12 variants."
+					"id": "old_shulker_boxes",
+					"name": "Old Shulker Boxes",
+					"description": "Recolors Shulkers and Shulker Boxes to their pre-1.12 colors."
 				},
 				{
 					"id": "poppy_to_rose",
 					"name": "Poppy to Rose",
 					"description": "Changes the texture of the Poppy to that of the Rose from before 1.7.2."
+				},
+				{
+					"id": "bed_icons",
+					"name": "Bed Icons",
+					"description": "Reverts Bed items to icons rather than models, like they were prior to 1.12."
 				},
 				{
 					"id": "rename_terracotta_to_hardened_clay",
