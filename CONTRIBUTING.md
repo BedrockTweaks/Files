@@ -62,6 +62,13 @@ Vanilla files should stay the same.
 ### JSON UI
 JSON UI must follow [Bedrock Wiki JSON UI Best Practices](https://wiki.bedrock.dev/json-ui/best-practices.html).
 
+### Pack Priority
+Packs in the packs.json are ordered by priority, the higher the pack the higher the priority.
+
+`alternate_block_destruction >>> black_nether_bricks >>> lush_grass_all_round`
+
+The pack generator will add the packs to the generated file by priority order. If a file already exists, the generator will skip it to not add the same file again.
+
 #
 
 If you notice any files not following the Style Guide feel free to open a PR. 
