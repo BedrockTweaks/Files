@@ -1880,119 +1880,119 @@
 			"filepath": "/ui/_ui_defs.json"
 		},
 		{
-			"filename": "bg_BG",
+			"filename": "bg_BG.lang",
 			"filepath": "/texts/bg_BG.lang"
 		},
 		{
-			"filename": "cs_CZ",
+			"filename": "cs_CZ.lang",
 			"filepath": "/texts/cs_CZ.lang"
 		},
 		{
-			"filename": "da_DK",
+			"filename": "da_DK.lang",
 			"filepath": "/texts/da_DK.lang"
 		},
 		{
-			"filename": "de_DE",
+			"filename": "de_DE.lang",
 			"filepath": "/texts/de_DE.lang"
 		},
 		{
-			"filename": "el_GR",
+			"filename": "el_GR.lang",
 			"filepath": "/texts/el_GR.lang"
 		},
 		{
-			"filename": "en_GB",
+			"filename": "en_GB.lang",
 			"filepath": "/texts/en_GB.lang"
 		},
 		{
-			"filename": "en_US",
+			"filename": "en_US.lang",
 			"filepath": "/texts/en_US.lang"
 		},
 		{
-			"filename": "es_ES",
+			"filename": "es_ES.lang",
 			"filepath": "/texts/es_ES.lang"
 		},
 		{
-			"filename": "es_MX",
+			"filename": "es_MX.lang",
 			"filepath": "/texts/es_MX.lang"
 		},
 		{
-			"filename": "fi_FI",
+			"filename": "fi_FI.lang",
 			"filepath": "/texts/fi_FI.lang"
 		},
 		{
-			"filename": "fr_CA",
+			"filename": "fr_CA.lang",
 			"filepath": "/texts/fr_CA.lang"
 		},
 		{
-			"filename": "fr_FR",
+			"filename": "fr_FR.lang",
 			"filepath": "/texts/fr_FR.lang"
 		},
 		{
-			"filename": "hu_HU",
+			"filename": "hu_HU.lang",
 			"filepath": "/texts/hu_HU.lang"
 		},
 		{
-			"filename": "id_ID",
+			"filename": "id_ID.lang",
 			"filepath": "/texts/id_ID.lang"
 		},
 		{
-			"filename": "it_IT",
+			"filename": "it_IT.lang",
 			"filepath": "/texts/it_IT.lang"
 		},
 		{
-			"filename": "ja_JP",
+			"filename": "ja_JP.lang",
 			"filepath": "/texts/ja_JP.lang"
 		},
 		{
-			"filename": "ko_KR",
+			"filename": "ko_KR.lang",
 			"filepath": "/texts/ko_KR.lang"
 		},
 		{
-			"filename": "nb_NO",
+			"filename": "nb_NO.lang",
 			"filepath": "/texts/nb_NO.lang"
 		},
 		{
-			"filename": "nl_NL",
+			"filename": "nl_NL.lang",
 			"filepath": "/texts/nl_NL.lang"
 		},
 		{
-			"filename": "pl_PL",
+			"filename": "pl_PL.lang",
 			"filepath": "/texts/pl_PL.lang"
 		},
 		{
-			"filename": "pt_BR",
+			"filename": "pt_BR.lang",
 			"filepath": "/texts/pt_BR.lang"
 		},
 		{
-			"filename": "pt_PT",
+			"filename": "pt_PT.lang",
 			"filepath": "/texts/pt_PT.lang"
 		},
 		{
-			"filename": "ru_RU",
+			"filename": "ru_RU.lang",
 			"filepath": "/texts/ru_RU.lang"
 		},
 		{
-			"filename": "sk_SK",
+			"filename": "sk_SK.lang",
 			"filepath": "/texts/sk_SK.lang"
 		},
 		{
-			"filename": "sv_SE",
+			"filename": "sv_SE.lang",
 			"filepath": "/texts/sv_SE.lang"
 		},
 		{
-			"filename": "tr_TR",
+			"filename": "tr_TR.lang",
 			"filepath": "/texts/tr_TR.lang"
 		},
 		{
-			"filename": "uk_UA",
+			"filename": "uk_UA.lang",
 			"filepath": "/texts/uk_UA.lang"
 		},
 		{
-			"filename": "zh_CN",
+			"filename": "zh_CN.lang",
 			"filepath": "/texts/zh_CN.lang"
 		},
 		{
-			"filename": "zh_TW",
+			"filename": "zh_TW.lang",
 			"filepath": "/texts/zh_TW.lang"
 		}
 	]
