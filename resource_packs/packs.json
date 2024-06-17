@@ -999,6 +999,16 @@
 					"description": "Replaces the default Minecraft menu panorama with a 360° view of a valley under the setting sun! (from 1.18)"
 				},
 				{
+					"id": "mangrove_swamp",
+					"name": "Mangrove Swamp",
+					"pack_description": "Replaces the default Minecraft menu panorama with a 360° view of a mangrove swamp from 1.19"
+				},
+				{
+					"id": "cherry_grove",
+					"pack_name": "Cherry Grove",
+					"pack_description": "Replaces the default Minecraft menu panorama with a 360° view of a Cherry Grove"
+				},
+				{
 					"id": "the_end",
 					"name": "The End",
 					"description": "Replaces the default Minecraft menu panorama with a 360° view of the main End island."
@@ -1029,6 +1039,21 @@
 					"description": "Replaces the default Minecraft menu panorama with a 360° view of an underground lava pool."
 				},
 				{
+					"id": "acacia_village",
+					"pack_name": "Acacia Village",
+					"pack_description": "Replaces the default Minecraft menu panorama with a 360° view of an Acacia Village"
+				},
+				{
+					"id": "halloween_2021",
+					"pack_name": "Halloween 2021",
+					"pack_description": "Replaces the default Minecraft menu panorama with a 360° view of a spooky Halloween town"
+				},
+				{
+					"id": "halloween_2022",
+					"pack_name": "Halloween 2022",
+					"pack_description": "Replaces the default Minecraft menu panorama with a 360° view of a spooky Halloween town"
+				}
+				{
 					"id": "tu69_tutorial_world_legacy_console",
 					"name": "TU69 Tutorial World (Legacy Console)",
 					"description": "Replaces the default Minecraft menu panorama with a 360° view of Minecraft: Console Edition TU69's tutorial world."
@@ -1045,44 +1070,49 @@
 			"name": "GUI / Menu Panoramas / Xisuma's Hermitcraft Bases",
 			"packs": [
 				{
-					"id": "xisumas_hermitcraft_base_season_1",
-					"name": "Xisuma's Hermitcraft Base (Season 1)",
+					"id": "season_1",
+					"name": "Season 1",
 					"description": "Replaces the default Minecraft menu panorama with a 360° view of Xisuma's base from Hermitcraft Season 1."
 				},
 				{
-					"id": "xisumas_hermitcraft_base_season_2",
-					"name": "Xisuma's Hermitcraft Base (Season 2)",
+					"id": "season_2",
+					"name": "Season 2",
 					"description": "Replaces the default Minecraft menu panorama with a 360° view of Xisuma's base from Hermitcraft Season 2."
 				},
 				{
-					"id": "xisumas_hermitcraft_base_season_3",
-					"name": "Xisuma's Hermitcraft Base (Season 3)",
+					"id": "season_3",
+					"name": "Season 3",
 					"description": "Replaces the default Minecraft menu panorama with a 360° view of Xisuma's base from Hermitcraft Season 3."
 				},
 				{
-					"id": "xisumas_hermitcraft_base_season_4",
-					"name": "Xisuma's Hermitcraft Base (Season 4)",
+					"id": "season_4",
+					"name": "Season 4",
 					"description": "Replaces the default Minecraft menu panorama with a 360° view of Xisuma's base from Hermitcraft Season 4."
 				},
 				{
-					"id": "xisumas_hermitcraft_base_season_5",
-					"name": "Xisuma's Hermitcraft Base (Season 5)",
+					"id": "season_5",
+					"name": "Season 5",
 					"description": "Replaces the default Minecraft menu panorama with a 360° view of Xisuma's base from Hermitcraft Season 5."
 				},
 				{
-					"id": "xisumas_hermitcraft_base_season_6",
-					"name": "Xisuma's Hermitcraft Base (Season 6)",
+					"id": "season_6",
+					"name": "Season 6",
 					"description": "Replaces the default Minecraft menu panorama with a 360° view of Xisuma's base from Hermitcraft Season 6."
 				},
 				{
-					"id": "xisumas_hermitcraft_base_season_7",
-					"name": "Xisuma's Hermitcraft Base (Season 7)",
+					"id": "season_7",
+					"name": "Season 7",
 					"description": "Replaces the default Minecraft menu panorama with a 360° view of Xisuma's base from Hermitcraft Season 7."
 				},
 				{
-					"id": "xisumas_hermitcraft_base_season_8",
-					"name": "Xisuma's Hermitcraft Base (Season 8)",
+					"id": "season_8",
+					"name": "Season 8",
 					"description": "Replaces the default Minecraft menu panorama with a 360° view of Xisuma's base from Hermitcraft Season 8."
+				},
+				{
+					"id": "season_9",
+					"name": "Season 9",
+					"description": "Replaces the default Minecraft menu panorama with a 360° view of Xisuma's base from Hermitcraft Season 9."
 				}
 			]
 		},
