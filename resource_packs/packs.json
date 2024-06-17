@@ -999,6 +999,11 @@
 					"description": "Replaces the default Minecraft menu panorama with a 360° view of a valley under the setting sun! (from 1.18)"
 				},
 				{
+					"id": "mangrove_swamp",
+					"name": "Mangrove Swamp",
+					"pack_description": "Replaces the default Minecraft menu panorama with a 360° view of a mangrove swamp from 1.19"
+				},
+				{
 					"id": "the_end",
 					"name": "The End",
 					"description": "Replaces the default Minecraft menu panorama with a 360° view of the main End island."
@@ -1028,6 +1033,26 @@
 					"name": "Underground Lava Pool",
 					"description": "Replaces the default Minecraft menu panorama with a 360° view of an underground lava pool."
 				},
+				{
+					"id": "acacia_village",
+					"pack_name": "Acacia Village",
+					"pack_description": "Replaces the default Minecraft menu panorama with a 360° view of an Acacia Village"
+				},
+				{
+					"id": "cherry_grove",
+					"pack_name": "Cherry Grove",
+					"pack_description": "Replaces the default Minecraft menu panorama with a 360° view of a Cherry Grove"
+				},
+				{
+					"id": "halloween_2021",
+					"pack_name": "Halloween 2021",
+					"pack_description": "Replaces the default Minecraft menu panorama with a 360° view of a spooky Halloween town"
+				},
+				{
+					"id": "halloween_2022",
+					"pack_name": "Halloween 2022",
+					"pack_description": "Replaces the default Minecraft menu panorama with a 360° view of a spooky Halloween town"
+				}
 				{
 					"id": "tu69_tutorial_world_legacy_console",
 					"name": "TU69 Tutorial World (Legacy Console)",
@@ -1083,6 +1108,11 @@
 					"id": "xisumas_hermitcraft_base_season_8",
 					"name": "Xisuma's Hermitcraft Base (Season 8)",
 					"description": "Replaces the default Minecraft menu panorama with a 360° view of Xisuma's base from Hermitcraft Season 8."
+				},
+				{
+					"id": "xisumas_hermitcraft_base_season_9",
+					"name": "Xisuma's Hermitcraft Base (Season 9)",
+					"description": "Replaces the default Minecraft menu panorama with a 360° view of Xisuma's base from Hermitcraft Season 9."
 				}
 			]
 		},
