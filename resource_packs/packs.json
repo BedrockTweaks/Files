@@ -1004,6 +1004,11 @@
 					"pack_description": "Replaces the default Minecraft menu panorama with a 360° view of a mangrove swamp from 1.19"
 				},
 				{
+					"id": "cherry_grove",
+					"pack_name": "Cherry Grove",
+					"pack_description": "Replaces the default Minecraft menu panorama with a 360° view of a Cherry Grove"
+				},
+				{
 					"id": "the_end",
 					"name": "The End",
 					"description": "Replaces the default Minecraft menu panorama with a 360° view of the main End island."
@@ -1037,11 +1042,6 @@
 					"id": "acacia_village",
 					"pack_name": "Acacia Village",
 					"pack_description": "Replaces the default Minecraft menu panorama with a 360° view of an Acacia Village"
-				},
-				{
-					"id": "cherry_grove",
-					"pack_name": "Cherry Grove",
-					"pack_description": "Replaces the default Minecraft menu panorama with a 360° view of a Cherry Grove"
 				},
 				{
 					"id": "halloween_2021",
