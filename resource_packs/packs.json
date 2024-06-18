@@ -136,6 +136,11 @@
 					"description": "Recolors the Spyglass to use Copper and Amethyst colors, to reflect its crafting recipe."
 				},
 				{
+				  "id": "accurate_scaffolding",
+				  "pack_name": "Accurate Scaffolding",
+				  "description": "Recolors Scaffolding to use Bamboo and String colors to reflect its crafting recipe."
+				},
+				{
 					"id": "smoother_warped_planks",
 					"name": "Smoother Warped Planks",
 					"description": "Removes the harsh contrast from Warped Planks."
@@ -1865,6 +1870,13 @@
 			"combines": [
 				"retro/alpha_foliage",
 				"terrain/darker_dark_oak_leaves"
+			]
+		},
+		{
+			"id": "extras/unobtrusive/accurate_unobtrusive_scaffolding",
+			"combines": [
+				"aesthetic/accurate_scaffolding",
+				"unobtrusive/unobtrusive_scaffolding"
 			]
 		}
 	],
