@@ -146,6 +146,11 @@
 					"description": "Removes the harsh contrast from Warped Planks."
 				},
 				{
+					"id": "consistent_bamboo_planks",
+					"name": "Consistent Bamboo Planks",
+					"description": "Makes Bamboo Planks and Bamboo Mosaics match the textures of the other plank types."
+				},
+				{
 					"id": "alternate_cut_copper",
 					"name": "Alternate Cut Copper",
 					"description": "Retextures Cut Copper blocks to resemble their look from their first appearence on Minecraft Live."
