@@ -1,0 +1,43 @@
+{
+  "acacia_fence": {
+    "sound": "wood",
+    "textures": "acacia_fence"
+  },
+  "birch_fence": {
+    "sound": "wood",
+    "textures": "birch_fence"
+  },
+  "cherry_fence": {
+    "sound": "cherry_wood",
+    "textures": "cherry_fence"
+  },
+  "crimson_fence": {
+    "sound": "nether_wood",
+    "textures": "crimson_fence"
+  },
+  "dark_oak_fence": {
+    "sound": "wood",
+    "textures": "dark_oak_fence"
+  },
+  "format_version": "1.1.0",
+  "jungle_fence": {
+    "sound": "wood",
+    "textures": "jungle_fence"
+  },
+  "mangrove_fence": {
+    "sound": "wood",
+    "textures": "mangrove_fence"
+  },
+  "oak_fence": {
+    "sound": "wood",
+    "textures": "oak_fence"
+  },
+  "spruce_fence": {
+    "sound": "wood",
+    "textures": "spruce_fence"
+  },
+  "warped_fence": {
+    "sound": "nether_wood",
+    "textures": "warped_fence"
+  }
+}

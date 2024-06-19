@@ -1,0 +1,38 @@
+{
+  "num_mip_levels": 4,
+  "padding": 8,
+  "resource_pack_name": "vanilla",
+  "texture_data": {
+    "acacia_fence": {
+      "textures": "textures/blocks/fence_acacia"
+    },
+    "birch_fence": {
+      "textures": "textures/blocks/fence_birch"
+    },
+    "cherry_fence": {
+      "textures": "textures/blocks/cherry_fence"
+    },
+    "crimson_fence": {
+      "textures": "textures/blocks/huge_fungus/crimson_fence"
+    },
+    "dark_oak_fence": {
+      "textures": "textures/blocks/fence_big_oak"
+    },
+    "jungle_fence": {
+      "textures": "textures/blocks/fence_jungle"
+    },
+    "mangrove_fence": {
+      "textures": "textures/blocks/mangrove_fence"
+    },
+    "oak_fence": {
+      "textures": "textures/blocks/fence_oak"
+    },
+    "spruce_fence": {
+      "textures": "textures/blocks/fence_spruce"
+    },
+    "warped_fence": {
+      "textures": "textures/blocks/huge_fungus/warped_fence"
+    }
+  },
+  "texture_name": "atlas.terrain"
+}
