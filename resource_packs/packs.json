@@ -136,9 +136,24 @@
 					"description": "Recolors the Spyglass to use Copper and Amethyst colors, to reflect its crafting recipe."
 				},
 				{
+					"id": "accurate_scaffolding",
+					"name": "Accurate Scaffolding",
+					"description": "Recolors Scaffolding to use Bamboo and String colors to reflect its crafting recipe."
+				},
+				{
+					"id": "fencier_fences",
+					"name": "Fencier Fences",
+					"description": "Makes fences and fence gates less harsh by making them use a vertical plank texture rather than horizontal."
+				},
+				{
 					"id": "smoother_warped_planks",
 					"name": "Smoother Warped Planks",
 					"description": "Removes the harsh contrast from Warped Planks."
+				},
+				{
+					"id": "consistent_bamboo_planks",
+					"name": "Consistent Bamboo Planks",
+					"description": "Makes Bamboo Planks and Bamboo Mosaics match the textures of the other plank types."
 				},
 				{
 					"id": "alternate_cut_copper",
@@ -184,6 +199,11 @@
 					"id": "dragon_elytra",
 					"name": "Dragon Elytra",
 					"description": "Changes Elytra to look like Ender Dragon wings."
+				},
+				{
+					"id": "allay_elytra",
+					"name": "Allay Elytra",
+					"description": "Changes Elytra to look like Allay wings."
 				}
 			]
 		},
@@ -1047,12 +1067,12 @@
 					"id": "halloween_2021",
 					"pack_name": "Halloween 2021",
 					"pack_description": "Replaces the default Minecraft menu panorama with a 360° view of a spooky Halloween town"
-				},
+				}
 				{
 					"id": "halloween_2022",
 					"pack_name": "Halloween 2022",
 					"pack_description": "Replaces the default Minecraft menu panorama with a 360° view of a spooky Halloween town"
-				}
+				},
 				{
 					"id": "tu69_tutorial_world_legacy_console",
 					"name": "TU69 Tutorial World (Legacy Console)",
@@ -1865,6 +1885,13 @@
 			"combines": [
 				"retro/alpha_foliage",
 				"terrain/darker_dark_oak_leaves"
+			]
+		},
+		{
+			"id": "extras/unobtrusive/accurate_unobtrusive_scaffolding",
+			"combines": [
+				"aesthetic/accurate_scaffolding",
+				"unobtrusive/unobtrusive_scaffolding"
 			]
 		}
 	],
