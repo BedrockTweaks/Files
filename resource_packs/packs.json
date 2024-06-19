@@ -1025,7 +1025,7 @@
 				},
 				{
 					"id": "cherry_grove",
-					"pack_name": "Cherry Grove",
+					"name": "Cherry Grove",
 					"pack_description": "Replaces the default Minecraft menu panorama with a 360° view of a Cherry Grove"
 				},
 				{
@@ -1060,17 +1060,17 @@
 				},
 				{
 					"id": "acacia_village",
-					"pack_name": "Acacia Village",
+					"name": "Acacia Village",
 					"pack_description": "Replaces the default Minecraft menu panorama with a 360° view of an Acacia Village"
 				},
 				{
 					"id": "halloween_2021",
-					"pack_name": "Halloween 2021",
+					"name": "Halloween 2021",
 					"pack_description": "Replaces the default Minecraft menu panorama with a 360° view of a spooky Halloween town"
-				}
+				},
 				{
 					"id": "halloween_2022",
-					"pack_name": "Halloween 2022",
+					"name": "Halloween 2022",
 					"pack_description": "Replaces the default Minecraft menu panorama with a 360° view of a spooky Halloween town"
 				},
 				{
