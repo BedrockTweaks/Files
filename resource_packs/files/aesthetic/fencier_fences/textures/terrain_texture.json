@@ -4,10 +4,10 @@
   "resource_pack_name": "vanilla",
   "texture_data": {
     "acacia_fence": {
-      "textures": "textures/blocks/fence_acacia"
+      "textures": "textures/blocks/acacia_fence"
     },
     "birch_fence": {
-      "textures": "textures/blocks/fence_birch"
+      "textures": "textures/blocks/birch_fence"
     },
     "cherry_fence": {
       "textures": "textures/blocks/cherry_fence"
@@ -16,19 +16,29 @@
       "textures": "textures/blocks/huge_fungus/crimson_fence"
     },
     "dark_oak_fence": {
-      "textures": "textures/blocks/fence_big_oak"
+      "textures": "textures/blocks/big_oak_fence"
+    },
+    "fences": {
+      "textures": [
+        "textures/blocks/oak_fence",
+        "textures/blocks/spruce_fence",
+        "textures/blocks/birch_fence",
+        "textures/blocks/jungle_fence",
+        "textures/blocks/acacia_fence",
+        "textures/blocks/dark_oak_fence"
+      ]
     },
     "jungle_fence": {
-      "textures": "textures/blocks/fence_jungle"
+      "textures": "textures/blocks/jungle_fence"
     },
     "mangrove_fence": {
       "textures": "textures/blocks/mangrove_fence"
     },
     "oak_fence": {
-      "textures": "textures/blocks/fence_oak"
+      "textures": "textures/blocks/oak_fence"
     },
     "spruce_fence": {
-      "textures": "textures/blocks/fence_spruce"
+      "textures": "textures/blocks/spruce_fence"
     },
     "warped_fence": {
       "textures": "textures/blocks/huge_fungus/warped_fence"
