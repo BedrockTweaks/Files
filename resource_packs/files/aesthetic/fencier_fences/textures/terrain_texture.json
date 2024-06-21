@@ -13,7 +13,7 @@
       "textures": "textures/blocks/cherry_fence"
     },
     "crimson_fence": {
-      "textures": "textures/blocks/huge_fungus/crimson_fence"
+      "textures": "textures/blocks/crimson_fence"
     },
     "dark_oak_fence": {
       "textures": "textures/blocks/big_oak_fence"
@@ -41,7 +41,7 @@
       "textures": "textures/blocks/spruce_fence"
     },
     "warped_fence": {
-      "textures": "textures/blocks/huge_fungus/warped_fence"
+      "textures": "textures/blocks/warped_fence"
     }
   },
   "texture_name": "atlas.terrain"
