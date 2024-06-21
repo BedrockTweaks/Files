@@ -650,6 +650,11 @@
 					"description": "Changes the breaking texture of blocks to a clean ring around the outside."
 				},
 				{
+					"id":"music_disc_redstone_level",
+					"name":"Music Disc Redstone Level",
+					"description":"Gives all Music Discs a redstone power level indicator in the tooltip."
+				},
+				{
 					"id": "clear_banner_patterns",
 					"name": "Clear Banner Patterns",
 					"description": "Gives all the Banner Pattern items unique and appropriate textures."
@@ -1005,7 +1010,7 @@
 				},
 				{
 					"id": "cherry_grove",
-					"pack_name": "Cherry Grove",
+					"name": "Cherry Grove",
 					"pack_description": "Replaces the default Minecraft menu panorama with a 360° view of a Cherry Grove"
 				},
 				{
@@ -1040,19 +1045,19 @@
 				},
 				{
 					"id": "acacia_village",
-					"pack_name": "Acacia Village",
+					"name": "Acacia Village",
 					"pack_description": "Replaces the default Minecraft menu panorama with a 360° view of an Acacia Village"
 				},
 				{
 					"id": "halloween_2021",
-					"pack_name": "Halloween 2021",
+					"name": "Halloween 2021",
 					"pack_description": "Replaces the default Minecraft menu panorama with a 360° view of a spooky Halloween town"
 				},
 				{
 					"id": "halloween_2022",
-					"pack_name": "Halloween 2022",
+					"name": "Halloween 2022",
 					"pack_description": "Replaces the default Minecraft menu panorama with a 360° view of a spooky Halloween town"
-				}
+				},
 				{
 					"id": "tu69_tutorial_world_legacy_console",
 					"name": "TU69 Tutorial World (Legacy Console)",
