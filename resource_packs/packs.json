@@ -1005,7 +1005,7 @@
 				},
 				{
 					"id": "cherry_grove",
-					"pack_name": "Cherry Grove",
+					"name": "Cherry Grove",
 					"pack_description": "Replaces the default Minecraft menu panorama with a 360° view of a Cherry Grove"
 				},
 				{
@@ -1040,19 +1040,19 @@
 				},
 				{
 					"id": "acacia_village",
-					"pack_name": "Acacia Village",
+					"name": "Acacia Village",
 					"pack_description": "Replaces the default Minecraft menu panorama with a 360° view of an Acacia Village"
 				},
 				{
 					"id": "halloween_2021",
-					"pack_name": "Halloween 2021",
+					"name": "Halloween 2021",
 					"pack_description": "Replaces the default Minecraft menu panorama with a 360° view of a spooky Halloween town"
 				},
 				{
 					"id": "halloween_2022",
-					"pack_name": "Halloween 2022",
+					"name": "Halloween 2022",
 					"pack_description": "Replaces the default Minecraft menu panorama with a 360° view of a spooky Halloween town"
-				}
+				},
 				{
 					"id": "tu69_tutorial_world_legacy_console",
 					"name": "TU69 Tutorial World (Legacy Console)",
@@ -1229,6 +1229,11 @@
 					"id": "rename_terracotta_to_hardened_clay",
 					"name": "Rename 'Terracotta' to 'Hardened Clay'",
 					"description": "Renames Terracotta back to 'Hardened Clay'."
+				},
+				{
+					"id":"rename_pottery_sherds_to_pottery_shards",
+					"name":"Rename 'Pottery Sherds' to 'Pottery Shards'",
+					"description":"Renames 'Pottery Sherds' to 'Pottery Shards'."
 				},
 				{
 					"id": "rename_dirt_path_to_grass_path",
