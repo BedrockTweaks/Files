@@ -186,6 +186,11 @@
 					"description": "Netherite armor in the style of the other armors."
 				},
 				{
+					"id": "allay_elytra",
+					"name": "Allay Elytra",
+					"description": "Changes Elytra to look like Allay wings."
+				},
+				{
 					"id": "vex_elytra",
 					"name": "Vex Elytra",
 					"description": "Changes Elytra to look like Vex wings."
@@ -199,11 +204,6 @@
 					"id": "dragon_elytra",
 					"name": "Dragon Elytra",
 					"description": "Changes Elytra to look like Ender Dragon wings."
-				},
-				{
-					"id": "allay_elytra",
-					"name": "Allay Elytra",
-					"description": "Changes Elytra to look like Allay wings."
 				}
 			]
 		},
