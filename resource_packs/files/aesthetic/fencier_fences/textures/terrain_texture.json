@@ -16,7 +16,7 @@
       "textures": "textures/blocks/crimson_fence"
     },
     "dark_oak_fence": {
-      "textures": "textures/blocks/big_oak_fence"
+      "textures": "textures/blocks/dark_oak_fence"
     },
     "fences": {
       "textures": [
@@ -42,6 +42,36 @@
     },
     "warped_fence": {
       "textures": "textures/blocks/warped_fence"
+    },
+    "acacia_fence_gate": {
+      "textures": "textures/blocks/acacia_fence_gate"
+    },
+    "birch_fence_gate": {
+      "textures": "textures/blocks/birch_fence_gate"
+    },
+    "cherry_fence_gate": {
+      "textures": "textures/blocks/cherry_fence_gate"
+    },
+    "crimson_fence_gate": {
+      "textures": "textures/blocks/crimson_fence_gate"
+    },
+    "dark_oak_fence_gate": {
+      "textures": "textures/blocks/dark_oak_fence_gate"
+    },
+    "jungle_fence_gate": {
+      "textures": "textures/blocks/jungle_fence_gate"
+    },
+    "mangrove_fence_gate": {
+      "textures": "textures/blocks/mangrove_fence_gate"
+    },
+    "oak_fence_gate": {
+      "textures": "textures/blocks/oak_fence_gate"
+    },
+    "spruce_fence_gate": {
+      "textures": "textures/blocks/spruce_fence_gate"
+    },
+    "warped_fence_gate": {
+      "textures": "textures/blocks/warped_fence_gate"
     }
   },
   "texture_name": "atlas.terrain"
