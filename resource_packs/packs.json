@@ -650,11 +650,6 @@
 					"description": "Changes the breaking texture of blocks to a clean ring around the outside."
 				},
 				{
-					"id":"music_disc_redstone_level",
-					"name":"Music Disc Redstone Level",
-					"description":"Gives all Music Discs a redstone power level indicator in the tooltip."
-				},
-				{
 					"id": "clear_banner_patterns",
 					"name": "Clear Banner Patterns",
 					"description": "Gives all the Banner Pattern items unique and appropriate textures."
@@ -663,6 +658,11 @@
 					"id": "hunger_preview",
 					"name": "Hunger Preview",
 					"description": "Displays Hunger Bar icons on all food names to show how much it will fill you up."
+				},
+				{
+					"id":"music_disc_redstone_level",
+					"name":"Music Disc Redstone Level",
+					"description":"Gives all Music Discs a redstone power level indicator in the tooltip."
 				},
 				{
 					"id": "sticky_piston_sides",
@@ -1799,6 +1799,13 @@
 				"terrain/uniform_ores",
 				"utility/ore_borders",
 				"fun/emeralds_to_rubies"
+			]
+		},
+		{
+			"id": "extras/utility/music_disc_level_hunger_preview",
+			"combines": [
+				"utility/hunger_preview",
+				"utility/music_disc_redstone_level"
 			]
 		},
 		{
