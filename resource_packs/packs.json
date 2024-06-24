@@ -1251,6 +1251,11 @@
 					"description": "Renames Terracotta back to 'Hardened Clay'."
 				},
 				{
+					"id":"rename_pottery_sherds_to_pottery_shards",
+					"name":"Rename 'Pottery Sherds' to 'Pottery Shards'",
+					"description":"Renames 'Pottery Sherds' to 'Pottery Shards'."
+				},
+				{
 					"id": "rename_dirt_path_to_grass_path",
 					"name": "Rename 'Dirt Path' to 'Grass Path'",
 					"description": "Changes the newly named 'Dirt Path' back to 'Grass Path'."
