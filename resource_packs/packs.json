@@ -660,6 +660,11 @@
 					"description": "Displays Hunger Bar icons on all food names to show how much it will fill you up."
 				},
 				{
+					"id":"music_disc_redstone_level",
+					"name":"Music Disc Redstone Level",
+					"description":"Gives all Music Discs a redstone power level indicator in the tooltip."
+				},
+				{
 					"id": "sticky_piston_sides",
 					"name": "Sticky Piston Sides",
 					"description": "names Slime on the sides of Sticky Pistons to allow players to easily differentiate them from regular pistons."
@@ -1799,6 +1804,13 @@
 				"terrain/uniform_ores",
 				"utility/ore_borders",
 				"fun/emeralds_to_rubies"
+			]
+		},
+		{
+			"id": "extras/utility/music_disc_level_hunger_preview",
+			"combines": [
+				"utility/hunger_preview",
+				"utility/music_disc_redstone_level"
 			]
 		},
 		{
