@@ -1302,6 +1302,11 @@
 					"description": "Look into my eyes, and nothing but my eyes!"
 				},
 				{
+					"id": "soyjak_vault",
+					"name": "Soyjak Vault",
+					"description": "Yeah..."
+				},
+				{
 					"id": "xisuma_turtle",
 					"name": "Xisuma Turtle",
 					"description": "Changes the Turtle texture to the well-known Xisuma Turtle."
