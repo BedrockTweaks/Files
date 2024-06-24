@@ -618,6 +618,11 @@
 					"description": "Places a border around ores for easier visibility within caves."
 				},
 				{
+					"id": "suspicious_sand_and_gravel_borders",
+					"name": "Suspicious Sand and Gravel Borders",
+					"description": "Places a border around Suspicious Sand and Suspicious Gravel for easier visibility."
+				},
+				{
 					"id": "budding_amethyst_borders",
 					"name": "Budding Amethyst Borders",
 					"description": "Places a border around Budding Amethyst blocks for easier visibility within geodes."
@@ -1295,6 +1300,11 @@
 					"id": "beeralis",
 					"name": "Beeralis",
 					"description": "Look into my eyes, and nothing but my eyes!"
+				},
+				{
+					"id": "sus_sand_and_gravel",
+					"name": "Sus Sand and Gravel",
+					"description": "GET OUT OF MY HEAD GET OUT OF MY HEAD GET OUT OF MY HEAD"
 				},
 				{
 					"id": "xisuma_turtle",
