@@ -665,6 +665,11 @@
 					"description": "Displays Hunger Bar icons on all food names to show how much it will fill you up."
 				},
 				{
+					"id":"music_disc_redstone_level",
+					"name":"Music Disc Redstone Level",
+					"description":"Gives all Music Discs a redstone power level indicator in the tooltip."
+				},
+				{
 					"id": "sticky_piston_sides",
 					"name": "Sticky Piston Sides",
 					"description": "names Slime on the sides of Sticky Pistons to allow players to easily differentiate them from regular pistons."
@@ -1301,10 +1306,15 @@
 					"name": "Beeralis",
 					"description": "Look into my eyes, and nothing but my eyes!"
 				},
-				{
+        {
 					"id": "sus_sand_and_gravel",
 					"name": "Sus Sand and Gravel",
 					"description": "GET OUT OF MY HEAD GET OUT OF MY HEAD GET OUT OF MY HEAD"
+        },
+				{
+					"id": "soyjak_vault",
+					"name": "Soyjak Vault",
+					"description": "Yeah..."
 				},
 				{
 					"id": "xisuma_turtle",
@@ -1809,6 +1819,13 @@
 				"terrain/uniform_ores",
 				"utility/ore_borders",
 				"fun/emeralds_to_rubies"
+			]
+		},
+		{
+			"id": "extras/utility/music_disc_level_hunger_preview",
+			"combines": [
+				"utility/hunger_preview",
+				"utility/music_disc_redstone_level"
 			]
 		},
 		{
