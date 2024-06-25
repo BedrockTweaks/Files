@@ -1545,6 +1545,11 @@
 					"description": "Gives the Creeper its texture from Minecraft: Dungeons."
 				},
 				{
+					"id": "dungeons_mossy_skeleton",
+					"name": "Dungeons Mossy Skeleton",
+					"description": "Retextures the Bogged to the Mossy Skeleton from Minecraft: Dungeons."
+				},
+				{
 					"id": "dungeons_alex_and_steve",
 					"name": "Dungeons Alex & Steve",
 					"description": "Gives Alex and Steve their textures from Minecraft: Dungeons."
