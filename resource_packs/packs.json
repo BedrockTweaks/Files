@@ -1521,63 +1521,78 @@
 			"packs": [
 				{
 					"id": "white",
-					"name": "White"
+					"name": "White",
+					"description": ""
 				},
 				{
 					"id": "gray",
-					"name": "Gray"
+					"name": "Gray",
+					"description": ""
 				},
 				{
 					"id": "black",
-					"name": "Black"
+					"name": "Black",
+					"description": ""
 				},
 				{
 					"id": "brown",
-					"name": "Brown"
+					"name": "Brown",
+					"description": ""
 				},
 				{
 					"id": "red",
-					"name": "Red"
+					"name": "Red",
+					"description": ""
 				},
 				{
 					"id": "orange",
-					"name": "Orange"
+					"name": "Orange",
+					"description": ""
 				},
 				{
 					"id": "yellow",
-					"name": "Yellow"
+					"name": "Yellow",
+					"description": ""
 				},
 				{
 					"id": "lime",
-					"name": "Lime"
+					"name": "Lime",
+					"description": ""
 				},
 				{
 					"id": "green",
-					"name": "Green"
+					"name": "Green",
+					"description": ""
 				},
 				{
 					"id": "cyan",
-					"name": "Cyan"
+					"name": "Cyan",
+					"description": ""
 				},
 				{
 					"id": "light_blue",
-					"name": "Light Blue"
+					"name": "Light Blue",
+					"description": ""
 				},
 				{
 					"id": "blue",
-					"name": "Blue"
+					"name": "Blue",
+					"description": ""
 				},
 				{
 					"id": "purple",
-					"name": "Purple"
+					"name": "Purple",
+					"description": ""
 				},
 				{
 					"id": "magenta",
-					"name": "Magenta"
+					"name": "Magenta",
+					"description": ""
 				},
 				{
 					"id": "pink",
-					"name": "Pink"
+					"name": "Pink",
+					"description": ""
 				}
 			]
 		},
