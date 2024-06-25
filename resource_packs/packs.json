@@ -136,9 +136,19 @@
 					"description": "Recolors the Spyglass to use Copper and Amethyst colors, to reflect its crafting recipe."
 				},
 				{
+					"id": "accurate_scaffolding",
+					"name": "Accurate Scaffolding",
+					"description": "Recolors Scaffolding to use Bamboo and String colors to reflect its crafting recipe."
+				},
+				{
 					"id": "smoother_warped_planks",
 					"name": "Smoother Warped Planks",
 					"description": "Removes the harsh contrast from Warped Planks."
+				},
+				{
+					"id": "consistent_bamboo_planks",
+					"name": "Consistent Bamboo Planks",
+					"description": "Makes Bamboo Planks and Bamboo Mosaics match the textures of the other plank types."
 				},
 				{
 					"id": "alternate_cut_copper",
@@ -169,6 +179,11 @@
 					"id": "classic_netherite_armor",
 					"name": "Classic Netherite Armor",
 					"description": "Netherite armor in the style of the other armors."
+				},
+				{
+					"id": "allay_elytra",
+					"name": "Allay Elytra",
+					"description": "Changes Elytra to look like Allay wings."
 				},
 				{
 					"id": "vex_elytra",
@@ -1897,6 +1912,13 @@
 			"combines": [
 				"retro/alpha_foliage",
 				"terrain/darker_dark_oak_leaves"
+			]
+		},
+		{
+			"id": "extras/unobtrusive/accurate_unobtrusive_scaffolding",
+			"combines": [
+				"aesthetic/accurate_scaffolding",
+				"unobtrusive/unobtrusive_scaffolding"
 			]
 		}
 	],
