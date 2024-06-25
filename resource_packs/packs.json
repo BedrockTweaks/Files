@@ -618,6 +618,11 @@
 					"description": "Places a border around ores for easier visibility within caves."
 				},
 				{
+					"id": "suspicious_sand_and_gravel_borders",
+					"name": "Suspicious Sand and Gravel Borders",
+					"description": "Places a border around Suspicious Sand and Suspicious Gravel for easier visibility."
+				},
+				{
 					"id": "budding_amethyst_borders",
 					"name": "Budding Amethyst Borders",
 					"description": "Places a border around Budding Amethyst blocks for easier visibility within geodes."
@@ -658,6 +663,11 @@
 					"id": "hunger_preview",
 					"name": "Hunger Preview",
 					"description": "Displays Hunger Bar icons on all food names to show how much it will fill you up."
+				},
+				{
+					"id":"music_disc_redstone_level",
+					"name":"Music Disc Redstone Level",
+					"description":"Gives all Music Discs a redstone power level indicator in the tooltip."
 				},
 				{
 					"id": "sticky_piston_sides",
@@ -1296,6 +1306,16 @@
 					"name": "Beeralis",
 					"description": "Look into my eyes, and nothing but my eyes!"
 				},
+        {
+					"id": "sus_sand_and_gravel",
+					"name": "Sus Sand and Gravel",
+					"description": "GET OUT OF MY HEAD GET OUT OF MY HEAD GET OUT OF MY HEAD"
+        },
+				{
+					"id": "soyjak_vault",
+					"name": "Soyjak Vault",
+					"description": "Yeah..."
+				},
 				{
 					"id": "xisuma_turtle",
 					"name": "Xisuma Turtle",
@@ -1799,6 +1819,13 @@
 				"terrain/uniform_ores",
 				"utility/ore_borders",
 				"fun/emeralds_to_rubies"
+			]
+		},
+		{
+			"id": "extras/utility/music_disc_level_hunger_preview",
+			"combines": [
+				"utility/hunger_preview",
+				"utility/music_disc_redstone_level"
 			]
 		},
 		{
