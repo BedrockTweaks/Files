@@ -1516,6 +1516,72 @@
 			]
 		},
 		{
+			"id": "world_of_color/elytra",
+			"name": "World of Color / Elytra",
+			"packs": [
+				{
+					"id": "white",
+					"name": "White"
+				},
+				{
+					"id": "gray",
+					"name": "Gray"
+				},
+				{
+					"id": "black",
+					"name": "Black"
+				},
+				{
+					"id": "brown",
+					"name": "Brown"
+				},
+				{
+					"id": "red",
+					"name": "Red"
+				},
+				{
+					"id": "orange",
+					"name": "Orange"
+				},
+				{
+					"id": "yellow",
+					"name": "Yellow"
+				},
+				{
+					"id": "lime",
+					"name": "Lime"
+				},
+				{
+					"id": "green",
+					"name": "Green"
+				},
+				{
+					"id": "cyan",
+					"name": "Cyan"
+				},
+				{
+					"id": "light_blue",
+					"name": "Light Blue"
+				},
+				{
+					"id": "blue",
+					"name": "Blue"
+				},
+				{
+					"id": "purple",
+					"name": "Purple"
+				},
+				{
+					"id": "magenta",
+					"name": "Magenta"
+				},
+				{
+					"id": "pink",
+					"name": "Pink"
+				}
+			]
+		},
+		{
 			"id": "parity",
 			"name": "Parity",
 			"packs": [
