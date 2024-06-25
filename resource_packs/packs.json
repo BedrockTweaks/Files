@@ -141,11 +141,6 @@
 					"description": "Recolors Scaffolding to use Bamboo and String colors to reflect its crafting recipe."
 				},
 				{
-					"id": "fencier_fences",
-					"name": "Fencier Fences",
-					"description": "Makes fences and fence gates less harsh by making them use a vertical plank texture rather than horizontal."
-				},
-				{
 					"id": "smoother_warped_planks",
 					"name": "Smoother Warped Planks",
 					"description": "Removes the harsh contrast from Warped Planks."
