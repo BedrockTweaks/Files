@@ -158,8 +158,8 @@
   },
   "brewing_ingredients_panel": {
     "type": "panel",
-    "size": [110, 142],
-    "offset": [145, 28.67],
+    "size": [110, 178],
+    "offset": [145, 46.67],
     "controls": [
       {
         "bg@mob_effect.effect_background": {}
@@ -185,7 +185,7 @@
   "display_slots_ingredients_grid_left": {
     "type": "grid",
     "size": [36, 128],
-    "offset": [-31, -24],
+    "offset": [-31, -42],
     "layer": 4,
     "grid_dimensions": [2, 2],
     "controls": [
@@ -254,6 +254,16 @@
               "turtle_helmet@bt_brewing_icons.turtle_helmet": {
                 "offset": [0, 47]
               }
+            },
+            {
+              "breeze_rod@bt_brewing_icons.breeze_rod": {
+                "offset": [0, 65]
+              }
+            },
+            {
+              "stone@bt_brewing_icons.stone": {
+                "offset": [0, 83]
+              }
             }
           ]
         }
@@ -297,6 +307,16 @@
               "slowness_resistance@bt_brewing_icons.slowness_resistance": {
                 "offset": [0, 47]
               }
+            },
+            {
+              "wind_charged_effect@bt_brewing_icons.wind_charged_effect": {
+                "offset": [0, 65]
+              }
+            },
+            {
+              "infested_effect@bt_brewing_icons.infested_effect": {
+                "offset": [0, 83]
+              }
             }
           ]
         }
@@ -306,7 +326,7 @@
   "display_slots_ingredients_grid_right": {
     "type": "grid",
     "size": [54, 128],
-    "offset": [22, -24],
+    "offset": [22, -42],
     "grid_dimensions": [3, 2],
     "controls": [
       {
@@ -387,6 +407,16 @@
               "spider_eye_fermented@bt_brewing_icons.spider_eye_fermented": {
                 "offset": [0, 47]
               }
+            },
+            {
+              "cobweb@bt_brewing_icons.cobweb": {
+                "offset": [0, 65]
+              }
+            },
+            {
+              "slime_block@bt_brewing_icons.slime_block": {
+                "offset": [0, 83]
+              }
             }
           ]
         }
@@ -430,6 +460,16 @@
               "weakness_effect@bt_brewing_icons.weakness_effect": {
                 "offset": [0, 47]
               }
+            },
+            {
+              "weaving_effect@bt_brewing_icons.weaving_effect": {
+                "offset": [0, 65]
+              }
+            },
+            {
+              "oozing_effect@bt_brewing_icons.oozing_effect": {
+                "offset": [0, 83]
+              }
             }
           ]
         }
@@ -442,7 +482,7 @@
             {
               "multi_item_cell_effects@bt_brewing_icons.multi_item_cell": {
                 "$background_size": [18, 90],
-                "offset": [0, -7]
+                "offset": [0, -25]
               }
             },
             {
