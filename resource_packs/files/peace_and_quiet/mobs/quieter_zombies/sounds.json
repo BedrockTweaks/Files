@@ -1,0 +1,75 @@
+{
+    "entity_sounds": {
+        "entities": {
+            "drowned": {
+                "events": {
+                    "ambient": "mob.drowned.say",
+                    "ambient.in.water": "mob.drowned.say_water",
+                    "death": "mob.drowned.death",
+                    "death.in.water": "mob.drowned.death_water",
+                    "hurt": "mob.drowned.hurt",
+                    "hurt.in.water": "mob.drowned.hurt_water",
+                    "step": "mob.drowned.step"
+                },
+                "pitch": [0.80, 1.20],
+                "volume": 0.05
+            },
+            "husk": {
+                "events": {
+                    "ambient": "mob.husk.ambient",
+                    "death": "mob.husk.death",
+                    "hurt": "mob.husk.hurt",
+                    "step": {
+                        "pitch": 1.0,
+                        "sound": "mob.husk.step",
+                        "volume": 0.0175
+                    }
+                },
+                "pitch": [0.80, 1.20],
+                "volume": 0.05
+            },
+            "zombie": {
+                "events": {
+                    "ambient": "mob.zombie.say",
+                    "death": "mob.zombie.death",
+                    "hurt": "mob.zombie.hurt",
+                    "step": {
+                        "pitch": 1.0,
+                        "sound": "mob.zombie.step",
+                        "volume": 0.0225
+                    }
+                },
+                "pitch": [0.80, 1.20],
+                "volume": 0.05
+            },
+            "zombie_villager": {
+                "events": {
+                    "ambient": "mob.zombie_villager.say",
+                    "death": "mob.zombie_villager.death",
+                    "hurt": "mob.zombie_villager.hurt",
+                    "step": {
+                        "pitch": 1.0,
+                        "sound": "mob.zombie.step",
+                        "volume": 0.0225
+                    }
+                },
+                "pitch": [0.80, 1.20],
+                "volume": 0.05
+            },
+            "zombie_villager_v2": {
+                "events": {
+                    "ambient": "mob.zombie_villager.say",
+                    "death": "mob.zombie_villager.death",
+                    "hurt": "mob.zombie_villager.hurt",
+                    "step": {
+                        "pitch": 1.0,
+                        "sound": "mob.zombie.step",
+                        "volume": 0.0225
+                    }
+                },
+                "pitch": [0.80, 1.20],
+                "volume": 0.05
+            }
+        }
+    }
+}

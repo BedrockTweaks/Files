@@ -1,0 +1,141 @@
+{
+    "entity_sounds": {
+        "entities": {
+            "donkey": {
+                "events": {
+                    "add.chest": {
+                        "pitch": [0.80, 1.20],
+                        "sound": "mob.horse.armor",
+                        "volume": 0.05
+                    },
+                    "ambient": "mob.horse.donkey.idle",
+                    "armor": {
+                        "pitch": 1.0,
+                        "sound": "mob.horse.armor",
+                        "volume": 0.03
+                    },
+                    "breathe": {
+                        "pitch": 1.0,
+                        "sound": "mob.horse.breathe",
+                        "volume": 0.035
+                    },
+                    "death": "mob.horse.donkey.death",
+                    "eat": {
+                        "pitch": [0.80, 1.20],
+                        "sound": "mob.horse.eat",
+                        "volume": [0.025, 0.075]
+                    },
+                    "hurt": "mob.horse.donkey.hit",
+                    "jump": {
+                        "pitch": 1.0,
+                        "sound": "mob.horse.jump",
+                        "volume": 0.02
+                    },
+                    "land": {
+                        "pitch": 1.0,
+                        "sound": "mob.horse.land",
+                        "volume": 0.02
+                    },
+                    "mad": "mob.horse.donkey.angry",
+                    "saddle": {
+                        "pitch": 1.0,
+                        "sound": "mob.horse.leather",
+                        "volume": 0.025
+                    }
+                },
+                "pitch": [0.80, 1.20],
+                "volume": 0.04
+            },
+            "horse": {
+                "events": {
+                    "add.chest": {
+                        "pitch": [0.80, 1.20],
+                        "sound": "mob.horse.armor",
+                        "volume": 0.05
+                    },
+                    "ambient": "mob.horse.idle",
+                    "armor": {
+                        "pitch": 1.0,
+                        "sound": "mob.horse.armor",
+                        "volume": 0.03
+                    },
+                    "breathe": {
+                        "pitch": 1.0,
+                        "sound": "mob.horse.breathe",
+                        "volume": 0.035
+                    },
+                    "death": "mob.horse.death",
+                    "eat": {
+                        "pitch": [0.80, 1.20],
+                        "sound": "mob.horse.eat",
+                        "volume": [0.025, 0.075]
+                    },
+                    "hurt": "mob.horse.hit",
+                    "jump": {
+                        "pitch": 1.0,
+                        "sound": "mob.horse.jump",
+                        "volume": 0.02
+                    },
+                    "land": {
+                        "pitch": 1.0,
+                        "sound": "mob.horse.land",
+                        "volume": 0.02
+                    },
+                    "mad": "mob.horse.angry",
+                    "saddle": {
+                        "pitch": 1.0,
+                        "sound": "mob.horse.leather",
+                        "volume": 0.03
+                    }
+                },
+                "pitch": [0.80, 1.20],
+                "volume": 0.04
+            },
+			"mule": {
+                "events": {
+                    "add.chest": {
+                        "pitch": [0.80, 1.20],
+                        "sound": "mob.horse.armor",
+                        "volume": 0.05
+                    },
+                    "ambient": "mob.horse.donkey.idle",
+                    "armor": {
+                        "pitch": 1.0,
+                        "sound": "mob.horse.armor",
+                        "volume": 0.03
+                    },
+                    "breathe": {
+                        "pitch": 1.0,
+                        "sound": "mob.horse.breathe",
+                        "volume": 0.035
+                    },
+                    "death": "mob.horse.donkey.death",
+                    "eat": {
+                        "pitch": [0.80, 1.20],
+                        "sound": "mob.horse.eat",
+                        "volume": [0.025, 0.075]
+                    },
+                    "hurt": "mob.horse.donkey.hit",
+                    "jump": {
+                        "pitch": 1.0,
+                        "sound": "mob.horse.jump",
+                        "volume": 0.02
+                    },
+                    "land": {
+                        "pitch": 1.0,
+                        "sound": "mob.horse.land",
+                        "volume": 0.02
+                    },
+                    "mad": "mob.horse.donkey.angry",
+                    "saddle": {
+                        "pitch": 1.0,
+                        "sound": "mob.horse.leather",
+                        "volume": 0.03
+                    }
+                },
+                "pitch": [0.80, 1.20],
+                "volume": 0.04
+            }
+        }
+    }
+}

@@ -1,0 +1,48 @@
+{
+    "entity_sounds": {
+        "entities": {
+            "elder_guardian": {
+                "events": {
+                    "ambient": "mob.guardian.land_idle",
+                    "ambient.in.water": "mob.elderguardian.idle",
+                    "death": "mob.elderguardian.death",
+                    "death.in.water": "mob.elderguardian.death",
+                    "flop": "mob.guardian.flop",
+                    "guardian.flop": {
+                        "pitch": 1.0,
+                        "sound": "mob.guardian.flop",
+                        "volume": 0.05
+                    },
+                    "hurt": "mob.guardian.land_hit",
+                    "hurt.in.water": "mob.elderguardian.hit"
+                },
+                "pitch": [
+                    0.8,
+                    1.2
+                ],
+                "volume": 0.05
+            },
+            "guardian": {
+                "events": {
+                    "ambient": "mob.guardian.land_idle",
+                    "ambient.in.water": "mob.guardian.ambient",
+                    "death": "mob.guardian.land_death",
+                    "death.in.water": "mob.guardian.death",
+                    "flop": "mob.guardian.flop",
+                    "guardian.flop": {
+                        "pitch": 1.0,
+                        "sound": "mob.guardian.flop",
+                        "volume": 0.05
+                    },
+                    "hurt": "mob.guardian.land_hit",
+                    "hurt.in.water": "mob.guardian.hit"
+                },
+                "pitch": [
+                    0.8,
+                    1.2
+                ],
+                "volume": 0.05
+            }
+        }
+    }
+}

@@ -1,0 +1,23 @@
+{
+    "entity_sounds": {
+        "entities": {
+            "axolotl": {
+                "events": {
+                    "ambient": "mob.axolotl.idle",
+                    "ambient.in.water": "mob.axolotl.idle_water",
+                    "attack": "mob.axolotl.attack",
+                    "death": "mob.axolotl.death",
+                    "eat": "",
+                    "hurt": "mob.axolotl.hurt",
+                    "splash": "mob.axolotl.splash",
+                    "swim": "mob.axolotl.swim"
+                },
+                "pitch": [
+                    0.8,
+                    1.2
+                ],
+                "volume": 0.05
+            }
+        }
+    }
+}

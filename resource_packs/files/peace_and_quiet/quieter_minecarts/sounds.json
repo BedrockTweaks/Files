@@ -1,0 +1,12 @@
+{
+    "entity_sounds": {
+        "entities": {
+            "minecart": {
+                "events": {
+                    "step": ""
+                }
+				"volume": 0.05
+            }
+		}
+    }
+}

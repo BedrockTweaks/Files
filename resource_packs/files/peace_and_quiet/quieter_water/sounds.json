@@ -1,0 +1,17 @@
+{
+    "individual_event_sounds": {
+        "events": {
+            "water": {
+                "pitch": [
+                    0.5,
+                    1.5
+                ],
+                "sound": "liquid.water",
+                "volume": [
+                    0.75,
+                    1.0
+                ]
+            }
+        }
+    }
+}

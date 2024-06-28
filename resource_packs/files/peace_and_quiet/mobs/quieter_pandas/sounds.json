@@ -1,0 +1,36 @@
+{
+    "entity_sounds": {
+        "entities": {
+            "panda": {
+                "events": {
+                    "ambient": "mob.panda.idle",
+                    "ambient.aggressive": "mob.panda.idle.aggressive",
+                    "ambient.baby": "mob.panda_baby.idle",
+                    "ambient.worried": "mob.panda.idle.worried",
+                    "attack": "mob.panda.bite",
+                    "cant_breed": "mob.panda.cant_breed",
+                    "death": {
+                        "sound": "mob.panda.death",
+                        "volume": 0.041
+                    },
+                    "eat": "mob.panda.eat",
+                    "hurt": {
+                        "sound": "mob.panda.hurt",
+                        "volume": 0.041
+                    },
+                    "presneeze": "mob.panda.presneeze",
+                    "sneeze": "mob.panda.sneeze",
+                    "step": {
+                        "sound": "mob.panda.step",
+                        "volume": 0.02
+                    }
+                },
+                "pitch": [
+                    0.8,
+                    1.2
+                ],
+                "volume": 0.05
+            }
+        }
+    }
+}

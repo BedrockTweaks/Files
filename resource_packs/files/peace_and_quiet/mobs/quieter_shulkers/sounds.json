@@ -1,0 +1,21 @@
+{
+    "entity_sounds": {
+        "entities": {
+            "shulker": {
+                "events": {
+                    "ambient": "mob.shulker.ambient",
+                    "death": "mob.shulker.death",
+                    "hurt": "mob.shulker.hurt",
+                    "shoot": "mob.shulker.shoot",
+                    "shulker.close": "mob.shulker.close",
+                    "shulker.open": "mob.shulker.open"
+                },
+                "pitch": [
+                    0.8,
+                    1.2
+                ],
+                "volume": 0.05
+            }
+        }
+    }
+}
