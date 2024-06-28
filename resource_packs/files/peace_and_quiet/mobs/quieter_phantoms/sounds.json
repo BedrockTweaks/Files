@@ -1,0 +1,27 @@
+{
+    "entity_sounds": {
+        "entities": {
+            "phantom": {
+                "events": {
+                    "ambient": "mob.phantom.idle",
+                    "attack": "mob.phantom.bite",
+                    "death": "mob.phantom.death",
+                    "flap": "mob.phantom.flap",
+                    "hurt": "mob.phantom.hurt",
+                    "swoop": {
+                        "pitch": [
+                            0.95,
+                            1.05
+                        ],
+                        "sound": "mob.phantom.swoop"
+                    }
+                },
+                "pitch": [
+                    0.8,
+                    1.2
+                ],
+                "volume": 0.5
+            }
+        }
+    }
+}

@@ -1,0 +1,46 @@
+{
+    "entity_sounds": {
+        "entities": {
+            "hoglin": {
+                "events": {
+                    "ambient": "mob.hoglin.ambient",
+                    "angry": "mob.hoglin.angry",
+                    "attack": "mob.hoglin.attack",
+                    "death": "mob.hoglin.death",
+                    "eat": "",
+                    "hurt": "mob.hoglin.hurt",
+                    "retreat": "mob.hoglin.retreat",
+                    "step": {
+                        "pitch": 1.0,
+                        "sound": "mob.hoglin.step",
+                        "volume": 0.05
+                    }
+                },
+                "pitch": [
+                    0.8,
+                    1.2
+                ],
+                "volume": 0.05
+            },
+            "zoglin": {
+                "events": {
+                    "ambient": "mob.zoglin.idle",
+                    "angry": "mob.zoglin.angry",
+                    "attack": "mob.zoglin.attack",
+                    "death": "mob.zoglin.death",
+                    "hurt": "mob.zoglin.hurt",
+                    "step": {
+                        "pitch": 1.0,
+                        "sound": "mob.zoglin.step",
+                        "volume": 0.0075
+                    }
+                },
+                "pitch": [
+                    0.8,
+                    1.2
+                ],
+                "volume": 0.05
+            }
+        }
+    }
+}

@@ -1,0 +1,35 @@
+{
+    "entity_sounds": {
+        "entities": {
+            "wolf": {
+                "events": {
+                    "ambient": "mob.wolf.bark",
+                    "death": "mob.wolf.death",
+                    "eat": "",
+                    "growl": "mob.wolf.growl",
+                    "hurt": "mob.wolf.hurt",
+                    "hurt.reduced": "armor.damage_wolf",
+                    "pant": "mob.wolf.panting",
+                    "shake": {
+                        "pitch": [
+                            0.8,
+                            1.2
+                        ],
+                        "sound": "mob.wolf.shake"
+                    },
+                    "step": {
+                        "pitch": 1.0,
+                        "sound": "mob.wolf.step",
+                        "volume": 0.0325
+                    },
+                    "whine": "mob.wolf.whine"
+                },
+                "pitch": [
+                    0.8,
+                    1.2
+                ],
+                "volume": 0.05
+            }
+        }
+    }
+}

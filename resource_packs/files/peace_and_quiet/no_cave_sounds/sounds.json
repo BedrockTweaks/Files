@@ -1,0 +1,12 @@
+{
+    "individual_event_sounds": {
+        "ambient.cave": {
+            "pitch": [
+                0.8,
+                1.0
+            ],
+            "sound": "ambient.cave",
+            "volume": 0.035
+        }
+    }
+}
