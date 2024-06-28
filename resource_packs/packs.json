@@ -458,42 +458,43 @@
 				{
 					"id": "quieter_rain",
 					"name": "Quieter Rain",
-					"description": "Makes rain quieter."
+					"description": "Decreases rain sounds by 95%."
 				},
 				{
 					"id": "quieter_thunder",
 					"name": "Quieter Thunder",
-					"description": "Makes thunder quieter."
+					"description": "Decreases thunder sounds by 95%."
 				},
 				{
 					"id": "quieter_explosions",
 					"name": "Quieter Explosions",
-					"description": "Makes explosion sounds quieter."
+					"description": "Decreases explosion sounds by 95%."
 				},
 				{
 					"id": "quieter_dispensers_and_droppers",
 					"name": "Quieter Dispensers and Droppers",
-					"description": "Makes Dispensers and Droppers quieter. Also affects menu clicks."
+					"description": "Decreases Dispenser and Dropper sounds by 95%.",
+					"version": " Also affects menu clicks."
 				},
 				{
 					"id": "quieter_minecarts",
 					"name": "Quieter Minecarts",
-					"description": "Makes Minecarts quieter."
+					"description": "Decreases Minecart sounds by 95%"
 				},
 				{
 					"id": "quieter_fire",
 					"name": "Quieter Fire",
-					"description": "Makes Fire quieter."
+					"description": "Decrease Fire sounds by 95%"
 				},
 				{
 					"id": "quieter_nether_portals",
 					"name": "Quieter Nether Portals",
-					"description": "Makes Nether Portals quieter."
+					"description": "Decreases Nether Portal sounds by 95%"
 				},
 				{
 					"id": "quieter_water",
 					"name": "Quieter Water",
-					"description": "Makes Flowing Water quieter."
+					"description": "Decreases Water and dripstone water drop sounds by 95%"
 				},
 				{
 					"id": "quieter_consumables",
@@ -513,7 +514,7 @@
 				{
 					"id": "quieter_pistons",
 					"name": "Quieter Pistons",
-					"description": "Makes Pistons quieter."
+					"description": "Decreases Piston sounds by 95%."
 				},
 				{
 					"id": "no_cave_sounds",
@@ -529,269 +530,269 @@
 				{
 					"id": "quieter_allay",
 					"name": "Quieter Allay",
-					"description": "Decreases Allay sounds by 75%."
+					"description": "Decreases Allay sounds by 95%."
 				},
 				{
 					"id": "quieter_armadillos",
 					"name": "Quieter Armadillos",
-					"description": "Decreases Armadillo sounds by 75%."
+					"description": "Decreases Armadillo sounds by 95%."
 				},
 				{
 					"id": "quieter_axolotls",
 					"name": "Quieter Axolotls",
-					"description": "Decreases Axolotl sounds by 75%."
+					"description": "Decreases Axolotl sounds by 95%."
 				},
 				{
 					"id": "quieter_bats",
 					"name": "Quieter Bats",
-					"description": "Decreases Bat sounds by 75%."
+					"description": "Decreases Bat sounds by 95%."
 				},
 				{
 					"id": "quieter_bees",
 					"name": "Quieter Bees",
-					"description": "Decreases Bee sounds by 75%."
+					"description": "Decreases Bee sounds by 95%."
 				},
 				{
 					"id": "quieter_blazes",
 					"name": "Quieter Blazes",
-					"description": "Decreases Blaze sounds by 75%.",
+					"description": "Decreases Blaze sounds by 95%.",
 					"version": "The fire crackling sounds that Blazes emit are not affected by this pack. You will need to install Quieter Fire to make those sounds quieter as well."
 				},
 				{
 					"id": "quieter_breezes",
 					"name": "Quieter Breezes",
-					"description": "Decreases Breeze sounds by 75%."
+					"description": "Decreases Breeze sounds by 95%."
 				},
 				{
 					"id": "quieter_camels",
 					"name": "Quieter Camels",
-					"description": "Decreases Camel sounds by 75%."
+					"description": "Decreases Camel sounds by 95%."
 				},
 				{
 					"id": "quieter_cats",
 					"name": "Quieter Cats",
-					"description": "Decreases Cat and Ocelot sounds by 75%."
+					"description": "Decreases Cat and Ocelot sounds by 95%."
 				},
 				{
 					"id": "quieter_chickens",
 					"name": "Quieter Chickens",
-					"description": "Decreases Chicken sounds by 75%."
+					"description": "Decreases Chicken sounds by 95%."
 				},
 				{
 					"id": "quieter_cows",
 					"name": "Quieter Cows",
-					"description": "Decreases Cow and Mooshroom sounds by 75%."
+					"description": "Decreases Cow and Mooshroom sounds by 95%."
 				},
 				{
 					"id": "quieter_creepers",
 					"name": "Quieter Creepers",
-					"description": "Decreases Creeper sounds by 75%."
+					"description": "Decreases Creeper sounds by 95%."
 				},
 				{
 					"id": "quieter_dolphins",
 					"name": "Quieter Dolphins",
-					"description": "Decreases Dolphin sounds by 75%."
+					"description": "Decreases Dolphin sounds by 95%."
 				},
 				{
 					"id": "quieter_ender_dragon",
 					"name": "Quieter Ender Dragon",
-					"description": "Decreases Ender Dragon sounds by 75%."
+					"description": "Decreases Ender Dragon sounds by 95%."
 				},
 				{
 					"id": "quieter_endermen",
 					"name": "Quieter Endermen",
-					"description": "Decreases Enderman sounds by 75%."
+					"description": "Decreases Enderman sounds by 95%."
 				},
 				{
 					"id": "quieter_fish",
 					"name": "Quieter Fish",
-					"description": "Decreases Cod, Salmon, Tropical Fish and Pufferfish sounds by 75%."
+					"description": "Decreases Cod, Salmon, Tropical Fish and Pufferfish sounds by 95%."
 				},
 				{
 					"id": "quieter_foxes",
 					"name": "Quieter Foxes",
-					"description": "Decreases Fox sounds by 75%."
+					"description": "Decreases Fox sounds by 95%."
 				},
 				{
 					"id": "quieter_frogs",
 					"name": "Quieter Frogs",
-					"description": "Decreases Frog sounds by 75%."
+					"description": "Decreases Frog sounds by 95%."
 				},
 				{
 					"id": "quieter_ghasts",
 					"name": "Quieter Ghasts",
-					"description": "Decreases Ghast sounds by 75%."
+					"description": "Decreases Ghast sounds by 95%."
 				},
 				{
 					"id": "quieter_goats",
 					"name": "Quieter Goats",
-					"description": "Decreases Goat sounds by 75%."
+					"description": "Decreases Goat sounds by 95%."
 				},
 				{
 					"id": "quieter_guardians",
 					"name": "Quieter Guardians",
-					"description": "Decreases Guardian and Elder Guardian sounds by 75%."
+					"description": "Decreases Guardian and Elder Guardian sounds by 95%."
 				},
 				{
 					"id": "quieter_hoglins",
 					"name": "Quieter Hoglins",
-					"description": "Decreases Hoglin and Zoglin sounds by 75%."
+					"description": "Decreases Hoglin and Zoglin sounds by 95%."
 				},
 				{
 					"id": "quieter_horses",
 					"name": "Quieter Horses",
-					"description": "Decreases Horse, Donkey and Mule sounds by 75%."
+					"description": "Decreases Horse, Donkey and Mule sounds by 95%."
 				},
 				{
 					"id": "quieter_illagers",
 					"name": "Quieter Illagers",
-					"description": "Decreases Pillager, Evoker and Vindicator sounds by 75%."
+					"description": "Decreases Pillager, Evoker and Vindicator sounds by 95%."
 				},
 				{
 					"id": "quieter_iron_golems",
 					"name": "Quieter Iron Golems",
-					"description": "Decreases Iron Golem sounds by 75%."
+					"description": "Decreases Iron Golem sounds by 95%."
 				},
 				{
 					"id": "quieter_llamas",
 					"name": "Quieter Llamas",
-					"description": "Decreases Llamas and Trader Llamas sounds by 75%."
+					"description": "Decreases Llamas and Trader Llamas sounds by 95%."
 				},
 				{
 					"id": "quieter_pandas",
 					"name": "Quieter Pandas",
-					"description": "Decreases Panda sounds by 75%."
+					"description": "Decreases Panda sounds by 95%."
 				},
 				{
 					"id": "quieter_parrots",
 					"name": "Quieter Parrots",
-					"description": "Decreases Parrot sounds by 75%."
+					"description": "Decreases Parrot sounds by 95%."
 				},
 				{
 					"id": "quieter_phantoms",
 					"name": "Quieter Phantoms",
-					"description": "Decreases Phantom sounds by 75%."
+					"description": "Decreases Phantom sounds by 95%."
 				},
 				{
 					"id": "quieter_pigs",
 					"name": "Quieter Pigs",
-					"description": "Decreases Pig sounds by 75%."
+					"description": "Decreases Pig sounds by 95%."
 				},
 				{
 					"id": "quieter_piglins",
 					"name": "Quieter Piglins",
-					"description": "Decreases Piglin, Piglin Brute and Zombified Piglin sounds by 75%."
+					"description": "Decreases Piglin, Piglin Brute and Zombified Piglin sounds by 95%."
 				},
 				{
 					"id": "quieter_polar_bears",
 					"name": "Quieter Polar Bears",
-					"description": "Decreases Polar Bear sounds by 75%."
+					"description": "Decreases Polar Bear sounds by 95%."
 				},
 				{
 					"id": "quieter_rabbits",
 					"name": "Quieter Rabbits",
-					"description": "Decreases Rabbit sounds by 75%."
+					"description": "Decreases Rabbit sounds by 95%."
 				},
 				{
 					"id": "quieter_ravagers",
 					"name": "Quieter Ravagers",
-					"description": "Decreases Ravager sounds by 75%."
+					"description": "Decreases Ravager sounds by 95%."
 				},
 				{
 					"id": "quieter_sheep",
 					"name": "Quieter Sheep",
-					"description": "Decreases Sheep sounds by 75%."
+					"description": "Decreases Sheep sounds by 95%."
 				},
 				{
 					"id": "quieter_shulkers",
 					"name": "Quieter Shulkers",
-					"description": "Decreases Shulker and Shulker Box sounds by 75%."
+					"description": "Decreases Shulker and Shulker Box sounds by 95%."
 				},
 				{
 					"id": "quieter_silverfish",
 					"name": "Quieter Silverfish",
-					"description": "Decreases Silverfish and Endermite sounds by 75%."
+					"description": "Decreases Silverfish and Endermite sounds by 95%."
 				},
 				{
 					"id": "quieter_skeletons",
 					"name": "Quieter Skeletons",
-					"description": "Decreases Skeleton, Stray, Bogged and Wither Skeleton sounds by 75%."
+					"description": "Decreases Skeleton, Stray, Bogged and Wither Skeleton sounds by 95%."
 				},
 				{
 					"id": "quieter_slimes",
 					"name": "Quieter Slimes",
-					"description": "Decreases Slime and Magma Cube sounds by 75%."
+					"description": "Decreases Slime and Magma Cube sounds by 95%."
 				},
 				{
 					"id": "quieter_sniffers",
 					"name": "Quieter Sniffers",
-					"description": "Decreases Sniffer sounds by 75%."
+					"description": "Decreases Sniffer sounds by 95%."
 				},
 				{
 					"id": "quieter_snow_golems",
 					"name": "Quieter Snow Golems",
-					"description": "Decreases Snow Golems sounds by 75%."
+					"description": "Decreases Snow Golems sounds by 95%."
 				},
 				{
 					"id": "quieter_spiders",
 					"name": "Quieter Spiders",
-					"description": "Decreases Spider and Cave Spider sounds by 75%."
+					"description": "Decreases Spider and Cave Spider sounds by 95%."
 				},
 				{
 					"id": "quieter_squids",
 					"name": "Quieter Squids",
-					"description": "Decreases Squid and Glow Squid sounds by 75%."
+					"description": "Decreases Squid and Glow Squid sounds by 95%."
 				},
 				{
 					"id": "quieter_striders",
 					"name": "Quieter Striders",
-					"description": "Decreases Strider sounds by 75%."
+					"description": "Decreases Strider sounds by 95%."
 				},
 				{
 					"id": "quieter_tadpoles",
 					"name": "Quieter Tadpoles",
-					"description": "Decreases Tadpole sounds by 75%."
+					"description": "Decreases Tadpole sounds by 95%."
 				},
 				{
 					"id": "quieter_turtles",
 					"name": "Quieter Turtles",
-					"description": "Decreases Turtle sounds by 75%."
+					"description": "Decreases Turtle sounds by 95%."
 				},
 				{
 					"id": "quieter_vexes",
 					"name": "Quieter Vexes",
-					"description": "Decreases Vex sounds by 75%."
+					"description": "Decreases Vex sounds by 95%."
 				},
 				{
 					"id": "quieter_villagers",
 					"name": "Quieter Villagers",
-					"description": "Decreases Villager and Wandering Trader sounds by 75%."
+					"description": "Decreases Villager and Wandering Trader sounds by 95%."
 				},
 				{
 					"id": "quieter_wardens",
 					"name": "Quieter Wardens",
-					"description": "Decreases Warden sounds by 75%."
+					"description": "Decreases Warden sounds by 95%."
 				},
 				{
 					"id": "quieter_witches",
 					"name": "Quieter Witches",
-					"description": "Decreases Witch sounds by 75%."
+					"description": "Decreases Witch sounds by 95%."
 				},
 				{
 					"id": "quieter_wither",
 					"name": "Quieter Wither",
-					"description": "Decreases Wither sounds by 75%.",
+					"description": "Decreases Wither sounds by 95%.",
 					"version": "Wither Head's explosions are not affected. Install Quieter Explosions to quieten those sounds."
 				},
 				{
 					"id": "quieter_wolves",
 					"name": "Quieter Wolves",
-					"description": "Decreases Wolf sounds by 75%."
+					"description": "Decreases Wolf sounds by 95%."
 				},
 				{
 					"id": "quieter_zombies",
 					"name": "Quieter Zombies",
-					"description": "Decreases Zombie, Zombie Villager, Husk and Drowned sounds by 75%."
+					"description": "Decreases Zombie, Zombie Villager, Husk and Drowned sounds by 95%."
 				}
 			]
 		},
@@ -1591,12 +1592,12 @@
 				{
 					"id": "mangrove_swamp",
 					"name": "Mangrove Swamp",
-					"pack_description": "Replaces the default Minecraft menu panorama with a 360° view of a mangrove swamp from 1.19"
+					"description": "Replaces the default Minecraft menu panorama with a 360° view of a mangrove swamp from 1.19"
 				},
 				{
 					"id": "cherry_grove",
 					"name": "Cherry Grove",
-					"pack_description": "Replaces the default Minecraft menu panorama with a 360° view of a Cherry Grove"
+					"description": "Replaces the default Minecraft menu panorama with a 360° view of a Cherry Grove"
 				},
 				{
 					"id": "the_end",
@@ -1631,17 +1632,17 @@
 				{
 					"id": "acacia_village",
 					"name": "Acacia Village",
-					"pack_description": "Replaces the default Minecraft menu panorama with a 360° view of an Acacia Village"
+					"description": "Replaces the default Minecraft menu panorama with a 360° view of an Acacia Village"
 				},
 				{
 					"id": "halloween_2021",
 					"name": "Halloween 2021",
-					"pack_description": "Replaces the default Minecraft menu panorama with a 360° view of a spooky Halloween town"
+					"description": "Replaces the default Minecraft menu panorama with a 360° view of a spooky Halloween town"
 				},
 				{
 					"id": "halloween_2022",
 					"name": "Halloween 2022",
-					"pack_description": "Replaces the default Minecraft menu panorama with a 360° view of a spooky Halloween town"
+					"description": "Replaces the default Minecraft menu panorama with a 360° view of a spooky Halloween town"
 				},
 				{
 					"id": "tu69_tutorial_world_legacy_console",
