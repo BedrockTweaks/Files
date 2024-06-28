@@ -1,0 +1,32 @@
+{
+    "entity_sounds": {
+        "entities": {
+            "dolphin": {
+                "events": {
+                    "ambient": "mob.dolphin.idle",
+                    "ambient.in.water": "mob.dolphin.idle_water",
+                    "attack": "mob.dolphin.attack",
+                    "breathe": "mob.dolphin.blowhole",
+                    "death": "mob.dolphin.death",
+                    "death.in.water": "mob.dolphin.death",
+                    "eat": {
+                        "pitch": 1.0,
+                        "sound": "mob.dolphin.eat",
+                        "volume": 0.035
+                    },
+                    "hurt": "mob.dolphin.hurt",
+                    "hurt.in.water": "mob.dolphin.hurt",
+                    "jump": {
+                        "pitch": 1.0,
+                        "sound": "mob.dolphin.jump",
+                        "volume": 0.035
+                    },
+                    "splash": "mob.dolphin.splash",
+                    "swim": "mob.dolphin.swim"
+                },
+                "pitch": [0.80, 1.20],
+                "volume": 0.05
+            }
+        }
+    }
+}
