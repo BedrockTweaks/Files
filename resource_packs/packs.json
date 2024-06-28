@@ -456,6 +456,16 @@
 					"description": "Makes rain quieter."
 				},
 				{
+					"id": "quieter_thunder",
+					"name": "Quieter Thunder",
+					"description": "Makes thunder quieter."
+				},
+				{
+					"id": "quieter_explosions",
+					"name": "Quieter Explosions",
+					"description": "Makes explosion sounds quieter."
+				},
+				{
 					"id": "quieter_dispensers_and_droppers",
 					"name": "Quieter Dispensers and Droppers",
 					"description": "Makes Dispensers and Droppers quieter. Also affects menu clicks."
@@ -481,6 +491,21 @@
 					"description": "Makes Flowing Water quieter."
 				},
 				{
+					"id": "quieter_consumables",
+					"name": "Quieter Consumables",
+					"description": "Decreases eating and drinking sounds by 95%."
+				},
+				{
+					"id": "quieter_sculk_sensors",
+					"name": "Quieter Sculk Sensors",
+					"description": "Decreases Sculk Sensor sounds by 95%."
+				},
+				{
+					"id": "quieter_sculk_shriekers",
+					"name": "Quieter Sculk Shriekers",
+					"description": "Makes  Sculk Shrieker sounds by 95%."
+				},
+				{
 					"id": "quieter_pistons",
 					"name": "Quieter Pistons",
 					"description": "Makes Pistons quieter."
@@ -496,6 +521,16 @@
 			"id": "peace_and_quiet/mobs",
 			"name": "Peace and Quiet / Mobs",
 			"packs": [
+				{
+					"id": "quieter_allay",
+					"name": "Quieter Allay",
+					"description": "Decreases Allay sounds by 75%."
+				},
+				{
+					"id": "quieter_armadillos",
+					"name": "Quieter Armadillos",
+					"description": "Decreases Armadillo sounds by 75%."
+				},
 				{
 					"id": "quieter_axolotls",
 					"name": "Quieter Axolotls",
@@ -516,6 +551,16 @@
 					"name": "Quieter Blazes",
 					"description": "Decreases Blaze sounds by 75%.",
 					"version": "The fire crackling sounds that Blazes emit are not affected by this pack. You will need to install Quieter Fire to make those sounds quieter as well."
+				},
+				{
+					"id": "quieter_breezes",
+					"name": "Quieter Breezes",
+					"description": "Decreases Breeze sounds by 75%."
+				},
+				{
+					"id": "quieter_camels",
+					"name": "Quieter Camels",
+					"description": "Decreases Camel sounds by 75%."
 				},
 				{
 					"id": "quieter_cats",
@@ -543,6 +588,11 @@
 					"description": "Decreases Dolphin sounds by 75%."
 				},
 				{
+					"id": "quieter_ender_dragon",
+					"name": "Quieter Ender Dragon",
+					"description": "Decreases Ender Dragon sounds by 75%."
+				},
+				{
 					"id": "quieter_endermen",
 					"name": "Quieter Endermen",
 					"description": "Decreases Enderman sounds by 75%."
@@ -556,6 +606,11 @@
 					"id": "quieter_foxes",
 					"name": "Quieter Foxes",
 					"description": "Decreases Fox sounds by 75%."
+				},
+				{
+					"id": "quieter_frogs",
+					"name": "Quieter Frogs",
+					"description": "Decreases Frog sounds by 75%."
 				},
 				{
 					"id": "quieter_ghasts",
@@ -586,6 +641,11 @@
 					"id": "quieter_illagers",
 					"name": "Quieter Illagers",
 					"description": "Decreases Pillager, Evoker and Vindicator sounds by 75%."
+				},
+				{
+					"id": "quieter_iron_golems",
+					"name": "Quieter Iron Golems",
+					"description": "Decreases Iron Golem sounds by 75%."
 				},
 				{
 					"id": "quieter_llamas",
@@ -650,12 +710,22 @@
 				{
 					"id": "quieter_skeletons",
 					"name": "Quieter Skeletons",
-					"description": "Decreases Skeleton, Stray and Wither Skeleton sounds by 75%."
+					"description": "Decreases Skeleton, Stray, Bogged and Wither Skeleton sounds by 75%."
 				},
 				{
 					"id": "quieter_slimes",
 					"name": "Quieter Slimes",
 					"description": "Decreases Slime and Magma Cube sounds by 75%."
+				},
+				{
+					"id": "quieter_sniffers",
+					"name": "Quieter Sniffers",
+					"description": "Decreases Sniffer sounds by 75%."
+				},
+				{
+					"id": "quieter_snow_golems",
+					"name": "Quieter Snow Golems",
+					"description": "Decreases Snow Golems sounds by 75%."
 				},
 				{
 					"id": "quieter_spiders",
@@ -673,6 +743,11 @@
 					"description": "Decreases Strider sounds by 75%."
 				},
 				{
+					"id": "quieter_tadpoles",
+					"name": "Quieter Tadpoles",
+					"description": "Decreases Tadpole sounds by 75%."
+				},
+				{
 					"id": "quieter_turtles",
 					"name": "Quieter Turtles",
 					"description": "Decreases Turtle sounds by 75%."
@@ -688,9 +763,20 @@
 					"description": "Decreases Villager and Wandering Trader sounds by 75%."
 				},
 				{
+					"id": "quieter_wardens",
+					"name": "Quieter Wardens",
+					"description": "Decreases Warden sounds by 75%."
+				},
+				{
 					"id": "quieter_witches",
 					"name": "Quieter Witches",
 					"description": "Decreases Witch sounds by 75%."
+				},
+				{
+					"id": "quieter_wither",
+					"name": "Quieter Wither",
+					"description": "Decreases Wither sounds by 75%.",
+					"version": "Wither Head's explosions are not affected. Install Quieter Explosions to quieten those sounds."
 				},
 				{
 					"id": "quieter_wolves",
