@@ -8,8 +8,8 @@
                 ],
                 "sound": "liquid.water",
                 "volume": [
-                    0.75,
-                    1.0
+                    0.0375,
+                    0.05
                 ]
             },
             "cauldron_drip.water.pointed_dripstone": {
