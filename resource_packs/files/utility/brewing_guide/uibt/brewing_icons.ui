@@ -259,7 +259,7 @@
     "$hover_text": "item.breeze_rod.name"
   },
   "stone@multi_item_panel": {
-    "$item_texture": "textures/blocks/stone",
+    "$item_texture": "textures/ui/brewing_guide/stone",
     "$hover_text": "tile.stone.stone.name"
   },
   "sugar@multi_item_panel": {
@@ -291,7 +291,7 @@
     "$hover_text": "tile.web.name"
   },
   "slime_block@multi_item_panel": {
-    "$item_texture": "textures/blocks/slime",
+    "$item_texture": "textures/ui/brewing_guide/slime_block",
     "$hover_text": "tile.slime.name"
   },
 
