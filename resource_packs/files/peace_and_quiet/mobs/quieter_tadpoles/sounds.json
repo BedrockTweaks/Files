@@ -1,0 +1,22 @@
+{
+  "entity_sounds": {
+    "entities": {
+      "tadpole": {
+        "events": {
+          "death": "mob.tadpole.death",
+          "flop": {
+            "pitch": 0.05,
+            "sound": "mob.fish.flop",
+            "volume": 0.05
+          },
+          "hurt": "mob.tadpole.hurt"
+        },
+        "pitch": [
+          0.8,
+          1.2
+        ],
+        "volume": 0.05
+      }
+    }
+  }
+}
