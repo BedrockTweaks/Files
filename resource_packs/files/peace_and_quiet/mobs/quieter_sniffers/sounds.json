@@ -1,0 +1,21 @@
+{
+  "entity_sounds": {
+    "entities": {
+      "sniffer": {
+        "events": {
+          "ambient": "mob.sniffer.idle",
+          "death": "mob.sniffer.death",
+          "eat": "mob.sniffer.eat",
+          "hurt": "mob.sniffer.hurt",
+          "plop": "mob.sniffer.plop",
+          "step": "mob.sniffer.step"
+        },
+        "pitch": [
+          0.8,
+          1.2
+        ],
+        "volume": 0.05
+      }
+    }
+  }
+}

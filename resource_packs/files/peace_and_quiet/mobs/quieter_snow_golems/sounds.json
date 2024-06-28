@@ -1,0 +1,36 @@
+{
+  "entity_sounds": {
+    "entities": {
+      "snow_golem": {
+        "events": {
+          "death": {
+            "pitch": [
+              0.8,
+              1.2
+            ],
+            "sound": "mob.snowgolem.death"
+          },
+          "hurt": {
+            "pitch": [
+              0.8,
+              1.2
+            ],
+            "sound": "mob.snowgolem.hurt"
+          },
+          "shoot": {
+            "pitch": [
+              0.33,
+              0.5
+            ],
+            "sound": "mob.snowgolem.shoot"
+          }
+        },
+        "pitch": [
+          0.8,
+          1.2
+        ],
+        "volume": 0.05
+      }
+    }
+  }
+}

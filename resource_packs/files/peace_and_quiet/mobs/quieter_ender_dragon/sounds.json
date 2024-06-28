@@ -1,0 +1,19 @@
+{
+    "entity_sounds": {
+        "entities": {
+            "ender_dragon": {
+                "events": {
+                    "death": "mob.enderdragon.death",
+                    "flap": "mob.enderdragon.flap",
+                    "hurt": "mob.enderdragon.hit",
+                    "mad": "mob.enderdragon.growl"
+                },
+                "pitch": [
+                    0.8,
+                    1.2
+                ],
+                "volume": 4.0
+            }
+        }
+    }
+}
