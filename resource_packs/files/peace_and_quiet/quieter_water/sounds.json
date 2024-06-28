@@ -11,6 +11,14 @@
                     0.75,
                     1.0
                 ]
+            },
+            "cauldron_drip.water.pointed_dripstone": {
+                "pitch": [
+                    0.9,
+                    1.0
+                ],
+                "sound": "cauldron_drip.water.pointed_dripstone",
+                "volume": 0.1
             }
         }
     }

@@ -1,0 +1,60 @@
+{
+    "entity_sounds": {
+        "entities": {
+			"breeze": {
+                "events": {
+                    "ambient": {
+                        "pitch": [0.70, 1.10],
+                        "sound": "mob.breeze.idle_ground",
+                        "volume": [0.04, 0.05]
+                    },
+                    "ambient.in.air": {
+                        "pitch": 1.0,
+                        "sound": "mob.breeze.idle_air",
+                        "volume": 0.05
+                    },
+                    "charge": {
+                        "pitch": 1.0,
+                        "sound": "mob.breeze.charge",
+                        "volume": 0.05
+                    },
+                    "death": {
+                        "pitch": 1.0,
+                        "sound": "mob.breeze.death",
+                        "volume": 0.05
+                    },
+                    "hurt": {
+                        "pitch": 1.0,
+                        "sound": "mob.breeze.hurt",
+                        "volume": 0.05
+                    },
+                    "jump": {
+                        "pitch": 1.0,
+                        "sound": "mob.breeze.jump",
+                        "volume": 0.05
+                    },
+                    "land": {
+                        "pitch": 1.0,
+                        "sound": "mob.breeze.land",
+                        "volume": 0.05
+                    },
+                    "reflect": {
+                        "pitch": 1.0,
+                        "sound": "mob.breeze.deflect",
+                        "volume": 0.05
+                    },
+                    "shoot": {
+                        "pitch": [1.0, 1.20],
+                        "sound": "mob.breeze.shoot",
+                        "volume": 0.075
+                    },
+                    "step": {
+                        "volume": 0.0
+                    }
+                },
+                "pitch": [0.80, 1.20],
+                "volume": 0.05
+            }
+		}
+    }
+}
