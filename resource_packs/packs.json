@@ -751,6 +751,11 @@
 					"description": "Makes many particles transparent or hollow for easier vision."
 				},
 				{
+					"id":"no_cherry_leaves_particles",
+					"name":"No Cherry Leaves Particles",
+					"description":"Disables the spawning on cherry leaf particles in the cherry woods biome."
+				},
+				{
 					"id": "borderless_glass",
 					"name": "Borderless Glass",
 					"description": "Gets rid of the border on the edges of Glass to make it cleaner and more transparent."
@@ -1512,6 +1517,87 @@
 					"id": "black_slime",
 					"name": "Black Slime",
 					"description": "Changes the color of all slime related items, blocks and entities to black."
+				}
+			]
+		},
+		{
+			"id": "world_of_color/elytra",
+			"name": "World of Color / Elytra",
+			"packs": [
+				{
+					"id": "white",
+					"name": "White",
+					"description": ""
+				},
+				{
+					"id": "gray",
+					"name": "Gray",
+					"description": ""
+				},
+				{
+					"id": "black",
+					"name": "Black",
+					"description": ""
+				},
+				{
+					"id": "brown",
+					"name": "Brown",
+					"description": ""
+				},
+				{
+					"id": "red",
+					"name": "Red",
+					"description": ""
+				},
+				{
+					"id": "orange",
+					"name": "Orange",
+					"description": ""
+				},
+				{
+					"id": "yellow",
+					"name": "Yellow",
+					"description": ""
+				},
+				{
+					"id": "lime",
+					"name": "Lime",
+					"description": ""
+				},
+				{
+					"id": "green",
+					"name": "Green",
+					"description": ""
+				},
+				{
+					"id": "cyan",
+					"name": "Cyan",
+					"description": ""
+				},
+				{
+					"id": "light_blue",
+					"name": "Light Blue",
+					"description": ""
+				},
+				{
+					"id": "blue",
+					"name": "Blue",
+					"description": ""
+				},
+				{
+					"id": "purple",
+					"name": "Purple",
+					"description": ""
+				},
+				{
+					"id": "magenta",
+					"name": "Magenta",
+					"description": ""
+				},
+				{
+					"id": "pink",
+					"name": "Pink",
+					"description": ""
 				}
 			]
 		},
