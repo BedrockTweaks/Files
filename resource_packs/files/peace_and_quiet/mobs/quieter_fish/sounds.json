@@ -1,0 +1,78 @@
+{
+    "entity_sounds": {
+        "entities": {
+            "cod": {
+                "events": {
+                    "flop": {
+                        "pitch": 1.0,
+                        "sound": "mob.fish.flop",
+                        "volume": 0.05
+                    },
+                    "hurt": "mob.fish.hurt",
+                    "hurt.in.water": "mob.fish.hurt",
+                    "step": {
+                        "pitch": 1.0,
+                        "sound": "mob.fish.step",
+                        "volume": 0.0075
+                    }
+                },
+                "pitch": [0.80, 1.20],
+                "volume": 0.05
+            },
+            "salmon": {
+                "events": {
+                    "flop": {
+                        "pitch": 1.0,
+                        "sound": "mob.fish.flop",
+                        "volume": 0.05
+                    },
+                    "hurt": "mob.fish.hurt",
+                    "hurt.in.water": "mob.fish.hurt",
+                    "step": {
+                        "pitch": 1.0,
+                        "sound": "mob.fish.step",
+                        "volume": 0.0075
+                    }
+                },
+                "pitch": [0.80, 1.20],
+                "volume": 0.05
+            },
+            "tropicalfish": {
+                "events": {
+                    "flop": {
+                        "pitch": 1.0,
+                        "sound": "mob.fish.flop",
+                        "volume": 0.05
+                    },
+                    "hurt": "mob.fish.hurt",
+                    "hurt.in.water": "mob.fish.hurt",
+                    "step": {
+                        "pitch": 1.0,
+                        "sound": "mob.fish.step",
+                        "volume": 0.0075
+                    }
+                },
+                "pitch": [0.80, 1.20],
+                "volume": 0.05
+            },
+            "pufferfish": {
+                "events": {
+                    "flop": {
+                        "pitch": 1.0,
+                        "sound": "mob.fish.flop",
+                        "volume": 0.05
+                    },
+                    "hurt": "mob.fish.hurt",
+                    "hurt.in.water": "mob.fish.hurt",
+                    "step": {
+                        "pitch": 1.0,
+                        "sound": "mob.fish.step",
+                        "volume": 0.0075
+                    }
+                },
+                "pitch": [0.80, 1.20],
+                "volume": 0.05
+            }
+        }
+    }
+}

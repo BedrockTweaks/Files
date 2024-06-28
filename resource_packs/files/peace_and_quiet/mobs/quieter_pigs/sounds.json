@@ -1,0 +1,33 @@
+{
+    "entity_sounds": {
+        "entities": {
+            "pig": {
+                "events": {
+                    "ambient": "mob.pig.say",
+                    "boost": {
+                        "pitch": 1.0,
+                        "sound": "mob.pig.boost",
+                        "volume": 0.05
+                    },
+                    "death": "mob.pig.death",
+                    "death.to.zombie": {
+                        "sound": "mob.pig.death",
+                        "volume": 0.1
+                    },
+                    "eat": "",
+                    "hurt": "mob.pig.say",
+                    "step": {
+                        "pitch": 1.0,
+                        "sound": "mob.pig.step",
+                        "volume": 0.01
+                    }
+                },
+                "pitch": [
+                    0.8,
+                    1.2
+                ],
+                "volume": 0.05
+            }
+        }
+    }
+}
