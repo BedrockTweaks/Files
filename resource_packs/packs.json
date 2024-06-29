@@ -1151,6 +1151,11 @@
 			"name": "Retro",
 			"packs": [
 				{
+					"id": "classic_minecraft_logo",
+					"name": "Classic Minecraft Logo",
+					"description": "Brings back the classic pixelated Minecraft logo!"
+				},
+				{
 					"id": "alpha_minecraft_logo",
 					"name": "Alpha Minecraft Logo",
 					"description": "Brings back the old hand-built Cobblestone Minecraft logo from the Alpha days!"
