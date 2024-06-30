@@ -4,7 +4,7 @@
             "minecart": {
                 "events": {
                     "step": ""
-                }
+                },
 				"volume": 0.05
             }
 		}
