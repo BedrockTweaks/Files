@@ -2199,6 +2199,10 @@
 			"filepath": "/blocks.json"
 		},
 		{
+			"filename": "sounds.json",
+			"filepath": "/sounds.json"
+		},
+		{
 			"filename": "trade_2_screen.json",
 			"filepath": "/ui/trade_2_screen.json"
 		},
