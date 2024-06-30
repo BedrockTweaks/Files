@@ -2351,6 +2351,21 @@
 			]
 		},
 		{
+			"id": "extras/ores/pre_1_17_rubies",
+			"combines": [
+				"fun/emeralds_to_rubies",
+				"retro/pre_1_17_ores"
+			]
+		},
+		{
+			"id": "extras/ores/pre_1_17_rubies_ore_borders",
+			"combines": [
+				"utility/ore_borders",
+				"fun/emeralds_to_rubies",
+				"retro/pre_1_17_ores"
+			]
+		},
+		{
 			"id": "extras/ores/rubies_ore_borders",
 			"combines": [
 				"utility/ore_borders",
