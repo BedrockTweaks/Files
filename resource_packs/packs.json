@@ -1065,6 +1065,309 @@
 				}
 			]
 		},
+				{
+			"id": "gui",
+			"name": "GUI",
+			"packs": [
+				{
+					"id": "dark_ui",
+					"name": "Dark UI",
+					"description": "Changes all inventories and UIs to be darker."
+				},
+				{
+					"id": "numbered_hotbar",
+					"name": "Numbered Hotbar",
+					"description": "Adds numbers to the hotbar slots."
+				},
+				{
+					"id": "bedrock_edition_title",
+					"name": "Bedrock Edition Title",
+					"description": "Add a Bedrock Edition Logo to the Minecraft Title."
+				},
+				{
+					"id": "clearer_wither_hearts",
+					"name": "Clearer Wither Hearts",
+					"description": "Makes Hearts more visible when under the 'Wither' effect."
+				},
+				{
+					"id": "rainbow_experience_bar",
+					"name": "Rainbow Experience Bar",
+					"description": "Changes the default green XP bar to a rainbow XP bar."
+				},
+				{
+					"id": "translucent_tooltips",
+					"name": "Translucent Tooltips",
+					"description": "Makes item tooltips translucent."
+				},
+				{
+					"id": "trading_helper",
+					"name": "Trading Helper",
+					"description": "Makes all locked trades visibles and allows to see the locked item names and enchantments."
+				},
+				{
+					"id": "quick_crafting",
+					"name": "Quick Crafting",
+					"description": "Adds a button to stack craft items in the inventory, crafting table, stonecutter, and trade faster with villagers."
+				},
+				{
+					"id": "chat_tweaks",
+					"name": "Chat Tweaks",
+					"description": "Allows mobile users to easily tab and move between previous and next messages sent in chat and command blocks."
+				},
+				{
+					"id": "no_how_to_play",
+					"name": "No How To Play",
+					"description": "Removes the 'How to Play' Button from all screens so you do not accidentally misclick it."
+				}
+			]
+		},
+		{
+			"id": "gui/crosshairs",
+			"name": "GUI / Crosshairs",
+			"packs": [
+				{
+					"id": "no_crosshair",
+					"name": "No Crosshair",
+					"description": "Removes the '+' crosshair"
+				},
+				{
+					"id": "smaller_crosshair",
+					"name": "Smaller Crosshair",
+					"description": "Makes the '+' crosshair smaller."
+				},
+				{
+					"id": "dot_crosshair",
+					"name": "Dot Crosshair",
+					"description": "Changes the '+' crosshair to a dot."
+				},
+				{
+					"id": "plus_dot_crosshair",
+					"name": "Plus Dot Crosshair",
+					"description": "Changes the '+' crosshair to a plus with a dot in the middle."
+				},
+				{
+					"id": "circle_crosshair",
+					"name": "Circle Crosshair",
+					"description": "Changes the '+' crosshair to a circle."
+				},
+				{
+					"id": "circle_dot_crosshair",
+					"name": "Circle Dot Crosshair",
+					"description": "Changes the '+' crosshair to a circle with a dot in the middle."
+				},
+				{
+					"id": "square_crosshair",
+					"name": "Square Crosshair",
+					"description": "Changes the '+' crosshair to a square."
+				},
+				{
+					"id": "square_dot_crosshair",
+					"name": "Square Dot Crosshair",
+					"description": "Changes the '+' crosshair to a square with a dot in the middle."
+				},
+				{
+					"id": "square_plus_crosshair",
+					"name": "Square Plus Crosshair",
+					"description": "Changes the '+' crosshair to a square with a plus in the middle."
+				},
+				{
+					"id": "square_plus_dot_crosshair",
+					"name": "Square Plus Dot Crosshair",
+					"description": "Changes the '+' crosshair to a square with a plus and a dot in the middle."
+				},
+				{
+					"id": "4_angled_crosshair",
+					"name": "4 Angled Crosshair",
+					"description": "Changes the '+' crosshair to 4 lines coming out from the middle."
+				},
+				{
+					"id": "4_angled_dot_crosshair",
+					"name": "4 Angled Dot Crosshair",
+					"description": "Changes the '+' crosshair to a dot with 4 lines coming out from the middle."
+				},
+				{
+					"id": "heart_crosshair",
+					"name": "Heart Crosshair",
+					"description": "Changes the '+' crosshair to a heart."
+				},
+				{
+					"id": "arrow_crosshair",
+					"name": "Arrow Crosshair",
+					"description": "Changes the '+' crosshair to an arrow."
+				}
+			]
+		},
+		{
+			"id": "gui/hunger_bars",
+			"name": "GUI / Hunger Bars",
+			"packs": [
+				{
+					"id": "apple",
+					"name": "Apple",
+					"description": ""
+				},
+				{
+					"id": "golden_apple",
+					"name": "Golden Apple",
+					"description": ""
+				},
+				{
+					"id": "melon",
+					"name": "Melon",
+					"description": ""
+				},
+				{
+					"id": "sweet_berries",
+					"name": "Sweet Berries",
+					"description": ""
+				},
+				{
+					"id": "glow_berries",
+					"name": "Glow Berries",
+					"description": ""
+				},
+				{
+					"id": "chorus_fruit",
+					"name": "Chorus Fruit",
+					"description": ""
+				},
+				{
+					"id": "carrot",
+					"name": "Carrot",
+					"description": ""
+				},
+				{
+					"id": "golden_carrot",
+					"name": "Golden Carrot",
+					"description": ""
+				},
+				{
+					"id": "potato",
+					"name": "Potato",
+					"description": ""
+				},
+				{
+					"id": "baked_potato",
+					"name": "Baked Potato",
+					"description": ""
+				},
+				{
+					"id": "poisonous_potato",
+					"name": "Poisonous Potato",
+					"description": ""
+				},
+				{
+					"id": "beetroot",
+					"name": "Beetroot",
+					"description": ""
+				},
+				{
+					"id": "dried_kelp",
+					"name": "Dried Kelp",
+					"description": ""
+				},
+				{
+					"id": "beef",
+					"name": "Beef",
+					"description": ""
+				},
+				{
+					"id": "porkchop",
+					"name": "Porkchop",
+					"description": ""
+				},
+				{
+					"id": "mutton",
+					"name": "Mutton",
+					"description": ""
+				},
+				{
+					"id": "chicken",
+					"name": "Chicken",
+					"description": ""
+				},
+				{
+					"id": "rabbit",
+					"name": "Rabbit",
+					"description": ""
+				},
+				{
+					"id": "cod",
+					"name": "Cod",
+					"description": ""
+				},
+				{
+					"id": "salmon",
+					"name": "Salmon",
+					"description": ""
+				},
+				{
+					"id": "tropical_fish",
+					"name": "Tropical Fish",
+					"description": ""
+				},
+				{
+					"id": "pufferfish",
+					"name": "Pufferfish",
+					"description": ""
+				},
+				{
+					"id": "bread",
+					"name": "Bread",
+					"description": ""
+				},
+				{
+					"id": "cookie",
+					"name": "Cookie",
+					"description": ""
+				},
+				{
+					"id": "cake",
+					"name": "Cake",
+					"description": ""
+				},
+				{
+					"id": "pumpkin_pie",
+					"name": "Pumpkin Pie",
+					"description": ""
+				},
+				{
+					"id": "rotten_flesh",
+					"name": "Rotten Flesh",
+					"description": ""
+				},
+				{
+					"id": "spider_eye",
+					"name": "Spider Eye",
+					"description": ""
+				},
+				{
+					"id": "mushroom_stew",
+					"name": "Mushroom Stew",
+					"description": ""
+				},
+				{
+					"id": "beetroot_soup",
+					"name": "Beetroot Soup",
+					"description": ""
+				},
+				{
+					"id": "rabbit_stew",
+					"name": "Rabbit Stew",
+					"description": ""
+				},
+				{
+					"id": "suspicious_stew",
+					"name": "Suspicious Stew",
+					"description": ""
+				},
+				{
+					"id": "honey",
+					"name": "Honey",
+					"description": ""
+				}
+			]
+		},
 		{
 			"id": "gui/menu_panoramas",
 			"name": "GUI / Menu Panoramas",
