@@ -1066,6 +1066,177 @@
 			]
 		},
 		{
+			"id": "gui/hunger_bars",
+			"name": "GUI / Hunger Bars",
+			"packs": [
+				{
+					"id": "apple",
+					"name": "Apple",
+					"description": ""
+				},
+				{
+					"id": "golden_apple",
+					"name": "Golden Apple",
+					"description": ""
+				},
+				{
+					"id": "melon",
+					"name": "Melon",
+					"description": ""
+				},
+				{
+					"id": "sweet_berries",
+					"name": "Sweet Berries",
+					"description": ""
+				},
+				{
+					"id": "glow_berries",
+					"name": "Glow Berries",
+					"description": ""
+				},
+				{
+					"id": "chorus_fruit",
+					"name": "Chorus Fruit",
+					"description": ""
+				},
+				{
+					"id": "carrot",
+					"name": "Carrot",
+					"description": ""
+				},
+				{
+					"id": "golden_carrot",
+					"name": "Golden Carrot",
+					"description": ""
+				},
+				{
+					"id": "potato",
+					"name": "Potato",
+					"description": ""
+				},
+				{
+					"id": "baked_potato",
+					"name": "Baked Potato",
+					"description": ""
+				},
+				{
+					"id": "poisonous_potato",
+					"name": "Poisonous Potato",
+					"description": ""
+				},
+				{
+					"id": "beetroot",
+					"name": "Beetroot",
+					"description": ""
+				},
+				{
+					"id": "dried_kelp",
+					"name": "Dried Kelp",
+					"description": ""
+				},
+				{
+					"id": "beef",
+					"name": "Beef",
+					"description": ""
+				},
+				{
+					"id": "porkchop",
+					"name": "Porkchop",
+					"description": ""
+				},
+				{
+					"id": "mutton",
+					"name": "Mutton",
+					"description": ""
+				},
+				{
+					"id": "chicken",
+					"name": "Chicken",
+					"description": ""
+				},
+				{
+					"id": "rabbit",
+					"name": "Rabbit",
+					"description": ""
+				},
+				{
+					"id": "cod",
+					"name": "Cod",
+					"description": ""
+				},
+				{
+					"id": "salmon",
+					"name": "Salmon",
+					"description": ""
+				},
+				{
+					"id": "tropical_fish",
+					"name": "Tropical Fish",
+					"description": ""
+				},
+				{
+					"id": "pufferfish",
+					"name": "Pufferfish",
+					"description": ""
+				},
+				{
+					"id": "bread",
+					"name": "Bread",
+					"description": ""
+				},
+				{
+					"id": "cookie",
+					"name": "Cookie",
+					"description": ""
+				},
+				{
+					"id": "cake",
+					"name": "Cake",
+					"description": ""
+				},
+				{
+					"id": "pumpkin_pie",
+					"name": "Pumpkin Pie",
+					"description": ""
+				},
+				{
+					"id": "rotten_flesh",
+					"name": "Rotten Flesh",
+					"description": ""
+				},
+				{
+					"id": "spider_eye",
+					"name": "Spider Eye",
+					"description": ""
+				},
+				{
+					"id": "mushroom_stew",
+					"name": "Mushroom Stew",
+					"description": ""
+				},
+				{
+					"id": "beetroot_soup",
+					"name": "Beetroot Soup",
+					"description": ""
+				},
+				{
+					"id": "rabbit_stew",
+					"name": "Rabbit Stew",
+					"description": ""
+				},
+				{
+					"id": "suspicious_stew",
+					"name": "Suspicious Stew",
+					"description": ""
+				},
+				{
+					"id": "honey",
+					"name": "Honey",
+					"description": ""
+				}
+			]
+		},
+		{
 			"id": "gui/menu_panoramas",
 			"name": "GUI / Menu Panoramas",
 			"packs": [
