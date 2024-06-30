@@ -43,6 +43,41 @@ abc55, WavePlayz, r4isen1920, randomityguy, LukasPlaysGames, TheBlueShadow and a
                     <sub><b>DrAv0011</b></sub>
                 </a>
             </td>
+            <td align="center">
+                <a href="https://github.com/NSPC911">
+                    <img src="https://avatars.githubusercontent.com/u/87571998?v=4" width="100;" alt="NSPC911"/>
+                    <br />
+                    <sub><b>NSPC911</b></sub>
+                </a>
+            </td>
+            <td align="center">
+                <a href="https://github.com/SquatchHunter">
+                    <img src="https://avatars.githubusercontent.com/u/33571936?v=4" width="100;" alt="SquatchHunter"/>
+                    <br />
+                    <sub><b>SquatchHunter</b></sub>
+                </a>
+            </td>
+            <td align="center">
+                <a href="https://github.com/yzabeast1">
+                    <img src="https://avatars.githubusercontent.com/u/78424865?v=4" width="100;" alt="yzabeast1"/>
+                    <br />
+                    <sub><b>yzabeast1</b></sub>
+                </a>
+            </td>
+            <td align="center">
+                <a href="https://github.com/Chi-a11y">
+                    <img src="https://avatars.githubusercontent.com/u/172836508?v=4" width="100;" alt="Chi-a11y"/>
+                    <br />
+                    <sub><b>Arachi</b></sub>
+                </a>
+            </td>
+            <td align="center">
+                <a href="https://github.com/PAPISOP">
+                    <img src="https://avatars.githubusercontent.com/u/85175982?v=4" width="100;" alt="PAPISOP"/>
+                    <br />
+                    <sub><b>PAPISOP</b></sub>
+                </a>
+            </td>
 		</tr>
 	<tbody>
 </table>
