@@ -1066,6 +1066,223 @@
 			]
 		},
 		{
+			"id": "gui/hearts",
+			"name": "GUI / Hearts",
+			"packs": [
+				{
+					"id": "white",
+					"name": "White",
+					"description": ""
+				},
+				{
+					"id": "light_gray",
+					"name": "Light Gray",
+					"description": ""
+				},
+				{
+					"id": "gray",
+					"name": "Gray",
+					"description": ""
+				},
+				{
+					"id": "black",
+					"name": "Black",
+					"description": ""
+				},
+				{
+					"id": "brown",
+					"name": "Brown",
+					"description": ""
+				},
+				{
+					"id": "orange",
+					"name": "Orange",
+					"description": ""
+				},
+				{
+					"id": "yellow",
+					"name": "Yellow",
+					"description": ""
+				},
+				{
+					"id": "lime",
+					"name": "Lime",
+					"description": ""
+				},
+				{
+					"id": "green",
+					"name": "Green",
+					"description": ""
+				},
+				{
+					"id": "cyan",
+					"name": "Cyan",
+					"description": ""
+				},
+				{
+					"id": "light_blue",
+					"name": "Light Blue",
+					"description": ""
+				},
+				{
+					"id": "blue",
+					"name": "Blue",
+					"description": ""
+				},
+				{
+					"id": "purple",
+					"name": "Purple",
+					"description": ""
+				},
+				{
+					"id": "magenta",
+					"name": "Magenta",
+					"description": ""
+				},
+				{
+					"id": "pink",
+					"name": "Pink",
+					"description": ""
+				}
+			]
+		},
+		{
+			"id": "gui/hearts/lgbtq+_pride",
+			"name": "GUI / Hearts / LGBTQ+ Pride",
+			"packs": [
+				{
+					"id": "pride",
+					"name": "Pride",
+					"description": ""
+				},
+				{
+					"id": "progress",
+					"name": "Progress",
+					"description": ""
+				},
+				{
+					"id": "lesbian",
+					"name": "Lesbian",
+					"description": ""
+				},
+				{
+					"id": "gay",
+					"name": "Gay",
+					"description": ""
+				},
+				{
+					"id": "bisexual",
+					"name": "Bisexual",
+					"description": ""
+				},
+				{
+					"id": "transgender",
+					"name": "Transgender",
+					"description": ""
+				},
+				{
+					"id": "queer",
+					"name": "Queer",
+					"description": ""
+				},
+				{
+					"id": "intersex",
+					"name": "Intersex",
+					"description": ""
+				},
+				{
+					"id": "asexual",
+					"name": "Asexual",
+					"description": ""
+				},
+				{
+					"id": "aromantic",
+					"name": "Aromantic",
+					"description": ""
+				},
+				{
+					"id": "aromantic_asexual",
+					"name": "Aromantic Asexual",
+					"description": ""
+				},
+				{
+					"id": "aromantic_asexual_v2",
+					"name": "Aromantic Asexual v2",
+					"description": ""
+				},
+				{
+					"id": "pansexual",
+					"name": "Pansexual",
+					"description": ""
+				},
+				{
+					"id": "omnisexual",
+					"name": "Omnisexual",
+					"description": ""
+				},
+				{
+					"id": "non-binary",
+					"name": "Non-binary",
+					"description": ""
+				},
+				{
+					"id": "agender",
+					"name": "Agender",
+					"description": ""
+				},
+				{
+					"id": "genderfluid",
+					"name": "Genderfluid",
+					"description": ""
+				},
+				{
+					"id": "genderqueer",
+					"name": "Genderqueer",
+					"description": ""
+				},
+				{
+					"id": "bigender",
+					"name": "Bigender",
+					"description": ""
+				},
+				{
+					"id": "bigender_v2",
+					"name": "Bigender v2",
+					"description": ""
+				},
+				{
+					"id": "demisexual",
+					"name": "Demisexual",
+					"description": ""
+				},
+				{
+					"id": "demiromantic",
+					"name": "Demiromantic",
+					"description": ""
+				},
+				{
+					"id": "polysexual",
+					"name": "Polysexual",
+					"description": ""
+				},
+				{
+					"id": "polyamorous",
+					"name": "Polyamorous",
+					"description": ""
+				},
+				{
+					"id": "polyamorous_v2",
+					"name": "Polyamorous v2",
+					"description": ""
+				},
+				{
+					"id": "ally",
+					"name": "Ally",
+					"description": ""
+				}
+			]
+		},
+		{
 			"id": "gui/menu_panoramas",
 			"name": "GUI / Menu Panoramas",
 			"packs": [
