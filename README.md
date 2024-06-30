@@ -65,17 +65,17 @@ abc55, WavePlayz, r4isen1920, randomityguy, LukasPlaysGames, TheBlueShadow and a
                 </a>
             </td>
             <td align="center">
-                <a href="https://github.com/Chi-a11y">
-                    <img src="https://avatars.githubusercontent.com/u/172836508?v=4" width="100;" alt="Chi-a11y"/>
-                    <br />
-                    <sub><b>Arachi</b></sub>
-                </a>
-            </td>
-            <td align="center">
                 <a href="https://github.com/PAPISOP">
                     <img src="https://avatars.githubusercontent.com/u/85175982?v=4" width="100;" alt="PAPISOP"/>
                     <br />
                     <sub><b>PAPISOP</b></sub>
+                </a>
+            </td>
+            <td align="center">
+                <a href="https://github.com/Chi-a11y">
+                    <img src="https://avatars.githubusercontent.com/u/172836508?v=4" width="100;" alt="Chi-a11y"/>
+                    <br />
+                    <sub><b>Arachi</b></sub>
                 </a>
             </td>
 		</tr>
