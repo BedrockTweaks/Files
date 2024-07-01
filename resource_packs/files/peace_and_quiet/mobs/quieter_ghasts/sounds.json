@@ -3,20 +3,10 @@
         "entities": {
             "ghast": {
                 "events": {
-                    "ambient": "mob.ghast.moan",
-                    "death": "mob.ghast.death",
-                    "hurt": "mob.ghast.scream",
-                    "scream": "mob.ghast.affectionate_scream",
                     "shoot": {
-                        "sound": "mob.ghast.fireball",
-                        "volume": 0.034999999999999999
-                    },
-                    "warn": "mob.ghast.charge"
+                        "volume": 0.034999999999999996
+                    }
                 },
-                "pitch": [
-                    0.8,
-                    1.2
-                ],
                 "volume": 0.25
             }
         }

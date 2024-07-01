@@ -1,11 +1,6 @@
 {
     "individual_event_sounds": {
         "fire": {
-            "pitch": [
-                0.3,
-                1.0
-            ],
-            "sound": "fire.fire",
             "volume": [
                 0.05,
                 0.1

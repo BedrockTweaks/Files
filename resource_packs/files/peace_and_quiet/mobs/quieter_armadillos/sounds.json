@@ -2,18 +2,6 @@
     "entity_sounds": {
         "entities": {
             "armadillo": {
-                "events": {
-                    "ambient": "mob.armadillo.ambient",
-                    "death": "mob.armadillo.death",
-                    "eat": "mob.armadillo.eat",
-                    "hurt": "mob.armadillo.hurt",
-                    "hurt.reduced": "mob.armadillo.hurt_reduced",
-                    "step": "mob.armadillo.step"
-                },
-                "pitch": [
-                    0.8,
-                    1.2
-                ],
                 "volume": 0.05
             }
         }

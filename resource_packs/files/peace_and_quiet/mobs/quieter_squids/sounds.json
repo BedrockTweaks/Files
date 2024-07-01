@@ -2,27 +2,9 @@
     "entity_sounds": {
         "entities": {
             "glow_squid": {
-                "events": {
-                    "ambient": "mob.glow_squid.ambient",
-                    "death": "mob.glow_squid.death",
-                    "hurt": "mob.glow_squid.hurt"
-                },
-                "pitch": [
-                    0.8,
-                    1.2
-                ],
                 "volume": 0.02
             },
             "squid": {
-                "events": {
-                    "ambient": "mob.squid.ambient",
-                    "death": "mob.squid.death",
-                    "hurt": "mob.squid.hurt"
-                },
-                "pitch": [
-                    0.8,
-                    1.2
-                ],
                 "volume": 0.02
             }
         }
