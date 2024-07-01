@@ -523,8 +523,8 @@
 			"name": "Peace and Quiet / Mobs",
 			"packs": [
 				{
-					"id": "quieter_allay",
-					"name": "Quieter Allay",
+					"id": "quieter_allays",
+					"name": "Quieter Allays",
 					"description": "Decreases Allay sounds by 95%."
 				},
 				{
