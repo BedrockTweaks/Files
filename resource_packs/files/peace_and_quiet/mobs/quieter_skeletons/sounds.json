@@ -1,82 +1,53 @@
 {
     "entity_sounds": {
         "entities": {
-			"bogged": {
+            "bogged": {
                 "events": {
-                    "ambient": "mob.bogged.ambient",
-                    "death": "mob.bogged.death",
-                    "hurt": "mob.bogged.hurt",
                     "step": {
-                        "pitch": 1.0,
-                        "sound": "mob.bogged.step",
                         "volume": 0.05
                     }
                 },
-                "pitch": [0.80, 1.20],
                 "volume": 0.05
             },
             "skeleton": {
                 "events": {
-                    "ambient": "mob.skeleton.say",
-                    "death": "mob.skeleton.death",
                     "hurt": {
-                        "sound": "mob.skeleton.hurt",
                         "volume": 0.035
                     },
                     "step": {
-                        "pitch": 1.0,
-                        "sound": "mob.skeleton.step",
                         "volume": 0.05
                     }
                 },
-                "pitch": [0.80, 1.20],
                 "volume": 0.05
             },
             "wither_skeleton": {
                 "events": {
                     "ambient": {
-                        "pitch": [0.80, 1.20],
-                        "sound": "entity.wither_skeleton.ambient",
                         "volume": 0.05
                     },
                     "death": {
-                        "pitch": [0.80, 1.20],
-                        "sound": "entity.wither_skeleton.death",
                         "volume": 0.05
                     },
                     "hurt": {
-                        "pitch": [0.80, 1.20],
-                        "sound": "entity.wither_skeleton.hurt",
                         "volume": 0.05
                     },
                     "sound": {
-                        "pitch": 1.0,
-                        "sound": "entity.wither_skeleton.step",
                         "volume": 0.0075
                     },
                     "step": {
-                        "pitch": 1,
-                        "sound": "mob.skeleton.step",
                         "volume": 0.05
                     }
                 },
-                "pitch": [0.80, 1.20],
                 "volume": 0.05
             },
             "stray": {
                 "events": {
-                    "ambient": "mob.stray.ambient",
-                    "death": "mob.stray.death",
-                    "hurt": "mob.stray.hurt",
                     "step": {
-                        "pitch": 1.0,
-                        "sound": "mob.stray.step",
                         "volume": 0.05
                     }
                 },
-                "pitch": [0.80, 1.20],
                 "volume": 0.05
             }
-		}
+        }
     }
 }

@@ -3,37 +3,18 @@
     "defaults": {
       "events": {
         "drink": {
-          "pitch": [
-            0.9,
-            1.1
-          ],
-          "sound": "random.drink",
           "volume": 0.0175
         },
         "drink.honey": {
-          "pitch": [
-            0.9,
-            0.05
-          ],
-          "sound": "random.drink_honey",
           "volume": 0.025
         },
         "eat": {
-          "pitch": [
-            0.8,
-            1.2
-          ],
-          "sound": "random.eat",
           "volume": [
             0.025,
             0.055
           ]
         }
       },
-      "pitch": [
-        0.8,
-        1.2
-      ],
       "volume": 0.05
     }
   }

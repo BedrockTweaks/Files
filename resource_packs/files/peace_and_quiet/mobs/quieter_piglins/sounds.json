@@ -3,61 +3,26 @@
         "entities": {
             "piglin": {
                 "events": {
-                    "admire": "mob.piglin.admiring_item",
-                    "ambient": "mob.piglin.ambient",
-                    "angry": "mob.piglin.angry",
-                    "attack": "mob.piglin.attack",
-                    "celebrate": "mob.piglin.celebrate",
-                    "death": "mob.piglin.death",
-                    "hurt": "mob.piglin.hurt",
-                    "jealous": "mob.piglin.jealous",
-                    "retreat": "mob.piglin.retreat",
                     "step": {
-                        "sound": "mob.piglin.step",
                         "volume": 0.0175
                     }
                 },
-                "pitch": [
-                    0.8,
-                    1.2
-                ],
                 "volume": 0.05
             },
             "piglin_brute": {
                 "events": {
-                    "ambient": "mob.piglin_brute.ambient",
-                    "angry": "mob.piglin_brute.angry",
-                    "death": "mob.piglin_brute.death",
-                    "hurt": "mob.piglin_brute.hurt",
                     "step": {
-                        "sound": "mob.piglin_brute.step",
                         "volume": 0.0175
                     }
                 },
-                "pitch": [
-                    0.8,
-                    1.2
-                ],
                 "volume": 0.05
             },
             "zombie_pigman": {
                 "events": {
-                    "ambient": "mob.zombiepig.zpig",
-                    "death": "mob.zombiepig.zpigdeath",
-                    "hurt": "mob.zombiepig.zpighurt",
                     "mad": {
-                        "pitch": [
-                            1.44,
-                            2.16
-                        ],
-                        "sound": "mob.zombiepig.zpigangry",
                         "volume": 0.1
                     }
                 },
-                "pitch": [
-                    0.8,
-                    1.2
-                ],
                 "volume": 0.05
             }
         }

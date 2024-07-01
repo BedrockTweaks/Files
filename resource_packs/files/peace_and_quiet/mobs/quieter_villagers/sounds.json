@@ -2,54 +2,12 @@
     "entity_sounds": {
         "entities": {
             "villager": {
-                "events": {
-                    "ambient": "mob.villager.idle",
-                    "death": "mob.villager.death",
-                    "death.to.zombie": "mob.villager.death",
-                    "haggle": "mob.villager.haggle",
-                    "haggle.no": "mob.villager.no",
-                    "haggle.yes": "mob.villager.yes",
-                    "hurt": "mob.villager.hit"
-                },
-                "pitch": [
-                    0.8,
-                    1.2
-                ],
                 "volume": 0.05
             },
             "villager_v2": {
-                "events": {
-                    "ambient": "mob.villager.idle",
-                    "death": "mob.villager.death",
-                    "death.to.zombie": "mob.villager.death",
-                    "haggle": "mob.villager.haggle",
-                    "haggle.no": "mob.villager.no",
-                    "haggle.yes": "mob.villager.yes",
-                    "hurt": "mob.villager.hit"
-                },
-                "pitch": [
-                    0.8,
-                    1.2
-                ],
                 "volume": 0.05
             },
             "wandering_trader": {
-                "events": {
-                    "ambient": "mob.wanderingtrader.idle",
-                    "death": "mob.wanderingtrader.death",
-                    "disappeared": "mob.wanderingtrader.disappeared",
-                    "drink": "mob.wanderingtrader.drink_potion",
-                    "drink.milk": "mob.wanderingtrader.drink_milk",
-                    "haggle": "mob.wanderingtrader.haggle",
-                    "haggle.no": "mob.wanderingtrader.no",
-                    "haggle.yes": "mob.wanderingtrader.yes",
-                    "hurt": "mob.wanderingtrader.hurt",
-                    "reappeared": "mob.wanderingtrader.reappeared"
-                },
-                "pitch": [
-                    0.8,
-                    1.2
-                ],
                 "volume": 0.05
             }
         }

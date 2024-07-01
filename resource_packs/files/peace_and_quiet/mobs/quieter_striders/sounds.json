@@ -3,27 +3,13 @@
         "entities": {
             "strider": {
                 "events": {
-                    "ambient": "mob.strider.idle",
-                    "death": "mob.strider.death",
-                    "eat": "mob.strider.eat",
-                    "hurt": "mob.strider.hurt",
-                    "panic": "mob.strider.panic",
                     "step": {
-                        "pitch": 1.0,
-                        "sound": "mob.strider.step",
                         "volume": 0.0125
                     },
                     "step_lava": {
-                        "pitch": 1.0,
-                        "sound": "mob.strider.step_lava",
                         "volume": 0.01
-                    },
-                    "tempt": "mob.strider.tempt"
+                    }
                 },
-                "pitch": [
-                    0.8,
-                    1.2
-                ],
                 "volume": 0.05
             }
         }

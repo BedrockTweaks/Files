@@ -1,105 +1,52 @@
 {
-  "block_sounds": {
-    "sculk_sensor": {
-      "events": {
-        "break": {
-          "pitch": [
-            0.8,
-            1
-          ],
-          "sound": "break.sculk_sensor",
-          "volume": 0.05
-        },
-        "default": "",
-        "hit": {
-          "pitch": 0.5,
-          "sound": "hit.sculk_sensor",
-          "volume": 0.0175
-        },
-        "item.use.on": {
-          "pitch": 0.8,
-          "sound": "use.sculk_sensor"
-        },
-        "place": {
-          "pitch": [
-            0.8,
-            1
-          ],
-          "sound": "place.sculk_sensor",
-          "volume": 0.04
-        },
-        "power.off": {
-          "pitch": 0.5,
-          "sound": "random.click"
-        },
-        "power.on": {
-          "pitch": 0.6,
-          "sound": "random.click"
-        }
-      },
-      "pitch": 1,
-      "volume": 0.05
-    }
-  },
-  "individual_event_sounds": {
-    "events": {
-      "block.sculk_sensor.clicking": {
-        "pitch": 0.73,
-        "sound": "clicking.sculk_sensor"
-      },
-      "block.sculk_sensor.clicking_stop": {
-        "pitch": 0.62,
-        "sound": "clicking_stop.sculk_sensor"
-      },
-      "block.sculk_sensor.place": {
-        "pitch": 1,
-        "sound": "place.sculk_sensor",
-        "volume": 0.05
-      },
-      "power.off.sculk_sensor": {
-        "pitch": [
-          0.8,
-          1.2
-        ],
-        "sound": "power.off.sculk_sensor",
-        "volume": 0.365
-      },
-      "power.on.sculk_sensor": {
-        "pitch": [
-          0.8,
-          1.2
-        ],
-        "sound": "power.on.sculk_sensor",
-        "volume": 0.365
-      }
-    }
-  },
-  "interactive_sounds": {
     "block_sounds": {
-      "sculk_sensor": {
+        "sculk_sensor": {
+            "events": {
+                "break": {
+                    "volume": 0.05
+                },
+                "hit": {
+                    "volume": 0.0175
+                },
+                "place": {
+                    "volume": 0.04
+                }
+            },
+            "volume": 0.05
+        }
+    },
+    "individual_event_sounds": {
         "events": {
-          "default": "",
-          "fall": {
-            "sound": "fall.sculk_sensor",
-            "sounds": "fall.sculk_sensor",
-            "volume": 0.4
-          },
-          "jump": {
-            "sound": "jump.sculk_sensor",
-            "volume": 0.12
-          },
-          "land": {
-            "sound": "land.sculk_sensor",
-            "volume": 0.14
-          },
-          "step": {
-            "sound": "step.sculk_sensor",
-            "volume": 0.17
-          }
-        },
-        "pitch": 1,
-        "volume": 0.05
-      }
+            "block.sculk_sensor.place": {
+                "volume": 0.05
+            },
+            "power.off.sculk_sensor": {
+                "volume": 0.365
+            },
+            "power.on.sculk_sensor": {
+                "volume": 0.365
+            }
+        }
+    },
+    "interactive_sounds": {
+        "block_sounds": {
+            "sculk_sensor": {
+                "events": {
+                    "fall": {
+                        "volume": 0.4
+                    },
+                    "jump": {
+                        "volume": 0.12
+                    },
+                    "land": {
+                        "volume": 0.14
+                    },
+                    "step": {
+                        "volume": 0.17
+                    }
+                },
+                "volume": 0.05
+            }
+        }
     }
-  }
 }

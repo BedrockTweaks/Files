@@ -3,24 +3,10 @@
         "entities": {
             "fox": {
                 "events": {
-                    "ambient": "mob.fox.ambient",
-                    "attack": "mob.fox.bite",
-                    "death": "mob.fox.death",
-                    "eat": "mob.fox.eat",
-                    "hurt": "mob.fox.hurt",
-                    "mad": "mob.fox.aggro",
                     "screech": {
-                        "sound": "mob.fox.screech",
                         "volume": 0.1
-                    },
-                    "sleep": "mob.fox.sleep",
-                    "sniff": "mob.fox.sniff",
-                    "spit": "mob.fox.spit"
+                    }
                 },
-                "pitch": [
-                    0.8,
-                    1.2
-                ],
                 "volume": 0.05
             }
         }
