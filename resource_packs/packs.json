@@ -290,6 +290,57 @@
 			]
 		},
 		{
+			"id": "aesthetic/more_zombies",
+			"name": "Aesthetic/More Zombies",
+			"packs": [
+				{
+					"id": "steve_zombies",
+					"name": "Steve Zombies",
+					"description": "Retextures zombies to look like more like Steve."
+				},
+				{
+					"id": "alex_zombies",
+					"name": "Alex Zombies",
+					"description": "Retextures zombies to look like Alex than Steve."
+				},
+				{
+					"id": "ari_zombies",
+					"name": "Ari Zombies",
+					"description": "Retextures zombies to look like Ari than Steve"
+				},
+				{
+					"id": "efe_zombies",
+					"name": "Efe Zombies",
+					"description": "Retextures zombies to look like Efe than Steve"
+				},
+				{
+					"id": "Kai_zombies",
+					"name": "Kai Zombies",
+					"description": "Retextures zombies to look like Kai than Steve"
+				},
+				{
+					"id": "Makena_zombies",
+					"name": "Makena Zombies",
+					"description": "Retextures zombies to look like Makena than Steve"
+				},
+				{
+					"id": "noor_zombies",
+					"name": "Noor Zombies",
+					"description": "Retextures zombies to look like Noor than Steve"
+				},
+				{
+					"id": "Sunny_zombies",
+					"name": "Sunny Zombies",
+					"description": "Retextures zombies to look like Sunny than Steve"
+				},
+				{
+					"id": "zuri_zombies",
+					"name": "Zuri Zombies",
+					"description": "Retextures zombies to look like Zuri than Steve"
+				}
+			]
+		},
+		{
 			"id": "terrain/lower_and_sides",
 			"name": "Terrain / Lower and Sides",
 			"packs": [
