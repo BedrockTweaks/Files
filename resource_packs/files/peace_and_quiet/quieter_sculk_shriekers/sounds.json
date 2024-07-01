@@ -3,33 +3,15 @@
     "sculk_shrieker": {
       "events": {
         "break": {
-          "pitch": [
-            0.8,
-            1.0
-          ],
-          "sound": "break.sculk_shrieker",
           "volume": 0.05
         },
-        "default": "",
         "hit": {
-          "pitch": 0.5,
-          "sound": "step.sculk_shrieker",
           "volume": 0.015
         },
         "item.use.on": {
-          "pitch": [
-            0.8,
-            1.0
-          ],
-          "sound": "place.sculk_shrieker",
           "volume": 0.05
         },
         "place": {
-          "pitch": [
-            0.8,
-            1.0
-          ],
-          "sound": "break.sculk_shrieker",
           "volume": 0.05
         }
       }
@@ -38,16 +20,9 @@
   "individual_event_sounds": {
     "events": {
       "block.sculk_shrieker.place": {
-        "pitch": 1.0,
-        "sound": "place.sculk_shrieker",
         "volume": 0.05
       },
       "block.sculk_shrieker.shriek": {
-        "pitch": [
-          0.6,
-          1.0
-        ],
-        "sound": "shriek.sculk_shrieker",
         "volume": 0.1
       }
     }
@@ -56,26 +31,19 @@
     "block_sounds": {
       "sculk_shrieker": {
         "events": {
-          "default": "",
           "fall": {
-            "sound": "step.sculk_shrieker",
-            "sounds": "step.sculk_shrieker",
             "volume": 0.4
           },
           "jump": {
-            "sound": "step.sculk_shrieker",
             "volume": 0.12
           },
           "land": {
-            "sound": "step.sculk_shrieker",
             "volume": 0.14
           },
           "step": {
-            "sound": "step.sculk_shrieker",
             "volume": 0.17
           }
         },
-        "pitch": 1.0,
         "volume": 0.05
       }
     }

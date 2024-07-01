@@ -3,37 +3,22 @@
         "entities": {
             "wither": {
                 "events": {
-                    "ambient": "mob.wither.ambient",
                     "break.block": {
-                        "pitch": 1.0,
-                        "sound": "mob.wither.break_block",
                         "volume": 0.05
                     },
-                    "death": "mob.wither.death",
                     "death.mid.volume": {
-                        "sound": "mob.wither.death",
                         "volume": 0.0375
                     },
                     "death.min.volume": {
-                        "sound": "mob.wither.death",
                         "volume": 0.025
                     },
-                    "hurt": "mob.wither.hurt",
                     "shoot": {
-                        "pitch": 1.0,
-                        "sound": "mob.wither.shoot",
                         "volume": 0.15
                     },
                     "spawn": {
-                        "pitch": 1.0,
-                        "sound": "mob.wither.spawn",
                         "volume": 0.05
                     }
                 },
-                "pitch": [
-                    0.8,
-                    1.2
-                ],
                 "volume": 0.05
             }
         }

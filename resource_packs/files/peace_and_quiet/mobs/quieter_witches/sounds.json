@@ -3,33 +3,16 @@
         "entities": {
             "witch": {
                 "events": {
-                    "ambient": "mob.witch.ambient",
                     "ambient.in.raid": {
-                        "pitch": [
-                            0.8,
-                            1.2
-                        ],
-                        "sound": "mob.witch.ambient",
                         "volume": 0.15
                     },
-                    "celebrate": "mob.witch.celebrate",
-                    "death": "mob.witch.death",
                     "drink": {
-                        "pitch": 1.0,
-                        "sound": "mob.witch.drink",
                         "volume": 0.05
                     },
-                    "hurt": "mob.witch.hurt",
                     "throw": {
-                        "pitch": 1.0,
-                        "sound": "mob.witch.throw",
                         "volume": 0.05
                     }
                 },
-                "pitch": [
-                    0.8,
-                    1.2
-                ],
                 "volume": 0.05
             }
         }

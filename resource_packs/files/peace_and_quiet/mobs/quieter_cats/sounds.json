@@ -3,46 +3,24 @@
         "entities": {
             "cat": {
                 "events": {
-                    "ambient": "mob.cat.straymeow",
-                    "ambient.tame": "mob.cat.meow",
                     "death": {
-                        "pitch": 0.9,
-                        "sound": "mob.cat.hit",
                         "volume": 0.025
                     },
-                    "eat": "mob.cat.eat",
                     "hurt": {
-                        "sound": "mob.cat.hit",
                         "volume": 0.0225
                     },
-                    "purr": "mob.cat.purr",
-                    "purreow": "mob.cat.purreow",
                     "tempt": {
-                        "pitch": 1.0,
-                        "sound": "mob.cat.beg_for_food",
                         "volume": 0.035
                     }
                 },
-                "pitch": [
-                    0.8,
-                    1.2
-                ],
                 "volume": 0.05
             },
             "ocelot": {
                 "events": {
-                    "ambient": "mob.ocelot.idle",
-                    "death": "mob.ocelot.death",
-                    "eat": "mob.cat.eat",
                     "hurt": {
-                        "sound": "mob.cat.hit",
                         "volume": 0.0225
                     }
                 },
-                "pitch": [
-                    0.8,
-                    1.2
-                ],
                 "volume": 0.05
             }
         }

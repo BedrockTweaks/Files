@@ -2,19 +2,6 @@
     "entity_sounds": {
         "entities": {
             "camel": {
-                "events": {
-                    "ambient": "mob.camel.ambient",
-                    "death": "mob.camel.death",
-                    "eat": "mob.camel.eat",
-                    "hurt": "mob.camel.hurt",
-                    "saddle": "mob.horse.leather",
-                    "step": "mob.camel.step",
-                    "step_sand": "mob.camel.step_sand"
-                },
-                "pitch": [
-                    0.8,
-                    1.2
-                ],
                 "volume": 0.05
             }
         }

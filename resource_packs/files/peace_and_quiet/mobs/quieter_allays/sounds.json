@@ -1,19 +1,9 @@
 {
-  "entity_sounds": {
-    "entities": {
-      "allay": {
-        "events": {
-          "ambient": "mob.allay.idle",
-          "ambient.tame": "mob.allay.idle_holding",
-          "death": "mob.allay.death",
-          "hurt": "mob.allay.hurt"
-        },
-        "pitch": [
-          0.8,
-          1.2
-        ],
-        "volume": 0.05
-      }
+    "entity_sounds": {
+        "entities": {
+            "allay": {
+                "volume": 0.05
+            }
+        }
     }
-  }
 }

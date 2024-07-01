@@ -2,80 +2,30 @@
     "entity_sounds": {
         "entities": {
             "evocation_fang": {
-                "events": {
-                    "fang": "mob.evocation_fangs.attack"
-                },
-                "pitch": [
-                    0.8,
-                    1.2
-                ],
                 "volume": 0.04
             },
             "evocation_illager": {
                 "events": {
-                    "ambient": "mob.evocation_illager.ambient",
                     "ambient.in.raid": {
-                        "pitch": [
-                            0.8,
-                            1.2
-                        ],
-                        "sound": "mob.evocation_illager.ambient",
                         "volume": 0.15
-                    },
-                    "cast.spell": "mob.evocation_illager.cast_spell",
-                    "celebrate": "mob.evocation_illager.celebrate",
-                    "death": "mob.evocation_illager.death",
-                    "hurt": "mob.evocation_illager.hurt",
-                    "prepare.attack": "mob.evocation_illager.prepare_attack",
-                    "prepare.summon": "mob.evocation_illager.prepare_summon",
-                    "prepare.wololo": "mob.evocation_illager.prepare_wololo"
+                    }
                 },
-                "pitch": [
-                    0.8,
-                    1.2
-                ],
                 "volume": 0.05
             },
             "pillager": {
                 "events": {
-                    "ambient": "mob.pillager.idle",
                     "ambient.in.raid": {
-                        "pitch": [
-                            0.8,
-                            1.2
-                        ],
-                        "sound": "mob.pillager.idle",
                         "volume": 0.15
-                    },
-                    "celebrate": "mob.pillager.celebrate",
-                    "death": "mob.pillager.death",
-                    "hurt": "mob.pillager.hurt"
+                    }
                 },
-                "pitch": [
-                    0.8,
-                    1.2
-                ],
                 "volume": 0.05
             },
             "vindicator": {
                 "events": {
-                    "ambient": "mob.vindicator.idle",
                     "ambient.in.raid": {
-                        "pitch": [
-                            0.8,
-                            1.2
-                        ],
-                        "sound": "mob.vindicator.idle",
                         "volume": 0.15
-                    },
-                    "celebrate": "mob.vindicator.celebrate",
-                    "death": "mob.vindicator.death",
-                    "hurt": "mob.vindicator.hurt"
+                    }
                 },
-                "pitch": [
-                    0.8,
-                    1.2
-                ],
                 "volume": 0.05
             }
         }

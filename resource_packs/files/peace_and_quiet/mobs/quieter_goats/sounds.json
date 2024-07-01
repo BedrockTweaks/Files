@@ -2,20 +2,6 @@
     "entity_sounds": {
         "entities": {
             "goat": {
-                "events": {
-                    "ambient": "mob.goat.ambient",
-                    "ambient.screamer": "mob.goat.ambient.screamer",
-                    "death": "mob.goat.death",
-                    "death.screamer": "mob.goat.death.screamer",
-                    "eat": "mob.goat.eat",
-                    "hurt": "mob.goat.hurt",
-                    "hurt.screamer": "mob.goat.hurt.screamer",
-                    "step": "mob.goat.step"
-                },
-                "pitch": [
-                    0.8,
-                    1.2
-                ],
                 "volume": 0.05
             }
         }

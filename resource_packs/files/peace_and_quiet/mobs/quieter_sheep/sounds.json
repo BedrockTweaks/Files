@@ -3,20 +3,10 @@
         "entities": {
             "sheep": {
                 "events": {
-                    "ambient": "mob.sheep.say",
-                    "death": "mob.sheep.say",
-                    "eat": "",
-                    "hurt": "mob.sheep.say",
                     "step": {
-                        "pitch": 1.0,
-                        "sound": "mob.sheep.step",
                         "volume": 0.02
                     }
                 },
-                "pitch": [
-                    0.8,
-                    1.2
-                ],
                 "volume": 0.05
             }
         }

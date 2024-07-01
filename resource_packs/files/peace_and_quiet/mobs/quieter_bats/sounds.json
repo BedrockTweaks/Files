@@ -3,16 +3,10 @@
         "entities": {
             "bat": {
                 "events": {
-                    "ambient": "mob.bat.idle",
-                    "death": "mob.bat.death",
-                    "hurt": "mob.bat.hurt",
                     "takeoff": {
-                        "pitch": [0.80, 1.20],
-                        "sound": "mob.bat.takeoff",
                         "volume": 0.0025
                     }
                 },
-                "pitch": [0.760, 1.140],
                 "volume": 0.005
             }
         }
