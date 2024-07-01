@@ -2,16 +2,6 @@
     "entity_sounds": {
         "entities": {
             "vex": {
-                "events": {
-                    "ambient": "mob.vex.ambient",
-                    "charge": "mob.vex.charge",
-                    "death": "mob.vex.death",
-                    "hurt": "mob.vex.hurt"
-                },
-                "pitch": [
-                    0.8,
-                    1.2
-                ],
                 "volume": 0.05
             }
         }

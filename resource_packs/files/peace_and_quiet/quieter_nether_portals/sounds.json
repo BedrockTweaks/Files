@@ -1,16 +1,9 @@
 {
     "individual_event_sounds": {
         "portal": {
-            "pitch": [
-                0.8,
-                1.2
-            ],
-            "sound": "portal.portal",
             "volume": 0.0125
         },
         "portal.travel": {
-            "pitch": 1.0,
-            "sound": "portal.travel",
             "volume": 0.05
         }
     }

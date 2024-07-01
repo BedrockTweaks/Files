@@ -3,32 +3,18 @@
         "entities": {
             "cow": {
                 "events": {
-                    "ambient": "mob.cow.say",
-                    "death": "mob.cow.hurt",
-                    "eat": "",
-                    "hurt": "mob.cow.hurt",
                     "step": {
-                        "pitch": [0.90, 1.10],
-                        "sound": "mob.cow.step",
                         "volume": 0.0325
                     }
                 },
-                "pitch": [0.80, 1.20],
                 "volume": 0.05
             },
             "mooshroom": {
                 "events": {
-                    "ambient": "mob.cow.say",
-                    "death": "mob.cow.hurt",
-                    "eat": "mob.mooshroom.eat",
-                    "hurt": "mob.cow.hurt",
                     "step": {
-                        "pitch": [0.90, 1.10],
-                        "sound": "mob.cow.step",
                         "volume": 0.0325
                     }
                 },
-                "pitch": [0.80, 1.20],
                 "volume": 0.05
             }
         }

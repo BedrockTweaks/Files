@@ -3,35 +3,10 @@
         "entities": {
             "slime": {
                 "events": {
-                    "ambient": "",
-                    "attack": {
-                        "pitch": [
-                            0.8,
-                            1.2
-                        ],
-                        "sound": "mob.attack"
-                    },
-                    "death": "mob.slime.small",
-                    "hurt": "mob.slime.small",
-                    "squish.big": {
-                        "pitch": [
-                            0.64,
-                            0.96
-                        ],
-                        "sound": "mob.slime.big"
-                    },
-                    "squish.small": {
-                        "pitch": [
-                            0.64,
-                            0.96
-                        ],
-                        "sound": "mob.slime.small"
-                    }
+                    "attack": {},
+                    "squish.big": {},
+                    "squish.small": {}
                 },
-                "pitch": [
-                    0.8,
-                    1.2
-                ],
                 "volume": 0.05
             }
         }

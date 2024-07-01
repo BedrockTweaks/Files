@@ -3,15 +3,10 @@
         "entities": {
             "creeper": {
                 "events": {
-                    "death": "mob.creeper.death",
                     "fuse": {
-                        "pitch": 0.50,
-                        "sound": "random.fuse",
                         "volume": 0.05
-                    },
-                    "hurt": "mob.creeper.say"
+                    }
                 },
-                "pitch": [0.80, 1.20],
                 "volume": 0.05
             }
         }

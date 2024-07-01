@@ -3,18 +3,10 @@
         "entities": {
             "chicken": {
                 "events": {
-                    "ambient": "mob.chicken.say",
-                    "death": "mob.chicken.hurt",
-                    "eat": "",
-                    "hurt": "mob.chicken.hurt",
-                    "plop": "mob.chicken.plop",
                     "step": {
-                        "pitch": 1.0,
-                        "sound": "mob.chicken.step",
                         "volume": 0.0125
                     }
                 },
-                "pitch": [0.80, 1.20],
                 "volume": 0.05
             }
         }

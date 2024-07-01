@@ -3,39 +3,17 @@
         "entities": {
             "turtle": {
                 "events": {
-                    "ambient": "mob.turtle.ambient",
                     "born": {
-                        "pitch": 1.0,
-                        "sound": "mob.turtle_baby.born",
                         "volume": 0.05
                     },
-                    "death": "mob.turtle.death",
-                    "death.baby": "mob.turtle_baby.death",
-                    "eat": "",
-                    "hurt": "mob.turtle.hurt",
-                    "hurt.baby": "mob.turtle_baby.hurt",
                     "step": {
-                        "pitch": 1.0,
-                        "sound": "mob.turtle.step",
                         "volume": 0.05
                     },
                     "step.baby": {
-                        "pitch": 1.0,
-                        "sound": "mob.turtle_baby.step",
                         "volume": 0.05
                     },
-                    "swim": {
-                        "pitch": [
-                            0.6,
-                            1.4
-                        ],
-                        "sound": "mob.turtle.swim"
-                    }
+                    "swim": {}
                 },
-                "pitch": [
-                    0.8,
-                    1.2
-                ],
                 "volume": 0.05
             }
         }

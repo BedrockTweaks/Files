@@ -3,22 +3,10 @@
         "entities": {
             "frog": {
                 "events": {
-                    "ambient": "mob.frog.ambient",
                     "ambient.baby": {
-                        "pitch": 1.2,
-                        "sound": "mob.frog.ambient",
                         "volume": 0.125
-                    },
-                    "death": "mob.frog.death",
-                    "eat": "mob.frog.eat",
-                    "hurt": "mob.frog.hurt",
-                    "jump_to_block": "mob.frog.jump_to_block",
-                    "step": "mob.frog.step"
+                    }
                 },
-                "pitch": [
-                    0.8,
-                    1.2
-                ],
                 "volume": 0.05
             }
         }
