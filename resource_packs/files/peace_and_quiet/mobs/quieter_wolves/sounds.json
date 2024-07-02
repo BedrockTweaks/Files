@@ -3,7 +3,6 @@
         "entities": {
             "wolf": {
                 "events": {
-                    "shake": {},
                     "step": {
                         "volume": 0.0325
                     }
