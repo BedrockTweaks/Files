@@ -15,8 +15,7 @@
                     "imitate.blaze": {
                         "volume": 0.02
                     },
-                    "imitate.bogged": {},
-                    "imitate.breeze": {
+					"imitate.breeze": {
                         "volume": 0.035
                     },
                     "imitate.cave_spider": {

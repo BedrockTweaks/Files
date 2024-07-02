@@ -2,11 +2,6 @@
     "entity_sounds": {
         "entities": {
             "slime": {
-                "events": {
-                    "attack": {},
-                    "squish.big": {},
-                    "squish.small": {}
-                },
                 "volume": 0.05
             }
         }
