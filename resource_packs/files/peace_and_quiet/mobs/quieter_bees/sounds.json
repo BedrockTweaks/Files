@@ -5,9 +5,7 @@
                 "events": {
                     "ambient.pollinate": {
                         "volume": 0.0425
-                    },
-                    "attack": {},
-                    "death": {
+                    }"death": {
                         "volume": 0.03
                     },
                     "hurt": {

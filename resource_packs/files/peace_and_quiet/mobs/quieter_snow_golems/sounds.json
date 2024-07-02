@@ -2,11 +2,6 @@
     "entity_sounds": {
         "entities": {
             "snow_golem": {
-                "events": {
-                    "death": {},
-                    "hurt": {},
-                    "shoot": {}
-                },
                 "volume": 0.05
             }
         }
