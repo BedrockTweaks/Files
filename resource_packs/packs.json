@@ -2147,8 +2147,8 @@
 			]
 		},
 		{
-			"id": "fixes",
-			"name": "Fixes",
+			"id": "fixes_and_consistency",
+			"name": "Fixes and Consistency",
 			"packs": [
 				{
 					"id": "piston_inner_fix",
@@ -2181,11 +2181,6 @@
 					"description": "Recolors the water inside the Tadpole Bucket to match the rest of the Water and Fish Buckets."
 				},
 				{
-					"id": "consistent_oars",
-					"name": "Consistent Oars",
-					"description": "Recolors the oars on all boat items to match the boat color itself."
-				},
-				{
 					"id": "consistent_helmets",
 					"name": "Consistent Helmets",
 					"description": "Adds nose-pieces to the helmet items that are missing them (iron, gold & diamond)."
@@ -2199,11 +2194,6 @@
 					"id": "cocoa_beans_fix",
 					"name": "Cocoa Beans Fix",
 					"description": "Changes the textures on all the cocoa beans stages to use proper proportions."
-				},
-				{
-					"id": "pixel_consistent_bat",
-					"name": "Pixel Consistent Bat",
-					"description": "Retextures the Bat's texture to be consistent with its size."
 				},
 				{
 					"id": "pixel_consistent_ghast",
