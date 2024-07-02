@@ -366,6 +366,87 @@
 			]
 		},
 		{
+			"id": "variation",
+			"name": "Variation",
+			"packs": [
+				{
+					"id": "variated_dirt",
+					"name": "Variated Dirt",
+					"description": "Dirt will be randomized using a selection of 16 textures."
+				},
+				{
+					"id": "variated_grass",
+					"name": "Variated Grass",
+					"description": "Grass will be randomized using a selection of 16 textures."
+				},
+				{
+					"id": "variated_cobblestone",
+					"name": "Variated Cobblestone",
+					"description": "Cobblestone will be randomized using a selection of 7 textures."
+				},
+				{
+					"id": "variated_moss",
+					"name": "Variated Moss",
+					"description": "Randomly rotates Moss Blocks and Moss Carpets to break ugly grid patterns."
+				},
+				{
+					"id": "variated_bricks",
+					"name": "Variated Bricks",
+					"description": "Bricks will be randomized using a selection of 7 textures."
+				},
+				{
+					"id": "variated_birch_logs",
+					"name": "Variated Birch Logs",
+					"description": "Birch Logs will be randomized using a selection of 6 textures."
+				},
+				{
+					"id": "variated_red_mushroom_blocks",
+					"name": "Variated Red Mushroom Blocks",
+					"description": "Red Mushroom Blocks will be randomized using a selection of 12 textures."
+				},
+				{
+					"id": "variated_end_stone",
+					"name": "Variated End Stone",
+					"description": "End Stone will be randomized using a selection of 5 textures."
+				},
+				{
+					"id": "variated_gravel",
+					"name": "Variated Gravel",
+					"description": "Gravel will be randomized using a selection of 16 textures."
+				},
+				{
+					"id": "variated_mycelium",
+					"name": "Variated Mycelium",
+					"description": "Mycelium will be randomized using a selection of 16 textures."
+				},
+				{
+					"id": "variated_planks",
+					"name": "Variated Planks",
+					"description": "All planks will be randomized using a selection of 6 textures."
+				},
+				{
+					"id": "variated_stone",
+					"name": "Variated Stone",
+					"description": "Stone will be randomized using a selection of 16 textures."
+				},
+				{
+					"id": "variated_terracotta",
+					"name": "Variated Terracotta",
+					"description": "Terracotta will be randomized using a selection of 16 textures."
+				},
+				{
+					"id": "variated_unpolished_stones",
+					"name": "Variated Unpolished Stones",
+					"description": "Unpolished Stones will be randomized using a selection of 16 textures."
+				},
+				{
+					"id": "variated_bookshelves",
+					"name": "Variated Bookshelves",
+					"description": "Bookshelves will be randomized using a selection of 7 textures."
+				}
+			]
+		},
+		{
 			"id": "peace_and_quiet",
 			"name": "Peace and Quiet",
 			"packs": [
@@ -985,6 +1066,394 @@
 			]
 		},
 		{
+			"id": "gui/hearts",
+			"name": "GUI / Hearts",
+			"packs": [
+				{
+					"id": "white",
+					"name": "White",
+					"description": ""
+				},
+				{
+					"id": "light_gray",
+					"name": "Light Gray",
+					"description": ""
+				},
+				{
+					"id": "gray",
+					"name": "Gray",
+					"description": ""
+				},
+				{
+					"id": "black",
+					"name": "Black",
+					"description": ""
+				},
+				{
+					"id": "brown",
+					"name": "Brown",
+					"description": ""
+				},
+				{
+					"id": "orange",
+					"name": "Orange",
+					"description": ""
+				},
+				{
+					"id": "yellow",
+					"name": "Yellow",
+					"description": ""
+				},
+				{
+					"id": "lime",
+					"name": "Lime",
+					"description": ""
+				},
+				{
+					"id": "green",
+					"name": "Green",
+					"description": ""
+				},
+				{
+					"id": "cyan",
+					"name": "Cyan",
+					"description": ""
+				},
+				{
+					"id": "light_blue",
+					"name": "Light Blue",
+					"description": ""
+				},
+				{
+					"id": "blue",
+					"name": "Blue",
+					"description": ""
+				},
+				{
+					"id": "purple",
+					"name": "Purple",
+					"description": ""
+				},
+				{
+					"id": "magenta",
+					"name": "Magenta",
+					"description": ""
+				},
+				{
+					"id": "pink",
+					"name": "Pink",
+					"description": ""
+				}
+			]
+		},
+		{
+			"id": "gui/hearts/lgbtq+_pride",
+			"name": "GUI / Hearts / LGBTQ+ Pride",
+			"packs": [
+				{
+					"id": "pride",
+					"name": "Pride",
+					"description": ""
+				},
+				{
+					"id": "progress",
+					"name": "Progress",
+					"description": ""
+				},
+				{
+					"id": "lesbian",
+					"name": "Lesbian",
+					"description": ""
+				},
+				{
+					"id": "gay",
+					"name": "Gay",
+					"description": ""
+				},
+				{
+					"id": "bisexual",
+					"name": "Bisexual",
+					"description": ""
+				},
+				{
+					"id": "transgender",
+					"name": "Transgender",
+					"description": ""
+				},
+				{
+					"id": "queer",
+					"name": "Queer",
+					"description": ""
+				},
+				{
+					"id": "intersex",
+					"name": "Intersex",
+					"description": ""
+				},
+				{
+					"id": "asexual",
+					"name": "Asexual",
+					"description": ""
+				},
+				{
+					"id": "aromantic",
+					"name": "Aromantic",
+					"description": ""
+				},
+				{
+					"id": "aromantic_asexual",
+					"name": "Aromantic Asexual",
+					"description": ""
+				},
+				{
+					"id": "aromantic_asexual_v2",
+					"name": "Aromantic Asexual v2",
+					"description": ""
+				},
+				{
+					"id": "pansexual",
+					"name": "Pansexual",
+					"description": ""
+				},
+				{
+					"id": "omnisexual",
+					"name": "Omnisexual",
+					"description": ""
+				},
+				{
+					"id": "non-binary",
+					"name": "Non-binary",
+					"description": ""
+				},
+				{
+					"id": "agender",
+					"name": "Agender",
+					"description": ""
+				},
+				{
+					"id": "genderfluid",
+					"name": "Genderfluid",
+					"description": ""
+				},
+				{
+					"id": "genderqueer",
+					"name": "Genderqueer",
+					"description": ""
+				},
+				{
+					"id": "bigender",
+					"name": "Bigender",
+					"description": ""
+				},
+				{
+					"id": "bigender_v2",
+					"name": "Bigender v2",
+					"description": ""
+				},
+				{
+					"id": "demisexual",
+					"name": "Demisexual",
+					"description": ""
+				},
+				{
+					"id": "demiromantic",
+					"name": "Demiromantic",
+					"description": ""
+				},
+				{
+					"id": "polysexual",
+					"name": "Polysexual",
+					"description": ""
+				},
+				{
+					"id": "polyamorous",
+					"name": "Polyamorous",
+					"description": ""
+				},
+				{
+					"id": "polyamorous_v2",
+					"name": "Polyamorous v2",
+					"description": ""
+				},
+				{
+					"id": "ally",
+					"name": "Ally",
+					"description": ""
+				}
+			]
+		},
+		{
+			"id": "gui/hunger_bars",
+			"name": "GUI / Hunger Bars",
+			"packs": [
+				{
+					"id": "apple",
+					"name": "Apple",
+					"description": ""
+				},
+				{
+					"id": "golden_apple",
+					"name": "Golden Apple",
+					"description": ""
+				},
+				{
+					"id": "melon",
+					"name": "Melon",
+					"description": ""
+				},
+				{
+					"id": "sweet_berries",
+					"name": "Sweet Berries",
+					"description": ""
+				},
+				{
+					"id": "glow_berries",
+					"name": "Glow Berries",
+					"description": ""
+				},
+				{
+					"id": "chorus_fruit",
+					"name": "Chorus Fruit",
+					"description": ""
+				},
+				{
+					"id": "carrot",
+					"name": "Carrot",
+					"description": ""
+				},
+				{
+					"id": "golden_carrot",
+					"name": "Golden Carrot",
+					"description": ""
+				},
+				{
+					"id": "potato",
+					"name": "Potato",
+					"description": ""
+				},
+				{
+					"id": "baked_potato",
+					"name": "Baked Potato",
+					"description": ""
+				},
+				{
+					"id": "poisonous_potato",
+					"name": "Poisonous Potato",
+					"description": ""
+				},
+				{
+					"id": "beetroot",
+					"name": "Beetroot",
+					"description": ""
+				},
+				{
+					"id": "dried_kelp",
+					"name": "Dried Kelp",
+					"description": ""
+				},
+				{
+					"id": "beef",
+					"name": "Beef",
+					"description": ""
+				},
+				{
+					"id": "porkchop",
+					"name": "Porkchop",
+					"description": ""
+				},
+				{
+					"id": "mutton",
+					"name": "Mutton",
+					"description": ""
+				},
+				{
+					"id": "chicken",
+					"name": "Chicken",
+					"description": ""
+				},
+				{
+					"id": "rabbit",
+					"name": "Rabbit",
+					"description": ""
+				},
+				{
+					"id": "cod",
+					"name": "Cod",
+					"description": ""
+				},
+				{
+					"id": "salmon",
+					"name": "Salmon",
+					"description": ""
+				},
+				{
+					"id": "tropical_fish",
+					"name": "Tropical Fish",
+					"description": ""
+				},
+				{
+					"id": "pufferfish",
+					"name": "Pufferfish",
+					"description": ""
+				},
+				{
+					"id": "bread",
+					"name": "Bread",
+					"description": ""
+				},
+				{
+					"id": "cookie",
+					"name": "Cookie",
+					"description": ""
+				},
+				{
+					"id": "cake",
+					"name": "Cake",
+					"description": ""
+				},
+				{
+					"id": "pumpkin_pie",
+					"name": "Pumpkin Pie",
+					"description": ""
+				},
+				{
+					"id": "rotten_flesh",
+					"name": "Rotten Flesh",
+					"description": ""
+				},
+				{
+					"id": "spider_eye",
+					"name": "Spider Eye",
+					"description": ""
+				},
+				{
+					"id": "mushroom_stew",
+					"name": "Mushroom Stew",
+					"description": ""
+				},
+				{
+					"id": "beetroot_soup",
+					"name": "Beetroot Soup",
+					"description": ""
+				},
+				{
+					"id": "rabbit_stew",
+					"name": "Rabbit Stew",
+					"description": ""
+				},
+				{
+					"id": "suspicious_stew",
+					"name": "Suspicious Stew",
+					"description": ""
+				},
+				{
+					"id": "honey",
+					"name": "Honey",
+					"description": ""
+				}
+			]
+		},
+		{
 			"id": "gui/menu_panoramas",
 			"name": "GUI / Menu Panoramas",
 			"packs": [
@@ -1150,6 +1619,11 @@
 			"id": "retro",
 			"name": "Retro",
 			"packs": [
+				{
+					"id": "classic_minecraft_logo",
+					"name": "Classic Minecraft Logo",
+					"description": "Brings back the classic pixelated Minecraft logo!"
+				},
 				{
 					"id": "alpha_minecraft_logo",
 					"name": "Alpha Minecraft Logo",
