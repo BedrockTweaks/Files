@@ -2476,15 +2476,22 @@
 		{
 			"id": "extras/pixel_consistent/pixel_consistent_bacon_beam",
 			"combines": [
-				"fixes/pixel_consistent_beacon_beam",
+				"fixes_and_consistency/pixel_consistent_beacon_beam",
 				"fun/bacon_beam"
 			]
 		},
 		{
 			"id": "extras/pixel_consistent/pixel_consistent_wither_bee",
 			"combines": [
-				"fixes/pixel_consistent_wither",
+				"fixes_and_consistency/pixel_consistent_wither",
 				"fun/wither_bee"
+			]
+		},
+		{
+			"id": "extras/utility/updated_directional_observers_texture",
+			"combines": [
+				"fixes_and_consistency/updated_observer_texture",
+				"utility/directional_observers"
 			]
 		},
 		{
