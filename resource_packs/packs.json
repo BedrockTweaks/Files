@@ -2156,11 +2156,6 @@
 					"description": "Fixes Inner Piston texture hole to match the arm size."
 				},
 				{
-					"id": "smoker_bottom_fix",
-					"name": "Smoker Bottom Fix",
-					"description": "Fixes miss placed pixel in the bottom of the smoker."
-				},
-				{
 					"id": "updated_observer_texture",
 					"name": "Updated Observer Texture",
 					"description": "Changes the Observer's top texture to fit in-line with the 1.14 default textures, as it was left out in that update."
@@ -2169,6 +2164,11 @@
 					"id": "redstone_wire_fix",
 					"name": "Redstone Wire Fix",
 					"description": "Adds some extra pixels to the Redstone Wire texture to make sure the whole line joins up."
+				},
+				{
+					"id": "consistent_blank_decorated_pot",
+					"name": "Consistent Blank Decorated Pot",
+					"description": "Adds the gold trim to blank decorated pot sides to match the decorated sides."
 				},
 				{
 					"id": "consistent_buckets",
@@ -2181,19 +2181,29 @@
 					"description": "Recolors the water inside the Tadpole Bucket to match the rest of the Water and Fish Buckets."
 				},
 				{
-					"id": "consistent_helmets",
-					"name": "Consistent Helmets",
-					"description": "Adds nose-pieces to the helmet items that are missing them (iron, gold & diamond)."
-				},
-				{
 					"id": "cactus_bottom_fix",
 					"name": "Cactus Bottom Fix",
 					"description": "Recolors the bottom of cacti to match the rest of the cactus."
 				},
 				{
-					"id": "cocoa_beans_fix",
-					"name": "Cocoa Beans Fix",
-					"description": "Changes the textures on all the cocoa beans stages to use proper proportions."
+					"id": "cocoa_beans_top_fix",
+					"name": "Cocoa Beans Top Fix",
+					"description": "Tweaks the 3rd growth stage cocoa bean model to use proper texture proportions."
+				},
+				{
+					"id": "consistent_helmets",
+					"name": "Consistent Helmets",
+					"description": "Adds nose-pieces to the helmet items that are missing them (iron, gold & diamond)."
+				},
+				{
+					"id": "brighter_rib_armor_trim",
+					"name": "Brighter Rib Armor Trim",
+					"description": "Brightens the Rib Armor Trim to match the coloring of the other armor trims."
+				},
+				{
+					"id": "hanging_sign_logs",
+					"name": "Hanging Sign Logs",
+					"description": "Retextures the beams of hanging signs to logs to match signs' posts."
 				},
 				{
 					"id": "pixel_consistent_ghast",
@@ -2246,9 +2256,19 @@
 					"description": "Fixes the Blaze's rods' color on the bottom face."
 				},
 				{
+					"id": "brewing_stand_icons_fix",
+					"name": "Brewing Stand Icons Fix",
+					"description": "Removes the extra pixels on the Brewing Stand's potion slot icons."
+				},
+				{
 					"id": "nicer_fast_leaves",
 					"name": "Nicer Fast Leaves",
 					"description": "Replaces the random green parts in leaves to a darker green when having fancy leaves disabled."
+				},
+				{
+					"id": "consistent_smooth_stone",
+					"name": "Consistent Smooth Stone",
+					"description": "Gives the Smooth Stone texture the same bevel as its slab counterpart."
 				},
 				{
 					"id": "double_slab_fix",
@@ -2264,6 +2284,11 @@
 					"id": "cloak_fix",
 					"name": "Cloak Fix",
 					"description": "Fixes model of Villagers, Witches and Evokers so the cloak includes the missing bottom pixels."
+				},
+				{
+					"id": "smoker_bottom_fix",
+					"name": "Smoker Bottom Fix",
+					"description": "Fixes the misplaced pixel in the Smoker's bottom texture."
 				}
 			]
 		}
