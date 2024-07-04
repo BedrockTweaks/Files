@@ -2,10 +2,7 @@
     "individual_event_sounds": {
         "events": {
             "water": {
-                "volume": [
-                    0.0375,
-                    0.05
-                ]
+                "volume": [0.0375, 0.05]
             },
             "cauldron_drip.water.pointed_dripstone": {
                 "volume": 0.1
