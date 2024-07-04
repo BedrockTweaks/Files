@@ -4,10 +4,7 @@
             "breeze": {
                 "events": {
                     "ambient": {
-                        "volume": [
-                            0.04,
-                            0.05
-                        ]
+                        "volume": [0.04, 0.05]
                     },
                     "ambient.in.air": {
                         "volume": 0.05
