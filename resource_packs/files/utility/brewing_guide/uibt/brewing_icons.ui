@@ -31,8 +31,8 @@
   "multi_item_cell": {
     "type": "panel",
     "layer": 5,
-    "size": [18, 108],
-    "$background_size|default":[18, 108],
+    "size": [18, 144],
+    "$background_size|default": [18, 144],
     "controls": [
       {
         "background": {
@@ -40,7 +40,7 @@
           "layer": 6,
           "texture": "textures/ui/cell_image_lock",
           "size": "$background_size",
-          "offset": [0, 0],
+          "offset": [0, 18],
           "anchor_from": "center",
           "anchor_to": "center"
         }
@@ -254,6 +254,14 @@
     "$item_texture": "textures/items/turtle_helmet",
     "$hover_text": "item.turtle_helmet.name"
   },
+  "breeze_rod@multi_item_panel": {
+    "$item_texture": "textures/items/breeze_rod",
+    "$hover_text": "item.breeze_rod.name"
+  },
+  "stone@multi_item_panel": {
+    "$item_texture": "textures/ui/brewing_guide/stone",
+    "$hover_text": "tile.stone.stone.name"
+  },
   "sugar@multi_item_panel": {
     "$item_texture": "textures/items/sugar",
     "$hover_text": "item.sugar.name"
@@ -277,6 +285,14 @@
   "spider_eye_fermented@multi_item_panel": {
     "$item_texture": "textures/items/spider_eye_fermented",
     "$hover_text": "item.fermented_spider_eye.name"
+  },
+  "cobweb@multi_item_panel": {
+    "$item_texture": "textures/blocks/web",
+    "$hover_text": "tile.web.name"
+  },
+  "slime_block@multi_item_panel": {
+    "$item_texture": "textures/ui/brewing_guide/slime_block",
+    "$hover_text": "tile.slime.name"
   },
 
   "strength_effect@multi_item_panel": {
@@ -303,6 +319,14 @@
     "$item_texture": "textures/ui/brewing_guide/slowness_resistance",
     "$hover_text": "potion.turtleMaster.name"
   },
+  "wind_charged_effect@multi_item_panel": {
+    "$item_texture": "textures/ui/wind_charged_effect",
+    "$hover_text": "potion.windCharged.name"
+  },
+  "infested_effect@multi_item_panel": {
+    "$item_texture": "textures/ui/infested_effect",
+    "$hover_text": "potion.infested.name"
+  },
   "speed_effect@multi_item_panel": {
     "$item_texture": "textures/ui/speed_effect",
     "$hover_text": "potion.moveSpeed.name"
@@ -326,6 +350,14 @@
   "weakness_effect@multi_item_panel": {
     "$item_texture": "textures/ui/weakness_effect",
     "$hover_text": "potion.weakness.name"
+  },
+  "weaving_effect@multi_item_panel": {
+    "$item_texture": "textures/ui/weaving_effect",
+    "$hover_text": "potion.weaving.name"
+  },
+  "oozing_effect@multi_item_panel": {
+    "$item_texture": "textures/ui/oozing_effect",
+    "$hover_text": "potion.oozing.name"
   },
   "slowness_effect@multi_item_panel": {
     "$item_texture": "textures/ui/slowness_effect",

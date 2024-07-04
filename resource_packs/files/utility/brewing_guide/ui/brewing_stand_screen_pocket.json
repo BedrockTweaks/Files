@@ -8,7 +8,7 @@
 				"operation": "insert_back",
 				"value": {
 					"brewing_modifiers_panel@bt_brewing_guide.brewing_modifiers_panel": {
-						"offset": ["2.85%", "-24.5%"]
+						"offset": ["37.90%", "-20.5%"]
 					}
 				}
 			},
@@ -17,7 +17,7 @@
 				"operation": "insert_back",
 				"value": {
 					"brewing_ingredients_panel@bt_brewing_guide.brewing_ingredients_panel": {
-						"offset": ["8%", "22%"]
+						"offset": ["41.65%", "22%"]
 					}
 				}
 			}
