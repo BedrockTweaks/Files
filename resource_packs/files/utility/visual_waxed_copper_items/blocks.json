@@ -1,5 +1,5 @@
 {
-	"format_version": "1.1.0",
+	"format_version": [1, 1, 0],
 	"waxed_copper": {
 		"isotropic": false,
 		"carried_textures": "waxed_copper_block",
