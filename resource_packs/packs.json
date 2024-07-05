@@ -768,7 +768,7 @@
 				{
 					"id": "sticky_piston_sides",
 					"name": "Sticky Piston Sides",
-					"description": "names Slime on the sides of Sticky Pistons to allow players to easily differentiate them from regular pistons."
+					"description": "Displays Slime on the sides of Sticky Pistons to allow players to easily differentiate them from regular pistons."
 				},
 				{
 					"id": "directional_hoppers",
