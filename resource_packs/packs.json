@@ -101,6 +101,11 @@
 					"description": "Makes the particles that come from bookshelves around an Enchanting Table nice and colorful!"
 				},
 				{
+					"id":"hd_shield_banner_patterns",
+					"name":"HD Shield Banner Patterns",
+					"description":"Swaps out the regular pixel consistent shield banner pattern textures with their regular banner counterparts, so you can see your banner patterns on shields in all their glory."
+				},
+				{
 					"id": "pink_end_rods",
 					"name": "Pink End Rods",
 					"description": "Changes the gray base of End Rods to pink."
@@ -929,7 +934,7 @@
 				{
 					"id": "invisible_item_frames",
 					"name": "Invisible Item Frames",
-					"description": "Makes normal and glowing item frames invisible. (Careful, you might loose them :P)"
+					"description": "Makes normal and glowing item frames invisible. (Careful, you might lose them :P)"
 				}
 			]
 		},
