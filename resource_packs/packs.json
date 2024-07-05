@@ -2186,9 +2186,9 @@
 					"description": "Recolors the bottom of cacti to match the rest of the cactus."
 				},
 				{
-					"id": "cocoa_beans_top_fix",
-					"name": "Cocoa Beans Top Fix",
-					"description": "Tweaks the 3rd growth stage cocoa bean model to use proper texture proportions."
+					"id": "cocoa_beans_fix",
+					"name": "Cocoa Beans Fix",
+					"description": "Changes the textures on all the cocoa beans stages to use proper proportions."
 				},
 				{
 					"id": "consistent_helmets",
