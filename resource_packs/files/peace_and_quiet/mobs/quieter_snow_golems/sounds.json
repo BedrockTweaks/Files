@@ -1,9 +1,9 @@
 {
-    "entity_sounds": {
-        "entities": {
-            "snow_golem": {
-                "volume": 0.05
-            }
-        }
-    }
+	"entity_sounds": {
+		"entities": {
+			"snow_golem": {
+				"volume": 0.05
+			}
+		}
+	}
 }
