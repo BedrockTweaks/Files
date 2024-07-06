@@ -2,9 +2,6 @@
 	"entity_sounds": {
 		"entities": {
 			"phantom": {
-				"events": {
-					"swoop": {}
-				},
 				"volume": 0.5
 			}
 		}
