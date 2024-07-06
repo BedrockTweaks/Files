@@ -1,20 +1,20 @@
 {
-    "entity_sounds": {
-        "entities": {
-            "bee": {
-                "events": {
-                    "ambient.pollinate": {
-                        "volume": 0.0425
-                    },
-                    "death": {
-                        "volume": 0.03
-                    },
-                    "hurt": {
-                        "volume": 0.03
-                    }
-                },
-                "volume": 0.03
-            }
-        }
-    }
+	"entity_sounds": {
+		"entities": {
+			"bee": {
+				"events": {
+					"ambient.pollinate": {
+						"volume": 0.0425
+					},
+					"death": {
+						"volume": 0.03
+					},
+					"hurt": {
+						"volume": 0.03
+					}
+				},
+				"volume": 0.03
+			}
+		}
+	}
 }
