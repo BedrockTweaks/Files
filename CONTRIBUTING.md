@@ -83,6 +83,11 @@ Packs in the packs.json are ordered by priority, the higher the pack the higher 
 The pack generator will add the packs to the generated file by priority order. If a file already exists, the generator will skip it to not
 add the same file again.
 
+### pack_icon.png
+You can find in /templates a template with just the border to override on top of the vanilla tweaks icon, and a full template for new packs or other cases.
+
+If there is need to scale the template use closest neighbor instead of other sampling methods to avoid blurring.
+
 #
 
 If you notice any files not following the Style Guide feel free to open a PR.
