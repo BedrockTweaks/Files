@@ -1,15 +1,15 @@
 {
-    "entity_sounds": {
-        "entities": {
-            "villager": {
-                "volume": 0.05
-            },
-            "villager_v2": {
-                "volume": 0.05
-            },
-            "wandering_trader": {
-                "volume": 0.05
-            }
-        }
-    }
+	"entity_sounds": {
+		"entities": {
+			"villager": {
+				"volume": 0.05
+			},
+			"villager_v2": {
+				"volume": 0.05
+			},
+			"wandering_trader": {
+				"volume": 0.05
+			}
+		}
+	}
 }

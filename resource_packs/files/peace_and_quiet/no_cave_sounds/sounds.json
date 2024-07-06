@@ -1,7 +1,7 @@
 {
-    "individual_event_sounds": {
-        "ambient.cave": {
-            "volume": 0.035
-        }
-    }
+	"individual_event_sounds": {
+		"ambient.cave": {
+			"volume": 0.035
+		}
+	}
 }

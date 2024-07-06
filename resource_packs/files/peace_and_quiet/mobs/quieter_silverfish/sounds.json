@@ -1,14 +1,14 @@
 {
-    "entity_sounds": {
-        "entities": {
-            "silverfish": {
-                "events": {
-                    "step": {
-                        "volume": 0.0175
-                    }
-                },
-                "volume": 0.05
-            }
-        }
-    }
+	"entity_sounds": {
+		"entities": {
+			"silverfish": {
+				"events": {
+					"step": {
+						"volume": 0.0175
+					}
+				},
+				"volume": 0.05
+			}
+		}
+	}
 }
