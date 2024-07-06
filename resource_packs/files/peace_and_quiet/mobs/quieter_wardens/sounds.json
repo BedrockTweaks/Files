@@ -61,14 +61,22 @@
 	},
 	"individual_event_sounds": {
 		"events": {
+			"nearby_close": {
+				"volume": 0.05
+			},
+			"nearby_closer": {
+				"volume": 0.05
+			},
+			"nearby_closest": {
+				"volume": 0.05
+			},
+			"slightly_angry": {
+				"volume": 0.05
+			},
 			"sonic_boom": {
-				"pitch": 1.0,
-				"sound": "mob.warden.sonic_boom",
 				"volume": 0.15
 			},
 			"sonic_charge": {
-				"pitch": 1.0,
-				"sound": "mob.warden.sonic_charge",
 				"volume": 0.15
 			}
 		}
