@@ -448,6 +448,11 @@
 					"id": "variated_bookshelves",
 					"name": "Variated Bookshelves",
 					"description": "Bookshelves will be randomized using a selection of 7 textures."
+				},
+				{
+					"id": "variated_villagers",
+					"name": "Variated Villagers",
+					"description": "Adds varying skin tones to Villagers depending on their biome. Villagers in colder biomes have lighter skin tones and Villagers in hotter biomes have darker skin tones."
 				}
 			]
 		},
