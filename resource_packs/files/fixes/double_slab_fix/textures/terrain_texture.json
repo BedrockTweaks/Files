@@ -54,7 +54,6 @@
 		"polished_deepslate_double_slab": {
 			"textures": "textures/blocks/slab_sides/polished_deepslate_slab_side"
 		},
-
 		"cut_copper_double_slab": {
 			"textures": "textures/blocks/slab_sides/cut_copper_slab_double"
 		},

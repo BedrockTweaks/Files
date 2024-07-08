@@ -1,0 +1,14 @@
+{
+	"entity_sounds": {
+		"entities": {
+			"tadpole": {
+				"events": {
+					"flop": {
+						"volume": 0.05
+					}
+				},
+				"volume": 0.05
+			}
+		}
+	}
+}

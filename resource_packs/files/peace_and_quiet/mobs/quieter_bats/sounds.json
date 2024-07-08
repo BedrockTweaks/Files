@@ -1,0 +1,14 @@
+{
+	"entity_sounds": {
+		"entities": {
+			"bat": {
+				"events": {
+					"takeoff": {
+						"volume": 0.0025
+					}
+				},
+				"volume": 0.005
+			}
+		}
+	}
+}

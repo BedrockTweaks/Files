@@ -1,0 +1,22 @@
+{
+	"entity_sounds": {
+		"entities": {
+			"hoglin": {
+				"events": {
+					"step": {
+						"volume": 0.05
+					}
+				},
+				"volume": 0.05
+			},
+			"zoglin": {
+				"events": {
+					"step": {
+						"volume": 0.0075
+					}
+				},
+				"volume": 0.05
+			}
+		}
+	}
+}

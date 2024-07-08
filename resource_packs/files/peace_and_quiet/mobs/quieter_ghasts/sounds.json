@@ -1,0 +1,14 @@
+{
+	"entity_sounds": {
+		"entities": {
+			"ghast": {
+				"events": {
+					"shoot": {
+						"volume": 0.035
+					}
+				},
+				"volume": 0.25
+			}
+		}
+	}
+}

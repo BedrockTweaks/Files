@@ -1,31 +1,31 @@
 {
-  "format_version": "1.21.0",
-  "minecraft:recipe_shaped": {
-	"description": {
-	  "identifier": "bt:mb.birch_wood"
-	},
-	"tags": [
-	  "crafting_table"
-	],
-	"group": "wood",
-	"priority": -1,
-	"pattern": [
-	  "##",
-	  "##"
-	],
-	"key": {
-	  "#": {
-		"item": "minecraft:birch_log"
-	  }
-	},
-	"unlock": [
-	  {
-		"item": "minecraft:birch_log"
-	  }
-	],
-	"result": {
-	  "item": "minecraft:birch_wood",
-	  "count": 4
+	"format_version": "1.21.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "bt:mb.birch_wood"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"group": "wood",
+		"priority": -1,
+		"pattern": [
+			"##",
+			"##"
+		],
+		"key": {
+			"#": {
+				"item": "minecraft:birch_log"
+			}
+		},
+		"unlock": [
+			{
+				"item": "minecraft:birch_log"
+			}
+		],
+		"result": {
+			"item": "minecraft:birch_wood",
+			"count": 4
+		}
 	}
-  }
 }
