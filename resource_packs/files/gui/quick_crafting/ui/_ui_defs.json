@@ -1,3 +1,5 @@
 {
-	"ui_defs": ["uibt/quick_crafting.ui"]
+	"ui_defs": [
+		"uibt/quick_crafting.ui"
+	]
 }

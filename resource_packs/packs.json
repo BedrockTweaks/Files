@@ -101,9 +101,9 @@
 					"description": "Makes the particles that come from bookshelves around an Enchanting Table nice and colorful!"
 				},
 				{
-					"id":"hd_shield_banner_patterns",
-					"name":"HD Shield Banner Patterns",
-					"description":"Swaps out the regular pixel consistent shield banner pattern textures with their regular banner counterparts, so you can see your banner patterns on shields in all their glory."
+					"id": "hd_shield_banner_patterns",
+					"name": "HD Shield Banner Patterns",
+					"description": "Swaps out the regular pixel consistent shield banner pattern textures with their regular banner counterparts, so you can see your banner patterns on shields in all their glory."
 				},
 				{
 					"id": "pink_end_rods",
@@ -766,9 +766,9 @@
 					"description": "Displays Hunger Bar icons on all food names to show how much it will fill you up."
 				},
 				{
-					"id":"music_disc_redstone_level",
-					"name":"Music Disc Redstone Level",
-					"description":"Gives all Music Discs a redstone power level indicator in the tooltip."
+					"id": "music_disc_redstone_level",
+					"name": "Music Disc Redstone Level",
+					"description": "Gives all Music Discs a redstone power level indicator in the tooltip."
 				},
 				{
 					"id": "sticky_piston_sides",
@@ -837,9 +837,9 @@
 					"description": "Makes many particles transparent or hollow for easier vision."
 				},
 				{
-					"id":"no_cherry_leaves_particles",
-					"name":"No Cherry Leaves Particles",
-					"description":"Disables the spawning on cherry leaf particles in the cherry woods biome."
+					"id": "no_cherry_leaves_particles",
+					"name": "No Cherry Leaves Particles",
+					"description": "Disables the spawning on cherry leaf particles in the cherry woods biome."
 				},
 				{
 					"id": "borderless_glass",
@@ -1740,9 +1740,9 @@
 					"description": "Renames Terracotta back to 'Hardened Clay'."
 				},
 				{
-					"id":"rename_pottery_sherds_to_pottery_shards",
-					"name":"Rename 'Pottery Sherds' to 'Pottery Shards'",
-					"description":"Renames 'Pottery Sherds' to 'Pottery Shards'."
+					"id": "rename_pottery_sherds_to_pottery_shards",
+					"name": "Rename 'Pottery Sherds' to 'Pottery Shards'",
+					"description": "Renames 'Pottery Sherds' to 'Pottery Shards'."
 				},
 				{
 					"id": "rename_dirt_path_to_grass_path",
@@ -1805,11 +1805,11 @@
 					"name": "Beeralis",
 					"description": "Look into my eyes, and nothing but my eyes!"
 				},
-        {
+				{
 					"id": "sus_sand_and_gravel",
 					"name": "Sus Sand and Gravel",
 					"description": "GET OUT OF MY HEAD GET OUT OF MY HEAD GET OUT OF MY HEAD"
-        },
+				},
 				{
 					"id": "soyjak_vault",
 					"name": "Soyjak Vault",

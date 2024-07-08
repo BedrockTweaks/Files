@@ -1,5 +1,9 @@
 {
-	"format_version": [1, 1, 0],
+	"format_version": [
+		1,
+		1,
+		0
+	],
 	"sticky_piston": {
 		"carried_textures": {
 			"down": "piston_bottom",
