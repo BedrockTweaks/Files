@@ -1,6 +1,5 @@
 {
 	"namespace": "crafting",
-
 	"crafting_arrow": {
 		"controls": [
 			{
@@ -8,13 +7,18 @@
 			}
 		]
 	},
-
 	"crafting_arrow_large": {
 		"controls": [
 			{
 				"quick_craft_button@bt_quick_crafting.quick_craft_button": {
-					"size": [26, 26],
-					"offset": [4, 10]
+					"size": [
+						26,
+						26
+					],
+					"offset": [
+						4,
+						10
+					]
 				}
 			}
 		]

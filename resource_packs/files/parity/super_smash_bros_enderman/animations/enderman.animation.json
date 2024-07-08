@@ -5,10 +5,18 @@
 			"loop": true,
 			"bones": {
 				"hat": {
-					"position": [0.0, "-5.0 - this", 0.0]
+					"position": [
+						0.0,
+						"-5.0 - this",
+						0.0
+					]
 				},
 				"head": {
-					"position": [0.0, "-10.0 - this", 0.0]
+					"position": [
+						0.0,
+						"-10.0 - this",
+						0.0
+					]
 				}
 			}
 		}

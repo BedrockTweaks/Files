@@ -1,0 +1,21 @@
+{
+	"entity_sounds": {
+		"defaults": {
+			"events": {
+				"drink": {
+					"volume": 0.0175
+				},
+				"drink.honey": {
+					"volume": 0.025
+				},
+				"eat": {
+					"volume": [
+						0.025,
+						0.055
+					]
+				}
+			},
+			"volume": 0.05
+		}
+	}
+}
