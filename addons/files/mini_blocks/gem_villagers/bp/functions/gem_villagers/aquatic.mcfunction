@@ -1,1 +1,0 @@
-summon bt:gv.aquatic "§bAquatic§r"
