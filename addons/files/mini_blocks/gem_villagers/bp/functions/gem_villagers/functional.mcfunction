@@ -1,1 +1,0 @@
-summon bt:gv.functional "§bFunctional§r"

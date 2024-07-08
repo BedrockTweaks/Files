@@ -1,1 +1,0 @@
-kill @e[type=bt:gv.aquatic,c=1]
