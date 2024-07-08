@@ -1,5 +1,5 @@
-*/old/
-*/wip/
+**/old/**
+**/wip/**
 .idea/
-.vscode/
 **TODO**
+.env
