@@ -1,6 +1,10 @@
 {
 	"section": "addons",
-	"version": [1, 21, 0],
+	"version": [
+		1,
+		21,
+		0
+	],
 	"categories": [
 		{
 			"id": "survival",

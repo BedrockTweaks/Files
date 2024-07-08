@@ -1,31 +1,31 @@
 {
-  "format_version": "1.21.0",
-  "minecraft:recipe_shaped": {
-	"description": {
-	  "identifier": "bt:mb.stripped_crimson_hyphae"
-	},
-	"tags": [
-	  "crafting_table"
-	],
-	"group": "wood",
-	"priority": -1,
-	"pattern": [
-	  "##",
-	  "##"
-	],
-	"key": {
-	  "#": {
-		"item": "minecraft:stripped_crimson_stem"
-	  }
-	},
-	"unlock": [
-	  {
-		"item": "minecraft:stripped_crimson_stem"
-	  }
-	],
-	"result": {
-	  "item": "minecraft:stripped_crimson_hyphae",
-	  "count": 4
+	"format_version": "1.21.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "bt:mb.stripped_crimson_hyphae"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"group": "wood",
+		"priority": -1,
+		"pattern": [
+			"##",
+			"##"
+		],
+		"key": {
+			"#": {
+				"item": "minecraft:stripped_crimson_stem"
+			}
+		},
+		"unlock": [
+			{
+				"item": "minecraft:stripped_crimson_stem"
+			}
+		],
+		"result": {
+			"item": "minecraft:stripped_crimson_hyphae",
+			"count": 4
+		}
 	}
-  }
 }
