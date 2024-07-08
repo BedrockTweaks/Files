@@ -1,1 +1,0 @@
-gamerule doinsomnia false
