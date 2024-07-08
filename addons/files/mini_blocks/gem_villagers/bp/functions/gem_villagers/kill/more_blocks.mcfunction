@@ -1,1 +1,0 @@
-kill @e[type=bt:gv.more_blocks,c=1]

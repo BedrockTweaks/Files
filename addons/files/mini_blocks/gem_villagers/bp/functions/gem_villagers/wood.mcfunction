@@ -1,1 +1,0 @@
-summon bt:gv.wood "§eWood§r"
