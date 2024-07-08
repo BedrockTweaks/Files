@@ -1,0 +1,22 @@
+{
+	"entity_sounds": {
+		"entities": {
+			"elder_guardian": {
+				"events": {
+					"guardian.flop": {
+						"volume": 0.05
+					}
+				},
+				"volume": 0.05
+			},
+			"guardian": {
+				"events": {
+					"guardian.flop": {
+						"volume": 0.05
+					}
+				},
+				"volume": 0.05
+			}
+		}
+	}
+}

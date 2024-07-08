@@ -1,1 +1,0 @@
-kill @e[type=bt:gv.functional,c=1]

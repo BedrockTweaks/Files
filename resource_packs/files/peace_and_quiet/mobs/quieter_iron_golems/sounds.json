@@ -1,0 +1,17 @@
+{
+	"entity_sounds": {
+		"entities": {
+			"iron_golem": {
+				"events": {
+					"step": {
+						"volume": 0.05
+					},
+					"throw": {
+						"volume": 0.05
+					}
+				},
+				"volume": 0.05
+			}
+		}
+	}
+}
