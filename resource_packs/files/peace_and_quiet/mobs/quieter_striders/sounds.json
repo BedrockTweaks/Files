@@ -1,0 +1,17 @@
+{
+	"entity_sounds": {
+		"entities": {
+			"strider": {
+				"events": {
+					"step": {
+						"volume": 0.0125
+					},
+					"step_lava": {
+						"volume": 0.01
+					}
+				},
+				"volume": 0.05
+			}
+		}
+	}
+}

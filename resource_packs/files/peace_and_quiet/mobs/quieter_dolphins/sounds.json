@@ -1,0 +1,17 @@
+{
+	"entity_sounds": {
+		"entities": {
+			"dolphin": {
+				"events": {
+					"eat": {
+						"volume": 0.035
+					},
+					"jump": {
+						"volume": 0.035
+					}
+				},
+				"volume": 0.05
+			}
+		}
+	}
+}
