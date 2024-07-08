@@ -1,87 +1,87 @@
 {
-    "format_version": [
-        1,
-        1,
-        0
-    ],
-    "acacia_fence_gate": {
-        "sound": "wood",
-        "textures": "acacia_planks"
-    },
-    "acacia_stairs": {
-        "sound": "wood",
-        "textures": "acacia_planks"
-    },
-    "acacia_planks": {
-        "sound": "wood",
-        "textures": "acacia_planks"
-    },
-    "birch_fence_gate": {
-        "sound": "wood",
-        "textures": "birch_planks"
-    },
-    "birch_stairs": {
-        "sound": "wood",
-        "textures": "birch_planks"
-    },
-    "birch_planks": {
-        "sound": "wood",
-        "textures": "birch_planks"
-    },
-    "dark_oak_fence_gate": {
-        "sound": "wood",
-        "textures": "dark_oak_planks"
-    },
-    "dark_oak_stairs": {
-        "sound": "wood",
-        "textures": "dark_oak_planks"
-    },
-    "dark_oak_planks": {
-        "sound": "wood",
-        "textures": "dark_oak_planks"
-    },
-    "jungle_fence_gate": {
-        "sound": "wood",
-        "textures": "jungle_planks"
-    },
-    "jungle_planks": {
-        "sound": "wood",
-        "textures": "jungle_planks"
-    },
-    "jungle_stairs": {
-        "sound": "wood",
-        "textures": "jungle_planks"
-    },
-    "fence_gate": {
-        "sound": "wood",
-        "textures": "oak_planks"
-    },
-    "oak_stairs": {
-        "sound": "wood",
-        "textures": "oak_planks"
-    },
-    "oak_planks": {
-        "sound": "wood",
-        "textures": "oak_planks"
-    },
-    "wooden_button": {
-        "sound": "wood",
-        "textures": "oak_planks"
-    },
-    "wooden_pressure_plate": {
-        "sound": "wood",
-        "textures": "oak_planks"
-    },
-    "spruce_fence_gate": {
-        "sound": "wood",
-        "textures": "spruce_planks"
-    },
-    "spruce_stairs": {
-        "sound": "wood",
-        "textures": "spruce_planks"
-    },
-    "spruce_planks": {
-        "sound": "wood",
-        "textures": "spruce_planks"
-    }
+	"format_version": [
+		1,
+		1,
+		0
+	],
+	"acacia_fence_gate": {
+		"sound": "wood",
+		"textures": "acacia_planks"
+	},
+	"acacia_stairs": {
+		"sound": "wood",
+		"textures": "acacia_planks"
+	},
+	"acacia_planks": {
+		"sound": "wood",
+		"textures": "acacia_planks"
+	},
+	"birch_fence_gate": {
+		"sound": "wood",
+		"textures": "birch_planks"
+	},
+	"birch_stairs": {
+		"sound": "wood",
+		"textures": "birch_planks"
+	},
+	"birch_planks": {
+		"sound": "wood",
+		"textures": "birch_planks"
+	},
+	"dark_oak_fence_gate": {
+		"sound": "wood",
+		"textures": "dark_oak_planks"
+	},
+	"dark_oak_stairs": {
+		"sound": "wood",
+		"textures": "dark_oak_planks"
+	},
+	"dark_oak_planks": {
+		"sound": "wood",
+		"textures": "dark_oak_planks"
+	},
+	"jungle_fence_gate": {
+		"sound": "wood",
+		"textures": "jungle_planks"
+	},
+	"jungle_planks": {
+		"sound": "wood",
+		"textures": "jungle_planks"
+	},
+	"jungle_stairs": {
+		"sound": "wood",
+		"textures": "jungle_planks"
+	},
+	"fence_gate": {
+		"sound": "wood",
+		"textures": "oak_planks"
+	},
+	"oak_stairs": {
+		"sound": "wood",
+		"textures": "oak_planks"
+	},
+	"oak_planks": {
+		"sound": "wood",
+		"textures": "oak_planks"
+	},
+	"wooden_button": {
+		"sound": "wood",
+		"textures": "oak_planks"
+	},
+	"wooden_pressure_plate": {
+		"sound": "wood",
+		"textures": "oak_planks"
+	},
+	"spruce_fence_gate": {
+		"sound": "wood",
+		"textures": "spruce_planks"
+	},
+	"spruce_stairs": {
+		"sound": "wood",
+		"textures": "spruce_planks"
+	},
+	"spruce_planks": {
+		"sound": "wood",
+		"textures": "spruce_planks"
+	}
 }
