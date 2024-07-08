@@ -1,0 +1,51 @@
+{
+	"block_sounds": {
+		"sculk_shrieker": {
+			"events": {
+				"break": {
+					"volume": 0.05
+				},
+				"hit": {
+					"volume": 0.015
+				},
+				"item.use.on": {
+					"volume": 0.05
+				},
+				"place": {
+					"volume": 0.05
+				}
+			}
+		}
+	},
+	"individual_event_sounds": {
+		"events": {
+			"block.sculk_shrieker.place": {
+				"volume": 0.05
+			},
+			"block.sculk_shrieker.shriek": {
+				"volume": 0.1
+			}
+		}
+	},
+	"interactive_sounds": {
+		"block_sounds": {
+			"sculk_shrieker": {
+				"events": {
+					"fall": {
+						"volume": 0.4
+					},
+					"jump": {
+						"volume": 0.12
+					},
+					"land": {
+						"volume": 0.14
+					},
+					"step": {
+						"volume": 0.17
+					}
+				},
+				"volume": 0.05
+			}
+		}
+	}
+}

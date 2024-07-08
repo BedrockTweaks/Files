@@ -1,0 +1,14 @@
+{
+	"entity_sounds": {
+		"entities": {
+			"fox": {
+				"events": {
+					"screech": {
+						"volume": 0.1
+					}
+				},
+				"volume": 0.05
+			}
+		}
+	}
+}

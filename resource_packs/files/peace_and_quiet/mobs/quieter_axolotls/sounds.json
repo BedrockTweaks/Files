@@ -1,0 +1,9 @@
+{
+	"entity_sounds": {
+		"entities": {
+			"axolotl": {
+				"volume": 0.05
+			}
+		}
+	}
+}

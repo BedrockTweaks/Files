@@ -1,0 +1,9 @@
+{
+	"entity_sounds": {
+		"entities": {
+			"minecart": {
+				"volume": 0.05
+			}
+		}
+	}
+}
