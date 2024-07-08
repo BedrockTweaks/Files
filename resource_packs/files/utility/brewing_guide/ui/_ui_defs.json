@@ -1,3 +1,6 @@
 {
-	"ui_defs": ["uibt/brewing_guide.ui", "uibt/brewing_icons.ui"]
+	"ui_defs": [
+		"uibt/brewing_guide.ui",
+		"uibt/brewing_icons.ui"
+	]
 }

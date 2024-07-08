@@ -1,31 +1,31 @@
 {
-  "format_version": "1.21.0",
-  "minecraft:recipe_shaped": {
-	"description": {
-	  "identifier": "bt:mb.acacia_wood_stripped"
-	},
-	"tags": [
-	  "crafting_table"
-	],
-	"group": "wood",
-	"priority": -1,
-	"pattern": [
-	  "##",
-	  "##"
-	],
-	"key": {
-	  "#": {
-		"item": "minecraft:stripped_acacia_log"
-	  }
-	},
-	"unlock": [
-	  {
-		"item": "minecraft:stripped_acacia_log"
-	  }
-	],
-	"result": {
-	  "item": "minecraft:stripped_acacia_wood",
-	  "count": 4
+	"format_version": "1.21.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "bt:mb.acacia_wood_stripped"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"group": "wood",
+		"priority": -1,
+		"pattern": [
+			"##",
+			"##"
+		],
+		"key": {
+			"#": {
+				"item": "minecraft:stripped_acacia_log"
+			}
+		},
+		"unlock": [
+			{
+				"item": "minecraft:stripped_acacia_log"
+			}
+		],
+		"result": {
+			"item": "minecraft:stripped_acacia_wood",
+			"count": 4
+		}
 	}
-  }
 }
