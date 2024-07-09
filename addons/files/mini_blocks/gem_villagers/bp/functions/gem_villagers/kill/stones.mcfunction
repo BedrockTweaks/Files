@@ -1,1 +1,0 @@
-kill @e[type=bt:gv.stones,c=1]

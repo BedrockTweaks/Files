@@ -1,0 +1,14 @@
+{
+	"entity_sounds": {
+		"entities": {
+			"sheep": {
+				"events": {
+					"step": {
+						"volume": 0.02
+					}
+				},
+				"volume": 0.05
+			}
+		}
+	}
+}
