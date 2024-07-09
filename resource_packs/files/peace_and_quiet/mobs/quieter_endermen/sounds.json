@@ -1,0 +1,14 @@
+{
+	"entity_sounds": {
+		"entities": {
+			"enderman": {
+				"events": {
+					"stare": {
+						"volume": 0.05
+					}
+				},
+				"volume": 0.05
+			}
+		}
+	}
+}

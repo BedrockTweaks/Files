@@ -1,0 +1,9 @@
+{
+	"entity_sounds": {
+		"entities": {
+			"rabbit": {
+				"volume": 0.04
+			}
+		}
+	}
+}

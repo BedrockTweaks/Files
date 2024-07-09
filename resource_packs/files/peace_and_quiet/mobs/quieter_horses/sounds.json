@@ -1,0 +1,93 @@
+{
+	"entity_sounds": {
+		"entities": {
+			"donkey": {
+				"events": {
+					"add.chest": {
+						"volume": 0.05
+					},
+					"armor": {
+						"volume": 0.03
+					},
+					"breathe": {
+						"volume": 0.035
+					},
+					"eat": {
+						"volume": [
+							0.025,
+							0.075
+						]
+					},
+					"jump": {
+						"volume": 0.02
+					},
+					"land": {
+						"volume": 0.02
+					},
+					"saddle": {
+						"volume": 0.025
+					}
+				},
+				"volume": 0.04
+			},
+			"horse": {
+				"events": {
+					"add.chest": {
+						"volume": 0.05
+					},
+					"armor": {
+						"volume": 0.03
+					},
+					"breathe": {
+						"volume": 0.035
+					},
+					"eat": {
+						"volume": [
+							0.025,
+							0.075
+						]
+					},
+					"jump": {
+						"volume": 0.02
+					},
+					"land": {
+						"volume": 0.02
+					},
+					"saddle": {
+						"volume": 0.03
+					}
+				},
+				"volume": 0.04
+			},
+			"mule": {
+				"events": {
+					"add.chest": {
+						"volume": 0.05
+					},
+					"armor": {
+						"volume": 0.03
+					},
+					"breathe": {
+						"volume": 0.035
+					},
+					"eat": {
+						"volume": [
+							0.025,
+							0.075
+						]
+					},
+					"jump": {
+						"volume": 0.02
+					},
+					"land": {
+						"volume": 0.02
+					},
+					"saddle": {
+						"volume": 0.03
+					}
+				},
+				"volume": 0.04
+			}
+		}
+	}
+}

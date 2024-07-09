@@ -1,0 +1,20 @@
+{
+	"entity_sounds": {
+		"entities": {
+			"turtle": {
+				"events": {
+					"born": {
+						"volume": 0.05
+					},
+					"step": {
+						"volume": 0.05
+					},
+					"step.baby": {
+						"volume": 0.05
+					}
+				},
+				"volume": 0.05
+			}
+		}
+	}
+}
