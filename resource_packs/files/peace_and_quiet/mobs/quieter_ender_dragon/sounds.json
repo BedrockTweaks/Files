@@ -1,0 +1,9 @@
+{
+	"entity_sounds": {
+		"entities": {
+			"ender_dragon": {
+				"volume": 4.0
+			}
+		}
+	}
+}

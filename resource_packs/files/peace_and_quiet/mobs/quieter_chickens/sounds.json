@@ -1,0 +1,14 @@
+{
+	"entity_sounds": {
+		"entities": {
+			"chicken": {
+				"events": {
+					"step": {
+						"volume": 0.0125
+					}
+				},
+				"volume": 0.05
+			}
+		}
+	}
+}
