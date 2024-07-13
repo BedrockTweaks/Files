@@ -1,0 +1,30 @@
+{
+	"entity_sounds": {
+		"entities": {
+			"piglin": {
+				"events": {
+					"step": {
+						"volume": 0.0175
+					}
+				},
+				"volume": 0.05
+			},
+			"piglin_brute": {
+				"events": {
+					"step": {
+						"volume": 0.0175
+					}
+				},
+				"volume": 0.05
+			},
+			"zombie_pigman": {
+				"events": {
+					"mad": {
+						"volume": 0.1
+					}
+				},
+				"volume": 0.05
+			}
+		}
+	}
+}

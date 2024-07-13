@@ -1,0 +1,22 @@
+{
+	"entity_sounds": {
+		"entities": {
+			"cow": {
+				"events": {
+					"step": {
+						"volume": 0.0325
+					}
+				},
+				"volume": 0.05
+			},
+			"mooshroom": {
+				"events": {
+					"step": {
+						"volume": 0.0325
+					}
+				},
+				"volume": 0.05
+			}
+		}
+	}
+}

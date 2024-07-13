@@ -1,0 +1,9 @@
+{
+	"entity_sounds": {
+		"entities": {
+			"lightning_bolt": {
+				"volume": 50.0
+			}
+		}
+	}
+}

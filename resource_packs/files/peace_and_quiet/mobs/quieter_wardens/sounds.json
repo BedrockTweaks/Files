@@ -1,0 +1,84 @@
+{
+	"entity_sounds": {
+		"entities": {
+			"warden": {
+				"events": {
+					"agitated": {
+						"volume": 0.5
+					},
+					"angry": {
+						"volume": 0.5
+					},
+					"attack": {
+						"volume": 0.5
+					},
+					"death": {
+						"volume": 0.05
+					},
+					"dig": {
+						"volume": 0.2
+					},
+					"emerge": {
+						"volume": 0.2
+					},
+					"heartbeat": {
+						"volume": 0.2
+					},
+					"hurt": {
+						"volume": 0.05
+					},
+					"idle": {
+						"volume": 0.15
+					},
+					"listening": {
+						"volume": 0.5
+					},
+					"listening_angry": {
+						"volume": 0.5
+					},
+					"nearby_close": {
+						"volume": 0.2
+					},
+					"nearby_closer": {
+						"volume": 0.2
+					},
+					"nearby_closest": {
+						"volume": 0.2
+					},
+					"roar": {
+						"volume": 0.5
+					},
+					"sniff": {
+						"volume": 0.2
+					},
+					"step": {
+						"volume": 0.5
+					}
+				},
+				"volume": 0.05
+			}
+		}
+	},
+	"individual_event_sounds": {
+		"events": {
+			"nearby_close": {
+				"volume": 0.05
+			},
+			"nearby_closer": {
+				"volume": 0.05
+			},
+			"nearby_closest": {
+				"volume": 0.05
+			},
+			"slightly_angry": {
+				"volume": 0.05
+			},
+			"sonic_boom": {
+				"volume": 0.15
+			},
+			"sonic_charge": {
+				"volume": 0.15
+			}
+		}
+	}
+}

@@ -1,1 +1,0 @@
-summon bt:gv.diamonds_for_gems "§bGem Trader§r"
