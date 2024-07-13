@@ -1,0 +1,44 @@
+{
+	"entity_sounds": {
+		"entities": {
+			"breeze": {
+				"events": {
+					"ambient": {
+						"volume": [
+							0.04,
+							0.05
+						]
+					},
+					"ambient.in.air": {
+						"volume": 0.05
+					},
+					"charge": {
+						"volume": 0.05
+					},
+					"death": {
+						"volume": 0.05
+					},
+					"hurt": {
+						"volume": 0.05
+					},
+					"jump": {
+						"volume": 0.05
+					},
+					"land": {
+						"volume": 0.05
+					},
+					"reflect": {
+						"volume": 0.05
+					},
+					"shoot": {
+						"volume": 0.075
+					},
+					"step": {
+						"volume": 0.0
+					}
+				},
+				"volume": 0.05
+			}
+		}
+	}
+}

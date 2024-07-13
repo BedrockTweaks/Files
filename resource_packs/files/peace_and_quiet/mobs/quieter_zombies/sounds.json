@@ -1,0 +1,41 @@
+{
+	"entity_sounds": {
+		"entities": {
+			"drowned": {
+				"volume": 0.05
+			},
+			"husk": {
+				"events": {
+					"step": {
+						"volume": 0.0175
+					}
+				},
+				"volume": 0.05
+			},
+			"zombie": {
+				"events": {
+					"step": {
+						"volume": 0.0225
+					}
+				},
+				"volume": 0.05
+			},
+			"zombie_villager": {
+				"events": {
+					"step": {
+						"volume": 0.0225
+					}
+				},
+				"volume": 0.05
+			},
+			"zombie_villager_v2": {
+				"events": {
+					"step": {
+						"volume": 0.0225
+					}
+				},
+				"volume": 0.05
+			}
+		}
+	}
+}

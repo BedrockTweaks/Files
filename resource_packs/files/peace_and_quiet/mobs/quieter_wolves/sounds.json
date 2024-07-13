@@ -1,0 +1,14 @@
+{
+	"entity_sounds": {
+		"entities": {
+			"wolf": {
+				"events": {
+					"step": {
+						"volume": 0.0325
+					}
+				},
+				"volume": 0.05
+			}
+		}
+	}
+}

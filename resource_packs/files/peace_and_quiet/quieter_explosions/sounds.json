@@ -1,0 +1,9 @@
+{
+	"individual_event_sounds": {
+		"events": {
+			"explode": {
+				"volume": 0.2
+			}
+		}
+	}
+}

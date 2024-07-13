@@ -1,0 +1,12 @@
+{
+	"entity_sounds": {
+		"entities": {
+			"glow_squid": {
+				"volume": 0.02
+			},
+			"squid": {
+				"volume": 0.02
+			}
+		}
+	}
+}
