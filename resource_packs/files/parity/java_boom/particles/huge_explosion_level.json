@@ -28,15 +28,27 @@
 				"max_lifetime": "Math.random(0.3, 0.5)"
 			},
 			"minecraft:particle_appearance_billboard": {
-				"size": [1.0, 1.0],
+				"size": [
+					1.0,
+					1.0
+				],
 				"facing_camera_mode": "lookat_xyz",
 				"uv": {
 					"texture_width": 128,
 					"texture_height": 128,
 					"flipbook": {
-						"base_UV": [0, 80],
-						"size_UV": [8, 8],
-						"step_UV": [8, 0],
+						"base_UV": [
+							0,
+							80
+						],
+						"size_UV": [
+							8,
+							8
+						],
+						"step_UV": [
+							8,
+							0
+						],
 						"frames_per_second": 8,
 						"max_frame": 16,
 						"stretch_to_lifetime": true,

@@ -1,0 +1,9 @@
+{
+	"entity_sounds": {
+		"entities": {
+			"armadillo": {
+				"volume": 0.05
+			}
+		}
+	}
+}

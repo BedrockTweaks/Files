@@ -1,0 +1,14 @@
+{
+	"entity_sounds": {
+		"entities": {
+			"frog": {
+				"events": {
+					"ambient.baby": {
+						"volume": 0.125
+					}
+				},
+				"volume": 0.05
+			}
+		}
+	}
+}

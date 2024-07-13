@@ -1,0 +1,46 @@
+{
+	"entity_sounds": {
+		"entities": {
+			"llama": {
+				"events": {
+					"add.chest": {
+						"volume": 0.05
+					},
+					"armor": {
+						"volume": 0.025
+					},
+					"eat": {
+						"volume": [
+							0.025,
+							0.075
+						]
+					},
+					"step": {
+						"volume": 0.0075
+					}
+				},
+				"volume": 0.04
+			},
+			"trader_llama": {
+				"events": {
+					"add.chest": {
+						"volume": 0.05
+					},
+					"armor": {
+						"volume": 0.025
+					},
+					"eat": {
+						"volume": [
+							0.025,
+							0.075
+						]
+					},
+					"step": {
+						"volume": 0.0075
+					}
+				},
+				"volume": 0.04
+			}
+		}
+	}
+}
