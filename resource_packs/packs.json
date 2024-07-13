@@ -220,7 +220,10 @@
 					"id": "lush_grass_all_round",
 					"name": "Lush Grass (Mostly) All 'Round",
 					"description": "Makes most of the world use a lush green colormap.",
-					"version": "This affects the majority of biomes, but Minecraft has moved away from their previous method of coloring biomes, meaning its not as easy to change the colormap for many of the modern biomes."
+					"message": {
+						"text": "This affects the majority of biomes, but Minecraft has moved away from their previous method of coloring biomes, meaning its not as easy to change the colormap for many of the modern biomes.",
+						"severity": "warn"
+					}
 				},
 				{
 					"id": "alternate_bedrock",
@@ -478,8 +481,7 @@
 				{
 					"id": "quieter_dispensers_and_droppers",
 					"name": "Quieter Dispensers and Droppers",
-					"description": "Decreases Dispenser and Dropper sounds by 95%.",
-					"version": " Also affects menu clicks."
+					"description": "Decreases Dispenser and Dropper sounds by 95%."
 				},
 				{
 					"id": "quieter_minecarts",
@@ -561,7 +563,10 @@
 					"id": "quieter_blazes",
 					"name": "Quieter Blazes",
 					"description": "Decreases Blaze sounds by 95%.",
-					"version": "The fire crackling sounds that Blazes emit are not affected by this pack. You will need to install Quieter Fire to make those sounds quieter as well."
+					"message": {
+						"text": "Blaze's fire crackling sounds aren't affected. Install <b>Quieter Fire</b> to quieten those sounds.",
+						"severity": "warn"
+					}
 				},
 				{
 					"id": "quieter_breezes",
@@ -787,7 +792,10 @@
 					"id": "quieter_wither",
 					"name": "Quieter Wither",
 					"description": "Decreases Wither sounds by 95%.",
-					"version": "Wither Head's explosions are not affected. Install Quieter Explosions to quieten those sounds."
+					"message": {
+						"text": "Wither Head's explosions are not affected. Install <b>Quieter Explosions</b> to quieten those sounds.",
+						"severity": "warn"
+					}
 				},
 				{
 					"id": "quieter_wolves",
@@ -824,13 +832,19 @@
 					"id": "visual_infested_stone_items",
 					"name": "Visual Infested Stone (Items)",
 					"description": "Adds a border around Infested Stone in the inventory.",
-					"version": "This will NOT affect the placed blocks."
+					"message": {
+						"text": "This will NOT affect the placed blocks.",
+						"severity": "error"
+					}
 				},
 				{
 					"id": "visual_waxed_copper_items",
 					"name": "Visual Waxed Copper (Items)",
 					"description": "Adds a border around Waxed Copper in the inventory.",
-					"version": "This will NOT affect the placed blocks."
+					"message": {
+						"text": "This will NOT affect the placed blocks.",
+						"severity": "error"
+					}
 				},
 				{
 					"id": "different_stems",
