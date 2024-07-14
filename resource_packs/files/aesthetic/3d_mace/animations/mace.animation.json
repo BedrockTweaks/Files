@@ -1,7 +1,7 @@
 {
 	"format_version": "1.8.0",
 	"animations": {
-		"animation.mace.third_person": {
+		"animation.rp.bt.mace_third_person": {
 			"loop": true,
 			"bones": {
 				"mace": {
@@ -10,7 +10,7 @@
 				}
 			}
 		},
-		"animation.mace.first_person": {
+		"animation.rp.bt.mace_first_person": {
 			"loop": true,
 			"bones": {
 				"mace": {
