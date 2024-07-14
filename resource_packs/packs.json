@@ -1014,11 +1014,6 @@
 					"description": "Renders the Totem of Undying as completely invisible when in first person mode."
 				},
 				{
-					"id": "smaller_utilities",
-					"name": "Smaller Utilities",
-					"description": "Makes utility items such as food, Totems and Firework Rockets smaller in your mainhand and offhand."
-				},
-				{
 					"id": "short_swords",
 					"name": "Short Swords",
 					"description": "Makes the length of all swords shorter for easier visibility."
