@@ -1,5 +1,9 @@
 {
-	"format_version": "1.1.0",
+	"format_version": [
+		1,
+		1,
+		0
+	],
 	"warped_nylium": {
 		"isotropic": {
 			"down": true,
