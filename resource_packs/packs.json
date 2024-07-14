@@ -865,7 +865,7 @@
 				{
 					"id": "sticky_piston_sides",
 					"name": "Sticky Piston Sides",
-					"description": "names Slime on the sides of Sticky Pistons to allow players to easily differentiate them from regular pistons."
+					"description": "Displays Slime on the sides of Sticky Pistons to allow players to easily differentiate them from regular pistons."
 				},
 				{
 					"id": "directional_hoppers",
@@ -1012,11 +1012,6 @@
 					"id": "invisible_totem",
 					"name": "Invisible Totem",
 					"description": "Renders the Totem of Undying as completely invisible when in first person mode."
-				},
-				{
-					"id": "smaller_utilities",
-					"name": "Smaller Utilities",
-					"description": "Makes utility items such as food, Totems and Firework Rockets smaller in your mainhand and offhand."
 				},
 				{
 					"id": "short_swords",
@@ -2244,18 +2239,13 @@
 			]
 		},
 		{
-			"id": "fixes",
-			"name": "Fixes",
+			"id": "fixes_and_consistency",
+			"name": "Fixes and Consistency",
 			"packs": [
 				{
 					"id": "piston_inner_fix",
 					"name": "Piston Inner Fix",
 					"description": "Fixes Inner Piston texture hole to match the arm size."
-				},
-				{
-					"id": "smoker_bottom_fix",
-					"name": "Smoker Bottom Fix",
-					"description": "Fixes miss placed pixel in the bottom of the smoker."
 				},
 				{
 					"id": "updated_observer_texture",
@@ -2268,6 +2258,11 @@
 					"description": "Adds some extra pixels to the Redstone Wire texture to make sure the whole line joins up."
 				},
 				{
+					"id": "consistent_blank_decorated_pot",
+					"name": "Consistent Blank Decorated Pot",
+					"description": "Adds the gold trim to blank decorated pot sides to match the decorated sides."
+				},
+				{
 					"id": "consistent_buckets",
 					"name": "Consistent Buckets",
 					"description": "Moves empty, Water, Lava, and Powder Snow Buckets down by 1 pixel to make them consistent with Fish and Axolotl Buckets."
@@ -2276,16 +2271,6 @@
 					"id": "consistent_tadpole_bucket",
 					"name": "Consistent Tadpole Bucket",
 					"description": "Recolors the water inside the Tadpole Bucket to match the rest of the Water and Fish Buckets."
-				},
-				{
-					"id": "consistent_oars",
-					"name": "Consistent Oars",
-					"description": "Recolors the oars on all boat items to match the boat color itself."
-				},
-				{
-					"id": "consistent_helmets",
-					"name": "Consistent Helmets",
-					"description": "Adds nose-pieces to the helmet items that are missing them (iron, gold & diamond)."
 				},
 				{
 					"id": "cactus_bottom_fix",
@@ -2298,9 +2283,19 @@
 					"description": "Changes the textures on all the cocoa beans stages to use proper proportions."
 				},
 				{
-					"id": "pixel_consistent_bat",
-					"name": "Pixel Consistent Bat",
-					"description": "Retextures the Bat's texture to be consistent with its size."
+					"id": "consistent_helmets",
+					"name": "Consistent Helmets",
+					"description": "Adds nose-pieces to the helmet items that are missing them (iron, gold & diamond)."
+				},
+				{
+					"id": "brighter_rib_armor_trim",
+					"name": "Brighter Rib Armor Trim",
+					"description": "Brightens the Rib Armor Trim to match the coloring of the other armor trims."
+				},
+				{
+					"id": "hanging_sign_logs",
+					"name": "Hanging Sign Logs",
+					"description": "Retextures the beams of hanging signs to logs to match signs' posts."
 				},
 				{
 					"id": "pixel_consistent_ghast",
@@ -2353,9 +2348,19 @@
 					"description": "Fixes the Blaze's rods' color on the bottom face."
 				},
 				{
+					"id": "brewing_stand_icons_fix",
+					"name": "Brewing Stand Icons Fix",
+					"description": "Removes the extra pixels on the Brewing Stand's potion slot icons."
+				},
+				{
 					"id": "nicer_fast_leaves",
 					"name": "Nicer Fast Leaves",
 					"description": "Replaces the random green parts in leaves to a darker green when having fancy leaves disabled."
+				},
+				{
+					"id": "consistent_smooth_stone",
+					"name": "Consistent Smooth Stone",
+					"description": "Gives the Smooth Stone texture the same bevel as its slab counterpart."
 				},
 				{
 					"id": "double_slab_fix",
@@ -2371,6 +2376,11 @@
 					"id": "cloak_fix",
 					"name": "Cloak Fix",
 					"description": "Fixes model of Villagers, Witches and Evokers so the cloak includes the missing bottom pixels."
+				},
+				{
+					"id": "smoker_bottom_fix",
+					"name": "Smoker Bottom Fix",
+					"description": "Fixes the misplaced pixel in the Smoker's bottom texture."
 				}
 			]
 		}
@@ -2558,15 +2568,22 @@
 		{
 			"id": "extras/pixel_consistent/pixel_consistent_bacon_beam",
 			"combines": [
-				"fixes/pixel_consistent_beacon_beam",
+				"fixes_and_consistency/pixel_consistent_beacon_beam",
 				"fun/bacon_beam"
 			]
 		},
 		{
 			"id": "extras/pixel_consistent/pixel_consistent_wither_bee",
 			"combines": [
-				"fixes/pixel_consistent_wither",
+				"fixes_and_consistency/pixel_consistent_wither",
 				"fun/wither_bee"
+			]
+		},
+		{
+			"id": "extras/utility/updated_directional_observers_texture",
+			"combines": [
+				"fixes_and_consistency/updated_observer_texture",
+				"utility/directional_observers"
 			]
 		},
 		{
