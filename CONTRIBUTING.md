@@ -259,7 +259,7 @@ export interface Pack {
 
 /*
  * Pack Version is a string as follows: "<minecraft_version> - <pack_version>"
- * minecraft_version is the minumin major version of the game the pack is compatible with
+ * minecraft_version is the minimum major version of the game the pack is compatible with
  * pack_version is the version of the pack for that minecraft update, each mc update it resets
  * example:
  * (version update)     "1.21 - 1.0.0"
