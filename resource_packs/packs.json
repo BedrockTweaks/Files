@@ -222,6 +222,11 @@
 					"description": "Makes Dark Oak Leaves darker than Oak Leaves."
 				},
 				{
+					"id": "golden_savanna",
+					"name": "Golden Savanna",
+					"description": "Recolors Savanna biomes to have beautiful golden grass."
+				},
+				{
 					"id": "lush_grass_all_round",
 					"name": "Lush Grass (Mostly) All 'Round",
 					"description": "Makes most of the world use a lush green colormap.",
@@ -2425,6 +2430,13 @@
 			"combines": [
 				"variation/variated_dirt",
 				"terrain/pebbleless_dirt"
+			]
+		},
+		{
+			"id": "extras/dirt/golden_savanna_grass_sides",
+			"combines": [
+				"terrain/golden_savanna",
+				"terrain/lower_and_sides/grass_sides"
 			]
 		},
 		{
