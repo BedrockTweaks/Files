@@ -838,6 +838,11 @@
 					"version": "This will NOT affect the placed blocks."
 				},
 				{
+					"id": "fully_aged_amethyst_cluster_marker",
+					"name": "Fully Aged Amethyst Cluster Marker",
+					"description": "Adds an animated glint to all fully aged amethyst clusters"
+				},
+				{
 					"id": "different_stems",
 					"name": "Different Stems",
 					"description": "Changes Melon and Pumpkin stems to reflect their fruit color."
