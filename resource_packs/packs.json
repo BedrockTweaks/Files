@@ -2212,11 +2212,6 @@
 					"description": "Retextures the Bogged to the Mossy Skeleton from Minecraft: Dungeons."
 				},
 				{
-					"id": "dungeons_alex_and_steve",
-					"name": "Dungeons Alex & Steve",
-					"description": "Gives Alex and Steve their textures from Minecraft: Dungeons."
-				},
-				{
 					"id": "dungeons_dirt",
 					"name": "Dungeons Dirt",
 					"description": "Gives Dirt its texture from Minecraft: Dungeons."
