@@ -16,6 +16,11 @@
 					"description": "Retextures the Sun and Moon textures to give the illusion of being 3D."
 				},
 				{
+					"id": "3d_mace",
+					"name": "3D Mace",
+					"description": "Remodels the Mace to appear in 3D."
+				},
+				{
 					"id": "alternate_block_destruction",
 					"name": "Alternate Block Destruction",
 					"description": "Changes the breaking texture of blocks to a messy ring around the outside."
@@ -1017,11 +1022,6 @@
 					"id": "invisible_totem",
 					"name": "Invisible Totem",
 					"description": "Renders the Totem of Undying as completely invisible when in first person mode."
-				},
-				{
-					"id": "smaller_utilities",
-					"name": "Smaller Utilities",
-					"description": "Makes utility items such as food, Totems and Firework Rockets smaller in your mainhand and offhand."
 				},
 				{
 					"id": "short_swords",
