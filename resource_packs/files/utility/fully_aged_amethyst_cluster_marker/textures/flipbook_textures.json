@@ -1,0 +1,7 @@
+[
+	{
+		"flipbook_texture": "textures/blocks/amethyst_cluster",
+		"atlas_tile": "amethyst_cluster",
+		"ticks_per_frame": 1
+	}
+]
