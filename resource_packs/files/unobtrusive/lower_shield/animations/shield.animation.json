@@ -5,8 +5,16 @@
 			"loop": true,
 			"bones": {
 				"shield": {
-					"position": [-12.0, 13.5, -12.0],
-					"rotation": [76.0, -119.0, -34.0]
+					"position": [
+						-12.0,
+						13.5,
+						-12.0
+					],
+					"rotation": [
+						76.0,
+						-119.0,
+						-34.0
+					]
 				}
 			}
 		},
@@ -19,8 +27,16 @@
 						17.0,
 						"(query.get_equipped_item_name == 'bow') && (query.main_hand_item_use_duration > 0.0f) ? -25.0 : 2.0"
 					],
-					"rotation": [0.0, 185.0, 178.0],
-					"scale": [-1.0, 1.0, 1.0]
+					"rotation": [
+						0.0,
+						185.0,
+						178.0
+					],
+					"scale": [
+						-1.0,
+						1.0,
+						1.0
+					]
 				}
 			}
 		},
@@ -33,7 +49,11 @@
 						"c.item_slot != 'main_hand' ? (-1) + q.shield_blocking_bob : q.shield_blocking_bob",
 						2.0
 					],
-					"rotation": [0.0, 0.0, 10.0]
+					"rotation": [
+						0.0,
+						0.0,
+						10.0
+					]
 				}
 			}
 		}

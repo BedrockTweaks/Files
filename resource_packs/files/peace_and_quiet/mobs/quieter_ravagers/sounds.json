@@ -1,0 +1,14 @@
+{
+	"entity_sounds": {
+		"entities": {
+			"ravager": {
+				"events": {
+					"ambient.in.raid": {
+						"volume": 0.15
+					}
+				},
+				"volume": 0.05
+			}
+		}
+	}
+}

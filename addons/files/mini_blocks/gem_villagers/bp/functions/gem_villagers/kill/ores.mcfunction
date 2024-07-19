@@ -1,1 +1,0 @@
-kill @e[type=bt:gv.ores,c=1]

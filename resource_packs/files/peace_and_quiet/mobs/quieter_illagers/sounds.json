@@ -1,0 +1,33 @@
+{
+	"entity_sounds": {
+		"entities": {
+			"evocation_fang": {
+				"volume": 0.04
+			},
+			"evocation_illager": {
+				"events": {
+					"ambient.in.raid": {
+						"volume": 0.15
+					}
+				},
+				"volume": 0.05
+			},
+			"pillager": {
+				"events": {
+					"ambient.in.raid": {
+						"volume": 0.15
+					}
+				},
+				"volume": 0.05
+			},
+			"vindicator": {
+				"events": {
+					"ambient.in.raid": {
+						"volume": 0.15
+					}
+				},
+				"volume": 0.05
+			}
+		}
+	}
+}

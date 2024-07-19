@@ -1,0 +1,116 @@
+{
+	"entity_sounds": {
+		"entities": {
+			"parrot": {
+				"events": {
+					"ambient": {
+						"volume": 0.035
+					},
+					"death": {
+						"volume": 0.05
+					},
+					"hurt": {
+						"volume": 0.05
+					},
+					"imitate.blaze": {
+						"volume": 0.02
+					},
+					"imitate.breeze": {
+						"volume": 0.035
+					},
+					"imitate.cave_spider": {
+						"volume": 0.03
+					},
+					"imitate.creeper": {
+						"volume": 0.03
+					},
+					"imitate.drowned": {
+						"volume": 0.03
+					},
+					"imitate.elder_guardian": {
+						"volume": 0.035
+					},
+					"imitate.ender_dragon": {
+						"volume": 0.01
+					},
+					"imitate.enderman": {
+						"volume": 0.025
+					},
+					"imitate.endermite": {
+						"volume": 0.035
+					},
+					"imitate.evocation_illager": {
+						"volume": 0.03
+					},
+					"imitate.ghast": {
+						"volume": 0.035
+					},
+					"imitate.husk": {
+						"volume": 0.03
+					},
+					"imitate.illusion_illager": {
+						"volume": 0.035
+					},
+					"imitate.magma_cube": {
+						"volume": 0.03
+					},
+					"imitate.panda": {
+						"volume": 0.035
+					},
+					"imitate.polar_bear": {
+						"volume": 0.035
+					},
+					"imitate.shulker": {
+						"volume": 0.02
+					},
+					"imitate.silverfish": {
+						"volume": 0.035
+					},
+					"imitate.skeleton": {
+						"volume": 0.05
+					},
+					"imitate.slime": {
+						"volume": 0.03
+					},
+					"imitate.spider": {
+						"volume": 0.03
+					},
+					"imitate.stray": {
+						"volume": 0.03
+					},
+					"imitate.vex": {
+						"volume": 0.04
+					},
+					"imitate.vindication_illager": {
+						"volume": 0.03
+					},
+					"imitate.warden": {
+						"volume": 0.04
+					},
+					"imitate.witch": {
+						"volume": 0.025
+					},
+					"imitate.wither": {
+						"volume": 0.01
+					},
+					"imitate.wither_skeleton": {
+						"volume": 0.035
+					},
+					"imitate.wolf": {
+						"volume": 0.03
+					},
+					"imitate.zombie": {
+						"volume": 0.03
+					},
+					"imitate.zombie_pigman": {
+						"volume": 0.02
+					},
+					"imitate.zombie_villager": {
+						"volume": 0.03
+					}
+				},
+				"volume": 0.05
+			}
+		}
+	}
+}

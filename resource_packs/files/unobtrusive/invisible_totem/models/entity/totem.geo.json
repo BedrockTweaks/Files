@@ -8,7 +8,11 @@
 				"texture_height": 64,
 				"visible_bounds_width": 3,
 				"visible_bounds_height": 3.5,
-				"visible_bounds_offset": [0, 1.25, 0]
+				"visible_bounds_offset": [
+					0,
+					1.25,
+					0
+				]
 			},
 			"bones": [
 				{
@@ -16,10 +20,26 @@
 					"binding": "q.item_slot_to_bone_name(c.item_slot)",
 					"texture_meshes": [
 						{
-							"local_pivot": [3.8, -1.0, 10.9],
-							"position": [0.0, 0.0, 0.0],
-							"rotation": [-10.0, -15.0, 10.0],
-							"scale": [0.15, 0.15, 0.15],
+							"local_pivot": [
+								3.8,
+								-1.0,
+								10.9
+							],
+							"position": [
+								0.0,
+								0.0,
+								0.0
+							],
+							"rotation": [
+								-10.0,
+								-15.0,
+								10.0
+							],
+							"scale": [
+								0.15,
+								0.15,
+								0.15
+							],
 							"texture": "default"
 						}
 					]
@@ -29,10 +49,26 @@
 					"binding": "q.item_slot_to_bone_name(c.item_slot)",
 					"texture_meshes": [
 						{
-							"local_pivot": [4.0, -1.5, 9.5],
-							"position": [0.0, 0.0, 0.0],
-							"rotation": [-10.0, 17, 0.0],
-							"scale": [0.15, 0.15, 0.15],
+							"local_pivot": [
+								4.0,
+								-1.5,
+								9.5
+							],
+							"position": [
+								0.0,
+								0.0,
+								0.0
+							],
+							"rotation": [
+								-10.0,
+								17,
+								0.0
+							],
+							"scale": [
+								0.15,
+								0.15,
+								0.15
+							],
 							"texture": "default"
 						}
 					]

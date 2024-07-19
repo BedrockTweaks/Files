@@ -1,0 +1,9 @@
+{
+	"entity_sounds": {
+		"entities": {
+			"blaze": {
+				"volume": 0.05
+			}
+		}
+	}
+}
