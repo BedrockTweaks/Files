@@ -1,0 +1,14 @@
+{
+	"entity_sounds": {
+		"entities": {
+			"creeper": {
+				"events": {
+					"fuse": {
+						"volume": 0.05
+					}
+				},
+				"volume": 0.05
+			}
+		}
+	}
+}

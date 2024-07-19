@@ -1,0 +1,9 @@
+{
+	"entity_sounds": {
+		"entities": {
+			"allay": {
+				"volume": 0.05
+			}
+		}
+	}
+}

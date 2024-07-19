@@ -1,0 +1,50 @@
+{
+	"entity_sounds": {
+		"entities": {
+			"cod": {
+				"events": {
+					"flop": {
+						"volume": 0.05
+					},
+					"step": {
+						"volume": 0.0075
+					}
+				},
+				"volume": 0.05
+			},
+			"salmon": {
+				"events": {
+					"flop": {
+						"volume": 0.05
+					},
+					"step": {
+						"volume": 0.0075
+					}
+				},
+				"volume": 0.05
+			},
+			"tropicalfish": {
+				"events": {
+					"flop": {
+						"volume": 0.05
+					},
+					"step": {
+						"volume": 0.0075
+					}
+				},
+				"volume": 0.05
+			},
+			"pufferfish": {
+				"events": {
+					"flop": {
+						"volume": 0.05
+					},
+					"step": {
+						"volume": 0.0075
+					}
+				},
+				"volume": 0.05
+			}
+		}
+	}
+}

@@ -1,0 +1,28 @@
+{
+	"entity_sounds": {
+		"entities": {
+			"cat": {
+				"events": {
+					"death": {
+						"volume": 0.025
+					},
+					"hurt": {
+						"volume": 0.0225
+					},
+					"tempt": {
+						"volume": 0.035
+					}
+				},
+				"volume": 0.05
+			},
+			"ocelot": {
+				"events": {
+					"hurt": {
+						"volume": 0.0225
+					}
+				},
+				"volume": 0.05
+			}
+		}
+	}
+}

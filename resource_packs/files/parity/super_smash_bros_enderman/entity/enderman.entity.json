@@ -30,14 +30,28 @@
 				"scary_face": "animation.rp.bt.enderman.scary_face"
 			},
 			"animation_controllers": [
-				{ "look_at_target": "controller.animation.humanoid.look_at_target" },
-				{ "move": "controller.animation.humanoid.move" },
-				{ "attack": "controller.animation.humanoid.attack" },
-				{ "bob": "controller.animation.humanoid.bob" },
-				{ "carrying": "controller.animation.enderman.carrying" },
-				{ "scary_face": "controller.animation.enderman.scary_face" }
+				{
+					"look_at_target": "controller.animation.humanoid.look_at_target"
+				},
+				{
+					"move": "controller.animation.humanoid.move"
+				},
+				{
+					"attack": "controller.animation.humanoid.attack"
+				},
+				{
+					"bob": "controller.animation.humanoid.bob"
+				},
+				{
+					"carrying": "controller.animation.enderman.carrying"
+				},
+				{
+					"scary_face": "controller.animation.enderman.scary_face"
+				}
 			],
-			"render_controllers": ["controller.render.enderman"],
+			"render_controllers": [
+				"controller.render.enderman"
+			],
 			"spawn_egg": {
 				"texture": "spawn_egg",
 				"texture_index": 7

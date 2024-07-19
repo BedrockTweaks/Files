@@ -4,16 +4,6 @@
 	"padding": 8,
 	"num_mip_levels": 4,
 	"texture_data": {
-		"planks": {
-			"textures": [
-				"textures/blocks/amethyst_block",
-				"textures/blocks/amethyst_block",
-				"textures/blocks/amethyst_block",
-				"textures/blocks/amethyst_block",
-				"textures/blocks/amethyst_block",
-				"textures/blocks/amethyst_block"
-			]
-		},
 		"acacia_planks": {
 			"textures": {
 				"variations": [

@@ -1,3 +1,5 @@
 {
-	"ui_defs": ["uibt/chat_tweaks.ui"]
+	"ui_defs": [
+		"uibt/chat_tweaks.ui"
+	]
 }
