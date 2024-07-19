@@ -63,12 +63,15 @@ We discourage the use of deprecated code and carefully review the use of experim
 | Spawn Rules          | dragon.spawn.json             | 
 | Trade Table          | dragon.trade.json             | 
 | Particles            | dragon_magic.particle.json    | 
-| Texture              | dragon.png                    | 
+| Texture              | dragon.png                    |
 
 \* md refers to the pack name initials, in this example "**M**agical **D**ragons", another example would be `bt:mb.ancient_debris` Bedrock
 Tweaks Mini Blocks Ancient Debris.
 
-Vanilla files should stay the same.
+Crafting Tweaks should be in a directory with the packs name inside the recipes directory to avoid conflicts. You can look at existing packs
+for reference.
+
+Vanilla files should not be renamed.
 
 ### JSON UI
 
@@ -84,9 +87,16 @@ The pack generator will add the packs to the generated file by priority order. I
 add the same file again.
 
 ### pack_icon.png
-You can find in /templates a template with just the border to override on top of the vanilla tweaks icon, and a full template for new packs or other cases.
+
+You can find in /templates a template with just the border to override on top of the vanilla tweaks icon, and a full template for new packs
+or other cases.
 
 If there is need to scale the template use closest neighbor instead of other sampling methods to avoid blurring.
+
+### Formatting
+
+JSON files should be formatted using 1 tab with size 4 for indentation.
+TS files should be formatted using 2 spaces for indentation.
 
 #
 
@@ -223,6 +233,9 @@ added CONTRIBUTING.md
 updated pull_request_template.md
 ```
 
+Pull requests preferably should contain only one pack, if you have multiple packs to submit, please create a separate pull request for each
+pack.
+
 ## packs.json
 
 These are the TS interfaces for the packs.json file.
@@ -248,12 +261,21 @@ export interface Category {
   id: string;
   name: string;
   packs: Pack[];
+  message?: Message;
 }
+
+export interface Message {
+  text: string;
+  severity: Severity;
+}
+
+export type Severity = 'success' | 'info' | 'warn' | 'error' | 'secondary';
 
 export interface Pack {
   id: string;
   name: string;
   description: string;
+  message?: Message;
   version?: string; // * only Addons and CT
 }
 
