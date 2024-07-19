@@ -310,6 +310,10 @@
 		{
 			"id": "aesthetic/more_zombies",
 			"name": "Aesthetic/More Zombies",
+			"message": {
+				"text": "Selecting <b>any</b> Zombie skins enables randomized variants between them",
+				"severity": "success"
+			},
 			"packs": [
 				{
 					"id": "steve_zombies",
