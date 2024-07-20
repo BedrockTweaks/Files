@@ -25,8 +25,8 @@
 				]
 			},
 			"animations": {
-				"third_person": "animation.bt.rp.mace_third_person",
-				"first_person": "animation.bt.rp.mace_first_person"
+				"third_person": "animation.rp.bt.mace_third_person",
+				"first_person": "animation.rp.bt.mace_first_person"
 			},
 			"render_controllers": [
 				"controller.render.item_default"
