@@ -1,0 +1,26 @@
+name: Add contributors to README
+
+on:
+  push:
+    branches:
+      - devel
+
+jobs:
+  contributions:
+    name: Add contributions to README
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          ref: 'main'
+
+      - name: Contribute List
+        uses: akhilmhdh/contributors-readme-action@v2.3.10
+        env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            use_username: true
