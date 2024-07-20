@@ -2860,6 +2860,14 @@
 		{
 			"filename": "zh_TW.lang",
 			"filepath": "/texts/zh_TW.lang"
+		},
+		{
+			"filename": "zombie.entity.json",
+			"filepath": "/entity/zombie.entity.json"
+		},
+		{
+			"filename": "zombie.rc.json",
+			"filepath": "/render_controllers/zombie.rc.json"
 		}
 	]
 }
