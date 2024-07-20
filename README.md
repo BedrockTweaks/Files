@@ -51,6 +51,13 @@ abc55, WavePlayz, r4isen1920, randomityguy, LukasPlaysGames, TheBlueShadow and a
                 </a>
             </td>
             <td align="center">
+                <a href="https://github.com/PAPISOP">
+                    <img src="https://avatars.githubusercontent.com/u/85175982?v=4" width="100;" alt="PAPISOP"/>
+                    <br />
+                    <sub><b>PAPISOP</b></sub>
+                </a>
+            </td>
+            <td align="center">
                 <a href="https://github.com/SquatchHunter">
                     <img src="https://avatars.githubusercontent.com/u/33571936?v=4" width="100;" alt="SquatchHunter"/>
                     <br />
@@ -58,10 +65,10 @@ abc55, WavePlayz, r4isen1920, randomityguy, LukasPlaysGames, TheBlueShadow and a
                 </a>
             </td>
             <td align="center">
-                <a href="https://github.com/yzabeast1">
-                    <img src="https://avatars.githubusercontent.com/u/78424865?v=4" width="100;" alt="yzabeast1"/>
+                <a href="https://github.com/MPAD2277">
+                    <img src="https://avatars.githubusercontent.com/u/77268603?v=4" width="100;" alt="MPAD2277"/>
                     <br />
-                    <sub><b>yzabeast1</b></sub>
+                    <sub><b>MPAD2277</b></sub>
                 </a>
             </td>
             <td align="center">
@@ -71,11 +78,13 @@ abc55, WavePlayz, r4isen1920, randomityguy, LukasPlaysGames, TheBlueShadow and a
                     <sub><b>Arachi</b></sub>
                 </a>
             </td>
+		</tr>
+		<tr>
             <td align="center">
-                <a href="https://github.com/PAPISOP">
-                    <img src="https://avatars.githubusercontent.com/u/85175982?v=4" width="100;" alt="PAPISOP"/>
+                <a href="https://github.com/yzabeast1">
+                    <img src="https://avatars.githubusercontent.com/u/78424865?v=4" width="100;" alt="yzabeast1"/>
                     <br />
-                    <sub><b>PAPISOP</b></sub>
+                    <sub><b>yzabeast1</b></sub>
                 </a>
             </td>
 		</tr>
