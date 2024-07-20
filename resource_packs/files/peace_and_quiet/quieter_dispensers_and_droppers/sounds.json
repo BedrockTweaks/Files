@@ -1,0 +1,10 @@
+{
+	"individual_event_sounds": {
+		"power.off": {
+			"volume": 0.05
+		},
+		"power.on": {
+			"volume": 0.05
+		}
+	}
+}

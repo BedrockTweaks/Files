@@ -1,0 +1,53 @@
+{
+	"entity_sounds": {
+		"entities": {
+			"bogged": {
+				"events": {
+					"step": {
+						"volume": 0.05
+					}
+				},
+				"volume": 0.05
+			},
+			"skeleton": {
+				"events": {
+					"hurt": {
+						"volume": 0.035
+					},
+					"step": {
+						"volume": 0.05
+					}
+				},
+				"volume": 0.05
+			},
+			"wither_skeleton": {
+				"events": {
+					"ambient": {
+						"volume": 0.05
+					},
+					"death": {
+						"volume": 0.05
+					},
+					"hurt": {
+						"volume": 0.05
+					},
+					"sound": {
+						"volume": 0.0075
+					},
+					"step": {
+						"volume": 0.05
+					}
+				},
+				"volume": 0.05
+			},
+			"stray": {
+				"events": {
+					"step": {
+						"volume": 0.05
+					}
+				},
+				"volume": 0.05
+			}
+		}
+	}
+}

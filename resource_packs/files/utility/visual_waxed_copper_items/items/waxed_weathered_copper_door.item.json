@@ -1,0 +1,11 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "minecraft:waxed_weathered_copper_door"
+		},
+		"components": {
+			"minecraft:icon": "waxed_weathered_copper_door"
+		}
+	}
+}

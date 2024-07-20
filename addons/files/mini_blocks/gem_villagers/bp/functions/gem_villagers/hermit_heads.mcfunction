@@ -1,1 +1,0 @@
-summon bt:gv.hermit_heads "§eHermit Heads§r"
