@@ -25,7 +25,8 @@
 			}
 		],
 		"result": {
-			"item": "minecraft:paper"
+			"item": "minecraft:paper",
+			"count": 3
 		}
 	}
 }

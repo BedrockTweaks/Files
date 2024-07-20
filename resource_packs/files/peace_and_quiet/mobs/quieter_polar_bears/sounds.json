@@ -1,0 +1,20 @@
+{
+	"entity_sounds": {
+		"entities": {
+			"polar_bear": {
+				"events": {
+					"hurt": {
+						"volume": 0.035
+					},
+					"mob.warning": {
+						"volume": 0.06
+					},
+					"step": {
+						"volume": 0.035
+					}
+				},
+				"volume": 0.05
+			}
+		}
+	}
+}

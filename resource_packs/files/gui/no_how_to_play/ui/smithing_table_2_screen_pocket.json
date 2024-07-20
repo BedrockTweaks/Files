@@ -1,0 +1,11 @@
+{
+	"namespace": "smithing_table_2_pocket",
+	"right_navigation_tabs": {
+		"modifications": [
+			{
+				"control_name": "pocket_tab_help_button",
+				"operation": "remove"
+			}
+		]
+	}
+}

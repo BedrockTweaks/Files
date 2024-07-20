@@ -1,1 +1,0 @@
-summon bt:gv.redstone "§eRedstone§r"

@@ -1,31 +1,31 @@
 {
-  "format_version": "1.21.0",
-  "minecraft:recipe_shaped": {
-	"description": {
-	  "identifier": "bt:mb.cherry_wood_from_stripped_log"
-	},
-	"tags": [
-	  "crafting_table"
-	],
-	"group": "wood",
-	"priority": -1,
-	"pattern": [
-	  "##",
-	  "##"
-	],
-	"key": {
-	  "#": {
-		"item": "minecraft:stripped_cherry_log"
-	  }
-	},
-	"unlock": [
-	  {
-		"item": "minecraft:stripped_cherry_log"
-	  }
-	],
-	"result": {
-	  "item": "minecraft:stripped_cherry_wood",
-	  "count": 4
+	"format_version": "1.21.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "bt:mb.cherry_wood_from_stripped_log"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"group": "wood",
+		"priority": -1,
+		"pattern": [
+			"##",
+			"##"
+		],
+		"key": {
+			"#": {
+				"item": "minecraft:stripped_cherry_log"
+			}
+		},
+		"unlock": [
+			{
+				"item": "minecraft:stripped_cherry_log"
+			}
+		],
+		"result": {
+			"item": "minecraft:stripped_cherry_wood",
+			"count": 4
+		}
 	}
-  }
 }

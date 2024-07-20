@@ -1,0 +1,22 @@
+{
+	"entity_sounds": {
+		"entities": {
+			"cave_spider": {
+				"events": {
+					"step": {
+						"volume": 0.0175
+					}
+				},
+				"volume": 0.05
+			},
+			"spider": {
+				"events": {
+					"step": {
+						"volume": 0.0175
+					}
+				},
+				"volume": 0.05
+			}
+		}
+	}
+}
