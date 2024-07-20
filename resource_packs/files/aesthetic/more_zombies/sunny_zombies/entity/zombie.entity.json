@@ -1,0 +1,26 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "minecraft:zombie",
+			"min_engine_version": "1.8.0",
+			"materials": {
+				"default": "zombie"
+			},
+			"textures": {
+				"sunny": "textures/entity/zombie/sunny"
+			},
+			"geometry": {
+				"default": "geometry.bt.zombie"
+			},
+			"render_controllers": [
+				"controller.render.bt.zombie"
+			],
+			"scripts": {
+				"initialize": [
+					"v.zombie_skin = math.random_integer(0, 9);"
+				]
+			}
+		}
+	}
+}
