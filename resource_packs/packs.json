@@ -912,6 +912,11 @@
 					}
 				},
 				{
+					"id": "fully_aged_crop_marker",
+					"name": "Fully Aged Crop Marker",
+					"description": "Adds an animated glint to all fully developed crops"
+				},
+				{
 					"id": "different_stems",
 					"name": "Different Stems",
 					"description": "Changes Melon and Pumpkin stems to reflect their fruit color."
