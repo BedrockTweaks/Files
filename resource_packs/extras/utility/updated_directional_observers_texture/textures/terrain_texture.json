@@ -30,14 +30,14 @@
 		},
 		"observer_east": {
 			"textures": [
-				"textures/blocks/observer_side",
-				"textures/blocks/observer_side_lit"
+				"textures/blocks/observer_side_east",
+				"textures/blocks/observer_side_east_lit"
 			]
 		},
 		"observer_west": {
 			"textures": [
-				"textures/blocks/observer_side",
-				"textures/blocks/observer_side_lit"
+				"textures/blocks/observer_side_west",
+				"textures/blocks/observer_side_west_lit"
 			]
 		}
 	}
