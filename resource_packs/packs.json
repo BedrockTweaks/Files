@@ -11,16 +11,6 @@
 			"name": "Aesthetic",
 			"packs": [
 				{
-					"id": "3d_sun_and_moon",
-					"name": "3D Sun & Moon",
-					"description": "Retextures the Sun and Moon textures to give the illusion of being 3D"
-				},
-				{
-					"id": "3d_mace",
-					"name": "3D Mace",
-					"description": "Remodels the Mace to appear in 3D"
-				},
-				{
 					"id": "alternate_block_destruction",
 					"name": "Alternate Block Destruction",
 					"description": "Changes the breaking texture of blocks to a messy ring around the outside"
@@ -1111,6 +1101,22 @@
 					"id": "invisible_item_frames",
 					"name": "Invisible Item Frames",
 					"description": "Makes normal and glowing item frames invisible. (Careful, you might lose them :P)"
+				}
+			]
+		},
+		{
+			"id":"3d",
+			"name":"3D",
+			"packs":[
+				{
+					"id": "3d_sun_and_moon",
+					"name": "3D Sun & Moon",
+					"description": "Retextures the Sun and Moon textures to give the illusion of being 3D"
+				},
+				{
+					"id": "3d_mace",
+					"name": "3D Mace",
+					"description": "Remodels the Mace to appear in 3D"
 				}
 			]
 		},
