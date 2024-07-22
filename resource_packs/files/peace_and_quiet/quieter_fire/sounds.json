@@ -1,28 +1,36 @@
 {
 	"individual_event_sounds": {
-		"fire": {
-			"volume": [
-				0.05,
-				0.1
-			]
-		},
-		"extinguish.fire": {
-			"volume": 0.025
-		},
-		"ignite": {
-			"volume": 0.05
-		},
-		"block.blastfurnace.fire_crackle": {
-			"volume": 0.15
-		},
-		"block.campfire.crackle": {
-			"volume": [
-				0.025,
-				0.075
-			]
-		},
-		"mob.player.hurt_on_fire": {
-			"volume": 0.05
+		"events": {
+			"fire": {
+				"sound": "fire.fire",
+				"volume": [
+					0.05,
+					0.1
+				]
+			},
+			"extinguish.fire": {
+				"sound" : "random.fizz",
+				"volume": 0.025
+			},
+			"ignite": {
+				"sound" : "fire.ignite",
+				"volume": 0.05
+			},
+			"block.blastfurnace.fire_crackle": {
+				"sound" : "block.blastfurnace.fire_crackle",
+				"volume": 0.15
+			},
+			"block.campfire.crackle": {
+				"sound" : "block.campfire.crackle",
+				"volume": [
+					0.025,
+					0.075
+				]
+			},
+			"mob.player.hurt_on_fire": {
+				"sound" : "mob.player.hurt_on_fire",
+				"volume": 0.05
+			}
 		}
 	}
 }

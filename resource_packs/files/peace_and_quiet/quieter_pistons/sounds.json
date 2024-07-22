@@ -1,10 +1,14 @@
 {
 	"individual_event_sounds": {
-		"piston.in": {
-			"volume": 0.025
-		},
-		"piston.out": {
-			"volume": 0.025
+		"events": {
+			"piston.in": {
+				"sound" : "tile.piston.in",
+				"volume": 0.025
+			},
+			"piston.out": {
+				"sound" : "tile.piston.out",
+				"volume": 0.025
+			}
 		}
 	}
 }
