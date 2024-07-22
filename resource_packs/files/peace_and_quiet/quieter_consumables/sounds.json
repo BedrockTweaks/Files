@@ -3,12 +3,15 @@
 		"defaults": {
 			"events": {
 				"drink": {
+					"sound": "random.drink",
 					"volume": 0.0175
 				},
 				"drink.honey": {
+					"sound": "random.drink_honey",
 					"volume": 0.025
 				},
 				"eat": {
+					"sound": "random.eat",
 					"volume": [
 						0.025,
 						0.055
