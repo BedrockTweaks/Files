@@ -3,12 +3,15 @@
 		"sculk_sensor": {
 			"events": {
 				"break": {
+					"sound": "break.sculk_sensor",
 					"volume": 0.05
 				},
 				"hit": {
+					"sound": "hit.sculk_sensor",
 					"volume": 0.0175
 				},
 				"place": {
+					"sound": "place.sculk_sensor",
 					"volume": 0.04
 				}
 			},
@@ -18,12 +21,15 @@
 	"individual_event_sounds": {
 		"events": {
 			"block.sculk_sensor.place": {
+				"sound" : "clicking.sculk_sensor",
 				"volume": 0.05
 			},
 			"power.off.sculk_sensor": {
+				"sound" : "power.off.sculk_sensor",
 				"volume": 0.365
 			},
 			"power.on.sculk_sensor": {
+				"sound" : "power.on.sculk_sensor",
 				"volume": 0.365
 			}
 		}
@@ -33,15 +39,19 @@
 			"sculk_sensor": {
 				"events": {
 					"fall": {
+						"sound" : "fall.sculk_sensor",
 						"volume": 0.4
 					},
 					"jump": {
+						"sound" : "jump.sculk_sensor",
 						"volume": 0.12
 					},
 					"land": {
+						"sound" : "land.sculk_sensor",
 						"volume": 0.14
 					},
 					"step": {
+						"sound" : "step.sculk_sensor",
 						"volume": 0.17
 					}
 				},

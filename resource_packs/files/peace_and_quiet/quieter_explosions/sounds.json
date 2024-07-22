@@ -2,6 +2,7 @@
 	"individual_event_sounds": {
 		"events": {
 			"explode": {
+				"sound": "random.explode",
 				"volume": 0.2
 			}
 		}
