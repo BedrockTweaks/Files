@@ -4,6 +4,7 @@
         "description": {
             "identifier": "bt:ci.powered_rail"
     	},
+		
 		"tags": [ 
 			"crafting_table" 
 		],
