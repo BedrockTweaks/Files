@@ -1,0 +1,23 @@
+{
+	"format_version": "1.10.0",
+	"render_controllers": {
+		"controller.render.bt.zombie": {
+			"arrays": {
+				"textures": {
+					"Array.skin": [
+						"Texture.kai"
+					]
+				}
+			},
+			"geometry": "Geometry.default",
+			"materials": [
+				{
+					"*": "Material.default"
+				}
+			],
+			"textures": [
+				"Array.skin[v.zombie_skin]"
+			]
+		}
+	}
+}
