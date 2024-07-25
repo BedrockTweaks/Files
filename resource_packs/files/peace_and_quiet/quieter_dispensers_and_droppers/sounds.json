@@ -2,11 +2,9 @@
 	"individual_event_sounds": {
 		"events": {
 			"power.off": {
-				"sound": "random.click",
 				"volume": 0.05
 			},
 			"power.on": {
-				"sound": "random.click",
 				"volume": 0.05
 			}
 		}
