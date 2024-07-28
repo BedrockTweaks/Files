@@ -2269,11 +2269,6 @@
 			"name": "Parity",
 			"packs": [
 				{
-					"id": "java_menu_title",
-					"name": "Java Menu Title",
-					"description": "Gives the title on the main menu screen its look from Minecraft: Java Edition"
-				},
-				{
 					"id": "java_boom",
 					"name": "Java Boom",
 					"description": "Gives Explosion particles their texture from Minecraft: Java Edition"
