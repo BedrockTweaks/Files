@@ -35,6 +35,12 @@
 					"version": "1.21 - 1.0.0"
 				},
 				{
+					"id": "copper_powered_rails",
+					"name": "Copper Powered Rails",
+					"description": "Lets you craft powered rails from copper. (But you can still craft them from gold!)",
+					"version": "1.21 - 1.0.0"
+				},
+				{
 					"id": "charcoal_to_black_dye",
 					"name": "Charcoal to Black Dye",
 					"description": "Allows you to craft Charcoal into Black Dye.",
