@@ -1105,8 +1105,8 @@
 			]
 		},
 		{
-			"id":"3d",
-			"name":"3D",
+			"id": "3d",
+			"name": "3D",
 			"packs":[
 				{
 					"id": "3d_sun_and_moon",
