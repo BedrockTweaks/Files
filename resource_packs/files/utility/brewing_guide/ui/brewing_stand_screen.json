@@ -17,5 +17,11 @@
 				}
 			}
 		]
+	},
+	"brewing_stand_screen@common.inventory_screen_common": {
+		"variables": [],
+		"$screen_content": "brewing_stand.brewing_stand_panel",
+		"$screen_bg_content": "common.screen_background",
+		"$screen_background_alpha": 0.4
 	}
 }
