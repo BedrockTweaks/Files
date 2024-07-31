@@ -176,8 +176,8 @@
 					"description": "Retextures the Golden Helmet to look like a crown"
 				},
 				{
-					"id": "classic_netherite_armor",
-					"name": "Classic Netherite Armor",
+					"id": "classic_style_netherite_armor",
+					"name": "Classic Style Netherite Armor",
 					"description": "Netherite armor in the style of the other armors"
 				},
 				{
