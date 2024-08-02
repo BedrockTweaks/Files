@@ -556,7 +556,7 @@
 				{
 					"id": "quieter_fire",
 					"name": "Quieter Fire",
-					"description": "Decrease Fire sounds by 95%."
+					"description": "Decreases Fire sounds by 95%."
 				},
 				{
 					"id": "quieter_nether_portals",
@@ -581,7 +581,7 @@
 				{
 					"id": "quieter_sculk_shriekers",
 					"name": "Quieter Sculk Shriekers",
-					"description": "Makes  Sculk Shrieker sounds by 95%."
+					"description": "Decreases Sculk Shrieker sounds by 95%."
 				},
 				{
 					"id": "quieter_pistons",
@@ -591,7 +591,7 @@
 				{
 					"id": "no_cave_sounds",
 					"name": "No Cave Sounds",
-					"description": "Removes the spooky cave sounds."
+					"description": "Mutes the spooky cave sounds."
 				}
 			]
 		},
@@ -661,7 +661,11 @@
 				{
 					"id": "quieter_creepers",
 					"name": "Quieter Creepers",
-					"description": "Decreases Creeper sounds by 95%."
+					"description": "Decreases Creeper sounds by 95%.",
+					"message": {
+						"text": "Creeper's explosion sounds aren't affected. Install <b>Quieter Explosions</b> to quieten those sounds.",
+						"severity": "warn"
+					}
 				},
 				{
 					"id": "quieter_dolphins",
