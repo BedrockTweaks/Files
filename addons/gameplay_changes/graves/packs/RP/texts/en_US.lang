@@ -1,0 +1,29 @@
+akorozes.graves.death_location=§eYour grave is at %1 %2 %3
+bt.graves.settings.title=Graves / Global Settings
+
+bt.graves.settings.list_all_graves=[ List All Graves ]
+bt.graves.settings.receive_grave_key=[ Receive Grave Key ]
+
+bt.graves.settings.enabled_color=§a█§r§8%s
+bt.graves.settings.disabled_color=§4█§r§8%s
+bt.graves.settings.edit_color=█%s
+bt.graves.settings.enabled=§aEnabled
+bt.graves.settings.disabled=§4Disabled
+bt.graves.settings.enable=§aClick to enable
+bt.graves.settings.disable=§4Click to disable
+bt.graves.settings.edit=Edit
+
+bt.graves.settings.grave_robbing=Grave Robbing
+bt.graves.settings.grave_robbing.description=§7When enabled, player can open graves they do not own. %1§8Default: Disabled%1§7Status:%2
+
+bt.graves.settings.xp_collection=XP Collection
+bt.graves.settings.xp_collection.description=§7When enabled, graves collect player XP on death. %1§8Default: Enabled%1§7Status:%2
+
+bt.graves.settings.grave_locating=Grave Locating
+bt.graves.settings.grave_locating.description=§7When enabled, players can see the coordinates of their graves. %1§8Default: Enabled%1§7Status:%2
+
+bt.graves.settings.despawn_time=Grave Despawn Time
+bt.graves.settings.despawn_time.description=§7The number of seconds after which a grave and it's contents are deleted.%1A grave's despawn timer only runs whole the grave is loaded.%1Enter §f0§7 to disable grave despawning. Items normally take §f300§7 seconds (5 minutes) to despawn.%1§8Accepts: whole numbers 0+%1Default: 0%1§7Current:%2
+bt.graves.settings.despawn_time.current=%s(Current: %d)
+bt.graves.settings.despawn_time.edit=Despawn time in seconds%1§8Accepts: whole numbers 0+
+bt.graves.settings.despawn_time.error=§4[Error] Despawn time must be a number
