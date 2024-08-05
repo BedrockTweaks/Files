@@ -1853,7 +1853,7 @@
 				{
 					"id": "old_planks",
 					"name": "Old Planks",
-					"description": "Reverts all planks to their old textures, including Warped and Crimson + their sign counterparts"
+					"description": "Reverts all planks and signs to their old textures, including modern plank types"
 				},
 				{
 					"id": "old_gravel",
