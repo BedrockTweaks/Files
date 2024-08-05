@@ -3,7 +3,9 @@ name: Add contributors to README
 on:
   push:
     branches:
-      - devel
+      - '**'
+      - '!master'
+      - '!devel'
 
 jobs:
   contributions:
@@ -13,14 +15,9 @@ jobs:
       contents: write
       pull-requests: write
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
-          ref: 'main'
-
       - name: Contribute List
         uses: akhilmhdh/contributors-readme-action@v2.3.10
         env:
-            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-            use_username: true
+          GITHUB_TOKEN: ${{ secrets.BT_CONTRIBUTORS_README_TOKEN }}
+          use_username: true
+          auto_detect_branch_protection: false
