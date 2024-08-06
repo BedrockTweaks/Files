@@ -11,16 +11,6 @@
 			"name": "Aesthetic",
 			"packs": [
 				{
-					"id": "3d_sun_and_moon",
-					"name": "3D Sun & Moon",
-					"description": "Retextures the Sun and Moon textures to give the illusion of being 3D"
-				},
-				{
-					"id": "3d_mace",
-					"name": "3D Mace",
-					"description": "Remodels the Mace to appear in 3D"
-				},
-				{
 					"id": "alternate_block_destruction",
 					"name": "Alternate Block Destruction",
 					"description": "Changes the breaking texture of blocks to a messy ring around the outside"
@@ -186,8 +176,8 @@
 					"description": "Retextures the Golden Helmet to look like a crown"
 				},
 				{
-					"id": "classic_netherite_armor",
-					"name": "Classic Netherite Armor",
+					"id": "classic_style_netherite_armor",
+					"name": "Classic Style Netherite Armor",
 					"description": "Netherite armor in the style of the other armors"
 				},
 				{
@@ -961,9 +951,9 @@
 					"description": "Displays Hunger Bar icons on all food names to show how much it will fill you up"
 				},
 				{
-					"id": "music_disc_redstone_level",
-					"name": "Music Disc Redstone Level",
-					"description": "Gives all Music Discs a redstone power level indicator in the tooltip"
+					"id": "music_disc_redstone_level_preview",
+					"name": "Music Disc Redstone Level Preview",
+					"description": "Displays the redstone power level for each music disk in the tooltip"
 				},
 				{
 					"id": "sticky_piston_sides",
@@ -1877,7 +1867,7 @@
 				{
 					"id": "old_planks",
 					"name": "Old Planks",
-					"description": "Reverts all planks to their old textures, including Warped and Crimson + their sign counterparts"
+					"description": "Reverts all planks and signs to their old textures, including modern plank types"
 				},
 				{
 					"id": "old_gravel",
