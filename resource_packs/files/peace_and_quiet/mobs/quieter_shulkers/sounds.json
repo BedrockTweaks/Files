@@ -8,12 +8,12 @@
 	},
 	"individual_event_sounds": {
 		"events": {
-			"shulkerbox.closed" : {
-        		"volume" : 0.025
-        	},
-			"shulkerbox.open" : {
+			"shulkerbox.closed": {
 				"volume" : 0.025
-        	}
+			},
+			"shulkerbox.open": {
+				"volume" : 0.025
+			}
 		}
 	}
 }
