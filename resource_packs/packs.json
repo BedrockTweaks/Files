@@ -13,92 +13,92 @@
 				{
 					"id": "3d_sun_and_moon",
 					"name": "3D Sun & Moon",
-					"description": "Retextures the Sun and Moon textures to give the illusion of being 3D."
+					"description": "Retextures the Sun and Moon textures to give the illusion of being 3D"
 				},
 				{
 					"id": "3d_mace",
 					"name": "3D Mace",
-					"description": "Remodels the Mace to appear in 3D."
+					"description": "Remodels the Mace to appear in 3D"
 				},
 				{
 					"id": "alternate_block_destruction",
 					"name": "Alternate Block Destruction",
-					"description": "Changes the breaking texture of blocks to a messy ring around the outside."
+					"description": "Changes the breaking texture of blocks to a messy ring around the outside"
 				},
 				{
 					"id": "black_nether_bricks",
 					"name": "Black Nether Bricks",
-					"description": "Changes the texture of Nether Bricks to make them black."
+					"description": "Changes the texture of Nether Bricks to make them black"
 				},
 				{
 					"id": "cherry_picking",
 					"name": "Cherry Picking",
-					"description": "Changes the texture of cake to remove the large cherry in the center."
+					"description": "Changes the texture of cake to remove the large cherry in the center"
 				},
 				{
 					"id": "unbundled_hay_bales",
 					"name": "Unbundled Hay Bales",
-					"description": "Gets rid of the red strings around Hay Bales."
+					"description": "Gets rid of the red strings around Hay Bales"
 				},
 				{
 					"id": "unbundled_dried_kelp",
 					"name": "Unbundled Dried Kelp",
-					"description": "Gets rid of the white strings around Dried Kelp."
+					"description": "Gets rid of the white strings around Dried Kelp"
 				},
 				{
 					"id": "solid_honey",
 					"name": "Solid Honey",
-					"description": "Eliminates Honey Block transparency."
+					"description": "Eliminates Honey Block transparency"
 				},
 				{
 					"id": "solid_slime",
 					"name": "Solid Slime",
-					"description": "Eliminates Slime Block transparency."
+					"description": "Eliminates Slime Block transparency"
 				},
 				{
 					"id": "desaturated_purpur",
 					"name": "Desaturated Purpur",
-					"description": "Desaturates the color of all purpur blocks."
+					"description": "Desaturates the color of all purpur blocks"
 				},
 				{
 					"id": "desaturated_dark_oak",
 					"name": "Desaturated Dark Oak",
-					"description": "Desaturates Dark Oak Planks to give them a more neutral color."
+					"description": "Desaturates Dark Oak Planks to give them a more neutral color"
 				},
 				{
 					"id": "horizontal_nuggets",
 					"name": "Horizontal Nuggets",
-					"description": "Rotates Gold Nuggets to be consistent with the Iron Nugget."
+					"description": "Rotates Gold Nuggets to be consistent with the Iron Nugget"
 				},
 				{
 					"id": "vertical_nuggets",
 					"name": "Vertical Nuggets",
-					"description": "Rotates the Iron Nugget to be consistent with the Gold Nugget."
+					"description": "Rotates the Iron Nugget to be consistent with the Gold Nugget"
 				},
 				{
 					"id": "clean_wool",
 					"name": "Clean Wool",
-					"description": "Makes all wool blocks have a clean texture."
+					"description": "Makes all wool blocks have a clean texture"
 				},
 				{
 					"id": "softer_wool",
 					"name": "Softer Wool",
-					"description": "Lowers the contrast and smoothens all wool blocks."
+					"description": "Lowers the contrast and smoothens all wool blocks"
 				},
 				{
 					"id": "brown_leather",
 					"name": "Brown Leather",
-					"description": "Recolours all leather related items to use a similar palette to Leather Armor."
+					"description": "Recolours all leather related items to use a similar palette to Leather Armor"
 				},
 				{
 					"id": "red_iron_golem_flowers",
 					"name": "Red Iron Golem Flowers",
-					"description": "Changes the yellow flowers on the Iron Golem skin to red ones in order to match the poppies that they drop."
+					"description": "Changes the yellow flowers on the Iron Golem skin to red ones in order to match the poppies that they drop"
 				},
 				{
 					"id": "rename_stem_to_log",
 					"name": "Rename 'Stem' to 'Log'",
-					"description": "Renames 'Crimson/Warped Stem/Hyphae' to 'Crimson/Warped Log/Wood'."
+					"description": "Renames 'Crimson/Warped Stem/Hyphae' to 'Crimson/Warped Log/Wood'"
 				},
 				{
 					"id": "colorful_enchanting_table_particles",
@@ -108,107 +108,107 @@
 				{
 					"id": "hd_shield_banner_patterns",
 					"name": "HD Shield Banner Patterns",
-					"description": "Swaps out the regular pixel consistent shield banner pattern textures with their regular banner counterparts, so you can see your banner patterns on shields in all their glory."
+					"description": "Swaps out the regular pixel consistent shield banner pattern textures with their regular banner counterparts, so you can see your banner patterns on shields in all their glory"
 				},
 				{
 					"id": "pink_end_rods",
 					"name": "Pink End Rods",
-					"description": "Changes the gray base of End Rods to pink."
+					"description": "Changes the gray base of End Rods to pink"
 				},
 				{
 					"id": "ashless_campfires",
 					"name": "Ashless Campfires",
-					"description": "Removes the 'ash' from unlit Campfires and Soul Campfires."
+					"description": "Removes the 'ash' from unlit Campfires and Soul Campfires"
 				},
 				{
 					"id": "glass_doors_and_trapdoors",
 					"name": "Glass Doors & Trapdoors",
-					"description": "Adds uniquely shaped glass windows into Doors and Trapdoors."
+					"description": "Adds uniquely shaped glass windows into Doors and Trapdoors"
 				},
 				{
 					"id": "flint_tipped_arrows",
 					"name": "Flint Tipped Arrows",
-					"description": "Changes arrow sprites and entities to have Flint colored tips."
+					"description": "Changes arrow sprites and entities to have Flint colored tips"
 				},
 				{
 					"id": "splash_bottle_o_enchanting",
 					"name": "Splash Bottle o' Enchanting",
-					"description": "Makes the Bottle o' Enchanting take the same shape as a splash potion."
+					"description": "Makes the Bottle o' Enchanting take the same shape as a splash potion"
 				},
 				{
 					"id": "2d_spyglass",
 					"name": "2D Spyglass",
-					"description": "Removes the 3D model for the handheld Spyglass, using a 2D sprite instead."
+					"description": "Removes the 3D model for the handheld Spyglass, using a 2D sprite instead"
 				},
 				{
 					"id": "accurate_spyglass",
 					"name": "Accurate Spyglass",
-					"description": "Recolors the Spyglass to use Copper and Amethyst colors, to reflect its crafting recipe."
+					"description": "Recolors the Spyglass to use Copper and Amethyst colors, to reflect its crafting recipe"
 				},
 				{
 					"id": "accurate_scaffolding",
 					"name": "Accurate Scaffolding",
-					"description": "Recolors Scaffolding to use Bamboo and String colors to reflect its crafting recipe."
+					"description": "Recolors Scaffolding to use Bamboo and String colors to reflect its crafting recipe"
 				},
 				{
 					"id": "smoother_warped_planks",
 					"name": "Smoother Warped Planks",
-					"description": "Removes the harsh contrast from Warped Planks."
+					"description": "Removes the harsh contrast from Warped Planks"
 				},
 				{
 					"id": "consistent_bamboo_planks",
 					"name": "Consistent Bamboo Planks",
-					"description": "Makes Bamboo Planks and Bamboo Mosaics match the textures of the other plank types."
+					"description": "Makes Bamboo Planks and Bamboo Mosaics match the textures of the other plank types"
 				},
 				{
 					"id": "alternate_cut_copper",
 					"name": "Alternate Cut Copper",
-					"description": "Retextures Cut Copper blocks to resemble their look from their first appearence on Minecraft Live."
+					"description": "Retextures Cut Copper blocks to resemble their look from their first appearence on Minecraft Live"
 				},
 				{
 					"id": "polished_stones_to_bricks",
 					"name": "Polished Stones to Bricks",
-					"description": "Retextures Polished Granite, Andesite and Diorite to look like bricks."
+					"description": "Retextures Polished Granite, Andesite and Diorite to look like bricks"
 				},
 				{
 					"id": "singular_glazed_terracotta",
 					"name": "Singular Glazed Terracotta",
-					"description": "Retextures all Glazed Terracotta blocks to use a single non-rotating design."
+					"description": "Retextures all Glazed Terracotta blocks to use a single non-rotating design"
 				},
 				{
 					"id": "plain_leather_armor",
 					"name": "Plain Leather Armor",
-					"description": "Removes the brown overlay from Leather Armor."
+					"description": "Removes the brown overlay from Leather Armor"
 				},
 				{
 					"id": "golden_crown",
 					"name": "Golden Crown",
-					"description": "Retextures the Golden Helmet to look like a crown."
+					"description": "Retextures the Golden Helmet to look like a crown"
 				},
 				{
 					"id": "classic_netherite_armor",
 					"name": "Classic Netherite Armor",
-					"description": "Netherite armor in the style of the other armors."
+					"description": "Netherite armor in the style of the other armors"
 				},
 				{
 					"id": "allay_elytra",
 					"name": "Allay Elytra",
-					"description": "Changes Elytra to look like Allay wings."
+					"description": "Changes Elytra to look like Allay wings"
 				},
 				{
 					"id": "vex_elytra",
 					"name": "Vex Elytra",
-					"description": "Changes Elytra to look like Vex wings."
+					"description": "Changes Elytra to look like Vex wings"
 				},
 				{
 					"id": "phantom_elytra",
 					"name": "Phantom Elytra",
-					"description": "Changes Elytra to look like Phantom wings."
+					"description": "Changes Elytra to look like Phantom wings"
 				},
 				{
 					"id": "dragon_elytra",
 					"name": "Dragon Elytra",
-					"description": "Changes Elytra to look like Ender Dragon wings."
+					"description": "Changes Elytra to look like Ender Dragon wings"
 				}
 			]
 		},
@@ -219,91 +219,91 @@
 				{
 					"id": "darker_dark_oak_leaves",
 					"name": "Darker Dark Oak leaves",
-					"description": "Makes Dark Oak Leaves darker than Oak Leaves."
+					"description": "Makes Dark Oak Leaves darker than Oak Leaves"
 				},
 				{
 					"id": "golden_savanna",
 					"name": "Golden Savanna",
-					"description": "Recolors Savanna biomes to have beautiful golden grass."
+					"description": "Recolors Savanna biomes to have beautiful golden grass"
 				},
 				{
 					"id": "lush_grass_all_round",
 					"name": "Lush Grass (Mostly) All 'Round",
-					"description": "Makes most of the world use a lush green colormap.",
+					"description": "Makes most of the world use a lush green colormap",
 					"message": {
-						"text": "This affects the majority of biomes, but Minecraft has moved away from their previous method of coloring biomes, meaning its not as easy to change the colormap for many of the modern biomes.",
+						"text": "This affects the majority of biomes, but Minecraft has moved away from their previous method of coloring biomes, meaning its not as easy to change the colormap for many of the modern biomes",
 						"severity": "warn"
 					}
 				},
 				{
 					"id": "alternate_bedrock",
 					"name": "Alternate Bedrock",
-					"description": "Retextures bedrock to be closer to deepslate, making it darker and have less contrast."
+					"description": "Retextures bedrock to be closer to deepslate, making it darker and have less contrast"
 				},
 				{
 					"id": "circular_sun_and_moon",
 					"name": "Circular Sun & Moon",
-					"description": "Replaces the default square sun and moon, with a circular sun and moon."
+					"description": "Replaces the default square sun and moon, with a circular sun and moon"
 				},
 				{
 					"id": "circular_log_tops",
 					"name": "Circular Log Tops",
-					"description": "Tweaks all log and stripped log tops to be circular, including Nether Fungi stems."
+					"description": "Tweaks all log and stripped log tops to be circular, including Nether Fungi stems"
 				},
 				{
 					"id": "smoother_oak_log",
 					"name": "Smoother Oak Log",
-					"description": "Smoothens the texture of oak logs to make them less sharp."
+					"description": "Smoothens the texture of oak logs to make them less sharp"
 				},
 				{
 					"id": "smoother_stones",
 					"name": "Smoother Stones",
-					"description": "Smoothens the textures of Andesite, Diorite, and Granite to make them less noisy and more tolerable."
+					"description": "Smoothens the textures of Andesite, Diorite, and Granite to make them less noisy and more tolerable"
 				},
 				{
 					"id": "pebbleless_dirt",
 					"name": "Pebbleless Dirt",
-					"description": "Gets rid of the pebbles in Dirt, Rooted Dirt, and all Grass Block types."
+					"description": "Gets rid of the pebbles in Dirt, Rooted Dirt, and all Grass Block types"
 				},
 				{
 					"id": "pebbleless_coarse_dirt",
 					"name": "Pebbleless Coarse Dirt",
-					"description": "Gets rid of the pebbles in Coarse Dirt."
+					"description": "Gets rid of the pebbles in Coarse Dirt"
 				},
 				{
 					"id": "brighter_nether",
 					"name": "Brighter Nether",
-					"description": "Brightens the textures of blocks commonly found in the Nether."
+					"description": "Brightens the textures of blocks commonly found in the Nether"
 				},
 				{
 					"id": "clearer_water",
 					"name": "Clearer Water",
-					"description": "Makes Water clearer."
+					"description": "Makes Water clearer"
 				},
 				{
 					"id": "uniform_ores",
 					"name": "Uniform Ores",
-					"description": "Makes all ores take on the pattern of Diamond Ore."
+					"description": "Makes all ores take on the pattern of Diamond Ore"
 				},
 				{
 					"id": "fancy_sunflowers",
 					"name": "Fancy Sunflowers",
-					"description": "Retextures the heads of Sunflowers to bloom a bit more."
+					"description": "Retextures the heads of Sunflowers to bloom a bit more"
 				},
 				{
 					"id": "shorter_short_grass",
 					"name": "Shorter Short Grass",
-					"description": "Makes Short Grass slightly shorter."
+					"description": "Makes Short Grass slightly shorter"
 				},
 				{
 					"id": "shorter_tall_grass",
 					"name": "Shorter Tall Grass",
-					"description": "Makes Tall Grass slightly shorter."
+					"description": "Makes Tall Grass slightly shorter"
 				},
 				{
 					"id": "whiter_snow",
 					"name": "Whiter Snow",
-					"description": "Removes the blue tint from snow."
+					"description": "Removes the blue tint from snow"
 				}
 			]
 		},
@@ -311,54 +311,54 @@
 			"id": "aesthetic/more_zombies",
 			"name": "Aesthetic/ More Zombies",
 			"message": {
-				"text": "Selecting <b>any</b> Zombie skins enables randomized variants between them.",
+				"text": "Selecting <b>any</b> Zombie skins enables randomized variants between them",
 				"severity": "success"
 			},
 			"packs": [
 				{
 					"id": "steve_zombies",
 					"name": "Steve Zombies",
-					"description": "Retextures zombies to look like more like Steve."
+					"description": "Retextures zombies to look like more like Steve"
 				},
 				{
 					"id": "alex_zombies",
 					"name": "Alex Zombies",
-					"description": "Retextures zombies to look like Alex than Steve."
+					"description": "Retextures zombies to look like Alex than Steve"
 				},
 				{
 					"id": "ari_zombies",
 					"name": "Ari Zombies",
-					"description": "Retextures zombies to look like Ari than Steve."
+					"description": "Retextures zombies to look like Ari than Steve"
 				},
 				{
 					"id": "efe_zombies",
 					"name": "Efe Zombies",
-					"description": "Retextures zombies to look like Efe than Steve."
+					"description": "Retextures zombies to look like Efe than Steve"
 				},
 				{
 					"id": "kai_zombies",
 					"name": "Kai Zombies",
-					"description": "Retextures zombies to look like Kai than Steve."
+					"description": "Retextures zombies to look like Kai than Steve"
 				},
 				{
 					"id": "makena_zombies",
 					"name": "Makena Zombies",
-					"description": "Retextures zombies to look like Makena than Steve."
+					"description": "Retextures zombies to look like Makena than Steve"
 				},
 				{
 					"id": "noor_zombies",
 					"name": "Noor Zombies",
-					"description": "Retextures zombies to look like Noor than Steve."
+					"description": "Retextures zombies to look like Noor than Steve"
 				},
 				{
 					"id": "sunny_zombies",
 					"name": "Sunny Zombies",
-					"description": "Retextures zombies to look like Sunny than Steve."
+					"description": "Retextures zombies to look like Sunny than Steve"
 				},
 				{
 					"id": "zuri_zombies",
 					"name": "Zuri Zombies",
-					"description": "Retextures zombies to look like Zuri than Steve."
+					"description": "Retextures zombies to look like Zuri than Steve"
 				}
 			]
 		},
@@ -369,72 +369,72 @@
 				{
 					"id": "lower_grass",
 					"name": "Lower Grass",
-					"description": "Lowers the sides of Grass Blocks to provide a smoother and greener landscape."
+					"description": "Lowers the sides of Grass Blocks to provide a smoother and greener landscape"
 				},
 				{
 					"id": "grass_sides",
 					"name": "Grass Sides",
-					"description": "Completely covers the sides of Grass Blocks to provide a smoother and greener landscape."
+					"description": "Completely covers the sides of Grass Blocks to provide a smoother and greener landscape"
 				},
 				{
 					"id": "lower_mycelium",
 					"name": "Lower Mycelium",
-					"description": "Lowers the sides of Mycelium Blocks to provide a smoother and mushroomier landscape."
+					"description": "Lowers the sides of Mycelium Blocks to provide a smoother and mushroomier landscape"
 				},
 				{
 					"id": "mycelium_sides",
 					"name": "Mycelium Sides",
-					"description": "Completely covers the sides of Mycelium Blocks to provide a smoother and mushroomier landscape."
+					"description": "Completely covers the sides of Mycelium Blocks to provide a smoother and mushroomier landscape"
 				},
 				{
 					"id": "lower_grass_paths",
 					"name": "Lower Grass Paths",
-					"description": "Lowers the sides of Path Blocks to provide a smoother-looking pathway."
+					"description": "Lowers the sides of Path Blocks to provide a smoother-looking pathway"
 				},
 				{
 					"id": "grass_path_sides",
 					"name": "Grass Path Sides",
-					"description": "Completely covers the sides of Path Blocks to provide a smoother-looking pathway."
+					"description": "Completely covers the sides of Path Blocks to provide a smoother-looking pathway"
 				},
 				{
 					"id": "lower_podzol",
 					"name": "Lower Podzol",
-					"description": "Lowers the sides of Podzol Blocks to provide a smoother and more consistent landscape."
+					"description": "Lowers the sides of Podzol Blocks to provide a smoother and more consistent landscape"
 				},
 				{
 					"id": "podzol_sides",
 					"name": "Podzol Sides",
-					"description": "Completely covers the sides of Podzol Blocks to provide a smoother and more consistent landscape."
+					"description": "Completely covers the sides of Podzol Blocks to provide a smoother and more consistent landscape"
 				},
 				{
 					"id": "lower_snow",
 					"name": "Lower Snow",
-					"description": "Lowers the sides of Grass Blocks to provide a smoother and whiter snowy landscape."
+					"description": "Lowers the sides of Grass Blocks to provide a smoother and whiter snowy landscape"
 				},
 				{
 					"id": "snow_sides",
 					"name": "Snow Sides",
-					"description": "Completely covers the sides of Grass Blocks to provide a smoother and whiter snowy landscape."
+					"description": "Completely covers the sides of Grass Blocks to provide a smoother and whiter snowy landscape"
 				},
 				{
 					"id": "lower_crimson_nylium",
 					"name": "Lower Crimson Nylium",
-					"description": "Lowers the sides of Crimson Nylium to provide a smoother and redder landscape."
+					"description": "Lowers the sides of Crimson Nylium to provide a smoother and redder landscape"
 				},
 				{
 					"id": "crimson_nylium_sides",
 					"name": "Crimson Nylium Sides",
-					"description": "Completely covers the sides of Crimson Nylium to provide a smoother and redder landscape."
+					"description": "Completely covers the sides of Crimson Nylium to provide a smoother and redder landscape"
 				},
 				{
 					"id": "lower_warped_nylium",
 					"name": "Lower Warped Nylium",
-					"description": "Lowers the sides of Warped Nylium to provide a smoother and bluer landscape."
+					"description": "Lowers the sides of Warped Nylium to provide a smoother and bluer landscape"
 				},
 				{
 					"id": "warped_nylium_sides",
 					"name": "Warped Nylium Sides",
-					"description": "Completely covers the sides of Warped Nylium to provide a smoother and bluer landscape."
+					"description": "Completely covers the sides of Warped Nylium to provide a smoother and bluer landscape"
 				}
 			]
 		},
@@ -445,82 +445,82 @@
 				{
 					"id": "variated_dirt",
 					"name": "Variated Dirt",
-					"description": "Dirt will be randomized using a selection of 16 textures."
+					"description": "Dirt will be randomized using a selection of 16 textures"
 				},
 				{
 					"id": "variated_grass",
 					"name": "Variated Grass",
-					"description": "Grass will be randomized using a selection of 16 textures."
+					"description": "Grass will be randomized using a selection of 16 textures"
 				},
 				{
 					"id": "variated_cobblestone",
 					"name": "Variated Cobblestone",
-					"description": "Cobblestone will be randomized using a selection of 7 textures."
+					"description": "Cobblestone will be randomized using a selection of 7 textures"
 				},
 				{
 					"id": "variated_moss",
 					"name": "Variated Moss",
-					"description": "Randomly rotates Moss Blocks and Moss Carpets to break ugly grid patterns."
+					"description": "Randomly rotates Moss Blocks and Moss Carpets to break ugly grid patterns"
 				},
 				{
 					"id": "variated_bricks",
 					"name": "Variated Bricks",
-					"description": "Bricks will be randomized using a selection of 7 textures."
+					"description": "Bricks will be randomized using a selection of 7 textures"
 				},
 				{
 					"id": "variated_birch_logs",
 					"name": "Variated Birch Logs",
-					"description": "Birch Logs will be randomized using a selection of 6 textures."
+					"description": "Birch Logs will be randomized using a selection of 6 textures"
 				},
 				{
 					"id": "variated_red_mushroom_blocks",
 					"name": "Variated Red Mushroom Blocks",
-					"description": "Red Mushroom Blocks will be randomized using a selection of 12 textures."
+					"description": "Red Mushroom Blocks will be randomized using a selection of 12 textures"
 				},
 				{
 					"id": "variated_end_stone",
 					"name": "Variated End Stone",
-					"description": "End Stone will be randomized using a selection of 5 textures."
+					"description": "End Stone will be randomized using a selection of 5 textures"
 				},
 				{
 					"id": "variated_gravel",
 					"name": "Variated Gravel",
-					"description": "Gravel will be randomized using a selection of 16 textures."
+					"description": "Gravel will be randomized using a selection of 16 textures"
 				},
 				{
 					"id": "variated_mycelium",
 					"name": "Variated Mycelium",
-					"description": "Mycelium will be randomized using a selection of 16 textures."
+					"description": "Mycelium will be randomized using a selection of 16 textures"
 				},
 				{
 					"id": "variated_planks",
 					"name": "Variated Planks",
-					"description": "All planks will be randomized using a selection of 6 textures."
+					"description": "All planks will be randomized using a selection of 6 textures"
 				},
 				{
 					"id": "variated_stone",
 					"name": "Variated Stone",
-					"description": "Stone will be randomized using a selection of 16 textures."
+					"description": "Stone will be randomized using a selection of 16 textures"
 				},
 				{
 					"id": "variated_terracotta",
 					"name": "Variated Terracotta",
-					"description": "Terracotta will be randomized using a selection of 16 textures."
+					"description": "Terracotta will be randomized using a selection of 16 textures"
 				},
 				{
 					"id": "variated_unpolished_stones",
 					"name": "Variated Unpolished Stones",
-					"description": "Unpolished Stones will be randomized using a selection of 16 textures."
+					"description": "Unpolished Stones will be randomized using a selection of 16 textures"
 				},
 				{
 					"id": "variated_bookshelves",
 					"name": "Variated Bookshelves",
-					"description": "Bookshelves will be randomized using a selection of 7 textures."
+					"description": "Bookshelves will be randomized using a selection of 7 textures"
 				},
 				{
 					"id": "variated_villagers",
 					"name": "Variated Villagers",
-					"description": "Adds varying skin tones to Villagers depending on their biome. Villagers in colder biomes have lighter skin tones and Villagers in hotter biomes have darker skin tones."
+					"description": "Adds varying skin tones to Villagers depending on their biome. Villagers in colder biomes have lighter skin tones and Villagers in hotter biomes have darker skin tones"
 				}
 			]
 		},
@@ -531,67 +531,67 @@
 				{
 					"id": "quieter_rain",
 					"name": "Quieter Rain",
-					"description": "Decreases rain sounds by 95%."
+					"description": "Decreases rain sounds by 95%"
 				},
 				{
 					"id": "quieter_thunder",
 					"name": "Quieter Thunder",
-					"description": "Decreases thunder sounds by 95%."
+					"description": "Decreases thunder sounds by 95%"
 				},
 				{
 					"id": "quieter_explosions",
 					"name": "Quieter Explosions",
-					"description": "Decreases explosion sounds by 95%."
+					"description": "Decreases explosion sounds by 95%"
 				},
 				{
 					"id": "quieter_dispensers_and_droppers",
 					"name": "Quieter Dispensers and Droppers",
-					"description": "Decreases Dispenser and Dropper sounds by 95%."
+					"description": "Decreases Dispenser and Dropper sounds by 95%"
 				},
 				{
 					"id": "quieter_minecarts",
 					"name": "Quieter Minecarts",
-					"description": "Decreases Minecart sounds by 95%."
+					"description": "Decreases Minecart sounds by 95%"
 				},
 				{
 					"id": "quieter_fire",
 					"name": "Quieter Fire",
-					"description": "Decreases Fire sounds by 95%."
+					"description": "Decreases Fire sounds by 95%"
 				},
 				{
 					"id": "quieter_nether_portals",
 					"name": "Quieter Nether Portals",
-					"description": "Decreases Nether Portal sounds by 95%."
+					"description": "Decreases Nether Portal sounds by 95%"
 				},
 				{
 					"id": "quieter_water",
 					"name": "Quieter Water",
-					"description": "Decreases Water and dripstone water drop sounds by 95%."
+					"description": "Decreases Water and dripstone water drop sounds by 95%"
 				},
 				{
 					"id": "quieter_consumables",
 					"name": "Quieter Consumables",
-					"description": "Decreases eating and drinking sounds by 95%."
+					"description": "Decreases eating and drinking sounds by 95%"
 				},
 				{
 					"id": "quieter_sculk_sensors",
 					"name": "Quieter Sculk Sensors",
-					"description": "Decreases Sculk Sensor sounds by 95%."
+					"description": "Decreases Sculk Sensor sounds by 95%"
 				},
 				{
 					"id": "quieter_sculk_shriekers",
 					"name": "Quieter Sculk Shriekers",
-					"description": "Decreases Sculk Shrieker sounds by 95%."
+					"description": "Decreases Sculk Shrieker sounds by 95%"
 				},
 				{
 					"id": "quieter_pistons",
 					"name": "Quieter Pistons",
-					"description": "Decreases Piston sounds by 95%."
+					"description": "Decreases Piston sounds by 95%"
 				},
 				{
 					"id": "no_cave_sounds",
 					"name": "No Cave Sounds",
-					"description": "Mutes the spooky cave sounds."
+					"description": "Mutes the spooky cave sounds"
 				}
 			]
 		},
@@ -602,289 +602,289 @@
 				{
 					"id": "quieter_allays",
 					"name": "Quieter Allays",
-					"description": "Decreases Allay sounds by 95%."
+					"description": "Decreases Allay sounds by 95%"
 				},
 				{
 					"id": "quieter_armadillos",
 					"name": "Quieter Armadillos",
-					"description": "Decreases Armadillo sounds by 95%."
+					"description": "Decreases Armadillo sounds by 95%"
 				},
 				{
 					"id": "quieter_axolotls",
 					"name": "Quieter Axolotls",
-					"description": "Decreases Axolotl sounds by 95%."
+					"description": "Decreases Axolotl sounds by 95%"
 				},
 				{
 					"id": "quieter_bats",
 					"name": "Quieter Bats",
-					"description": "Decreases Bat sounds by 95%."
+					"description": "Decreases Bat sounds by 95%"
 				},
 				{
 					"id": "quieter_bees",
 					"name": "Quieter Bees",
-					"description": "Decreases Bee sounds by 95%."
+					"description": "Decreases Bee sounds by 95%"
 				},
 				{
 					"id": "quieter_blazes",
 					"name": "Quieter Blazes",
-					"description": "Decreases Blaze sounds by 95%.",
+					"description": "Decreases Blaze sounds by 95%",
 					"message": {
-						"text": "Blaze's fire crackling sounds aren't affected. Install <b>Quieter Fire</b> to quieten those sounds.",
+						"text": "Blaze's fire crackling sounds aren't affected. Install <b>Quieter Fire</b> to quieten those sounds",
 						"severity": "warn"
 					}
 				},
 				{
 					"id": "quieter_breezes",
 					"name": "Quieter Breezes",
-					"description": "Decreases Breeze sounds by 95%."
+					"description": "Decreases Breeze sounds by 95%"
 				},
 				{
 					"id": "quieter_camels",
 					"name": "Quieter Camels",
-					"description": "Decreases Camel sounds by 95%."
+					"description": "Decreases Camel sounds by 95%"
 				},
 				{
 					"id": "quieter_cats",
 					"name": "Quieter Cats",
-					"description": "Decreases Cat and Ocelot sounds by 95%."
+					"description": "Decreases Cat and Ocelot sounds by 95%"
 				},
 				{
 					"id": "quieter_chickens",
 					"name": "Quieter Chickens",
-					"description": "Decreases Chicken sounds by 95%."
+					"description": "Decreases Chicken sounds by 95%"
 				},
 				{
 					"id": "quieter_cows",
 					"name": "Quieter Cows",
-					"description": "Decreases Cow and Mooshroom sounds by 95%."
+					"description": "Decreases Cow and Mooshroom sounds by 95%"
 				},
 				{
 					"id": "quieter_creepers",
 					"name": "Quieter Creepers",
-					"description": "Decreases Creeper sounds by 95%.",
+					"description": "Decreases Creeper sounds by 95%",
 					"message": {
-						"text": "Creeper's explosion sounds aren't affected. Install <b>Quieter Explosions</b> to quieten those sounds.",
+						"text": "Creeper's explosion sounds aren't affected. Install <b>Quieter Explosions</b> to quieten those sounds",
 						"severity": "warn"
 					}
 				},
 				{
 					"id": "quieter_dolphins",
 					"name": "Quieter Dolphins",
-					"description": "Decreases Dolphin sounds by 95%."
+					"description": "Decreases Dolphin sounds by 95%"
 				},
 				{
 					"id": "quieter_ender_dragon",
 					"name": "Quieter Ender Dragon",
-					"description": "Decreases Ender Dragon sounds by 95%."
+					"description": "Decreases Ender Dragon sounds by 95%"
 				},
 				{
 					"id": "quieter_endermen",
 					"name": "Quieter Endermen",
-					"description": "Decreases Enderman sounds by 95%."
+					"description": "Decreases Enderman sounds by 95%"
 				},
 				{
 					"id": "quieter_fish",
 					"name": "Quieter Fish",
-					"description": "Decreases Cod, Salmon, Tropical Fish and Pufferfish sounds by 95%."
+					"description": "Decreases Cod, Salmon, Tropical Fish and Pufferfish sounds by 95%"
 				},
 				{
 					"id": "quieter_foxes",
 					"name": "Quieter Foxes",
-					"description": "Decreases Fox sounds by 95%."
+					"description": "Decreases Fox sounds by 95%"
 				},
 				{
 					"id": "quieter_frogs",
 					"name": "Quieter Frogs",
-					"description": "Decreases Frog sounds by 95%."
+					"description": "Decreases Frog sounds by 95%"
 				},
 				{
 					"id": "quieter_ghasts",
 					"name": "Quieter Ghasts",
-					"description": "Decreases Ghast sounds by 95%."
+					"description": "Decreases Ghast sounds by 95%"
 				},
 				{
 					"id": "quieter_goats",
 					"name": "Quieter Goats",
-					"description": "Decreases Goat sounds by 95%."
+					"description": "Decreases Goat sounds by 95%"
 				},
 				{
 					"id": "quieter_guardians",
 					"name": "Quieter Guardians",
-					"description": "Decreases Guardian and Elder Guardian sounds by 95%."
+					"description": "Decreases Guardian and Elder Guardian sounds by 95%"
 				},
 				{
 					"id": "quieter_hoglins",
 					"name": "Quieter Hoglins",
-					"description": "Decreases Hoglin and Zoglin sounds by 95%."
+					"description": "Decreases Hoglin and Zoglin sounds by 95%"
 				},
 				{
 					"id": "quieter_horses",
 					"name": "Quieter Horses",
-					"description": "Decreases Horse, Donkey and Mule sounds by 95%."
+					"description": "Decreases Horse, Donkey and Mule sounds by 95%"
 				},
 				{
 					"id": "quieter_illagers",
 					"name": "Quieter Illagers",
-					"description": "Decreases Pillager, Evoker and Vindicator sounds by 95%."
+					"description": "Decreases Pillager, Evoker and Vindicator sounds by 95%"
 				},
 				{
 					"id": "quieter_iron_golems",
 					"name": "Quieter Iron Golems",
-					"description": "Decreases Iron Golem sounds by 95%."
+					"description": "Decreases Iron Golem sounds by 95%"
 				},
 				{
 					"id": "quieter_llamas",
 					"name": "Quieter Llamas",
-					"description": "Decreases Llamas and Trader Llamas sounds by 95%."
+					"description": "Decreases Llamas and Trader Llamas sounds by 95%"
 				},
 				{
 					"id": "quieter_pandas",
 					"name": "Quieter Pandas",
-					"description": "Decreases Panda sounds by 95%."
+					"description": "Decreases Panda sounds by 95%"
 				},
 				{
 					"id": "quieter_parrots",
 					"name": "Quieter Parrots",
-					"description": "Decreases Parrot sounds by 95%."
+					"description": "Decreases Parrot sounds by 95%"
 				},
 				{
 					"id": "quieter_phantoms",
 					"name": "Quieter Phantoms",
-					"description": "Decreases Phantom sounds by 95%."
+					"description": "Decreases Phantom sounds by 95%"
 				},
 				{
 					"id": "quieter_pigs",
 					"name": "Quieter Pigs",
-					"description": "Decreases Pig sounds by 95%."
+					"description": "Decreases Pig sounds by 95%"
 				},
 				{
 					"id": "quieter_piglins",
 					"name": "Quieter Piglins",
-					"description": "Decreases Piglin, Piglin Brute and Zombified Piglin sounds by 95%."
+					"description": "Decreases Piglin, Piglin Brute and Zombified Piglin sounds by 95%"
 				},
 				{
 					"id": "quieter_polar_bears",
 					"name": "Quieter Polar Bears",
-					"description": "Decreases Polar Bear sounds by 95%."
+					"description": "Decreases Polar Bear sounds by 95%"
 				},
 				{
 					"id": "quieter_rabbits",
 					"name": "Quieter Rabbits",
-					"description": "Decreases Rabbit sounds by 95%."
+					"description": "Decreases Rabbit sounds by 95%"
 				},
 				{
 					"id": "quieter_ravagers",
 					"name": "Quieter Ravagers",
-					"description": "Decreases Ravager sounds by 95%."
+					"description": "Decreases Ravager sounds by 95%"
 				},
 				{
 					"id": "quieter_sheep",
 					"name": "Quieter Sheep",
-					"description": "Decreases Sheep sounds by 95%."
+					"description": "Decreases Sheep sounds by 95%"
 				},
 				{
 					"id": "quieter_shulkers",
 					"name": "Quieter Shulkers",
-					"description": "Decreases Shulker and Shulker Box sounds by 95%."
+					"description": "Decreases Shulker and Shulker Box sounds by 95%"
 				},
 				{
 					"id": "quieter_silverfish",
 					"name": "Quieter Silverfish",
-					"description": "Decreases Silverfish and Endermite sounds by 95%."
+					"description": "Decreases Silverfish and Endermite sounds by 95%"
 				},
 				{
 					"id": "quieter_skeletons",
 					"name": "Quieter Skeletons",
-					"description": "Decreases Skeleton, Stray, Bogged and Wither Skeleton sounds by 95%."
+					"description": "Decreases Skeleton, Stray, Bogged and Wither Skeleton sounds by 95%"
 				},
 				{
 					"id": "quieter_slimes",
 					"name": "Quieter Slimes",
-					"description": "Decreases Slime and Magma Cube sounds by 95%."
+					"description": "Decreases Slime and Magma Cube sounds by 95%"
 				},
 				{
 					"id": "quieter_sniffers",
 					"name": "Quieter Sniffers",
-					"description": "Decreases Sniffer sounds by 95%."
+					"description": "Decreases Sniffer sounds by 95%"
 				},
 				{
 					"id": "quieter_snow_golems",
 					"name": "Quieter Snow Golems",
-					"description": "Decreases Snow Golems sounds by 95%."
+					"description": "Decreases Snow Golems sounds by 95%"
 				},
 				{
 					"id": "quieter_spiders",
 					"name": "Quieter Spiders",
-					"description": "Decreases Spider and Cave Spider sounds by 95%."
+					"description": "Decreases Spider and Cave Spider sounds by 95%"
 				},
 				{
 					"id": "quieter_squids",
 					"name": "Quieter Squids",
-					"description": "Decreases Squid and Glow Squid sounds by 95%."
+					"description": "Decreases Squid and Glow Squid sounds by 95%"
 				},
 				{
 					"id": "quieter_striders",
 					"name": "Quieter Striders",
-					"description": "Decreases Strider sounds by 95%."
+					"description": "Decreases Strider sounds by 95%"
 				},
 				{
 					"id": "quieter_tadpoles",
 					"name": "Quieter Tadpoles",
-					"description": "Decreases Tadpole sounds by 95%."
+					"description": "Decreases Tadpole sounds by 95%"
 				},
 				{
 					"id": "quieter_turtles",
 					"name": "Quieter Turtles",
-					"description": "Decreases Turtle sounds by 95%."
+					"description": "Decreases Turtle sounds by 95%"
 				},
 				{
 					"id": "quieter_vexes",
 					"name": "Quieter Vexes",
-					"description": "Decreases Vex sounds by 95%."
+					"description": "Decreases Vex sounds by 95%"
 				},
 				{
 					"id": "quieter_villagers",
 					"name": "Quieter Villagers",
-					"description": "Decreases Villager and Wandering Trader sounds by 95%."
+					"description": "Decreases Villager and Wandering Trader sounds by 95%"
 				},
 				{
 					"id": "quieter_wardens",
 					"name": "Quieter Wardens",
-					"description": "Decreases Warden sounds by 95%."
+					"description": "Decreases Warden sounds by 95%"
 				},
 				{
 					"id": "quieter_witches",
 					"name": "Quieter Witches",
-					"description": "Decreases Witch sounds by 95%."
+					"description": "Decreases Witch sounds by 95%"
 				},
 				{
 					"id": "quieter_wither",
 					"name": "Quieter Wither",
-					"description": "Decreases Wither sounds by 95%.",
+					"description": "Decreases Wither sounds by 95%",
 					"message": {
-						"text": "Wither Head's explosions are not affected. Install <b>Quieter Explosions</b> to quieten those sounds.",
+						"text": "Wither Head's explosions are not affected. Install <b>Quieter Explosions</b> to quieten those sounds",
 						"severity": "warn"
 					}
 				},
 				{
 					"id": "quieter_wolves",
 					"name": "Quieter Wolves",
-					"description": "Decreases Wolf sounds by 95%."
+					"description": "Decreases Wolf sounds by 95%"
 				},
 				{
 					"id": "quieter_zombies",
 					"name": "Quieter Zombies",
-					"description": "Decreases Zombie, Zombie Villager, Husk and Drowned sounds by 95%."
+					"description": "Decreases Zombie, Zombie Villager, Husk and Drowned sounds by 95%"
 				},
 				{
 					"id": "no_ender_dragon_death_sound",
 					"name": "No Ender Dragon Death Sound",
-					"description": "Mutes the global Ender Dragon death sound."
+					"description": "Mutes the global Ender Dragon death sound"
 				},
 				{
 					"id": "no_wither_spawn_sound",
 					"name": "No Wither Spawn Sound",
-					"description": "Mutes the global Wither spawn sound."
+					"description": "Mutes the global Wither spawn sound"
 				}
 			]
 		},
@@ -895,22 +895,22 @@
 				{
 					"id": "ore_borders",
 					"name": "Ore Borders",
-					"description": "Places a border around ores for easier visibility within caves."
+					"description": "Places a border around ores for easier visibility within caves"
 				},
 				{
 					"id": "suspicious_sand_and_gravel_borders",
 					"name": "Suspicious Sand and Gravel Borders",
-					"description": "Places a border around Suspicious Sand and Suspicious Gravel for easier visibility."
+					"description": "Places a border around Suspicious Sand and Suspicious Gravel for easier visibility"
 				},
 				{
 					"id": "budding_amethyst_borders",
 					"name": "Budding Amethyst Borders",
-					"description": "Places a border around Budding Amethyst blocks for easier visibility within geodes."
+					"description": "Places a border around Budding Amethyst blocks for easier visibility within geodes"
 				},
 				{
 					"id": "visual_infested_stone_items",
 					"name": "Visual Infested Stone (Items)",
-					"description": "Adds a border around Infested Stone in the inventory.",
+					"description": "Adds a border around Infested Stone in the inventory",
 					"message": {
 						"text": "This will NOT affect the placed blocks",
 						"severity": "error"
@@ -919,7 +919,7 @@
 				{
 					"id": "visual_waxed_copper_items",
 					"name": "Visual Waxed Copper (Items)",
-					"description": "Adds a border around Waxed Copper in the inventory.",
+					"description": "Adds a border around Waxed Copper in the inventory",
 					"message": {
 						"text": "This will NOT affect the placed blocks",
 						"severity": "error"
@@ -928,87 +928,87 @@
 				{
 					"id": "fully_aged_crop_marker",
 					"name": "Fully Aged Crop Marker",
-					"description": "Adds an animated glint to all fully developed crops."
+					"description": "Adds an animated glint to all fully developed crops"
 				},
 				{
 					"id": "fully_aged_amethyst_cluster_marker",
 					"name": "Fully Aged Amethyst Cluster Marker",
-					"description": "Adds an animated glint to all fully aged amethyst clusters."
+					"description": "Adds an animated glint to all fully aged amethyst clusters"
 				},
 				{
 					"id": "different_stems",
 					"name": "Different Stems",
-					"description": "Changes Melon and Pumpkin stems to reflect their fruit color."
+					"description": "Changes Melon and Pumpkin stems to reflect their fruit color"
 				},
 				{
 					"id": "age_25_kelp",
 					"name": "Age 25 Kelp",
-					"description": "Adds flowers to the top of kelp plants when they are fully grown. [age=25]."
+					"description": "Adds flowers to the top of kelp plants when they are fully grown [age=25]"
 				},
 				{
 					"id": "mine_progress_bar",
 					"name": "Mine Progress Bar",
-					"description": "Changes the breaking texture of blocks to a clean ring around the outside."
+					"description": "Changes the breaking texture of blocks to a clean ring around the outside"
 				},
 				{
 					"id": "clear_banner_patterns",
 					"name": "Clear Banner Patterns",
-					"description": "Gives all the Banner Pattern items unique and appropriate textures."
+					"description": "Gives all the Banner Pattern items unique and appropriate textures"
 				},
 				{
 					"id": "hunger_preview",
 					"name": "Hunger Preview",
-					"description": "Displays Hunger Bar icons on all food names to show how much it will fill you up."
+					"description": "Displays Hunger Bar icons on all food names to show how much it will fill you up"
 				},
 				{
 					"id": "music_disc_redstone_level",
 					"name": "Music Disc Redstone Level",
-					"description": "Gives all Music Discs a redstone power level indicator in the tooltip."
+					"description": "Gives all Music Discs a redstone power level indicator in the tooltip"
 				},
 				{
 					"id": "sticky_piston_sides",
 					"name": "Sticky Piston Sides",
-					"description": "Displays Slime on the sides of Sticky Pistons to allow players to easily differentiate them from regular pistons."
+					"description": "Displays Slime on the sides of Sticky Pistons to allow players to easily differentiate them from regular pistons"
 				},
 				{
 					"id": "directional_hoppers",
 					"name": "Directional Hoppers",
-					"description": "Gives Hoppers arrows on their top and sides to indicate which direction they are facing."
+					"description": "Gives Hoppers arrows on their top and sides to indicate which direction they are facing"
 				},
 				{
 					"id": "directional_observers",
 					"name": "Directional Observers",
-					"description": "Gives all sides of the Observer block directional indicators which name updates."
+					"description": "Gives all sides of the Observer block directional indicators which name updates"
 				},
 				{
 					"id": "clean_redstone_dust",
 					"name": "Clean Redstone Dust",
-					"description": "Changes the texture of Redstone Dust to a clean solid line."
+					"description": "Changes the texture of Redstone Dust to a clean solid line"
 				},
 				{
 					"id": "unlit_redstone_ore",
 					"name": "Unlit Redstone Ore",
-					"description": "Makes unlit Redstone Ore use the same palette as unlit Redstone Wire until its lit, when it then returns to its default, bright red colour."
+					"description": "Makes unlit Redstone Ore use the same palette as unlit Redstone Wire until its lit, when it then returns to its default, bright red colour"
 				},
 				{
 					"id": "visible_tripwires",
 					"name": "Visible Tripwires",
-					"description": "Makes tripwire a bright blue so you can easily see them."
+					"description": "Makes tripwire a bright blue so you can easily see them"
 				},
 				{
 					"id": "compass_lodestone",
 					"name": "Compass Lodestone",
-					"description": "Adds North, East, South and West markings on the sides of the Lodestone, so you can use it as a stationary compass."
+					"description": "Adds North, East, South and West markings on the sides of the Lodestone, so you can use it as a stationary compass"
 				},
 				{
 					"id": "brewing_guide",
 					"name": "Brewing Guide",
-					"description": "Adds a cheat sheet to the Brewing Stand interface."
+					"description": "Adds a cheat sheet to the Brewing Stand interface"
 				},
 				{
 					"id": "arabic_numerals",
 					"name": "Arabic Numerals",
-					"description": "Translates the Roman Numerals for enchantments and potions to Arabic Numerals. (I, II, III -> 1, 2, 3)"
+					"description": "Translates the Roman Numerals for enchantments and potions to Arabic Numerals (I, II, III -> 1, 2, 3)"
 				}
 			]
 		},
@@ -1019,112 +1019,128 @@
 				{
 					"id": "unobtrusive_rain",
 					"name": "Unobtrusive Rain",
-					"description": "Reduces the amount of rain particles for easier vision."
+					"description": "Reduces the amount of rain particles for easier vision"
 				},
 				{
 					"id": "unobtrusive_snow",
 					"name": "Unobtrusive Snow",
-					"description": "Reduces the amount of snow particles for easier vision."
+					"description": "Reduces the amount of snow particles for easier vision"
 				},
 				{
 					"id": "unobtrusive_particles",
 					"name": "Unobtrusive Particles",
-					"description": "Makes many particles transparent or hollow for easier vision."
+					"description": "Makes many particles transparent or hollow for easier vision"
 				},
 				{
 					"id": "no_cherry_leaves_particles",
 					"name": "No Cherry Leaves Particles",
-					"description": "Disables the spawning on cherry leaf particles in the cherry woods biome."
+					"description": "Disables the spawning on cherry leaf particles in the cherry woods biome"
 				},
 				{
 					"id": "borderless_glass",
 					"name": "Borderless Glass",
-					"description": "Gets rid of the border on the edges of Glass to make it cleaner and more transparent."
+					"description": "Gets rid of the border on the edges of Glass to make it cleaner and more transparent"
 				},
 				{
 					"id": "borderless_stained_glass",
 					"name": "Borderless Stained Glass",
-					"description": "Gets rid of the border on the edges of Stained Glass to make them cleaner and more transparent."
+					"description": "Gets rid of the border on the edges of Stained Glass to make them cleaner and more transparent"
 				},
 				{
 					"id": "borderless_tinted_glass",
 					"name": "Borderless Tinted Glass",
-					"description": "Gets rid of the border on the edges of Tinted Glass to make it cleaner and more transparent."
+					"description": "Gets rid of the border on the edges of Tinted Glass to make it cleaner and more transparent"
 				},
 				{
 					"id": "clean_glass",
 					"name": "Clean Glass",
-					"description": "Gets rid of the streaks in Glass, making it look cleaner."
+					"description": "Gets rid of the streaks in Glass, making it look cleaner"
 				},
 				{
 					"id": "clean_stained_glass",
 					"name": "Clean Stained Glass",
-					"description": "Gets rid of the streaks in Stained Glass, making them look cleaner."
+					"description": "Gets rid of the streaks in Stained Glass, making them look cleaner"
 				},
 				{
 					"id": "clean_tinted_glass",
 					"name": "Clean Tinted Glass",
-					"description": "Gets rid of the streaks in Tinted Glass, making it look cleaner."
+					"description": "Gets rid of the streaks in Tinted Glass, making it look cleaner"
 				},
 				{
 					"id": "unobtrusive_scaffolding",
 					"name": "Unobtrusive Scaffolding",
-					"description": "Creates a hole in the top of scaffolding, allowing you to traverse up and down them more comfortably."
+					"description": "Creates a hole in the top of scaffolding, allowing you to traverse up and down them more comfortably"
 				},
 				{
 					"id": "unobtrusive_enchantment_glint",
 					"name": "Unobtrusive Enchantment Glint",
-					"description": "Changes the enchantment glint to a much more sleek and less overpowering glint."
+					"description": "Changes the enchantment glint to a much more sleek and less overpowering glint"
 				},
 				{
 					"id": "lower_fire",
 					"name": "Lower Fire",
-					"description": "Lowers the height of fire to be 1-block-tall."
+					"description": "Lowers the height of fire to be 1-block-tall"
 				},
 				{
 					"id": "lower_shield",
 					"name": "Lower Shield",
-					"description": "Lowers Shields in the first-person perspective to provide for wider visibility."
+					"description": "Lowers Shields in the first-person perspective to provide for wider visibility"
 				},
 				{
 					"id": "translucent_pumpkin_overlay",
 					"name": "Translucent Pumpkin Overlay",
-					"description": "Increases visibility when wearing a Pumpkin."
+					"description": "Increases visibility when wearing a Pumpkin"
 				},
 				{
 					"id": "no_pumpkin_overlay",
 					"name": "No Pumpkin Overlay",
-					"description": "Removes the Pumpkin overlay completely when worn."
+					"description": "Removes the Pumpkin overlay completely when worn"
 				},
 				{
 					"id": "translucent_spyglass_overlay",
 					"name": "Translucent Spyglass Overlay",
-					"description": "Increases visibility when zooming in with a Spyglass."
+					"description": "Increases visibility when zooming in with a Spyglass"
 				},
 				{
 					"id": "no_spyglass_overlay",
 					"name": "No Spyglass Overlay",
-					"description": "Removes the Spyglass overlay completely when zooming in."
+					"description": "Removes the Spyglass overlay completely when zooming in"
 				},
 				{
 					"id": "no_vignette",
 					"name": "No Vignette",
-					"description": "Removes the darkened corners of the screen that occur in darker areas when graphics are set to 'fancy'."
+					"description": "Removes the darkened corners of the screen that occur in darker areas when graphics are set to 'fancy'"
 				},
 				{
 					"id": "invisible_totem",
 					"name": "Invisible Totem",
-					"description": "Renders the Totem of Undying as completely invisible when in first person mode."
+					"description": "Renders the Totem of Undying as completely invisible when in first person mode"
 				},
 				{
 					"id": "short_swords",
 					"name": "Short Swords",
-					"description": "Makes the length of all swords shorter for easier visibility."
+					"description": "Makes the length of all swords shorter for easier visibility"
 				},
 				{
 					"id": "invisible_item_frames",
 					"name": "Invisible Item Frames",
-					"description": "Makes normal and glowing item frames invisible. (Careful, you might lose them :P)"
+					"description": "Makes normal and glowing item frames invisible (Careful, you might lose them :P)"
+				}
+			]
+		},
+		{
+			"id": "3d",
+			"name": "3D",
+			"packs": [
+				{
+					"id": "3d_sun_and_moon",
+					"name": "3D Sun & Moon",
+					"description": "Retextures the Sun and Moon textures to give the illusion of being 3D"
+				},
+				{
+					"id": "3d_mace",
+					"name": "3D Mace",
+					"description": "Remodels the Mace to appear in 3D"
 				}
 			]
 		},
@@ -1135,52 +1151,52 @@
 				{
 					"id": "dark_ui",
 					"name": "Dark UI",
-					"description": "Changes all inventories and UIs to be darker."
+					"description": "Changes all inventories and UIs to be darker"
 				},
 				{
 					"id": "numbered_hotbar",
 					"name": "Numbered Hotbar",
-					"description": "Adds numbers to the hotbar slots."
+					"description": "Adds numbers to the hotbar slots"
 				},
 				{
 					"id": "bedrock_edition_title",
 					"name": "Bedrock Edition Title",
-					"description": "Add a Bedrock Edition Logo to the Minecraft Title."
+					"description": "Add a Bedrock Edition Logo to the Minecraft Title"
 				},
 				{
 					"id": "clearer_wither_hearts",
 					"name": "Clearer Wither Hearts",
-					"description": "Makes Hearts more visible when under the 'Wither' effect."
+					"description": "Makes Hearts more visible when under the 'Wither' effect"
 				},
 				{
 					"id": "rainbow_experience_bar",
 					"name": "Rainbow Experience Bar",
-					"description": "Changes the default green XP bar to a rainbow XP bar."
+					"description": "Changes the default green XP bar to a rainbow XP bar"
 				},
 				{
 					"id": "translucent_tooltips",
 					"name": "Translucent Tooltips",
-					"description": "Makes item tooltips translucent."
+					"description": "Makes item tooltips translucent"
 				},
 				{
 					"id": "trading_helper",
 					"name": "Trading Helper",
-					"description": "Makes all locked trades visibles and allows to see the locked item names and enchantments."
+					"description": "Makes all locked trades visibles and allows to see the locked item names and enchantments"
 				},
 				{
 					"id": "quick_crafting",
 					"name": "Quick Crafting",
-					"description": "Adds a button to stack craft items in the inventory, crafting table, stonecutter, and trade faster with villagers."
+					"description": "Adds a button to stack craft items in the inventory, crafting table, stonecutter, and trade faster with villagers"
 				},
 				{
 					"id": "chat_tweaks",
 					"name": "Chat Tweaks",
-					"description": "Allows mobile users to easily tab and move between previous and next messages sent in chat and command blocks."
+					"description": "Allows mobile users to easily tab and move between previous and next messages sent in chat and command blocks"
 				},
 				{
 					"id": "no_how_to_play",
 					"name": "No How To Play",
-					"description": "Removes the 'How to Play' Button from all screens so you do not accidentally misclick it."
+					"description": "Removes the 'How to Play' Button from all screens so you do not accidentally misclick it"
 				}
 			]
 		},
@@ -1191,72 +1207,72 @@
 				{
 					"id": "no_crosshair",
 					"name": "No Crosshair",
-					"description": "Removes the '+' crosshair."
+					"description": "Removes the '+' crosshair"
 				},
 				{
 					"id": "smaller_crosshair",
 					"name": "Smaller Crosshair",
-					"description": "Makes the '+' crosshair smaller."
+					"description": "Makes the '+' crosshair smaller"
 				},
 				{
 					"id": "dot_crosshair",
 					"name": "Dot Crosshair",
-					"description": "Changes the '+' crosshair to a dot."
+					"description": "Changes the '+' crosshair to a dot"
 				},
 				{
 					"id": "plus_dot_crosshair",
 					"name": "Plus Dot Crosshair",
-					"description": "Changes the '+' crosshair to a plus with a dot in the middle."
+					"description": "Changes the '+' crosshair to a plus with a dot in the middle"
 				},
 				{
 					"id": "circle_crosshair",
 					"name": "Circle Crosshair",
-					"description": "Changes the '+' crosshair to a circle."
+					"description": "Changes the '+' crosshair to a circle"
 				},
 				{
 					"id": "circle_dot_crosshair",
 					"name": "Circle Dot Crosshair",
-					"description": "Changes the '+' crosshair to a circle with a dot in the middle."
+					"description": "Changes the '+' crosshair to a circle with a dot in the middle"
 				},
 				{
 					"id": "square_crosshair",
 					"name": "Square Crosshair",
-					"description": "Changes the '+' crosshair to a square."
+					"description": "Changes the '+' crosshair to a square"
 				},
 				{
 					"id": "square_dot_crosshair",
 					"name": "Square Dot Crosshair",
-					"description": "Changes the '+' crosshair to a square with a dot in the middle."
+					"description": "Changes the '+' crosshair to a square with a dot in the middle"
 				},
 				{
 					"id": "square_plus_crosshair",
 					"name": "Square Plus Crosshair",
-					"description": "Changes the '+' crosshair to a square with a plus in the middle."
+					"description": "Changes the '+' crosshair to a square with a plus in the middle"
 				},
 				{
 					"id": "square_plus_dot_crosshair",
 					"name": "Square Plus Dot Crosshair",
-					"description": "Changes the '+' crosshair to a square with a plus and a dot in the middle."
+					"description": "Changes the '+' crosshair to a square with a plus and a dot in the middle"
 				},
 				{
 					"id": "4_angled_crosshair",
 					"name": "4 Angled Crosshair",
-					"description": "Changes the '+' crosshair to 4 lines coming out from the middle."
+					"description": "Changes the '+' crosshair to 4 lines coming out from the middle"
 				},
 				{
 					"id": "4_angled_dot_crosshair",
 					"name": "4 Angled Dot Crosshair",
-					"description": "Changes the '+' crosshair to a dot with 4 lines coming out from the middle."
+					"description": "Changes the '+' crosshair to a dot with 4 lines coming out from the middle"
 				},
 				{
 					"id": "heart_crosshair",
 					"name": "Heart Crosshair",
-					"description": "Changes the '+' crosshair to a heart."
+					"description": "Changes the '+' crosshair to a heart"
 				},
 				{
 					"id": "arrow_crosshair",
 					"name": "Arrow Crosshair",
-					"description": "Changes the '+' crosshair to an arrow."
+					"description": "Changes the '+' crosshair to an arrow"
 				}
 			]
 		},
@@ -1655,26 +1671,26 @@
 				{
 					"id": "no_panorama_overlay",
 					"name": "No Panorama Overlay",
-					"description": "Removes the gradient overlay from the menu panorama.",
+					"description": "Removes the gradient overlay from the menu panorama",
 					"message": {
-						"text": "Even if the current vanilla panorama doesn't have an overlay, this pack can still remove it from <span style='text-decoration: line-through;'>Vanilla</span> Bedrock Tweaks panoramas that do have one.",
+						"text": "Even if the current vanilla panorama doesn't have an overlay, this pack can still remove it from <span style='text-decoration: line-through;'>Vanilla</span> Bedrock Tweaks panoramas that do have one",
 						"severity": "info"
 					}
 				},
 				{
 					"id": "classic",
 					"name": "Classic",
-					"description": "Replaces the default Minecraft menu panorama with the classic one from before 1.13."
+					"description": "Replaces the default Minecraft menu panorama with the classic one from before 1.13"
 				},
 				{
 					"id": "ocean",
 					"name": "Ocean",
-					"description": "Replaces the default Minecraft menu panorama with a 360° view of the ocean. (from 1.13)"
+					"description": "Replaces the default Minecraft menu panorama with a 360° view of the ocean (from 1.13)"
 				},
 				{
 					"id": "village",
 					"name": "Village",
-					"description": "Replaces the default Minecraft menu panorama with a 360° view of a village. (from 1.14)"
+					"description": "Replaces the default Minecraft menu panorama with a 360° view of a village (from 1.14)"
 				},
 				{
 					"id": "bees",
@@ -1699,67 +1715,67 @@
 				{
 					"id": "mangrove_swamp",
 					"name": "Mangrove Swamp",
-					"description": "Replaces the default Minecraft menu panorama with a 360° view of a mangrove swamp from 1.19."
+					"description": "Replaces the default Minecraft menu panorama with a 360° view of a mangrove swamp from 1.19"
 				},
 				{
 					"id": "cherry_grove",
 					"name": "Cherry Grove",
-					"description": "Replaces the default Minecraft menu panorama with a 360° view of a Cherry Grove."
+					"description": "Replaces the default Minecraft menu panorama with a 360° view of a Cherry Grove"
 				},
 				{
 					"id": "the_end",
 					"name": "The End",
-					"description": "Replaces the default Minecraft menu panorama with a 360° view of the main End island."
+					"description": "Replaces the default Minecraft menu panorama with a 360° view of the main End island"
 				},
 				{
 					"id": "pack.png",
 					"name": "pack.png",
-					"description": "Replaces the default Minecraft menu panorama with a 360° view of the classic and iconic 'pack.png' location."
+					"description": "Replaces the default Minecraft menu panorama with a 360° view of the classic and iconic 'pack.png' location"
 				},
 				{
 					"id": "nostalgia",
 					"name": "Nostalgia",
-					"description": "Replaces the default Minecraft menu panorama with a 360° view of a neon green plains biome from Alpha."
+					"description": "Replaces the default Minecraft menu panorama with a 360° view of a neon green plains biome from Alpha"
 				},
 				{
 					"id": "oceanside_extreme_hills",
 					"name": "Oceanside Extreme Hills",
-					"description": "Replaces the default Minecraft menu panorama with a 360° view of an Oceanside Extreme Hills."
+					"description": "Replaces the default Minecraft menu panorama with a 360° view of an Oceanside Extreme Hills"
 				},
 				{
 					"id": "lakeside_sunset",
 					"name": "Lakeside Sunset",
-					"description": "Replaces the default Minecraft menu panorama with a 360° view of a Lakeside Sunset."
+					"description": "Replaces the default Minecraft menu panorama with a 360° view of a Lakeside Sunset"
 				},
 				{
 					"id": "underground_lava_pool",
 					"name": "Underground Lava Pool",
-					"description": "Replaces the default Minecraft menu panorama with a 360° view of an underground lava pool."
+					"description": "Replaces the default Minecraft menu panorama with a 360° view of an underground lava pool"
 				},
 				{
 					"id": "acacia_village",
 					"name": "Acacia Village",
-					"description": "Replaces the default Minecraft menu panorama with a 360° view of an Acacia Village."
+					"description": "Replaces the default Minecraft menu panorama with a 360° view of an Acacia Village"
 				},
 				{
 					"id": "halloween_2021",
 					"name": "Halloween 2021",
-					"description": "Replaces the default Minecraft menu panorama with a 360° view of a spooky Halloween town."
+					"description": "Replaces the default Minecraft menu panorama with a 360° view of a spooky Halloween town"
 				},
 				{
 					"id": "halloween_2022",
 					"name": "Halloween 2022",
-					"description": "Replaces the default Minecraft menu panorama with a 360° view of a spooky Halloween town."
+					"description": "Replaces the default Minecraft menu panorama with a 360° view of a spooky Halloween town"
 				},
 				{
 					"id": "tu69_tutorial_world_legacy_console",
 					"name": "TU69 Tutorial World (Legacy Console)",
-					"description": "Replaces the default Minecraft menu panorama with a 360° view of Minecraft: Console Edition TU69's tutorial world."
+					"description": "Replaces the default Minecraft menu panorama with a 360° view of Minecraft: Console Edition TU69's tutorial world"
 				},
 				{
 					"id": "strideys_resource_pack_development_world",
 					"name": "Stridey's Resource Pack Development World",
-					"description": "Replaces the default Minecraft menu panorama with a 360° view of Stridey's resource pack development world."
+					"description": "Replaces the default Minecraft menu panorama with a 360° view of Stridey's resource pack development world"
 				}
 			]
 		},
@@ -1770,47 +1786,47 @@
 				{
 					"id": "season_1",
 					"name": "Season 1",
-					"description": "Replaces the default Minecraft menu panorama with a 360° view of Xisuma's base from Hermitcraft Season 1."
+					"description": "Replaces the default Minecraft menu panorama with a 360° view of Xisuma's base from Hermitcraft Season 1"
 				},
 				{
 					"id": "season_2",
 					"name": "Season 2",
-					"description": "Replaces the default Minecraft menu panorama with a 360° view of Xisuma's base from Hermitcraft Season 2."
+					"description": "Replaces the default Minecraft menu panorama with a 360° view of Xisuma's base from Hermitcraft Season 2"
 				},
 				{
 					"id": "season_3",
 					"name": "Season 3",
-					"description": "Replaces the default Minecraft menu panorama with a 360° view of Xisuma's base from Hermitcraft Season 3."
+					"description": "Replaces the default Minecraft menu panorama with a 360° view of Xisuma's base from Hermitcraft Season 3"
 				},
 				{
 					"id": "season_4",
 					"name": "Season 4",
-					"description": "Replaces the default Minecraft menu panorama with a 360° view of Xisuma's base from Hermitcraft Season 4."
+					"description": "Replaces the default Minecraft menu panorama with a 360° view of Xisuma's base from Hermitcraft Season 4"
 				},
 				{
 					"id": "season_5",
 					"name": "Season 5",
-					"description": "Replaces the default Minecraft menu panorama with a 360° view of Xisuma's base from Hermitcraft Season 5."
+					"description": "Replaces the default Minecraft menu panorama with a 360° view of Xisuma's base from Hermitcraft Season 5"
 				},
 				{
 					"id": "season_6",
 					"name": "Season 6",
-					"description": "Replaces the default Minecraft menu panorama with a 360° view of Xisuma's base from Hermitcraft Season 6."
+					"description": "Replaces the default Minecraft menu panorama with a 360° view of Xisuma's base from Hermitcraft Season 6"
 				},
 				{
 					"id": "season_7",
 					"name": "Season 7",
-					"description": "Replaces the default Minecraft menu panorama with a 360° view of Xisuma's base from Hermitcraft Season 7."
+					"description": "Replaces the default Minecraft menu panorama with a 360° view of Xisuma's base from Hermitcraft Season 7"
 				},
 				{
 					"id": "season_8",
 					"name": "Season 8",
-					"description": "Replaces the default Minecraft menu panorama with a 360° view of Xisuma's base from Hermitcraft Season 8."
+					"description": "Replaces the default Minecraft menu panorama with a 360° view of Xisuma's base from Hermitcraft Season 8"
 				},
 				{
 					"id": "season_9",
 					"name": "Season 9",
-					"description": "Replaces the default Minecraft menu panorama with a 360° view of Xisuma's base from Hermitcraft Season 9."
+					"description": "Replaces the default Minecraft menu panorama with a 360° view of Xisuma's base from Hermitcraft Season 9"
 				}
 			]
 		},
@@ -1831,27 +1847,27 @@
 				{
 					"id": "old_bedrock_menu_title",
 					"name": "Old Bedrock Menu Title",
-					"description": "Brings back the pre-1.17.30 Minecraft title."
+					"description": "Brings back the pre-1.17.30 Minecraft title"
 				},
 				{
 					"id": "dirt_background",
 					"name": "Dirt Background",
-					"description": "Replaces the menu panorama with a dirt background, like in the classic versions of Minecraft."
+					"description": "Replaces the menu panorama with a dirt background, like in the classic versions of Minecraft"
 				},
 				{
 					"id": "alpha_foliage",
 					"name": "Alpha Foliage",
-					"description": "Changes the foliage textures to those of Alpha Minecraft."
+					"description": "Changes the foliage textures to those of Alpha Minecraft"
 				},
 				{
 					"id": "old_cobblestone",
 					"name": "Old Cobblestone",
-					"description": "Reverts Cobblestone to its Alpha texture."
+					"description": "Reverts Cobblestone to its Alpha texture"
 				},
 				{
 					"id": "classic_ores",
 					"name": "Classic Ores",
-					"description": "Reverts all ores to their pre-1.17 textures, including Deepslate and Copper ores."
+					"description": "Reverts all ores to their pre-1.17 textures, including Deepslate and Copper ores"
 				},
 				{
 					"id": "pre_1_18_stripped_dark_oak",
@@ -1861,102 +1877,102 @@
 				{
 					"id": "old_planks",
 					"name": "Old Planks",
-					"description": "Reverts all planks to their old textures, including Warped and Crimson + their sign counterparts."
+					"description": "Reverts all planks to their old textures, including Warped and Crimson + their sign counterparts"
 				},
 				{
 					"id": "old_gravel",
 					"name": "Old Gravel",
-					"description": "Reverts Gravel to its Alpha texture."
+					"description": "Reverts Gravel to its Alpha texture"
 				},
 				{
 					"id": "old_netherrack",
 					"name": "Old Netherrack",
-					"description": "Reverts Netherrack to its old texture, including ores and Nylium."
+					"description": "Reverts Netherrack to its old texture, including ores and Nylium"
 				},
 				{
 					"id": "old_lava",
 					"name": "Old Lava",
-					"description": "Reverts Lava to its Alpha texture."
+					"description": "Reverts Lava to its Alpha texture"
 				},
 				{
 					"id": "old_obsidian",
 					"name": "Old Obsidian",
-					"description": "Reverts Obsidian and Crying Obsidian to their old textures."
+					"description": "Reverts Obsidian and Crying Obsidian to their old textures"
 				},
 				{
 					"id": "old_metal_blocks",
 					"name": "Old Metal Blocks",
-					"description": "Reverts Iron Blocks, Gold Blocks, and Diamond Blocks to their Alpha textures."
+					"description": "Reverts Iron Blocks, Gold Blocks, and Diamond Blocks to their Alpha textures"
 				},
 				{
 					"id": "old_water",
 					"name": "Old Water",
-					"description": "Reverts Water to its old texture."
+					"description": "Reverts Water to its old texture"
 				},
 				{
 					"id": "old_ice",
 					"name": "Old Ice",
-					"description": "Reverts all Ice blocks to their old textures."
+					"description": "Reverts all Ice blocks to their old textures"
 				},
 				{
 					"id": "old_lapis",
 					"name": "Old Lapis",
-					"description": "Reverts the texture of Lapis Lazuli Blocks to the Beta texture."
+					"description": "Reverts the texture of Lapis Lazuli Blocks to the Beta texture"
 				},
 				{
 					"id": "old_sponge",
 					"name": "Old Sponge",
-					"description": "Reverts the texture of Sponges to the beta texture."
+					"description": "Reverts the texture of Sponges to the beta texture"
 				},
 				{
 					"id": "old_wool_colors",
 					"name": "Old Wool Colors",
-					"description": "Reverts the textures of Wool and Carpet to their pre-1.12 variants."
+					"description": "Reverts the textures of Wool and Carpet to their pre-1.12 variants"
 				},
 				{
 					"id": "old_shulker_boxes",
 					"name": "Old Shulker Boxes",
-					"description": "Recolors Shulkers and Shulker Boxes to their pre-1.12 colors."
+					"description": "Recolors Shulkers and Shulker Boxes to their pre-1.12 colors"
 				},
 				{
 					"id": "poppy_to_rose",
 					"name": "Poppy to Rose",
-					"description": "Changes the texture of the Poppy to that of the Rose from before 1.7.2."
+					"description": "Changes the texture of the Poppy to that of the Rose from before 1.7.2"
 				},
 				{
 					"id": "bed_icons",
 					"name": "Bed Icons",
-					"description": "Reverts Bed items to icons rather than models, like they were prior to 1.12."
+					"description": "Reverts Bed items to icons rather than models, like they were prior to 1.12"
 				},
 				{
 					"id": "rename_terracotta_to_hardened_clay",
 					"name": "Rename 'Terracotta' to 'Hardened Clay'",
-					"description": "Renames Terracotta back to 'Hardened Clay'."
+					"description": "Renames Terracotta back to 'Hardened Clay'"
 				},
 				{
 					"id": "rename_pottery_sherds_to_pottery_shards",
 					"name": "Rename 'Pottery Sherds' to 'Pottery Shards'",
-					"description": "Renames 'Pottery Sherds' to 'Pottery Shards'."
+					"description": "Renames 'Pottery Sherds' to 'Pottery Shards'"
 				},
 				{
 					"id": "rename_dirt_path_to_grass_path",
 					"name": "Rename 'Dirt Path' to 'Grass Path'",
-					"description": "Changes the newly named 'Dirt Path' back to 'Grass Path'."
+					"description": "Changes the newly named 'Dirt Path' back to 'Grass Path'"
 				},
 				{
 					"id": "zombie_pigman",
 					"name": "Zombie Pigman",
-					"description": "Changes the texture and model of the Zombified Piglin back to the old Zombie Pigman."
+					"description": "Changes the texture and model of the Zombified Piglin back to the old Zombie Pigman"
 				},
 				{
 					"id": "oarless_boats",
 					"name": "Oarless Boats",
-					"description": "Removes the oars from all boat types from their item textures and entity models."
+					"description": "Removes the oars from all boat types from their item textures and entity models"
 				},
 				{
 					"id": "old_door_sound",
 					"name": "Old Door Sound",
-					"description": "Reverts all door, trapdoor and fence gate sounds to that of before 1.0."
+					"description": "Reverts all door, trapdoor and fence gate sounds to that of before 1.0"
 				},
 				{
 					"id": "old_damage_sound",
@@ -1966,17 +1982,17 @@
 				{
 					"id": "old_explosion_sound",
 					"name": "Old Explosion Sound",
-					"description": "Brings back the old explosion sounds from Alpha and Beta versions of Minecraft."
+					"description": "Brings back the old explosion sounds from Alpha and Beta versions of Minecraft"
 				},
 				{
 					"id": "old_level_up_sound",
 					"name": "Old Level Up Sound",
-					"description": "Brings back the old level up jingle when you hit increment of 5 XP levels."
+					"description": "Brings back the old level up jingle when you hit increment of 5 XP levels"
 				},
 				{
 					"id": "legacy_bedrock_dried_kelp",
 					"name": "Legacy Bedrock Dried Kelp",
-					"description": "Gives the Dried Kelp item its texture from previous versions of Minecraft: Bedrock Edition."
+					"description": "Gives the Dried Kelp item its texture from previous versions of Minecraft: Bedrock Edition"
 				}
 			]
 		},
@@ -1987,12 +2003,12 @@
 				{
 					"id": "smiley_axolotls",
 					"name": "Smiley Axolotls",
-					"description": "Gives Axolotls a smiley face. :)"
+					"description": "Gives Axolotls a smiley face :)"
 				},
 				{
 					"id": "green_axolotl",
 					"name": "Green Axolotl",
-					"description": "Replaces the rare blue variant of the Axolotl with the unused green Axolotl skin."
+					"description": "Replaces the rare blue variant of the Axolotl with the unused green Axolotl skin"
 				},
 				{
 					"id": "beeralis",
@@ -2012,22 +2028,22 @@
 				{
 					"id": "xisuma_turtle",
 					"name": "Xisuma Turtle",
-					"description": "Changes the Turtle texture to the well-known Xisuma Turtle."
+					"description": "Changes the Turtle texture to the well-known Xisuma Turtle"
 				},
 				{
 					"id": "xisuma_squids",
 					"name": "Xisuma Squids",
-					"description": "Changes the Squid and Glow Squid textures to the well-known Xisuma Squids."
+					"description": "Changes the Squid and Glow Squid textures to the well-known Xisuma Squids"
 				},
 				{
 					"id": "wandering_xisuma",
 					"name": "Wandering Xisuma",
-					"description": "Changes the Wandering Trader texture to Xisuma's Green Team skin."
+					"description": "Changes the Wandering Trader texture to Xisuma's Green Team skin"
 				},
 				{
 					"id": "darth_xisuma_piglins",
 					"name": "Darth Xisuma Piglins",
-					"description": "Changes Piglins, Zombified Piglins and Piglin Brutes' textures to Xisuma's Darth Vader skin."
+					"description": "Changes Piglins, Zombified Piglins and Piglin Brutes' textures to Xisuma's Darth Vader skin"
 				},
 				{
 					"id": "technoblade_pigs",
@@ -2037,7 +2053,7 @@
 				{
 					"id": "stridey_striders",
 					"name": "Stridey Striders",
-					"description": "Awful pack that makes Striders look like Stridey. Sorry."
+					"description": "Awful pack that makes Striders look like Stridey, Sorry"
 				},
 				{
 					"id": "emeralds_to_rubies",
@@ -2047,26 +2063,26 @@
 				{
 					"id": "wither_bee",
 					"name": "Wither Bee",
-					"description": "Changes the Wither Boss texture to a Bee."
+					"description": "Changes the Wither Boss texture to a Bee"
 				},
 				{
 					"id": "ilmango_golden_apples",
 					"name": "ilmango Golden Apples",
-					"description": "Changes Golden Apples to ilmango's icon to celebrate the digging of a perimeter in under 12 hours."
+					"description": "Changes Golden Apples to ilmango's icon to celebrate the digging of a perimeter in under 12 hours"
 				},
 				{
 					"id": "english_enchanting_table_translation",
 					"name": "English Enchanting Table Translation",
-					"description": "Changes the Enchanting Table language (AKA Standard Galactic) to use English alphabet characters.",
+					"description": "Changes the Enchanting Table language (AKA Standard Galactic) to use English alphabet characters",
 					"message": {
-						"text": " This will not help you with enchanting, as the words and phrases used in the Enchanting Table are completely random gibberish. This pack is purely for fun and aesthetics.",
+						"text": " This will not help you with enchanting, as the words and phrases used in the Enchanting Table are completely random gibberish. This pack is purely for fun and aesthetics",
 						"severity": "info"
 					}
 				},
 				{
 					"id": "standard_galactic_alphabet",
 					"name": "Standard Galactic Alphabet",
-					"description": "Changes English alphabet characters to Standard Galactic alphabet characters. (AKA the Enchanting Table language). ∴⍑॥  ↸╎↸ ॥ᒍ⚍ ᒣ∷ᖋリϟ|:ᖋᒣᒷ ᒣ⍑╎ϟ?"
+					"description": "Changes English alphabet characters to Standard Galactic alphabet characters. (AKA the Enchanting Table language) ∴⍑॥  ↸╎↸ ॥ᒍ⚍ ᒣ∷ᖋリϟ|:ᖋᒣᒷ ᒣ⍑╎ϟ?"
 				},
 				{
 					"id": "bacon_beam",
@@ -2076,12 +2092,12 @@
 				{
 					"id": "phantom_rain",
 					"name": "Phantom Rain",
-					"description": "Merges two of the most annoying features into one. :)"
+					"description": "Merges two of the most annoying features into one :)"
 				},
 				{
 					"id": "what",
 					"name": "WHAT",
-					"description": "Replaces the Spyglass overlay with the 'WHAT' meme template, including Earthbound's 'Sanctuary Guardian' music."
+					"description": "Replaces the Spyglass overlay with the 'WHAT' meme template, including Earthbound's 'Sanctuary Guardian' music"
 				},
 				{
 					"id": "useless_spyglass",
@@ -2091,12 +2107,12 @@
 				{
 					"id": "screaming_goats_meme",
 					"name": "Screaming Goats Meme",
-					"description": "Changes the screaming goat sounds to the Screaming Goat meme from 2012."
+					"description": "Changes the screaming goat sounds to the Screaming Goat meme from 2012"
 				},
 				{
 					"id": "i_wish_it_could_be_christmas_everyday",
 					"name": "I Wish It Could Be Christmas Everyday",
-					"description": "Gives Chests and Trapped Chests their Christmas textures all year-round."
+					"description": "Gives Chests and Trapped Chests their Christmas textures all year-round"
 				},
 				{
 					"id": "honey_slime",
@@ -2112,7 +2128,7 @@
 				{
 					"id": "unique_dyes",
 					"name": "Unique Dyes",
-					"description": "Adds variation to the dyes by making each one different."
+					"description": "Adds variation to the dyes by making each one different"
 				}
 			]
 		},
@@ -2123,77 +2139,77 @@
 				{
 					"id": "white_slime",
 					"name": "White Slime",
-					"description": "Changes the color of all slime related items, blocks and entities to white."
+					"description": "Changes the color of all slime related items, blocks and entities to white"
 				},
 				{
 					"id": "orange_slime",
 					"name": "Orange Slime",
-					"description": "Changes the color of all slime related items, blocks and entities to orange."
+					"description": "Changes the color of all slime related items, blocks and entities to orange"
 				},
 				{
 					"id": "magenta_slime",
 					"name": "Magenta Slime",
-					"description": "Changes the color of all slime related items, blocks and entities to magenta."
+					"description": "Changes the color of all slime related items, blocks and entities to magenta"
 				},
 				{
 					"id": "light_blue_slime",
 					"name": "Light Blue Slime",
-					"description": "Changes the color of all slime related items, blocks and entities to light blue."
+					"description": "Changes the color of all slime related items, blocks and entities to light blue"
 				},
 				{
 					"id": "yellow_slime",
 					"name": "Yellow Slime",
-					"description": "Changes the color of all slime related items, blocks and entities to yellow."
+					"description": "Changes the color of all slime related items, blocks and entities to yellow"
 				},
 				{
 					"id": "pink_slime",
 					"name": "Pink Slime",
-					"description": "Changes the color of all slime related items, blocks and entities to pink."
+					"description": "Changes the color of all slime related items, blocks and entities to pink"
 				},
 				{
 					"id": "gray_slime",
 					"name": "Gray Slime",
-					"description": "Changes the color of all slime related items, blocks and entities to gray."
+					"description": "Changes the color of all slime related items, blocks and entities to gray"
 				},
 				{
 					"id": "light_gray_slime",
 					"name": "Light Gray Slime",
-					"description": "Changes the color of all slime related items, blocks and entities to light gray."
+					"description": "Changes the color of all slime related items, blocks and entities to light gray"
 				},
 				{
 					"id": "cyan_slime",
 					"name": "Cyan Slime",
-					"description": "Changes the color of all slime related items, blocks and entities to cyan."
+					"description": "Changes the color of all slime related items, blocks and entities to cyan"
 				},
 				{
 					"id": "purple_slime",
 					"name": "Purple Slime",
-					"description": "Changes the color of all slime related items, blocks and entities to purple."
+					"description": "Changes the color of all slime related items, blocks and entities to purple"
 				},
 				{
 					"id": "blue_slime",
 					"name": "Blue Slime",
-					"description": "Changes the color of all slime related items, blocks and entities to blue."
+					"description": "Changes the color of all slime related items, blocks and entities to blue"
 				},
 				{
 					"id": "brown_slime",
 					"name": "Brown Slime",
-					"description": "Changes the color of all slime related items, blocks and entities to brown."
+					"description": "Changes the color of all slime related items, blocks and entities to brown"
 				},
 				{
 					"id": "green_slime",
 					"name": "Green Slime",
-					"description": "Changes the color of all slime related items, blocks and entities to green."
+					"description": "Changes the color of all slime related items, blocks and entities to green"
 				},
 				{
 					"id": "red_slime",
 					"name": "Red Slime",
-					"description": "Changes the color of all slime related items, blocks and entities to red."
+					"description": "Changes the color of all slime related items, blocks and entities to red"
 				},
 				{
 					"id": "black_slime",
 					"name": "Black Slime",
-					"description": "Changes the color of all slime related items, blocks and entities to black."
+					"description": "Changes the color of all slime related items, blocks and entities to black"
 				}
 			]
 		},
@@ -2285,47 +2301,47 @@
 				{
 					"id": "java_menu_title",
 					"name": "Java Menu Title",
-					"description": "Gives the title on the main menu screen its look from Minecraft: Java Edition."
+					"description": "Gives the title on the main menu screen its look from Minecraft: Java Edition"
 				},
 				{
 					"id": "java_boom",
 					"name": "Java Boom",
-					"description": "Gives Explosion particles their texture from Minecraft: Java Edition."
+					"description": "Gives Explosion particles their texture from Minecraft: Java Edition"
 				},
 				{
 					"id": "java_map",
 					"name": "Java Map",
-					"description": "Gives all Map item variants their textures from Minecraft: Java Edition."
+					"description": "Gives all Map item variants their textures from Minecraft: Java Edition"
 				},
 				{
 					"id": "java_ender_dragon_ball",
 					"name": "Java Ender Dragon Ball",
-					"description": "Gives the Ender Dragon's projectile its texture from Minecraft: Java Edition."
+					"description": "Gives the Ender Dragon's projectile its texture from Minecraft: Java Edition"
 				},
 				{
 					"id": "dungeons_creepers",
 					"name": "Dungeons Creepers",
-					"description": "Gives the Creeper its texture from Minecraft: Dungeons."
+					"description": "Gives the Creeper its texture from Minecraft: Dungeons"
 				},
 				{
 					"id": "dungeons_mossy_skeleton",
 					"name": "Dungeons Mossy Skeleton",
-					"description": "Retextures the Bogged to the Mossy Skeleton from Minecraft: Dungeons."
+					"description": "Retextures the Bogged to the Mossy Skeleton from Minecraft: Dungeons"
 				},
 				{
 					"id": "dungeons_dirt",
 					"name": "Dungeons Dirt",
-					"description": "Gives Dirt its texture from Minecraft: Dungeons."
+					"description": "Gives Dirt its texture from Minecraft: Dungeons"
 				},
 				{
 					"id": "dungeons_stone",
 					"name": "Dungeons Stone",
-					"description": "Gives Stone its texture from Minecraft: Dungeons. (with 12 texture variants)"
+					"description": "Gives Stone its texture from Minecraft: Dungeons (with 12 texture variants)"
 				},
 				{
 					"id": "dungeons_terracotta",
 					"name": "Dungeons Terracotta",
-					"description": "Gives Terracotta its texture from Minecraft: Dungeons."
+					"description": "Gives Terracotta its texture from Minecraft: Dungeons"
 				},
 				{
 					"id": "super_smash_bros_enderman",
@@ -2335,12 +2351,12 @@
 				{
 					"id": "legacy_console_emerald",
 					"name": "Legacy Console Emerald",
-					"description": "Gives the Emerald its texture from old legacy console editions of Minecraft."
+					"description": "Gives the Emerald its texture from old legacy console editions of Minecraft"
 				},
 				{
 					"id": "legacy_console_snowball",
 					"name": "Legacy Console Snowball",
-					"description": "Gives the Snowball its texture from old legacy console editions of Minecraft."
+					"description": "Gives the Snowball its texture from old legacy console editions of Minecraft"
 				}
 			]
 		},
@@ -2351,142 +2367,142 @@
 				{
 					"id": "piston_inner_fix",
 					"name": "Piston Inner Fix",
-					"description": "Fixes Inner Piston texture hole to match the arm size."
+					"description": "Fixes Inner Piston texture hole to match the arm size"
 				},
 				{
 					"id": "updated_observer_texture",
 					"name": "Updated Observer Texture",
-					"description": "Changes the Observer's top texture to fit in-line with the 1.14 default textures, as it was left out in that update."
+					"description": "Changes the Observer's top texture to fit in-line with the 1.14 default textures, as it was left out in that update"
 				},
 				{
 					"id": "redstone_wire_fix",
 					"name": "Redstone Wire Fix",
-					"description": "Adds some extra pixels to the Redstone Wire texture to make sure the whole line joins up."
+					"description": "Adds some extra pixels to the Redstone Wire texture to make sure the whole line joins up"
 				},
 				{
 					"id": "consistent_blank_decorated_pot",
 					"name": "Consistent Blank Decorated Pot",
-					"description": "Adds the gold trim to blank decorated pot sides to match the decorated sides."
+					"description": "Adds the gold trim to blank decorated pot sides to match the decorated sides"
 				},
 				{
 					"id": "consistent_buckets",
 					"name": "Consistent Buckets",
-					"description": "Moves empty, Water, Lava, and Powder Snow Buckets down by 1 pixel to make them consistent with Fish and Axolotl Buckets."
+					"description": "Moves empty, Water, Lava, and Powder Snow Buckets down by 1 pixel to make them consistent with Fish and Axolotl Buckets"
 				},
 				{
 					"id": "consistent_tadpole_bucket",
 					"name": "Consistent Tadpole Bucket",
-					"description": "Recolors the water inside the Tadpole Bucket to match the rest of the Water and Fish Buckets."
+					"description": "Recolors the water inside the Tadpole Bucket to match the rest of the Water and Fish Buckets"
 				},
 				{
 					"id": "cactus_bottom_fix",
 					"name": "Cactus Bottom Fix",
-					"description": "Recolors the bottom of cacti to match the rest of the cactus."
+					"description": "Recolors the bottom of cacti to match the rest of the cactus"
 				},
 				{
 					"id": "cocoa_beans_fix",
 					"name": "Cocoa Beans Fix",
-					"description": "Changes the textures on all the cocoa beans stages to use proper proportions."
+					"description": "Changes the textures on all the cocoa beans stages to use proper proportions"
 				},
 				{
 					"id": "consistent_helmets",
 					"name": "Consistent Helmets",
-					"description": "Adds nose-pieces to the helmet items that are missing them (iron, gold & diamond)."
+					"description": "Adds nose-pieces to the helmet items that are missing them (iron, gold & diamond)"
 				},
 				{
 					"id": "brighter_rib_armor_trim",
 					"name": "Brighter Rib Armor Trim",
-					"description": "Brightens the Rib Armor Trim to match the coloring of the other armor trims."
+					"description": "Brightens the Rib Armor Trim to match the coloring of the other armor trims"
 				},
 				{
 					"id": "hanging_sign_logs",
 					"name": "Hanging Sign Logs",
-					"description": "Retextures the beams of hanging signs to logs to match signs' posts."
+					"description": "Retextures the beams of hanging signs to logs to match signs' posts"
 				},
 				{
 					"id": "pixel_consistent_ghast",
 					"name": "Pixel Consistent Ghast",
-					"description": "Retextures the Ghast's texture to be consistent with its size."
+					"description": "Retextures the Ghast's texture to be consistent with its size"
 				},
 				{
 					"id": "pixel_consistent_elder_guardian",
 					"name": "Pixel Consistent Elder Guardian",
-					"description": "Retextures the Elder Guardian's texture to be consistent with its size."
+					"description": "Retextures the Elder Guardian's texture to be consistent with its size"
 				},
 				{
 					"id": "pixel_consistent_wither",
 					"name": "Pixel Consistent Wither",
-					"description": "Retextures the Wither's texture to be consistent with its size."
+					"description": "Retextures the Wither's texture to be consistent with its size"
 				},
 				{
 					"id": "pixel_consistent_signs",
 					"name": "Pixel Consistent Signs",
-					"description": "Retextures all sign textures to be consistent with their size."
+					"description": "Retextures all sign textures to be consistent with their size"
 				},
 				{
 					"id": "pixel_consistent_experience_orbs",
 					"name": "Pixel Consistent Experience Orbs",
-					"description": "Retextures Experience Orbs' textures to be consistent with their sizes."
+					"description": "Retextures Experience Orbs' textures to be consistent with their sizes"
 				},
 				{
 					"id": "pixel_consistent_beacon_beam",
 					"name": "Pixel Consistent Beacon Beam",
-					"description": "Retextures Beacon and End Gateway beams's textures to be consistent with their sizes."
+					"description": "Retextures Beacon and End Gateway beams's textures to be consistent with their sizes"
 				},
 				{
 					"id": "pixel_consistent_sonic_boom",
 					"name": "Pixel Consistent Sonic Boom",
-					"description": "Retextures the Warden's 'Sonic Boom' particle textures to be consistent with its size."
+					"description": "Retextures the Warden's 'Sonic Boom' particle textures to be consistent with its size"
 				},
 				{
 					"id": "pixel_consistent_guardian_beam",
 					"name": "Pixel Consistent Guardian Beam",
-					"description": "Retextures the Guardian beam's textures to be consistent with its sizes."
+					"description": "Retextures the Guardian beam's textures to be consistent with its sizes"
 				},
 				{
 					"id": "soul_soil_soul_campfire",
 					"name": "Soul Soil Soul Campfire",
-					"description": "Replaces the Soul Campfire's 'ash' texture with Soul Soil for consistency."
+					"description": "Replaces the Soul Campfire's 'ash' texture with Soul Soil for consistency"
 				},
 				{
 					"id": "blazes_rods_fix",
 					"name": "Blaze's Rods Fix",
-					"description": "Fixes the Blaze's rods' color on the bottom face."
+					"description": "Fixes the Blaze's rods' color on the bottom face"
 				},
 				{
 					"id": "brewing_stand_icons_fix",
 					"name": "Brewing Stand Icons Fix",
-					"description": "Removes the extra pixels on the Brewing Stand's potion slot icons."
+					"description": "Removes the extra pixels on the Brewing Stand's potion slot icons"
 				},
 				{
 					"id": "nicer_fast_leaves",
 					"name": "Nicer Fast Leaves",
-					"description": "Replaces the random green parts in leaves to a darker green when having fancy leaves disabled."
+					"description": "Replaces the random green parts in leaves to a darker green when having fancy leaves disabled"
 				},
 				{
 					"id": "consistent_smooth_stone",
 					"name": "Consistent Smooth Stone",
-					"description": "Gives the Smooth Stone texture the same bevel as its slab counterpart."
+					"description": "Gives the Smooth Stone texture the same bevel as its slab counterpart"
 				},
 				{
 					"id": "double_slab_fix",
 					"name": "Double Slab Fix",
-					"description": "Gives double slab variants of some blocks a clear line of separation."
+					"description": "Gives double slab variants of some blocks a clear line of separation"
 				},
 				{
 					"id": "hoe_fix",
 					"name": "Hoe Fix",
-					"description": "Fixes the incorrect colour on the handles of wooden, stone and iron hoes."
+					"description": "Fixes the incorrect colour on the handles of wooden, stone and iron hoes"
 				},
 				{
 					"id": "cloak_fix",
 					"name": "Cloak Fix",
-					"description": "Fixes model of Villagers, Witches and Evokers so the cloak includes the missing bottom pixels."
+					"description": "Fixes model of Villagers, Witches and Evokers so the cloak includes the missing bottom pixels"
 				},
 				{
 					"id": "smoker_bottom_fix",
 					"name": "Smoker Bottom Fix",
-					"description": "Fixes the misplaced pixel in the Smoker's bottom texture."
+					"description": "Fixes the misplaced pixel in the Smoker's bottom texture"
 				}
 			]
 		}
@@ -2625,7 +2641,7 @@
 			"id": "extras/utility/music_disc_level_hunger_preview",
 			"combines": [
 				"utility/hunger_preview",
-				"utility/music_disc_redstone_level"
+				"utility/music_disc_redstone_level_preview"
 			]
 		},
 		{
