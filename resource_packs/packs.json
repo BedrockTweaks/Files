@@ -612,7 +612,7 @@
 				{
 					"id": "quieter_bees",
 					"name": "Quieter Bees",
-					"description": "Decreases Bee sounds by 95%"
+					"description": "Decreases Bee, Beehive and Bee Nest sounds by 95%"
 				},
 				{
 					"id": "quieter_blazes",
@@ -835,7 +835,7 @@
 				{
 					"id": "quieter_villagers",
 					"name": "Quieter Villagers",
-					"description": "Decreases Villager and Wandering Trader sounds by 95%"
+					"description": "Decreases Villager, Wandering Trader and Workstation sounds by 95%"
 				},
 				{
 					"id": "quieter_wardens",
