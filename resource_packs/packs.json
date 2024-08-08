@@ -953,7 +953,7 @@
 				{
 					"id": "music_disc_redstone_level_preview",
 					"name": "Music Disc Redstone Level Preview",
-					"description": "Displays the redstone power level for each music disk in the tooltip"
+					"description": "Displays the redstone power level for each music disc in the tooltip"
 				},
 				{
 					"id": "sticky_piston_sides",
@@ -1862,7 +1862,7 @@
 				{
 					"id": "pre_1_18_stripped_dark_oak",
 					"name": "Pre-1.18 Stripped Dark Oak",
-					"description": "Reverts stripped dark oak to use its pre-1.18 color."
+					"description": "Reverts stripped dark oak to use its pre-1.18 color"
 				},
 				{
 					"id": "old_planks",
@@ -2288,11 +2288,6 @@
 			"id": "parity",
 			"name": "Parity",
 			"packs": [
-				{
-					"id": "java_menu_title",
-					"name": "Java Menu Title",
-					"description": "Gives the title on the main menu screen its look from Minecraft: Java Edition"
-				},
 				{
 					"id": "java_boom",
 					"name": "Java Boom",
