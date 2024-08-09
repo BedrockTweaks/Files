@@ -5,7 +5,7 @@
 			"sounds": [
 				{
 					"name": "sounds/block/wooden_door/close1",
-					"volume":0.90
+					"volume": 0.90
 				}
 			]
 		},
@@ -13,7 +13,7 @@
 			"sounds": [
 				{
 					"name": "sounds/block/wooden_door/close1",
-					"volume":0.90
+					"volume": 0.90
 				}
 			]
 		},
@@ -21,7 +21,7 @@
 			"sounds": [
 				{
 					"name": "sounds/block/wooden_door/close1",
-					"volume":0.90
+					"volume": 0.90
 				}
 			]
 		},
@@ -29,7 +29,7 @@
 			"sounds": [
 				{
 					"name": "sounds/block/wooden_door/close1",
-					"volume":0.90
+					"volume": 0.90
 				}
 			]
 		},
@@ -37,7 +37,7 @@
 			"sounds": [
 				{
 					"name": "sounds/block/wooden_door/close1",
-					"volume":0.90
+					"volume": 0.90
 				}
 			]
 		},
@@ -45,7 +45,7 @@
 			"sounds": [
 				{
 					"name": "sounds/block/wooden_door/close1",
-					"volume":0.90
+					"volume": 0.90
 				}
 			]
 		},
@@ -53,7 +53,7 @@
 			"sounds": [
 				{
 					"name": "sounds/block/wooden_door/close1",
-					"volume":0.90
+					"volume": 0.90
 				}
 			]
 		},
@@ -61,7 +61,7 @@
 			"sounds": [
 				{
 					"name": "sounds/block/wooden_door/close1",
-					"volume":0.90
+					"volume": 0.90
 				}
 			]
 		},
@@ -69,7 +69,7 @@
 			"sounds": [
 				{
 					"name": "sounds/block/wooden_door/close1",
-					"volume":0.90
+					"volume": 0.90
 				}
 			]
 		},
@@ -77,7 +77,7 @@
 			"sounds": [
 				{
 					"name": "sounds/block/wooden_door/close1",
-					"volume":0.90
+					"volume": 0.90
 				}
 			]
 		},
@@ -85,7 +85,7 @@
 			"sounds": [
 				{
 					"name": "sounds/block/wooden_door/close1",
-					"volume":0.90
+					"volume": 0.90
 				}
 			]
 		},
@@ -93,7 +93,7 @@
 			"sounds": [
 				{
 					"name": "sounds/block/wooden_door/close1",
-					"volume":0.90
+					"volume": 0.90
 				}
 			]
 		},
@@ -101,7 +101,7 @@
 			"sounds": [
 				{
 					"name": "sounds/block/wooden_door/close1",
-					"volume":0.90
+					"volume": 0.90
 				}
 			]
 		},
@@ -109,7 +109,7 @@
 			"sounds": [
 				{
 					"name": "sounds/block/wooden_door/close1",
-					"volume":0.90
+					"volume": 0.90
 				}
 			]
 		},
@@ -117,7 +117,7 @@
 			"sounds": [
 				{
 					"name": "sounds/block/wooden_door/close1",
-					"volume":0.90
+					"volume": 0.90
 				}
 			]
 		},
@@ -125,7 +125,7 @@
 			"sounds": [
 				{
 					"name": "sounds/block/wooden_door/close1",
-					"volume":0.90
+					"volume": 0.90
 				}
 			]
 		},
@@ -133,7 +133,7 @@
 			"sounds": [
 				{
 					"name": "sounds/block/wooden_door/open1",
-					"volume":0.90
+					"volume": 0.90
 				}
 			]
 		},
@@ -141,7 +141,7 @@
 			"sounds": [
 				{
 					"name": "sounds/block/wooden_door/open1",
-					"volume":0.90
+					"volume": 0.90
 				}
 			]
 		},
@@ -149,7 +149,7 @@
 			"sounds": [
 				{
 					"name": "sounds/block/wooden_door/open1",
-					"volume":0.90
+					"volume": 0.90
 				}
 			]
 		},
@@ -157,7 +157,7 @@
 			"sounds": [
 				{
 					"name": "sounds/block/wooden_door/open1",
-					"volume":0.90
+					"volume": 0.90
 				}
 			]
 		},
@@ -165,7 +165,7 @@
 			"sounds": [
 				{
 					"name": "sounds/block/wooden_door/open1",
-					"volume":0.90
+					"volume": 0.90
 				}
 			]
 		},
@@ -173,7 +173,7 @@
 			"sounds": [
 				{
 					"name": "sounds/block/wooden_door/open1",
-					"volume":0.90
+					"volume": 0.90
 				}
 			]
 		},
@@ -181,7 +181,7 @@
 			"sounds": [
 				{
 					"name": "sounds/block/wooden_door/open1",
-					"volume":0.90
+					"volume": 0.90
 				}
 			]
 		},
@@ -189,7 +189,7 @@
 			"sounds": [
 				{
 					"name": "sounds/block/wooden_door/open1",
-					"volume":0.90
+					"volume": 0.90
 				}
 			]
 		},
@@ -197,7 +197,7 @@
 			"sounds": [
 				{
 					"name": "sounds/block/wooden_door/open1",
-					"volume":0.90
+					"volume": 0.90
 				}
 			]
 		},
@@ -205,7 +205,7 @@
 			"sounds": [
 				{
 					"name": "sounds/block/wooden_door/open1",
-					"volume":0.90
+					"volume": 0.90
 				}
 			]
 		},
@@ -213,7 +213,7 @@
 			"sounds": [
 				{
 					"name": "sounds/block/wooden_door/open1",
-					"volume":0.90
+					"volume": 0.90
 				}
 			]
 		},
@@ -221,7 +221,7 @@
 			"sounds": [
 				{
 					"name": "sounds/block/wooden_door/open1",
-					"volume":0.90
+					"volume": 0.90
 				}
 			]
 		},
@@ -229,7 +229,7 @@
 			"sounds": [
 				{
 					"name": "sounds/block/wooden_door/open1",
-					"volume":0.90
+					"volume": 0.90
 				}
 			]
 		},
@@ -237,7 +237,7 @@
 			"sounds": [
 				{
 					"name": "sounds/block/wooden_door/open1",
-					"volume":0.90
+					"volume": 0.90
 				}
 			]
 		},
@@ -245,7 +245,7 @@
 			"sounds": [
 				{
 					"name": "sounds/block/wooden_door/open1",
-					"volume":0.90
+					"volume": 0.90
 				}
 			]
 		},
@@ -253,7 +253,7 @@
 			"sounds": [
 				{
 					"name": "sounds/block/wooden_door/open1",
-					"volume":0.90
+					"volume": 0.90
 				}
 			]
 		}

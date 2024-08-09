@@ -546,7 +546,7 @@
 				{
 					"id": "quieter_fire",
 					"name": "Quieter Fire",
-					"description": "Decrease Fire sounds by 95%"
+					"description": "Decreases Fire sounds by 95%"
 				},
 				{
 					"id": "quieter_nether_portals",
@@ -571,7 +571,7 @@
 				{
 					"id": "quieter_sculk_shriekers",
 					"name": "Quieter Sculk Shriekers",
-					"description": "Makes  Sculk Shrieker sounds by 95%"
+					"description": "Decreases Sculk Shrieker sounds by 95%"
 				},
 				{
 					"id": "quieter_pistons",
@@ -581,7 +581,7 @@
 				{
 					"id": "no_cave_sounds",
 					"name": "No Cave Sounds",
-					"description": "Removes the spooky cave sounds"
+					"description": "Mutes the spooky cave sounds"
 				}
 			]
 		},
@@ -612,7 +612,7 @@
 				{
 					"id": "quieter_bees",
 					"name": "Quieter Bees",
-					"description": "Decreases Bee sounds by 95%"
+					"description": "Decreases Bee, Beehive and Bee Nest sounds by 95%"
 				},
 				{
 					"id": "quieter_blazes",
@@ -651,7 +651,11 @@
 				{
 					"id": "quieter_creepers",
 					"name": "Quieter Creepers",
-					"description": "Decreases Creeper sounds by 95%"
+					"description": "Decreases Creeper sounds by 95%",
+					"message": {
+						"text": "Creeper's explosion sounds aren't affected. Install <b>Quieter Explosions</b> to quieten those sounds",
+						"severity": "warn"
+					}
 				},
 				{
 					"id": "quieter_dolphins",
@@ -831,7 +835,7 @@
 				{
 					"id": "quieter_villagers",
 					"name": "Quieter Villagers",
-					"description": "Decreases Villager and Wandering Trader sounds by 95%"
+					"description": "Decreases Villager, Wandering Trader and Workstation sounds by 95%"
 				},
 				{
 					"id": "quieter_wardens",
@@ -861,6 +865,16 @@
 					"id": "quieter_zombies",
 					"name": "Quieter Zombies",
 					"description": "Decreases Zombie, Zombie Villager, Husk and Drowned sounds by 95%"
+				},
+				{
+					"id": "no_ender_dragon_death_sound",
+					"name": "No Ender Dragon Death Sound",
+					"description": "Mutes the global Ender Dragon death sound"
+				},
+				{
+					"id": "no_wither_spawn_sound",
+					"name": "No Wither Spawn Sound",
+					"description": "Mutes the global Wither spawn sound"
 				}
 			]
 		},
@@ -919,7 +933,7 @@
 				{
 					"id": "age_25_kelp",
 					"name": "Age 25 Kelp",
-					"description": "Adds flowers to the top of kelp plants when they are fully grown. [age=25]"
+					"description": "Adds flowers to the top of kelp plants when they are fully grown [age=25]"
 				},
 				{
 					"id": "mine_progress_bar",
@@ -939,7 +953,7 @@
 				{
 					"id": "music_disc_redstone_level_preview",
 					"name": "Music Disc Redstone Level Preview",
-					"description": "Gives all Music Discs a redstone power level indicator in the tooltip"
+					"description": "Displays the redstone power level for each music disc in the tooltip"
 				},
 				{
 					"id": "sticky_piston_sides",
@@ -959,7 +973,7 @@
 				{
 					"id": "clean_redstone_dust",
 					"name": "Clean Redstone Dust",
-					"description": "Changes the texture of Redstone Dust to a clean solid line. "
+					"description": "Changes the texture of Redstone Dust to a clean solid line"
 				},
 				{
 					"id": "unlit_redstone_ore",
@@ -984,7 +998,7 @@
 				{
 					"id": "arabic_numerals",
 					"name": "Arabic Numerals",
-					"description": "Translates the Roman Numerals for enchantments and potions to Arabic Numerals. (I, II, III -> 1, 2, 3)"
+					"description": "Translates the Roman Numerals for enchantments and potions to Arabic Numerals (I, II, III -> 1, 2, 3)"
 				}
 			]
 		},
@@ -1100,7 +1114,7 @@
 				{
 					"id": "invisible_item_frames",
 					"name": "Invisible Item Frames",
-					"description": "Makes normal and glowing item frames invisible. (Careful, you might lose them :P)"
+					"description": "Makes normal and glowing item frames invisible (Careful, you might lose them :P)"
 				}
 			]
 		},
@@ -1661,12 +1675,12 @@
 				{
 					"id": "ocean",
 					"name": "Ocean",
-					"description": "Replaces the default Minecraft menu panorama with a 360° view of the ocean. (from 1.13)"
+					"description": "Replaces the default Minecraft menu panorama with a 360° view of the ocean (from 1.13)"
 				},
 				{
 					"id": "village",
 					"name": "Village",
-					"description": "Replaces the default Minecraft menu panorama with a 360° view of a village. (from 1.14)"
+					"description": "Replaces the default Minecraft menu panorama with a 360° view of a village (from 1.14)"
 				},
 				{
 					"id": "bees",
@@ -1979,7 +1993,7 @@
 				{
 					"id": "smiley_axolotls",
 					"name": "Smiley Axolotls",
-					"description": "Gives Axolotls a smiley face. :)"
+					"description": "Gives Axolotls a smiley face :)"
 				},
 				{
 					"id": "green_axolotl",
@@ -1994,12 +2008,12 @@
 				{
 					"id": "sus_sand_and_gravel",
 					"name": "Sus Sand and Gravel",
-					"description": "GET OUT OF MY HEAD GET OUT OF MY HEAD GET OUT OF MY HEAD"
+					"description": "GET OUT OF MY HEAD GET OUT OF MY HEAD GET OUT OF MY HEAD!"
 				},
 				{
 					"id": "soyjak_vault",
 					"name": "Soyjak Vault",
-					"description": "Yeah.."
+					"description": "Yeah..."
 				},
 				{
 					"id": "xisuma_turtle",
@@ -2029,7 +2043,7 @@
 				{
 					"id": "stridey_striders",
 					"name": "Stridey Striders",
-					"description": "Awful pack that makes Striders look like Stridey. Sorry"
+					"description": "Awful pack that makes Striders look like Stridey, Sorry"
 				},
 				{
 					"id": "emeralds_to_rubies",
@@ -2058,7 +2072,7 @@
 				{
 					"id": "standard_galactic_alphabet",
 					"name": "Standard Galactic Alphabet",
-					"description": "Changes English alphabet characters to Standard Galactic alphabet characters (AKA the Enchanting Table language). ∴⍑॥  ↸╎↸ ॥ᒍ⚍ ᒣ∷ᖋリϟ|:ᖋᒣᒷ ᒣ⍑╎ϟ?"
+					"description": "Changes English alphabet characters to Standard Galactic alphabet characters. (AKA the Enchanting Table language) ∴⍑॥  ↸╎↸ ॥ᒍ⚍ ᒣ∷ᖋリϟ|:ᖋᒣᒷ ᒣ⍑╎ϟ?"
 				},
 				{
 					"id": "bacon_beam",
@@ -2068,7 +2082,7 @@
 				{
 					"id": "phantom_rain",
 					"name": "Phantom Rain",
-					"description": "Merges two of the most annoying features into one. :)"
+					"description": "Merges two of the most annoying features into one :)"
 				},
 				{
 					"id": "what",
@@ -2307,7 +2321,7 @@
 				{
 					"id": "dungeons_stone",
 					"name": "Dungeons Stone",
-					"description": "Gives Stone its texture from Minecraft: Dungeons. (with 12 texture variants)"
+					"description": "Gives Stone its texture from Minecraft: Dungeons (with 12 texture variants)"
 				},
 				{
 					"id": "dungeons_terracotta",
