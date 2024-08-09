@@ -1,0 +1,6 @@
+{
+	"namespace": "resource_packs",
+	"progress_loading_bars": {
+		"color": "$dark_button_secondary_default_text_color"
+	}
+}

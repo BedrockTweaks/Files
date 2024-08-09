@@ -1,0 +1,15 @@
+{
+	"namespace": "filter_menu",
+	"filter_option_button_content/filter_type_and_selected_panel/filter_type_label": {
+		"color": "$light_button_default_text_color"
+	},
+	"filter_option_button_content/filter_type_and_selected_panel/selected_label": {
+		"color": "$light_button_default_text_color"
+	},
+	"filter_title_bar_content/centered_filter_title_label/filter_title_label": {
+		"color": "$light_button_default_text_color"
+	},
+	"filter_title_bar_content/centered_x/close_x_image": {
+		"color": "$light_button_default_text_color"
+	}
+}

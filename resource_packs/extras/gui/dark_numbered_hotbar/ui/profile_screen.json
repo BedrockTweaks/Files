@@ -1,0 +1,6 @@
+{
+	"namespace": "profile",
+	"preset_arrow_button": {
+		"$texture_color": "$light_button_default_text_color"
+	}
+}

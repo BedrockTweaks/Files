@@ -14,6 +14,12 @@
 		1.0,
 		1.0
 	],
+	"$dark_button_secondary_default_text_color": [
+		1.0,
+		1.0,
+		1.0,
+		1.0
+	],
 	"$title_text_color": [
 		1.0,
 		1.0,
@@ -110,6 +116,31 @@
 		1.0
 	],
 	"$store_dark_grey_text_color": [
+		1.0,
+		1.0,
+		1.0
+	],
+	"$enchanting_runes_color": [
+		1.0,
+		1.0,
+		1.0
+	],
+	"$enchanting_runes_fail_color": [
+		1.0,
+		1.0,
+		1.0
+	],
+	"$profile_create_character_selected_color": [
+		1.0,
+		1.0,
+		1.0
+	],
+	"$dressing_room_semi_dark_bg_color": [
+		0.13,
+		0.13,
+		0.13
+	],
+	"$dressing_room_right_side_dark_text_color": [
 		1.0,
 		1.0,
 		1.0

@@ -1,0 +1,9 @@
+{
+	"namespace": "common_store",
+	"filter_logo_content_panel/filter_count_label": {
+		"color": "$light_button_default_text_color"
+	},
+	"progress_loading_bars": {
+		"color": "$dark_button_secondary_default_text_color"
+	}
+}
