@@ -556,7 +556,7 @@
 				{
 					"id": "quieter_water",
 					"name": "Quieter Water",
-					"description": "Decreases Water and dripstone water drop sounds by 95%"
+					"description": "Decreases Water, swimming, water drops from Dripstones and underwater sound events by 95%"
 				},
 				{
 					"id": "quieter_consumables",
