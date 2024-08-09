@@ -1,0 +1,13 @@
+{
+	"entity_sounds": {
+		"entities": {
+			"wither": {
+				"events": {
+					"spawn" : {
+						"volume": 0
+					}
+				}
+			}
+		}
+	}
+}
