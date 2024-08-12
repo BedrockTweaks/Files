@@ -28,9 +28,6 @@
 			"cauldron_drip.water.pointed_dripstone": {
 				"volume": 0.1
 			},
-			"drip.lava.pointed_dripstone" : {
-			   "pitch" : 0.1
-			},
 			"drip.water.pointed_dripstone" : {
 			   "pitch" : 0.1
 			}
