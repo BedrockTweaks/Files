@@ -1,0 +1,24 @@
+{
+	"format_version": [
+		1,
+		1,
+		0
+	],
+	"grass": {
+		"carried_textures": {
+			"down": "grass_carried_bottom",
+			"side": "grass_carried_top",
+			"up": "grass_carried_top"
+		},
+		"isotropic": {
+			"down": true,
+			"up": true
+		},
+		"sound": "grass",
+		"textures": {
+			"down": "grass_bottom",
+			"side": "grass_side_bt",
+			"up": "grass_top"
+		}
+	}
+}
