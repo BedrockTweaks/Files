@@ -2537,6 +2537,28 @@
 			]
 		},
 		{
+			"id": "extras/dirt/golden_savanna_lush_grass",
+			"combines": [
+				"terrain/golden_savanna",
+				"terrain/lush_grass_all_round"
+			]
+		},
+		{
+			"id": "extras/dirt/lush_grass_sides",
+			"combines": [
+				"terrain/lush_grass_all_round",
+				"terrain/lower_and_sides/grass_sides"
+			]
+		},
+		{
+			"id": "extras/dirt/golden_savanna_lush_grass_sides",
+			"combines": [
+				"terrain/golden_savanna",
+				"terrain/lush_grass_all_round",
+				"terrain/lower_and_sides/grass_sides"
+			]
+		},
+		{
 			"id": "extras/snow/whiter_lower_snow",
 			"combines": [
 				"terrain/whiter_snow",
