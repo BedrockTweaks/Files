@@ -29,7 +29,7 @@
 				"volume": 0.1
 			},
 			"drip.water.pointed_dripstone" : {
-			   "pitch" : 0.1
+			   "volume" : 0.1
 			}
 		}
 	}
