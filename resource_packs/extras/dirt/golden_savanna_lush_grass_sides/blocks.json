@@ -1,5 +1,9 @@
 {
-	"format_version": "1.21.20",
+	"format_version": [
+		1,
+		1,
+		0
+	],
 	"grass": {
 		"carried_textures": {
 			"down": "grass_carried_bottom",
