@@ -96,13 +96,50 @@ If there is need to scale the template use closest neighbor instead of other sam
 ### Formatting
 
 JSON files should be formatted using 1 tab with size 4 for indentation.
+
 TS files should be formatted using 2 spaces for indentation.
+
+### Addons
+
+Addons should use the provided template.
+
+To start working in addons you will need to have the following:
+
+- node.js https://nodejs.org/en/
+- Regolith https://bedrock-oss.github.io/regolith/
+
+It is recommended to use VSCode with the suggested extensions. On opening the project you will be prompted to install them at the bottom
+right of the IDE.
+
+When creating a new addon after copying the template, open the addon directory in a new instance of your IDE, then you can
+run `regolith install-all` to install all the dependencies.
+
+After that you should add the required uuid's, update the pack name, short descriptions and author/s in the BP and RP manifest.json,
+data/gametests/uuid.txt and config.json files.
+
+If required due to an update will also need to bump the modules versions in config.json and package.json
+
+To start working on the addons you can run `regolith watch` in the addon root folder to start the watcher and compile the files.
+
+It is highly preferred to use scripting against modifying vanilla files to avoid compatibility issues between the addons.
+
+Before making a PR make sure lint the project by running `npm run lint` in the data/gametests directory.
+
+When updating the addons make sure to bump the versions in the manifests and packs.json
+
+#### Technical Details
+- Event subscriptions are the entry point for the addon, all of them must be defined in the `index` file.
+- Functions contains the code which interacts between the game and the addon.
+- Models contains all the definitions and data structures used in the addon.
+- UI contains the interfaces where the player interacts, usually for addon config.
+- Utils contains helper functions and classes.
+- Prefer interfaces to types.
+- Prefer functional programming over object-oriented programming.
+- Prefer `const` and `let` over `var`.
 
 #
 
 If you notice any files not following the Style Guide feel free to open a PR.
-
-Note: not accepting Addons PR at the moment.
 
 ## Git Formats
 

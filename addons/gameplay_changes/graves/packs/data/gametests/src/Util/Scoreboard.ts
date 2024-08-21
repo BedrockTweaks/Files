@@ -32,8 +32,7 @@ export function setObjective(objectiveName: string, scoreboardObject: object): v
   const scoreboardObjective = world.scoreboard.getObjective(objectiveName);
   const participants = scoreboardObjective?.getParticipants();
 
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  Object.entries(scoreboardObject).forEach(([key, value]: [string, any]): void => {
+  Object.entries(scoreboardObject).forEach(([key, value]: [string, number]): void => {
     const player: ScoreboardIdentity | undefined = participants?.find(
       (participant: ScoreboardIdentity): boolean => participant.displayName === key,
     );

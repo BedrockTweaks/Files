@@ -1,4 +1,8 @@
-akorozes.graves.death_location=§eYour grave is at %1 %2 %3
+
+item.bt:g.grave_key=Grave Key
+
+bt.graves.location=§6Your last grave is at §e(%1, %2, %3)§6 in %4.
+
 bt.graves.settings.title=Graves / Global Settings
 
 bt.graves.settings.list_all_graves=[ List All Graves ]

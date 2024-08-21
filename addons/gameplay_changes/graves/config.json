@@ -1,7 +1,7 @@
 {
 	"$schema": "https://raw.githubusercontent.com/Bedrock-OSS/regolith-schemas/main/config/v1.2.json",
 	"author": "DrAv0011",
-	"name": "Bedrock Tweaks - Gameplay Changes - Graves",
+	"name": "Graves - Gameplay Changes",
 	"packs": {
 		"behaviorPack": "./packs/BP",
 		"resourcePack": "./packs/RP"
@@ -12,19 +12,13 @@
 			"gametests": {
 				"url": "github.com/Bedrock-OSS/regolith-filters",
 				"version": "1.6.1"
-			},
-			"clearFiles": {
-				"runWith": "nodejs",
-				"script": "./filters/clearFiles.js"
 			}
 		},
 		"profiles": {
 			"build": {
 				"export": {
 					"readOnly": true,
-					"target": "exact",
-					"bpPath": "./build/BP",
-					"rpPath": "./build/RP"
+					"target": "local"
 				},
 				"filters": [
 					{
@@ -36,21 +30,18 @@
 									"data/gametests/src/index.ts"
 								],
 								"format": "esm",
-								"minify": false,
+								"minify": true,
 								"target": "es2020"
 							},
 							"manifest": "BP/manifest.json",
 							"moduleUUID": "da5802ff-6c19-46d8-a27a-1f717580968b",
 							"modules": [
-								"@minecraft/server@1.11.0",
-								"@minecraft/server-ui@1.1.0"
+								"@minecraft/server@1.13.0",
+								"@minecraft/server-ui@1.2.0"
 							],
-							"outfile": "BP/scripts/bt/gc/graves/main.js",
+							"outfile": "BP/scripts/main.js",
 							"debugBuild": false
 						}
-					},
-					{
-						"filter": "clearFiles"
 					}
 				]
 			},
@@ -75,8 +66,8 @@
 							"manifest": "BP/manifest.json",
 							"moduleUUID": "da5802ff-6c19-46d8-a27a-1f717580968b",
 							"modules": [
-								"@minecraft/server@1.11.0",
-								"@minecraft/server-ui@1.1.0"
+								"@minecraft/server@1.13.0",
+								"@minecraft/server-ui@1.2.0"
 							],
 							"outfile": "BP/scripts/main.js",
 							"debugBuild": true

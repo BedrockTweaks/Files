@@ -6,18 +6,19 @@
 	},
 	"[json]": {
 		"editor.tabSize": 4,
-		"editor.insertSpaces": true
+		"editor.insertSpaces": false
 	},
 	"[jsonc]": {
 		"editor.tabSize": 4,
-		"editor.insertSpaces": true
+		"editor.insertSpaces": false
 	},
 	"editor.codeActionsOnSave": {
 		"source.fixAll.eslint": "always"
 	},
-	"files.eol": "\n",
+	"files.eol": "\r\n",
 	"eslint.format.enable": true,
 	"eslint.workingDirectories": [
 		"./packs/data/gametests"
-	]
+	],
+	"editor.insertSpaces": false
 }

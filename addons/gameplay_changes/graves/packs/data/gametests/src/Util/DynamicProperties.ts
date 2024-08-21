@@ -1,4 +1,6 @@
-import { Vector3, world } from '@minecraft/server';
+import { Entity, Vector3, World } from '@minecraft/server';
+
+type PropertiesTypes = boolean | number | string | Vector3 | undefined;
 
 /**
  * Converts the properties from the enumType to a JS Object of type T
@@ -7,11 +9,11 @@ import { Vector3, world } from '@minecraft/server';
  *
  * @returns An object containing the properties from the enumType
  */
-export function getProperties<T>(enumType: { [key: string]: string }): T {
-  const propertiesObject: Record<string, boolean | number | string | Vector3 | undefined> = {};
+export function getProperties<T>(from: World | Entity, enumType: { [key: string]: string }): T {
+  const propertiesObject: Record<string, PropertiesTypes> = {};
 
   Object.entries(enumType).forEach(([key, value]: [string, string]): void => {
-    propertiesObject[key] = world.getDynamicProperty(value);
+    propertiesObject[key] = from.getDynamicProperty(value);
   });
 
   return propertiesObject as T;
@@ -24,13 +26,12 @@ export function getProperties<T>(enumType: { [key: string]: string }): T {
  * @param enumType
  *
  */
-export function setProperties<T extends object>(enumType: { [key: string]: string }, propertyObject: T): void {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  Object.entries(propertyObject).forEach(([key, value]: [string, any]): void => {
+export function setProperties(to: World | Entity, enumType: { [key: string]: string }, propertyObject: object): void {
+  Object.entries(propertyObject).forEach(([key, value]: [string, PropertiesTypes]): void => {
     const identifier: string = enumType[key];
 
     if (identifier) {
-      world.setDynamicProperty(identifier, value);
+      to.setDynamicProperty(identifier, value);
     }
   });
 }
