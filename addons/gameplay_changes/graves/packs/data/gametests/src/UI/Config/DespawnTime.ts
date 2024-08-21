@@ -1,11 +1,12 @@
 import { Player } from '@minecraft/server';
 import { ActionFormData, ActionFormResponse, ModalFormData, ModalFormResponse } from '@minecraft/server-ui';
 import { openConfigInterface } from '.';
-import { getSettings, setSettings } from '../../Functions/Graves/settings';
+import { getSettings, setSettings } from '../../Functions';
 import { GravesSettings } from '../../Models';
 
 export const openDespawnTimeInterface = (player: Player): void => {
   const gravesSettings: GravesSettings = getSettings();
+
   const form = new ActionFormData()
     .title({ translate: 'bt.graves.settings.despawn_time' })
     .body({ translate: 'bt.graves.settings.despawn_time.description', with: ['\n', ' ' + gravesSettings.despawnTime] })
@@ -29,6 +30,7 @@ export const openDespawnTimeInterface = (player: Player): void => {
 
 const openDespawnTimeEditInterface = (player: Player): void => {
   const gravesSettings: GravesSettings = getSettings();
+
   const form = new ModalFormData()
     .title({ translate: 'bt.graves.settings.despawn_time' })
     .textField({ translate: 'bt.graves.settings.despawn_time.edit', with: ['\n'] }, '', gravesSettings.despawnTime + '');

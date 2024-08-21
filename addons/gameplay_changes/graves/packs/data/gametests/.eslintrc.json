@@ -310,7 +310,7 @@
 		],
 		"@stylistic/linebreak-style": [
 			"warn",
-			"unix"
+			"windows"
 		],
 		"@stylistic/lines-around-comment": [
 			"warn",
@@ -332,12 +332,7 @@
 				"exceptAfterOverload": false
 			}
 		],
-		"@stylistic/max-len": [
-			"warn",
-			{
-				"code": 140
-			}
-		],
+		"@stylistic/max-len": "off",
 		"@stylistic/max-statements-per-line": "off",
 		"@stylistic/multiline-ternary": "off",
 		"@stylistic/new-parens": [

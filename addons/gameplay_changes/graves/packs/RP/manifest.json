@@ -1,8 +1,8 @@
 {
 	"format_version": 2,
 	"header": {
-		"name": "Bedrock Tweaks Addons Test RP",
-		"description": "by Bedrock Tweaks",
+		"name": "Graves RP - Gameplay Changes",
+		"description": "When you die it places a grave to save all your drops",
 		"uuid": "e9412201-d5f3-4d0f-bb25-cc3bb051c9b9",
 		"version": [
 			1,
@@ -12,7 +12,7 @@
 		"min_engine_version": [
 			1,
 			21,
-			0
+			20
 		]
 	},
 	"modules": [
@@ -35,5 +35,12 @@
 				0
 			]
 		}
-	]
+	],
+	"metadata": {
+		"authors": [
+			"Vanilla Tweaks",
+			"Bedrock Tweaks",
+			"DrAv0011"
+		]
+	}
 }

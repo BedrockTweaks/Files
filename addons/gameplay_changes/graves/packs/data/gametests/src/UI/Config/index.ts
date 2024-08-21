@@ -3,12 +3,12 @@ import {
   Player
 } from '@minecraft/server';
 import { ActionFormData, ActionFormResponse } from '@minecraft/server-ui';
-import { getSettings } from '../../Functions/Graves/settings';
+import { getSettings, giveGraveKey, listAllGraves } from '../../Functions';
 import { GravesSettings } from '../../Models';
+import { openDespawnTimeInterface } from './DespawnTime';
 import { openGraveLocatingInterface } from './GraveLocating';
 import { openGraveRobbingInterface } from './GraveRobbing';
 import { openXPCollectionInterface } from './XPCollection';
-import { openDespawnTimeInterface } from './DespawnTime';
 
 export const openConfigInterface = (entity: Entity | undefined): void => {
   const gravesSettings: GravesSettings = getSettings();
@@ -65,11 +65,11 @@ export const openConfigInterface = (entity: Entity | undefined): void => {
 
           break;
         case 4:
-          // list all graves
+          listAllGraves(player);
 
           break;
         case 5:
-          // receive grave key
+          giveGraveKey(player);
 
           break;
         default:
