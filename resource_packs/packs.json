@@ -556,7 +556,7 @@
 				{
 					"id": "quieter_water",
 					"name": "Quieter Water",
-					"description": "Decreases Water and dripstone water drop sounds by 95%"
+					"description": "Decreases Water, swimming, water drops from Dripstones and underwater sound events by 95%"
 				},
 				{
 					"id": "quieter_consumables",
@@ -2573,6 +2573,21 @@
 			"combines": [
 				"gui/dark_ui",
 				"gui/numbered_hotbar"
+			]
+		},
+		{
+			"id": "extras/gui/dark_brewing_stand_icons_fix",
+			"combines": [
+				"gui/dark_ui",
+				"fixes_and_consistency/brewing_stand_icons_fix"
+			]
+		},
+		{
+			"id": "extras/gui/dark_numbered_hotbar_brewing_stand_icons_fix",
+			"combines": [
+				"gui/dark_ui",
+				"gui/numbered_hotbar",
+				"fixes_and_consistency/brewing_stand_icons_fix"
 			]
 		},
 		{
