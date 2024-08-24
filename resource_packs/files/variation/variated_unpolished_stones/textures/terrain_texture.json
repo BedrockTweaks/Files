@@ -824,6 +824,168 @@
 				},
 				"textures/blocks/stone_granite_smooth"
 			]
+		},
+		"granite_slab": {
+			"textures": {
+				"variations": [
+					{
+						"path": "textures/blocks/granite/0"
+					},
+					{
+						"path": "textures/blocks/granite/1"
+					},
+					{
+						"path": "textures/blocks/granite/2"
+					},
+					{
+						"path": "textures/blocks/granite/3"
+					},
+					{
+						"path": "textures/blocks/granite/4"
+					},
+					{
+						"path": "textures/blocks/granite/5"
+					},
+					{
+						"path": "textures/blocks/granite/6"
+					},
+					{
+						"path": "textures/blocks/granite/7"
+					},
+					{
+						"path": "textures/blocks/granite/8"
+					},
+					{
+						"path": "textures/blocks/granite/9"
+					},
+					{
+						"path": "textures/blocks/granite/10"
+					},
+					{
+						"path": "textures/blocks/granite/11"
+					},
+					{
+						"path": "textures/blocks/granite/12"
+					},
+					{
+						"path": "textures/blocks/granite/13"
+					},
+					{
+						"path": "textures/blocks/granite/14"
+					},
+					{
+						"path": "textures/blocks/granite/15"
+					}
+				]
+			}
+		},
+		"diorite_slab": {
+			"textures": {
+				"variations": [
+					{
+						"path": "textures/blocks/diorite/0"
+					},
+					{
+						"path": "textures/blocks/diorite/1"
+					},
+					{
+						"path": "textures/blocks/diorite/2"
+					},
+					{
+						"path": "textures/blocks/diorite/3"
+					},
+					{
+						"path": "textures/blocks/diorite/4"
+					},
+					{
+						"path": "textures/blocks/diorite/5"
+					},
+					{
+						"path": "textures/blocks/diorite/6"
+					},
+					{
+						"path": "textures/blocks/diorite/7"
+					},
+					{
+						"path": "textures/blocks/diorite/8"
+					},
+					{
+						"path": "textures/blocks/diorite/9"
+					},
+					{
+						"path": "textures/blocks/diorite/10"
+					},
+					{
+						"path": "textures/blocks/diorite/11"
+					},
+					{
+						"path": "textures/blocks/diorite/12"
+					},
+					{
+						"path": "textures/blocks/diorite/13"
+					},
+					{
+						"path": "textures/blocks/diorite/14"
+					},
+					{
+						"path": "textures/blocks/diorite/15"
+					}
+				]
+			}
+		},
+		"andesite_slab": {
+			"textures": {
+				"variations": [
+					{
+						"path": "textures/blocks/andesite/0"
+					},
+					{
+						"path": "textures/blocks/andesite/1"
+					},
+					{
+						"path": "textures/blocks/andesite/2"
+					},
+					{
+						"path": "textures/blocks/andesite/3"
+					},
+					{
+						"path": "textures/blocks/andesite/4"
+					},
+					{
+						"path": "textures/blocks/andesite/5"
+					},
+					{
+						"path": "textures/blocks/andesite/6"
+					},
+					{
+						"path": "textures/blocks/andesite/7"
+					},
+					{
+						"path": "textures/blocks/andesite/8"
+					},
+					{
+						"path": "textures/blocks/andesite/9"
+					},
+					{
+						"path": "textures/blocks/andesite/10"
+					},
+					{
+						"path": "textures/blocks/andesite/11"
+					},
+					{
+						"path": "textures/blocks/andesite/12"
+					},
+					{
+						"path": "textures/blocks/andesite/13"
+					},
+					{
+						"path": "textures/blocks/andesite/14"
+					},
+					{
+						"path": "textures/blocks/andesite/15"
+					}
+				]
+			}
 		}
 	}
 }

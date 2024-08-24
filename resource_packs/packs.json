@@ -2671,29 +2671,22 @@
 		{
 			"id": "extras/variated_stone/variated_stone_and_unpolished_stones",
 			"combines": [
-				"variated/variated_stone",
-				"variated/variated_unpolished_stones"
-			]
-		},
-		{
-			"id": "extras/variated_stone/dungeons_stone_and_unpolished_stones",
-			"combines": [
-				"variated/variated_unpolished_stones",
-				"parity/dungeons_stone"
+				"variation/variated_stone",
+				"variation/variated_unpolished_stones"
 			]
 		},
 		{
 			"id": "files/variation/variated_stone",
 			"combines": [
-				"variated/variated_stone",
+				"variation/variated_stone",
 				"parity/dungeons_stone"
 			]
 		},
 		{
 			"id": "extras/variated_stone/dungeons_stone_and_unpolished_stones",
 			"combines": [
-				"variated/variated_stone",
-				"variated/variated_unpolished_stones",
+				"variation/variated_stone",
+				"variation/variated_unpolished_stones",
 				"parity/dungeons_stone"
 			]
 		},

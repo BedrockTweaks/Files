@@ -195,6 +195,66 @@
 				"textures/blocks/quartz_block_top",
 				"textures/blocks/nether_brick"
 			]
+		},
+		"brick_wall": {
+			"textures": {
+				"variations": [
+					{
+						"path": "textures/blocks/brick/0"
+					},
+					{
+						"path": "textures/blocks/brick/1"
+					},
+					{
+						"path": "textures/blocks/brick/2"
+					},
+					{
+						"path": "textures/blocks/brick/3"
+					},
+					{
+						"path": "textures/blocks/brick/4"
+					},
+					{
+						"path": "textures/blocks/brick/5"
+					},
+					{
+						"path": "textures/blocks/brick/6"
+					},
+					{
+						"path": "textures/blocks/brick/7"
+					}
+				]
+			}
+		},
+		"brick_slab": {
+			"textures": {
+				"variations": [
+					{
+						"path": "textures/blocks/brick/0"
+					},
+					{
+						"path": "textures/blocks/brick/1"
+					},
+					{
+						"path": "textures/blocks/brick/2"
+					},
+					{
+						"path": "textures/blocks/brick/3"
+					},
+					{
+						"path": "textures/blocks/brick/4"
+					},
+					{
+						"path": "textures/blocks/brick/5"
+					},
+					{
+						"path": "textures/blocks/brick/6"
+					},
+					{
+						"path": "textures/blocks/brick/7"
+					}
+				]
+			}
 		}
 	}
 }
