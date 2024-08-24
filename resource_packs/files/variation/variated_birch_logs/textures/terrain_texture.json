@@ -69,6 +69,54 @@
 				"textures/blocks/log_big_oak",
 				"textures/blocks/stripped_dark_oak_log"
 			]
+		},
+		"birch_log_side": {
+			"textures": {
+				"variations": [
+					{
+						"path": "textures/blocks/birch_log/0"
+					},
+					{
+						"path": "textures/blocks/birch_log/1"
+					},
+					{
+						"path": "textures/blocks/birch_log/2"
+					},
+					{
+						"path": "textures/blocks/birch_log/3"
+					},
+					{
+						"path": "textures/blocks/birch_log/4"
+					},
+					{
+						"path": "textures/blocks/birch_log/5"
+					}
+				]
+			}
+		},
+		"birch_wood": {
+			"textures": {
+				"variations": [
+					{
+						"path": "textures/blocks/birch_log/0"
+					},
+					{
+						"path": "textures/blocks/birch_log/1"
+					},
+					{
+						"path": "textures/blocks/birch_log/2"
+					},
+					{
+						"path": "textures/blocks/birch_log/3"
+					},
+					{
+						"path": "textures/blocks/birch_log/4"
+					},
+					{
+						"path": "textures/blocks/birch_log/5"
+					}
+				]
+			}
 		}
 	}
 }
