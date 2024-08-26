@@ -1,0 +1,13 @@
+{
+	"entity_sounds": {
+		"entities": {
+			"ender_dragon": {
+				"events": {
+					"death": {
+						"volume": 0
+					}
+				}
+			}
+		}
+	}
+}

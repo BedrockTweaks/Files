@@ -1,0 +1,29 @@
+{
+	"format_version": "1.20.80",
+	"sound_definitions": {
+		"portal.portal": {
+			"sounds": [
+				{
+					"name": "sounds/portal/portal",
+					"volume": 0.05
+				}
+			]
+		},
+		"portal.travel": {
+			"sounds": [
+				{
+					"name": "sounds/portal/travel",
+					"volume": 0.05
+				}
+			]
+		},
+		"portal.trigger": {
+			"sounds": [
+				{
+					"name": "sounds/portal/trigger",
+					"volume": 0.05
+				}
+			]
+		}
+	}
+}

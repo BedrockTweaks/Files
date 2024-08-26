@@ -1,0 +1,6 @@
+{
+	"namespace": "common",
+	"back_title_button_content/chevron_panel/left_chevron": {
+		"color": "$light_button_default_text_color"
+	}
+}

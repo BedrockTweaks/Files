@@ -1,0 +1,261 @@
+{
+	"format_version": "1.20.80",
+	"sound_definitions": {
+		"close.bamboo_wood_door": {
+			"sounds": [
+				{
+					"name": "sounds/block/wooden_door/close1",
+					"volume": 0.90
+				}
+			]
+		},
+		"close.bamboo_wood_fence_gate": {
+			"sounds": [
+				{
+					"name": "sounds/block/wooden_door/close1",
+					"volume": 0.90
+				}
+			]
+		},
+		"close.bamboo_wood_trapdoor": {
+			"sounds": [
+				{
+					"name": "sounds/block/wooden_door/close1",
+					"volume": 0.90
+				}
+			]
+		},
+		"close.cherry_wood_door": {
+			"sounds": [
+				{
+					"name": "sounds/block/wooden_door/close1",
+					"volume": 0.90
+				}
+			]
+		},
+		"close.cherry_wood_fence_gate": {
+			"sounds": [
+				{
+					"name": "sounds/block/wooden_door/close1",
+					"volume": 0.90
+				}
+			]
+		},
+		"close.cherry_wood_trapdoor": {
+			"sounds": [
+				{
+					"name": "sounds/block/wooden_door/close1",
+					"volume": 0.90
+				}
+			]
+		},
+		"close.fence_gate": {
+			"sounds": [
+				{
+					"name": "sounds/block/wooden_door/close1",
+					"volume": 0.90
+				}
+			]
+		},
+		"close.iron_door": {
+			"sounds": [
+				{
+					"name": "sounds/block/wooden_door/close1",
+					"volume": 0.90
+				}
+			]
+		},
+		"close.iron_trapdoor": {
+			"sounds": [
+				{
+					"name": "sounds/block/wooden_door/close1",
+					"volume": 0.90
+				}
+			]
+		},
+		"close.nether_wood_door": {
+			"sounds": [
+				{
+					"name": "sounds/block/wooden_door/close1",
+					"volume": 0.90
+				}
+			]
+		},
+		"close.nether_wood_fence_gate": {
+			"sounds": [
+				{
+					"name": "sounds/block/wooden_door/close1",
+					"volume": 0.90
+				}
+			]
+		},
+		"close.nether_wood_trapdoor": {
+			"sounds": [
+				{
+					"name": "sounds/block/wooden_door/close1",
+					"volume": 0.90
+				}
+			]
+		},
+		"close.wooden_door": {
+			"sounds": [
+				{
+					"name": "sounds/block/wooden_door/close1",
+					"volume": 0.90
+				}
+			]
+		},
+		"close.wooden_trapdoor": {
+			"sounds": [
+				{
+					"name": "sounds/block/wooden_door/close1",
+					"volume": 0.90
+				}
+			]
+		},
+		"close_door.copper": {
+			"sounds": [
+				{
+					"name": "sounds/block/wooden_door/close1",
+					"volume": 0.90
+				}
+			]
+		},
+		"close_trapdoor.copper": {
+			"sounds": [
+				{
+					"name": "sounds/block/wooden_door/close1",
+					"volume": 0.90
+				}
+			]
+		},
+		"open.bamboo_wood_door": {
+			"sounds": [
+				{
+					"name": "sounds/block/wooden_door/open1",
+					"volume": 0.90
+				}
+			]
+		},
+		"open.bamboo_wood_fence_gate": {
+			"sounds": [
+				{
+					"name": "sounds/block/wooden_door/open1",
+					"volume": 0.90
+				}
+			]
+		},
+		"open.bamboo_wood_trapdoor": {
+			"sounds": [
+				{
+					"name": "sounds/block/wooden_door/open1",
+					"volume": 0.90
+				}
+			]
+		},
+		"open.cherry_wood_door": {
+			"sounds": [
+				{
+					"name": "sounds/block/wooden_door/open1",
+					"volume": 0.90
+				}
+			]
+		},
+		"open.cherry_wood_fence_gate": {
+			"sounds": [
+				{
+					"name": "sounds/block/wooden_door/open1",
+					"volume": 0.90
+				}
+			]
+		},
+		"open.cherry_wood_trapdoor": {
+			"sounds": [
+				{
+					"name": "sounds/block/wooden_door/open1",
+					"volume": 0.90
+				}
+			]
+		},
+		"open.fence_gate": {
+			"sounds": [
+				{
+					"name": "sounds/block/wooden_door/open1",
+					"volume": 0.90
+				}
+			]
+		},
+		"open.iron_door": {
+			"sounds": [
+				{
+					"name": "sounds/block/wooden_door/open1",
+					"volume": 0.90
+				}
+			]
+		},
+		"open.iron_trapdoor": {
+			"sounds": [
+				{
+					"name": "sounds/block/wooden_door/open1",
+					"volume": 0.90
+				}
+			]
+		},
+		"open.nether_wood_door": {
+			"sounds": [
+				{
+					"name": "sounds/block/wooden_door/open1",
+					"volume": 0.90
+				}
+			]
+		},
+		"open.nether_wood_fence_gate": {
+			"sounds": [
+				{
+					"name": "sounds/block/wooden_door/open1",
+					"volume": 0.90
+				}
+			]
+		},
+		"open.nether_wood_trapdoor": {
+			"sounds": [
+				{
+					"name": "sounds/block/wooden_door/open1",
+					"volume": 0.90
+				}
+			]
+		},
+		"open.wooden_door": {
+			"sounds": [
+				{
+					"name": "sounds/block/wooden_door/open1",
+					"volume": 0.90
+				}
+			]
+		},
+		"open.wooden_trapdoor": {
+			"sounds": [
+				{
+					"name": "sounds/block/wooden_door/open1",
+					"volume": 0.90
+				}
+			]
+		},
+		"open_door.copper": {
+			"sounds": [
+				{
+					"name": "sounds/block/wooden_door/open1",
+					"volume": 0.90
+				}
+			]
+		},
+		"open_trapdoor.copper": {
+			"sounds": [
+				{
+					"name": "sounds/block/wooden_door/open1",
+					"volume": 0.90
+				}
+			]
+		}
+	}
+}
