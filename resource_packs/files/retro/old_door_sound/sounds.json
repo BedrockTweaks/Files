@@ -1,0 +1,16 @@
+{
+	"block_sounds": {
+		"copper": {
+			"events": {
+				"trapdoor.close": {
+					"pitch": 1.0,
+					"sound": "close_trapdoor.copper"
+				},
+				"trapdoor.open": {
+					"pitch": 1.0,
+					"sound": "open_trapdoor.copper"
+				}
+			}
+		}
+	}
+}
