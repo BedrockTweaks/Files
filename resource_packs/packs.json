@@ -2763,6 +2763,10 @@
 			"filepath": "/sounds.json"
 		},
 		{
+			"filename": "sound_definitions.json",
+			"filepath": "/sounds/sound_definitions.json"
+		},
+		{
 			"filename": "trade_2_screen.json",
 			"filepath": "/ui/trade_2_screen.json"
 		},
