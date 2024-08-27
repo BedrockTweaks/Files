@@ -2598,10 +2598,10 @@
 			]
 		},
 		{
-			"id": "extras/ores/pre_1_17_ore_borders",
+			"id": "extras/ores/classic_ores_borders",
 			"combines": [
 				"utility/ore_borders",
-				"retro/pre_1_17_ores"
+				"retro/classic_ores"
 			]
 		},
 		{
@@ -2677,6 +2677,13 @@
 			]
 		},
 		{
+			"id": "extras/utility/updated_directional_observers_texture",
+			"combines": [
+				"fixes_and_consistency/updated_observer_texture",
+				"utility/directional_observers"
+			]
+		},
+		{
 			"id": "extras/unobtrusive/unobtrusive_rain_and_snow",
 			"combines": [
 				"unobtrusive/unobtrusive_rain",
@@ -2684,17 +2691,17 @@
 			]
 		},
 		{
+			"id": "extras/unobtrusive/accurate_unobtrusive_scaffolding",
+			"combines": [
+				"aesthetic/accurate_scaffolding",
+				"unobtrusive/unobtrusive_scaffolding"
+			]
+		},
+		{
 			"id": "extras/variated_stone/variated_stone_and_unpolished_stones",
 			"combines": [
 				"variation/variated_stone",
 				"variation/variated_unpolished_stones"
-			]
-		},
-		{
-			"id": "files/variation/variated_stone",
-			"combines": [
-				"variation/variated_stone",
-				"parity/dungeons_stone"
 			]
 		},
 		{
@@ -2720,13 +2727,6 @@
 			]
 		},
 		{
-			"id": "extras/utility/updated_directional_observers_texture",
-			"combines": [
-				"fixes_and_consistency/updated_observer_texture",
-				"utility/directional_observers"
-			]
-		},
-		{
 			"id": "files/terrain/darker_dark_oak_leaves",
 			"combines": [
 				"retro/alpha_foliage",
@@ -2734,10 +2734,10 @@
 			]
 		},
 		{
-			"id": "extras/unobtrusive/accurate_unobtrusive_scaffolding",
+			"id": "files/variation/variated_stone",
 			"combines": [
-				"aesthetic/accurate_scaffolding",
-				"unobtrusive/unobtrusive_scaffolding"
+				"variation/variated_stone",
+				"parity/dungeons_stone"
 			]
 		}
 	],
@@ -2761,6 +2761,10 @@
 		{
 			"filename": "sounds.json",
 			"filepath": "/sounds.json"
+		},
+		{
+			"filename": "sound_definitions.json",
+			"filepath": "/sounds/sound_definitions.json"
 		},
 		{
 			"filename": "trade_2_screen.json",
