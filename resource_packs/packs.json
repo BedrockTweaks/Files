@@ -2605,6 +2605,13 @@
 			]
 		},
 		{
+			"id": "extras/ores/classic_unlit_redstone_ores",
+			"combines": [
+				"utility/unlit_redstone_ore",
+				"retro/classic_ores"
+			]
+		},
+		{
 			"id": "extras/ores/rubies_ore_borders",
 			"combines": [
 				"utility/ore_borders",
