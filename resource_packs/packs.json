@@ -2490,14 +2490,14 @@
 	],
 	"combinations": [
 		{
-			"id":"consistent_oarless_bamboo",
+			"id":"extras/bamboo/consistent_oarless_bamboo",
 			"combines":[
 				"aesthetic/consistent_bamboo_planks",
 				"retro/oarless_boats"
 			]
 		},
 		{
-			"id":"consistent_oarless_old_bamboo",
+			"id":"extras/bamboo/consistent_oarless_old_bamboo",
 			"combines":[
 				"aesthetic/consistent_bamboo_planks",
 				"retro/oarless_boats",
@@ -2505,7 +2505,7 @@
 			]
 		},
 		{
-			"id":"consistent_oarless_old_variated_bamboo",
+			"id":"extras/bamboo/consistent_oarless_old_variated_bamboo",
 			"combines":[
 				"aesthetic/consistent_bamboo_planks",
 				"retro/oarless_boats",
@@ -2514,7 +2514,7 @@
 			]
 		},
 		{
-			"id":"consistent_oarless_variated_bamboo",
+			"id":"extras/bamboo/consistent_oarless_variated_bamboo",
 			"combines":[
 				"aesthetic/consistent_bamboo_planks",
 				"retro/oarless_boats",
@@ -2522,7 +2522,7 @@
 			]
 		},
 		{
-			"id":"consistent_variated_bamboo",
+			"id":"extras/bamboo/consistent_variated_bamboo",
 			"combines":[
 				"aesthetic/consistent_bamboo_planks",
 				"variation/variated_planks"
