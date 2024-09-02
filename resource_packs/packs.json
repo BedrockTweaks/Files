@@ -2490,6 +2490,45 @@
 	],
 	"combinations": [
 		{
+			"id":"consistent_oarless_bamboo",
+			"combines":[
+				"aesthetic/consistent_bamboo_planks",
+				"retro/oarless_boats"
+			]
+		},
+		{
+			"id":"consistent_oarless_old_bamboo",
+			"combines":[
+				"aesthetic/consistent_bamboo_planks",
+				"retro/oarless_boats",
+				"retro/old_planks"
+			]
+		},
+		{
+			"id":"consistent_oarless_old_variated_bamboo",
+			"combines":[
+				"aesthetic/consistent_bamboo_planks",
+				"retro/oarless_boats",
+				"retro/old_planks",
+				"variation/variated_planks"
+			]
+		},
+		{
+			"id":"consistent_oarless_variated_bamboo",
+			"combines":[
+				"aesthetic/consistent_bamboo_planks",
+				"retro/oarless_boats",
+				"variation/variated_planks"
+			]
+		},
+		{
+			"id":"consistent_variated_bamboo",
+			"combines":[
+				"aesthetic/consistent_bamboo_planks",
+				"variation/variated_planks"
+			]
+		},
+		{
 			"id": "extras/dirt/pebbleless_dungeons_dirt",
 			"combines": [
 				"terrain/pebbleless_dirt",
