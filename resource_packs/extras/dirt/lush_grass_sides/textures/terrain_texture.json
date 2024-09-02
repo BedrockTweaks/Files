@@ -1,0 +1,77 @@
+{
+	"num_mip_levels": 4,
+	"padding": 8,
+	"resource_pack_name": "vanilla",
+	"texture_data": {
+		"grass_side_bt": {
+			"textures": [
+				{
+					"overlay_color": "#2abb0e",
+					"path": "textures/blocks/grass_top"
+				},
+				{
+					"overlay_color": "#2abb0e",
+					"path": "textures/blocks/grass_top"
+				},
+				{
+					"overlay_color": "#2abb0e",
+					"path": "textures/blocks/grass_top"
+				},
+				{
+					"overlay_color": "#2abb0e",
+					"path": "textures/blocks/grass_top"
+				},
+				{
+					"overlay_color": "#2abb0e",
+					"path": "textures/blocks/grass_top"
+				},
+				{
+					"overlay_color": "#2abb0e",
+					"path": "textures/blocks/grass_top"
+				},
+				{
+					"overlay_color": "#2abb0e",
+					"path": "textures/blocks/grass_top"
+				},
+				{
+					"overlay_color": "#2abb0e",
+					"path": "textures/blocks/grass_top"
+				},
+				{
+					"overlay_color": "#2abb0e",
+					"path": "textures/blocks/grass_top"
+				},
+				{
+					"overlay_color": "#2abb0e",
+					"path": "textures/blocks/grass_top"
+				},
+				{
+					"overlay_color": "#2abb0e",
+					"path": "textures/blocks/grass_top"
+				},
+				{
+					"overlay_color": "#2abb0e",
+					"path": "textures/blocks/grass_top"
+				},
+				{
+					"overlay_color": "#2abb0e",
+					"path": "textures/blocks/grass_top"
+				},
+				{
+					"overlay_color": "#2abb0e",
+					"path": "textures/blocks/grass_top"
+				},
+				{
+					"overlay_color": "#2abb0e",
+					"path": "textures/blocks/grass_top"
+				},
+				{
+					"overlay_color": "#2abb0e",
+					"path": "textures/blocks/grass_top"
+				},
+				"textures/blocks/grass_side_snowed"
+			]
+		}
+	},
+	"texture_name": "atlas.terrain"
+}

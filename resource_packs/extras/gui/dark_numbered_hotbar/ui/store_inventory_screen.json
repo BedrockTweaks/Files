@@ -1,0 +1,15 @@
+{
+	"namespace": "store_inventory",
+	"subscriptions_text_panel/subscriptions_text": {
+		"color": "$light_button_default_text_color"
+	},
+	"dropdown_button_content/title_label": {
+		"color": "$light_button_default_text_color"
+	},
+	"dropdown_button_content/count_panel/count": {
+		"color": "$light_button_default_text_color"
+	},
+	"dropdown_button_content/right_carrot/right": {
+		"color": "$light_button_default_text_color"
+	}
+}
