@@ -2555,6 +2555,111 @@
 			]
 		},
 		{
+			"id": "extras/coloured_slime/black_sticky_piston_sides",
+			"combines": [
+				"utility/sticky_piston_sides",
+				"world_of_color/colorful_slime/black_slime"
+			]
+		},
+		{
+			"id": "extras/coloured_slime/blue_sticky_piston_sides",
+			"combines": [
+				"utility/sticky_piston_sides",
+				"world_of_color/colorful_slime/blue_slime"
+			]
+		},
+		{
+			"id": "extras/coloured_slime/brown_sticky_piston_sides",
+			"combines": [
+				"utility/sticky_piston_sides",
+				"world_of_color/colorful_slime/brown_slime"
+			]
+		},
+		{
+			"id": "extras/coloured_slime/cyan_sticky_piston_sides",
+			"combines": [
+				"utility/sticky_piston_sides",
+				"world_of_color/colorful_slime/cyan_slime"
+			]
+		},
+		{
+			"id": "extras/coloured_slime/gray_sticky_piston_sides",
+			"combines": [
+				"utility/sticky_piston_sides",
+				"world_of_color/colorful_slime/gray_slime"
+			]
+		},
+		{
+			"id": "extras/coloured_slime/green_sticky_piston_sides",
+			"combines": [
+				"utility/sticky_piston_sides",
+				"world_of_color/colorful_slime/green_slime"
+			]
+		},
+		{
+			"id": "extras/coloured_slime/light_blue_sticky_piston_sides",
+			"combines": [
+				"utility/sticky_piston_sides",
+				"world_of_color/colorful_slime/light_blue_slime"
+			]
+		},
+		{
+			"id": "extras/coloured_slime/light_gray_sticky_piston_sides",
+			"combines": [
+				"utility/sticky_piston_sides",
+				"world_of_color/colorful_slime/light_gray_slime"
+			]
+		},
+		{
+			"id": "extras/coloured_slime/magenta_sticky_piston_sides",
+			"combines": [
+				"utility/sticky_piston_sides",
+				"world_of_color/colorful_slime/magenta_slime"
+			]
+		},
+		{
+			"id": "extras/coloured_slime/orange_sticky_piston_sides",
+			"combines": [
+				"utility/sticky_piston_sides",
+				"world_of_color/colorful_slime/orange_slime"
+			]
+		},
+		{
+			"id": "extras/coloured_slime/pink_sticky_piston_sides",
+			"combines": [
+				"utility/sticky_piston_sides",
+				"world_of_color/colorful_slime/pink_slime"
+			]
+		},
+		{
+			"id": "extras/coloured_slime/purple_sticky_piston_sides",
+			"combines": [
+				"utility/sticky_piston_sides",
+				"world_of_color/colorful_slime/purple_slime"
+			]
+		},
+		{
+			"id": "extras/coloured_slime/red_sticky_piston_sides",
+			"combines": [
+				"utility/sticky_piston_sides",
+				"world_of_color/colorful_slime/red_slime"
+			]
+		},
+		{
+			"id": "extras/coloured_slime/white_sticky_piston_sides",
+			"combines": [
+				"utility/sticky_piston_sides",
+				"world_of_color/colorful_slime/white_slime"
+			]
+		},
+		{
+			"id": "extras/coloured_slime/yellow_sticky_piston_sides",
+			"combines": [
+				"utility/sticky_piston_sides",
+				"world_of_color/colorful_slime/yellow_slime"
+			]
+		},
+		{
 			"id": "extras/snow/whiter_lower_snow",
 			"combines": [
 				"terrain/whiter_snow",
