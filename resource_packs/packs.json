@@ -2619,17 +2619,57 @@
 			]
 		},
 		{
-			"id": "extras/ores/old_netherrack_ore_borders",
-			"combines": [
-				"utility/ore_borders",
-				"retro/old_netherrack"
-			]
-		},
-		{
 			"id": "extras/ores/uniform_rubies_ores",
 			"combines": [
 				"terrain/uniform_ores",
 				"fun/emeralds_to_rubies"
+			]
+		},
+		{
+			"id": "extras/ores/rubies_variated_villagers_ores",
+			"combines": [
+				"variation/variated_villagers",
+				"fun/emeralds_to_rubies"
+			]
+		},
+		{
+			"id": "extras/ores/uniform_rubies_variated_villagers_ores",
+			"combines": [
+				"variation/variated_villagers",
+				"terrain/uniform_ores",
+				"fun/emeralds_to_rubies"
+			]
+		},
+		{
+			"id": "extras/ores/rubies_variated_villagers_ore_borders",
+			"combines": [
+				"variation/variated_villagers",
+				"utility/ore_borders",
+				"fun/emeralds_to_rubies"
+			]
+		},
+		{
+			"id": "extras/ores/uniform_rubies_ore_borders",
+			"combines": [
+				"terrain/uniform_ores",
+				"utility/ore_borders",
+				"fun/emeralds_to_rubies"
+			]
+		},
+		{
+			"id": "extras/ores/uniform_rubies_variated_villagers_ore_borders",
+			"combines": [
+				"variation/variated_villagers",
+				"terrain/uniform_ores",
+				"utility/ore_borders",
+				"fun/emeralds_to_rubies"
+			]
+		},
+		{
+			"id": "extras/ores/old_netherrack_ore_borders",
+			"combines": [
+				"utility/ore_borders",
+				"retro/old_netherrack"
 			]
 		},
 		{
@@ -2652,14 +2692,6 @@
 				"terrain/uniform_ores",
 				"utility/ore_borders",
 				"retro/old_netherrack"
-			]
-		},
-		{
-			"id": "extras/ores/uniform_rubies_ore_borders",
-			"combines": [
-				"terrain/uniform_ores",
-				"utility/ore_borders",
-				"fun/emeralds_to_rubies"
 			]
 		},
 		{
