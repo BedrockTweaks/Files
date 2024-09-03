@@ -2591,6 +2591,13 @@
 			]
 		},
 		{
+			"id": "extras/ores/uniform_ore_borders",
+			"combines": [
+				"terrain/uniform_ores",
+				"utility/ore_borders"
+			]
+		},
+		{
 			"id": "extras/ores/dungeons_ore_borders",
 			"combines": [
 				"utility/ore_borders",
@@ -2609,6 +2616,53 @@
 			"combines": [
 				"utility/unlit_redstone_ore",
 				"retro/classic_ores"
+			]
+		},
+		{
+			"id": "extras/ores/brighter_nether_ore_borders",
+			"combines": [
+				"terrain/brighter_nether",
+				"utility/ore_borders"
+			]
+		},
+		{
+			"id": "extras/ores/uniform_brighter_nether_ores",
+			"combines": [
+				"terrain/brighter_nether",
+				"terrain/uniform_ores"
+			]
+		},
+		{
+			"id": "extras/ores/uniform_brighter_nether_ore_borders",
+			"combines": [
+				"terrain/brighter_nether",
+				"terrain/uniform_ores",
+				"utility/ore_borders"
+			]
+		},
+		{
+			"id": "extras/ores/brighter_black_nether_bricks_ore_borders",
+			"combines": [
+				"aesthetic/black_nether_bricks",
+				"terrain/brighter_nether",
+				"utility/ore_borders"
+			]
+		},
+		{
+			"id": "extras/ores/uniform_brighter_black_nether_bricks_ores",
+			"combines": [
+				"aesthetic/black_nether_bricks",
+				"terrain/brighter_nether",
+				"terrain/uniform_ores"
+			]
+		},
+		{
+			"id": "extras/ores/uniform_brighter_black_nether_bricks_ore_borders",
+			"combines": [
+				"aesthetic/black_nether_bricks",
+				"terrain/brighter_nether",
+				"terrain/uniform_ores",
+				"utility/ore_borders"
 			]
 		},
 		{
@@ -2677,13 +2731,6 @@
 			"combines": [
 				"terrain/uniform_ores",
 				"retro/old_netherrack"
-			]
-		},
-		{
-			"id": "extras/ores/uniform_ore_borders",
-			"combines": [
-				"terrain/uniform_ores",
-				"utility/ore_borders"
 			]
 		},
 		{
