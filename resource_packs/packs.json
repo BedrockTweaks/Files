@@ -468,6 +468,11 @@
 					"description": "Red Mushroom Blocks will be randomized using a selection of 12 textures"
 				},
 				{
+					"id": "variated_nylium",
+					"name": "Variated Nylium",
+					"description": "Randomly rotates Crimson and Warped Nylium to break up ugly grid patterns"
+				},
+				{
 					"id": "variated_end_stone",
 					"name": "Variated End Stone",
 					"description": "End Stone will be randomized using a selection of 5 textures"
@@ -2724,6 +2729,13 @@
 			"combines": [
 				"fixes_and_consistency/pixel_consistent_wither",
 				"fun/wither_bee"
+			]
+		},
+		{
+			"id": "extras/nether/brighter_variated_nether_nylium",
+			"combines": [
+				"terrain/brighter_nether",
+				"variation/variated_nylium"
 			]
 		},
 		{
