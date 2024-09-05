@@ -1655,6 +1655,82 @@
 			]
 		},
 		{
+			"id": "gui/hotbar_selector",
+			"name": "GUI / Hotbar Selector",
+			"packs": [
+				{
+					"id": "gray_hotbar_selector",
+					"name": "Gray Hotbar Selector",
+					"description": ""
+				},
+				{
+					"id": "black_hotbar_selector",
+					"name": "Black Hotbar Selector",
+					"description": ""
+				},
+				{
+					"id": "brown_hotbar_selector",
+					"name": "Brown Hotbar Selector",
+					"description": ""
+				},
+				{
+					"id": "red_hotbar_selector",
+					"name": "Red Hotbar Selector",
+					"description": ""
+				},
+				{
+					"id": "orange_hotbar_selector",
+					"name": "Orange Hotbar Selector",
+					"description": ""
+				},
+				{
+					"id": "yellow_hotbar_selector",
+					"name": "Yellow Hotbar Selector",
+					"description": ""
+				},
+				{
+					"id": "lime_hotbar_selector",
+					"name": "Lime Hotbar Selector",
+					"description": ""
+				},
+				{
+					"id": "green_hotbar_selector",
+					"name": "Green Hotbar Selector",
+					"description": ""
+				},
+				{
+					"id": "cyan_hotbar_selector",
+					"name": "Cyan Hotbar Selector",
+					"description": ""
+				},
+				{
+					"id": "light_blue_hotbar_selector",
+					"name": "Light Blue Hotbar Selector",
+					"description": ""
+				},
+				{
+					"id": "blue_hotbar_selector",
+					"name": "Blue Hotbar Selector",
+					"description": ""
+				},
+				{
+					"id": "purple_hotbar_selector",
+					"name": "Purple Hotbar Selector",
+					"description": ""
+				},
+				{
+					"id": "magenta_hotbar_selector",
+					"name": "Magenta Hotbar Selector",
+					"description": ""
+				},
+				{
+					"id": "pink_hotbar_selector",
+					"name": "Pink Hotbar Selector",
+					"description": ""
+				}
+			]
+		},
+		{
 			"id": "gui/menu_panoramas",
 			"name": "GUI / Menu Panoramas",
 			"packs": [
