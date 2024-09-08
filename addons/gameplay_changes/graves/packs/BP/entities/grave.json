@@ -56,6 +56,23 @@
 						"deals_damage": false
 					}
 				]
+			},
+			"minecraft:interact": {
+				"interactions": [
+					{
+						"on_interact": {
+							"filters": [
+								{
+									"test": "has_equipment",
+									"subject": "other",
+									"domain": "hand",
+									"value": "bt:g.grave_key"
+								}
+							],
+							"event": "drop_items"
+						}
+					}
+				]
 			}
 		},
 		"component_groups": {
@@ -66,6 +83,7 @@
 			}
 		},
 		"events": {
+			"drop_items": {},
 			"despawn": {
 				"add": {
 					"component_groups": [

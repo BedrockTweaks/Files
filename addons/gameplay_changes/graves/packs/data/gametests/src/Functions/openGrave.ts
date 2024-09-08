@@ -10,7 +10,7 @@ import {
   world
 } from '@minecraft/server';
 import { getProperties, setProperties } from '../Util';
-import { GraveDynamicProperties } from '../Models';
+import { GraveDynamicProperties, GraveEntityEvents } from '../Models';
 import { Grave, GravesList, GravesListDynamicProperties, GravesSettings } from '../Models/DynamicProperties';
 import { getSettings } from './settings';
 
@@ -21,12 +21,21 @@ export const openGrave = (player: Player, grave: Entity): void => {
   if (player.name === graveProperties.owner || gravesSettings.graveRobbing) {
     transferItems(player, grave);
 
-    player.addExperience(graveProperties.playerExperience);
+    if (gravesSettings.xpCollection) {
+      player.addExperience(graveProperties.playerExperience);
+    }
 
-    removeGraveToList(grave);
+    removeGraveFromList(grave);
 
-    grave.triggerEvent('despawn');
+    grave.triggerEvent(GraveEntityEvents.Despawn);
   }
+};
+
+export const forceOpenGrave = (grave: Entity): void => {
+  getAllItems(grave);
+  removeGraveFromList(grave);
+
+  grave.triggerEvent(GraveEntityEvents.Despawn);
 };
 
 /**
@@ -83,16 +92,35 @@ const transferItems = (player: Player, grave: Entity): void => {
   }
 };
 
+const getAllItems = (grave: Entity): void => {
+  const graveContainer: Container = (grave.getComponent(EntityComponentTypes.Inventory) as EntityInventoryComponent)
+    ?.container as Container;
+
+  const containerSize = graveContainer?.size;
+
+  const itemsToSpawn: ItemStack[] = [];
+
+  for (let i = 0; i < containerSize; i++) {
+    const item = graveContainer.getSlot(i).getItem();
+
+    if (item) {
+      itemsToSpawn.push(item);
+    }
+  }
+
+  spawnItemsInWorld(grave, itemsToSpawn);
+};
+
 const spawnItemsInWorld = (grave: Entity, itemsToSpawn: ItemStack[]): void => {
   itemsToSpawn.forEach((item: ItemStack): void => {
     grave.dimension.spawnItem(item, grave.location);
   });
 };
 
-const removeGraveToList = (grave: Entity): void => {
-  const gravesList: string[] = JSON.parse(getProperties<GravesList>(world, GravesListDynamicProperties).list);
+const removeGraveFromList = (grave: Entity): void => {
+  const gravesList: Grave[] = JSON.parse(getProperties<GravesList>(world, GravesListDynamicProperties).list);
 
-  gravesList.filter((graveId: string): boolean => graveId !== grave.id);
+  const filteredGraves: Grave[] = gravesList.filter((g: Grave): boolean => g.id !== grave.id);
 
-  setProperties(world, GravesListDynamicProperties, { list: JSON.stringify(gravesList) });
+  setProperties(world, GravesListDynamicProperties, { list: JSON.stringify(filteredGraves) });
 };

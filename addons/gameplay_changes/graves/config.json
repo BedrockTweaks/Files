@@ -1,7 +1,7 @@
 {
 	"$schema": "https://raw.githubusercontent.com/Bedrock-OSS/regolith-schemas/main/config/v1.2.json",
 	"author": "DrAv0011",
-	"name": "Graves - Gameplay Changes",
+	"name": "Graves - Gameplay Changes - Bedrock Tweaks",
 	"packs": {
 		"behaviorPack": "./packs/BP",
 		"resourcePack": "./packs/RP"

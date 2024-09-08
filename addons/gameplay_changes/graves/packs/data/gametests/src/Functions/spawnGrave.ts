@@ -4,7 +4,7 @@ import {
   EntityComponentTypes,
   EntityEquippableComponent,
   EntityInventoryComponent,
-  EquipmentSlot,
+  EquipmentSlot, ItemStack,
   Player,
   world
 } from '@minecraft/server';
@@ -18,7 +18,7 @@ export const spawnGrave = (player: Player): void => {
   if (!isInventoryEmpty(player)) {
     const gravesSettings = getSettings();
 
-    // Cannot spawn outside of world so need to check position before spawning, later we relocate depending
+    // Cannot spawn outside of world so need to check position before spawning, later we relocate depending on surroundings
     let graveLocation = player.location;
     if (
       player.dimension.id === MinecraftDimensionTypes.Overworld
@@ -39,12 +39,12 @@ export const spawnGrave = (player: Player): void => {
     }
 
     const grave = player.dimension.spawnEntity(GravesEntityTypes.Grave, graveLocation);
+
     grave.nameTag = player.nameTag;
 
-    transferItems(player, grave);
-    setGraveProperties(player, grave);
+    const itemCount: number = transferItems(player, grave);
     relocateGrave(grave);
-    saveGraveToList(grave);
+    setGraveProperties(player, grave, itemCount);
 
     if (gravesSettings.graveLocating) {
       player.sendMessage({
@@ -57,7 +57,6 @@ export const spawnGrave = (player: Player): void => {
   }
 };
 
-// TODO ADD XP CHECK
 const isInventoryEmpty = (player: Player): boolean => {
   const playerContainer: Container = (player.getComponent(EntityComponentTypes.Inventory) as EntityInventoryComponent)
     ?.container as Container;
@@ -76,7 +75,9 @@ const isInventoryEmpty = (player: Player): boolean => {
   return emptySlotsCount === totalSlotCount;
 };
 
-const transferItems = (player: Player, grave: Entity): void => {
+const transferItems = (player: Player, grave: Entity): number => {
+  let itemCount = 0;
+
   const playerContainer: Container = (player.getComponent(EntityComponentTypes.Inventory) as EntityInventoryComponent)
     ?.container as Container;
   const graveContainer: Container = (grave.getComponent(EntityComponentTypes.Inventory) as EntityInventoryComponent)
@@ -87,6 +88,11 @@ const transferItems = (player: Player, grave: Entity): void => {
   if (playerContainer && graveContainer && playerContainerSize !== undefined) {
     // Transfer items from player inventory to grave
     for (let i = 0; i < playerContainerSize; i++) {
+      const itemStack = playerContainer.getItem(i);
+      if (itemStack) {
+        itemCount += itemStack.amount;
+      }
+
       playerContainer.moveItem(i, i, graveContainer);
     }
 
@@ -97,38 +103,53 @@ const transferItems = (player: Player, grave: Entity): void => {
     for (const value of Object.values(EquipmentSlot)) {
       j++;
 
-      graveContainer.setItem(j, playerArmor.getEquipmentSlot(value).getItem());
+      const itemStack: ItemStack | undefined = playerArmor.getEquipmentSlot(value).getItem();
+
+      if (itemStack) {
+        itemCount += itemStack.amount;
+      }
+
+      graveContainer.setItem(j, itemStack);
       playerArmor.setEquipment(value, undefined);
     }
 
     playerContainer.clearAll();
   }
+
+  return itemCount;
 };
 
-const setGraveProperties = (player: Player, grave: Entity): void => {
+const setGraveProperties = (player: Player, grave: Entity, itemCount: number): void => {
   const graveProperties: Grave = {
+    id: grave.id,
     owner: player.name,
     playerExperience: player.getTotalXp(),
     spawnTime: world.getAbsoluteTime(),
+    location: grave.location,
+    dimension: grave.dimension.id as MinecraftDimensionTypes,
+    itemCount,
   };
 
   setProperties(grave, GraveDynamicProperties, graveProperties);
 
-  // Clear the player xp
-  player.addExperience(-player.getTotalXp());
+  // Clear the player xp (Min bound -2^24)
+  player.addLevels(-16777216);
+
+  saveGraveToList(graveProperties);
 };
 
 // TODO improve relocation
+// TODO center on block
 const relocateGrave = (grave: Entity): void => {
   while (!grave.dimension.getBlock(grave.location)?.isAir) {
     grave.teleport({ ...grave.location, y: grave.location.y + 1 });
   }
 };
 
-const saveGraveToList = (grave: Entity): void => {
+const saveGraveToList = (grave: Grave): void => {
   const gravesList = JSON.parse(getProperties<GravesList>(world, GravesListDynamicProperties).list);
 
-  gravesList.push(grave.id);
+  gravesList.push(grave);
 
   setProperties(world, GravesListDynamicProperties, { list: JSON.stringify(gravesList) });
 };

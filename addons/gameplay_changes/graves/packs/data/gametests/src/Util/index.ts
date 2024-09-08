@@ -1,2 +1,2 @@
-export { getObjective, setObjective } from './Scoreboard';
-export { getProperties, setProperties } from './DynamicProperties';
+export { getObjective, setObjective } from './scoreboard';
+export { getProperties, setProperties } from './dynamicProperties';

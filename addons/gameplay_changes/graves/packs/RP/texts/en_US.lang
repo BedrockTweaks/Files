@@ -3,6 +3,11 @@ item.bt:g.grave_key=Grave Key
 
 bt.graves.location=§6Your last grave is at §e(%1, %2, %3)§6 in %4.
 
+bt.graves.list_graves.title=§l- All graves -
+bt.graves.list_graves.owner=§7%s:
+bt.graves.list_graves.grave=   §e(%1, %2, %3) §6in the %4 §7§o- %5h, %6m ago - §r§7Item count: §f%7§7, XP points: §f%8
+bt.graves.list_graves.empty=§4This world doesn't have any graves
+
 bt.graves.settings.title=Graves / Global Settings
 
 bt.graves.settings.list_all_graves=[ List All Graves ]
@@ -31,3 +36,5 @@ bt.graves.settings.despawn_time.description=§7The number of seconds after which
 bt.graves.settings.despawn_time.current=%s(Current: %d)
 bt.graves.settings.despawn_time.edit=Despawn time in seconds%1§8Accepts: whole numbers 0+
 bt.graves.settings.despawn_time.error=§4[Error] Despawn time must be a number
+
+bt.graves.uninstall=Uninstalled correctly, remove the pack from Behavior Packs to complete the uninstall
