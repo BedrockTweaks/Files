@@ -1,7 +1,7 @@
 {
 	"format_version": 2,
 	"header": {
-		"name": "Graves BP - Gameplay Changes",
+		"name": "Graves BP - Gameplay Changes - Bedrock Tweaks",
 		"description": "When you die it places a grave to save all your drops",
 		"uuid": "c7bec17f-9394-4cad-8f14-4aae4374d51f",
 		"version": [

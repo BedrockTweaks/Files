@@ -1,7 +1,7 @@
 import { world } from '@minecraft/server';
 import { GravesSettings, GravesSettingsDynamicProperties } from '../Models';
 import { GravesListDynamicProperties } from '../Models/DynamicProperties';
-import { getProperties, setProperties } from '../Util/DynamicProperties';
+import { getProperties, setProperties } from '../Util';
 
 export const initializeSettings = (): void => {
   if (!getProperties<GravesSettings>(world, GravesSettingsDynamicProperties).initialized) {

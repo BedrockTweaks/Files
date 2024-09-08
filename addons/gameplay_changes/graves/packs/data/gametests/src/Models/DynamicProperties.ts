@@ -20,6 +20,7 @@ export interface GravesSettings {
 }
 
 export enum GraveDynamicProperties {
+  id = 'bt:g.id',
   owner = 'bt:g.owner',
   location = 'bt:g.location',
   dimension = 'bt:g.dimension',
@@ -29,6 +30,7 @@ export enum GraveDynamicProperties {
 }
 
 export interface Grave {
+  id: string;
   owner: string;
   location: Vector3;
   dimension: MinecraftDimensionTypes;

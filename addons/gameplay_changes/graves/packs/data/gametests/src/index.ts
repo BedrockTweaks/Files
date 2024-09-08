@@ -1,4 +1,5 @@
 import {
+  DataDrivenEntityTriggerAfterEvent,
   EntityDieAfterEvent,
   EntityHitEntityAfterEvent,
   Player,
@@ -7,13 +8,11 @@ import {
   world
 } from '@minecraft/server';
 import { MinecraftEntityTypes } from '@minecraft/vanilla-data';
-import { GravesEntityTypes, GravesScriptEvents } from './Models';
+import { forceOpenGrave, initializeSettings, openGrave, spawnGrave, uninstall } from './Functions';
+import { GraveEntityEvents, GravesEntityTypes, GravesScriptEvents } from './Models';
 import { openConfigInterface } from './UI';
-import { initializeSettings, openGrave, spawnGrave, uninstall } from './Functions';
 
-system.afterEvents.scriptEventReceive.subscribe((event: ScriptEventCommandMessageAfterEvent): void => {
-  const { id, sourceEntity } = event;
-
+system.afterEvents.scriptEventReceive.subscribe(({ id, sourceEntity }: ScriptEventCommandMessageAfterEvent): void => {
   switch (id) {
     case GravesScriptEvents.config:
       openConfigInterface(sourceEntity);
@@ -32,17 +31,13 @@ world.afterEvents.playerJoin.subscribe((): void => {
   initializeSettings();
 });
 
-world.afterEvents.entityDie.subscribe((event: EntityDieAfterEvent): void => {
-  const { deadEntity } = event;
-
+world.afterEvents.entityDie.subscribe(({ deadEntity }: EntityDieAfterEvent): void => {
   if (deadEntity.typeId === MinecraftEntityTypes.Player) {
     spawnGrave(deadEntity as Player);
   }
 });
 
-world.afterEvents.entityHitEntity.subscribe((event: EntityHitEntityAfterEvent): void => {
-  const { damagingEntity, hitEntity } = event;
-
+world.afterEvents.entityHitEntity.subscribe(({ damagingEntity, hitEntity }: EntityHitEntityAfterEvent): void => {
   if (
     damagingEntity.typeId === MinecraftEntityTypes.Player &&
     hitEntity.typeId === GravesEntityTypes.Grave
@@ -50,3 +45,11 @@ world.afterEvents.entityHitEntity.subscribe((event: EntityHitEntityAfterEvent): 
     openGrave(damagingEntity as Player, hitEntity);
   }
 });
+
+world.afterEvents.dataDrivenEntityTrigger.subscribe(({ entity, eventId }: DataDrivenEntityTriggerAfterEvent): void => {
+  if (entity.typeId === GravesEntityTypes.Grave && eventId === GraveEntityEvents.DropItems) {
+    forceOpenGrave(entity);
+  }
+});
+
+// TODO despawn time for graves
