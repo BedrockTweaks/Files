@@ -245,6 +245,168 @@
 				"textures/blocks/sandstone_top",
 				"textures/blocks/red_sandstone_top"
 			]
+		},
+		"flattened_stone": {
+			"textures": {
+				"variations": [
+					{
+						"path": "textures/blocks/stone/0"
+					},
+					{
+						"path": "textures/blocks/stone/1"
+					},
+					{
+						"path": "textures/blocks/stone/2"
+					},
+					{
+						"path": "textures/blocks/stone/3"
+					},
+					{
+						"path": "textures/blocks/stone/4"
+					},
+					{
+						"path": "textures/blocks/stone/5"
+					},
+					{
+						"path": "textures/blocks/stone/6"
+					},
+					{
+						"path": "textures/blocks/stone/7"
+					},
+					{
+						"path": "textures/blocks/stone/8"
+					},
+					{
+						"path": "textures/blocks/stone/9"
+					},
+					{
+						"path": "textures/blocks/stone/10"
+					},
+					{
+						"path": "textures/blocks/stone/11"
+					},
+					{
+						"path": "textures/blocks/stone/12"
+					},
+					{
+						"path": "textures/blocks/stone/13"
+					},
+					{
+						"path": "textures/blocks/stone/14"
+					},
+					{
+						"path": "textures/blocks/stone/15"
+					}
+				]
+			}
+		},
+		"infested_stone": {
+			"textures": {
+				"variations": [
+					{
+						"path": "textures/blocks/stone/0"
+					},
+					{
+						"path": "textures/blocks/stone/1"
+					},
+					{
+						"path": "textures/blocks/stone/2"
+					},
+					{
+						"path": "textures/blocks/stone/3"
+					},
+					{
+						"path": "textures/blocks/stone/4"
+					},
+					{
+						"path": "textures/blocks/stone/5"
+					},
+					{
+						"path": "textures/blocks/stone/6"
+					},
+					{
+						"path": "textures/blocks/stone/7"
+					},
+					{
+						"path": "textures/blocks/stone/8"
+					},
+					{
+						"path": "textures/blocks/stone/9"
+					},
+					{
+						"path": "textures/blocks/stone/10"
+					},
+					{
+						"path": "textures/blocks/stone/11"
+					},
+					{
+						"path": "textures/blocks/stone/12"
+					},
+					{
+						"path": "textures/blocks/stone/13"
+					},
+					{
+						"path": "textures/blocks/stone/14"
+					},
+					{
+						"path": "textures/blocks/stone/15"
+					}
+				]
+			}
+		},
+		"normal_stone_slab": {
+			"textures": {
+				"variations": [
+					{
+						"path": "textures/blocks/stone/0"
+					},
+					{
+						"path": "textures/blocks/stone/1"
+					},
+					{
+						"path": "textures/blocks/stone/2"
+					},
+					{
+						"path": "textures/blocks/stone/3"
+					},
+					{
+						"path": "textures/blocks/stone/4"
+					},
+					{
+						"path": "textures/blocks/stone/5"
+					},
+					{
+						"path": "textures/blocks/stone/6"
+					},
+					{
+						"path": "textures/blocks/stone/7"
+					},
+					{
+						"path": "textures/blocks/stone/8"
+					},
+					{
+						"path": "textures/blocks/stone/9"
+					},
+					{
+						"path": "textures/blocks/stone/10"
+					},
+					{
+						"path": "textures/blocks/stone/11"
+					},
+					{
+						"path": "textures/blocks/stone/12"
+					},
+					{
+						"path": "textures/blocks/stone/13"
+					},
+					{
+						"path": "textures/blocks/stone/14"
+					},
+					{
+						"path": "textures/blocks/stone/15"
+					}
+				]
+			}
 		}
 	}
 }
