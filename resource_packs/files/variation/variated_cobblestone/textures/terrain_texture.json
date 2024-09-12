@@ -150,6 +150,66 @@
 				"textures/blocks/quartz_block_top",
 				"textures/blocks/nether_brick"
 			]
+		},
+		"cobblestone_slab": {
+			"textures": {
+				"variations": [
+					{
+						"path": "textures/blocks/cobblestone/0"
+					},
+					{
+						"path": "textures/blocks/cobblestone/1"
+					},
+					{
+						"path": "textures/blocks/cobblestone/2"
+					},
+					{
+						"path": "textures/blocks/cobblestone/3"
+					},
+					{
+						"path": "textures/blocks/cobblestone/4"
+					},
+					{
+						"path": "textures/blocks/cobblestone/5"
+					},
+					{
+						"path": "textures/blocks/cobblestone/6"
+					},
+					{
+						"path": "textures/blocks/cobblestone/7"
+					}
+				]
+			}
+		},
+		"infested_cobblestone": {
+			"textures": {
+				"variations": [
+					{
+						"path": "textures/blocks/cobblestone/0"
+					},
+					{
+						"path": "textures/blocks/cobblestone/1"
+					},
+					{
+						"path": "textures/blocks/cobblestone/2"
+					},
+					{
+						"path": "textures/blocks/cobblestone/3"
+					},
+					{
+						"path": "textures/blocks/cobblestone/4"
+					},
+					{
+						"path": "textures/blocks/cobblestone/5"
+					},
+					{
+						"path": "textures/blocks/cobblestone/6"
+					},
+					{
+						"path": "textures/blocks/cobblestone/7"
+					}
+				]
+			}
 		}
 	}
 }

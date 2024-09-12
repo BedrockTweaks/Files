@@ -49,6 +49,27 @@
 				"textures/blocks/slab_sides/cut_red_sandstone_slab_side"
 			]
 		},
+		"polished_andesite_double_slab": {
+			"textures": "textures/blocks/slab_sides/polished_andesite_slab_side"
+		},
+		"polished_diorite_double_slab": {
+			"textures": "textures/blocks/slab_sides/polished_diorite_slab_side"
+		},
+		"polished_granite_double_slab": {
+			"textures": "textures/blocks/slab_sides/polished_granite_slab_side"
+		},
+		"prismarine_brick_double_slab": {
+			"textures": "textures/blocks/slab_sides/prismarine_brick_slab_side"
+		},
+		"sandstone_slab_side": {
+			"textures": "textures/blocks/slab_sides/sandstone_slab_side"
+		},
+		"red_sandstone_slab_side": {
+			"textures": "textures/blocks/slab_sides/red_sandstone_slab_side"
+		},
+		"quartz_slab_side": {
+			"textures": "textures/blocks/slab_sides/quartz_block_slab_side"
+		},
 		"polished_blackstone_double_slab": {
 			"textures": "textures/blocks/slab_sides/polished_blackstone_slab_side"
 		},

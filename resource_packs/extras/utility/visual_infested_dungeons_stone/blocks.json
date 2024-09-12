@@ -1,0 +1,23 @@
+{
+	"format_version": [
+		1,
+		1,
+		0
+	],
+	"monster_egg": {
+		"textures": "monster_egg",
+		"carried_textures": "infested_blocks"
+	},
+	"infested_deepslate": {
+		"isotropic": {
+			"down": true,
+			"up": true
+		},
+		"sound": "deepslate",
+		"carried_textures": {
+			"down": "infested_deepslate_top",
+			"side": "infested_deepslate",
+			"up": "infested_deepslate_top"
+		}
+	}
+}

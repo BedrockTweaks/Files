@@ -1,0 +1,12 @@
+{
+	"namespace": "horse_pocket",
+	"saddle_image": {
+		"alpha": 1.0
+	},
+	"armor_image": {
+		"alpha": 1.0
+	},
+	"carpet_image": {
+		"alpha": 1.0
+	}
+}

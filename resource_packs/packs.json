@@ -218,7 +218,7 @@
 				},
 				{
 					"id": "lush_grass_all_round",
-					"name": "Lush Grass (Mostly) All 'Round",
+					"name": "Lush Grass (Mostly) All 'Round!",
 					"description": "Makes most of the world use a lush green colormap",
 					"message": {
 						"text": "This affects the majority of biomes, but Minecraft has moved away from their previous method of coloring biomes, meaning its not as easy to change the colormap for many of the modern biomes",
@@ -556,7 +556,7 @@
 				{
 					"id": "quieter_water",
 					"name": "Quieter Water",
-					"description": "Decreases Water and dripstone water drop sounds by 95%"
+					"description": "Decreases Water, swimming, water drops from Dripstones and underwater sound events by 95%"
 				},
 				{
 					"id": "quieter_consumables",
@@ -1661,11 +1661,7 @@
 				{
 					"id": "no_panorama_overlay",
 					"name": "No Panorama Overlay",
-					"description": "Removes the gradient overlay from the menu panorama",
-					"message": {
-						"text": "Even if the current vanilla panorama doesn't have an overlay, this pack can still remove it from <span style='text-decoration: line-through;'>Vanilla</span> Bedrock Tweaks panoramas that do have one",
-						"severity": "info"
-					}
+					"description": "Removes the translucent overlay gradient from the menu panorama if it has one"
 				},
 				{
 					"id": "classic",
@@ -2537,6 +2533,28 @@
 			]
 		},
 		{
+			"id": "extras/dirt/golden_savanna_lush_grass",
+			"combines": [
+				"terrain/golden_savanna",
+				"terrain/lush_grass_all_round"
+			]
+		},
+		{
+			"id": "extras/dirt/lush_grass_sides",
+			"combines": [
+				"terrain/lush_grass_all_round",
+				"terrain/lower_and_sides/grass_sides"
+			]
+		},
+		{
+			"id": "extras/dirt/golden_savanna_lush_grass_sides",
+			"combines": [
+				"terrain/golden_savanna",
+				"terrain/lush_grass_all_round",
+				"terrain/lower_and_sides/grass_sides"
+			]
+		},
+		{
 			"id": "extras/snow/whiter_lower_snow",
 			"combines": [
 				"terrain/whiter_snow",
@@ -2558,6 +2576,21 @@
 			]
 		},
 		{
+			"id": "extras/gui/dark_brewing_stand_icons_fix",
+			"combines": [
+				"gui/dark_ui",
+				"fixes_and_consistency/brewing_stand_icons_fix"
+			]
+		},
+		{
+			"id": "extras/gui/dark_numbered_hotbar_brewing_stand_icons_fix",
+			"combines": [
+				"gui/dark_ui",
+				"gui/numbered_hotbar",
+				"fixes_and_consistency/brewing_stand_icons_fix"
+			]
+		},
+		{
 			"id": "extras/ores/dungeons_ore_borders",
 			"combines": [
 				"utility/ore_borders",
@@ -2565,10 +2598,10 @@
 			]
 		},
 		{
-			"id": "extras/ores/pre_1_17_ore_borders",
+			"id": "extras/ores/classic_ores_borders",
 			"combines": [
 				"utility/ore_borders",
-				"retro/pre_1_17_ores"
+				"retro/classic_ores"
 			]
 		},
 		{
@@ -2644,6 +2677,13 @@
 			]
 		},
 		{
+			"id": "extras/utility/updated_directional_observers_texture",
+			"combines": [
+				"fixes_and_consistency/updated_observer_texture",
+				"utility/directional_observers"
+			]
+		},
+		{
 			"id": "extras/unobtrusive/unobtrusive_rain_and_snow",
 			"combines": [
 				"unobtrusive/unobtrusive_rain",
@@ -2651,31 +2691,24 @@
 			]
 		},
 		{
+			"id": "extras/unobtrusive/accurate_unobtrusive_scaffolding",
+			"combines": [
+				"aesthetic/accurate_scaffolding",
+				"unobtrusive/unobtrusive_scaffolding"
+			]
+		},
+		{
 			"id": "extras/variated_stone/variated_stone_and_unpolished_stones",
 			"combines": [
-				"variated/variated_stone",
-				"variated/variated_unpolished_stones"
+				"variation/variated_stone",
+				"variation/variated_unpolished_stones"
 			]
 		},
 		{
 			"id": "extras/variated_stone/dungeons_stone_and_unpolished_stones",
 			"combines": [
-				"variated/variated_unpolished_stones",
-				"parity/dungeons_stone"
-			]
-		},
-		{
-			"id": "files/variation/variated_stone",
-			"combines": [
-				"variated/variated_stone",
-				"parity/dungeons_stone"
-			]
-		},
-		{
-			"id": "extras/variated_stone/dungeons_stone_and_unpolished_stones",
-			"combines": [
-				"variated/variated_stone",
-				"variated/variated_unpolished_stones",
+				"variation/variated_stone",
+				"variation/variated_unpolished_stones",
 				"parity/dungeons_stone"
 			]
 		},
@@ -2694,13 +2727,6 @@
 			]
 		},
 		{
-			"id": "extras/utility/updated_directional_observers_texture",
-			"combines": [
-				"fixes_and_consistency/updated_observer_texture",
-				"utility/directional_observers"
-			]
-		},
-		{
 			"id": "files/terrain/darker_dark_oak_leaves",
 			"combines": [
 				"retro/alpha_foliage",
@@ -2708,10 +2734,10 @@
 			]
 		},
 		{
-			"id": "extras/unobtrusive/accurate_unobtrusive_scaffolding",
+			"id": "files/variation/variated_stone",
 			"combines": [
-				"aesthetic/accurate_scaffolding",
-				"unobtrusive/unobtrusive_scaffolding"
+				"variation/variated_stone",
+				"parity/dungeons_stone"
 			]
 		}
 	],
@@ -2735,6 +2761,10 @@
 		{
 			"filename": "sounds.json",
 			"filepath": "/sounds.json"
+		},
+		{
+			"filename": "sound_definitions.json",
+			"filepath": "/sounds/sound_definitions.json"
 		},
 		{
 			"filename": "trade_2_screen.json",
