@@ -1,0 +1,20 @@
+{
+	"format_version": "1.8.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "minecraft:salmon",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/items/fish_salmon_raw"
+			},
+			"geometry": {
+				"default": "geometry.bt_flat_fish"
+			},
+			"render_controllers": [
+				"controller.render.flat_fish"
+			]
+		}
+	}
+}
