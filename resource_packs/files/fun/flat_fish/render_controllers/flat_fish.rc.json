@@ -1,7 +1,7 @@
 {
 	"format_version": "1.10.0",
 	"render_controllers": {
-		"controller.render.flat_fish": {
+		"controller.render.bt.flat_fish": {
 			"geometry": "Geometry.default",
 			"materials": [
 				{
