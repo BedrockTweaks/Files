@@ -11,7 +11,7 @@
 				"ari": "textures/entity/zombie/ari"
 			},
 			"geometry": {
-				"default": "geometry.bt.zombie"
+				"default": "geometry.bt_zombie"
 			},
 			"render_controllers": [
 				"controller.render.bt.zombie"
