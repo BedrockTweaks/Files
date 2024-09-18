@@ -15,6 +15,9 @@
 					"imitate.blaze": {
 						"volume": 0.02
 					},
+					"imitate.bogged": {
+						"volume": 0.035
+					},
 					"imitate.breeze": {
 						"volume": 0.035
 					},
@@ -48,14 +51,8 @@
 					"imitate.husk": {
 						"volume": 0.03
 					},
-					"imitate.illusion_illager": {
-						"volume": 0.035
-					},
 					"imitate.magma_cube": {
 						"volume": 0.03
-					},
-					"imitate.panda": {
-						"volume": 0.035
 					},
 					"imitate.polar_bear": {
 						"volume": 0.035

@@ -15,20 +15,11 @@
 					"death": {
 						"volume": 0.05
 					},
-					"dig": {
-						"volume": 0.2
-					},
-					"emerge": {
-						"volume": 0.2
-					},
 					"heartbeat": {
 						"volume": 0.2
 					},
 					"hurt": {
 						"volume": 0.05
-					},
-					"idle": {
-						"volume": 0.15
 					},
 					"listening": {
 						"volume": 0.5
@@ -48,9 +39,6 @@
 					"roar": {
 						"volume": 0.5
 					},
-					"sniff": {
-						"volume": 0.2
-					},
 					"step": {
 						"volume": 0.5
 					}
@@ -68,9 +56,6 @@
 				"volume": 0.05
 			},
 			"nearby_closest": {
-				"volume": 0.05
-			},
-			"slightly_angry": {
 				"volume": 0.05
 			},
 			"sonic_boom": {
