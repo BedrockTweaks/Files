@@ -2490,6 +2490,13 @@
 	],
 	"combinations": [
 		{
+			"id": "extras/aesthetic/circular_desaturated_dark_oak_log_tops",
+			"combines": [
+				"aesthetic/desaturated_dark_oak",
+				"terrain/circular_log_tops"
+			]
+		},
+		{
 			"id": "extras/dirt/pebbleless_dungeons_dirt",
 			"combines": [
 				"terrain/pebbleless_dirt",
