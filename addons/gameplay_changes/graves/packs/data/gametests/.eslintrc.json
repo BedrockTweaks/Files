@@ -294,7 +294,7 @@
 		],
 		"@stylistic/indent": [
 			"warn",
-			2
+			4
 		],
 		"@stylistic/jsx-quotes": "off",
 		"@stylistic/key-spacing": [
