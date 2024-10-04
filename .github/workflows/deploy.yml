@@ -46,7 +46,7 @@ jobs:
           script: cd /opt/bedrock_tweaks/files && git reset --hard && git clean -fd && git pull ${{ secrets.REPOSITORY_URL }}
 
       - name: Update files Development
-        if: needs.check-branch-build.outputs.branch == 'main'
+        if: needs.check-branch-build.outputs.branch == 'devel'
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.SERVER_ADDRESS }}
