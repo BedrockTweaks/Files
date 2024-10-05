@@ -1,12 +1,13 @@
-howtoplay.beacons.text.3=Beacons must be placed so that they have an unobstructed view of the sky and must be placed on Pyramids of Iron, Gold, Ruby, or Diamond blocks.
-howtoplay.beacons.text.6=To set the powers of your Beacon you must use an Ruby, Diamond, Gold Ingot, or Iron Ingot in the payment slot.
+howtoplay.beacons.text.3=Beacons need to be on top of a Pyramid of Iron, Gold, Ruby, Diamond or Netherite blocks with an unobstructed view of the sky.
+howtoplay.beacons.text.6=To set the powers of your Beacon you must use a Netherite Ingot, Ruby, Diamond, Gold Ingot or Iron Ingot in the payment slot.
 
 howtoplay.trading.header.1=Goods for Rubies
 howtoplay.trading.text.2=You can find out what a villager is offering as trade by interacting with them. A villager may adjust the price of a trade whenever a player trades with it. A villager may run out of stock, temporarily disabling the trade if it is used too frequently. Trades usually involve buying or selling items for rubies. 
 
 item.emerald.name=Ruby
+trim_material.emerald.name=Ruby Material
 tile.emerald_block.name=Block of Ruby
 tile.emerald_ore.name=Ruby Ore
 tile.deepslate_emerald_ore.name=Deepslate Ruby Ore
 
-tips.game.37=Ruby ores are the rarest ores in Minecraft! They can only be found in extreme hill biomes!
+midgameTips.53=Ruby ores are the rarest ores in Minecraft! They can only be found in mountains and meadows.

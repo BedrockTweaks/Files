@@ -1,0 +1,29 @@
+{
+	"format_version": "1.8.0",
+	"render_controllers": {
+		"controller.render.villager_v2_base": {
+			"arrays": {
+				"textures": {
+					"Array.biomes_skin": [
+						"Texture.plains_villager",
+						"Texture.desert_villager",
+						"Texture.jungle_villager",
+						"Texture.savanna_villager",
+						"Texture.snow_villager",
+						"Texture.swamp_villager",
+						"Texture.taiga_villager"
+					]
+				}
+			},
+			"geometry": "Geometry.default",
+			"materials": [
+				{
+					"*": "Material.default"
+				}
+			],
+			"textures": [
+				"Array.biomes_skin[query.mark_variant]"
+			]
+		}
+	}
+}

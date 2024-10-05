@@ -1,0 +1,17 @@
+{
+	"format_version": "1.8.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "minecraft:villager_v2",
+			"textures": {
+				"plains_villager": "textures/entity/villager2/villager",
+				"desert_villager": "textures/entity/villager2/villager_dark",
+				"jungle_villager": "textures/entity/villager2/villager_biracial_dark",
+				"savanna_villager": "textures/entity/villager2/villager_dark",
+				"snow_villager": "textures/entity/villager2/villager_light",
+				"swamp_villager": "textures/entity/villager2/villager",
+				"taiga_villager": "textures/entity/villager2/villager_biracial_light"
+			}
+		}
+	}
+}

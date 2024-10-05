@@ -2606,6 +2606,13 @@
 			]
 		},
 		{
+			"id": "extras/ores/uniform_ore_borders",
+			"combines": [
+				"terrain/uniform_ores",
+				"utility/ore_borders"
+			]
+		},
+		{
 			"id": "extras/ores/dungeons_ore_borders",
 			"combines": [
 				"utility/ore_borders",
@@ -2620,8 +2627,109 @@
 			]
 		},
 		{
+			"id": "extras/ores/classic_unlit_redstone_ores",
+			"combines": [
+				"utility/unlit_redstone_ore",
+				"retro/classic_ores"
+			]
+		},
+		{
+			"id": "extras/ores/brighter_nether_ore_borders",
+			"combines": [
+				"terrain/brighter_nether",
+				"utility/ore_borders"
+			]
+		},
+		{
+			"id": "extras/ores/uniform_brighter_nether_ores",
+			"combines": [
+				"terrain/brighter_nether",
+				"terrain/uniform_ores"
+			]
+		},
+		{
+			"id": "extras/ores/uniform_brighter_nether_ore_borders",
+			"combines": [
+				"terrain/brighter_nether",
+				"terrain/uniform_ores",
+				"utility/ore_borders"
+			]
+		},
+		{
+			"id": "extras/ores/brighter_black_nether_bricks_ore_borders",
+			"combines": [
+				"aesthetic/black_nether_bricks",
+				"terrain/brighter_nether",
+				"utility/ore_borders"
+			]
+		},
+		{
+			"id": "extras/ores/uniform_brighter_black_nether_bricks_ores",
+			"combines": [
+				"aesthetic/black_nether_bricks",
+				"terrain/brighter_nether",
+				"terrain/uniform_ores"
+			]
+		},
+		{
+			"id": "extras/ores/uniform_brighter_black_nether_bricks_ore_borders",
+			"combines": [
+				"aesthetic/black_nether_bricks",
+				"terrain/brighter_nether",
+				"terrain/uniform_ores",
+				"utility/ore_borders"
+			]
+		},
+		{
 			"id": "extras/ores/rubies_ore_borders",
 			"combines": [
+				"utility/ore_borders",
+				"fun/emeralds_to_rubies"
+			]
+		},
+		{
+			"id": "extras/ores/uniform_rubies_ores",
+			"combines": [
+				"terrain/uniform_ores",
+				"fun/emeralds_to_rubies"
+			]
+		},
+		{
+			"id": "extras/ores/rubies_variated_villagers_ores",
+			"combines": [
+				"variation/variated_villagers",
+				"fun/emeralds_to_rubies"
+			]
+		},
+		{
+			"id": "extras/ores/uniform_rubies_variated_villagers_ores",
+			"combines": [
+				"variation/variated_villagers",
+				"terrain/uniform_ores",
+				"fun/emeralds_to_rubies"
+			]
+		},
+		{
+			"id": "extras/ores/rubies_variated_villagers_ore_borders",
+			"combines": [
+				"variation/variated_villagers",
+				"utility/ore_borders",
+				"fun/emeralds_to_rubies"
+			]
+		},
+		{
+			"id": "extras/ores/uniform_rubies_ore_borders",
+			"combines": [
+				"terrain/uniform_ores",
+				"utility/ore_borders",
+				"fun/emeralds_to_rubies"
+			]
+		},
+		{
+			"id": "extras/ores/uniform_rubies_variated_villagers_ore_borders",
+			"combines": [
+				"variation/variated_villagers",
+				"terrain/uniform_ores",
 				"utility/ore_borders",
 				"fun/emeralds_to_rubies"
 			]
@@ -2634,24 +2742,10 @@
 			]
 		},
 		{
-			"id": "extras/ores/uniform_rubies_ores",
-			"combines": [
-				"terrain/uniform_ores",
-				"fun/emeralds_to_rubies"
-			]
-		},
-		{
 			"id": "extras/ores/uniform_old_netherrack_ores",
 			"combines": [
 				"terrain/uniform_ores",
 				"retro/old_netherrack"
-			]
-		},
-		{
-			"id": "extras/ores/uniform_ore_borders",
-			"combines": [
-				"terrain/uniform_ores",
-				"utility/ore_borders"
 			]
 		},
 		{
@@ -2660,14 +2754,6 @@
 				"terrain/uniform_ores",
 				"utility/ore_borders",
 				"retro/old_netherrack"
-			]
-		},
-		{
-			"id": "extras/ores/uniform_rubies_ore_borders",
-			"combines": [
-				"terrain/uniform_ores",
-				"utility/ore_borders",
-				"fun/emeralds_to_rubies"
 			]
 		},
 		{
