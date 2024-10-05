@@ -941,11 +941,6 @@
 					"description": "Changes the breaking texture of blocks to a clean ring around the outside"
 				},
 				{
-					"id": "clear_banner_patterns",
-					"name": "Clear Banner Patterns",
-					"description": "Gives all the Banner Pattern items unique and appropriate textures"
-				},
-				{
 					"id": "hunger_preview",
 					"name": "Hunger Preview",
 					"description": "Displays Hunger Bar icons on all food names to show how much it will fill you up"
