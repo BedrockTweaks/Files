@@ -1,0 +1,13 @@
+{
+	"format_version": "1.20.40",
+	"minecraft:item": {
+		"description": {
+			"identifier": "bt:g.grave_key"
+		},
+		"components": {
+			"minecraft:icon": {
+				"texture": "bt:grave_key"
+			}
+		}
+	}
+}

@@ -1,0 +1,20 @@
+{
+    "format_version": "1.20.41",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "bt:g.grave",
+            "materials": {
+                "default": "entity_alphatest"
+            },
+            "textures": {
+                "default": "textures/entity/grave"
+            },
+            "geometry": {
+                "default": "geometry.bt.grave"
+            },
+            "render_controllers": [
+                "controller.render.default"
+            ]
+        }
+    }
+}
