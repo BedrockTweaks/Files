@@ -3,10 +3,9 @@
 	"panorama_overlay_image": {
 		"type": "image",
 		"size": [
-			"100%",
-			"100%"
+			"fill",
+			"fill"
 		],
-		"alpha": 1.0,
 		"texture": "textures/ui/panorama_overlay"
 	},
 	"start_screen_content": {
