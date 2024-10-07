@@ -2782,6 +2782,10 @@
 			"filepath": "/sounds/sound_definitions.json"
 		},
 		{
+			"filename": "hud_screen.json",
+			"filepath": "/ui/hud_screen.json"
+		},
+		{
 			"filename": "trade_2_screen.json",
 			"filepath": "/ui/trade_2_screen.json"
 		},
@@ -2800,6 +2804,10 @@
 		{
 			"filename": "stonecutter_screen.json",
 			"filepath": "/ui/stonecutter_screen.json"
+		},
+		{
+			"filename": "ui_common.json",
+			"filepath": "/ui/ui_common.json"
 		},
 		{
 			"filename": "_ui_defs.json",
