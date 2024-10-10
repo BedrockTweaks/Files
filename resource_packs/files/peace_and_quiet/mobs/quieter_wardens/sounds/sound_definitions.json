@@ -1,0 +1,108 @@
+{
+	"format_version": "1.20.20",
+	"sound_definitions": {
+		"mob.warden.emerge": {
+			"category": "hostile",
+			"max_distance": 80.0,
+			"min_distance": null,
+			"sounds": [
+				{
+					"name": "sounds/mob/warden/emerge",
+					"volume": 0.05
+				}
+			]
+		},
+		"mob.warden.sniff": {
+			"category": "hostile",
+			"max_distance": 80.0,
+			"min_distance": null,
+			"sounds": [
+				{
+					"name": "sounds/mob/warden/sniff_1",
+					"volume": 0.05
+				},
+				{
+					"name": "sounds/mob/warden/sniff_2",
+					"volume": 0.05
+				},
+				{
+					"name": "sounds/mob/warden/sniff_3",
+					"volume": 0.05
+				},
+				{
+					"name": "sounds/mob/warden/sniff_4",
+					"volume": 0.05
+				}
+			]
+		},
+		"mob.warden.dig": {
+			"category": "hostile",
+			"max_distance": 80.0,
+			"min_distance": null,
+			"sounds": [
+				{
+					"name": "sounds/mob/warden/dig",
+					"volume": 0.05
+				}
+			]
+		},
+		"mob.warden.roar": {
+			"category": "hostile",
+			"max_distance": 48.0,
+			"min_distance": null,
+			"sounds": [
+				{
+					"name": "sounds/mob/warden/roar_1",
+					"volume": 0.05
+				},
+				{
+					"name": "sounds/mob/warden/roar_2",
+					"volume": 0.05
+				},
+				{
+					"name": "sounds/mob/warden/roar_3",
+					"volume": 0.05
+				},
+				{
+					"name": "sounds/mob/warden/roar_4",
+					"volume": 0.05
+				},
+				{
+					"name": "sounds/mob/warden/roar_5",
+					"volume": 0.05
+				}
+			]
+		},
+		"mob.warden.clicking": {
+			"category": "hostile",
+			"max_distance": 80.0,
+			"min_distance": null,
+			"sounds": [
+				{
+					"name": "sounds/mob/warden/tendril_clicks_1",
+					"volume": 0.05
+				},
+				{
+					"name": "sounds/mob/warden/tendril_clicks_2",
+					"volume": 0.05
+				},
+				{
+					"name": "sounds/mob/warden/tendril_clicks_3",
+					"volume": 0.05
+				},
+				{
+					"name": "sounds/mob/warden/tendril_clicks_4",
+					"volume": 0.05
+				},
+				{
+					"name": "sounds/mob/warden/tendril_clicks_5",
+					"volume": 0.05
+				},
+				{
+					"name": "sounds/mob/warden/tendril_clicks_6",
+					"volume": 0.05
+				}
+			]
+		}
+	}
+}

@@ -1,0 +1,88 @@
+{
+	"format_version": "1.20.20",
+	"sound_definitions": {
+		"mob.armadillo.roll": {
+			"category": "neutral",
+			"max_distance": null,
+			"min_distance": null,
+			"sounds": [
+				{
+					"name": "sounds/mob/armadillo/roll1",
+					"volume": 0.05
+				},
+				{
+					"name": "sounds/mob/armadillo/roll2",
+					"volume": 0.05
+				},
+				{
+					"name": "sounds/mob/armadillo/roll3",
+					"volume": 0.05
+				},
+				{
+					"name": "sounds/mob/armadillo/roll4",
+					"volume": 0.05
+				}
+			]
+		},
+		"mob.armadillo.land": {
+			"category": "neutral",
+			"max_distance": null,
+			"min_distance": null,
+			"sounds": [
+				{
+					"name": "sounds/mob/armadillo/land1",
+					"volume": 0.05
+				},
+				{
+					"name": "sounds/mob/armadillo/land2",
+					"volume": 0.05
+				},
+				{
+					"name": "sounds/mob/armadillo/land3",
+					"volume": 0.05
+				},
+				{
+					"name": "sounds/mob/armadillo/land4",
+					"volume": 0.05
+				}
+			]
+		},
+		"mob.armadillo.peek": {
+			"category": "neutral",
+			"max_distance": null,
+			"min_distance": null,
+			"sounds": [
+				{
+					"name": "sounds/mob/armadillo/peek",
+					"volume": 0.05
+				}
+			]
+		},
+		"mob.armadillo.unroll_start": {
+			"category": "neutral",
+			"max_distance": null,
+			"min_distance": null,
+			"sounds": [
+				{
+					"name": "sounds/mob/armadillo/unroll_start",
+					"volume": 0.05
+				}
+			]
+		},
+		"mob.armadillo.unroll_finish": {
+			"category": "neutral",
+			"max_distance": null,
+			"min_distance": null,
+			"sounds": [
+				{
+					"name": "sounds/mob/armadillo/unroll_finish1",
+					"volume": 0.05
+				},
+				{
+					"name": "sounds/mob/armadillo/unroll_finish2",
+					"volume": 0.05
+				}
+			]
+		}
+	}
+}
