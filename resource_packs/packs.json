@@ -1082,6 +1082,11 @@
 					"description": "Increases visibility when wearing a Pumpkin"
 				},
 				{
+					"id": "no_fog",
+					"name": "No Fog",
+					"description": "Removes all fogs"
+				},
+				{
 					"id": "no_pumpkin_overlay",
 					"name": "No Pumpkin Overlay",
 					"description": "Removes the Pumpkin overlay completely when worn"
