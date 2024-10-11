@@ -1,22 +1,22 @@
 {
 	"namespace": "bt_numbered_hotbar",
-	"always_top_image": {
+	"image": {
 		"type": "image",
-		"layer": 100
+		"layer": 29
 	},
-	"numbered_hotbar_image@always_top_image": {
+	"numbered_hotbar_image@image": {
 		"size": [
 			20,
 			22
 		]
 	},
-	"numbered_inventory_hotbar_image@always_top_image": {
+	"numbered_inventory_hotbar_image@image": {
 		"size": [
 			18,
 			18
 		]
 	},
-	"numbered_pocket_inventory_hotbar_image@always_top_image": {
+	"numbered_pocket_inventory_hotbar_image@image": {
 		"size": [
 			28,
 			28
