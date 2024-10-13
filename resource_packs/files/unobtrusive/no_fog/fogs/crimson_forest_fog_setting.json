@@ -2,7 +2,7 @@
   "format_version": "1.16.100",
   "minecraft:fog_settings": {
     "description": {
-      "identifier": "qob:fog_crimson_forest"
+      "identifier": "bt:fog_crimson_forest"
     }
   }
 }
