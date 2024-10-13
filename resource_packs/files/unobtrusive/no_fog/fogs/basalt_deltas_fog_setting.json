@@ -2,7 +2,7 @@
   "format_version": "1.16.100",
   "minecraft:fog_settings": {
     "description": {
-      "identifier": "bt:fog_basalt_deltas"
+      "identifier": "qob:fog_basalt_deltas"
     }
   }
 }
