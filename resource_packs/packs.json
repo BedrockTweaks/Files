@@ -1084,7 +1084,7 @@
 				{
 					"id": "no_fog",
 					"name": "No Fog",
-					"description": "Removes all fogs"
+					"description": "Removes the render distance fog effect."
 				},
 				{
 					"id": "no_pumpkin_overlay",
