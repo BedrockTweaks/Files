@@ -13,8 +13,8 @@
          "water_surface_color" : "#1B9ED8"
       },
       "basalt_deltas" : {
-         "fog_identifier" : "minecraft:fog_basalt_deltas",
-         "fog_ids_to_merge" : [ "minecraft:fog_basalt_deltas" ],
+         "fog_identifier" : "bt:fog_basalt_deltas",
+         "fog_ids_to_merge" : [ "bt:fog_basalt_deltas" ],
          "inherit_from_prior_fog" : false,
          "water_surface_color" : "#3f76e4"
       },
@@ -73,8 +73,8 @@
          "water_surface_color" : "#205e83"
       },
       "crimson_forest" : {
-         "fog_identifier" : "minecraft:fog_crimson_forest",
-         "fog_ids_to_merge" : [ "minecraft:fog_crimson_forest" ],
+         "fog_identifier" : "bt:fog_crimson_forest",
+         "fog_ids_to_merge" : [ "bt:fog_crimson_forest" ],
          "inherit_from_prior_fog" : false,
          "water_surface_color" : "#905957"
       },
@@ -189,8 +189,8 @@
          "water_surface_color" : "#185390"
       },
       "hell" : {
-         "fog_identifier" : "minecraft:fog_hell",
-         "fog_ids_to_merge" : [ "minecraft:fog_hell" ],
+         "fog_identifier" : "bt:fog_hell",
+         "fog_ids_to_merge" : [ "bt:fog_hell" ],
          "inherit_from_prior_fog" : false,
          "water_surface_color" : "#905957"
       },
@@ -363,8 +363,8 @@
          "water_surface_color" : "#2590A8"
       },
       "soulsand_valley" : {
-         "fog_identifier" : "minecraft:fog_soulsand_valley",
-         "fog_ids_to_merge" : [ "minecraft:fog_soulsand_valley" ],
+         "fog_identifier" : "bt:fog_soulsand_valley",
+         "fog_ids_to_merge" : [ "bt:fog_soulsand_valley" ],
          "inherit_from_prior_fog" : false,
          "water_surface_color" : "#905957"
       },
@@ -426,8 +426,8 @@
          "water_surface_transparency" : 0.550
       },
       "warped_forest" : {
-         "fog_identifier" : "minecraft:fog_warped_forest",
-         "fog_ids_to_merge" : [ "minecraft:fog_warped_forest" ],
+         "fog_identifier" : "bt:fog_warped_forest",
+         "fog_ids_to_merge" : [ "bt:fog_warped_forest" ],
          "inherit_from_prior_fog" : false,
          "water_surface_color" : "#905957"
       }
