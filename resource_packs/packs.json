@@ -2012,6 +2012,11 @@
 					"description": "Yeah..."
 				},
 				{
+					"id": "flat_fish",
+					"name": "Flat Fish",
+					"description": "Fish but its FLAT!"
+				},
+				{
 					"id": "xisuma_turtle",
 					"name": "Xisuma Turtle",
 					"description": "Changes the Turtle texture to the well-known Xisuma Turtle"
