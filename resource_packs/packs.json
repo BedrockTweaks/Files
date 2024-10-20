@@ -2125,77 +2125,92 @@
 				{
 					"id": "white_slime",
 					"name": "White Slime",
-					"description": "Changes the color of all slime related items, blocks and entities to white"
+					"description": "Changes the color of all slime related items, blocks and entities to white",
+					"priority": 1
 				},
 				{
 					"id": "orange_slime",
 					"name": "Orange Slime",
-					"description": "Changes the color of all slime related items, blocks and entities to orange"
+					"description": "Changes the color of all slime related items, blocks and entities to orange",
+					"priority": 1
 				},
 				{
 					"id": "magenta_slime",
 					"name": "Magenta Slime",
-					"description": "Changes the color of all slime related items, blocks and entities to magenta"
+					"description": "Changes the color of all slime related items, blocks and entities to magenta",
+					"priority": 1
 				},
 				{
 					"id": "light_blue_slime",
 					"name": "Light Blue Slime",
-					"description": "Changes the color of all slime related items, blocks and entities to light blue"
+					"description": "Changes the color of all slime related items, blocks and entities to light blue",
+					"priority": 1
 				},
 				{
 					"id": "yellow_slime",
 					"name": "Yellow Slime",
-					"description": "Changes the color of all slime related items, blocks and entities to yellow"
+					"description": "Changes the color of all slime related items, blocks and entities to yellow",
+					"priority": 1
 				},
 				{
 					"id": "pink_slime",
 					"name": "Pink Slime",
-					"description": "Changes the color of all slime related items, blocks and entities to pink"
+					"description": "Changes the color of all slime related items, blocks and entities to pink",
+					"priority": 1
 				},
 				{
 					"id": "gray_slime",
 					"name": "Gray Slime",
-					"description": "Changes the color of all slime related items, blocks and entities to gray"
+					"description": "Changes the color of all slime related items, blocks and entities to gray",
+					"priority": 1
 				},
 				{
 					"id": "light_gray_slime",
 					"name": "Light Gray Slime",
-					"description": "Changes the color of all slime related items, blocks and entities to light gray"
+					"description": "Changes the color of all slime related items, blocks and entities to light gray",
+					"priority": 1
 				},
 				{
 					"id": "cyan_slime",
 					"name": "Cyan Slime",
-					"description": "Changes the color of all slime related items, blocks and entities to cyan"
+					"description": "Changes the color of all slime related items, blocks and entities to cyan",
+					"priority": 1
 				},
 				{
 					"id": "purple_slime",
 					"name": "Purple Slime",
-					"description": "Changes the color of all slime related items, blocks and entities to purple"
+					"description": "Changes the color of all slime related items, blocks and entities to purple",
+					"priority": 1
 				},
 				{
 					"id": "blue_slime",
 					"name": "Blue Slime",
-					"description": "Changes the color of all slime related items, blocks and entities to blue"
+					"description": "Changes the color of all slime related items, blocks and entities to blue",
+					"priority": 1
 				},
 				{
 					"id": "brown_slime",
 					"name": "Brown Slime",
-					"description": "Changes the color of all slime related items, blocks and entities to brown"
+					"description": "Changes the color of all slime related items, blocks and entities to brown",
+					"priority": 1
 				},
 				{
 					"id": "green_slime",
 					"name": "Green Slime",
-					"description": "Changes the color of all slime related items, blocks and entities to green"
+					"description": "Changes the color of all slime related items, blocks and entities to green",
+					"priority": 1
 				},
 				{
 					"id": "red_slime",
 					"name": "Red Slime",
-					"description": "Changes the color of all slime related items, blocks and entities to red"
+					"description": "Changes the color of all slime related items, blocks and entities to red",
+					"priority": 1
 				},
 				{
 					"id": "black_slime",
 					"name": "Black Slime",
-					"description": "Changes the color of all slime related items, blocks and entities to black"
+					"description": "Changes the color of all slime related items, blocks and entities to black",
+					"priority": 1
 				}
 			]
 		},
