@@ -31,11 +31,8 @@
 					"hurt": {
 						"volume": 0.05
 					},
-					"sound": {
-						"volume": 0.0075
-					},
 					"step": {
-						"volume": 0.05
+						"volume": 0.0075
 					}
 				},
 				"volume": 0.05
