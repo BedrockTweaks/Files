@@ -4,8 +4,31 @@ on:
   push:
     branches:
       - main
+      - devel
 
 jobs:
+  check-branch-build:
+    name: Get branch name
+    runs-on: ubuntu-latest
+    outputs:
+      branch: ${{ steps.check_step.outputs.branch }}
+      status: ${{ steps.check_step.outputs.status }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Get current branch and repo
+        id: check_step
+        run: |
+          raw=$(git branch -r --contains ${{ github.ref }})
+          branch=${raw##*/}
+          status=${{ job.status }}
+          echo "::set-output name=status::$status"
+          echo "::set-output name=branch::$branch"
+          echo "Branch is $branch."
+
   deploy:
     name: Deploy
     runs-on: ubuntu-latest
@@ -13,13 +36,23 @@ jobs:
       status: ${{ steps.job-status.outputs.status }}
 
     steps:
-      - name: Update files
+      - name: Update files Production
+        if: needs.check-branch-build.outputs.branch == 'main'
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.SERVER_ADDRESS }}
           username: ${{ secrets.SERVER_USER }}
           password: ${{ secrets.SERVER_PASSWORD }}
           script: cd /opt/bedrock_tweaks/files && git reset --hard && git clean -fd && git pull ${{ secrets.REPOSITORY_URL }}
+
+      - name: Update files Development
+        if: needs.check-branch-build.outputs.branch == 'devel'
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SERVER_ADDRESS }}
+          username: ${{ secrets.SERVER_USER }}
+          password: ${{ secrets.SERVER_PASSWORD }}
+          script: cd /opt/bedrock_tweaks/files_dev && git reset --hard && git clean -fd && git pull ${{ secrets.REPOSITORY_DEV_URL }}
 
       - name: Output job status
         id: job-status

@@ -79,12 +79,19 @@ JSON UI must follow [Bedrock Wiki JSON UI Best Practices](https://wiki.bedrock.d
 
 ### Pack Priority
 
-Packs in the packs.json are ordered by priority, the higher the pack the higher the priority.
+Packs in the packs.json are ordered by priority, the higher in the json object the pack is, the higher the priority it has.
 
 `alternate_block_destruction >>> black_nether_bricks >>> lush_grass_all_round`
 
+We can override this priority by adding a priority key in the pack.
+Ex: colorful_slimes packs should have more priority than sticky_piston_sides so the sticky piston side texture from the colored slimes 
+packs is used instead of texture from the sticky piston sides pack.
+
 The pack generator will add the packs to the generated file by priority order. If a file already exists, the generator will skip it to not
 add the same file again.
+
+Default priority is 0
+
 
 ### pack_icon.png
 
@@ -277,9 +284,10 @@ export interface Pack {
   description: string;
   message?: Message;
   version?: string; // * only Addons and CT
+  priority?: number; // Higher number, higher priority
 }
 
-/*
+/**
  * Pack Version is a string as follows: "<minecraft_version> - <pack_version>"
  * minecraft_version is the minimum major version of the game the pack is compatible with
  * pack_version is the version of the pack for that minecraft update, each mc update it resets
@@ -304,6 +312,11 @@ export interface DeepMergeFile {
   filepath: string;
 }
 ```
+
+## Development Environment
+
+There is a development environment pointing to the devel branch in https://dev.bedrocktweaks.net/api/docs
+You can test there the packs, combinations and backend changes before they are published to the main site
 
 ## Reporting Issues
 
