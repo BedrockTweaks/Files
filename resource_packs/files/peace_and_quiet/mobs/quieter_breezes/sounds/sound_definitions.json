@@ -1,0 +1,131 @@
+{
+	"format_version": "1.20.20",
+	"sound_definitions": {
+		"mob.breeze.charge": {
+			"category": "hostile",
+			"max_distance": 16.0,
+			"min_distance": null,
+			"sounds": [
+				{
+					"name": "sounds/mob/breeze/charge1",
+					"pitch": 1.0,
+					"volume": 0.05
+				},
+				{
+					"name": "sounds/mob/breeze/charge2",
+					"pitch": 1.0,
+					"volume": 0.05
+				},
+				{
+					"name": "sounds/mob/breeze/charge3",
+					"pitch": 1.0,
+					"volume": 0.05
+				}
+			]
+		},
+		"mob.breeze.inhale": {
+			"category": "hostile",
+			"max_distance": 16.0,
+			"min_distance": null,
+			"sounds": [
+				{
+					"name": "sounds/mob/breeze/inhale1",
+					"pitch": 1.0,
+					"volume": 0.05
+				},
+				{
+					"name": "sounds/mob/breeze/inhale1",
+					"pitch": 1.10,
+					"volume": 0.05
+				},
+				{
+					"name": "sounds/mob/breeze/inhale2",
+					"pitch": 1.0,
+					"volume": 0.05
+				},
+				{
+					"name": "sounds/mob/breeze/inhale2",
+					"pitch": 1.10,
+					"volume": 0.05
+				}
+			]
+		},
+		"mob.breeze.slide": {
+			"category": "hostile",
+			"max_distance": 16.0,
+			"min_distance": null,
+			"sounds": [
+				{
+					"name": "sounds/mob/breeze/slide1",
+					"pitch": 1.0,
+					"volume": 0.05
+				},
+				{
+					"name": "sounds/mob/breeze/slide2",
+					"pitch": 1.0,
+					"volume": 0.05
+				},
+				{
+					"name": "sounds/mob/breeze/slide3",
+					"pitch": 1.0,
+					"volume": 0.05
+				},
+				{
+					"name": "sounds/mob/breeze/slide4",
+					"pitch": 1.0,
+					"volume": 0.05
+				}
+			]
+		},
+		"mob.breeze.whirl": {
+			"category": "hostile",
+			"max_distance": 16.0,
+			"min_distance": null,
+			"sounds": [
+				{
+					"name": "sounds/mob/breeze/whirl1",
+					"volume": 0.05
+				},
+				{
+					"name": "sounds/mob/breeze/whirl2",
+					"volume": 0.05
+				},
+				{
+					"name": "sounds/mob/breeze/whirl3",
+					"volume": 0.05
+				},
+				{
+					"name": "sounds/mob/breeze/whirl4",
+					"volume": 0.05
+				},
+				{
+					"name": "sounds/mob/breeze/whirl5",
+					"volume": 0.05
+				}
+			]
+		},
+		"mob.breeze.idle_ground": {
+			"category": "hostile",
+			"max_distance": null,
+			"min_distance": null,
+			"sounds": [
+				{
+					"name": "sounds/mob/breeze/idle1",
+					"volume": 0.05
+				},
+				{
+					"name": "sounds/mob/breeze/idle2",
+					"volume": 0.05
+				},
+				{
+					"name": "sounds/mob/breeze/idle3",
+					"volume": 0.05
+				},
+				{
+					"name": "sounds/mob/breeze/idle4",
+					"volume": 0.05
+				}
+			]
+		}
+	}
+}

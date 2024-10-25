@@ -11,7 +11,7 @@
 				"makena": "textures/entity/zombie/makena"
 			},
 			"geometry": {
-				"default": "geometry.bt.zombie"
+				"default": "geometry.bt_zombie"
 			},
 			"render_controllers": [
 				"controller.render.bt.zombie"
