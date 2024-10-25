@@ -6,7 +6,22 @@
 				"array_name": "controls",
 				"operation": "insert_back",
 				"value": {
-					"numbered_hotbar@bt_numbered_hotbar.numbered_hotbar_panel": {}
+					"numbered_hotbar_desktop@bt_numbered_hotbar.numbered_hotbar_panel": {
+						"ignored": "(not $is_desktop)"
+					}
+				}
+			},
+			{
+				"array_name": "controls",
+				"operation": "insert_back",
+				"value": {
+					"numbered_hotbar_other@bt_numbered_hotbar.numbered_hotbar_panel": {
+						"ignored": "$is_desktop",
+						"offset": [
+							-101,
+							16
+						]
+					}
 				}
 			}
 		]
@@ -17,7 +32,22 @@
 				"array_name": "controls",
 				"operation": "insert_back",
 				"value": {
-					"numbered_hotbar@bt_numbered_hotbar.numbered_hotbar_panel": {}
+					"numbered_hotbar_desktop@bt_numbered_hotbar.numbered_hotbar_panel": {
+						"ignored": "(not $is_desktop)"
+					}
+				}
+			},
+			{
+				"array_name": "controls",
+				"operation": "insert_back",
+				"value": {
+					"numbered_hotbar_other@bt_numbered_hotbar.numbered_hotbar_panel": {
+						"ignored": "$is_desktop",
+						"offset": [
+							-101,
+							16
+						]
+					}
 				}
 			}
 		]
