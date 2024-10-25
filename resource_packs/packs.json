@@ -3,7 +3,7 @@
 	"version": [
 		1,
 		21,
-		0
+		40
 	],
 	"categories": [
 		{
@@ -2764,13 +2764,6 @@
 			]
 		},
 		{
-			"id": "extras/utility/music_disc_level_hunger_preview",
-			"combines": [
-				"utility/hunger_preview",
-				"utility/music_disc_redstone_level_preview"
-			]
-		},
-		{
 			"id": "extras/utility/visual_infested_dungeons_stone",
 			"combines": [
 				"utility/visual_infested_stone_items",
@@ -2803,21 +2796,6 @@
 			"combines": [
 				"aesthetic/accurate_scaffolding",
 				"unobtrusive/unobtrusive_scaffolding"
-			]
-		},
-		{
-			"id": "extras/variated_stone/variated_stone_and_unpolished_stones",
-			"combines": [
-				"variation/variated_stone",
-				"variation/variated_unpolished_stones"
-			]
-		},
-		{
-			"id": "extras/variated_stone/dungeons_stone_and_unpolished_stones",
-			"combines": [
-				"variation/variated_stone",
-				"variation/variated_unpolished_stones",
-				"parity/dungeons_stone"
 			]
 		},
 		{
