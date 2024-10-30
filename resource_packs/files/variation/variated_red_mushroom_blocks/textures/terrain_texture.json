@@ -1,56 +1,9 @@
 {
-	"num_mip_levels": 4,
-	"padding": 8,
 	"resource_pack_name": "vanilla",
 	"texture_name": "atlas.terrain",
+	"padding": 8,
+	"num_mip_levels": 4,
 	"texture_data": {
-		"mushroom_block": {
-			"textures": [
-				"textures/blocks/mushroom_block_skin_brown",
-				{
-					"variations": [
-						{
-							"path": "textures/blocks/red_mushroom_block/0"
-						},
-						{
-							"path": "textures/blocks/red_mushroom_block/1"
-						},
-						{
-							"path": "textures/blocks/red_mushroom_block/2"
-						},
-						{
-							"path": "textures/blocks/red_mushroom_block/3"
-						},
-						{
-							"path": "textures/blocks/red_mushroom_block/4"
-						},
-						{
-							"path": "textures/blocks/red_mushroom_block/5"
-						},
-						{
-							"path": "textures/blocks/red_mushroom_block/6"
-						},
-						{
-							"path": "textures/blocks/red_mushroom_block/7"
-						},
-						{
-							"path": "textures/blocks/red_mushroom_block/8"
-						},
-						{
-							"path": "textures/blocks/red_mushroom_block/9"
-						},
-						{
-							"path": "textures/blocks/red_mushroom_block/10"
-						},
-						{
-							"path": "textures/blocks/red_mushroom_block/11"
-						}
-					]
-				},
-				"textures/blocks/mushroom_block_inside",
-				"textures/blocks/mushroom_block_skin_stem"
-			]
-		},
 		"mushroom_red_bottom": {
 			"textures": [
 				"textures/blocks/mushroom_block_inside",

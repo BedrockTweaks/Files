@@ -20,7 +20,7 @@
 					"id": "double_slabs",
 					"name": "Double Slabs",
 					"description": "Allows you to craft 2 slabs from a single block",
-					"version": "1.20 - 1.0.0"
+					"version": "1.21 - 1.0.0"
 				},
 				{
 					"id": "dropper_to_dispenser",
