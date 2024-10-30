@@ -1650,6 +1650,96 @@
 			]
 		},
 		{
+			"id": "gui/hotbar_selector",
+			"name": "GUI / Hotbar Selector",
+			"packs": [
+				{
+					"id": "gray_hotbar_selector",
+					"name": "Gray Hotbar Selector",
+					"description": "",
+					"priority": 1
+				},
+				{
+					"id": "black_hotbar_selector",
+					"name": "Black Hotbar Selector",
+					"description": "",
+					"priority": 1
+				},
+				{
+					"id": "brown_hotbar_selector",
+					"name": "Brown Hotbar Selector",
+					"description": "",
+					"priority": 1
+				},
+				{
+					"id": "red_hotbar_selector",
+					"name": "Red Hotbar Selector",
+					"description": "",
+					"priority": 1
+				},
+				{
+					"id": "orange_hotbar_selector",
+					"name": "Orange Hotbar Selector",
+					"description": "",
+					"priority": 1
+				},
+				{
+					"id": "yellow_hotbar_selector",
+					"name": "Yellow Hotbar Selector",
+					"description": "",
+					"priority": 1
+				},
+				{
+					"id": "lime_hotbar_selector",
+					"name": "Lime Hotbar Selector",
+					"description": "",
+					"priority": 1
+				},
+				{
+					"id": "green_hotbar_selector",
+					"name": "Green Hotbar Selector",
+					"description": "",
+					"priority": 1
+				},
+				{
+					"id": "cyan_hotbar_selector",
+					"name": "Cyan Hotbar Selector",
+					"description": "",
+					"priority": 1
+				},
+				{
+					"id": "light_blue_hotbar_selector",
+					"name": "Light Blue Hotbar Selector",
+					"description": "",
+					"priority": 1
+				},
+				{
+					"id": "blue_hotbar_selector",
+					"name": "Blue Hotbar Selector",
+					"description": "",
+					"priority": 1
+				},
+				{
+					"id": "purple_hotbar_selector",
+					"name": "Purple Hotbar Selector",
+					"description": "",
+					"priority": 1
+				},
+				{
+					"id": "magenta_hotbar_selector",
+					"name": "Magenta Hotbar Selector",
+					"description": "",
+					"priority": 1
+				},
+				{
+					"id": "pink_hotbar_selector",
+					"name": "Pink Hotbar Selector",
+					"description": "",
+					"priority": 1
+				}
+			]
+		},
+		{
 			"id": "gui/menu_panoramas",
 			"name": "GUI / Menu Panoramas",
 			"packs": [
