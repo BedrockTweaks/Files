@@ -2598,14 +2598,6 @@
 	],
 	"combinations": [
 		{
-			"id": "extras/bamboo/consistent_old_variated_bamboo",
-			"combines": [
-				"aesthetic/consistent_bamboo_planks",
-				"retro/old_planks",
-				"variation/variated_planks"
-			]
-		},
-		{
 			"id": "extras/aesthetic/circular_desaturated_dark_oak_log_tops",
 			"combines": [
 				"aesthetic/desaturated_dark_oak",
