@@ -1089,7 +1089,8 @@
 				{
 					"id": "no_spyglass_overlay",
 					"name": "No Spyglass Overlay",
-					"description": "Removes the Spyglass overlay completely when zooming in"
+					"description": "Removes the Spyglass overlay completely when zooming in",
+					"priority": 1
 				},
 				{
 					"id": "no_vignette",
@@ -2173,7 +2174,8 @@
 				{
 					"id": "what",
 					"name": "WHAT",
-					"description": "Replaces the Spyglass overlay with the 'WHAT' meme template, including Earthbound's 'Sanctuary Guardian' music"
+					"description": "Replaces the Spyglass overlay with the 'WHAT' meme template, including Earthbound's 'Sanctuary Guardian' music",
+					"priority": 2
 				},
 				{
 					"id": "useless_spyglass",
@@ -2193,7 +2195,8 @@
 				{
 					"id": "honey_slime",
 					"name": "Honey Slime",
-					"description": "Replaces all things slimy with all things honey-y!"
+					"description": "Replaces all things slimy with all things honey-y!",
+					"priority": 1
 				}
 			]
 		},
@@ -2595,10 +2598,61 @@
 	],
 	"combinations": [
 		{
+			"id": "extras/bamboo/consistent_old_variated_bamboo",
+			"combines": [
+				"aesthetic/consistent_bamboo_planks",
+				"retro/old_planks",
+				"variation/variated_planks"
+			]
+		},
+		{
 			"id": "extras/aesthetic/circular_desaturated_dark_oak_log_tops",
 			"combines": [
 				"aesthetic/desaturated_dark_oak",
 				"terrain/circular_log_tops"
+			]
+		},
+		{
+			"id": "extras/aesthetic/accurate_translucent_spyglass_overlay",
+			"combines": [
+				"aesthetic/accurate_spyglass",
+				"unobtrusive/translucent_spyglass_overlay"
+			]
+		},
+		{
+			"id": "extras/aesthetic/accurate_useless_spyglass",
+			"combines": [
+				"aesthetic/accurate_spyglass",
+				"fun/useless_spyglass"
+			]
+		},
+		{
+			"id": "extras/aesthetic/smoother_polished_stones_to_bricks",
+			"combines": [
+				"aesthetic/polished_stones_to_bricks",
+				"terrain/smoother_stones"
+			]
+		},
+		{
+			"id": "extras/aesthetic/classic_consistent_netherite_helmet",
+			"combines": [
+				"aesthetic/classic_style_netherite_armor",
+				"fixes_and_consistency/consistent_helmets"
+			]
+		},
+		{
+			"id": "extras/aesthetic/classic_consistent_golden_crown",
+			"combines": [
+				"aesthetic/golden_crown",
+				"fixes_and_consistency/consistent_helmets"
+			]
+		},
+		{
+			"id": "extras/aesthetic/classic_consistent_netherite_golden_crown",
+			"combines": [
+				"aesthetic/classic_style_netherite_armor",
+				"aesthetic/golden_crown",
+				"fixes_and_consistency/consistent_helmets"
 			]
 		},
 		{
@@ -2635,6 +2689,14 @@
 			"combines": [
 				"variation/variated_dirt",
 				"terrain/pebbleless_dirt"
+			]
+		},
+		{
+			"id": "extras/dirt/variated_pebbleless_dirt_and_coarse_dirt",
+			"combines": [
+				"variation/variated_dirt",
+				"terrain/pebbleless_dirt",
+				"terrain/pebbleless_coarse_dirt"
 			]
 		},
 		{
@@ -2700,6 +2762,67 @@
 				"gui/dark_ui",
 				"gui/numbered_hotbar",
 				"fixes_and_consistency/brewing_stand_icons_fix"
+			]
+		},
+		{
+			"id": "extras/terrain/old_clearer_water",
+			"combines": [
+				"terrain/clearer_water",
+				"retro/old_water"
+			]
+		},
+		{
+			"id": "extras/terrain/brighter_black_nether_bricks",
+			"combines": [
+				"terrain/brighter_nether",
+				"aesthetic/black_nether_bricks"
+			]
+		},
+		{
+			"id": "extras/terrain/brighter_lower_crimson_nylium",
+			"combines": [
+				"terrain/brighter_nether",
+				"terrain/lower_and_sides/lower_crimson_nylium"
+			]
+		},
+		{
+			"id": "extras/terrain/brighter_lower_warped_nylium",
+			"combines": [
+				"terrain/brighter_nether",
+				"terrain/lower_and_sides/lower_warped_nylium"
+			]
+		},
+		{
+			"id": "extras/terrain/brighter_lower_crimson_warped_nylium",
+			"combines": [
+				"terrain/brighter_nether",
+				"terrain/lower_and_sides/lower_crimson_nylium",
+				"terrain/lower_and_sides/lower_warped_nylium"
+			]
+		},
+		{
+			"id": "extras/terrain/brighter_black_nether_bricks_lower_crimson_nylium",
+			"combines": [
+				"terrain/brighter_nether",
+				"terrain/lower_and_sides/lower_crimson_nylium",
+				"aesthetic/black_nether_bricks"
+			]
+		},
+		{
+			"id": "extras/terrain/brighter_black_nether_bricks_lower_warped_nylium",
+			"combines": [
+				"terrain/brighter_nether",
+				"terrain/lower_and_sides/lower_warped_nylium",
+				"aesthetic/black_nether_bricks"
+			]
+		},
+		{
+			"id": "extras/terrain/brighter_black_nether_bricks_lower_crimson_warped_nylium",
+			"combines": [
+				"terrain/brighter_nether",
+				"terrain/lower_and_sides/lower_crimson_nylium",
+				"terrain/lower_and_sides/lower_warped_nylium",
+				"aesthetic/black_nether_bricks"
 			]
 		},
 		{
@@ -2875,6 +2998,13 @@
 			]
 		},
 		{
+			"id": "extras/utility/suspicious_sand_and_old_gravel_borders",
+			"combines": [
+				"utility/suspicious_sand_and_gravel_borders",
+				"retro/old_gravel"
+			]
+		},
+		{
 			"id": "extras/unobtrusive/unobtrusive_rain_and_snow",
 			"combines": [
 				"unobtrusive/unobtrusive_rain",
@@ -2900,6 +3030,378 @@
 			"combines": [
 				"fixes_and_consistency/pixel_consistent_wither",
 				"fun/wither_bee"
+			]
+		},
+		{
+			"id": "extras/pixel_consistent/pixel_consistent_warped_signs",
+			"combines": [
+				"fixes_and_consistency/pixel_consistent_signs",
+				"aesthetic/smoother_warped_planks"
+			]
+		},
+		{
+			"id": "extras/hunger_preview/apple_hunger_preview",
+			"combines": [
+				"utility/hunger_preview",
+				"gui/hunger_bars/apple_hunger_bar"
+			]
+		},
+		{
+			"id": "extras/hunger_preview/baked_potato_hunger_preview",
+			"combines": [
+				"utility/hunger_preview",
+				"gui/hunger_bars/baked_potato_hunger_bar"
+			]
+		},
+		{
+			"id": "extras/hunger_preview/beef_hunger_preview",
+			"combines": [
+				"utility/hunger_preview",
+				"gui/hunger_bars/beef_hunger_bar"
+			]
+		},
+		{
+			"id": "extras/hunger_preview/beetroot_hunger_preview",
+			"combines": [
+				"utility/hunger_preview",
+				"gui/hunger_bars/beetroot_hunger_bar"
+			]
+		},
+		{
+			"id": "extras/hunger_preview/beetroot_soup_hunger_preview",
+			"combines": [
+				"utility/hunger_preview",
+				"gui/hunger_bars/beetroot_soup_hunger_bar"
+			]
+		},
+		{
+			"id": "extras/hunger_preview/bread_hunger_preview",
+			"combines": [
+				"utility/hunger_preview",
+				"gui/hunger_bars/bread_hunger_bar"
+			]
+		},
+		{
+			"id": "extras/hunger_preview/cake_hunger_preview",
+			"combines": [
+				"utility/hunger_preview",
+				"gui/hunger_bars/cake_hunger_bar"
+			]
+		},
+		{
+			"id": "extras/hunger_preview/carrot_hunger_preview",
+			"combines": [
+				"utility/hunger_preview",
+				"gui/hunger_bars/carrot_hunger_bar"
+			]
+		},
+		{
+			"id": "extras/hunger_preview/chicken_hunger_preview",
+			"combines": [
+				"utility/hunger_preview",
+				"gui/hunger_bars/chicken_hunger_bar"
+			]
+		},
+		{
+			"id": "extras/hunger_preview/chorus_fruit_hunger_preview",
+			"combines": [
+				"utility/hunger_preview",
+				"gui/hunger_bars/chorus_fruit_hunger_bar"
+			]
+		},
+		{
+			"id": "extras/hunger_preview/cod_hunger_preview",
+			"combines": [
+				"utility/hunger_preview",
+				"gui/hunger_bars/cod_hunger_bar"
+			]
+		},
+		{
+			"id": "extras/hunger_preview/cookie_hunger_preview",
+			"combines": [
+				"utility/hunger_preview",
+				"gui/hunger_bars/cookie_hunger_bar"
+			]
+		},
+		{
+			"id": "extras/hunger_preview/glow_berries_hunger_preview",
+			"combines": [
+				"utility/hunger_preview",
+				"gui/hunger_bars/glow_berries_hunger_bar"
+			]
+		},
+		{
+			"id": "extras/hunger_preview/golden_apple_hunger_preview",
+			"combines": [
+				"utility/hunger_preview",
+				"gui/hunger_bars/golden_apple_hunger_bar"
+			]
+		},
+		{
+			"id": "extras/hunger_preview/golden_carrot_hunger_preview",
+			"combines": [
+				"utility/hunger_preview",
+				"gui/hunger_bars/golden_carrot_hunger_bar"
+			]
+		},
+		{
+			"id": "extras/hunger_preview/honey_hunger_preview",
+			"combines": [
+				"utility/hunger_preview",
+				"gui/hunger_bars/honey_hunger_bar"
+			]
+		},
+		{
+			"id": "extras/hunger_preview/melon_hunger_preview",
+			"combines": [
+				"utility/hunger_preview",
+				"gui/hunger_bars/melon_hunger_bar"
+			]
+		},
+		{
+			"id": "extras/hunger_preview/mushroom_stew_hunger_preview",
+			"combines": [
+				"utility/hunger_preview",
+				"gui/hunger_bars/mushroom_stew_hunger_bar"
+			]
+		},
+		{
+			"id": "extras/hunger_preview/mutton_hunger_preview",
+			"combines": [
+				"utility/hunger_preview",
+				"gui/hunger_bars/mutton_hunger_bar"
+			]
+		},
+		{
+			"id": "extras/hunger_preview/poisonous_potato_hunger_preview",
+			"combines": [
+				"utility/hunger_preview",
+				"gui/hunger_bars/poisonous_potato_hunger_bar"
+			]
+		},
+		{
+			"id": "extras/hunger_preview/porkchop_hunger_preview",
+			"combines": [
+				"utility/hunger_preview",
+				"gui/hunger_bars/porkchop_hunger_bar"
+			]
+		},
+		{
+			"id": "extras/hunger_preview/potato_hunger_preview",
+			"combines": [
+				"utility/hunger_preview",
+				"gui/hunger_bars/potato_hunger_bar"
+			]
+		},
+		{
+			"id": "extras/hunger_preview/pufferfish_hunger_preview",
+			"combines": [
+				"utility/hunger_preview",
+				"gui/hunger_bars/pufferfish_hunger_bar"
+			]
+		},
+		{
+			"id": "extras/hunger_preview/pumpkin_pie_hunger_preview",
+			"combines": [
+				"utility/hunger_preview",
+				"gui/hunger_bars/pumpkin_pie_hunger_bar"
+			]
+		},
+		{
+			"id": "extras/hunger_preview/rabbit_hunger_preview",
+			"combines": [
+				"utility/hunger_preview",
+				"gui/hunger_bars/rabbit_hunger_bar"
+			]
+		},
+		{
+			"id": "extras/hunger_preview/rabbit_stew_hunger_preview",
+			"combines": [
+				"utility/hunger_preview",
+				"gui/hunger_bars/rabbit_stew_hunger_bar"
+			]
+		},
+		{
+			"id": "extras/hunger_preview/salmon_hunger_preview",
+			"combines": [
+				"utility/hunger_preview",
+				"gui/hunger_bars/salmon_hunger_bar"
+			]
+		},
+		{
+			"id": "extras/hunger_preview/spider_eye_hunger_preview",
+			"combines": [
+				"utility/hunger_preview",
+				"gui/hunger_bars/spider_eye_hunger_bar"
+			]
+		},
+		{
+			"id": "extras/hunger_preview/suspicious_stew_hunger_preview",
+			"combines": [
+				"utility/hunger_preview",
+				"gui/hunger_bars/suspicious_stew_hunger_bar"
+			]
+		},
+		{
+			"id": "extras/hunger_preview/sweet_berries_hunger_preview",
+			"combines": [
+				"utility/hunger_preview",
+				"gui/hunger_bars/sweet_berries_hunger_bar"
+			]
+		},
+		{
+			"id": "extras/hunger_preview/tropical_fish_hunger_preview",
+			"combines": [
+				"utility/hunger_preview",
+				"gui/hunger_bars/tropical_fish_hunger_bar"
+			]
+		},
+		{
+			"id": "extras/planks/old_variated_planks",
+			"combines": [
+				"retro/old_planks",
+				"variation/variated_planks"
+			]
+		},
+		{
+			"id": "extras/planks/oarless_old_planks",
+			"combines": [
+				"retro/oarless_boats",
+				"retro/old_planks"
+			]
+		},
+		{
+			"id": "extras/planks/oarless_old_variated_planks",
+			"combines": [
+				"retro/oarless_boats",
+				"retro/old_planks",
+				"variation/variated_planks"
+			]
+		},
+		{
+			"id": "extras/fun/smiley_green_axolotl",
+			"combines": [
+				"fun/smiley_axolotls",
+				"fun/green_axolotl"
+			]
+		},
+		{
+			"id": "extras/fun/honey_solid_slime",
+			"combines": [
+				"fun/honey_slime",
+				"aesthetic/solid_slime"
+			]
+		},
+		{
+			"id": "extras/fun/sus_sand_and_old_gravel",
+			"combines": [
+				"fun/sus_sand_and_gravel",
+				"retro/old_gravel"
+			]
+		},
+		{
+			"id": "extras/colored_solid_slime/black_solid_slime",
+			"combines": [
+				"world_of_color/colorful_slime/black_slime",
+				"aesthetic/solid_slime"
+			]
+		},
+		{
+			"id": "extras/colored_solid_slime/blue_solid_slime",
+			"combines": [
+				"world_of_color/colorful_slime/blue_slime",
+				"aesthetic/solid_slime"
+			]
+		},
+		{
+			"id": "extras/colored_solid_slime/brown_solid_slime",
+			"combines": [
+				"world_of_color/colorful_slime/brown_slime",
+				"aesthetic/solid_slime"
+			]
+		},
+		{
+			"id": "extras/colored_solid_slime/cyan_solid_slime",
+			"combines": [
+				"world_of_color/colorful_slime/cyan_slime",
+				"aesthetic/solid_slime"
+			]
+		},
+		{
+			"id": "extras/colored_solid_slime/gray_solid_slime",
+			"combines": [
+				"world_of_color/colorful_slime/gray_slime",
+				"aesthetic/solid_slime"
+			]
+		},
+		{
+			"id": "extras/colored_solid_slime/green_solid_slime",
+			"combines": [
+				"world_of_color/colorful_slime/green_slime",
+				"aesthetic/solid_slime"
+			]
+		},
+		{
+			"id": "extras/colored_solid_slime/light_blue_solid_slime",
+			"combines": [
+				"world_of_color/colorful_slime/light_blue_slime",
+				"aesthetic/solid_slime"
+			]
+		},
+		{
+			"id": "extras/colored_solid_slime/light_gray_solid_slime",
+			"combines": [
+				"world_of_color/colorful_slime/light_gray_slime",
+				"aesthetic/solid_slime"
+			]
+		},
+		{
+			"id": "extras/colored_solid_slime/magenta_solid_slime",
+			"combines": [
+				"world_of_color/colorful_slime/magenta_slime",
+				"aesthetic/solid_slime"
+			]
+		},
+		{
+			"id": "extras/colored_solid_slime/orange_solid_slime",
+			"combines": [
+				"world_of_color/colorful_slime/orange_slime",
+				"aesthetic/solid_slime"
+			]
+		},
+		{
+			"id": "extras/colored_solid_slime/pink_solid_slime",
+			"combines": [
+				"world_of_color/colorful_slime/pink_slime",
+				"aesthetic/solid_slime"
+			]
+		},
+		{
+			"id": "extras/colored_solid_slime/purple_solid_slime",
+			"combines": [
+				"world_of_color/colorful_slime/purple_slime",
+				"aesthetic/solid_slime"
+			]
+		},
+		{
+			"id": "extras/colored_solid_slime/red_solid_slime",
+			"combines": [
+				"world_of_color/colorful_slime/red_slime",
+				"aesthetic/solid_slime"
+			]
+		},
+		{
+			"id": "extras/colored_solid_slime/white_solid_slime",
+			"combines": [
+				"world_of_color/colorful_slime/white_slime",
+				"aesthetic/solid_slime"
+			]
+		},
+		{
+			"id": "extras/colored_solid_slime/yellow_solid_slime",
+			"combines": [
+				"world_of_color/colorful_slime/yellow_slime",
+				"aesthetic/solid_slime"
 			]
 		},
 		{
