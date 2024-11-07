@@ -1,8 +1,8 @@
 {
-	"num_mip_levels": 4,
-	"padding": 8,
 	"resource_pack_name": "vanilla",
 	"texture_name": "atlas.terrain",
+	"padding": 8,
+	"num_mip_levels": 4,
 	"texture_data": {
 		"cobblestone": {
 			"textures": {
@@ -33,123 +33,6 @@
 					}
 				]
 			}
-		},
-		"stone_slab_top": {
-			"textures": [
-				"textures/blocks/stone_slab_top",
-				"textures/blocks/sandstone_top",
-				"textures/blocks/planks_oak",
-				{
-					"variations": [
-						{
-							"path": "textures/blocks/cobblestone/0"
-						},
-						{
-							"path": "textures/blocks/cobblestone/1"
-						},
-						{
-							"path": "textures/blocks/cobblestone/2"
-						},
-						{
-							"path": "textures/blocks/cobblestone/3"
-						},
-						{
-							"path": "textures/blocks/cobblestone/4"
-						},
-						{
-							"path": "textures/blocks/cobblestone/5"
-						},
-						{
-							"path": "textures/blocks/cobblestone/6"
-						},
-						{
-							"path": "textures/blocks/cobblestone/7"
-						}
-					]
-				},
-				"textures/blocks/brick",
-				"textures/blocks/stonebrick",
-				"textures/blocks/quartz_block_top",
-				"textures/blocks/nether_brick"
-			]
-		},
-		"stone_slab_side": {
-			"textures": [
-				"textures/blocks/stone_slab_side",
-				"textures/blocks/sandstone_normal",
-				"textures/blocks/planks_oak",
-				{
-					"variations": [
-						{
-							"path": "textures/blocks/cobblestone/0"
-						},
-						{
-							"path": "textures/blocks/cobblestone/1"
-						},
-						{
-							"path": "textures/blocks/cobblestone/2"
-						},
-						{
-							"path": "textures/blocks/cobblestone/3"
-						},
-						{
-							"path": "textures/blocks/cobblestone/4"
-						},
-						{
-							"path": "textures/blocks/cobblestone/5"
-						},
-						{
-							"path": "textures/blocks/cobblestone/6"
-						},
-						{
-							"path": "textures/blocks/cobblestone/7"
-						}
-					]
-				},
-				"textures/blocks/brick",
-				"textures/blocks/stonebrick",
-				"textures/blocks/quartz_block_side",
-				"textures/blocks/nether_brick"
-			]
-		},
-		"stone_slab_bottom": {
-			"textures": [
-				"textures/blocks/stone_slab_top",
-				"textures/blocks/sandstone_bottom",
-				"textures/blocks/planks_oak",
-				{
-					"variations": [
-						{
-							"path": "textures/blocks/cobblestone/0"
-						},
-						{
-							"path": "textures/blocks/cobblestone/1"
-						},
-						{
-							"path": "textures/blocks/cobblestone/2"
-						},
-						{
-							"path": "textures/blocks/cobblestone/3"
-						},
-						{
-							"path": "textures/blocks/cobblestone/4"
-						},
-						{
-							"path": "textures/blocks/cobblestone/5"
-						},
-						{
-							"path": "textures/blocks/cobblestone/6"
-						},
-						{
-							"path": "textures/blocks/cobblestone/7"
-						}
-					]
-				},
-				"textures/blocks/brick",
-				"textures/blocks/stonebrick",
-				"textures/blocks/quartz_block_top",
-				"textures/blocks/nether_brick"
-			]
 		},
 		"cobblestone_slab": {
 			"textures": {

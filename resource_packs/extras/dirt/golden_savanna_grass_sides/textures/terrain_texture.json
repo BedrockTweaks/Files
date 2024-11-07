@@ -1,7 +1,8 @@
 {
-	"num_mip_levels": 4,
-	"padding": 8,
 	"resource_pack_name": "vanilla",
+	"texture_name": "atlas.terrain",
+	"padding": 8,
+	"num_mip_levels": 4,
 	"texture_data": {
 		"grass_side_bt": {
 			"textures": [
@@ -72,6 +73,5 @@
 				"textures/blocks/grass_side_snowed"
 			]
 		}
-	},
-	"texture_name": "atlas.terrain"
+	}
 }
