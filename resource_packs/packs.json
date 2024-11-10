@@ -2386,6 +2386,37 @@
 			]
 		},
 		{
+			"id": "world_of_color/enchantment_glints",
+			"name": "World of Color / Enchantment Glints",
+			"packs": [
+				{
+					"id": "red_enchantment_glint",
+					"name": "Red Enchantment Glint",
+					"description": ""
+				},
+				{
+					"id": "orange_enchantment_glint",
+					"name": "Orange Enchantment Glint",
+					"description": ""
+				},
+				{
+					"id": "yellow_enchantment_glint",
+					"name": "Yellow Enchantment Glint",
+					"description": ""
+				},
+				{
+					"id": "blue_enchantment_glint",
+					"name": "Blue Enchantment Glint",
+					"description": ""
+				},
+				{
+					"id": "rainbow_enchantment_glint",
+					"name": "Rainbow Enchantment Glint",
+					"description": ""
+				}
+			]
+		},
+		{
 			"id": "parity",
 			"name": "Parity",
 			"packs": [
@@ -2900,6 +2931,41 @@
 			"combines": [
 				"fixes_and_consistency/pixel_consistent_wither",
 				"fun/wither_bee"
+			]
+		},
+		{
+			"id": "extras/enchantment_glint/red_unobtrusive_enchantment_glint",
+			"combines": [
+				"world_of_color/enchantment_glints/red_enchantment_glint",
+				"unobtrusive/unobtrusive_enchantment_glint"
+			]
+		},
+		{
+			"id": "extras/enchantment_glint/orange_unobtrusive_enchantment_glint",
+			"combines": [
+				"world_of_color/enchantment_glints/orange_enchantment_glint",
+				"unobtrusive/unobtrusive_enchantment_glint"
+			]
+		},
+		{
+			"id": "extras/enchantment_glint/yellow_unobtrusive_enchantment_glint",
+			"combines": [
+				"world_of_color/enchantment_glints/yellow_enchantment_glint",
+				"unobtrusive/unobtrusive_enchantment_glint"
+			]
+		},
+		{
+			"id": "extras/enchantment_glint/blue_unobtrusive_enchantment_glint",
+			"combines": [
+				"world_of_color/enchantment_glints/blue_enchantment_glint",
+				"unobtrusive/unobtrusive_enchantment_glint"
+			]
+		},
+		{
+			"id": "extras/enchantment_glint/rainbow_unobtrusive_enchantment_glint",
+			"combines": [
+				"world_of_color/enchantment_glints/rainbow_enchantment_glint",
+				"unobtrusive/unobtrusive_enchantment_glint"
 			]
 		},
 		{
