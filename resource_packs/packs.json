@@ -2712,24 +2712,9 @@
 			]
 		},
 		{
-			"id": "extras/gui/dark_numbered_hotbar",
-			"combines": [
-				"gui/dark_ui",
-				"gui/numbered_hotbar"
-			]
-		},
-		{
 			"id": "extras/gui/dark_brewing_stand_icons_fix",
 			"combines": [
 				"gui/dark_ui",
-				"fixes_and_consistency/brewing_stand_icons_fix"
-			]
-		},
-		{
-			"id": "extras/gui/dark_numbered_hotbar_brewing_stand_icons_fix",
-			"combines": [
-				"gui/dark_ui",
-				"gui/numbered_hotbar",
 				"fixes_and_consistency/brewing_stand_icons_fix"
 			]
 		},
