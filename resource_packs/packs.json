@@ -2805,24 +2805,9 @@
 			]
 		},
 		{
-			"id": "extras/gui/dark_numbered_hotbar",
-			"combines": [
-				"gui/dark_ui",
-				"gui/numbered_hotbar"
-			]
-		},
-		{
 			"id": "extras/gui/dark_brewing_stand_icons_fix",
 			"combines": [
 				"gui/dark_ui",
-				"fixes_and_consistency/brewing_stand_icons_fix"
-			]
-		},
-		{
-			"id": "extras/gui/dark_numbered_hotbar_brewing_stand_icons_fix",
-			"combines": [
-				"gui/dark_ui",
-				"gui/numbered_hotbar",
 				"fixes_and_consistency/brewing_stand_icons_fix"
 			]
 		},
@@ -3542,6 +3527,10 @@
 			"filepath": "/sounds/sound_definitions.json"
 		},
 		{
+			"filename": "hud_screen.json",
+			"filepath": "/ui/hud_screen.json"
+		},
+		{
 			"filename": "trade_2_screen.json",
 			"filepath": "/ui/trade_2_screen.json"
 		},
@@ -3560,6 +3549,10 @@
 		{
 			"filename": "stonecutter_screen.json",
 			"filepath": "/ui/stonecutter_screen.json"
+		},
+		{
+			"filename": "ui_common.json",
+			"filepath": "/ui/ui_common.json"
 		},
 		{
 			"filename": "_ui_defs.json",
