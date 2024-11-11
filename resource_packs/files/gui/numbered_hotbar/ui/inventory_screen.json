@@ -1,0 +1,23 @@
+{
+	"namespace": "crafting",
+	"creative_hotbar_panel": {
+		"modifications": [
+			{
+				"array_name": "controls",
+				"operation": "insert_back",
+				"value": {
+					"numbered_hotbar@bt_numbered_hotbar.numbered_inventory_hotbar_panel": {
+						"offset": [
+							6,
+							-10
+						],
+						"size": [
+							"100%c + 12px",
+							"18 + 0px"
+						]
+					}
+				}
+			}
+		]
+	}
+}
