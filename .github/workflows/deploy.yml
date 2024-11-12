@@ -40,6 +40,11 @@ jobs:
     runs-on: ubuntu-latest
     needs: check-branch-build
     steps:
+      - name: Mark Git directory as safe
+        run: |
+          git config --global --add safe.directory /opt/bedrock_tweaks/files
+          git config --global --add safe.directory /opt/bedrock_tweaks/files_dev
+
       - name: Update files Production
         if: github.ref_name == 'main'
         uses: appleboy/ssh-action@master
