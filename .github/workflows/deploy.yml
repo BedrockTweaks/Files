@@ -28,22 +28,20 @@ jobs:
       - name: Get current branch and repo
         id: check_step
         run: |
-          raw=$(git branch -r --contains ${{ github.ref }})
-          branch=${raw##*/}
-          status=${{ job.status }}
-          echo "::set-output name=status::$status"
-          echo "::set-output name=branch::$branch"
+          branch=${{ github.ref_name}}
+          branch=${branch##*/}
+          echo "branch=${branch}" >> $GITHUB_ENV
+          status="${{ job.status }}"
+          echo "status=${status}" >> $GITHUB_ENV
           echo "Branch is $branch."
 
   deploy:
     name: Deploy
     runs-on: ubuntu-latest
-    outputs:
-      status: ${{ steps.job-status.outputs.status }}
-
+    needs: check-branch-build
     steps:
       - name: Update files Production
-        if: needs.check-branch-build.outputs.branch == 'main'
+        if: github.ref_name == 'main'
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.SERVER_ADDRESS }}
@@ -52,7 +50,7 @@ jobs:
           script: cd /opt/bedrock_tweaks/files && git reset --hard && git clean -fd && git pull ${{ secrets.REPOSITORY_URL }}
 
       - name: Update files Development
-        if: needs.check-branch-build.outputs.branch == 'devel'
+        if: github.ref_name == 'devel'
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.SERVER_ADDRESS }}
@@ -64,5 +62,4 @@ jobs:
         id: job-status
         if: ${{ always() }}
         run: |
-          status=${{ job.status }}
-          echo "::set-output name=status::$status"
+          echo "status=${{ job.status }}" >> $GITHUB_OUTPUT
