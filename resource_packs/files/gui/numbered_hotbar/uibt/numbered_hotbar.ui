@@ -1,0 +1,202 @@
+{
+	"namespace": "bt_numbered_hotbar",
+	"image": {
+		"type": "image",
+		"layer": 29
+	},
+	"numbered_hotbar_image@image": {
+		"size": [
+			20,
+			22
+		]
+	},
+	"numbered_inventory_hotbar_image@image": {
+		"size": [
+			18,
+			18
+		]
+	},
+	"numbered_pocket_inventory_hotbar_image@image": {
+		"size": [
+			28,
+			28
+		]
+	},
+	"numbered_hotbar_panel": {
+		"type": "stack_panel",
+		"orientation": "horizontal",
+		"offset": [
+			-91,
+			16
+		],
+		"size": [
+			"10%c - 20px",
+			22
+		],
+		"anchor_from": "bottom_center",
+		"anchor_to": "bottom_center",
+		"controls": [
+			{
+				"numbered_hotbar_1@numbered_hotbar_image": {
+					"texture": "textures/ui/numbered_hotbar/hotbar_1"
+				}
+			},
+			{
+				"numbered_hotbar_2@numbered_hotbar_image": {
+					"texture": "textures/ui/numbered_hotbar/hotbar_2"
+				}
+			},
+			{
+				"numbered_hotbar_3@numbered_hotbar_image": {
+					"texture": "textures/ui/numbered_hotbar/hotbar_3"
+				}
+			},
+			{
+				"numbered_hotbar_4@numbered_hotbar_image": {
+					"texture": "textures/ui/numbered_hotbar/hotbar_4"
+				}
+			},
+			{
+				"numbered_hotbar_5@numbered_hotbar_image": {
+					"texture": "textures/ui/numbered_hotbar/hotbar_5"
+				}
+			},
+			{
+				"numbered_hotbar_6@numbered_hotbar_image": {
+					"texture": "textures/ui/numbered_hotbar/hotbar_6"
+				}
+			},
+			{
+				"numbered_hotbar_7@numbered_hotbar_image": {
+					"texture": "textures/ui/numbered_hotbar/hotbar_7"
+				}
+			},
+			{
+				"numbered_hotbar_8@numbered_hotbar_image": {
+					"texture": "textures/ui/numbered_hotbar/hotbar_8"
+				}
+			},
+			{
+				"numbered_hotbar_9@numbered_hotbar_image": {
+					"texture": "textures/ui/numbered_hotbar/hotbar_9"
+				}
+			}
+		]
+	},
+	"numbered_inventory_hotbar_panel": {
+		"type": "stack_panel",
+		"orientation": "horizontal",
+		"offset": [
+			-37,
+			27
+		],
+		"size": [
+			"100%",
+			18
+		],
+		"anchor_from": "bottom_center",
+		"anchor_to": "bottom_center",
+		"controls": [
+			{
+				"numbered_hotbar_1@numbered_inventory_hotbar_image": {
+					"texture": "textures/ui/numbered_hotbar/inventory_hotbar_1"
+				}
+			},
+			{
+				"numbered_hotbar_2@numbered_inventory_hotbar_image": {
+					"texture": "textures/ui/numbered_hotbar/inventory_hotbar_2"
+				}
+			},
+			{
+				"numbered_hotbar_3@numbered_inventory_hotbar_image": {
+					"texture": "textures/ui/numbered_hotbar/inventory_hotbar_3"
+				}
+			},
+			{
+				"numbered_hotbar_4@numbered_inventory_hotbar_image": {
+					"texture": "textures/ui/numbered_hotbar/inventory_hotbar_4"
+				}
+			},
+			{
+				"numbered_hotbar_5@numbered_inventory_hotbar_image": {
+					"texture": "textures/ui/numbered_hotbar/inventory_hotbar_5"
+				}
+			},
+			{
+				"numbered_hotbar_6@numbered_inventory_hotbar_image": {
+					"texture": "textures/ui/numbered_hotbar/inventory_hotbar_6"
+				}
+			},
+			{
+				"numbered_hotbar_7@numbered_inventory_hotbar_image": {
+					"texture": "textures/ui/numbered_hotbar/inventory_hotbar_7"
+				}
+			},
+			{
+				"numbered_hotbar_8@numbered_inventory_hotbar_image": {
+					"texture": "textures/ui/numbered_hotbar/inventory_hotbar_8"
+				}
+			},
+			{
+				"numbered_hotbar_9@numbered_inventory_hotbar_image": {
+					"texture": "textures/ui/numbered_hotbar/inventory_hotbar_9"
+				}
+			}
+		]
+	},
+	"numbered_pocket_inventory_hotbar_panel": {
+		"type": "stack_panel",
+		"orientation": "horizontal",
+		"size": [
+			252,
+			28
+		],
+		"controls": [
+			{
+				"numbered_hotbar_1@numbered_pocket_inventory_hotbar_image": {
+					"texture": "textures/ui/numbered_hotbar/pocket_inventory_hotbar_1"
+				}
+			},
+			{
+				"numbered_hotbar_2@numbered_pocket_inventory_hotbar_image": {
+					"texture": "textures/ui/numbered_hotbar/pocket_inventory_hotbar_2"
+				}
+			},
+			{
+				"numbered_hotbar_3@numbered_pocket_inventory_hotbar_image": {
+					"texture": "textures/ui/numbered_hotbar/pocket_inventory_hotbar_3"
+				}
+			},
+			{
+				"numbered_hotbar_4@numbered_pocket_inventory_hotbar_image": {
+					"texture": "textures/ui/numbered_hotbar/pocket_inventory_hotbar_4"
+				}
+			},
+			{
+				"numbered_hotbar_5@numbered_pocket_inventory_hotbar_image": {
+					"texture": "textures/ui/numbered_hotbar/pocket_inventory_hotbar_5"
+				}
+			},
+			{
+				"numbered_hotbar_6@numbered_pocket_inventory_hotbar_image": {
+					"texture": "textures/ui/numbered_hotbar/pocket_inventory_hotbar_6"
+				}
+			},
+			{
+				"numbered_hotbar_7@numbered_pocket_inventory_hotbar_image": {
+					"texture": "textures/ui/numbered_hotbar/pocket_inventory_hotbar_7"
+				}
+			},
+			{
+				"numbered_hotbar_8@numbered_pocket_inventory_hotbar_image": {
+					"texture": "textures/ui/numbered_hotbar/pocket_inventory_hotbar_8"
+				}
+			},
+			{
+				"numbered_hotbar_9@numbered_pocket_inventory_hotbar_image": {
+					"texture": "textures/ui/numbered_hotbar/pocket_inventory_hotbar_9"
+				}
+			}
+		]
+	}
+}
