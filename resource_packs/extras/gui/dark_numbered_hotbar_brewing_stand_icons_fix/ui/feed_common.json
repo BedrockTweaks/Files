@@ -1,6 +1,0 @@
-{
-	"namespace": "feed_common",
-	"progress_loading_bars": {
-		"color": "$dark_button_secondary_default_text_color"
-	}
-}
