@@ -4,21 +4,29 @@
 	"padding": 8,
 	"num_mip_levels": 4,
 	"texture_data": {
-		"infested_blocks": {
-			"textures": [
-				"textures/blocks/infested/cobblestone",
-				"textures/blocks/infested/stone_bricks",
-				"textures/blocks/infested/mossy_stone_bricks",
-				"textures/blocks/infested/cracked_stone_bricks",
-				"textures/blocks/infested/chiseled_stone_bricks",
-				"textures/blocks/infested/stone"
-			]
+		"infested_chiseled_stone_bricks_carried": {
+			"textures": "textures/blocks/infested_chiseled_stone_bricks_carried"
 		},
-		"infested_deepslate": {
-			"textures": "textures/blocks/infested/deepslate"
+		"infested_cobblestone_carried": {
+			"textures": "textures/blocks/infested_cobblestone_carried"
 		},
-		"infested_deepslate_top": {
-			"textures": "textures/blocks/infested/deepslate_top"
+		"infested_cracked_stone_bricks_carried": {
+			"textures": "textures/blocks/infested_cracked_stone_bricks_carried"
+		},
+		"infested_deepslate_top_carried": {
+			"textures": "textures/blocks/infested_deepslate_top_carried"
+		},
+		"infested_deepslate_carried": {
+			"textures": "textures/blocks/infested_deepslate_carried"
+		},
+		"infested_mossy_stone_bricks_carried": {
+			"textures": "textures/blocks/infested_mossy_stone_bricks_carried"
+		},
+		"infested_stone_carried": {
+			"textures": "textures/blocks/infested_stone_carried"
+		},
+		"infested_stone_bricks_carried": {
+			"textures": "textures/blocks/infested_stone_bricks_carried"
 		}
 	}
 }

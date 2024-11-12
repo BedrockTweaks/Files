@@ -1,0 +1,86 @@
+{
+	"format_version": "1.20.20",
+	"sound_definitions": {
+		"mob.camel.sit": {
+			"category": "neutral",
+			"max_distance": null,
+			"min_distance": null,
+			"sounds": [
+				{
+					"name": "sounds/mob/camel/sit1",
+					"volume": 0.015
+				},
+				{
+					"name": "sounds/mob/camel/sit2",
+					"volume": 0.015
+				},
+				{
+					"name": "sounds/mob/camel/sit3",
+					"volume": 0.015
+				},
+				{
+					"name": "sounds/mob/camel/sit4",
+					"volume": 0.015
+				}
+			]
+		},
+		"mob.camel.stand": {
+			"category": "neutral",
+			"max_distance": null,
+			"min_distance": null,
+			"sounds": [
+				{
+					"name": "sounds/mob/camel/stand1",
+					"volume": 0.015
+				},
+				{
+					"name": "sounds/mob/camel/stand2",
+					"volume": 0.015
+				},
+				{
+					"name": "sounds/mob/camel/stand3",
+					"volume": 0.015
+				},
+				{
+					"name": "sounds/mob/camel/stand4",
+					"volume": 0.015
+				},
+				{
+					"name": "sounds/mob/camel/stand5",
+					"volume": 0.015
+				}
+			]
+		},
+		"mob.camel.dash": {
+			"category": "neutral",
+			"max_distance": null,
+			"min_distance": null,
+			"sounds": [
+				{
+					"name": "sounds/mob/camel/dash1",
+					"volume": 0.05
+				},
+				{
+					"name": "sounds/mob/camel/dash2",
+					"volume": 0.05
+				},
+				{
+					"name": "sounds/mob/camel/dash3",
+					"volume": 0.05
+				},
+				{
+					"name": "sounds/mob/camel/dash4",
+					"volume": 0.05
+				},
+				{
+					"name": "sounds/mob/camel/dash5",
+					"volume": 0.05
+				},
+				{
+					"name": "sounds/mob/camel/dash6",
+					"volume": 0.05
+				}
+			]
+		}
+	}
+}
