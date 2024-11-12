@@ -5,6 +5,12 @@ on:
     branches:
       - main
       - devel
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: 'Branch to deploy'
+        required: true
+        default: 'main'
 
 jobs:
   check-branch-build:
