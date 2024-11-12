@@ -209,7 +209,8 @@
 				{
 					"id": "darker_dark_oak_leaves",
 					"name": "Darker Dark Oak leaves",
-					"description": "Makes Dark Oak Leaves darker than Oak Leaves"
+					"description": "Makes Dark Oak Leaves darker than Oak Leaves",
+					"priority": 1
 				},
 				{
 					"id": "golden_savanna",
@@ -1106,11 +1107,6 @@
 					"id": "short_swords",
 					"name": "Short Swords",
 					"description": "Makes the length of all swords shorter for easier visibility"
-				},
-				{
-					"id": "invisible_item_frames",
-					"name": "Invisible Item Frames",
-					"description": "Makes normal and glowing item frames invisible (Careful, you might lose them :P)"
 				}
 			]
 		},
@@ -2567,7 +2563,7 @@
 				{
 					"id": "pixel_consistent_beacon_beam",
 					"name": "Pixel Consistent Beacon Beam",
-					"description": "Retextures Beacon and End Gateway beams's textures to be consistent with their sizes"
+					"description": "Retextures Beacon and End Gateway beam's textures to be consistent with their sizes"
 				},
 				{
 					"id": "pixel_consistent_sonic_boom",
