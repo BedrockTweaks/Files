@@ -3481,20 +3481,6 @@
 				"world_of_color/enchantment_glints/rainbow_enchantment_glint",
 				"unobtrusive/unobtrusive_enchantment_glint"
 			]
-		},
-		{
-			"id": "files/terrain/darker_dark_oak_leaves",
-			"combines": [
-				"retro/alpha_foliage",
-				"terrain/darker_dark_oak_leaves"
-			]
-		},
-		{
-			"id": "files/variation/variated_stone",
-			"combines": [
-				"variation/variated_stone",
-				"parity/dungeons_stone"
-			]
 		}
 	],
 	"deepMergeFiles": [
