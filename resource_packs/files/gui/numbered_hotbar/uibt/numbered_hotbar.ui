@@ -25,12 +25,8 @@
 	"numbered_hotbar_panel": {
 		"type": "stack_panel",
 		"orientation": "horizontal",
-		"offset": [
-			-91,
-			16
-		],
 		"size": [
-			"10%c - 20px",
+			"10%c - 19px",
 			22
 		],
 		"anchor_from": "bottom_center",
