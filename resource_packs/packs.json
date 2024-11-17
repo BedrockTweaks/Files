@@ -875,7 +875,8 @@
 				{
 					"id": "no_wither_spawn_sound",
 					"name": "No Wither Spawn Sound",
-					"description": "Mutes the global Wither spawn sound"
+					"description": "Mutes the global Wither spawn sound",
+					"priority": 1
 				}
 			]
 		},
