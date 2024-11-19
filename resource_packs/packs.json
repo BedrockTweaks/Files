@@ -1092,7 +1092,7 @@
 					"id": "no_spyglass_overlay",
 					"name": "No Spyglass Overlay",
 					"description": "Removes the Spyglass overlay completely when zooming in",
-					"priority": 1
+					"priority": 2
 				},
 				{
 					"id": "no_vignette",
@@ -2172,7 +2172,7 @@
 					"id": "what",
 					"name": "WHAT",
 					"description": "Replaces the Spyglass overlay with the 'WHAT' meme template, including Earthbound's 'Sanctuary Guardian' music",
-					"priority": 2
+					"priority": 1
 				},
 				{
 					"id": "useless_spyglass",
