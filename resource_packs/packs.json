@@ -203,6 +203,61 @@
 			]
 		},
 		{
+			"id": "aesthetic/more_zombies",
+			"name": "Aesthetic / More Zombies",
+			"message": {
+				"text": "Selecting <b>any</b> Zombie skins enables randomized variants between them",
+				"severity": "success"
+			},
+			"packs": [
+				{
+					"id": "steve_zombies",
+					"name": "Steve Zombies",
+					"description": "Retextures zombies to look like more like Steve"
+				},
+				{
+					"id": "alex_zombies",
+					"name": "Alex Zombies",
+					"description": "Retextures zombies to look like Alex than Steve"
+				},
+				{
+					"id": "ari_zombies",
+					"name": "Ari Zombies",
+					"description": "Retextures zombies to look like Ari than Steve"
+				},
+				{
+					"id": "efe_zombies",
+					"name": "Efe Zombies",
+					"description": "Retextures zombies to look like Efe than Steve"
+				},
+				{
+					"id": "kai_zombies",
+					"name": "Kai Zombies",
+					"description": "Retextures zombies to look like Kai than Steve"
+				},
+				{
+					"id": "makena_zombies",
+					"name": "Makena Zombies",
+					"description": "Retextures zombies to look like Makena than Steve"
+				},
+				{
+					"id": "noor_zombies",
+					"name": "Noor Zombies",
+					"description": "Retextures zombies to look like Noor than Steve"
+				},
+				{
+					"id": "sunny_zombies",
+					"name": "Sunny Zombies",
+					"description": "Retextures zombies to look like Sunny than Steve"
+				},
+				{
+					"id": "zuri_zombies",
+					"name": "Zuri Zombies",
+					"description": "Retextures zombies to look like Zuri than Steve"
+				}
+			]
+		},
+		{
 			"id": "terrain",
 			"name": "Terrain",
 			"packs": [
@@ -295,61 +350,6 @@
 					"id": "whiter_snow",
 					"name": "Whiter Snow",
 					"description": "Removes the blue tint from snow"
-				}
-			]
-		},
-		{
-			"id": "aesthetic/more_zombies",
-			"name": "Aesthetic/ More Zombies",
-			"message": {
-				"text": "Selecting <b>any</b> Zombie skins enables randomized variants between them",
-				"severity": "success"
-			},
-			"packs": [
-				{
-					"id": "steve_zombies",
-					"name": "Steve Zombies",
-					"description": "Retextures zombies to look like more like Steve"
-				},
-				{
-					"id": "alex_zombies",
-					"name": "Alex Zombies",
-					"description": "Retextures zombies to look like Alex than Steve"
-				},
-				{
-					"id": "ari_zombies",
-					"name": "Ari Zombies",
-					"description": "Retextures zombies to look like Ari than Steve"
-				},
-				{
-					"id": "efe_zombies",
-					"name": "Efe Zombies",
-					"description": "Retextures zombies to look like Efe than Steve"
-				},
-				{
-					"id": "kai_zombies",
-					"name": "Kai Zombies",
-					"description": "Retextures zombies to look like Kai than Steve"
-				},
-				{
-					"id": "makena_zombies",
-					"name": "Makena Zombies",
-					"description": "Retextures zombies to look like Makena than Steve"
-				},
-				{
-					"id": "noor_zombies",
-					"name": "Noor Zombies",
-					"description": "Retextures zombies to look like Noor than Steve"
-				},
-				{
-					"id": "sunny_zombies",
-					"name": "Sunny Zombies",
-					"description": "Retextures zombies to look like Sunny than Steve"
-				},
-				{
-					"id": "zuri_zombies",
-					"name": "Zuri Zombies",
-					"description": "Retextures zombies to look like Zuri than Steve"
 				}
 			]
 		},
