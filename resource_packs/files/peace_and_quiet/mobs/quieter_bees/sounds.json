@@ -19,20 +19,20 @@
 	},
 	"individual_event_sounds": {
 		"events": {
-			"block.beehive.drip" : {
-				"volume" : 0.015
+			"block.beehive.drip": {
+				"volume": 0.015
 			},
-			"block.beehive.enter" : {
-				"volume" : 0.0375
+			"block.beehive.enter": {
+				"volume": 0.0375
 			},
-			"block.beehive.exit" : {
-				"volume" : 0.0375
+			"block.beehive.exit": {
+				"volume": 0.0375
 			},
-			"block.beehive.shear" : {
-				"volume" : 0.04
+			"block.beehive.shear": {
+				"volume": 0.04
 			},
-			"block.beehive.work" : {
-				"volume" : 0.03
+			"block.beehive.work": {
+				"volume": 0.03
 			}
 		}
 	}
