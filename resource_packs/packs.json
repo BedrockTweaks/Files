@@ -288,8 +288,8 @@
 				},
 				{
 					"id": "circular_sun_and_moon",
-					"name": "Circular Sun & Moon",
-					"description": "Replaces the default square sun and moon, with a circular sun and moon"
+					"name": "Circular Sun and Moon",
+					"description": "Retextures the sun and moon to be circular"
 				},
 				{
 					"id": "circular_log_tops",
@@ -891,7 +891,7 @@
 				},
 				{
 					"id": "suspicious_sand_and_gravel_borders",
-					"name": "Suspicious Sand and Gravel Borders",
+					"name": "Suspicious Sand & Gravel Borders",
 					"description": "Places a border around Suspicious Sand and Suspicious Gravel for easier visibility"
 				},
 				{
