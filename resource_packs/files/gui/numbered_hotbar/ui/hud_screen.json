@@ -1,0 +1,14 @@
+{
+	"namespace": "hud",
+	"hotbar_panel": {
+		"modifications": [
+			{
+				"array_name": "controls",
+				"operation": "insert_front",
+				"value": {
+					"numbered_hotbar@bt_numbered_hotbar.numbered_hotbar_panel": {}
+				}
+			}
+		]
+	}
+}

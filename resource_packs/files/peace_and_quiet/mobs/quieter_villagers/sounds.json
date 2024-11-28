@@ -11,5 +11,39 @@
 				"volume": 0.05
 			}
 		}
+	},
+	"individual_event_sounds": {
+		"events": {
+			"block.blastfurnace.fire_crackle": {
+				"volume": 0.015
+			},
+			"block.smoker.smoke": {
+				"volume": 0.015
+			},
+			"ui.cartography_table.take_result": {
+				"volume": 0.04
+			},
+			"potion.brewed": {
+				"volume": 0.05
+			},
+			"block.composter.fill_success": {
+				"volume": 0.05
+			},
+			"block.barrel.open": {
+				"volume": 0.05
+			},
+			"block.fletching_table.use": {
+				"volume": 0.06
+			},
+			"ui.stonecutter.take_result": {
+				"volume": 0.05
+			},
+			"ui.loom.take_result": {
+				"volume": 0.0325
+			},
+			"block.grindstone.use": {
+				"volume": 0.05
+			}
+		}
 	}
 }

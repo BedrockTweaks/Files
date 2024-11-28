@@ -3,23 +3,13 @@
 	"version": [
 		1,
 		21,
-		0
+		40
 	],
 	"categories": [
 		{
 			"id": "aesthetic",
 			"name": "Aesthetic",
 			"packs": [
-				{
-					"id": "3d_sun_and_moon",
-					"name": "3D Sun & Moon",
-					"description": "Retextures the Sun and Moon textures to give the illusion of being 3D"
-				},
-				{
-					"id": "3d_mace",
-					"name": "3D Mace",
-					"description": "Remodels the Mace to appear in 3D"
-				},
 				{
 					"id": "alternate_block_destruction",
 					"name": "Alternate Block Destruction",
@@ -186,8 +176,8 @@
 					"description": "Retextures the Golden Helmet to look like a crown"
 				},
 				{
-					"id": "classic_netherite_armor",
-					"name": "Classic Netherite Armor",
+					"id": "classic_style_netherite_armor",
+					"name": "Classic Style Netherite Armor",
 					"description": "Netherite armor in the style of the other armors"
 				},
 				{
@@ -219,7 +209,8 @@
 				{
 					"id": "darker_dark_oak_leaves",
 					"name": "Darker Dark Oak leaves",
-					"description": "Makes Dark Oak Leaves darker than Oak Leaves"
+					"description": "Makes Dark Oak Leaves darker than Oak Leaves",
+					"priority": 1
 				},
 				{
 					"id": "golden_savanna",
@@ -228,7 +219,7 @@
 				},
 				{
 					"id": "lush_grass_all_round",
-					"name": "Lush Grass (Mostly) All 'Round",
+					"name": "Lush Grass (Mostly) All 'Round!",
 					"description": "Makes most of the world use a lush green colormap",
 					"message": {
 						"text": "This affects the majority of biomes, but Minecraft has moved away from their previous method of coloring biomes, meaning its not as easy to change the colormap for many of the modern biomes",
@@ -556,7 +547,7 @@
 				{
 					"id": "quieter_fire",
 					"name": "Quieter Fire",
-					"description": "Decrease Fire sounds by 95%"
+					"description": "Decreases Fire sounds by 95%"
 				},
 				{
 					"id": "quieter_nether_portals",
@@ -566,7 +557,7 @@
 				{
 					"id": "quieter_water",
 					"name": "Quieter Water",
-					"description": "Decreases Water and dripstone water drop sounds by 95%"
+					"description": "Decreases Water, swimming, water drops from Dripstones and underwater sound events by 95%"
 				},
 				{
 					"id": "quieter_consumables",
@@ -581,7 +572,7 @@
 				{
 					"id": "quieter_sculk_shriekers",
 					"name": "Quieter Sculk Shriekers",
-					"description": "Makes  Sculk Shrieker sounds by 95%"
+					"description": "Decreases Sculk Shrieker sounds by 95%"
 				},
 				{
 					"id": "quieter_pistons",
@@ -591,7 +582,7 @@
 				{
 					"id": "no_cave_sounds",
 					"name": "No Cave Sounds",
-					"description": "Removes the spooky cave sounds"
+					"description": "Mutes the spooky cave sounds"
 				}
 			]
 		},
@@ -622,7 +613,7 @@
 				{
 					"id": "quieter_bees",
 					"name": "Quieter Bees",
-					"description": "Decreases Bee sounds by 95%"
+					"description": "Decreases Bee, Beehive and Bee Nest sounds by 95%"
 				},
 				{
 					"id": "quieter_blazes",
@@ -661,7 +652,11 @@
 				{
 					"id": "quieter_creepers",
 					"name": "Quieter Creepers",
-					"description": "Decreases Creeper sounds by 95%"
+					"description": "Decreases Creeper sounds by 95%",
+					"message": {
+						"text": "Creeper's explosion sounds aren't affected. Install <b>Quieter Explosions</b> to quieten those sounds",
+						"severity": "warn"
+					}
 				},
 				{
 					"id": "quieter_dolphins",
@@ -841,7 +836,7 @@
 				{
 					"id": "quieter_villagers",
 					"name": "Quieter Villagers",
-					"description": "Decreases Villager and Wandering Trader sounds by 95%"
+					"description": "Decreases Villager, Wandering Trader and Workstation sounds by 95%"
 				},
 				{
 					"id": "quieter_wardens",
@@ -871,6 +866,17 @@
 					"id": "quieter_zombies",
 					"name": "Quieter Zombies",
 					"description": "Decreases Zombie, Zombie Villager, Husk and Drowned sounds by 95%"
+				},
+				{
+					"id": "no_ender_dragon_death_sound",
+					"name": "No Ender Dragon Death Sound",
+					"description": "Mutes the global Ender Dragon death sound"
+				},
+				{
+					"id": "no_wither_spawn_sound",
+					"name": "No Wither Spawn Sound",
+					"description": "Mutes the global Wither spawn sound",
+					"priority": 1
 				}
 			]
 		},
@@ -929,7 +935,7 @@
 				{
 					"id": "age_25_kelp",
 					"name": "Age 25 Kelp",
-					"description": "Adds flowers to the top of kelp plants when they are fully grown. [age=25]"
+					"description": "Adds flowers to the top of kelp plants when they are fully grown [age=25]"
 				},
 				{
 					"id": "mine_progress_bar",
@@ -937,19 +943,14 @@
 					"description": "Changes the breaking texture of blocks to a clean ring around the outside"
 				},
 				{
-					"id": "clear_banner_patterns",
-					"name": "Clear Banner Patterns",
-					"description": "Gives all the Banner Pattern items unique and appropriate textures"
-				},
-				{
 					"id": "hunger_preview",
 					"name": "Hunger Preview",
 					"description": "Displays Hunger Bar icons on all food names to show how much it will fill you up"
 				},
 				{
-					"id": "music_disc_redstone_level",
-					"name": "Music Disc Redstone Level",
-					"description": "Gives all Music Discs a redstone power level indicator in the tooltip"
+					"id": "music_disc_redstone_level_preview",
+					"name": "Music Disc Redstone Level Preview",
+					"description": "Displays the redstone power level for each music disc in the tooltip"
 				},
 				{
 					"id": "sticky_piston_sides",
@@ -969,7 +970,7 @@
 				{
 					"id": "clean_redstone_dust",
 					"name": "Clean Redstone Dust",
-					"description": "Changes the texture of Redstone Dust to a clean solid line. "
+					"description": "Changes the texture of Redstone Dust to a clean solid line"
 				},
 				{
 					"id": "unlit_redstone_ore",
@@ -994,7 +995,7 @@
 				{
 					"id": "arabic_numerals",
 					"name": "Arabic Numerals",
-					"description": "Translates the Roman Numerals for enchantments and potions to Arabic Numerals. (I, II, III -> 1, 2, 3)"
+					"description": "Translates the Roman Numerals for enchantments and potions to Arabic Numerals (I, II, III -> 1, 2, 3)"
 				}
 			]
 		},
@@ -1090,7 +1091,8 @@
 				{
 					"id": "no_spyglass_overlay",
 					"name": "No Spyglass Overlay",
-					"description": "Removes the Spyglass overlay completely when zooming in"
+					"description": "Removes the Spyglass overlay completely when zooming in",
+					"priority": 1
 				},
 				{
 					"id": "no_vignette",
@@ -1106,11 +1108,22 @@
 					"id": "short_swords",
 					"name": "Short Swords",
 					"description": "Makes the length of all swords shorter for easier visibility"
+				}
+			]
+		},
+		{
+			"id": "3d",
+			"name": "3D",
+			"packs": [
+				{
+					"id": "3d_sun_and_moon",
+					"name": "3D Sun & Moon",
+					"description": "Retextures the Sun and Moon textures to give the illusion of being 3D"
 				},
 				{
-					"id": "invisible_item_frames",
-					"name": "Invisible Item Frames",
-					"description": "Makes normal and glowing item frames invisible. (Careful, you might lose them :P)"
+					"id": "3d_mace",
+					"name": "3D Mace",
+					"description": "Remodels the Mace to appear in 3D"
 				}
 			]
 		},
@@ -1251,78 +1264,78 @@
 			"name": "GUI / Hearts",
 			"packs": [
 				{
-					"id": "white",
-					"name": "White",
+					"id": "white_hearts",
+					"name": "White Hearts",
 					"description": ""
 				},
 				{
-					"id": "light_gray",
-					"name": "Light Gray",
+					"id": "light_gray_hearts",
+					"name": "Light Gray Hearts",
 					"description": ""
 				},
 				{
-					"id": "gray",
-					"name": "Gray",
+					"id": "gray_hearts",
+					"name": "Gray Hearts",
 					"description": ""
 				},
 				{
-					"id": "black",
-					"name": "Black",
+					"id": "black_hearts",
+					"name": "Black Hearts",
 					"description": ""
 				},
 				{
-					"id": "brown",
-					"name": "Brown",
+					"id": "brown_hearts",
+					"name": "Brown Hearts",
 					"description": ""
 				},
 				{
-					"id": "orange",
-					"name": "Orange",
+					"id": "orange_hearts",
+					"name": "Orange Hearts",
 					"description": ""
 				},
 				{
-					"id": "yellow",
-					"name": "Yellow",
+					"id": "yellow_hearts",
+					"name": "Yellow Hearts",
 					"description": ""
 				},
 				{
-					"id": "lime",
-					"name": "Lime",
+					"id": "lime_hearts",
+					"name": "Lime Hearts",
 					"description": ""
 				},
 				{
-					"id": "green",
-					"name": "Green",
+					"id": "green_hearts",
+					"name": "Green Hearts",
 					"description": ""
 				},
 				{
-					"id": "cyan",
-					"name": "Cyan",
+					"id": "cyan_hearts",
+					"name": "Cyan Hearts",
 					"description": ""
 				},
 				{
-					"id": "light_blue",
-					"name": "Light Blue",
+					"id": "light_blue_hearts",
+					"name": "Light Blue Hearts",
 					"description": ""
 				},
 				{
-					"id": "blue",
-					"name": "Blue",
+					"id": "blue_hearts",
+					"name": "Blue Hearts",
 					"description": ""
 				},
 				{
-					"id": "purple",
-					"name": "Purple",
+					"id": "purple_hearts",
+					"name": "Purple Hearts",
 					"description": ""
 				},
 				{
-					"id": "magenta",
-					"name": "Magenta",
+					"id": "magenta_hearts",
+					"name": "Magenta Hearts",
 					"description": ""
 				},
 				{
-					"id": "pink",
-					"name": "Pink",
+					"id": "pink_hearts",
+					"name": "Pink Hearts",
 					"description": ""
 				}
 			]
@@ -1468,169 +1481,259 @@
 			"name": "GUI / Hunger Bars",
 			"packs": [
 				{
-					"id": "apple",
-					"name": "Apple",
+					"id": "apple_hunger_bar",
+					"name": "Apple Hunger Bar",
 					"description": ""
 				},
 				{
-					"id": "golden_apple",
-					"name": "Golden Apple",
+					"id": "golden_apple_hunger_bar",
+					"name": "Golden Apple Hunger Bar",
 					"description": ""
 				},
 				{
-					"id": "melon",
-					"name": "Melon",
+					"id": "melon_hunger_bar",
+					"name": "Melon Hunger Bar",
 					"description": ""
 				},
 				{
-					"id": "sweet_berries",
-					"name": "Sweet Berries",
+					"id": "sweet_berries_hunger_bar",
+					"name": "Sweet Berries Hunger Bar",
 					"description": ""
 				},
 				{
-					"id": "glow_berries",
-					"name": "Glow Berries",
+					"id": "glow_berries_hunger_bar",
+					"name": "Glow Berries Hunger Bar",
 					"description": ""
 				},
 				{
-					"id": "chorus_fruit",
-					"name": "Chorus Fruit",
+					"id": "chorus_fruit_hunger_bar",
+					"name": "Chorus Fruit Hunger Bar",
 					"description": ""
 				},
 				{
-					"id": "carrot",
-					"name": "Carrot",
+					"id": "carrot_hunger_bar",
+					"name": "Carrot Hunger Bar",
 					"description": ""
 				},
 				{
-					"id": "golden_carrot",
-					"name": "Golden Carrot",
+					"id": "golden_carrot_hunger_bar",
+					"name": "Golden Carrot Hunger Bar",
 					"description": ""
 				},
 				{
-					"id": "potato",
-					"name": "Potato",
+					"id": "potato_hunger_bar",
+					"name": "Potato Hunger Bar",
 					"description": ""
 				},
 				{
-					"id": "baked_potato",
-					"name": "Baked Potato",
+					"id": "baked_potato_hunger_bar",
+					"name": "Baked Potato Hunger Bar",
 					"description": ""
 				},
 				{
-					"id": "poisonous_potato",
-					"name": "Poisonous Potato",
+					"id": "poisonous_potato_hunger_bar",
+					"name": "Poisonous Potato Hunger Bar",
 					"description": ""
 				},
 				{
-					"id": "beetroot",
-					"name": "Beetroot",
+					"id": "beetroot_hunger_bar",
+					"name": "Beetroot Hunger Bar",
 					"description": ""
 				},
 				{
-					"id": "dried_kelp",
-					"name": "Dried Kelp",
+					"id": "dried_kelp_hunger_bar",
+					"name": "Dried Kelp Hunger Bar",
 					"description": ""
 				},
 				{
-					"id": "beef",
-					"name": "Beef",
+					"id": "beef_hunger_bar",
+					"name": "Beef Hunger Bar",
 					"description": ""
 				},
 				{
-					"id": "porkchop",
-					"name": "Porkchop",
+					"id": "porkchop_hunger_bar",
+					"name": "Porkchop Hunger Bar",
 					"description": ""
 				},
 				{
-					"id": "mutton",
-					"name": "Mutton",
+					"id": "mutton_hunger_bar",
+					"name": "Mutton Hunger Bar",
 					"description": ""
 				},
 				{
-					"id": "chicken",
-					"name": "Chicken",
+					"id": "chicken_hunger_bar",
+					"name": "Chicken Hunger Bar",
 					"description": ""
 				},
 				{
-					"id": "rabbit",
-					"name": "Rabbit",
+					"id": "rabbit_hunger_bar",
+					"name": "Rabbit Hunger Bar",
 					"description": ""
 				},
 				{
-					"id": "cod",
-					"name": "Cod",
+					"id": "cod_hunger_bar",
+					"name": "Cod Hunger Bar",
 					"description": ""
 				},
 				{
-					"id": "salmon",
-					"name": "Salmon",
+					"id": "salmon_hunger_bar",
+					"name": "Salmon Hunger Bar",
 					"description": ""
 				},
 				{
-					"id": "tropical_fish",
-					"name": "Tropical Fish",
+					"id": "tropical_fish_hunger_bar",
+					"name": "Tropical Fish Hunger Bar",
 					"description": ""
 				},
 				{
-					"id": "pufferfish",
-					"name": "Pufferfish",
+					"id": "pufferfish_hunger_bar",
+					"name": "Pufferfish Hunger Bar",
 					"description": ""
 				},
 				{
-					"id": "bread",
-					"name": "Bread",
+					"id": "bread_hunger_bar",
+					"name": "Bread Hunger Bar",
 					"description": ""
 				},
 				{
-					"id": "cookie",
-					"name": "Cookie",
+					"id": "cookie_hunger_bar",
+					"name": "Cookie Hunger Bar",
 					"description": ""
 				},
 				{
-					"id": "cake",
-					"name": "Cake",
+					"id": "cake_hunger_bar",
+					"name": "Cake Hunger Bar",
 					"description": ""
 				},
 				{
-					"id": "pumpkin_pie",
-					"name": "Pumpkin Pie",
+					"id": "pumpkin_pie_hunger_bar",
+					"name": "Pumpkin Pie Hunger Bar",
 					"description": ""
 				},
 				{
-					"id": "rotten_flesh",
-					"name": "Rotten Flesh",
+					"id": "rotten_flesh_hunger_bar",
+					"name": "Rotten Flesh Hunger Bar",
 					"description": ""
 				},
 				{
-					"id": "spider_eye",
-					"name": "Spider Eye",
+					"id": "spider_eye_hunger_bar",
+					"name": "Spider Eye Hunger Bar",
 					"description": ""
 				},
 				{
-					"id": "mushroom_stew",
-					"name": "Mushroom Stew",
+					"id": "mushroom_stew_hunger_bar",
+					"name": "Mushroom Stew Hunger Bar",
 					"description": ""
 				},
 				{
-					"id": "beetroot_soup",
-					"name": "Beetroot Soup",
+					"id": "beetroot_soup_hunger_bar",
+					"name": "Beetroot Soup Hunger Bar",
 					"description": ""
 				},
 				{
-					"id": "rabbit_stew",
-					"name": "Rabbit Stew",
+					"id": "rabbit_stew_hunger_bar",
+					"name": "Rabbit Stew Hunger Bar",
 					"description": ""
 				},
 				{
-					"id": "suspicious_stew",
-					"name": "Suspicious Stew",
+					"id": "suspicious_stew_hunger_bar",
+					"name": "Suspicious Stew Hunger Bar",
 					"description": ""
 				},
 				{
-					"id": "honey",
-					"name": "Honey",
+					"id": "honey_hunger_bar",
+					"name": "Honey Hunger Bar",
 					"description": ""
+				}
+			]
+		},
+		{
+			"id": "gui/hotbar_selector",
+			"name": "GUI / Hotbar Selector",
+			"packs": [
+				{
+					"id": "gray_hotbar_selector",
+					"name": "Gray Hotbar Selector",
+					"description": "",
+					"priority": 1
+				},
+				{
+					"id": "black_hotbar_selector",
+					"name": "Black Hotbar Selector",
+					"description": "",
+					"priority": 1
+				},
+				{
+					"id": "brown_hotbar_selector",
+					"name": "Brown Hotbar Selector",
+					"description": "",
+					"priority": 1
+				},
+				{
+					"id": "red_hotbar_selector",
+					"name": "Red Hotbar Selector",
+					"description": "",
+					"priority": 1
+				},
+				{
+					"id": "orange_hotbar_selector",
+					"name": "Orange Hotbar Selector",
+					"description": "",
+					"priority": 1
+				},
+				{
+					"id": "yellow_hotbar_selector",
+					"name": "Yellow Hotbar Selector",
+					"description": "",
+					"priority": 1
+				},
+				{
+					"id": "lime_hotbar_selector",
+					"name": "Lime Hotbar Selector",
+					"description": "",
+					"priority": 1
+				},
+				{
+					"id": "green_hotbar_selector",
+					"name": "Green Hotbar Selector",
+					"description": "",
+					"priority": 1
+				},
+				{
+					"id": "cyan_hotbar_selector",
+					"name": "Cyan Hotbar Selector",
+					"description": "",
+					"priority": 1
+				},
+				{
+					"id": "light_blue_hotbar_selector",
+					"name": "Light Blue Hotbar Selector",
+					"description": "",
+					"priority": 1
+				},
+				{
+					"id": "blue_hotbar_selector",
+					"name": "Blue Hotbar Selector",
+					"description": "",
+					"priority": 1
+				},
+				{
+					"id": "purple_hotbar_selector",
+					"name": "Purple Hotbar Selector",
+					"description": "",
+					"priority": 1
+				},
+				{
+					"id": "magenta_hotbar_selector",
+					"name": "Magenta Hotbar Selector",
+					"description": "",
+					"priority": 1
+				},
+				{
+					"id": "pink_hotbar_selector",
+					"name": "Pink Hotbar Selector",
+					"description": "",
+					"priority": 1
 				}
 			]
 		},
@@ -1641,110 +1744,106 @@
 				{
 					"id": "no_panorama_overlay",
 					"name": "No Panorama Overlay",
-					"description": "Removes the gradient overlay from the menu panorama",
-					"message": {
-						"text": "Even if the current vanilla panorama doesn't have an overlay, this pack can still remove it from <span style='text-decoration: line-through;'>Vanilla</span> Bedrock Tweaks panoramas that do have one",
-						"severity": "info"
-					}
+					"description": "Removes the translucent overlay gradient from the menu panorama if it has one"
 				},
 				{
-					"id": "classic",
-					"name": "Classic",
+					"id": "classic_panorama",
+					"name": "Classic Panorama",
 					"description": "Replaces the default Minecraft menu panorama with the classic one from before 1.13"
 				},
 				{
-					"id": "ocean",
-					"name": "Ocean",
-					"description": "Replaces the default Minecraft menu panorama with a 360° view of the ocean. (from 1.13)"
+					"id": "ocean_panorama",
+					"name": "Ocean Panorama",
+					"description": "Replaces the default Minecraft menu panorama with a 360° view of the ocean (from 1.13)"
 				},
 				{
-					"id": "village",
-					"name": "Village",
-					"description": "Replaces the default Minecraft menu panorama with a 360° view of a village. (from 1.14)"
+					"id": "village_panorama",
+					"name": "Village Panorama",
+					"description": "Replaces the default Minecraft menu panorama with a 360° view of a village (from 1.14)"
 				},
 				{
-					"id": "bees",
-					"name": "Bees",
+					"id": "bees_panorama",
+					"name": "Bees Panorama",
 					"description": "Replaces the default Minecraft menu panorama with a 360° view of a group of happy bees! (from 1.15)"
 				},
 				{
-					"id": "nether",
-					"name": "Nether",
+					"id": "nether_panorama",
+					"name": "Nether Panorama",
 					"description": "Replaces the default Minecraft menu panorama with a 360° view of the Nether! (from 1.16)"
 				},
 				{
-					"id": "amethyst_geode",
-					"name": "Amethyst Geode",
+					"id": "amethyst_geode_panorama",
+					"name": "Amethyst Geode Panorama",
 					"description": "Replaces the default Minecraft menu panorama with a 360° view of an amethyst geode! (from 1.17)"
 				},
 				{
-					"id": "sunset_valley",
-					"name": "Sunset Valley",
+					"id": "sunset_valley_panorama",
+					"name": "Sunset Valley Panorama",
 					"description": "Replaces the default Minecraft menu panorama with a 360° view of a valley under the setting sun! (from 1.18)"
 				},
 				{
-					"id": "mangrove_swamp",
-					"name": "Mangrove Swamp",
+					"id": "mangrove_swamp_panorama",
+					"name": "Mangrove Swamp Panorama",
 					"description": "Replaces the default Minecraft menu panorama with a 360° view of a mangrove swamp from 1.19"
 				},
 				{
-					"id": "cherry_grove",
-					"name": "Cherry Grove",
+					"id": "cherry_grove_panorama",
+					"name": "Cherry Grove Panorama",
 					"description": "Replaces the default Minecraft menu panorama with a 360° view of a Cherry Grove"
 				},
 				{
-					"id": "the_end",
-					"name": "The End",
+					"id": "the_end_panorama",
+					"name": "The End Panorama",
 					"description": "Replaces the default Minecraft menu panorama with a 360° view of the main End island"
 				},
 				{
-					"id": "pack.png",
-					"name": "pack.png",
+					"id": "pack_panorama",
+					"name": "Pack Panorama",
 					"description": "Replaces the default Minecraft menu panorama with a 360° view of the classic and iconic 'pack.png' location"
 				},
 				{
-					"id": "nostalgia",
-					"name": "Nostalgia",
+					"id": "nostalgia_panorama",
+					"name": "Nostalgia Panorama",
 					"description": "Replaces the default Minecraft menu panorama with a 360° view of a neon green plains biome from Alpha"
 				},
 				{
-					"id": "oceanside_extreme_hills",
-					"name": "Oceanside Extreme Hills",
+					"id": "oceanside_extreme_hills_panorama",
+					"name": "Oceanside Extreme Hills Panorama",
 					"description": "Replaces the default Minecraft menu panorama with a 360° view of an Oceanside Extreme Hills"
 				},
 				{
-					"id": "lakeside_sunset",
-					"name": "Lakeside Sunset",
+					"id": "lakeside_sunset_panorama",
+					"name": "Lakeside Sunset Panorama",
 					"description": "Replaces the default Minecraft menu panorama with a 360° view of a Lakeside Sunset"
 				},
 				{
-					"id": "underground_lava_pool",
-					"name": "Underground Lava Pool",
+					"id": "underground_lava_pool_panorama",
+					"name": "Underground Lava Pool Panorama",
 					"description": "Replaces the default Minecraft menu panorama with a 360° view of an underground lava pool"
 				},
 				{
-					"id": "acacia_village",
-					"name": "Acacia Village",
+					"id": "acacia_village_panorama",
+					"name": "Acacia Village Panorama",
 					"description": "Replaces the default Minecraft menu panorama with a 360° view of an Acacia Village"
 				},
 				{
-					"id": "halloween_2021",
-					"name": "Halloween 2021",
+					"id": "halloween_2021_panorama",
+					"name": "Halloween 2021 Panorama",
 					"description": "Replaces the default Minecraft menu panorama with a 360° view of a spooky Halloween town"
 				},
 				{
-					"id": "halloween_2022",
-					"name": "Halloween 2022",
+					"id": "halloween_2022_panorama",
+					"name": "Halloween 2022 Panorama",
 					"description": "Replaces the default Minecraft menu panorama with a 360° view of a spooky Halloween town"
 				},
 				{
-					"id": "tu69_tutorial_world_legacy_console",
-					"name": "TU69 Tutorial World (Legacy Console)",
+					"id": "tu69_tutorial_world_panorama_legacy_console",
+					"name": "TU69 Tutorial World Panorama (Legacy Console)",
 					"description": "Replaces the default Minecraft menu panorama with a 360° view of Minecraft: Console Edition TU69's tutorial world"
 				},
 				{
-					"id": "strideys_resource_pack_development_world",
-					"name": "Stridey's Resource Pack Development World",
+					"id": "strideys_resource_pack_dev_world_panorama",
+					"name": "Stridey's Resource Pack Dev World Panorama",
 					"description": "Replaces the default Minecraft menu panorama with a 360° view of Stridey's resource pack development world"
 				}
 			]
@@ -1847,7 +1946,7 @@
 				{
 					"id": "old_planks",
 					"name": "Old Planks",
-					"description": "Reverts all planks to their old textures, including Warped and Crimson + their sign counterparts"
+					"description": "Reverts all planks and signs to their old textures, including modern plank types"
 				},
 				{
 					"id": "old_gravel",
@@ -1973,7 +2072,7 @@
 				{
 					"id": "smiley_axolotls",
 					"name": "Smiley Axolotls",
-					"description": "Gives Axolotls a smiley face. :)"
+					"description": "Gives Axolotls a smiley face :)"
 				},
 				{
 					"id": "green_axolotl",
@@ -1988,12 +2087,17 @@
 				{
 					"id": "sus_sand_and_gravel",
 					"name": "Sus Sand and Gravel",
-					"description": "GET OUT OF MY HEAD GET OUT OF MY HEAD GET OUT OF MY HEAD"
+					"description": "GET OUT OF MY HEAD GET OUT OF MY HEAD GET OUT OF MY HEAD!"
 				},
 				{
 					"id": "soyjak_vault",
 					"name": "Soyjak Vault",
-					"description": "Yeah.."
+					"description": "Yeah..."
+				},
+				{
+					"id": "flat_fish",
+					"name": "Flat Fish",
+					"description": "Fish but its FLAT!"
 				},
 				{
 					"id": "xisuma_turtle",
@@ -2023,7 +2127,7 @@
 				{
 					"id": "stridey_striders",
 					"name": "Stridey Striders",
-					"description": "Awful pack that makes Striders look like Stridey. Sorry"
+					"description": "Awful pack that makes Striders look like Stridey, Sorry"
 				},
 				{
 					"id": "emeralds_to_rubies",
@@ -2052,7 +2156,7 @@
 				{
 					"id": "standard_galactic_alphabet",
 					"name": "Standard Galactic Alphabet",
-					"description": "Changes English alphabet characters to Standard Galactic alphabet characters (AKA the Enchanting Table language). ∴⍑॥  ↸╎↸ ॥ᒍ⚍ ᒣ∷ᖋリϟ|:ᖋᒣᒷ ᒣ⍑╎ϟ?"
+					"description": "Changes English alphabet characters to Standard Galactic alphabet characters. (AKA the Enchanting Table language) ∴⍑॥  ↸╎↸ ॥ᒍ⚍ ᒣ∷ᖋリϟ|:ᖋᒣᒷ ᒣ⍑╎ϟ?"
 				},
 				{
 					"id": "bacon_beam",
@@ -2062,12 +2166,13 @@
 				{
 					"id": "phantom_rain",
 					"name": "Phantom Rain",
-					"description": "Merges two of the most annoying features into one. :)"
+					"description": "Merges two of the most annoying features into one :)"
 				},
 				{
 					"id": "what",
 					"name": "WHAT",
-					"description": "Replaces the Spyglass overlay with the 'WHAT' meme template, including Earthbound's 'Sanctuary Guardian' music"
+					"description": "Replaces the Spyglass overlay with the 'WHAT' meme template, including Earthbound's 'Sanctuary Guardian' music",
+					"priority": 2
 				},
 				{
 					"id": "useless_spyglass",
@@ -2087,7 +2192,8 @@
 				{
 					"id": "honey_slime",
 					"name": "Honey Slime",
-					"description": "Replaces all things slimy with all things honey-y!"
+					"description": "Replaces all things slimy with all things honey-y!",
+					"priority": 1
 				}
 			]
 		},
@@ -2103,83 +2209,98 @@
 			]
 		},
 		{
-			"id": "world_of_color/colorful_slime",
-			"name": "World of Color / Colorful Slime",
+			"id": "world_of_color/slimes",
+			"name": "World of Color / Slimes",
 			"packs": [
 				{
 					"id": "white_slime",
 					"name": "White Slime",
-					"description": "Changes the color of all slime related items, blocks and entities to white"
+					"description": "Changes the color of all slime related items, blocks and entities to white",
+					"priority": 1
 				},
 				{
 					"id": "orange_slime",
 					"name": "Orange Slime",
-					"description": "Changes the color of all slime related items, blocks and entities to orange"
+					"description": "Changes the color of all slime related items, blocks and entities to orange",
+					"priority": 1
 				},
 				{
 					"id": "magenta_slime",
 					"name": "Magenta Slime",
-					"description": "Changes the color of all slime related items, blocks and entities to magenta"
+					"description": "Changes the color of all slime related items, blocks and entities to magenta",
+					"priority": 1
 				},
 				{
 					"id": "light_blue_slime",
 					"name": "Light Blue Slime",
-					"description": "Changes the color of all slime related items, blocks and entities to light blue"
+					"description": "Changes the color of all slime related items, blocks and entities to light blue",
+					"priority": 1
 				},
 				{
 					"id": "yellow_slime",
 					"name": "Yellow Slime",
-					"description": "Changes the color of all slime related items, blocks and entities to yellow"
+					"description": "Changes the color of all slime related items, blocks and entities to yellow",
+					"priority": 1
 				},
 				{
 					"id": "pink_slime",
 					"name": "Pink Slime",
-					"description": "Changes the color of all slime related items, blocks and entities to pink"
+					"description": "Changes the color of all slime related items, blocks and entities to pink",
+					"priority": 1
 				},
 				{
 					"id": "gray_slime",
 					"name": "Gray Slime",
-					"description": "Changes the color of all slime related items, blocks and entities to gray"
+					"description": "Changes the color of all slime related items, blocks and entities to gray",
+					"priority": 1
 				},
 				{
 					"id": "light_gray_slime",
 					"name": "Light Gray Slime",
-					"description": "Changes the color of all slime related items, blocks and entities to light gray"
+					"description": "Changes the color of all slime related items, blocks and entities to light gray",
+					"priority": 1
 				},
 				{
 					"id": "cyan_slime",
 					"name": "Cyan Slime",
-					"description": "Changes the color of all slime related items, blocks and entities to cyan"
+					"description": "Changes the color of all slime related items, blocks and entities to cyan",
+					"priority": 1
 				},
 				{
 					"id": "purple_slime",
 					"name": "Purple Slime",
-					"description": "Changes the color of all slime related items, blocks and entities to purple"
+					"description": "Changes the color of all slime related items, blocks and entities to purple",
+					"priority": 1
 				},
 				{
 					"id": "blue_slime",
 					"name": "Blue Slime",
-					"description": "Changes the color of all slime related items, blocks and entities to blue"
+					"description": "Changes the color of all slime related items, blocks and entities to blue",
+					"priority": 1
 				},
 				{
 					"id": "brown_slime",
 					"name": "Brown Slime",
-					"description": "Changes the color of all slime related items, blocks and entities to brown"
+					"description": "Changes the color of all slime related items, blocks and entities to brown",
+					"priority": 1
 				},
 				{
 					"id": "green_slime",
 					"name": "Green Slime",
-					"description": "Changes the color of all slime related items, blocks and entities to green"
+					"description": "Changes the color of all slime related items, blocks and entities to green",
+					"priority": 1
 				},
 				{
 					"id": "red_slime",
 					"name": "Red Slime",
-					"description": "Changes the color of all slime related items, blocks and entities to red"
+					"description": "Changes the color of all slime related items, blocks and entities to red",
+					"priority": 1
 				},
 				{
 					"id": "black_slime",
 					"name": "Black Slime",
-					"description": "Changes the color of all slime related items, blocks and entities to black"
+					"description": "Changes the color of all slime related items, blocks and entities to black",
+					"priority": 1
 				}
 			]
 		},
@@ -2188,78 +2309,109 @@
 			"name": "World of Color / Elytra",
 			"packs": [
 				{
-					"id": "white",
-					"name": "White",
+					"id": "white_elytra",
+					"name": "White Elytra",
 					"description": ""
 				},
 				{
-					"id": "gray",
-					"name": "Gray",
+					"id": "gray_elytra",
+					"name": "Gray Elytra",
 					"description": ""
 				},
 				{
-					"id": "black",
-					"name": "Black",
+					"id": "black_elytra",
+					"name": "Black Elytra",
 					"description": ""
 				},
 				{
-					"id": "brown",
-					"name": "Brown",
+					"id": "brown_elytra",
+					"name": "Brown Elytra",
 					"description": ""
 				},
 				{
-					"id": "red",
-					"name": "Red",
+					"id": "red_elytra",
+					"name": "Red Elytra",
 					"description": ""
 				},
 				{
-					"id": "orange",
-					"name": "Orange",
+					"id": "orange_elytra",
+					"name": "Orange Elytra",
 					"description": ""
 				},
 				{
-					"id": "yellow",
-					"name": "Yellow",
+					"id": "yellow_elytra",
+					"name": "Yellow Elytra",
 					"description": ""
 				},
 				{
-					"id": "lime",
-					"name": "Lime",
+					"id": "lime_elytra",
+					"name": "Lime Elytra",
 					"description": ""
 				},
 				{
-					"id": "green",
-					"name": "Green",
+					"id": "green_elytra",
+					"name": "Green Elytra",
 					"description": ""
 				},
 				{
-					"id": "cyan",
-					"name": "Cyan",
+					"id": "cyan_elytra",
+					"name": "Cyan Elytra",
 					"description": ""
 				},
 				{
-					"id": "light_blue",
-					"name": "Light Blue",
+					"id": "light_blue_elytra",
+					"name": "Light Blue Elytra",
 					"description": ""
 				},
 				{
-					"id": "blue",
-					"name": "Blue",
+					"id": "blue_elytra",
+					"name": "Blue Elytra",
 					"description": ""
 				},
 				{
-					"id": "purple",
-					"name": "Purple",
+					"id": "purple_elytra",
+					"name": "Purple Elytra",
 					"description": ""
 				},
 				{
-					"id": "magenta",
-					"name": "Magenta",
+					"id": "magenta_elytra",
+					"name": "Magenta Elytra",
 					"description": ""
 				},
 				{
-					"id": "pink",
-					"name": "Pink",
+					"id": "pink_elytra",
+					"name": "Pink Elytra",
+					"description": ""
+				}
+			]
+		},
+		{
+			"id": "world_of_color/enchantment_glints",
+			"name": "World of Color / Enchantment Glints",
+			"packs": [
+				{
+					"id": "red_enchantment_glint",
+					"name": "Red Enchantment Glint",
+					"description": ""
+				},
+				{
+					"id": "orange_enchantment_glint",
+					"name": "Orange Enchantment Glint",
+					"description": ""
+				},
+				{
+					"id": "yellow_enchantment_glint",
+					"name": "Yellow Enchantment Glint",
+					"description": ""
+				},
+				{
+					"id": "blue_enchantment_glint",
+					"name": "Blue Enchantment Glint",
+					"description": ""
+				},
+				{
+					"id": "rainbow_enchantment_glint",
+					"name": "Rainbow Enchantment Glint",
 					"description": ""
 				}
 			]
@@ -2268,11 +2420,6 @@
 			"id": "parity",
 			"name": "Parity",
 			"packs": [
-				{
-					"id": "java_menu_title",
-					"name": "Java Menu Title",
-					"description": "Gives the title on the main menu screen its look from Minecraft: Java Edition"
-				},
 				{
 					"id": "java_boom",
 					"name": "Java Boom",
@@ -2306,7 +2453,7 @@
 				{
 					"id": "dungeons_stone",
 					"name": "Dungeons Stone",
-					"description": "Gives Stone its texture from Minecraft: Dungeons. (with 12 texture variants)"
+					"description": "Gives Stone its texture from Minecraft: Dungeons (with 12 texture variants)"
 				},
 				{
 					"id": "dungeons_terracotta",
@@ -2417,7 +2564,7 @@
 				{
 					"id": "pixel_consistent_beacon_beam",
 					"name": "Pixel Consistent Beacon Beam",
-					"description": "Retextures Beacon and End Gateway beams's textures to be consistent with their sizes"
+					"description": "Retextures Beacon and End Gateway beam's textures to be consistent with their sizes"
 				},
 				{
 					"id": "pixel_consistent_sonic_boom",
@@ -2479,6 +2626,95 @@
 	],
 	"combinations": [
 		{
+			"id": "extras/bamboo/consistent_old_bamboo",
+			"combines": [
+				"aesthetic/consistent_bamboo_planks",
+				"retro/old_planks"
+			]
+		},
+		{
+			"id": "extras/bamboo/consistent_variated_bamboo",
+			"combines": [
+				"aesthetic/consistent_bamboo_planks",
+				"variation/variated_planks"
+			]
+		},
+		{
+			"id": "extras/bamboo/consistent_old_variated_bamboo",
+			"combines": [
+				"aesthetic/consistent_bamboo_planks",
+				"retro/old_planks",
+				"variation/variated_planks"
+			]
+		},
+		{
+			"id": "extras/bamboo/consistent_oarless_old_bamboo",
+			"combines": [
+				"aesthetic/consistent_bamboo_planks",
+				"retro/oarless_boats",
+				"retro/old_planks"
+			]
+		},
+		{
+			"id": "extras/bamboo/consistent_oarless_old_variated_bamboo",
+			"combines": [
+				"aesthetic/consistent_bamboo_planks",
+				"retro/oarless_boats",
+				"retro/old_planks",
+				"variation/variated_planks"
+			]
+		},
+		{
+			"id": "extras/aesthetic/circular_desaturated_dark_oak_log_tops",
+			"combines": [
+				"aesthetic/desaturated_dark_oak",
+				"terrain/circular_log_tops"
+			]
+		},
+		{
+			"id": "extras/aesthetic/accurate_translucent_spyglass_overlay",
+			"combines": [
+				"aesthetic/accurate_spyglass",
+				"unobtrusive/translucent_spyglass_overlay"
+			]
+		},
+		{
+			"id": "extras/aesthetic/accurate_useless_spyglass",
+			"combines": [
+				"aesthetic/accurate_spyglass",
+				"fun/useless_spyglass"
+			]
+		},
+		{
+			"id": "extras/aesthetic/smoother_polished_stones_to_bricks",
+			"combines": [
+				"aesthetic/polished_stones_to_bricks",
+				"terrain/smoother_stones"
+			]
+		},
+		{
+			"id": "extras/aesthetic/classic_consistent_netherite_helmet",
+			"combines": [
+				"aesthetic/classic_style_netherite_armor",
+				"fixes_and_consistency/consistent_helmets"
+			]
+		},
+		{
+			"id": "extras/aesthetic/classic_consistent_golden_crown",
+			"combines": [
+				"aesthetic/golden_crown",
+				"fixes_and_consistency/consistent_helmets"
+			]
+		},
+		{
+			"id": "extras/aesthetic/classic_consistent_netherite_golden_crown",
+			"combines": [
+				"aesthetic/classic_style_netherite_armor",
+				"aesthetic/golden_crown",
+				"fixes_and_consistency/consistent_helmets"
+			]
+		},
+		{
 			"id": "extras/dirt/pebbleless_dungeons_dirt",
 			"combines": [
 				"terrain/pebbleless_dirt",
@@ -2515,9 +2751,39 @@
 			]
 		},
 		{
+			"id": "extras/dirt/variated_pebbleless_dirt_and_coarse_dirt",
+			"combines": [
+				"variation/variated_dirt",
+				"terrain/pebbleless_dirt",
+				"terrain/pebbleless_coarse_dirt"
+			]
+		},
+		{
 			"id": "extras/dirt/golden_savanna_grass_sides",
 			"combines": [
 				"terrain/golden_savanna",
+				"terrain/lower_and_sides/grass_sides"
+			]
+		},
+		{
+			"id": "extras/dirt/golden_savanna_lush_grass",
+			"combines": [
+				"terrain/golden_savanna",
+				"terrain/lush_grass_all_round"
+			]
+		},
+		{
+			"id": "extras/dirt/lush_grass_sides",
+			"combines": [
+				"terrain/lush_grass_all_round",
+				"terrain/lower_and_sides/grass_sides"
+			]
+		},
+		{
+			"id": "extras/dirt/golden_savanna_lush_grass_sides",
+			"combines": [
+				"terrain/golden_savanna",
+				"terrain/lush_grass_all_round",
 				"terrain/lower_and_sides/grass_sides"
 			]
 		},
@@ -2536,10 +2802,78 @@
 			]
 		},
 		{
-			"id": "extras/gui/dark_numbered_hotbar",
+			"id": "extras/gui/dark_brewing_stand_icons_fix",
 			"combines": [
 				"gui/dark_ui",
-				"gui/numbered_hotbar"
+				"fixes_and_consistency/brewing_stand_icons_fix"
+			]
+		},
+		{
+			"id": "extras/terrain/old_clearer_water",
+			"combines": [
+				"terrain/clearer_water",
+				"retro/old_water"
+			]
+		},
+		{
+			"id": "extras/terrain/brighter_black_nether_bricks",
+			"combines": [
+				"terrain/brighter_nether",
+				"aesthetic/black_nether_bricks"
+			]
+		},
+		{
+			"id": "extras/terrain/brighter_lower_crimson_nylium",
+			"combines": [
+				"terrain/brighter_nether",
+				"terrain/lower_and_sides/lower_crimson_nylium"
+			]
+		},
+		{
+			"id": "extras/terrain/brighter_lower_warped_nylium",
+			"combines": [
+				"terrain/brighter_nether",
+				"terrain/lower_and_sides/lower_warped_nylium"
+			]
+		},
+		{
+			"id": "extras/terrain/brighter_lower_crimson_warped_nylium",
+			"combines": [
+				"terrain/brighter_nether",
+				"terrain/lower_and_sides/lower_crimson_nylium",
+				"terrain/lower_and_sides/lower_warped_nylium"
+			]
+		},
+		{
+			"id": "extras/terrain/brighter_black_nether_bricks_lower_crimson_nylium",
+			"combines": [
+				"terrain/brighter_nether",
+				"terrain/lower_and_sides/lower_crimson_nylium",
+				"aesthetic/black_nether_bricks"
+			]
+		},
+		{
+			"id": "extras/terrain/brighter_black_nether_bricks_lower_warped_nylium",
+			"combines": [
+				"terrain/brighter_nether",
+				"terrain/lower_and_sides/lower_warped_nylium",
+				"aesthetic/black_nether_bricks"
+			]
+		},
+		{
+			"id": "extras/terrain/brighter_black_nether_bricks_lower_crimson_warped_nylium",
+			"combines": [
+				"terrain/brighter_nether",
+				"terrain/lower_and_sides/lower_crimson_nylium",
+				"terrain/lower_and_sides/lower_warped_nylium",
+				"aesthetic/black_nether_bricks"
+			]
+		},
+		{
+			"id": "extras/ores/uniform_ore_borders",
+			"combines": [
+				"terrain/uniform_ores",
+				"utility/ore_borders"
 			]
 		},
 		{
@@ -2550,15 +2884,116 @@
 			]
 		},
 		{
-			"id": "extras/ores/pre_1_17_ore_borders",
+			"id": "extras/ores/classic_ores_borders",
 			"combines": [
 				"utility/ore_borders",
-				"retro/pre_1_17_ores"
+				"retro/classic_ores"
+			]
+		},
+		{
+			"id": "extras/ores/classic_unlit_redstone_ores",
+			"combines": [
+				"utility/unlit_redstone_ore",
+				"retro/classic_ores"
+			]
+		},
+		{
+			"id": "extras/ores/brighter_nether_ore_borders",
+			"combines": [
+				"terrain/brighter_nether",
+				"utility/ore_borders"
+			]
+		},
+		{
+			"id": "extras/ores/uniform_brighter_nether_ores",
+			"combines": [
+				"terrain/brighter_nether",
+				"terrain/uniform_ores"
+			]
+		},
+		{
+			"id": "extras/ores/uniform_brighter_nether_ore_borders",
+			"combines": [
+				"terrain/brighter_nether",
+				"terrain/uniform_ores",
+				"utility/ore_borders"
+			]
+		},
+		{
+			"id": "extras/ores/brighter_black_nether_bricks_ore_borders",
+			"combines": [
+				"aesthetic/black_nether_bricks",
+				"terrain/brighter_nether",
+				"utility/ore_borders"
+			]
+		},
+		{
+			"id": "extras/ores/uniform_brighter_black_nether_bricks_ores",
+			"combines": [
+				"aesthetic/black_nether_bricks",
+				"terrain/brighter_nether",
+				"terrain/uniform_ores"
+			]
+		},
+		{
+			"id": "extras/ores/uniform_brighter_black_nether_bricks_ore_borders",
+			"combines": [
+				"aesthetic/black_nether_bricks",
+				"terrain/brighter_nether",
+				"terrain/uniform_ores",
+				"utility/ore_borders"
 			]
 		},
 		{
 			"id": "extras/ores/rubies_ore_borders",
 			"combines": [
+				"utility/ore_borders",
+				"fun/emeralds_to_rubies"
+			]
+		},
+		{
+			"id": "extras/ores/uniform_rubies_ores",
+			"combines": [
+				"terrain/uniform_ores",
+				"fun/emeralds_to_rubies"
+			]
+		},
+		{
+			"id": "extras/ores/rubies_variated_villagers_ores",
+			"combines": [
+				"variation/variated_villagers",
+				"fun/emeralds_to_rubies"
+			]
+		},
+		{
+			"id": "extras/ores/uniform_rubies_variated_villagers_ores",
+			"combines": [
+				"variation/variated_villagers",
+				"terrain/uniform_ores",
+				"fun/emeralds_to_rubies"
+			]
+		},
+		{
+			"id": "extras/ores/rubies_variated_villagers_ore_borders",
+			"combines": [
+				"variation/variated_villagers",
+				"utility/ore_borders",
+				"fun/emeralds_to_rubies"
+			]
+		},
+		{
+			"id": "extras/ores/uniform_rubies_ore_borders",
+			"combines": [
+				"terrain/uniform_ores",
+				"utility/ore_borders",
+				"fun/emeralds_to_rubies"
+			]
+		},
+		{
+			"id": "extras/ores/uniform_rubies_variated_villagers_ore_borders",
+			"combines": [
+				"variation/variated_villagers",
+				"terrain/uniform_ores",
 				"utility/ore_borders",
 				"fun/emeralds_to_rubies"
 			]
@@ -2571,24 +3006,10 @@
 			]
 		},
 		{
-			"id": "extras/ores/uniform_rubies_ores",
-			"combines": [
-				"terrain/uniform_ores",
-				"fun/emeralds_to_rubies"
-			]
-		},
-		{
 			"id": "extras/ores/uniform_old_netherrack_ores",
 			"combines": [
 				"terrain/uniform_ores",
 				"retro/old_netherrack"
-			]
-		},
-		{
-			"id": "extras/ores/uniform_ore_borders",
-			"combines": [
-				"terrain/uniform_ores",
-				"utility/ore_borders"
 			]
 		},
 		{
@@ -2597,21 +3018,6 @@
 				"terrain/uniform_ores",
 				"utility/ore_borders",
 				"retro/old_netherrack"
-			]
-		},
-		{
-			"id": "extras/ores/uniform_rubies_ore_borders",
-			"combines": [
-				"terrain/uniform_ores",
-				"utility/ore_borders",
-				"fun/emeralds_to_rubies"
-			]
-		},
-		{
-			"id": "extras/utility/music_disc_level_hunger_preview",
-			"combines": [
-				"utility/hunger_preview",
-				"utility/music_disc_redstone_level"
 			]
 		},
 		{
@@ -2629,6 +3035,20 @@
 			]
 		},
 		{
+			"id": "extras/utility/updated_directional_observers_texture",
+			"combines": [
+				"fixes_and_consistency/updated_observer_texture",
+				"utility/directional_observers"
+			]
+		},
+		{
+			"id": "extras/utility/suspicious_sand_and_old_gravel_borders",
+			"combines": [
+				"utility/suspicious_sand_and_gravel_borders",
+				"retro/old_gravel"
+			]
+		},
+		{
 			"id": "extras/unobtrusive/unobtrusive_rain_and_snow",
 			"combines": [
 				"unobtrusive/unobtrusive_rain",
@@ -2636,32 +3056,10 @@
 			]
 		},
 		{
-			"id": "extras/variated_stone/variated_stone_and_unpolished_stones",
+			"id": "extras/unobtrusive/accurate_unobtrusive_scaffolding",
 			"combines": [
-				"variated/variated_stone",
-				"variated/variated_unpolished_stones"
-			]
-		},
-		{
-			"id": "extras/variated_stone/dungeons_stone_and_unpolished_stones",
-			"combines": [
-				"variated/variated_unpolished_stones",
-				"parity/dungeons_stone"
-			]
-		},
-		{
-			"id": "files/variation/variated_stone",
-			"combines": [
-				"variated/variated_stone",
-				"parity/dungeons_stone"
-			]
-		},
-		{
-			"id": "extras/variated_stone/dungeons_stone_and_unpolished_stones",
-			"combines": [
-				"variated/variated_stone",
-				"variated/variated_unpolished_stones",
-				"parity/dungeons_stone"
+				"aesthetic/accurate_scaffolding",
+				"unobtrusive/unobtrusive_scaffolding"
 			]
 		},
 		{
@@ -2679,24 +3077,410 @@
 			]
 		},
 		{
-			"id": "extras/utility/updated_directional_observers_texture",
+			"id": "extras/pixel_consistent/pixel_consistent_warped_signs",
 			"combines": [
-				"fixes_and_consistency/updated_observer_texture",
-				"utility/directional_observers"
+				"fixes_and_consistency/pixel_consistent_signs",
+				"aesthetic/smoother_warped_planks"
 			]
 		},
 		{
-			"id": "files/terrain/darker_dark_oak_leaves",
+			"id": "extras/hunger_preview/apple_hunger_preview",
 			"combines": [
-				"retro/alpha_foliage",
-				"terrain/darker_dark_oak_leaves"
+				"utility/hunger_preview",
+				"gui/hunger_bars/apple_hunger_bar"
 			]
 		},
 		{
-			"id": "extras/unobtrusive/accurate_unobtrusive_scaffolding",
+			"id": "extras/hunger_preview/baked_potato_hunger_preview",
 			"combines": [
-				"aesthetic/accurate_scaffolding",
-				"unobtrusive/unobtrusive_scaffolding"
+				"utility/hunger_preview",
+				"gui/hunger_bars/baked_potato_hunger_bar"
+			]
+		},
+		{
+			"id": "extras/hunger_preview/beef_hunger_preview",
+			"combines": [
+				"utility/hunger_preview",
+				"gui/hunger_bars/beef_hunger_bar"
+			]
+		},
+		{
+			"id": "extras/hunger_preview/beetroot_hunger_preview",
+			"combines": [
+				"utility/hunger_preview",
+				"gui/hunger_bars/beetroot_hunger_bar"
+			]
+		},
+		{
+			"id": "extras/hunger_preview/beetroot_soup_hunger_preview",
+			"combines": [
+				"utility/hunger_preview",
+				"gui/hunger_bars/beetroot_soup_hunger_bar"
+			]
+		},
+		{
+			"id": "extras/hunger_preview/bread_hunger_preview",
+			"combines": [
+				"utility/hunger_preview",
+				"gui/hunger_bars/bread_hunger_bar"
+			]
+		},
+		{
+			"id": "extras/hunger_preview/cake_hunger_preview",
+			"combines": [
+				"utility/hunger_preview",
+				"gui/hunger_bars/cake_hunger_bar"
+			]
+		},
+		{
+			"id": "extras/hunger_preview/carrot_hunger_preview",
+			"combines": [
+				"utility/hunger_preview",
+				"gui/hunger_bars/carrot_hunger_bar"
+			]
+		},
+		{
+			"id": "extras/hunger_preview/chicken_hunger_preview",
+			"combines": [
+				"utility/hunger_preview",
+				"gui/hunger_bars/chicken_hunger_bar"
+			]
+		},
+		{
+			"id": "extras/hunger_preview/chorus_fruit_hunger_preview",
+			"combines": [
+				"utility/hunger_preview",
+				"gui/hunger_bars/chorus_fruit_hunger_bar"
+			]
+		},
+		{
+			"id": "extras/hunger_preview/cod_hunger_preview",
+			"combines": [
+				"utility/hunger_preview",
+				"gui/hunger_bars/cod_hunger_bar"
+			]
+		},
+		{
+			"id": "extras/hunger_preview/cookie_hunger_preview",
+			"combines": [
+				"utility/hunger_preview",
+				"gui/hunger_bars/cookie_hunger_bar"
+			]
+		},
+		{
+			"id": "extras/hunger_preview/glow_berries_hunger_preview",
+			"combines": [
+				"utility/hunger_preview",
+				"gui/hunger_bars/glow_berries_hunger_bar"
+			]
+		},
+		{
+			"id": "extras/hunger_preview/golden_apple_hunger_preview",
+			"combines": [
+				"utility/hunger_preview",
+				"gui/hunger_bars/golden_apple_hunger_bar"
+			]
+		},
+		{
+			"id": "extras/hunger_preview/golden_carrot_hunger_preview",
+			"combines": [
+				"utility/hunger_preview",
+				"gui/hunger_bars/golden_carrot_hunger_bar"
+			]
+		},
+		{
+			"id": "extras/hunger_preview/honey_hunger_preview",
+			"combines": [
+				"utility/hunger_preview",
+				"gui/hunger_bars/honey_hunger_bar"
+			]
+		},
+		{
+			"id": "extras/hunger_preview/melon_hunger_preview",
+			"combines": [
+				"utility/hunger_preview",
+				"gui/hunger_bars/melon_hunger_bar"
+			]
+		},
+		{
+			"id": "extras/hunger_preview/mushroom_stew_hunger_preview",
+			"combines": [
+				"utility/hunger_preview",
+				"gui/hunger_bars/mushroom_stew_hunger_bar"
+			]
+		},
+		{
+			"id": "extras/hunger_preview/mutton_hunger_preview",
+			"combines": [
+				"utility/hunger_preview",
+				"gui/hunger_bars/mutton_hunger_bar"
+			]
+		},
+		{
+			"id": "extras/hunger_preview/poisonous_potato_hunger_preview",
+			"combines": [
+				"utility/hunger_preview",
+				"gui/hunger_bars/poisonous_potato_hunger_bar"
+			]
+		},
+		{
+			"id": "extras/hunger_preview/porkchop_hunger_preview",
+			"combines": [
+				"utility/hunger_preview",
+				"gui/hunger_bars/porkchop_hunger_bar"
+			]
+		},
+		{
+			"id": "extras/hunger_preview/potato_hunger_preview",
+			"combines": [
+				"utility/hunger_preview",
+				"gui/hunger_bars/potato_hunger_bar"
+			]
+		},
+		{
+			"id": "extras/hunger_preview/pufferfish_hunger_preview",
+			"combines": [
+				"utility/hunger_preview",
+				"gui/hunger_bars/pufferfish_hunger_bar"
+			]
+		},
+		{
+			"id": "extras/hunger_preview/pumpkin_pie_hunger_preview",
+			"combines": [
+				"utility/hunger_preview",
+				"gui/hunger_bars/pumpkin_pie_hunger_bar"
+			]
+		},
+		{
+			"id": "extras/hunger_preview/rabbit_hunger_preview",
+			"combines": [
+				"utility/hunger_preview",
+				"gui/hunger_bars/rabbit_hunger_bar"
+			]
+		},
+		{
+			"id": "extras/hunger_preview/rabbit_stew_hunger_preview",
+			"combines": [
+				"utility/hunger_preview",
+				"gui/hunger_bars/rabbit_stew_hunger_bar"
+			]
+		},
+		{
+			"id": "extras/hunger_preview/salmon_hunger_preview",
+			"combines": [
+				"utility/hunger_preview",
+				"gui/hunger_bars/salmon_hunger_bar"
+			]
+		},
+		{
+			"id": "extras/hunger_preview/spider_eye_hunger_preview",
+			"combines": [
+				"utility/hunger_preview",
+				"gui/hunger_bars/spider_eye_hunger_bar"
+			]
+		},
+		{
+			"id": "extras/hunger_preview/suspicious_stew_hunger_preview",
+			"combines": [
+				"utility/hunger_preview",
+				"gui/hunger_bars/suspicious_stew_hunger_bar"
+			]
+		},
+		{
+			"id": "extras/hunger_preview/sweet_berries_hunger_preview",
+			"combines": [
+				"utility/hunger_preview",
+				"gui/hunger_bars/sweet_berries_hunger_bar"
+			]
+		},
+		{
+			"id": "extras/hunger_preview/tropical_fish_hunger_preview",
+			"combines": [
+				"utility/hunger_preview",
+				"gui/hunger_bars/tropical_fish_hunger_bar"
+			]
+		},
+		{
+			"id": "extras/planks/old_variated_planks",
+			"combines": [
+				"retro/old_planks",
+				"variation/variated_planks"
+			]
+		},
+		{
+			"id": "extras/planks/oarless_old_planks",
+			"combines": [
+				"retro/oarless_boats",
+				"retro/old_planks"
+			]
+		},
+		{
+			"id": "extras/planks/oarless_old_variated_planks",
+			"combines": [
+				"retro/oarless_boats",
+				"retro/old_planks",
+				"variation/variated_planks"
+			]
+		},
+		{
+			"id": "extras/fun/smiley_green_axolotl",
+			"combines": [
+				"fun/smiley_axolotls",
+				"fun/green_axolotl"
+			]
+		},
+		{
+			"id": "extras/fun/honey_solid_slime",
+			"combines": [
+				"fun/honey_slime",
+				"aesthetic/solid_slime"
+			]
+		},
+		{
+			"id": "extras/fun/sus_sand_and_old_gravel",
+			"combines": [
+				"fun/sus_sand_and_gravel",
+				"retro/old_gravel"
+			]
+		},
+		{
+			"id": "extras/colored_solid_slime/black_solid_slime",
+			"combines": [
+				"world_of_color/slimes/black_slime",
+				"aesthetic/solid_slime"
+			]
+		},
+		{
+			"id": "extras/colored_solid_slime/blue_solid_slime",
+			"combines": [
+				"world_of_color/slimes/blue_slime",
+				"aesthetic/solid_slime"
+			]
+		},
+		{
+			"id": "extras/colored_solid_slime/brown_solid_slime",
+			"combines": [
+				"world_of_color/slimes/brown_slime",
+				"aesthetic/solid_slime"
+			]
+		},
+		{
+			"id": "extras/colored_solid_slime/cyan_solid_slime",
+			"combines": [
+				"world_of_color/slimes/cyan_slime",
+				"aesthetic/solid_slime"
+			]
+		},
+		{
+			"id": "extras/colored_solid_slime/gray_solid_slime",
+			"combines": [
+				"world_of_color/slimes/gray_slime",
+				"aesthetic/solid_slime"
+			]
+		},
+		{
+			"id": "extras/colored_solid_slime/green_solid_slime",
+			"combines": [
+				"world_of_color/slimes/green_slime",
+				"aesthetic/solid_slime"
+			]
+		},
+		{
+			"id": "extras/colored_solid_slime/light_blue_solid_slime",
+			"combines": [
+				"world_of_color/slimes/light_blue_slime",
+				"aesthetic/solid_slime"
+			]
+		},
+		{
+			"id": "extras/colored_solid_slime/light_gray_solid_slime",
+			"combines": [
+				"world_of_color/slimes/light_gray_slime",
+				"aesthetic/solid_slime"
+			]
+		},
+		{
+			"id": "extras/colored_solid_slime/magenta_solid_slime",
+			"combines": [
+				"world_of_color/slimes/magenta_slime",
+				"aesthetic/solid_slime"
+			]
+		},
+		{
+			"id": "extras/colored_solid_slime/orange_solid_slime",
+			"combines": [
+				"world_of_color/slimes/orange_slime",
+				"aesthetic/solid_slime"
+			]
+		},
+		{
+			"id": "extras/colored_solid_slime/pink_solid_slime",
+			"combines": [
+				"world_of_color/slimes/pink_slime",
+				"aesthetic/solid_slime"
+			]
+		},
+		{
+			"id": "extras/colored_solid_slime/purple_solid_slime",
+			"combines": [
+				"world_of_color/slimes/purple_slime",
+				"aesthetic/solid_slime"
+			]
+		},
+		{
+			"id": "extras/colored_solid_slime/red_solid_slime",
+			"combines": [
+				"world_of_color/slimes/red_slime",
+				"aesthetic/solid_slime"
+			]
+		},
+		{
+			"id": "extras/colored_solid_slime/white_solid_slime",
+			"combines": [
+				"world_of_color/slimes/white_slime",
+				"aesthetic/solid_slime"
+			]
+		},
+		{
+			"id": "extras/colored_solid_slime/yellow_solid_slime",
+			"combines": [
+				"world_of_color/slimes/yellow_slime",
+				"aesthetic/solid_slime"
+			]
+		},
+		{
+			"id": "extras/enchantment_glint/red_unobtrusive_enchantment_glint",
+			"combines": [
+				"world_of_color/enchantment_glints/red_enchantment_glint",
+				"unobtrusive/unobtrusive_enchantment_glint"
+			]
+		},
+		{
+			"id": "extras/enchantment_glint/orange_unobtrusive_enchantment_glint",
+			"combines": [
+				"world_of_color/enchantment_glints/orange_enchantment_glint",
+				"unobtrusive/unobtrusive_enchantment_glint"
+			]
+		},
+		{
+			"id": "extras/enchantment_glint/yellow_unobtrusive_enchantment_glint",
+			"combines": [
+				"world_of_color/enchantment_glints/yellow_enchantment_glint",
+				"unobtrusive/unobtrusive_enchantment_glint"
+			]
+		},
+		{
+			"id": "extras/enchantment_glint/blue_unobtrusive_enchantment_glint",
+			"combines": [
+				"world_of_color/enchantment_glints/blue_enchantment_glint",
+				"unobtrusive/unobtrusive_enchantment_glint"
+			]
+		},
+		{
+			"id": "extras/enchantment_glint/rainbow_unobtrusive_enchantment_glint",
+			"combines": [
+				"world_of_color/enchantment_glints/rainbow_enchantment_glint",
+				"unobtrusive/unobtrusive_enchantment_glint"
 			]
 		}
 	],
@@ -2722,6 +3506,14 @@
 			"filepath": "/sounds.json"
 		},
 		{
+			"filename": "sound_definitions.json",
+			"filepath": "/sounds/sound_definitions.json"
+		},
+		{
+			"filename": "hud_screen.json",
+			"filepath": "/ui/hud_screen.json"
+		},
+		{
 			"filename": "trade_2_screen.json",
 			"filepath": "/ui/trade_2_screen.json"
 		},
@@ -2740,6 +3532,10 @@
 		{
 			"filename": "stonecutter_screen.json",
 			"filepath": "/ui/stonecutter_screen.json"
+		},
+		{
+			"filename": "ui_common.json",
+			"filepath": "/ui/ui_common.json"
 		},
 		{
 			"filename": "_ui_defs.json",
