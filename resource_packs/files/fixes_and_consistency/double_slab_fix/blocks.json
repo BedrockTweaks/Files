@@ -1,9 +1,37 @@
 {
-	"format_version": [
-		1,
-		1,
-		0
-	],
+	"format_version": "1.21.40",
+	"polished_andesite_double_slab": {
+		"sound": "stone",
+		"textures": {
+			"down": "polished_andesite_slab",
+			"side": "polished_andesite_double_slab",
+			"up": "polished_andesite_slab"
+		}
+	},
+	"polished_diorite_double_slab": {
+		"sound": "stone",
+		"textures": {
+			"down": "polished_diorite_slab",
+			"side": "polished_diorite_double_slab",
+			"up": "polished_diorite_slab"
+		}
+	},
+	"polished_granite_double_slab": {
+		"sound": "stone",
+		"textures": {
+			"down": "polished_granite_slab",
+			"side": "polished_granite_double_slab",
+			"up": "polished_granite_slab"
+		}
+	},
+	"prismarine_brick_double_slab": {
+		"sound": "stone",
+		"textures": {
+			"down": "prismarine_brick_slab",
+			"side": "prismarine_brick_double_slab",
+			"up": "prismarine_brick_slab"
+		}
+	},
 	"polished_blackstone_double_slab": {
 		"sound": "stone",
 		"textures": {
