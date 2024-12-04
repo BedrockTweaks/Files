@@ -1792,6 +1792,11 @@
 					"description": "Replaces the default Minecraft menu panorama with a 360° view of a Cherry Grove"
 				},
 				{
+				  "id": "trial_chamber_panorama",
+				  "name": "Trial Chamber Panorama",
+				  "description": "Replaces the default Minecraft menu panorama with a 360° view of a Trial Chamber"
+				},
+				{
 					"id": "the_end_panorama",
 					"name": "The End Panorama",
 					"description": "Replaces the default Minecraft menu panorama with a 360° view of the main End island"
