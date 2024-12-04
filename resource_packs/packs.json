@@ -451,7 +451,7 @@
 				{
 					"id": "variated_moss",
 					"name": "Variated Moss",
-					"description": "Randomly rotates Moss Blocks and Moss Carpets to break ugly grid patterns"
+					"description": "Randomly rotates Moss Blocks and Moss Carpets (and Pale Moss Blocks and Carpets in 1.21.50+) to break up the ugly grid patterns"
 				},
 				{
 					"id": "variated_bricks",
