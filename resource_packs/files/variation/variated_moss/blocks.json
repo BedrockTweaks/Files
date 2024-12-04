@@ -9,5 +9,16 @@
 		"isotropic": true,
 		"sound": "moss_carpet",
 		"textures": "moss_block"
+	},
+	"pale_moss_block": {
+		"isotropic": true,
+		"sound": "moss_carpet",
+		"textures": "pale_moss_block"
+	},
+	"pale_moss_carpet": {
+		"isotropic": true,
+		"carried_textures": "pale_moss_carpet_side",
+		"sound": "moss_carpet",
+		"textures": "pale_moss_block"
 	}
 }
