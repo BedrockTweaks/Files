@@ -1,5 +1,5 @@
 {
-	"format_version": "1.21.0",
+	"format_version": "1.21.50",
 	"minecraft:recipe_shaped": {
 		"description": {
 			"identifier": "bt:bb.slabs.end_bricks"
@@ -14,13 +14,13 @@
 		],
 		"key": {
 			"#": {
-				"item": "minecraft:stone_block_slab3",
+				"item": "minecraft:end_stone_brick_slab",
 				"data": 0
 			}
 		},
 		"unlock": [
 			{
-				"item": "minecraft:stone_block_slab3",
+				"item": "minecraft:end_stone_brick_slab",
 				"data": 0
 			}
 		],

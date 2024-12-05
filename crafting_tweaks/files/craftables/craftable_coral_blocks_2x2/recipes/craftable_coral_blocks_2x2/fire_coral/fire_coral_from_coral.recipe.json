@@ -1,5 +1,5 @@
 {
-	"format_version": "1.21.0",
+	"format_version": "1.21.50",
 	"minecraft:recipe_shaped": {
 		"description": {
 			"identifier": "bt:cc2.fire_coral_block_from_coral"

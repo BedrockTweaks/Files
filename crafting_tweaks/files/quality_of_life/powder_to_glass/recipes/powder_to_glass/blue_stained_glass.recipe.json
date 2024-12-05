@@ -1,5 +1,5 @@
 {
-	"format_version": "1.21.0",
+	"format_version": "1.21.50",
 	"minecraft:recipe_furnace": {
 		"description": {
 			"identifier": "bt:pg.blue_stained_glass"
@@ -7,12 +7,7 @@
 		"tags": [
 			"furnace"
 		],
-		"group": "powder_to_glass",
-		"input": {
-			"item": "minecraft:blue_concrete_powder"
-		},
-		"output": {
-			"item": "minecraft:blue_stained_glass"
-		}
+		"input":"minecraft:blue_concrete_powder",
+		"output": "minecraft:blue_stained_glass"
 	}
 }

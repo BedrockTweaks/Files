@@ -1,8 +1,8 @@
 {
-	"format_version": "1.21.0",
+	"format_version": "1.21.50",
 	"minecraft:recipe_shaped": {
 		"description": {
-			"identifier": "bt:mt.trapdoor"
+			"identifier": "bt:mt.oak_trapdoor"
 		},
 		"tags": [
 			"crafting_table"

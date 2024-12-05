@@ -1,8 +1,8 @@
 {
-	"format_version": "1.21.0",
+	"format_version": "1.21.50",
 	"minecraft:recipe_shaped": {
 		"description": {
-			"identifier": "bt:mb.stripped_warped_hyphae"
+			"identifier": "bt:mb.warped_hyphae_stripped"
 		},
 		"tags": [
 			"crafting_table"
