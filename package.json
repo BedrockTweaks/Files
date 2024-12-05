@@ -1,0 +1,11 @@
+{
+	"devDependencies": {
+		"husky": "^9.1.7",
+		"lint-staged": "^15.2.10"
+	},
+	"lint-staged": {
+		"*/**/package.json": [
+			"npx eslint --fix"
+		]
+	}
+}
