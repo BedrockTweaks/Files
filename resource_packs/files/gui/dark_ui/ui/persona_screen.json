@@ -12,7 +12,7 @@
 	"achievement_text_button": {
 		"$default_text_color": "$light_button_default_text_color"
 	},
-	"emotes_right_side_bottom_buttons/play_again": {
+	"emote_play_again_button": {
 		"$default_text_color": "$light_button_default_text_color"
 	},
 	"purchase_button_panel/$purchase_button_control": {
