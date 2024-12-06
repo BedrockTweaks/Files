@@ -5,6 +5,11 @@
 			"identifier": "hell"
 		},
 		"components": {
+			"minecraft:ambient_sounds": {
+				"mood": "ambient.nether_wastes.mood",
+				"addition": "ambient.nether_wastes.additions",
+				"loop": "ambient.nether_wastes.loop"
+			},
 			"minecraft:fog_appearance": {
 				"fog_identifier": "minecraft:fog_hell"
 			},

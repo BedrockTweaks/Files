@@ -24,6 +24,9 @@
 					"imitate.cave_spider": {
 						"volume": 0.03
 					},
+					"imitate.creaking": {
+						"volume": 0.05
+					},
 					"imitate.creeper": {
 						"volume": 0.03
 					},
