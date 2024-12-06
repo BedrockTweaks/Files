@@ -5,6 +5,11 @@
 			"identifier": "basalt_deltas"
 		},
 		"components": {
+			"minecraft:ambient_sounds": {
+				"mood": "ambient.basalt_deltas.mood",
+				"addition": "ambient.basalt_deltas.additions",
+				"loop": "ambient.basalt_deltas.loop"
+			},
 			"minecraft:fog_appearance": {
 				"fog_identifier": "bt:fog_basalt_deltas"
 			},

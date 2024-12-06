@@ -70,6 +70,10 @@
 					"path": "textures/blocks/grass_side",
 					"overlay_color": "#507a32"
 				},
+				{
+					"path": "textures/blocks/grass_side",
+					"overlay_color": "#778272"
+				},
 				"textures/blocks/grass_side_snowed"
 			]
 		}
