@@ -2436,6 +2436,12 @@
 					"description": "Gives the Ender Dragon's projectile its texture from Minecraft: Java Edition"
 				},
 				{
+					"id": "java_inventory_slot_highlight",
+					"name": "Java Inventory Slot Highlight",
+					"description": "Gives the inventory slot highlight its texture from Minecraft: Java Edition",
+					"priority": 1
+				},
+				{
 					"id": "dungeons_creepers",
 					"name": "Dungeons Creepers",
 					"description": "Gives the Creeper its texture from Minecraft: Dungeons"
