@@ -650,6 +650,11 @@
 					"description": "Decreases Cow and Mooshroom sounds by 95%"
 				},
 				{
+					"id": "quieter_creakings",
+					"name": "Quieter Creakings",
+					"description": "Decreases Creaking sounds by 95%"
+				},
+				{
 					"id": "quieter_creepers",
 					"name": "Quieter Creepers",
 					"description": "Decreases Creeper sounds by 95%",
