@@ -2,7 +2,7 @@
 	"format_version": "1.21.50",
 	"minecraft:recipe_shaped": {
 		"description": {
-			"identifier": "bt:mb.oak_wood"
+			"identifier": "bt:mb.pale_oak_wood"
 		},
 		"tags": [
 			"crafting_table"

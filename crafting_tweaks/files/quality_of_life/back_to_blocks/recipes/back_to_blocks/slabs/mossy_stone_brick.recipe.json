@@ -2,7 +2,7 @@
 	"format_version": "1.21.50",
 	"minecraft:recipe_shaped": {
 		"description": {
-			"identifier": "bt:bb.slabs.mossy_stone_brick"
+			"identifier": "bt:bb.slabs.mossy_stone_bricks"
 		},
 		"tags": [
 			"crafting_table"
@@ -23,7 +23,7 @@
 			}
 		],
 		"result": {
-			"item": "minecraft:mossy_stone_brick",
+			"item": "minecraft:mossy_stone_bricks",
 			"count": 1
 		}
 	}
