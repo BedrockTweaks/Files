@@ -1,0 +1,41 @@
+{
+	"format_version": "1.20.20",
+	"sound_definitions": {
+		"mob.creaking.sway": {
+			"__use_legacy_max_distance": "true",
+			"category": "hostile",
+			"max_distance": null,
+			"min_distance": null,
+			"sounds": [
+				{
+					"name": "sounds/mob/creaking/sway1",
+					"volume": 0.05
+				},
+				{
+					"name": "sounds/mob/creaking/sway2",
+					"volume": 0.05
+				},
+				{
+					"name": "sounds/mob/creaking/sway3",
+					"volume": 0.05
+				},
+				{
+					"name": "sounds/mob/creaking/sway4",
+					"volume": 0.05
+				}
+			]
+		},
+		"mob.creaking.twitch": {
+			"__use_legacy_max_distance": "true",
+			"category": "hostile",
+			"max_distance": 16.0,
+			"min_distance": null,
+			"sounds": [
+				{
+					"name": "sounds/mob/creaking/twitch",
+					"volume": 0.05
+				}
+			]
+		}
+	}
+}
