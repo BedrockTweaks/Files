@@ -1784,12 +1784,17 @@
 				{
 					"id": "mangrove_swamp_panorama",
 					"name": "Mangrove Swamp Panorama",
-					"description": "Replaces the default Minecraft menu panorama with a 360° view of a mangrove swamp from 1.19"
+					"description": "Replaces the default Minecraft menu panorama with a 360° view of a mangrove swamp (from 1.19)"
 				},
 				{
 					"id": "cherry_grove_panorama",
 					"name": "Cherry Grove Panorama",
-					"description": "Replaces the default Minecraft menu panorama with a 360° view of a Cherry Grove"
+					"description": "Replaces the default Minecraft menu panorama with a 360° view of a Cherry Grove (from 1.20)"
+				},
+				{
+					"id": "trial_chamber_panorama",
+					"name": "Trial Chamber Panorama",
+					"description": "Replaces the default Minecraft menu panorama with a 360° view of a Trial Chamber (from 1.21)"
 				},
 				{
 					"id": "the_end_panorama",
