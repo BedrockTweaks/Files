@@ -1,0 +1,28 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:fog_settings": {
+		"description": {
+			"identifier": "bt:fog_pale_garden"
+		},
+		"distance": {
+			"air": {
+				"fog_start": 0.92,
+				"fog_end": 1.0,
+				"fog_color": "#817770",
+				"render_distance_type": "render"
+			},
+			"weather": {
+				"fog_start": 0.23,
+				"fog_end": 0.7,
+				"fog_color": "#403C44",
+				"render_distance_type": "render"
+			},
+			"water": {
+				"fog_start": 32.0,
+				"fog_end": 64.0,
+				"fog_color": "#556980",
+				"render_distance_type": "fixed"
+			}
+		}
+	}
+}
