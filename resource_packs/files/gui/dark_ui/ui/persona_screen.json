@@ -1,0 +1,21 @@
+{
+	"namespace": "persona",
+	"equip_piece_text": {
+		"color": "$light_button_default_text_color"
+	},
+	"select_custom_skin": {
+		"$default_text_color": "$light_button_default_text_color"
+	},
+	"see_skin_pack_in_store": {
+		"$default_text_color": "$light_button_default_text_color"
+	},
+	"achievement_text_button": {
+		"$default_text_color": "$light_button_default_text_color"
+	},
+	"emote_play_again_button": {
+		"$default_text_color": "$light_button_default_text_color"
+	},
+	"purchase_button_panel/$purchase_button_control": {
+		"$default_text_color": "$light_button_default_text_color"
+	}
+}
