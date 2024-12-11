@@ -220,6 +220,30 @@
 				]
 			}
 		},
+		"pale_oak_planks": {
+			"textures": {
+				"variations": [
+					{
+						"path": "textures/blocks/pale_oak_planks"
+					},
+					{
+						"path": "textures/blocks/pale_oak_planks/1"
+					},
+					{
+						"path": "textures/blocks/pale_oak_planks/2"
+					},
+					{
+						"path": "textures/blocks/pale_oak_planks/3"
+					},
+					{
+						"path": "textures/blocks/pale_oak_planks/4"
+					},
+					{
+						"path": "textures/blocks/pale_oak_planks/5"
+					}
+				]
+			}
+		},
 		"spruce_planks": {
 			"textures": {
 				"variations": [

@@ -5,5 +5,12 @@
 				"volume": 0
 			}
 		}
+	},
+	"individual_named_sounds": {
+		"sounds": {
+			"ambient.cave": {
+				"volume": 0
+			}
+		}
 	}
 }
