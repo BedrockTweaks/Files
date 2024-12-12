@@ -5,5 +5,12 @@
 				"volume": 50.0
 			}
 		}
+	},
+	"individual_event_sounds": {
+		"events": {
+			"item.trident.thunder": {
+				"volume": 0.25
+			}
+		}
 	}
 }
