@@ -14,8 +14,14 @@
 						0.055
 					]
 				}
-			},
-			"volume": 0.05
+			}
+		}
+	},
+	"individual_event_sounds": {
+		"events": {
+			"burp": {
+				"volume": 0.025
+			}
 		}
 	}
 }
