@@ -2,7 +2,7 @@
 	"format_version": "1.21.50",
 	"minecraft:recipe_shaped": {
 		"description": {
-			"identifier": "bt:mb.pale_oak_wood_stripped"
+			"identifier": "bt:mb.stripped_pale_oak_wood"
 		},
 		"tags": [
 			"crafting_table"
@@ -15,16 +15,16 @@
 		],
 		"key": {
 			"#": {
-				"item": "minecraft:pale_stripped_oak_log"
+				"item": "minecraft:stripped_pale_oak_log"
 			}
 		},
 		"unlock": [
 			{
-				"item": "minecraft:pale_stripped_oak_log"
+				"item": "minecraft:stripped_pale_oak_log"
 			}
 		],
 		"result": {
-			"item": "minecraft:pale_stripped_oak_wood",
+			"item": "minecraft:stripped_pale_oak_wood",
 			"count": 4
 		}
 	}
