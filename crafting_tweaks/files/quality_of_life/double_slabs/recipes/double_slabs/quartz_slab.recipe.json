@@ -1,5 +1,5 @@
 {
-	"format_version": "1.21.0",
+	"format_version": "1.21.50",
 	"minecraft:recipe_shapeless": {
 		"description": {
 			"identifier": "bt:ds.quartz_slab"
@@ -10,14 +10,12 @@
 		"priority": -1,
 		"ingredients": [
 			{
-				"item": "minecraft:quartz_block",
-				"data": 0
+				"item": "minecraft:quartz_block"
 			}
 		],
 		"unlock": [
 			{
-				"item": "minecraft:quartz_block",
-				"data": 0
+				"item": "minecraft:quartz_block"
 			}
 		],
 		"result": {

@@ -1,5 +1,5 @@
 {
-	"format_version": "1.21.0",
+	"format_version": "1.21.50",
 	"minecraft:recipe_shaped": {
 		"description": {
 			"identifier": "bt:bb.stairs.smooth_quartz"
@@ -24,8 +24,7 @@
 			}
 		],
 		"result": {
-			"item": "minecraft:quartz_block",
-			"data": 3,
+			"item": "minecraft:smooth_quartz",
 			"count": 3
 		}
 	}
