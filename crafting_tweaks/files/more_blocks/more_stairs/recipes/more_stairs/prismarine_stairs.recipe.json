@@ -15,12 +15,14 @@
 		],
 		"key": {
 			"#": {
-				"item": "minecraft:prismarine"
+				"item": "minecraft:prismarine",
+				"data": 0
 			}
 		},
 		"unlock": [
 			{
-				"item": "minecraft:prismarine"
+				"item": "minecraft:prismarine",
+				"data": 0
 			}
 		],
 		"result": {
