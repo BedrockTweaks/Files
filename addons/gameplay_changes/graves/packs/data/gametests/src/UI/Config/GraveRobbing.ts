@@ -12,8 +12,8 @@ export const openGraveRobbingInterface = (player: Player): void => {
 		.body({
 			rawtext: [
 				{ translate: 'bt.graves.settings.grave_robbing.description', with: ['\n', ' '] },
-				{ translate: `bt.graves.settings.${gravesSettings.graveRobbing ? 'enabled' : 'disabled'}` }
-			]
+				{ translate: `bt.graves.settings.${gravesSettings.graveRobbing ? 'enabled' : 'disabled'}` },
+			],
 		})
 		.button({ translate: `bt.graves.settings.${!gravesSettings.graveRobbing ? 'enable' : 'disable'}` });
 

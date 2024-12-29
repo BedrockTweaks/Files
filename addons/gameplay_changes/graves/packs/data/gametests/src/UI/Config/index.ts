@@ -21,27 +21,27 @@ export const openConfigInterface = (entity: Entity | undefined): void => {
 			.button({
 				rawtext: [
 					{ translate: `bt.graves.settings.${gravesSettings.graveRobbing ? 'enabled_color' : 'disabled_color'}`, with: [' '] },
-					{ translate: 'bt.graves.settings.grave_robbing' }
-				]
+					{ translate: 'bt.graves.settings.grave_robbing' },
+				],
 			})
 			.button({
 				rawtext: [
 					{ translate: `bt.graves.settings.${gravesSettings.xpCollection ? 'enabled_color' : 'disabled_color'}`, with: [' '] },
-					{ translate: 'bt.graves.settings.xp_collection' }
-				]
+					{ translate: 'bt.graves.settings.xp_collection' },
+				],
 			})
 			.button({
 				rawtext: [
 					{ translate: `bt.graves.settings.${gravesSettings.graveLocating ? 'enabled_color' : 'disabled_color'}`, with: [' '] },
-					{ translate: 'bt.graves.settings.grave_locating' }
-				]
+					{ translate: 'bt.graves.settings.grave_locating' },
+				],
 			})
 			.button({
 				rawtext: [
 					{ translate: 'bt.graves.settings.edit_color', with: [' '] },
 					{ translate: 'bt.graves.settings.despawn_time' },
-					{ translate: 'bt.graves.settings.despawn_time.current', with: ['\n', gravesSettings.despawnTime + ''] }
-				]
+					{ translate: 'bt.graves.settings.despawn_time.current', with: ['\n', gravesSettings.despawnTime + ''] },
+				],
 			})
 			.button({ translate: 'bt.graves.settings.list_all_graves' })
 			.button({ translate: 'bt.graves.settings.receive_grave_key' });

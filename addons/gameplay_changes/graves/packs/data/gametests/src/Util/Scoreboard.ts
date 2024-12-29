@@ -34,7 +34,7 @@ export function setObjective(objectiveName: string, scoreboardObject: object): v
 
 	Object.entries(scoreboardObject).forEach(([key, value]: [string, number]): void => {
 		const player: ScoreboardIdentity | undefined = participants?.find(
-			(participant: ScoreboardIdentity): boolean => participant.displayName === key
+			(participant: ScoreboardIdentity): boolean => participant.displayName === key,
 		);
 		player && scoreboardObjective?.setScore(player, value);
 	});

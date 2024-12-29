@@ -12,8 +12,8 @@ export const openXPCollectionInterface = (player: Player): void => {
 		.body({
 			rawtext: [
 				{ translate: 'bt.graves.settings.xp_collection.description', with: ['\n', ' '] },
-				{ translate: `bt.graves.settings.${gravesSettings.xpCollection ? 'enabled' : 'disabled'}` }
-			]
+				{ translate: `bt.graves.settings.${gravesSettings.xpCollection ? 'enabled' : 'disabled'}` },
+			],
 		})
 		.button({ translate: `bt.graves.settings.${!gravesSettings.xpCollection ? 'enable' : 'disable'}` });
 
