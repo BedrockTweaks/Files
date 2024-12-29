@@ -33,7 +33,7 @@ jobs:
           password: ${{ secrets.SERVER_PASSWORD }}
           port: 22
           script: |
-            cd "/opt/bedrock_tweaks/files_dev"  || exit
+            cd "/opt/bedrock_tweaks/files_dev" || exit
             git fetch --all
             git reset --hard origin/${{ github.event.inputs.branch || github.ref_name }}
             git pull origin ${{ github.event.inputs.branch || github.ref_name }} --force
@@ -48,7 +48,7 @@ jobs:
           password: ${{ secrets.SERVER_PASSWORD }}
           port: 22
           script: |
-            cd "/opt/bedrock_tweaks/files"  || exit
+            cd "/opt/bedrock_tweaks/files" || exit
             git fetch --all
             git reset --hard origin/${{ github.event.inputs.branch || github.ref_name }}
             git pull origin ${{ github.event.inputs.branch || github.ref_name }} --force

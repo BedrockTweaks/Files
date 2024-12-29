@@ -1,2 +1,2 @@
 # .husky/pre-commit
-node ./lint.js
+node ./scripts/lint.js
