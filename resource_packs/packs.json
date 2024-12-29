@@ -1152,6 +1152,11 @@
 					"description": "Adds numbers to the hotbar slots"
 				},
 				{
+					"id": "hotbar_style_inventory_slot_highlight",
+					"name": "Hotbar-Style Inventory Slot Highlight",
+					"description": "Gives the inventory slot highlight the same texture as the hotbar selection slot"
+				},
+				{
 					"id": "bedrock_edition_title",
 					"name": "Bedrock Edition Title",
 					"description": "Add a Bedrock Edition Logo to the Minecraft Title"
@@ -3553,6 +3558,10 @@
 		{
 			"filename": "stonecutter_screen.json",
 			"filepath": "/ui/stonecutter_screen.json"
+		},
+		{
+			"filename": "loom_screen.json",
+			"filepath": "/ui/loom_screen.json"
 		},
 		{
 			"filename": "ui_common.json",
