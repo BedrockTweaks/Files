@@ -5,9 +5,7 @@
 			"identifier": "bt:g.grave_key"
 		},
 		"components": {
-			"minecraft:icon": {
-				"texture": "bt:grave_key"
-			}
+			"minecraft:icon": "bt:grave_key"
 		}
 	}
 }

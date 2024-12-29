@@ -1,3 +1,3 @@
 export enum GravesEntityTypes {
-  Grave = 'bt:g.grave'
+	Grave = 'bt:g.grave'
 }
