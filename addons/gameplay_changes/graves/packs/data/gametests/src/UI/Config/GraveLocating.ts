@@ -12,8 +12,8 @@ export const openGraveLocatingInterface = (player: Player): void => {
 		.body({
 			rawtext: [
 				{ translate: 'bt.graves.settings.grave_locating.description', with: ['\n', ' '] },
-				{ translate: `bt.graves.settings.${gravesSettings.graveLocating ? 'enabled' : 'disabled'}` }
-			]
+				{ translate: `bt.graves.settings.${gravesSettings.graveLocating ? 'enabled' : 'disabled'}` },
+			],
 		})
 		.button({ translate: `bt.graves.settings.${!gravesSettings.graveLocating ? 'enable' : 'disable'}` });
 
