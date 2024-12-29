@@ -9,15 +9,15 @@ import { ScoreboardIdentity, ScoreboardScoreInfo, world } from '@minecraft/serve
  * The property value is the Player, Entity or Fake player score {number}
  */
 export function getObjective<T>(objectiveName: string): T {
-  // Any object with keys as string and values as number
-  const scoreboardObject: Record<string, number> = {};
-  const scoreboardObjective = world.scoreboard.getObjective(objectiveName);
+	// Any object with keys as string and values as number
+	const scoreboardObject: Record<string, number> = {};
+	const scoreboardObjective = world.scoreboard.getObjective(objectiveName);
 
-  scoreboardObjective?.getScores().forEach((score: ScoreboardScoreInfo): void => {
-    scoreboardObject[score.participant.displayName] = score.score;
-  });
+	scoreboardObjective?.getScores().forEach((score: ScoreboardScoreInfo): void => {
+		scoreboardObject[score.participant.displayName] = score.score;
+	});
 
-  return scoreboardObject as T;
+	return scoreboardObject as T;
 }
 
 /**
@@ -29,13 +29,13 @@ export function getObjective<T>(objectiveName: string): T {
  * The scoreboardObject property values will be the Player, Entity or Fake player scores
  */
 export function setObjective(objectiveName: string, scoreboardObject: object): void {
-  const scoreboardObjective = world.scoreboard.getObjective(objectiveName);
-  const participants = scoreboardObjective?.getParticipants();
+	const scoreboardObjective = world.scoreboard.getObjective(objectiveName);
+	const participants = scoreboardObjective?.getParticipants();
 
-  Object.entries(scoreboardObject).forEach(([key, value]: [string, number]): void => {
-    const player: ScoreboardIdentity | undefined = participants?.find(
-      (participant: ScoreboardIdentity): boolean => participant.displayName === key,
-    );
-    player && scoreboardObjective?.setScore(player, value);
-  });
+	Object.entries(scoreboardObject).forEach(([key, value]: [string, number]): void => {
+		const player: ScoreboardIdentity | undefined = participants?.find(
+			(participant: ScoreboardIdentity): boolean => participant.displayName === key
+		);
+		player && scoreboardObjective?.setScore(player, value);
+	});
 }

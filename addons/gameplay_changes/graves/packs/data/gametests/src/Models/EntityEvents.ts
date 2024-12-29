@@ -1,4 +1,4 @@
 export enum GraveEntityEvents {
-  DropItems = 'drop_items',
-  Despawn = 'despawn'
+	DropItems = 'drop_items',
+	Despawn = 'despawn'
 }
