@@ -1,0 +1,31 @@
+{
+	"format_version": "1.21.50",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "bt:mb.pale_oak_wood"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"group": "wood",
+		"priority": -1,
+		"pattern": [
+			"##",
+			"##"
+		],
+		"key": {
+			"#": {
+				"item": "minecraft:pale_oak_log"
+			}
+		},
+		"unlock": [
+			{
+				"item": "minecraft:pale_oak_log"
+			}
+		],
+		"result": {
+			"item": "minecraft:pale_oak_wood",
+			"count": 4
+		}
+	}
+}
