@@ -1026,7 +1026,12 @@
 				{
 					"id": "no_cherry_leaves_particles",
 					"name": "No Cherry Leaves Particles",
-					"description": "Disables the spawning on cherry leaf particles in the cherry woods biome"
+					"description": "Removes Cherry Leaves particles for easier visibility in Cherry Groves"
+				},
+				{
+					"id": "no_pale_garden_leaves_particles",
+					"name": "No Pale Garden Leaves Particles",
+					"description": "Removes Pale Oak Leaves particles for easier visibility in Pale Gardens"
 				},
 				{
 					"id": "borderless_glass",
