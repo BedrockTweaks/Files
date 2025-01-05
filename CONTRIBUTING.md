@@ -134,9 +134,14 @@ Before making a PR make sure lint the project by running `npm run lint` in the d
 
 When updating the addons make sure to bump the versions in the manifests and packs.json
 
+Regarding regolith filters, currently it is only accepted filters which run on node.
+
+Resource Pack JSON UI modifications for addons are not accepted at this moment.
+
 #### Technical Details
-- Event subscriptions are the entry point for the addon, all of them must be defined in the `index` file.
-- Functions contains the code which interacts between the game and the addon.
+- system functions should be in `main.ts`.
+- Events contains the entry points for the addon.
+- Actions contains the code which interacts between the game and the addon.
 - Models contains all the definitions and data structures used in the addon.
 - UI contains the interfaces where the player interacts, usually for addon config.
 - Utils contains helper functions and classes.
