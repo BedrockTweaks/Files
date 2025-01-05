@@ -1,13 +1,13 @@
 import { Player } from '@minecraft/server';
 import { ActionFormData, ActionFormResponse } from '@minecraft/server-ui';
-import { getSettings, setSettings } from '../../Functions';
+import { getSettings, setSettings } from '../../Actions';
 import { GravesSettings } from '../../Models';
 import { openConfigInterface } from '.';
 
 export const openGraveLocatingInterface = (player: Player): void => {
 	const gravesSettings: GravesSettings = getSettings();
 
-	const form = new ActionFormData()
+	const form: ActionFormData = new ActionFormData()
 		.title({ translate: 'bt.graves.settings.grave_locating' })
 		.body({
 			rawtext: [

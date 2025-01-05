@@ -1,5 +1,5 @@
 {
-	"$schema": "https://raw.githubusercontent.com/Bedrock-OSS/regolith-schemas/main/config/v1.2.json",
+	"$schema": "https://raw.githubusercontent.com/Bedrock-OSS/regolith-schemas/main/config/v1.4.json",
 	"author": "DrAv0011",
 	"name": "Graves - Gameplay Changes - Bedrock Tweaks",
 	"packs": {
@@ -19,7 +19,8 @@
 			"build": {
 				"export": {
 					"readOnly": true,
-					"target": "local"
+					"target": "local",
+					"build": "standard"
 				},
 				"filters": [
 					{
@@ -49,7 +50,8 @@
 			"default": {
 				"export": {
 					"readOnly": false,
-					"target": "development"
+					"target": "development",
+					"build": "standard"
 				},
 				"filters": [
 					{

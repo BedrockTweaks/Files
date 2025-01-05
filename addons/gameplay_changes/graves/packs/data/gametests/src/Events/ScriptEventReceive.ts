@@ -2,7 +2,7 @@ import {
 	ScriptEventCommandMessageAfterEvent,
 	system
 } from '@minecraft/server';
-import { uninstall } from '../Functions';
+import { uninstall } from '../Actions';
 import { GravesScriptEvents } from '../Models';
 import { openConfigInterface } from '../UI';
 

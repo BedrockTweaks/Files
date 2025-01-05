@@ -1,6 +1,10 @@
 
 item.bt:g.grave_key=Grave Key
 
+bt.graves.force_open_grave=Force open grave
+
+bt.graves.keep_inventory=§4Graves requires keepInventory to be enabled, rolling back change
+
 bt.graves.location=§6Your last grave is at §e(%1, %2, %3)§6 in %4.
 
 bt.graves.list_graves.title=§l- All graves -

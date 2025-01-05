@@ -4,10 +4,10 @@ import {
 	world
 } from '@minecraft/server';
 import { MinecraftEntityTypes } from '@minecraft/vanilla-data';
-import { spawnGrave } from '../Functions';
+import { spawnGrave } from '../Actions';
 
 world.afterEvents.entityDie.subscribe(({ deadEntity }: EntityDieAfterEvent): void => {
-	if (deadEntity.typeId === MinecraftEntityTypes.Player) {
+	if (deadEntity.matches({ type: MinecraftEntityTypes.Player })) {
 		spawnGrave(deadEntity as Player);
 	}
 });

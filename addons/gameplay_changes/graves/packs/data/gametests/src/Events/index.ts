@@ -1,5 +1,6 @@
-import './DataDrivenEntityTrigger';
 import './EntityDie';
 import './EntityHit';
-import './PlayerJoin';
+import './GameRuleChange';
+import './PlayerInteractWithEntity';
 import './ScriptEventReceive';
+import './WorldInitialize';

@@ -3,7 +3,7 @@ import {
 	Player
 } from '@minecraft/server';
 import { ActionFormData, ActionFormResponse } from '@minecraft/server-ui';
-import { getSettings, giveGraveKey, listAllGraves } from '../../Functions';
+import { getSettings, giveGraveKey, listAllGraves } from '../../Actions';
 import { GravesSettings } from '../../Models';
 import { openDespawnTimeInterface } from './DespawnTime';
 import { openGraveLocatingInterface } from './GraveLocating';

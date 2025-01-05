@@ -1,5 +1,5 @@
 {
-	"format_version": "1.20.40",
+	"format_version": "1.20.50",
 	"minecraft:item": {
 		"description": {
 			"identifier": "bt:g.grave_key"
