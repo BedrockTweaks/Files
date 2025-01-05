@@ -1,6 +1,5 @@
 import { world } from '@minecraft/server';
-import { GravesSettings, GravesSettingsDynamicProperties } from '../Models';
-import { GravesListDynamicProperties } from '../Models/DynamicProperties';
+import { GravesListDynamicProperties, GravesSettings, GravesSettingsDynamicProperties } from '../Models';
 import { getProperties, setProperties } from '../Util';
 
 /**

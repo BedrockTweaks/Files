@@ -12,33 +12,18 @@ bt.graves.list_graves.owner=§7%s:
 bt.graves.list_graves.grave=   §e(%1, %2, %3) §6in the %4 §7§o- %5h, %6m ago - §r§7Item count: §f%7§7, XP points: §f%8
 bt.graves.list_graves.empty=§4This world doesn't have any graves
 
+bt.graves.config.title=Graves / Configuration
+bt.graves.config.change_settings=Change Settings
+bt.graves.config.list_all_graves=List All Graves
+bt.graves.config.receive_grave_key=Receive Grave Key
+
 bt.graves.settings.title=Graves / Global Settings
 
-bt.graves.settings.list_all_graves=[ List All Graves ]
-bt.graves.settings.receive_grave_key=[ Receive Grave Key ]
-
-bt.graves.settings.enabled_color=§a█§r§8%s
-bt.graves.settings.disabled_color=§4█§r§8%s
-bt.graves.settings.edit_color=█%s
-bt.graves.settings.enabled=§aEnabled
-bt.graves.settings.disabled=§4Disabled
-bt.graves.settings.enable=§aClick to enable
-bt.graves.settings.disable=§4Click to disable
-bt.graves.settings.edit=Edit
-
-bt.graves.settings.grave_robbing=Grave Robbing
-bt.graves.settings.grave_robbing.description=§7When enabled, player can open graves they do not own. %1§8Default: Disabled%1§7Status:%2
-
-bt.graves.settings.xp_collection=XP Collection
-bt.graves.settings.xp_collection.description=§7When enabled, graves collect player XP on death. %1§8Default: Enabled%1§7Status:%2
-
-bt.graves.settings.grave_locating=Grave Locating
-bt.graves.settings.grave_locating.description=§7When enabled, players can see the coordinates of their graves. %1§8Default: Enabled%1§7Status:%2
-
-bt.graves.settings.despawn_time=Grave Despawn Time
-bt.graves.settings.despawn_time.description=§7The number of seconds after which a grave and it's contents are deleted.%1A grave's despawn timer only runs whole the grave is loaded.%1Enter §f0§7 to disable grave despawning. Items normally take §f300§7 seconds (5 minutes) to despawn.%1§8Accepts: whole numbers 0+%1Default: 0%1§7Current:%2
-bt.graves.settings.despawn_time.current=%s(Current: %d)
-bt.graves.settings.despawn_time.edit=Despawn time in seconds%1§8Accepts: whole numbers 0+
-bt.graves.settings.despawn_time.error=§4[Error] Despawn time must be a number
+bt.graves.settings.grave_robbing=Grave Robbing%1§7When enabled, player can open graves they do not own. %1§8Default: Disabled
+bt.graves.settings.xp_collection=XP Collection%1§7When enabled, graves collect player XP on death. %1§8Default: Enabled
+bt.graves.settings.grave_locating=Grave Locating%1§7When enabled, players can see the coordinates of their graves. %1§8Default: Enabled
+bt.graves.settings.despawn_time.hours=Grave Despawn Time%1§7The time after which a grave and it's contents are deleted.%1A grave's despawn timer only runs while the grave is loaded.%1Enter §f0§7 to disable grave despawning. Items normally take §f5§7 minutes to despawn.%1§8Default: 0 hours, 0 minutes, 0 seconds§r%1Current hours
+bt.graves.settings.despawn_time.minutes=Current minutes
+bt.graves.settings.despawn_time.seconds=Current seconds
 
 bt.graves.uninstall=Uninstalled correctly, remove the pack from Behavior Packs to complete the uninstall
