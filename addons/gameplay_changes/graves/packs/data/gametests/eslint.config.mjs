@@ -71,6 +71,8 @@ export default [
             ],
             "@typescript-eslint/no-wrapper-object-types": "error",
             "@typescript-eslint/no-unsafe-function-type": "error",
+            "@typescript-eslint/no-empty-object-type": ["error", { allowInterfaces: 'always' }],
+            "@typescript-eslint/ban-ts-comment": ["error", {'ts-expect-error': 'allow-with-description'}],
 
             "@typescript-eslint/consistent-type-assertions": "error",
             "@typescript-eslint/dot-notation": "error",

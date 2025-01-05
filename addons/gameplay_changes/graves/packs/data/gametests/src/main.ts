@@ -1,3 +1,7 @@
+import { system, TicksPerSecond } from '@minecraft/server';
+import { tickGrave } from './Actions';
 import './Events';
 
-// TODO despawn time for graves
+system.runInterval((): void => {
+	tickGrave();
+}, TicksPerSecond);

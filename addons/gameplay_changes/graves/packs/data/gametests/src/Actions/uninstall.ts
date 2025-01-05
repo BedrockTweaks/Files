@@ -1,8 +1,12 @@
 import { world } from '@minecraft/server';
-import { getSettings } from './settings';
+import { getSettings } from './Settings';
+import { GravesSettings } from '../Models';
 
+/**
+ * Uninstalls the grave addon by restoring game rules and clearing dynamic properties.
+ */
 export const uninstall = (): void => {
-	const settings = getSettings();
+	const settings: GravesSettings = getSettings();
 
 	world.gameRules.keepInventory = settings.keepInventory;
 

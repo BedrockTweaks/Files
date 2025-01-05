@@ -1,7 +1,7 @@
 import { Player } from '@minecraft/server';
 import { ActionFormData, ActionFormResponse, ModalFormData, ModalFormResponse } from '@minecraft/server-ui';
 import { openConfigInterface } from '.';
-import { getSettings, setSettings } from '../../Functions';
+import { getSettings, setSettings } from '../../Actions';
 import { GravesSettings } from '../../Models';
 
 export const openDespawnTimeInterface = (player: Player): void => {

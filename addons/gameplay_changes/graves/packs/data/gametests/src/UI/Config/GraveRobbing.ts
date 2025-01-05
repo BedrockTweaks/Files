@@ -1,6 +1,6 @@
 import { Player } from '@minecraft/server';
 import { ActionFormData, ActionFormResponse } from '@minecraft/server-ui';
-import { getSettings, setSettings } from '../../Functions';
+import { getSettings, setSettings } from '../../Actions';
 import { GravesSettings } from '../../Models';
 import { openConfigInterface } from '.';
 
