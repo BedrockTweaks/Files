@@ -1,0 +1,45 @@
+{
+	"format_version": "1.21.50",
+	"minecraft:block": {
+		"description": {
+			"identifier": "bt:e.cyan_elevator",
+			"menu_category": {
+				"category": "none"
+			}
+		},
+		"components": {
+			"minecraft:custom_components": [
+				"bt:e.teleport"
+			],
+			"minecraft:display_name": "Cyan Elevator",
+			"minecraft:destructible_by_explosion": {
+				"explosion_resistance": 0.8
+			},
+			// TO DO: Add item_specific_speeds for shears item to be faster
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 1.2
+			},
+			"minecraft:flammable": {
+				"catch_chance_modifier": 30,
+				"destroy_chance_modifier": 60
+			},
+			"minecraft:geometry": "minecraft:geometry.full_block",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "wool_colored_cyan"
+				}
+			},
+			"minecraft:loot": "loot_tables/blocks/e.cyan_elevator.loot.json",
+			"minecraft:map_color": "#4C7F99",
+			"minecraft:tick": {
+				"interval_range": [
+					10,
+					10
+				]
+			},
+			"minecraft:redstone_conductivity": {
+				"redstone_conductor": true
+			}
+		}
+	}
+}

@@ -1,0 +1,67 @@
+{
+	"format_version": "1.21.40",
+	"bt:e.black_elevator": {
+		"sound": "cloth",
+		"textures": "wool_colored_black"
+	},
+	"bt:e.blue_elevator": {
+		"sound": "cloth",
+		"textures": "wool_colored_blue"
+	},
+	"bt:e.brown_elevator": {
+		"sound": "cloth",
+		"textures": "wool_colored_brown"
+	},
+	"bt:e.cyan_elevator": {
+		"sound": "cloth",
+		"textures": "wool_colored_cyan"
+	},
+	"bt:e.gray_elevator": {
+		"sound": "cloth",
+		"textures": "wool_colored_gray"
+	},
+	"bt:e.green_elevator": {
+		"sound": "cloth",
+		"textures": "wool_colored_green"
+	},
+	"bt:e.light_blue_elevator": {
+		"sound": "cloth",
+		"textures": "wool_colored_light_blue"
+	},
+	"bt:e.light_gray_elevator": {
+		"sound": "cloth",
+		"textures": "wool_colored_silver"
+	},
+	"bt:e.lime_elevator": {
+		"sound": "cloth",
+		"textures": "wool_colored_lime"
+	},
+	"bt:e.magenta_elevator": {
+		"sound": "cloth",
+		"textures": "wool_colored_magenta"
+	},
+	"bt:e.orange_elevator": {
+		"sound": "cloth",
+		"textures": "wool_colored_orange"
+	},
+	"bt:e.pink_elevator": {
+		"sound": "cloth",
+		"textures": "wool_colored_pink"
+	},
+	"bt:e.purple_elevator": {
+		"sound": "cloth",
+		"textures": "wool_colored_purple"
+	},
+	"bt:e.red_elevator": {
+		"sound": "cloth",
+		"textures": "wool_colored_red"
+	},
+	"bt:e.white_elevator": {
+		"sound": "cloth",
+		"textures": "wool_colored_white"
+	},
+	"bt:e.yellow_elevator": {
+		"sound": "cloth",
+		"textures": "wool_colored_yellow"
+	}
+}
