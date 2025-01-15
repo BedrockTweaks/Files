@@ -12,22 +12,23 @@ To get started with contributing, follow these steps:
 
 1. Fork the repository.
 2. Clone the forked repository to your local machine.
-3. Create a new branch for your changes.
-4. Make your desired changes.
+3. Run npm install on the root (only needed if working with addons)
+4. Create a new branch for your changes.
+5. Make your desired changes.
 
 - Before making a pack make sure:
   - There is not an existing [Pull Request](https://github.com/BedrockTweaks/Files/pulls) for the same pack.
   - The pack is a confirmed [Issue](https://github.com/BedrockTweaks/Files/issues)
     or [Discussion](https://github.com/BedrockTweaks/Files/discussions)
 
-5. Test your changes thoroughly.
+6. Test your changes thoroughly.
 
 - For consoles, you can test by joining a world with the pack applied hosted in another device (phone/computer) in the same network.
 - At least need to be tested in 1 device.
 
-6. Commit your changes with the following format.
-7. Push your changes to your forked repository.
-8. Submit a pull request with the following format to the main repository.
+7. Commit your changes with the following format.
+8. Push your changes to your forked repository.
+9. Submit a pull request with the following format to the main repository.
 
 ## Style Guide
 
@@ -139,16 +140,28 @@ Regarding regolith filters, currently it is only accepted filters which run on n
 Resource Pack JSON UI modifications for addons are not accepted at this moment.
 
 #### Technical Details
-- system functions should be in `main.ts`.
-- Events contains the entry points for the addon.
-- Actions contains the code which interacts between the game and the addon.
-- Models contains all the definitions and data structures used in the addon.
-- UI contains the interfaces where the player interacts, usually for addon config.
-- Utils contains helper functions and classes.
+- Addons should not have functions except for the ones the player runs to activate the different forms
+(functions are public and can be run by any player with operator permissions, having a player run a functions which they should not could possibly break the addon)
+- All settings and interactions should be in-game or in server forms opened by a single simple command or text message
+- Player should not be expected to run commands except for opening an ui
+- The code in the template is an example it could be removed and changed as long as it follows the structure
 - Prefer interfaces to types.
 - Prefer functional programming over object-oriented programming.
 - Prefer `const` and `let` over `var`.
 
+
+#### Keys to change
+When making an addon from the template you should look for these keys and replace them
+```
+<pack_name>
+<pack_category>
+<author name/username>
+<bp_uuid>
+<data_module_uuid>
+<scripting_module_uuid>
+<rp_uuid>
+<resources_module_uuid>
+```
 #
 
 If you notice any files not following the Style Guide feel free to open a PR.
@@ -327,18 +340,20 @@ export interface Pack {
   message?: Message;
   version?: string; // * only Addons and CT
   priority?: number; // Higher number, higher priority
+  disabled?: boolean;
 }
 
 /**
- * Pack Version is a string as follows: "<minecraft_version> - <pack_version>"
- * minecraft_version is the minimum major version of the game the pack is compatible with
+ * Pack Version is a string as follows: "<minecraft_version> - <pack_version>" for addons
+ * and just "<pack_version>" for crafting tweaks
+ * minecraft_version is the minimum version of the game the pack is compatible with
  * pack_version is the version of the pack for that minecraft update, each mc update it resets
  * example:
- * (version update)     "1.21 - 1.0.0"
- * (bug fix)            "1.21 - 1.0.1"
- * (pack major revamp)  "1.21 - 2.0.0"
- * (pack improvements)  "1.21 - 2.1.0"
- * (version update)     "1.22 - 1.0.0"
+ * (version update)     "1.21.50 - 1.0.0"
+ * (bug fix)            "1.21.50 - 1.0.1"
+ * (pack major revamp)  "1.21.50 - 2.0.0"
+ * (pack improvements)  "1.21.50 - 2.1.0"
+ * (version update)     "1.22.0 - 1.0.0"
  */
 
 export interface Combination {
