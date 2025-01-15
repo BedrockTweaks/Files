@@ -13,7 +13,12 @@
 				{
 					"id": "alternate_block_destruction",
 					"name": "Alternate Block Destruction",
-					"description": "Changes the breaking texture of blocks to a messy ring around the outside"
+					"description": "Changes the breaking texture of blocks to a messy ring around the outside",
+					"message": {
+						"text": "This pack is disabled because of reason",
+						"severity": "success"
+					},
+					"disabled": true
 				},
 				{
 					"id": "black_nether_bricks",

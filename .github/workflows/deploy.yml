@@ -13,55 +13,45 @@ on:
         default: 'main'
 
 jobs:
-  check-branch-build:
-    name: Get branch name
+  build-and-deploy:
     runs-on: ubuntu-latest
-    outputs:
-      branch: ${{ steps.check_step.outputs.branch }}
-      status: ${{ steps.check_step.outputs.status }}
+
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
+      # Step 1: Checkout the repository
+      - name: Checkout repository
+        uses: actions/checkout@v3
         with:
-          fetch-depth: 0
+          ref: ${{ github.event.inputs.branch || github.ref_name }}
 
-      - name: Get current branch and repo
-        id: check_step
-        run: |
-          branch=${{ github.ref_name}}
-          branch=${branch##*/}
-          echo "branch=${branch}" >> $GITHUB_ENV
-          status="${{ job.status }}"
-          echo "status=${status}" >> $GITHUB_ENV
-          echo "Branch is $branch."
-
-  deploy:
-    name: Deploy
-    runs-on: ubuntu-latest
-    needs: check-branch-build
-    steps:
-      - name: Mark Git directory as safe
-        run: |
-          git config --global --add safe.directory /opt/bedrock_tweaks/files
-          git config --global --add safe.directory /opt/bedrock_tweaks/files_dev
-
-      - name: Update files Production
-        if: github.ref_name == 'main'
-        uses: appleboy/ssh-action@master
-        with:
-          host: ${{ secrets.SERVER_ADDRESS }}
-          username: ${{ secrets.SERVER_USER }}
-          password: ${{ secrets.SERVER_PASSWORD }}
-          script: cd /opt/bedrock_tweaks/files && git reset --hard && git clean -fd && git pull ${{ secrets.REPOSITORY_URL }}
-
-      - name: Update files Development
+      # Step 2-dev: Deploy files via SSH
+      - name: Deploy files via SSH and Git Pull
         if: github.ref_name == 'devel'
-        uses: appleboy/ssh-action@master
+        uses: appleboy/ssh-action@v0.1.7
         with:
           host: ${{ secrets.SERVER_ADDRESS }}
           username: ${{ secrets.SERVER_USER }}
           password: ${{ secrets.SERVER_PASSWORD }}
-          script: cd /opt/bedrock_tweaks/files_dev && git reset --hard && git clean -fd && git pull ${{ secrets.REPOSITORY_DEV_URL }}
+          port: 22
+          script: |
+            cd "/opt/bedrock_tweaks/files_dev" || exit
+            git fetch --all
+            git reset --hard origin/${{ github.event.inputs.branch || github.ref_name }}
+            git pull origin ${{ github.event.inputs.branch || github.ref_name }} --force
+
+      # Step 2-prod: Deploy files via SSH
+      - name: Deploy files via SSH and Git Pull
+        if: github.ref_name == 'main'
+        uses: appleboy/ssh-action@v0.1.7
+        with:
+          host: ${{ secrets.SERVER_ADDRESS }}
+          username: ${{ secrets.SERVER_USER }}
+          password: ${{ secrets.SERVER_PASSWORD }}
+          port: 22
+          script: |
+            cd "/opt/bedrock_tweaks/files" || exit
+            git fetch --all
+            git reset --hard origin/${{ github.event.inputs.branch || github.ref_name }}
+            git pull origin ${{ github.event.inputs.branch || github.ref_name }} --force
 
       - name: Output job status
         id: job-status
