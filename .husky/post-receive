@@ -1,0 +1,2 @@
+# .husky/post-receive
+node ./scripts/build.js

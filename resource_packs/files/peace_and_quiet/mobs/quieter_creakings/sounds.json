@@ -1,0 +1,14 @@
+{
+	"entity_sounds": {
+		"entities": {
+			"creaking": {
+				"events": {
+					"step": {
+						"volume": 0.04
+					}
+				},
+				"volume": 0.05
+			}
+		}
+	}
+}

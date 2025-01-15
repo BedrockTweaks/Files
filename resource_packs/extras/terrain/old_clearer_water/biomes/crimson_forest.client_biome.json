@@ -5,6 +5,11 @@
 			"identifier": "crimson_forest"
 		},
 		"components": {
+			"minecraft:ambient_sounds": {
+				"mood": "ambient.crimson_forest.mood",
+				"addition": "ambient.crimson_forest.additions",
+				"loop": "ambient.crimson_forest.loop"
+			},
 			"minecraft:fog_appearance": {
 				"fog_identifier": "bt:fog_crimson_forest"
 			},

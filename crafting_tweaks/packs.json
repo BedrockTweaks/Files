@@ -14,73 +14,73 @@
 					"id": "back_to_blocks",
 					"name": "Back to Blocks",
 					"description": "Allows you to craft full blocks from stairs and slabs",
-					"version": "1.21 - 1.0.0"
+					"version": "1.1.0"
 				},
 				{
 					"id": "double_slabs",
 					"name": "Double Slabs",
 					"description": "Allows you to craft 2 slabs from a single block",
-					"version": "1.21 - 1.0.0"
+					"version": "1.1.0"
 				},
 				{
 					"id": "dropper_to_dispenser",
 					"name": "Dropper to Dispenser",
 					"description": "Allows you to convert a Dropper to a Dispenser using a Bow, or by using String and Sticks",
-					"version": "1.21 - 1.0.0"
+					"version": "1.0.0"
 				},
 				{
 					"id": "rotten_flesh_to_leather",
 					"name": "Rotten Flesh to Leather",
 					"description": "Allows you to smelt Rotten Flesh into Leather",
-					"version": "1.21 - 1.0.0"
+					"version": "1.0.0"
 				},
 				{
 					"id": "copper_powered_rails",
 					"name": "Copper Powered Rails",
 					"description": "Lets you craft powered rails from copper (But you can still craft them from gold!)",
-					"version": "1.21 - 1.0.0"
+					"version": "1.0.0"
 				},
 				{
 					"id": "charcoal_to_black_dye",
 					"name": "Charcoal to Black Dye",
 					"description": "Allows you to craft Charcoal into Black Dye",
-					"version": "1.21 - 1.0.0"
+					"version": "1.0.0"
 				},
 				{
 					"id": "coal_to_black_dye",
 					"name": "Coal to Black Dye",
 					"description": "Allows you to craft Coal into Black Dye",
-					"version": "1.21 - 1.0.0"
+					"version": "1.0.0"
 				},
 				{
 					"id": "sandstone_dyeing",
 					"name": "Sandstone Dyeing",
 					"description": "Allows you to craft Sandstone with Red Dye to get Red Sandstone",
-					"version": "1.21 - 1.0.0"
+					"version": "1.1.0"
 				},
 				{
 					"id": "universal_dyeing",
 					"name": "Universal Dyeing",
 					"description": "Allows you to dye any dyeable block to another color, no matter what color it is (does not include, Concrete, Candles or Glazed Terracotta)",
-					"version": "1.21 - 1.0.0"
+					"version": "1.0.0"
 				},
 				{
 					"id": "straight_to_shapeless",
 					"name": "Straight to Shapeless",
 					"description": "Craft items such as Paper, Bread and Shulker Boxes directly in your 2x2",
-					"version": "1.21 - 1.0.0"
+					"version": "1.0.0"
 				},
 				{
 					"id": "alternate_cobblestone",
 					"name": "Alternate Cobblestone",
 					"description": "Craft all items that require Cobblestone, using Blackstone or Cobbled Deepslate",
-					"version": "1.21 - 1.0.0"
+					"version": "1.1.0"
 				},
 				{
 					"id": "powder_to_glass",
 					"name": "Powder to Glass",
 					"description": "Smelt all colors of Concrete Powder into their respective Stained Glass color",
-					"version": "1.21 - 1.0.0"
+					"version": "1.0.0"
 				}
 			]
 		},
@@ -92,25 +92,25 @@
 					"id": "more_trapdoors",
 					"name": "More Trapdoors",
 					"description": "Creates 12 Trapdoors instead of 2",
-					"version": "1.21 - 1.0.0"
+					"version": "1.0.0"
 				},
 				{
 					"id": "more_bark",
 					"name": "More Bark",
 					"description": "Creates 4 Bark instead of 3",
-					"version": "1.21 - 1.0.0"
+					"version": "1.0.0"
 				},
 				{
 					"id": "more_stairs",
 					"name": "More Stairs",
 					"description": "Creates 8 Stairs instead of 4",
-					"version": "1.21 - 1.0.0"
+					"version": "1.1.0"
 				},
 				{
 					"id": "more_bricks",
 					"name": "More Bricks",
 					"description": "Creates 4 Bricks, Nether Bricks and Red Nether Bricks instead of 1",
-					"version": "1.21 - 1.0.0"
+					"version": "1.0.0"
 				}
 			]
 		},
@@ -122,43 +122,43 @@
 					"id": "craftable_gravel",
 					"name": "Craftable Gravel",
 					"description": "Allows you to craft Gravel from Flint",
-					"version": "1.21 - 1.0.0"
+					"version": "1.0.0"
 				},
 				{
 					"id": "craftable_horse_armor",
 					"name": "Craftable Horse Armor",
 					"description": "Allows you to craft Horse Armor",
-					"version": "1.21 - 1.0.0"
+					"version": "1.0.0"
 				},
 				{
 					"id": "craftable_coral_blocks_2x2",
 					"name": "Craftable Coral Blocks 2x2",
 					"description": "Allows you to craft Coral Blocks and their dead variants from their Coral Plant or Coral Tube in a 2x2. Tubes and Fans are not interchangeable",
-					"version": "1.21 - 1.0.0"
+					"version": "1.0.0"
 				},
 				{
 					"id": "craftable_coral_blocks_3x3",
 					"name": "Craftable Coral Blocks 3x3",
 					"description": "Allows you to craft Coral Blocks and their dead variants from their Coral Plant or Coral Tube in a 3x3. Tubes and Fans are not interchangeable",
-					"version": "1.21 - 1.0.0"
+					"version": "1.0.0"
 				},
 				{
 					"id": "craftable_enchanted_golden_apple",
 					"name": "Craftable Enchanted Golden Apple",
 					"description": "Allows you to craft Enchanted Golden Apples",
-					"version": "1.21 - 1.0.0"
+					"version": "1.0.0"
 				},
 				{
 					"id": "craftable_name_tags",
 					"name": "Craftable Name Tags",
 					"description": "Allows you to craft Name Tags",
-					"version": "1.21 - 1.0.0"
+					"version": "1.0.0"
 				},
 				{
 					"id": "craftable_blackstone",
 					"name": "Craftable Blackstone",
 					"description": "Allows you to craft Blackstone or Polished Blackstone, using Basalt & Coal/Charcoal",
-					"version": "1.21 - 1.0.0"
+					"version": "1.0.0"
 				}
 			]
 		},
@@ -170,25 +170,25 @@
 					"id": "unpackable_ice",
 					"name": "Unpackable Ice",
 					"description": "Allows you to break down Ice into 9 pieces. 1 Blue Ice to 9 Packed Ice to 81 Ice",
-					"version": "1.21 - 1.0.0"
+					"version": "1.0.0"
 				},
 				{
 					"id": "unpackable_nether_wart",
 					"name": "Unpackable Nether Wart",
 					"description": "Allows you to break down Nether Wart Blocks into 9 Nether Wart",
-					"version": "1.21 - 1.0.0"
+					"version": "1.0.0"
 				},
 				{
 					"id": "unpackable_wool",
 					"name": "Unpackable Wool",
 					"description": "Allows you to break down Wool into 4 String",
-					"version": "1.21 - 1.0.0"
+					"version": "1.0.0"
 				},
 				{
 					"id": "unpackable_magma",
 					"name": "Unpackable Magma",
 					"description": "Allows you to break down Magma Blocks into 4 Magma Creams",
-					"version": "1.21 - 1.0.0"
+					"version": "1.0.0"
 				}
 			]
 		}
