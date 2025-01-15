@@ -1,0 +1,18 @@
+{
+	"format_version": "1.10.0",
+	"particle_effect": {
+		"description": {
+			"identifier": "minecraft:pale_oak_leaves_particle",
+			"basic_render_parameters": {
+				"material": "particles_alpha",
+				"texture": "textures/particle/pale_oak_leaves_atlas"
+			}
+		},
+		"components": {
+			"minecraft:emitter_lifetime_expression": {},
+			"minecraft:emitter_rate_manual": {
+				"max_particles": 0
+			}
+		}
+	}
+}

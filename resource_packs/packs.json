@@ -3,7 +3,7 @@
 	"version": [
 		1,
 		21,
-		40
+		50
 	],
 	"categories": [
 		{
@@ -208,6 +208,61 @@
 			]
 		},
 		{
+			"id": "aesthetic/more_zombies",
+			"name": "Aesthetic / More Zombies",
+			"message": {
+				"text": "Selecting <b>any</b> Zombie skins enables randomized variants between them",
+				"severity": "success"
+			},
+			"packs": [
+				{
+					"id": "steve_zombies",
+					"name": "Steve Zombies",
+					"description": "Retextures zombies to look like more like Steve"
+				},
+				{
+					"id": "alex_zombies",
+					"name": "Alex Zombies",
+					"description": "Retextures zombies to look like Alex than Steve"
+				},
+				{
+					"id": "ari_zombies",
+					"name": "Ari Zombies",
+					"description": "Retextures zombies to look like Ari than Steve"
+				},
+				{
+					"id": "efe_zombies",
+					"name": "Efe Zombies",
+					"description": "Retextures zombies to look like Efe than Steve"
+				},
+				{
+					"id": "kai_zombies",
+					"name": "Kai Zombies",
+					"description": "Retextures zombies to look like Kai than Steve"
+				},
+				{
+					"id": "makena_zombies",
+					"name": "Makena Zombies",
+					"description": "Retextures zombies to look like Makena than Steve"
+				},
+				{
+					"id": "noor_zombies",
+					"name": "Noor Zombies",
+					"description": "Retextures zombies to look like Noor than Steve"
+				},
+				{
+					"id": "sunny_zombies",
+					"name": "Sunny Zombies",
+					"description": "Retextures zombies to look like Sunny than Steve"
+				},
+				{
+					"id": "zuri_zombies",
+					"name": "Zuri Zombies",
+					"description": "Retextures zombies to look like Zuri than Steve"
+				}
+			]
+		},
+		{
 			"id": "terrain",
 			"name": "Terrain",
 			"packs": [
@@ -238,8 +293,8 @@
 				},
 				{
 					"id": "circular_sun_and_moon",
-					"name": "Circular Sun & Moon",
-					"description": "Replaces the default square sun and moon, with a circular sun and moon"
+					"name": "Circular Sun and Moon",
+					"description": "Retextures the sun and moon to be circular"
 				},
 				{
 					"id": "circular_log_tops",
@@ -300,61 +355,6 @@
 					"id": "whiter_snow",
 					"name": "Whiter Snow",
 					"description": "Removes the blue tint from snow"
-				}
-			]
-		},
-		{
-			"id": "aesthetic/more_zombies",
-			"name": "Aesthetic/ More Zombies",
-			"message": {
-				"text": "Selecting <b>any</b> Zombie skins enables randomized variants between them",
-				"severity": "success"
-			},
-			"packs": [
-				{
-					"id": "steve_zombies",
-					"name": "Steve Zombies",
-					"description": "Retextures zombies to look like more like Steve"
-				},
-				{
-					"id": "alex_zombies",
-					"name": "Alex Zombies",
-					"description": "Retextures zombies to look like Alex than Steve"
-				},
-				{
-					"id": "ari_zombies",
-					"name": "Ari Zombies",
-					"description": "Retextures zombies to look like Ari than Steve"
-				},
-				{
-					"id": "efe_zombies",
-					"name": "Efe Zombies",
-					"description": "Retextures zombies to look like Efe than Steve"
-				},
-				{
-					"id": "kai_zombies",
-					"name": "Kai Zombies",
-					"description": "Retextures zombies to look like Kai than Steve"
-				},
-				{
-					"id": "makena_zombies",
-					"name": "Makena Zombies",
-					"description": "Retextures zombies to look like Makena than Steve"
-				},
-				{
-					"id": "noor_zombies",
-					"name": "Noor Zombies",
-					"description": "Retextures zombies to look like Noor than Steve"
-				},
-				{
-					"id": "sunny_zombies",
-					"name": "Sunny Zombies",
-					"description": "Retextures zombies to look like Sunny than Steve"
-				},
-				{
-					"id": "zuri_zombies",
-					"name": "Zuri Zombies",
-					"description": "Retextures zombies to look like Zuri than Steve"
 				}
 			]
 		},
@@ -456,7 +456,7 @@
 				{
 					"id": "variated_moss",
 					"name": "Variated Moss",
-					"description": "Randomly rotates Moss Blocks and Moss Carpets to break ugly grid patterns"
+					"description": "Randomly rotates Moss Blocks and Moss Carpets (and Pale Moss Blocks and Carpets in 1.21.50+) to break up the ugly grid patterns"
 				},
 				{
 					"id": "variated_bricks",
@@ -653,6 +653,11 @@
 					"id": "quieter_cows",
 					"name": "Quieter Cows",
 					"description": "Decreases Cow and Mooshroom sounds by 95%"
+				},
+				{
+					"id": "quieter_creakings",
+					"name": "Quieter Creakings",
+					"description": "Decreases Creaking sounds by 95%"
 				},
 				{
 					"id": "quieter_creepers",
@@ -896,7 +901,7 @@
 				},
 				{
 					"id": "suspicious_sand_and_gravel_borders",
-					"name": "Suspicious Sand and Gravel Borders",
+					"name": "Suspicious Sand & Gravel Borders",
 					"description": "Places a border around Suspicious Sand and Suspicious Gravel for easier visibility"
 				},
 				{
@@ -1026,7 +1031,12 @@
 				{
 					"id": "no_cherry_leaves_particles",
 					"name": "No Cherry Leaves Particles",
-					"description": "Disables the spawning on cherry leaf particles in the cherry woods biome"
+					"description": "Removes Cherry Leaves particles for easier visibility in Cherry Groves"
+				},
+				{
+					"id": "no_pale_garden_leaves_particles",
+					"name": "No Pale Garden Leaves Particles",
+					"description": "Removes Pale Oak Leaves particles for easier visibility in Pale Gardens"
 				},
 				{
 					"id": "borderless_glass",
@@ -1097,7 +1107,7 @@
 					"id": "no_spyglass_overlay",
 					"name": "No Spyglass Overlay",
 					"description": "Removes the Spyglass overlay completely when zooming in",
-					"priority": 1
+					"priority": 2
 				},
 				{
 					"id": "no_vignette",
@@ -1145,6 +1155,11 @@
 					"id": "numbered_hotbar",
 					"name": "Numbered Hotbar",
 					"description": "Adds numbers to the hotbar slots"
+				},
+				{
+					"id": "hotbar_style_inventory_slot_highlight",
+					"name": "Hotbar-Style Inventory Slot Highlight",
+					"description": "Gives the inventory slot highlight the same texture as the hotbar selection slot"
 				},
 				{
 					"id": "bedrock_edition_title",
@@ -1789,12 +1804,17 @@
 				{
 					"id": "mangrove_swamp_panorama",
 					"name": "Mangrove Swamp Panorama",
-					"description": "Replaces the default Minecraft menu panorama with a 360° view of a mangrove swamp from 1.19"
+					"description": "Replaces the default Minecraft menu panorama with a 360° view of a mangrove swamp (from 1.19)"
 				},
 				{
 					"id": "cherry_grove_panorama",
 					"name": "Cherry Grove Panorama",
-					"description": "Replaces the default Minecraft menu panorama with a 360° view of a Cherry Grove"
+					"description": "Replaces the default Minecraft menu panorama with a 360° view of a Cherry Grove (from 1.20)"
+				},
+				{
+					"id": "trial_chamber_panorama",
+					"name": "Trial Chamber Panorama",
+					"description": "Replaces the default Minecraft menu panorama with a 360° view of a Trial Chamber (from 1.21)"
 				},
 				{
 					"id": "the_end_panorama",
@@ -2177,7 +2197,7 @@
 					"id": "what",
 					"name": "WHAT",
 					"description": "Replaces the Spyglass overlay with the 'WHAT' meme template, including Earthbound's 'Sanctuary Guardian' music",
-					"priority": 2
+					"priority": 1
 				},
 				{
 					"id": "useless_spyglass",
@@ -2439,6 +2459,12 @@
 					"id": "java_ender_dragon_ball",
 					"name": "Java Ender Dragon Ball",
 					"description": "Gives the Ender Dragon's projectile its texture from Minecraft: Java Edition"
+				},
+				{
+					"id": "java_inventory_slot_highlight",
+					"name": "Java Inventory Slot Highlight",
+					"description": "Gives the inventory slot highlight its texture from Minecraft: Java Edition",
+					"priority": 1
 				},
 				{
 					"id": "dungeons_creepers",
@@ -3537,6 +3563,10 @@
 		{
 			"filename": "stonecutter_screen.json",
 			"filepath": "/ui/stonecutter_screen.json"
+		},
+		{
+			"filename": "loom_screen.json",
+			"filepath": "/ui/loom_screen.json"
 		},
 		{
 			"filename": "ui_common.json",

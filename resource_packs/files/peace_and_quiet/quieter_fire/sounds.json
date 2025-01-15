@@ -22,6 +22,9 @@
 					0.075
 				]
 			},
+			"block.furnace.lit": {
+				"volume": 0.15
+			},
 			"mob.player.hurt_on_fire": {
 				"volume": 0.05
 			}
