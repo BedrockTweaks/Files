@@ -1,0 +1,20 @@
+{
+	"namespace": "common",
+	"highlight_slot": {
+		"texture": "textures/ui/selected_hotbar_slot",
+		"size": [
+			"100% + 6px",
+			"100% + 6px"
+		],
+		"alpha": 1.0,
+		"layer": 6
+	},
+	"highlight_slot_panel": {
+		"modifications": [
+			{
+				"control_name": "white_border",
+				"operation": "remove"
+			}
+		]
+	}
+}

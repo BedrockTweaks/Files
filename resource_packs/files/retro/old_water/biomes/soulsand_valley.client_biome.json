@@ -5,6 +5,11 @@
 			"identifier": "soulsand_valley"
 		},
 		"components": {
+			"minecraft:ambient_sounds": {
+				"mood": "ambient.soulsand_valley.mood",
+				"addition": "ambient.soulsand_valley.additions",
+				"loop": "ambient.soulsand_valley.loop"
+			},
 			"minecraft:fog_appearance": {
 				"fog_identifier": "minecraft:fog_soulsand_valley"
 			},

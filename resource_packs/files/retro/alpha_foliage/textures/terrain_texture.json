@@ -54,6 +54,9 @@
 				{
 					"path": "textures/blocks/grass_side"
 				},
+				{
+					"path": "textures/blocks/grass_side"
+				},
 				"textures/blocks/grass_side_snowed"
 			]
 		},

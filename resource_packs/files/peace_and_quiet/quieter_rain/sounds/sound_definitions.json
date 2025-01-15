@@ -2,7 +2,7 @@
 	"format_version": "1.20.20",
 	"sound_definitions": {
 		"ambient.weather.rain": {
-			"__use_legacy_max_distance": true,
+			"__use_legacy_max_distance": "true",
 			"category": "weather",
 			"max_distance": null,
 			"min_distance": 100.0,
@@ -10,19 +10,19 @@
 				{
 					"load_on_low_memory": true,
 					"name": "sounds/ambient/weather/rain1",
-					"volume": 0.01
+					"volume": 0.001
 				},
 				{
 					"name": "sounds/ambient/weather/rain2",
-					"volume": 0.01
+					"volume": 0.001
 				},
 				{
 					"name": "sounds/ambient/weather/rain3",
-					"volume": 0.01
+					"volume": 0.001
 				},
 				{
 					"name": "sounds/ambient/weather/rain4",
-					"volume": 0.01
+					"volume": 0.001
 				}
 			]
 		}
