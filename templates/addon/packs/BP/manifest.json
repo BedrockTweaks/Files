@@ -1,0 +1,47 @@
+{
+	"format_version": 2,
+	"header": {
+		"name": "<pack_name> - <pack_category> - Bedrock Tweaks",
+		"description": "<description>",
+		"uuid": "<bp_uuid>",
+		"version": [
+			1,
+			0,
+			0
+		],
+		// Update to lastest minecraft release
+		"min_engine_version": [
+			1,
+			21,
+			50
+		]
+	},
+	"modules": [
+		{
+			"type": "data",
+			"uuid": "<data_module_uuid>",
+			"version": [
+				1,
+				0,
+				0
+			]
+		}
+	],
+	"dependencies": [
+		{
+			"uuid": "<rp_uuid>",
+			"version": [
+				1,
+				0,
+				0
+			]
+		}
+	],
+	"metadata": {
+		"authors": [
+			"Vanilla Tweaks",
+			"Bedrock Tweaks",
+			"<author name/username>"
+		]
+	}
+}
