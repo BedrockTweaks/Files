@@ -84,7 +84,7 @@ export const startElevatorTeleport = (player: Player, dimension: Dimension, elev
 /**
  * @name stopElevatorTeleport
  * @param {Player} player - The player who stepped off the elevator block.
- * @remarks Stops the teleport process when the player is no longer on top of the elevator block.
+ * @remarks Stops the elevator teleport process when the player is no longer on top of the elevator block.
  */
 export const stopElevatorTeleport = (player: Player): void => {
 	const runId: number | undefined = player.getDynamicProperty(ElevatorsDynamicProperties.teleportSystemRunId) as number | undefined;
