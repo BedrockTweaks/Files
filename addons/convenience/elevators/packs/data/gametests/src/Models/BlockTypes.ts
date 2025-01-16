@@ -1,22 +1,22 @@
 import { MinecraftBlockTypes } from "@minecraft/vanilla-data";
 
 export const WoolBlockTypes: string[] = [
-	MinecraftBlockTypes.RedWool,
+	MinecraftBlockTypes.BlackWool,
 	MinecraftBlockTypes.BlueWool,
+	MinecraftBlockTypes.BrownWool,
 	MinecraftBlockTypes.CyanWool,
 	MinecraftBlockTypes.GrayWool,
-	MinecraftBlockTypes.LimeWool,
-	MinecraftBlockTypes.PinkWool,
-	MinecraftBlockTypes.WhiteWool,
-	MinecraftBlockTypes.BlackWool,
-	MinecraftBlockTypes.BrownWool,
 	MinecraftBlockTypes.GreenWool,
-	MinecraftBlockTypes.OrangeWool,
-	MinecraftBlockTypes.PurpleWool,
-	MinecraftBlockTypes.YellowWool,
-	MinecraftBlockTypes.MagentaWool,
 	MinecraftBlockTypes.LightBlueWool,
 	MinecraftBlockTypes.LightGrayWool,
+	MinecraftBlockTypes.LimeWool,
+	MinecraftBlockTypes.MagentaWool,
+	MinecraftBlockTypes.OrangeWool,
+	MinecraftBlockTypes.PinkWool,
+	MinecraftBlockTypes.PurpleWool,
+	MinecraftBlockTypes.RedWool,
+	MinecraftBlockTypes.WhiteWool,
+	MinecraftBlockTypes.YellowWool,
 ];
 
 export const ElevatorBlockTypes: string[] = [

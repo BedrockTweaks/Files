@@ -1,3 +1,4 @@
-export enum ElevatorsSoundIdentifiers {
-	playerTeleport = "mob.shulker.teleport"
+export enum ElevatorsSounds {
+	playerTeleport = "mob.shulker.teleport",
+	playerTeleportVolume = 4
 }

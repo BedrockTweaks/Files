@@ -1,3 +1,3 @@
-export enum ElevatorsBlockCustomComponentIdentifiers {
+export enum ElevatorsBlockCustomComponents {
 	teleport = "bt:e.teleport"
 }

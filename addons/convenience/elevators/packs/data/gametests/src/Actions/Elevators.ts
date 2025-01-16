@@ -1,13 +1,13 @@
 import { system, Player, Dimension, Block, Vector3, Entity } from "@minecraft/server";
 import { Vector3Builder, Vector3Utils } from "@minecraft/math";
-import { ElevatorsDynamicProperties, ElevatorsSoundIdentifiers, ElevatorsParticleIdentifiers, ElevatorBlockTypes, WoolBlockTypes, ElevatorTickParticleMolang, WoolToElevatorParticleMolang } from "../Models";
+import { ElevatorsDynamicProperties, ElevatorsSounds, ElevatorsParticles, ElevatorBlockTypes, WoolBlockTypes, ElevatorTickParticleMolang, WoolToElevatorParticleMolang } from "../Models";
 
 /**
  * @name startElevatorTeleport
  * @param {Player} player - The player who is on top of the elevator block.
  * @param {Dimension} dimension - The dimension in which the player is currently in.
  * @param {Block} elevatorBlock - The elevator block on which the player is currently standing.
- * @remarks Starts the elevator teleport process when the player is standing on top of the elevator block.
+ * @remarks Starts the elevator teleport process when the player is standing on top of an elevator block.
  *
  * This function can't be called in read-only mode.
  */
@@ -107,7 +107,7 @@ export const teleportToElevator = (player: Player, dimension: Dimension, elevato
 
 	const { location: playerLocation } = player;
 
-	dimension.playSound(ElevatorsSoundIdentifiers.playerTeleport, playerLocation, { volume: 4 });
+	dimension.playSound(ElevatorsSounds.playerTeleport, playerLocation, { volume: ElevatorsSounds.playerTeleportVolume as number });
 
 	player.teleport(elevatorBlock.above()!.center());
 
@@ -123,7 +123,7 @@ export const teleportToElevator = (player: Player, dimension: Dimension, elevato
 		const { location: newPlayerLocation } = player;
 
 		if (!Vector3Utils.equals(playerFloorLocation, Vector3Utils.floor(newPlayerLocation))) {
-			dimension.playSound(ElevatorsSoundIdentifiers.playerTeleport, newPlayerLocation, { volume: 4 });
+			dimension.playSound(ElevatorsSounds.playerTeleport, newPlayerLocation, { volume: ElevatorsSounds.playerTeleportVolume as number });
 
 			system.clearRun(playSoundRunId);
 		}
@@ -165,7 +165,7 @@ export const clearElevatorsTeleportSystemRun = (player: Player, elevatorTeleport
 export const tickElevatorParticles = (elevatorBlockLocation: Vector3, elevatorDimension: Dimension): void => {
 	// During dimension change, LocationInUnloadedChunkError may be thrown sometimes
 	try {
-		elevatorDimension.spawnParticle(ElevatorsParticleIdentifiers.elevatorTick, Vector3Utils.add(elevatorBlockLocation, { x: 0, y: 1, z: 0 }), ElevatorTickParticleMolang);
+		elevatorDimension.spawnParticle(ElevatorsParticles.elevatorTick, Vector3Utils.add(elevatorBlockLocation, { x: 0, y: 1, z: 0 }), ElevatorTickParticleMolang);
 	} catch (error) {
 		if (!(error instanceof Error)) throw error;
 
@@ -176,7 +176,7 @@ export const tickElevatorParticles = (elevatorBlockLocation: Vector3, elevatorDi
 /**
  * @name woolToElevator
  * @param {Entity} enderPearlItemEntity - The ender pearl item entity which is dropped.
- * @remarks Check if the ender pearl item is dropped on top of a wool block.
+ * @remarks Checks if the ender pearl item is dropped on top of a wool block.
  * If it is a wool block, then convert the wool block to an elevator block of the same wool color.
  *
  * This function can't be called in read-only mode.
@@ -217,8 +217,8 @@ export const woolToElevator = (enderPearlItemEntity: Entity): void => {
 
 				const blockInMiddleLocation: Vector3 = Vector3Utils.add(blockLocation, { x: 0.5, y: 0.5, z: 0.5 });
 
-				enderPearlItemDimension.spawnParticle(ElevatorsParticleIdentifiers.woolToElevatorNorthSouth, blockInMiddleLocation, WoolToElevatorParticleMolang);
-				enderPearlItemDimension.spawnParticle(ElevatorsParticleIdentifiers.woolToElevatorEastSouth, blockInMiddleLocation, WoolToElevatorParticleMolang);
+				enderPearlItemDimension.spawnParticle(ElevatorsParticles.woolToElevatorNorthSouth, blockInMiddleLocation, WoolToElevatorParticleMolang);
+				enderPearlItemDimension.spawnParticle(ElevatorsParticles.woolToElevatorEastWest, blockInMiddleLocation, WoolToElevatorParticleMolang);
 
 				for (const player of enderPearlItemDimension.getPlayers({ location: blockLocation, minDistance: 0, maxDistance: 2 })) {
 					const checkElevatorBlockBelow: Block | undefined = isElevatorBlockBelow(enderPearlItemDimension, player.location);

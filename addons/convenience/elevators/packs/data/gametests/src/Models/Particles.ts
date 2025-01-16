@@ -1,8 +1,8 @@
 import { MolangVariableMap } from "@minecraft/server";
 
-export enum ElevatorsParticleIdentifiers {
+export enum ElevatorsParticles {
 	woolToElevatorNorthSouth = "minecraft:portal_north_south",
-	woolToElevatorEastSouth = "minecraft:portal_east_west",
+	woolToElevatorEastWest = "minecraft:portal_east_west",
 	elevatorTick = "bt:e.wool_to_elevator"
 }
 

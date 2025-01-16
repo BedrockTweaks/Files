@@ -1,11 +1,11 @@
 import { world, Player, Block, WorldInitializeBeforeEvent, BlockComponentStepOnEvent, BlockComponentStepOffEvent, BlockComponentPlayerDestroyEvent, BlockComponentTickEvent } from "@minecraft/server";
-import { ElevatorsBlockCustomComponentIdentifiers, ElevatorsDynamicProperties } from "../Models";
+import { ElevatorsBlockCustomComponents, ElevatorsDynamicProperties } from "../Models";
 import { startElevatorTeleport, stopElevatorTeleport, tickElevatorParticles, isElevatorBlockBelow } from "../Actions";
 
 world.beforeEvents.worldInitialize.subscribe((worldInitializeEvent: WorldInitializeBeforeEvent): void => {
 	const { blockComponentRegistry } = worldInitializeEvent;
 
-	blockComponentRegistry.registerCustomComponent(ElevatorsBlockCustomComponentIdentifiers.teleport, {
+	blockComponentRegistry.registerCustomComponent(ElevatorsBlockCustomComponents.teleport, {
 		onStepOn: (stepOnEvent: BlockComponentStepOnEvent): void => {
 			const { entity: player, dimension, block } = stepOnEvent;
 

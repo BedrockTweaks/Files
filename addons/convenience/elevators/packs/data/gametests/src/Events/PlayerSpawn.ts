@@ -1,5 +1,5 @@
 import { world, Block, PlayerSpawnAfterEvent } from "@minecraft/server";
-import { startElevatorTeleport, isElevatorBlockBelow } from "../Actions";
+import { isElevatorBlockBelow, startElevatorTeleport } from "../Actions";
 
 world.afterEvents.playerSpawn.subscribe((playerSpawnEvent: PlayerSpawnAfterEvent): void => {
 	if (!playerSpawnEvent.initialSpawn) return;

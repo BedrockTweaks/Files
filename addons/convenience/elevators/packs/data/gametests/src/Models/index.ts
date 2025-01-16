@@ -1,5 +1,5 @@
 export { WoolBlockTypes, ElevatorBlockTypes } from "./BlockTypes";
-export { ElevatorsParticleIdentifiers, ElevatorTickParticleMolang, WoolToElevatorParticleMolang } from "./Particles";
+export { ElevatorsParticles, ElevatorTickParticleMolang, WoolToElevatorParticleMolang } from "./Particles";
 export { ElevatorsDynamicProperties } from "./DynamicProperties";
-export { ElevatorsSoundIdentifiers } from "./Sounds";
-export { ElevatorsBlockCustomComponentIdentifiers } from "./CustomComponents";
+export { ElevatorsSounds } from "./Sounds";
+export { ElevatorsBlockCustomComponents } from "./CustomComponents";
