@@ -3,7 +3,7 @@ import { MolangVariableMap } from "@minecraft/server";
 export enum ElevatorsParticles {
 	woolToElevatorNorthSouth = "minecraft:portal_north_south",
 	woolToElevatorEastWest = "minecraft:portal_east_west",
-	elevatorTick = "bt:e.wool_to_elevator"
+	elevatorTick = "bt:e.elevator_tick"
 }
 
 export const ElevatorTickParticleMolang: MolangVariableMap = new MolangVariableMap();
