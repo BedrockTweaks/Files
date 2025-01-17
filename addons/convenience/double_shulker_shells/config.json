@@ -1,0 +1,34 @@
+{
+	"$schema": "https://raw.githubusercontent.com/Bedrock-OSS/regolith-schemas/main/config/v1.4.json",
+	"author": "PAPISOP",
+	"name": "Double Shulker Shells - Convenience - Bedrock Tweaks",
+	// Currently this throws an error because resourcePack field is omitted
+	// but this addon doesn't need a resource pack
+	// one more thing, it generates an empty resource pack folder during regolith watch
+	"packs": {
+		"behaviorPack": "./packs/BP",
+		"resourcePack": ""
+	},
+	"regolith": {
+		"dataPath": "./packs/data",
+		"formatVersion": "1.4.0",
+		"profiles": {
+			"build": {
+				"export": {
+					"readOnly": true,
+					"target": "local",
+					"build": "standard"
+				},
+				"filters": []
+			},
+			"default": {
+				"export": {
+					"readOnly": false,
+					"target": "development",
+					"build": "standard"
+				},
+				"filters": []
+			}
+		}
+	}
+}
