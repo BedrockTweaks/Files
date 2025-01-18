@@ -1,1 +1,1 @@
-export { startElevatorTeleport, stopElevatorTeleport, isElevatorBlockBelow, tickElevatorParticles, woolToElevator } from "./Elevators";
+export { startElevatorTeleport, stopElevatorTeleport, isElevatorBlockBelow, tickElevatorParticles, woolToElevator, stopNearbyPlayersElevatorTeleport } from "./Elevators";

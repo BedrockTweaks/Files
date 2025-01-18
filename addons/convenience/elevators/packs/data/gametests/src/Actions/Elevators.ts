@@ -229,3 +229,18 @@ export const woolToElevator = (enderPearlItemEntity: Entity): void => {
 		}
 	}, 1);
 };
+
+/**
+ * @name stopNearbyPlayersElevatorTeleport
+ * @param {Dimension} elevatorDimension - The dimension in which the provided elevator block is situated in.
+ * @param {string} elevatorBlockTypeId - The type id of the elevator block which is provided.
+ * @param {Vector3} elevatorBlockLocation - The location of the elevator block which is provided.
+ * @remarks Stops the elevator teleport for all the nearby players who are standing on top of the provided elevator block.
+ */
+export const stopNearbyPlayersElevatorTeleport = (elevatorDimension: Dimension, elevatorBlockTypeId: string, elevatorBlockLocation: Vector3): void => {
+	for (const nearbyPlayer of elevatorDimension.getPlayers({ location: elevatorBlockLocation, minDistance: 0, maxDistance: 10 })) {
+		const checkElevatorBlockBelow: Block | undefined = isElevatorBlockBelow(elevatorDimension, nearbyPlayer.location);
+
+		if (checkElevatorBlockBelow && checkElevatorBlockBelow.typeId === elevatorBlockTypeId && Vector3Utils.equals(checkElevatorBlockBelow.location, elevatorBlockLocation)) stopElevatorTeleport(nearbyPlayer);
+	}
+};

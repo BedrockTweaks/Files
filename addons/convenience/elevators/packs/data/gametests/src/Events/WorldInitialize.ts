@@ -1,4 +1,4 @@
-import { world, Player, Block, WorldInitializeBeforeEvent, BlockComponentStepOnEvent, BlockComponentStepOffEvent, BlockComponentPlayerDestroyEvent, BlockComponentTickEvent } from "@minecraft/server";
+import { world, Player, Block, WorldInitializeBeforeEvent, BlockComponentStepOnEvent, BlockComponentStepOffEvent, BlockComponentTickEvent } from "@minecraft/server";
 import { ElevatorsBlockCustomComponents, ElevatorsDynamicProperties } from "../Models";
 import { startElevatorTeleport, stopElevatorTeleport, tickElevatorParticles, isElevatorBlockBelow } from "../Actions";
 
@@ -17,14 +17,6 @@ world.beforeEvents.worldInitialize.subscribe((worldInitializeEvent: WorldInitial
 			const { entity: player } = stepOffEvent;
 
 			if (!(player instanceof Player)) return;
-
-			stopElevatorTeleport(player);
-		},
-		onPlayerDestroy: (playerDestroyEvent: BlockComponentPlayerDestroyEvent): void => {
-			// If someone else broke the block other than the player standing, then the player's elevator teleport will end when their cooldown ends
-			const { player } = playerDestroyEvent;
-
-			if (!player) return;
 
 			stopElevatorTeleport(player);
 		},
