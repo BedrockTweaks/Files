@@ -1,0 +1,6 @@
+# Regolith
+/build
+/.regolith
+
+# NPM
+node_modules/

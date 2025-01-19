@@ -1,0 +1,16 @@
+{
+    "version": "0.3.0",
+    "configurations": [
+        {
+            "type": "minecraft-js",
+            "request": "attach",
+            "sourceMapRoot": "${workspaceFolder}/.regolith/tmp/BP/scripts/",
+            "generatedSourceRoot": "${workspaceFolder}/.regolith/tmp/BP/scripts/",
+            "localRoot": "${workspaceFolder}/packs/data/gametests/src/",
+            "name": "(gametests) Debug with Minecraft",
+            "mode": "listen",
+            "port": 19144,
+            "targetModuleUuid": "9ff8cf64-0240-417e-98d2-8c4afabcc170"
+        }
+    ]
+}
