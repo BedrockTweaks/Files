@@ -105,7 +105,7 @@ If there is need to scale the template use closest neighbor instead of other sam
 
 JSON files should be formatted using 1 tab with size 4 for indentation.
 
-TS files should be formatted using 2 spaces for indentation.
+TS files should be formatted using 4 spaces for indentation.
 
 ### Addons
 
@@ -155,6 +155,7 @@ When making an addon from the template you should look for these keys and replac
 ```
 <pack_name>
 <pack_category>
+<description>
 <author name/username>
 <bp_uuid>
 <data_module_uuid>
