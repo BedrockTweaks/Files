@@ -13,6 +13,10 @@
 			"gametests": {
 				"url": "github.com/Bedrock-OSS/regolith-filters",
 				"version": "1.6.1"
+			},
+			"file_generations": {
+				"script": "./filters/File Generations/main.js",
+				"runWith": "nodejs"
 			}
 		},
 		"profiles": {
@@ -43,6 +47,9 @@
 							"outfile": "BP/scripts/main.js",
 							"debugBuild": false
 						}
+					},
+					{
+						"filter": "file_generations"
 					}
 				]
 			},
@@ -73,6 +80,9 @@
 							"outfile": "BP/scripts/main.js",
 							"debugBuild": true
 						}
+					},
+					{
+						"filter": "file_generations"
 					}
 				]
 			}
