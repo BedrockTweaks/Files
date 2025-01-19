@@ -28,6 +28,9 @@
 				},
 				"filters": [
 					{
+						"filter": "file_generations"
+					},
+					{
 						"filter": "gametests",
 						"settings": {
 							"buildOptions": {
@@ -47,9 +50,6 @@
 							"outfile": "BP/scripts/main.js",
 							"debugBuild": false
 						}
-					},
-					{
-						"filter": "file_generations"
 					}
 				]
 			},
@@ -60,6 +60,9 @@
 					"build": "standard"
 				},
 				"filters": [
+					{
+						"filter": "file_generations"
+					},
 					{
 						"filter": "gametests",
 						"settings": {
@@ -80,9 +83,6 @@
 							"outfile": "BP/scripts/main.js",
 							"debugBuild": true
 						}
-					},
-					{
-						"filter": "file_generations"
 					}
 				]
 			}

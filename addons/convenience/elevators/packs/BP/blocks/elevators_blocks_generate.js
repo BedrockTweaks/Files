@@ -3,8 +3,8 @@ import path from "path";
 (async () => {
 	const rootDir = process.env.ROOT_DIR || process.cwd();
 
-	const modulePath = path.resolve(rootDir, "filters/File Generations/create_files.js");
-	const { createFiles } = await import(`file://${modulePath}`);
+	const modulePath = path.resolve(rootDir, "filters/File Generations/create_file.js");
+	const { createFile } = await import(`file://${modulePath}`);
 
 	const ElevatorBlockColors = [
 		"black",
@@ -45,7 +45,7 @@ import path from "path";
 	};
 
 	for (const color of ElevatorBlockColors) {
-		createFiles(
+		createFile(
 			`{
 	"format_version": "1.21.50",
 	"minecraft:block": {
