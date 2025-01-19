@@ -17,7 +17,7 @@ const jsFiles = [];
 /**
  * @name collectFiles
  * @param {string} directory - The directory in which the files need to be searched.
- * @param {string[]} excludePath - The file paths to be excluded from being collected.
+ * @param {string[]} [excludePath=[]] - An optional parameter for the file paths to be excluded from being collected.
  * @remarks Collects the files with .js extension and push it to jsFiles array.
  */
 const collectFiles = (directory, excludePath = []) => {
