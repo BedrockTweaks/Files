@@ -82,12 +82,14 @@
 								/**
 								 * Add here any needed native minecraft module, available modules are
 								 * @minecraft/server
-								 * @minecraft/server-gametest
+								 * @minecraft/server-gametest (This module can only be used in BDS)
 								 * @minecraft/server-ui
-								 * @minecraft/server-admin
-								 * @minecraft/server-net
+								 * @minecraft/server-admin (This module can only be used in BDS)
+								 * @minecraft/server-net (This module can only be used in BDS)
 								 *
-								 * Use the latest available version for the current release of minecraft
+								 * Use the latest version that corresponds with the minecraft version you are using as the minimum supported version for your addon
+								 *
+								 * Make sure to update those versions in the packs/data/gametests/package.json too
 								 */
 								"@minecraft/server@1.16.0",
 								"@minecraft/server-ui@1.3.0"
