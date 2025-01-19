@@ -103,9 +103,7 @@ If there is need to scale the template use closest neighbor instead of other sam
 
 ### Formatting
 
-JSON files should be formatted using 1 tab with size 4 for indentation.
-
-TS files should be formatted using 4 spaces for indentation.
+JSON, JS and TS files should be formatted using 1 tab with size 4 for indentation.
 
 ### Addons
 
