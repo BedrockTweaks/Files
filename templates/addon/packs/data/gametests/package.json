@@ -5,11 +5,11 @@
 	},
 	"dependencies": {
 		/**
- 		* Update the @minecraft/math to the latest version available
- 		*
- 		* Update @minecraft/server, @minecraft/server-ui, @minecraft/vanilla-data and @minecraft/common to the latest version
- 		* that corresponds with the minecraft version you are using as the minimum supported version for your addon
- 		*/
+		 * Update the @minecraft/math to the latest version available
+		 *
+		 * Update @minecraft/server, @minecraft/server-ui, @minecraft/vanilla-data and @minecraft/common to the latest version
+		 * that corresponds with the minecraft version you are using as the minimum supported version for your addon
+		 */
 		"@minecraft/common": "1.2.0",
 		"@minecraft/math": "2.0.1",
 		"@minecraft/server": "1.16.0",
