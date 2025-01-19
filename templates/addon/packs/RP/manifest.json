@@ -9,7 +9,13 @@
 			0,
 			0
 		],
-		// Update to latest minecraft release
+		/**
+		 * Set the minimum minecraft version which your addon will support
+		 *
+		 * Please note that don't set the minimum minecraft version below the version array set in addon's packs.json
+		 *
+		 * It is highly recommended and preferred to always use the latest minecraft version release to use latest features
+		 */
 		"min_engine_version": [
 			1,
 			21,
