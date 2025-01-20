@@ -2,15 +2,14 @@ const path = require("path");
 const fs = require("fs");
 const { exec } = require("child_process");
 
-const ROOT_DIR = process.env.ROOT_DIR;
-const RUN_DIR = process.cwd();
+const RUN_DIRECTORY = process.cwd();
 
 const DIRECTORIES = [
-	path.join(RUN_DIR, "BP"),
-	path.join(RUN_DIR, "RP")
+	path.join(RUN_DIRECTORY, "BP"),
+	path.join(RUN_DIRECTORY, "RP")
 ];
 const EXCLUDE_PATHS = [
-	path.join(RUN_DIR, "BP", "scripts", "main.js")
+	path.join(RUN_DIRECTORY, "BP", "scripts", "main.js")
 ];
 
 const jsFiles = [];
@@ -45,7 +44,7 @@ const runFile = (filePath) => {
 	return new Promise((resolve, reject) => {
 		const command = `node "${filePath}"`;
 		const options = {
-			env: process.env
+			env: { ...process.env, RUN_DIRECTORY }
 		};
 
 		exec(command, options, (error) => {
@@ -82,7 +81,7 @@ const removeFile = (filePath) => {
 
 (async () => {
 	try {
-		if (!ROOT_DIR) {
+		if (!process.env.ROOT_DIR) {
 			throw new Error("❌ This file can only be run by using Regolith");
 		}
 

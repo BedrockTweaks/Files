@@ -7,18 +7,18 @@ import { existsSync, mkdirSync, writeFileSync } from "fs";
  *   - If a string is provided, it is written directly.
  *   - If an object is provided, it is converted into a formatted JSON string.
  * @param {string} path - The relative file path (within the packs directory where resource pack or behavior pack folder exists) in which the file needs to be created.
- * @param {string} ROOT_DIR - The root directory in which the instance of Regolith is running.
+ * @param {string} runDirectory - The run directory in which the Regolith stores the temporary files and folders of the addon.
  * @remarks Creates a file with the specified content at the specified path in the Regolith export directory.
  * 
  * @throws {TypeError} If "content" parameter is not a string or an object.
  * @throws {TypeError} If "path" parameter is not a string.
- * @throws {TypeError} If "ROOT_DIR" parameter is not a string.
+ * @throws {TypeError} If "runDirectory" parameter is not a string.
  * @throws {Error} If a file already exists at the target path.
  */
-export const createFile = (content, path, ROOT_DIR) => {
+export const createFile = (content, path, runDirectory) => {
 	const typeofContent = typeof content;
 	const typeofPath = typeof path;
-	const typeofROOT_DIR = typeof ROOT_DIR;
+	const typeofRunDirectory = typeof runDirectory;
 
 	let output;
 
@@ -33,11 +33,11 @@ export const createFile = (content, path, ROOT_DIR) => {
 	if (typeofPath !== "string") {
 		throw new TypeError(`❌ Expected type "string" in path parameter, but received ${typeofPath}`);
 	}
-	if (typeofROOT_DIR !== "string") {
-		throw new TypeError(`❌ Expected type "string" in ROOT_DIR parameter, but received ${typeofROOT_DIR}`);
+	if (typeofRunDirectory !== "string") {
+		throw new TypeError(`❌ Expected type "string" in runDirectory parameter, but received ${typeofRunDirectory}`);
 	}
 
-	const outputPath = join(ROOT_DIR, ".regolith", "tmp", path);
+	const outputPath = join(runDirectory, path);
 
 	if (existsSync(outputPath)) {
 		throw new Error(`❌ This file already exists: ${path}`);

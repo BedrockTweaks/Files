@@ -3,13 +3,13 @@ import path from "path";
 /** @typedef {import("../../../../filters/File Generations/create_file.js").createFile} CreateFileFunction */
 
 (async () => {
-	const rootDir = process.env.ROOT_DIR;
+	const runDirectory = process.env.RUN_DIRECTORY;
 
-	if (!rootDir) {
+	if (!runDirectory) {
 		throw new Error("❌ This file can only be run by using Regolith");
 	}
 
-	const modulePath = path.resolve(rootDir, "filters/File Generations/create_file.js");
+	const modulePath = path.resolve(process.env.ROOT_DIR, "filters/File Generations/create_file.js");
 
 	/** @type {{ createFile: CreateFileFunction }} */
 	const { createFile } = await import(`file://${modulePath}`);
@@ -58,7 +58,7 @@ import path from "path";
 	]
 }`,
 			`BP/loot_tables/blocks/e.${color}_elevator.loot.json`,
-			rootDir
+			runDirectory
 		);
 	}
 })();
