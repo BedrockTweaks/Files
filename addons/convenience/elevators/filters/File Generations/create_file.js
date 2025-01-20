@@ -9,20 +9,31 @@ import { existsSync, mkdirSync, writeFileSync } from "fs";
  * @remarks Creates a file using the content as the template code in the specified path and the ROOT_DIR.
  */
 export const createFile = (content, path, ROOT_DIR) => {
+	const typeofContent = typeof content;
+	const typeofPath = typeof path;
+	const typeofROOT_DIR = typeof ROOT_DIR;
+
 	let output;
 
-	if (typeof content === "string") {
+	if (typeofContent === "string") {
 		output = content;
-	} else {
+	} else if (typeofContent === "object") {
 		output = JSON.stringify(content, null, 4);
+	} else {
+		throw new TypeError(`❌ Expected type "string" or "object" in content parameter, but received ${typeofContent}`);
+	}
+
+	if (typeofPath !== "string") {
+		throw new TypeError(`❌ Expected type "string" in path parameter, but received ${typeofPath}`);
+	}
+	if (typeofROOT_DIR !== "string") {
+		throw new TypeError(`❌ Expected type "string" in ROOT_DIR parameter, but received ${typeofROOT_DIR}`);
 	}
 
 	const outputPath = join(ROOT_DIR, ".regolith", "tmp", path);
 
 	if (existsSync(outputPath)) {
-		console.error(`❌ This file already exists: ${path}`);
-
-		return;
+		throw new Error(`❌ This file already exists: ${path}`);
 	}
 
 	const outputDirectory = dirname(outputPath);

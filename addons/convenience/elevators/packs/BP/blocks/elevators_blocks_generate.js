@@ -1,7 +1,11 @@
 import path from "path";
 
 (async () => {
-	const rootDir = process.env.ROOT_DIR || process.cwd();
+	const rootDir = process.env.ROOT_DIR;
+
+	if (!rootDir) {
+		throw new Error("❌ This file can only be run by using Regolith");
+	}
 
 	const modulePath = path.resolve(rootDir, "filters/File Generations/create_file.js");
 	const { createFile } = await import(`file://${modulePath}`);
