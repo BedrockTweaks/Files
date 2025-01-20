@@ -1,4 +1,4 @@
 export enum AntiCreeperGriefScriptEvents {
-    config = 'bt:acg.config',
-    uninstall = 'bt:acg.uninstall'
+	config = 'bt:acg.config',
+	uninstall = 'bt:acg.uninstall'
 }

@@ -4,12 +4,12 @@
  */
 export enum AntiCreeperGriefSettingsDynamicProperties {
 	initialized = 'bt:acg.settings_initialized',
-	creepers_do_damage = 'bt:acg.creepers_do_damage'
+	creeperDoDamage = 'bt:acg.creepers_do_damage'
 }
 
 export interface AntiCreeperGriefSettings {
 	// Indicates whether the AntiCreeperGrief system settings have been initialized.
 	initialized: boolean;
 	// Indicates whether creeper explosions will damage players or not.
-	creepers_do_damage: boolean;
+	creeperDoDamage: boolean;
 }

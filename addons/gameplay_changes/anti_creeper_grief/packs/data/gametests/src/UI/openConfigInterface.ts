@@ -7,16 +7,13 @@ export const openConfigInterface = (player: Player): void => {
 	const AntiCreeperGriefSettings: AntiCreeperGriefSettings = getSettings();
 	const form: ModalFormData = new ModalFormData()
 		.title({ translate: 'bt.acg.config.title' })
-		.toggle({ translate: 'bt.acg.config.do_damage', with: ['\n'] }, AntiCreeperGriefSettings.creepers_do_damage);
+		.toggle({ translate: 'bt.acg.config.do_damage', with: ['\n'] }, AntiCreeperGriefSettings.creeperDoDamage);
 
 	form.show(player).then((response: ModalFormResponse): void => {
 		if (response.formValues) {
-			// Toggle = boolean
-			// Slider = number
-			// Togggle, Toggle, Toggle, Slider, Slider, Slider
 			const formValues: [boolean] = response.formValues as [boolean];
 
-			AntiCreeperGriefSettings.creepers_do_damage = formValues[0]
+			AntiCreeperGriefSettings.creeperDoDamage = formValues[0];
 		}
 
 		if (!response.canceled) {

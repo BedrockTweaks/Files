@@ -13,7 +13,7 @@ export const initializeSettings = (): void => {
 			AntiCreeperGriefSettingsDynamicProperties,
 			{
 				initialized: true,
-				creepers_do_damage: false
+				creepers_do_damage: false,
 			},
 		);
 	}
@@ -29,8 +29,8 @@ export const getSettings = (): AntiCreeperGriefSettings => getProperties<AntiCre
 /**
  * Updates the addon settings in the world properties.
  *
- * @param {AntiCreeperGriefSettings} AntiCreeperGriefSettings - The updated settings to be saved.
+ * @param {AntiCreeperGriefSettings} antiCreeperGriefSettings - The updated settings to be saved.
  */
-export const setSettings = (AntiCreeperGriefSettings: AntiCreeperGriefSettings): void => {
-	setProperties(world, AntiCreeperGriefSettingsDynamicProperties, AntiCreeperGriefSettings);
+export const setSettings = (antiCreeperGriefSettings: AntiCreeperGriefSettings): void => {
+	setProperties(world, AntiCreeperGriefSettingsDynamicProperties, antiCreeperGriefSettings);
 };
