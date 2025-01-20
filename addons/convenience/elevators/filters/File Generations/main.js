@@ -9,7 +9,7 @@ const DIRECTORIES = [
 	path.join(RUN_DIR, "BP"),
 	path.join(RUN_DIR, "RP")
 ];
-const EXCLUDE_PATH = [
+const EXCLUDE_PATHS = [
 	path.join(RUN_DIR, "BP", "scripts", "main.js")
 ];
 
@@ -18,18 +18,18 @@ const jsFiles = [];
 /**
  * @name collectFiles
  * @param {string} directory - The directory in which the files need to be searched.
- * @param {string[]} [excludePath=[]] - An optional parameter for the file paths to be excluded from being collected.
+ * @param {string[]} [excludePaths=[]] - An optional parameter for the file paths to be excluded from being collected.
  * @remarks Collects the files with .js extension and push it to jsFiles array.
  */
-const collectFiles = (directory, excludePath = []) => {
+const collectFiles = (directory, excludePaths = []) => {
 	const files = fs.readdirSync(directory, { withFileTypes: true });
 
 	for (const file of files) {
 		const filePath = path.join(directory, file.name);
 
 		if (file.isDirectory()) {
-			collectFiles(filePath, EXCLUDE_PATH);
-		} else if (".js" === path.extname(file.name) && !excludePath.includes(filePath)) {
+			collectFiles(filePath, EXCLUDE_PATHS);
+		} else if (".js" === path.extname(file.name) && !excludePaths.includes(filePath)) {
 			jsFiles.push(filePath);
 		}
 	}
@@ -88,7 +88,7 @@ const removeFile = (filePath) => {
 
 		for (const directory of DIRECTORIES) {
 			if (fs.existsSync(directory)) {
-				collectFiles(directory, EXCLUDE_PATH);
+				collectFiles(directory, EXCLUDE_PATHS);
 			}
 		}
 
