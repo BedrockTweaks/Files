@@ -1,0 +1,99 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "gametests",
+  "type": "object",
+  "properties": {
+    "buildOptions": {
+      "type": "object",
+      "default": {
+        "entryPoints": ["data/gametests/src/main.ts"],
+        "target": "es2020",
+        "format": "esm",
+        "bundle": true,
+        "minify": true
+      },
+      "additionalProperties": true,
+      "description": "Specifies build options for esbuild."
+    },
+    "moduleUUID": {
+      "type": "string",
+      "description": "The UUID to place inside the manifest module."
+    },
+    "modules": {
+      "type": "array",
+      "default": ["@minecraft/server"],
+      "description": "The scripting modules to inject as dependencies.",
+      "uniqueItems": true,
+      "items": {
+        "anyOf": [
+          {
+            "type": "string",
+            "enum": [
+              "@minecraft/server@1.0.0",
+              "@minecraft/server@1.1.0",
+              "@minecraft/server@1.2.0",
+              "@minecraft/server@1.3.0",
+              "@minecraft/server@1.4.0",
+              "@minecraft/server@1.5.0",
+              "@minecraft/server@1.6.0",
+              "@minecraft/server@1.7.0",
+              "@minecraft/server@1.8.0",
+              "@minecraft/server@1.9.0",
+              "@minecraft/server@1.10.0",
+              "@minecraft/server@1.11.0",
+              "@minecraft/server@1.12.0",
+              "@minecraft/server@1.13.0-beta",
+
+              "@minecraft/server-ui@1.0.0",
+              "@minecraft/server-ui@1.1.0",
+              "@minecraft/server-ui@1.2.0-beta",
+
+              "@minecraft/server-gametest@1.0.0-beta",
+
+              "@minecraft/server-admin@1.0.0-beta",
+
+              "@minecraft/server-net@1.0.0-beta",
+
+              "@minecraft/server-editor@0.1.0-beta"
+            ],
+            "description": "Known scripting module"
+          },
+          {
+            "type": "string",
+            "description": "Scripting module"
+          }
+        ]
+      }
+    },
+    "outfile": {
+      "type": "string",
+      "default": "BP/scripts/main.js",
+      "description": "The path to place the built script file at when buildOptions.bundle is enabled. This property is also used as the entry point for the script module."
+    },
+    "outdir": {
+      "type": "string",
+      "default": "BP/scripts",
+      "description": "The path to build to when buildOptions.bundle is disabled."
+    },
+    "moduleType": {
+      "type": "string",
+      "default": "script",
+      "description": "The manifest module type to inject"
+    },
+    "manifest": {
+      "type": "string",
+      "default": "BP/manifest.json",
+      "description": "The manifest to edit"
+    },
+    "debugBuild": {
+      "type": "boolean",
+      "default": false,
+      "description": "Enables debug mode for the build. This will enable source maps and add debug launch configuration to `.vscode/launch.json`."
+    },
+    "disableManifestModification": {
+      "type": "boolean",
+      "default": false,
+      "description": "Disables adding dependencies and script module to the manifest."
+    }
+  }
+}

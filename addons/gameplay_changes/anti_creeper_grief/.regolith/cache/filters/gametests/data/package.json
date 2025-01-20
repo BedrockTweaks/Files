@@ -1,0 +1,13 @@
+{
+  "name": "example-gametest",
+  "version": "0.0.1",
+  "description": "Example of a GameTest module",
+  "main": "main.js",
+  "scripts": {},
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@minecraft/server": "1.10.0",
+    "@minecraft/server-gametest": "1.0.0-beta.1.20.80-stable"
+  }
+}

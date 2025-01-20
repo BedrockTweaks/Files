@@ -1,0 +1,13 @@
+{
+  "name": "gametests",
+  "version": "0.0.1",
+  "description": "",
+  "scripts": {
+    "postinstall": "node ./setup.js"
+  },
+  "dependencies": {
+    "esbuild": "^0.19.8",
+    "glob": "^10.3.1",
+    "json5": "^2.2.1"
+  }
+}
