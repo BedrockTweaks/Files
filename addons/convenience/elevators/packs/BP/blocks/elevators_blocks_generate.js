@@ -1,5 +1,7 @@
 import path from "path";
 
+/** @typedef {import("../../../filters/File Generations/create_file.js").createFile} CreateFileFunction */
+
 (async () => {
 	const rootDir = process.env.ROOT_DIR;
 
@@ -8,6 +10,8 @@ import path from "path";
 	}
 
 	const modulePath = path.resolve(rootDir, "filters/File Generations/create_file.js");
+
+	/** @type {{ createFile: CreateFileFunction }} */
 	const { createFile } = await import(`file://${modulePath}`);
 
 	const ElevatorBlockColors = [
