@@ -3,10 +3,17 @@ import { existsSync, mkdirSync, writeFileSync } from "fs";
 
 /**
  * @name createFile
- * @param {string | object} content - The template code of the file which have to be generated. It can be a string or an object.
- * @param {string} path - The path in which the file need to be generated.
- * @param {string} ROOT_DIR - The root directory of the instance of regolith running.
- * @remarks Creates a file using the content as the template code in the specified path and the ROOT_DIR.
+ * @param {string | object} content - The content to write to the file. 
+ *   - If a string is provided, it is written directly.
+ *   - If an object is provided, it is converted into a formatted JSON string.
+ * @param {string} path - The relative file path (within the packs directory where resource pack or behavior pack folder exists) in which the file needs to be created.
+ * @param {string} ROOT_DIR - The root directory in which the instance of Regolith is running.
+ * @remarks Creates a file with the specified content at the specified path in the Regolith export directory.
+ * 
+ * @throws {TypeError} If "content" parameter is not a string or an object.
+ * @throws {TypeError} If "path" parameter is not a string.
+ * @throws {TypeError} If "ROOT_DIR" parameter is not a string.
+ * @throws {Error} If a file already exists at the target path.
  */
 export const createFile = (content, path, ROOT_DIR) => {
 	const typeofContent = typeof content;
