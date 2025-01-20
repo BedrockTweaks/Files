@@ -15,6 +15,12 @@
 					"name": "Graves",
 					"description": "When you die, it places a grave to save all your drops. Hit a grave to retrieve your items. /function graves/config",
 					"version": "1.21 - 1.0.0"
+				},
+				{
+					"id": "anti_creeper_grief",
+					"name": "Anti Creeper Grief",
+					"description": "Prevents creepers from blowing up blocks and players do not take damage. /function anti_creeper_grief/config",
+					"version": "1.21 - 1.0.0"
 				}
 			]
 		}

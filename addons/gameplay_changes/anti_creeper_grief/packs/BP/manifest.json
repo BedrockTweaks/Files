@@ -2,7 +2,7 @@
 	"format_version": 2,
 	"header": {
 		"name": "Anti Creeper Grief - Gameplay Changes - Bedrock Tweaks",
-		"description": "Prevents creepers from blowing up blocks and players do not take damage",
+		"description": "Prevents creepers from blowing up blocks and players do not take damage.",
 		"uuid": "982deb38-39ac-4600-a55c-61a10d60cb14",
 		"version": [
 			1,
