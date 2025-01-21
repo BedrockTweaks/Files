@@ -30,7 +30,7 @@ world.beforeEvents.explosion.subscribe((explosionEvent: ExplosionBeforeEvent): v
 		// copy location data, since the source.location data is about to disappear
 		const loc: Vector3 = { x: source.location.x, y: source.location.y, z: source.location.z };
 		// skip a tick, for required priviledge
-		system.run(() => {
+		system.run((): void => {
 			// create particle to fake the explosion
 			dimension.spawnParticle(`minecraft:dragon_death_explosion_emitter`, loc);
 			dimension.playSound(`random.explode`, loc);
