@@ -1,6 +1,7 @@
 .regolith/
 node_modules/
 scripts/
+filters/
 yarn.lock
 package-lock.json
 

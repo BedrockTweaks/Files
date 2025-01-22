@@ -1,0 +1,8 @@
+/**
+ * Actions Module
+ *
+ * This module exports the functions which interact between the game and the addon
+ *
+ */
+export { getSettings, setSettings } from './settings';
+export { uninstall } from './uninstall';
