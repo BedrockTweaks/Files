@@ -1,0 +1,6 @@
+item.bt:bottle_of_xp=Bottle of Experience
+
+bt.xp.config.title=XP Bottling / Configuration
+bt.xb.config.example=This is debug code.
+
+bt.xb.uninstall==§eUninstalled Correctly§r%1Remove the pack from Behavior Packs to complete the uninstall.

@@ -1,0 +1,8 @@
+{
+	"resource_pack_name": "XP Bottling",
+	"texture_data": {
+		"bt:bottle_of_xp": {
+			"textures": "textures/items/bottle_of_xp"
+		}
+	}
+}
