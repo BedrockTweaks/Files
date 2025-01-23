@@ -1,6 +1,7 @@
-import { system, Player, Dimension, Block, Vector3, Entity } from "@minecraft/server";
+import { system, Dimension, Block, Vector3, Entity, Player, ItemStack } from "@minecraft/server";
+import { BlockStateSuperset } from "@minecraft/vanilla-data";
 import { Vector3Builder, Vector3Utils } from "@minecraft/math";
-import { ElevatorsDynamicProperties, ElevatorsSounds, ElevatorsParticles, ElevatorBlockTypes, WoolBlockTypes, ElevatorTickParticleMolang, WoolToElevatorParticleMolang } from "../Models";
+import { ElevatorsDynamicProperties, ElevatorsSounds, ElevatorsParticles, ElevatorBlockTypes, WoolBlockTypes, ElevatorTickParticleMolang, WoolToElevatorParticleMolang, VanillaFullBlocksList, ElevatorsBlockStates, IllegalFullBlocksList } from "../Models";
 
 /**
  * @name startElevatorTeleport
@@ -243,4 +244,58 @@ export const stopNearbyPlayersElevatorTeleport = (elevatorDimension: Dimension, 
 
 		if (checkElevatorBlockBelow && checkElevatorBlockBelow.typeId === elevatorBlockTypeId && Vector3Utils.equals(checkElevatorBlockBelow.location, elevatorBlockLocation)) stopElevatorTeleport(nearbyPlayer);
 	}
+};
+
+/**
+ * @name camouflageElevator
+ * @param {Player} player - The player who wants to camouflage the elevator.
+ * @param {Block} elevatorBlock - The elevator block which has to be camouflaged.
+ * @param {ItemStack} item - The item which is used to camouflage the elevator into that item only if it is a full block.
+ * @remarks Camouflages the elevator into the item which is used on it.
+ *
+ * This function can't be called in read-only mode.
+ */
+export const camouflageElevator = (player: Player, elevatorBlock: Block, item: ItemStack): void => {
+	// TODO: Fix elevator camouflage for grass block top having grayscale texture instead of colored texture
+
+	const { typeId: itemTypeId } = item;
+
+	if (IllegalFullBlocksList.includes(itemTypeId)) {
+		player.sendMessage({ translate: "bt.elevators.camouflage.illegal_full_blocks" });
+
+		return;
+	}
+
+	if (!VanillaFullBlocksList.includes(itemTypeId)) {
+		player.sendMessage({ translate: "bt.elevators.camouflage.item_cannot_be_used", with: [(itemTypeId.startsWith("minecraft:") ? itemTypeId.replace(/minecraft:/g, "").split("_").map((word: string): string => word[0]!.toUpperCase() + word.slice(1)).join(" ") : null) ?? (itemTypeId.startsWith("bt:") ? itemTypeId.substring(itemTypeId.indexOf(".") + 1).split("_").map((word: string): string => word[0]!.toUpperCase() + word.slice(1)).join(" ") : itemTypeId)] });
+
+		return;
+	}
+
+	const maxBits: number = Math.ceil(Math.log2(VanillaFullBlocksList.length));
+
+	const bitStates: Record<string, boolean> = getCamouflageBitStates(VanillaFullBlocksList.indexOf(itemTypeId), maxBits);
+
+	for (const state in bitStates) {
+		elevatorBlock.setPermutation(elevatorBlock.permutation.withState(state as keyof BlockStateSuperset, bitStates[state] as boolean));
+	}
+};
+
+/**
+ * @name getCamouflageBitStates
+ * @param {number} fullBlockIndex - The index of the full block from the VanillaFullBlocksList array.
+ * @param {number} maxBits - The maximum number of binary bits to use.
+ * @remarks Converts the full block index to base 2 binary bits block states.
+ * @returns {Record<string, boolean>} - Returns an object consisting of all the block states binary bits as keys with boolean as values.
+ */
+export const getCamouflageBitStates = (fullBlockIndex: number, maxBits: number): Record<string, boolean> => {
+	const binaryFullBlockIndex: string = fullBlockIndex.toString(2).padStart(maxBits, "0");
+
+	const bitStates: Record<string, boolean> = {};
+
+	binaryFullBlockIndex.split("").forEach((bit: string, bitIndex: number): void => {
+		bitStates[`${ElevatorsBlockStates.camouflageBit}${bitIndex + 1}`] = bit === "1";
+	});
+
+	return bitStates;
 };
