@@ -107,7 +107,7 @@ import path from "path";
 			"minecraft:custom_components": [
 				"bt:e.teleport"
 			],
-			"minecraft:display_name": "${color.split("_").map((word) => word[0].toUpperCase() + word.slice(1)).join(" ")} Elevator",
+			"minecraft:display_name": "${color.split("_").map(word => word[0].toUpperCase() + word.slice(1)).join(" ")} Elevator",
 			"minecraft:destructible_by_explosion": {
 				"explosion_resistance": 0.8
 			},
