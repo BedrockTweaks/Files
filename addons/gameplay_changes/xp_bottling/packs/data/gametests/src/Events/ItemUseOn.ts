@@ -1,3 +1,10 @@
+/**
+ * * itemUseOn Event listeners
+ * In this event we listen for when a player uses an empty glass bottle on an enchanting table
+ * and cancel that interaction before we start processing the reponse action of storing the 
+ * players XP in said bottle
+*/
+
 import {
 	world,
 	system,
@@ -8,7 +15,7 @@ import {
 	MinecraftEntityTypes,
 	MinecraftItemTypes
 } from '@minecraft/vanilla-data';
-import { giveBottle } from '../Actions/xpBottle';
+import { giveXpBottle } from '../Actions';
 
 world.beforeEvents.itemUseOn.subscribe(async(itemUseOnEvent: ItemUseOnBeforeEvent): Promise<void> => {
 	const { source, block, itemStack } = itemUseOnEvent;
@@ -21,5 +28,5 @@ world.beforeEvents.itemUseOn.subscribe(async(itemUseOnEvent: ItemUseOnBeforeEven
 
 	await system.waitTicks(1);
 
-	void giveBottle(source);
+	void giveXpBottle(source);
 });
