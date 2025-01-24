@@ -26,16 +26,7 @@
 			]
 		}
 	],
-	"dependencies": [
-		{
-			"uuid": "37a2a106-b936-439f-a83f-6b3aa19d5e20",
-			"version": [
-				1,
-				0,
-				0
-			]
-		}
-	],
+	"dependencies": [],
 	"metadata": {
 		"authors": [
 			"Vanilla Tweaks",

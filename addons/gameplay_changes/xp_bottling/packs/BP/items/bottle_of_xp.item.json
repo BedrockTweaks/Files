@@ -10,10 +10,10 @@
 		},
 		"components": {
 			"minecraft:use_modifiers": {
-				"use_duration": 0.85,
-				"movement_modifier": 0.5
+				"use_duration": 0.2,
+				"movement_modifier": 0.8
 			},
-			"minecraft:use_animation":"drink",
+			"minecraft:use_animation": "drink",
 			"minecraft:max_stack_size": 64,
 			"minecraft:icon": {
 				"textures": {

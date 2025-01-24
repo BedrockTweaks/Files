@@ -13,6 +13,7 @@ export const initializeSettings = (): void => {
 			XpBottlingSettingsDynamicProperties,
 			{
 				initialized: true,
+				amountOfXp: 23,
 			},
 		);
 	}

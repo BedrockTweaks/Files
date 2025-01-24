@@ -6,3 +6,5 @@
  */
 export { getSettings, setSettings } from './settings';
 export { uninstall } from './uninstall';
+export { giveXpBottle } from './xpBottle';
+export {} from './glassBottle';
