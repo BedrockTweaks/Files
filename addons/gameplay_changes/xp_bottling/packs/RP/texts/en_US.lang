@@ -1,10 +1,17 @@
-item.bt:bottle_of_xp=Bottle of Experience
+item.bt.bottle_of_xp=Bottle of Experience
 
 bt.xp.config.title=XP Bottling / Configuration
 bt.xb.config.example=This is debug code.
+bt.xb.config.global_settings=Edit Global Settings
+
+bt.xp.settings.title=XP Bottling / Settings
+bt.xb.settings.amount_of_xp=Amount of XP%1to store per XP Bottle.
+bt.xb.settings.default_amount_of_xp=23
 
 bt.xb.xp.invalid=Not enough §qXP§r
 bt.xb.xp.increase=+%1 XP
 bt.xb.xp.decrease=-%1 XP
 
 bt.xb.uninstall==§eUninstalled Correctly§r%1Remove the pack from Behavior Packs to complete the uninstall.
+
+bt.graves.settings.despawn_time.hours=Grave Despawn Time%1§7The time after which a grave and it's contents are deleted.%1A grave's despawn timer only runs while the grave is loaded.%1Enter §f0§7 to disable grave despawning. Items normally take §f5§7 minutes to despawn.%1§8Default. 0 hours, 0 minutes, 0 seconds§r%1Current hours

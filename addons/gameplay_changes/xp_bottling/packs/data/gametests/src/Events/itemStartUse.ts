@@ -14,9 +14,6 @@ import {
 import { MinecraftEntityTypes } from '@minecraft/vanilla-data';
 import { XpBottlingsItemTypes } from '../Models';
 
-/**
- * abc
- */
 world.afterEvents.itemStartUse.subscribe(({ source, itemStack }: ItemStartUseAfterEvent): void => {
 	if (!source.matches({ type: MinecraftEntityTypes.Player })) return;
 	if (!itemStack.matches(XpBottlingsItemTypes.XpBottle)) return;

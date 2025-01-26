@@ -4,7 +4,13 @@
  * This module exports the functions which interact between the game and the addon
  *
  */
-export { getSettings, setSettings } from './settings';
+export {
+	initializeSettings,
+	getSettings,
+	setSettings,
+	getPlayerSettings,
+	setPlayerSettings
+} from './settings';
 export { uninstall } from './uninstall';
 export { giveXpBottle } from './xpBottle';
 export {} from './glassBottle';

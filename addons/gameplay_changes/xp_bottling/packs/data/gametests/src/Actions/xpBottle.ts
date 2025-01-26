@@ -8,33 +8,68 @@ import {
 import {
 	XpBottlingsItemTypes,
 	XpBottleSounds,
-	XpBottlingSettings
+	XpBottlingSettings,
+	PlayerXpBottlingSettings
 } from '../Models';
 import { MinecraftItemTypes } from '@minecraft/vanilla-data';
-import { getSettings } from './settings';
+import { getSettings, getPlayerSettings } from '../Actions';
 
 /**
  * Grants the player an XP bottle if they have the required amount.
  *
  * @param {Player} player - The player who is trying to fill an empty bottle with XP.
+ * @param {ItemStack} itemStack - The stack of items that was used to trigger the XP bottle generation.
  */
-export const giveXpBottle = (player: Player): void => {
-	const xpBottlingSettings: XpBottlingSettings = getSettings();
-	const amountString: string = xpBottlingSettings.amountOfXp.toString();
+export const giveXpBottle = (player: Player, itemStack: ItemStack): void => {
+	const { amountOfXp, enableStackCrafting }: XpBottlingSettings = getSettings();
+	const { fillFullStack }: PlayerXpBottlingSettings = getPlayerSettings(player);
+	const currentXp: number = player.getTotalXp();
 
-	if (player.getTotalXp() < xpBottlingSettings.amountOfXp) {
-		void player.onScreenDisplay.setActionBar({ translate: 'bt:xb.xp.invalid' });
+	player.sendMessage(`${enableStackCrafting} | ${fillFullStack}`);
+	if (player.isSneaking && !enableStackCrafting) return;
+	if (player.isSneaking && !fillFullStack) return;
+
+	if (currentXp < amountOfXp) {
+		void player.onScreenDisplay.setActionBar({ translate: 'bt.xb.xp.invalid' });
 
 		return;
 	}
 
-	void removeItemFromHand(player, MinecraftItemTypes.GlassBottle, 1);
-	void reduceXP(player, xpBottlingSettings.amountOfXp);
+	// return;
 
-	// following line just displays a useful bit of info on the action bar to state what happened.
-	void player.onScreenDisplay.setActionBar({ translate: 'bt:xb.xp.decrease', with: [amountString] });
-	void player.dimension.spawnItem(new ItemStack(XpBottlingsItemTypes.XpBottle, 1), player.location);
-	void player.playSound(XpBottleSounds.fillBottle, { volume: 0.5, pitch: 3.5 });
+	if (!player.isSneaking) {
+		void removeItemFromHand(player, MinecraftItemTypes.GlassBottle, 1);
+		void reduceXP(player, amountOfXp);
+
+		// following line just displays a useful bit of info on the action bar to state what happened.
+		void player.onScreenDisplay.setActionBar({ translate: 'bt.xb.xp.decrease', with: [amountOfXp.toString()] });
+		void player.dimension.spawnItem(new ItemStack(XpBottlingsItemTypes.XpBottle, 1), player.location);
+
+		// randomise the pitch to make the sounds more interesting.
+		const pitchIndex: number = Math.round(Math.random() * 2);
+		const pitches: number[] = [0.3, 0.4, 0.5];
+
+		void player.playSound(XpBottleSounds.fillBottle, { volume: 0.5, pitch: pitches[pitchIndex] });
+	} else {
+		// TODO: handle stack crafting.
+		/* order of ops
+		 * 1) check number of bottles that can be filled ✔️
+		 * 2) remove that number ✔️
+		 * 3) fill that number and return to player ✔️
+		 * 4) play sound? ✔️?
+		 * 5) alert player to what just happened. ✔️?
+		*/
+		const numFillableBottles: number = currentXp / amountOfXp;
+		const bottlesToFill: number = Math.min(itemStack.amount, numFillableBottles);
+
+		void removeItemFromHand(player, MinecraftItemTypes.GlassBottle, bottlesToFill);
+		void massReduceXP(player, bottlesToFill * amountOfXp);
+
+		void player.onScreenDisplay.setActionBar({ translate: 'bt.xb.xp.decrease', with: [(bottlesToFill * amountOfXp).toString()] });
+		void player.dimension.spawnItem(new ItemStack(XpBottlingsItemTypes.XpBottle, 1), player.location);
+
+		void player.playSound(XpBottleSounds.fillStack, { volume: 0.5, pitch: 1.5 });
+	}
 };
 
 /**
@@ -101,6 +136,7 @@ export const massReduceXP = (player: Player, amount: number): boolean => {
 	void player.addExperience(-16777216); // max limit for XP earnt in 32bit interger
 	const returnedXP: number = currentXP - amount;
 	void player.addExperience(returnedXP);
+	player.dimension.runCommand(`stopsound ${player.name} random.levelup`); // suppress extra level up sound
 
 	return true;
 };

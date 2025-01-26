@@ -1,8 +1,8 @@
 /**
  * * itemUseOn Event listeners
  * In this event we listen for when a player uses an empty glass bottle on an enchanting table
- * and cancel that interaction before we start processing the reponse action of storing the 
- * players XP in said bottle
+ * and cancel that interaction before we start processing the reponse action of storing the
+ * players XP in bottle/s
 */
 
 import {
@@ -28,5 +28,5 @@ world.beforeEvents.itemUseOn.subscribe(async(itemUseOnEvent: ItemUseOnBeforeEven
 
 	await system.waitTicks(1);
 
-	void giveXpBottle(source);
+	void giveXpBottle(source, itemStack);
 });
