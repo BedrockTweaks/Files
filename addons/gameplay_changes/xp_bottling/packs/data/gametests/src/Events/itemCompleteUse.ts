@@ -15,9 +15,8 @@ world.afterEvents.itemCompleteUse.subscribe(({ source, itemStack }: ItemComplete
 	if (!source.matches({ type: MinecraftEntityTypes.Player })) return;
 	if (!itemStack.matches(XpBottlingsItemTypes.XpBottle)) return;
 
-	const XpBottlingSettings: XpBottlingSettings = getSettings();
-	const amountString = XpBottlingSettings.amountOfXp.toString();
+	const { amountOfXp }: XpBottlingSettings = getSettings();
 
-	void source.onScreenDisplay.setActionBar({ translate: 'bt:xb.xp.increase', with: [amountString] });
-	void source.addExperience(XpBottlingSettings.amountOfXp);
+	void source.onScreenDisplay.setActionBar({ translate: 'bt.xb.xp.increase', with: [amountOfXp.toString()] });
+	void source.addExperience(amountOfXp);
 });

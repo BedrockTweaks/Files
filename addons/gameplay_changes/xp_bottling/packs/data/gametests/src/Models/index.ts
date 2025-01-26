@@ -1,4 +1,9 @@
-export { XpBottlingSettings, XpBottlingSettingsDynamicProperties } from './DynamicProperties';
+export {
+	XpBottlingSettings,
+	XpBottlingSettingsDynamicProperties,
+	PlayerXpBottlingDynamicProperties,
+	PlayerXpBottlingSettings
+} from './dynamicProperties';
 export { XpBottlingsItemTypes } from './ItemTypes';
-export { XpBottlingScriptEvents } from './ScriptEvents';
-export { XpBottleSounds } from './Sounds';
+export { XpBottlingScriptEvents } from './scriptEvents';
+export { XpBottleSounds } from './sounds';
