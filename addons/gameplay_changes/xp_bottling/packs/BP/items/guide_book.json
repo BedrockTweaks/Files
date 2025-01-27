@@ -1,0 +1,25 @@
+{
+	"format_version": "1.21.50",
+	"minecraft:item": {
+		"description": {
+			"identifier": "bt:xb.guide_book",
+			"menu_category": {
+				"category": "equipment"
+			}
+		},
+		"components": {
+			"minecraft:max_stack_size": 1,
+			"minecraft:icon": {
+				"textures": {
+					"default": "bt:xb_guide_book"
+				}
+			},
+			"minecraft:display_name": {
+				"value": "Guide Book"
+			},
+			"minecraft:custom_components": [
+				 "bt:xb.openPlayerConfig"
+			]
+		}
+	}
+}

@@ -7,6 +7,6 @@
 import './itemCompleteUse';
 import './itemStartUse';
 import './itemStopUse';
-import './ItemUseOn';
+import './itemUseOn';
 import './scriptEventReceive';
 import './worldInitialize';
