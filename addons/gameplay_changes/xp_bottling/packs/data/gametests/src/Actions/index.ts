@@ -6,6 +6,7 @@
  */
 export {
 	initializeSettings,
+	initializePlayerSettings,
 	getSettings,
 	setSettings,
 	getPlayerSettings,

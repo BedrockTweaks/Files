@@ -5,8 +5,11 @@ bt.xb.config.example=This is debug code.
 bt.xb.config.global_settings=Edit Global Settings
 
 bt.xp.settings.title=XP Bottling / Settings
-bt.xb.settings.amount_of_xp=Amount of XP%1to store per XP Bottle.
-bt.xb.settings.default_amount_of_xp=23
+bt.xb.settings.amount_of_xp=Amount of XP%1§7The amount of XP to store in a bottle. %1§8Default: 23
+bt.xb.settings.instant_use=Instant Use§7When enabled, XP Bottles can be consumed instantly. %1§8Default: Disabled
+bt.xb.settings.time_to_use=Time to Use%1§7The time it takes to consume one XP Bottle. %1§8Default: 0.2
+bt.xb.settings.enable_stack_consume=Stack Consume%1§7When enabled, Shift + Right Click will consume an entire stack of XP Bottles. %1§8Default: Enabled
+bt.xb.settings.enable_stack_craft=Stack Craft%1§7When enabled, Shift + Right Click will store XP in the entire stack. %1§8Default: Enabled
 
 bt.xb.xp.invalid=Not enough §qXP§r
 bt.xb.xp.increase=+%1 XP
