@@ -13,7 +13,7 @@
 				{
 					"id": "elevators",
 					"name": "Elevators",
-					"description": "Drop an ender pearl above a wool block to make it into an elevator. Jump on it to warp onto an elevator of the same color directly above. Sneak on it to warp onto one directly below",
+					"description": "Drop an ender pearl above a wool block to make it into an elevator. Jump on it to warp onto an elevator of the same color directly above. Sneak on it to warp onto one directly below. /function elevators/config",
 					"version": "1.21.50 - 1.0.0"
 				}
 			]
