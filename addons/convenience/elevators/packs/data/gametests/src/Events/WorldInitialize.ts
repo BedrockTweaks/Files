@@ -1,6 +1,8 @@
-import { world, Player, Block, WorldInitializeBeforeEvent, BlockComponentStepOnEvent, BlockComponentStepOffEvent, BlockComponentTickEvent } from "@minecraft/server";
-import { ElevatorsBlockCustomComponents, ElevatorsDynamicProperties } from "../Models";
-import { startElevatorTeleport, stopElevatorTeleport, tickElevatorParticles, isElevatorBlockBelow } from "../Actions";
+import { world, Player, EntityComponentTypes, Block, WorldInitializeBeforeEvent, BlockComponentStepOnEvent, BlockComponentStepOffEvent, BlockComponentTickEvent, BlockComponentOnPlaceEvent, BlockComponentPlayerInteractEvent, EntityInventoryComponent } from "@minecraft/server";
+import { ElevatorsBlockCustomComponents, ElevatorsBlockIndividualSettingsIds, Elevators, ElevatorsDynamicProperties } from "../Models";
+import { getElevatorBlockSettings, startElevatorTeleport, stopElevatorTeleport, tickElevatorParticles, initializeElevatorBlockSettings, initializeSettings, initializeBlocksSettings, isElevatorBlockBelow } from "../Actions";
+import { openBlockSettings } from "../UI";
+import { getProperties, setProperties } from "../Util";
 
 world.beforeEvents.worldInitialize.subscribe((worldInitializeEvent: WorldInitializeBeforeEvent): void => {
 	const { blockComponentRegistry } = worldInitializeEvent;
@@ -23,19 +25,38 @@ world.beforeEvents.worldInitialize.subscribe((worldInitializeEvent: WorldInitial
 		onTick: (tickEvent: BlockComponentTickEvent): void => {
 			const { block, dimension } = tickEvent;
 
+			if (!getElevatorBlockSettings(block)?.[ElevatorsBlockIndividualSettingsIds.elevatorTickParticles]) return;
+
 			tickElevatorParticles(block.location, dimension);
+		},
+		onPlace: (placeEvent: BlockComponentOnPlaceEvent): void => {
+			const { block } = placeEvent;
+
+			initializeElevatorBlockSettings(block);
+		},
+		onPlayerInteract: (playerInteractEvent: BlockComponentPlayerInteractEvent): void => {
+			const { block, player } = playerInteractEvent;
+
+			if (!player) return;
+
+			if ((player.getComponent(EntityComponentTypes.Inventory) as EntityInventoryComponent).container!.getItem(player.selectedSlotIndex)) return;
+
+			openBlockSettings(player, block);
 		},
 	});
 });
 
 world.afterEvents.worldInitialize.subscribe((): void => {
+	initializeSettings();
+	initializeBlocksSettings();
+
 	for (const player of world.getAllPlayers()) {
-		const runId: number | undefined = player.getDynamicProperty(ElevatorsDynamicProperties.teleportSystemRunId) as number | undefined;
+		const runId: number | undefined = getProperties<Elevators>(player, ElevatorsDynamicProperties).teleportSystemRunId;
 
 		if (runId) {
 			const { dimension: playerDimension } = player;
 
-			player.setDynamicProperty(ElevatorsDynamicProperties.teleportSystemRunId, undefined);
+			setProperties(player, ElevatorsDynamicProperties, { teleportSystemRunId: undefined } as Elevators);
 
 			const elevatorBlock: Block | undefined = isElevatorBlockBelow(playerDimension, player.location);
 

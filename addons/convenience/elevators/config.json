@@ -45,7 +45,8 @@
 							"manifest": "BP/manifest.json",
 							"moduleUUID": "59fe406b-54ce-44c2-ba02-fbd653331108",
 							"modules": [
-								"@minecraft/server@1.16.0"
+								"@minecraft/server@1.16.0",
+								"@minecraft/server-ui@1.3.0"
 							],
 							"outfile": "BP/scripts/main.js",
 							"debugBuild": false
@@ -78,7 +79,8 @@
 							"manifest": "BP/manifest.json",
 							"moduleUUID": "59fe406b-54ce-44c2-ba02-fbd653331108",
 							"modules": [
-								"@minecraft/server@1.16.0"
+								"@minecraft/server@1.16.0",
+								"@minecraft/server-ui@1.3.0"
 							],
 							"outfile": "BP/scripts/main.js",
 							"debugBuild": true

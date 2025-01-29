@@ -37,7 +37,7 @@ const collectFiles = (directory, excludePaths = []) => {
 /**
  * @name runFile
  * @param {string} filePath - The path of the file which needs to be executed.
- * @returns {Promise<void>} - A Promise that resolves if the file is executed successfully, otherwise rejects if there is an error.
+ * @returns {Promise<void>} A Promise that resolves if the file is executed successfully, otherwise rejects if there is an error.
  * @remarks Runs the file in the specified file path.
  */
 const runFile = (filePath) => {
@@ -62,7 +62,7 @@ const runFile = (filePath) => {
 /**
  * @name removeFile
  * @param {string} filePath - The path of the file which needs to be removed.
- * @returns {Promise<void>} - A Promise that resolves if the file is removed successfully, otherwise rejects if there is an error.
+ * @returns {Promise<void>} A Promise that resolves if the file is removed successfully, otherwise rejects if there is an error.
  * @remarks Removes the file in the specified file path.
  */
 const removeFile = (filePath) => {

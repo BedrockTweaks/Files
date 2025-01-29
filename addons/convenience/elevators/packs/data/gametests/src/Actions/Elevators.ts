@@ -1,6 +1,9 @@
-import { system, BlockPermutation, Dimension, Block, Vector3, Entity, Player, ItemStack } from "@minecraft/server";
+import { system, BlockPermutation, Dimension, Block, Vector3, Entity, Player, ItemStack, TeleportOptions, Vector2 } from "@minecraft/server";
 import { Vector3Builder, Vector3Utils } from "@minecraft/math";
-import { ElevatorsDynamicProperties, ElevatorsSounds, ElevatorsParticles, ElevatorBlockTypes, WoolBlockTypes, ElevatorTickParticleMolang, WoolToElevatorParticleMolang, VanillaFullBlocksList, ElevatorsBlockStates, IllegalFullBlocksList } from "../Models";
+import { Elevators, ElevatorsDynamicProperties, ElevatorsSettings, ElevatorsBlockIndividualSettings, ElevatorsBlockIndividualSettingsIds, ElevatorsSounds, ElevatorsParticles, ElevatorBlockTypes, WoolBlockTypes, ElevatorTickParticleMolang, WoolToElevatorParticleMolang, VanillaFullBlocksList, ElevatorsBlockStates, IllegalFullBlocksList } from "../Models";
+import { getProperties, setProperties } from "../Util";
+import { getSettings } from "./settings";
+import { initializeElevatorBlockSettings, getElevatorBlockSettings } from "./blockSettings";
 
 /**
  * @name startElevatorTeleport
@@ -78,7 +81,7 @@ export const startElevatorTeleport = (player: Player, dimension: Dimension, elev
 		}
 	}, 1);
 
-	player.setDynamicProperty(ElevatorsDynamicProperties.teleportSystemRunId, elevatorTeleportRunId);
+	setProperties(player, ElevatorsDynamicProperties, { teleportSystemRunId: elevatorTeleportRunId } as Elevators);
 };
 
 /**
@@ -87,7 +90,7 @@ export const startElevatorTeleport = (player: Player, dimension: Dimension, elev
  * @remarks Stops the elevator teleport process when the player is no longer on top of the elevator block.
  */
 export const stopElevatorTeleport = (player: Player): void => {
-	const runId: number | undefined = player.getDynamicProperty(ElevatorsDynamicProperties.teleportSystemRunId) as number | undefined;
+	const runId: number | undefined = getProperties<Elevators>(player, ElevatorsDynamicProperties).teleportSystemRunId;
 
 	if (runId) clearElevatorsTeleportSystemRun(player, runId);
 };
@@ -103,13 +106,43 @@ export const stopElevatorTeleport = (player: Player): void => {
  * This function can't be called in read-only mode.
  */
 export const teleportToElevator = (player: Player, dimension: Dimension, elevatorTeleportRunId: number, elevatorBlock: Block): void => {
+	const elevatorsSettings: ElevatorsSettings = getSettings();
+	const elevatorBlockSettings: ElevatorsBlockIndividualSettings | undefined = getElevatorBlockSettings(elevatorBlock);
+
+	if (!elevatorBlockSettings) return;
+
+	const elevatorBlockAbove: Block = elevatorBlock.above()!;
+
+	if (elevatorsSettings.safeTeleport) {
+		if (!elevatorBlockAbove.isAir) {
+			player.sendMessage({ translate: "bt.elevators.teleport.not_safe_location" });
+
+			return;
+		}
+	}
+
+	if (elevatorsSettings.xpLevelsUse > 0) {
+		if (player.level < elevatorsSettings.xpLevelsUse) {
+			player.sendMessage({ translate: "bt.elevators.teleport.insufficient_xp_levels", with: [`${elevatorsSettings.xpLevelsUse}`, `${elevatorsSettings.xpLevelsUse !== 1 ? "levels" : "level"}`] });
+
+			return;
+		}
+
+		player.addLevels(-1 * elevatorsSettings.xpLevelsUse);
+	}
+
 	clearElevatorsTeleportSystemRun(player, elevatorTeleportRunId);
 
 	const { location: playerLocation } = player;
 
-	dimension.playSound(ElevatorsSounds.playerTeleport, playerLocation, { volume: ElevatorsSounds.playerTeleportVolume as number });
+	dimension.playSound(ElevatorsSounds.playerTeleport, playerLocation, { volume: ElevatorsSounds.playerTeleportVolume as number, pitch: ElevatorsSounds.playerTeleportPitch as number });
 
-	player.teleport(elevatorBlock.above()!.center());
+	const teleportOptions: TeleportOptions = {
+		// We use rotation instead of facingDirection because it doesn't work for some reasons
+		...elevatorBlockSettings[ElevatorsBlockIndividualSettingsIds.facingDirection] !== "none" ? { rotation: getRotationalDirection(elevatorBlockSettings[ElevatorsBlockIndividualSettingsIds.facingDirection]) } : {},
+	};
+
+	player.teleport(elevatorBlockAbove.center(), teleportOptions);
 
 	// This make sure that the teleport sound is only played when the player is teleported
 	const playerFloorLocation: Vector3 = Vector3Utils.floor(playerLocation);
@@ -123,7 +156,7 @@ export const teleportToElevator = (player: Player, dimension: Dimension, elevato
 		const { location: newPlayerLocation } = player;
 
 		if (!Vector3Utils.equals(playerFloorLocation, Vector3Utils.floor(newPlayerLocation))) {
-			dimension.playSound(ElevatorsSounds.playerTeleport, newPlayerLocation, { volume: ElevatorsSounds.playerTeleportVolume as number });
+			dimension.playSound(ElevatorsSounds.playerTeleport, newPlayerLocation, { volume: ElevatorsSounds.playerTeleportVolume as number, pitch: ElevatorsSounds.playerTeleportPitch as number });
 
 			system.clearRun(playSoundRunId);
 		}
@@ -135,7 +168,7 @@ export const teleportToElevator = (player: Player, dimension: Dimension, elevato
  * @param {Dimension} dimension - The dimension which is provided.
  * @param {Vector3} location - The location which is provided.
  * @remarks Checks if the block below the location is an elevator block or not.
- * @returns {Block | undefined} - If the block below the location is an elevator block, returns the elevator block, otherwise returns undefined.
+ * @returns {Block | undefined} If the block below the location is an elevator block, returns the elevator block, otherwise returns undefined.
  */
 export const isElevatorBlockBelow = (dimension: Dimension, location: Vector3): Block | undefined => {
 	const checkElevatorBlockBelow: Block | undefined = dimension.getBlock(new Vector3Builder(location).floor().subtract({ x: 0, y: 1, z: 0 }));
@@ -151,7 +184,7 @@ export const isElevatorBlockBelow = (dimension: Dimension, location: Vector3): B
  */
 export const clearElevatorsTeleportSystemRun = (player: Player, elevatorTeleportRunId: number): void => {
 	system.clearRun(elevatorTeleportRunId);
-	player.setDynamicProperty(ElevatorsDynamicProperties.teleportSystemRunId, undefined);
+	setProperties(player, ElevatorsDynamicProperties, { teleportSystemRunId: undefined } as Elevators);
 };
 
 /**
@@ -161,6 +194,7 @@ export const clearElevatorsTeleportSystemRun = (player: Player, elevatorTeleport
  * @remarks Spawns particles on top of the elevator block on every 10 ticks.
  *
  * This function can't be called in read-only mode.
+ * @throws {Error} If the error isn't LocationInUnloadedChunkError type.
  */
 export const tickElevatorParticles = (elevatorBlockLocation: Vector3, elevatorDimension: Dimension): void => {
 	// During dimension change, LocationInUnloadedChunkError may be thrown sometimes
@@ -169,7 +203,7 @@ export const tickElevatorParticles = (elevatorBlockLocation: Vector3, elevatorDi
 	} catch (error) {
 		if (!(error instanceof Error)) throw error;
 
-		if (!error.message.includes("LocationInUnloadedChunkError")) console.error(`${error.message}${error.stack}`);
+		if (!error.message.includes("LocationInUnloadedChunkError")) throw error;
 	}
 };
 
@@ -219,6 +253,8 @@ export const woolToElevator = (enderPearlItemEntity: Entity): void => {
 
 				enderPearlItemDimension.spawnParticle(ElevatorsParticles.woolToElevatorNorthSouth, blockInMiddleLocation, WoolToElevatorParticleMolang);
 				enderPearlItemDimension.spawnParticle(ElevatorsParticles.woolToElevatorEastWest, blockInMiddleLocation, WoolToElevatorParticleMolang);
+
+				initializeElevatorBlockSettings(block);
 
 				for (const player of enderPearlItemDimension.getPlayers({ location: blockLocation, minDistance: 0, maxDistance: 2 })) {
 					const checkElevatorBlockBelow: Block | undefined = isElevatorBlockBelow(enderPearlItemDimension, player.location);
@@ -280,7 +316,7 @@ export const camouflageElevator = (player: Player, elevatorBlock: Block, item: I
  * @name getCamouflageBitStates
  * @param {number} fullBlockIndex - The index of the full block from the VanillaFullBlocksList array.
  * @remarks Converts the full block index to base 2 binary bits block states.
- * @returns {Record<string, boolean>} - Returns an object consisting of all the block states binary bits as keys with boolean as values.
+ * @returns {Record<string, boolean>} Returns an object consisting of all the block states binary bits as keys with boolean as values.
  */
 export const getCamouflageBitStates = (fullBlockIndex: number): Record<string, boolean> => {
 	const maxBits: number = Math.ceil(Math.log2(VanillaFullBlocksList.length));
@@ -294,4 +330,26 @@ export const getCamouflageBitStates = (fullBlockIndex: number): Record<string, b
 	});
 
 	return bitStates;
+};
+
+/**
+ * @name getRotationalDirection
+ * @param {string} direction - The direction to use to get its rotational vector2.
+ * @remarks Gets the rotational vector2 based on the direction provided.
+ * @returns {Vector2} Returns the rotational vector2.
+ * @throws {Error} If the direction string is invalid.
+ */
+export const getRotationalDirection = (direction: string): Vector2 => {
+	switch (direction) {
+		case "north":
+			return { x: 0, y: 180 };
+		case "south":
+			return { x: 0, y: 0 };
+		case "east":
+			return { x: 0, y: -90 };
+		case "west":
+			return { x: 0, y: 90 };
+		default:
+			throw new Error("Invalid direction string provided.");
+	}
 };

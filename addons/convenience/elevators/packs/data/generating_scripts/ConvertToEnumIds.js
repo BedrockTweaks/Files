@@ -6,7 +6,7 @@ const vanillaFullBlocksList = ["minecraft:acacia_double_slab", "minecraft:acacia
  * @name convertToEnumIds
  * @param {string[]} blockList - The block list which needs to be converted.
  * @remarks Converts all the values of the blockList array to the enum identifier.
- * @returns {string[]} - Returns the updated and converted array.
+ * @returns {string[]} Returns the updated and converted array.
  */
 const convertToEnumIds = (blockList) => {
 	return blockList.map(block => {

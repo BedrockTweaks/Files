@@ -115,10 +115,6 @@ import path from "path";
 			"minecraft:destructible_by_mining": {
 				"seconds_to_destroy": 1.2
 			},
-			"minecraft:flammable": {
-				"catch_chance_modifier": 30,
-				"destroy_chance_modifier": 60
-			},
 			"minecraft:geometry": "minecraft:geometry.full_block",
 			"minecraft:material_instances": {
 				"*": {
