@@ -1,6 +1,6 @@
 import { world, Block } from "@minecraft/server";
 import { Vector3Utils } from "@minecraft/math";
-import { ElevatorsSettings, ElevatorsBlocksSettings, ElevatorsBlocksSettingsDynamicProperties, ElevatorsBlockIndividualSettings, ElevatorsBlockIndividualSettingsIds } from "../Models";
+import { LatestBlocksSettingsConfigVersion, ElevatorsSettings, ElevatorsBlocksSettings, ElevatorsBlocksSettingsDynamicProperties, ElevatorsBlockIndividualSettings, ElevatorsBlockIndividualSettingsIds } from "../Models";
 import { getProperties, setProperties } from "../Util";
 import { getSettings } from "./settings";
 
@@ -10,15 +10,15 @@ import { getSettings } from "./settings";
  * Sets default values for them and ensures required properties are set.
  */
 export const initializeBlocksSettings = (): void => {
-	const defaultElevatorsBlocksSettings: ElevatorsBlocksSettings = {
-		// TODO: Add config versioning
-		initialized: true,
-		allBlockSettings: JSON.stringify([]),
-	};
-
 	const elevatorsBlocksSettings: ElevatorsBlocksSettings = getBlocksSettings();
 
 	if (!elevatorsBlocksSettings.initialized) {
+		const defaultElevatorsBlocksSettings: ElevatorsBlocksSettings = {
+			configVersion: LatestBlocksSettingsConfigVersion,
+			initialized: true,
+			allBlockSettings: JSON.stringify([]),
+		};
+
 		setBlocksSettings(defaultElevatorsBlocksSettings);
 	}
 };

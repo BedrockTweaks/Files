@@ -2,4 +2,5 @@ export { startElevatorTeleport, stopElevatorTeleport, isElevatorBlockBelow, tick
 export { uninstall } from "./uninstall";
 export { giveElevatorBlock } from "./giveElevatorBlock";
 export { initializeSettings, getSettings, setSettings } from "./settings";
-export { initializeBlocksSettings, getBlocksSettings, setBlocksSettings, initializeElevatorBlockSettings, getElevatorBlockSettings, deleteElevatorBlockSettings } from "./blockSettings";
+export { initializeBlocksSettings, getBlocksSettings, setBlocksSettings, initializeElevatorBlockSettings, getElevatorBlockSettings, deleteElevatorBlockSettings } from "./blocksSettings";
+export { updateConfig } from "./updateConfig";

@@ -3,7 +3,7 @@ import { Vector3Builder, Vector3Utils } from "@minecraft/math";
 import { Elevators, ElevatorsDynamicProperties, ElevatorsSettings, ElevatorsBlockIndividualSettings, ElevatorsBlockIndividualSettingsIds, ElevatorsSounds, ElevatorsParticles, ElevatorBlockTypes, WoolBlockTypes, ElevatorTickParticleMolang, WoolToElevatorParticleMolang, VanillaFullBlocksList, ElevatorsBlockStates, IllegalFullBlocksList } from "../Models";
 import { getProperties, setProperties } from "../Util";
 import { getSettings } from "./settings";
-import { initializeElevatorBlockSettings, getElevatorBlockSettings } from "./blockSettings";
+import { initializeElevatorBlockSettings, getElevatorBlockSettings } from "./blocksSettings";
 
 /**
  * @name startElevatorTeleport

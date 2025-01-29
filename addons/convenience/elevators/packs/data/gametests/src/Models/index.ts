@@ -5,4 +5,4 @@ export { ElevatorsSounds } from "./Sounds";
 export { ElevatorsBlockCustomComponents } from "./CustomComponents";
 export { ElevatorsBlockStates } from "./BlockStates";
 export { ElevatorsScriptEvents } from "./ScriptEvents";
-export { FacingDirections } from "./Config";
+export { LatestSettingsConfigVersion, LatestBlocksSettingsConfigVersion, FacingDirections } from "./ConfigConstants";

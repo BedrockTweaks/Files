@@ -1,6 +1,6 @@
 import { world, Player, EntityComponentTypes, Block, WorldInitializeBeforeEvent, BlockComponentStepOnEvent, BlockComponentStepOffEvent, BlockComponentTickEvent, BlockComponentOnPlaceEvent, BlockComponentPlayerInteractEvent, EntityInventoryComponent } from "@minecraft/server";
 import { ElevatorsBlockCustomComponents, ElevatorsBlockIndividualSettingsIds, Elevators, ElevatorsDynamicProperties } from "../Models";
-import { getElevatorBlockSettings, startElevatorTeleport, stopElevatorTeleport, tickElevatorParticles, initializeElevatorBlockSettings, initializeSettings, initializeBlocksSettings, isElevatorBlockBelow } from "../Actions";
+import { getElevatorBlockSettings, startElevatorTeleport, stopElevatorTeleport, tickElevatorParticles, initializeElevatorBlockSettings, initializeSettings, initializeBlocksSettings, updateConfig, isElevatorBlockBelow } from "../Actions";
 import { openBlockSettings } from "../UI";
 import { getProperties, setProperties } from "../Util";
 
@@ -49,6 +49,7 @@ world.beforeEvents.worldInitialize.subscribe((worldInitializeEvent: WorldInitial
 world.afterEvents.worldInitialize.subscribe((): void => {
 	initializeSettings();
 	initializeBlocksSettings();
+	updateConfig();
 
 	for (const player of world.getAllPlayers()) {
 		const runId: number | undefined = getProperties<Elevators>(player, ElevatorsDynamicProperties).teleportSystemRunId;

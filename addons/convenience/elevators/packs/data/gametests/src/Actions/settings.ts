@@ -1,5 +1,5 @@
 import { world } from "@minecraft/server";
-import { ElevatorsSettings, ElevatorsSettingsDynamicProperties } from "../Models";
+import { LatestSettingsConfigVersion, ElevatorsSettings, ElevatorsSettingsDynamicProperties } from "../Models";
 import { getProperties, setProperties } from "../Util";
 
 /**
@@ -8,23 +8,20 @@ import { getProperties, setProperties } from "../Util";
  * Sets default values for them and ensures required properties are set.
  */
 export const initializeSettings = (): void => {
-	const defaultElevatorsSettings: ElevatorsSettings = {
-		// TODO: Add config versioning
-		initialized: true,
-		defaultFacingDirection: "none",
-		elevatorsTickParticles: true,
-		safeTeleport: false,
-		camouflage: true,
-		xpLevelsUse: 0,
-	};
-
 	const elevatorsSettings: ElevatorsSettings = getSettings();
 
 	if (!elevatorsSettings.initialized) {
+		const defaultElevatorsSettings: ElevatorsSettings = {
+			configVersion: LatestSettingsConfigVersion,
+			initialized: true,
+			defaultFacingDirection: "none",
+			elevatorsTickParticles: true,
+			safeTeleport: false,
+			camouflage: true,
+			xpLevelsUse: 0,
+		};
+
 		setSettings(defaultElevatorsSettings);
-	} else {
-		// TODO: Use config version instead of this
-		setSettings(Object.assign({}, defaultElevatorsSettings, elevatorsSettings));
 	}
 };
 

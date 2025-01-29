@@ -1,6 +1,7 @@
 import { Vector3 } from "@minecraft/server";
 
 export enum ElevatorsSettingsDynamicProperties {
+	configVersion = "bt:e.settings_config_version",
 	initialized = "bt:e.settings_initialized",
 	defaultFacingDirection = "bt:e.settings_default_facing_direction",
 	elevatorsTickParticles = "bt:e.settings_elevators_tick_particles",
@@ -10,6 +11,8 @@ export enum ElevatorsSettingsDynamicProperties {
 }
 
 export interface ElevatorsSettings {
+	// The config version which is currently being used
+	configVersion: number;
 	// Indicates whether the elevators system settings have been initialized
 	initialized: boolean;
 	// Change the default facing direction the elevator teleports the player, so they face that direction upon teleportation
@@ -25,10 +28,13 @@ export interface ElevatorsSettings {
 }
 
 export enum ElevatorsBlocksSettingsDynamicProperties {
+	configVersion = "bt:e.blocks_settings_config_version",
 	initialized = "bt:e.blocks_settings_initialized",
 	allBlockSettings = "bt:e.blocks_settings_all_block_settings"
 }
 export interface ElevatorsBlocksSettings {
+	// The config version which is currently being used
+	configVersion: number;
 	// Indicates whether the elevators blocks settings have been initialized
 	initialized: boolean;
 	// All the block settings of all the elevator blocks
