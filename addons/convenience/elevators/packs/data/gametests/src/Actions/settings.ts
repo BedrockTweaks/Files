@@ -1,6 +1,6 @@
-import { world } from "@minecraft/server";
-import { LatestSettingsConfigVersion, ElevatorsSettings, ElevatorsSettingsDynamicProperties } from "../Models";
-import { getProperties, setProperties } from "../Util";
+import { world } from '@minecraft/server';
+import { LatestSettingsConfigVersion, ElevatorsSettings, ElevatorsSettingsDynamicProperties } from '../Models';
+import { getProperties, setProperties } from '../Util';
 
 /**
  * @name initializeSettings
@@ -14,7 +14,7 @@ export const initializeSettings = (): void => {
 		const defaultElevatorsSettings: ElevatorsSettings = {
 			configVersion: LatestSettingsConfigVersion,
 			initialized: true,
-			defaultFacingDirection: "none",
+			defaultFacingDirection: 'none',
 			elevatorsTickParticles: true,
 			safeTeleport: false,
 			camouflage: true,

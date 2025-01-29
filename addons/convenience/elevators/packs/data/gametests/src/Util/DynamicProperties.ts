@@ -1,4 +1,4 @@
-import { Entity, Vector3, World } from "@minecraft/server";
+import { Entity, Vector3, World } from '@minecraft/server';
 
 type PropertiesTypes = boolean | number | string | Vector3 | undefined;
 

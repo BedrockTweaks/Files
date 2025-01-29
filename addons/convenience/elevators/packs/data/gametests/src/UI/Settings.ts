@@ -1,9 +1,9 @@
-import { world, Player } from "@minecraft/server";
-import { ModalFormData, ModalFormResponse } from "@minecraft/server-ui";
-import { ElevatorsSettings, ElevatorsBlocksSettings, ElevatorsBlockIndividualSettings, ElevatorsBlockIndividualSettingsIds, FacingDirections } from "../Models";
-import { getSettings, setSettings, getBlocksSettings, setBlocksSettings } from "../Actions";
-import { itemUseOnEventSubscription } from "../Events";
-import { openConfigInterface } from "./Config";
+import { world, Player } from '@minecraft/server';
+import { ModalFormData, ModalFormResponse } from '@minecraft/server-ui';
+import { ElevatorsSettings, ElevatorsBlocksSettings, ElevatorsBlockIndividualSettings, ElevatorsBlockIndividualSettingsIds, FacingDirections } from '../Models';
+import { getSettings, setSettings, getBlocksSettings, setBlocksSettings } from '../Actions';
+import { itemUseOnEventSubscription } from '../Events';
+import { openConfigInterface } from './Config';
 
 /**
  * @name openSettingsInterface
@@ -14,12 +14,12 @@ export const openSettingsInterface = (player: Player): void => {
 	const elevatorsSettings: ElevatorsSettings = getSettings();
 
 	const form: ModalFormData = new ModalFormData()
-		.title({ translate: "bt.elevators.settings.title" })
-		.dropdown({ translate: "bt.elevators.settings.default_facing_direction", with: ["\n"] }, FacingDirections.map((word: string): string => word[0]!.toUpperCase() + word.slice(1)), FacingDirections.indexOf(elevatorsSettings.defaultFacingDirection))
-		.toggle({ translate: "bt.elevators.settings.elevators_tick_particles", with: ["\n"] }, elevatorsSettings.elevatorsTickParticles)
-		.toggle({ translate: "bt.elevators.settings.safe_teleport", with: ["\n"] }, elevatorsSettings.safeTeleport)
-		.toggle({ translate: "bt.elevators.settings.camouflage", with: ["\n"] }, elevatorsSettings.camouflage)
-		.textField({ translate: "bt.elevators.settings.xp_levels_use", with: ["\n"] }, "69", `${elevatorsSettings.xpLevelsUse}`);
+		.title({ translate: 'bt.elevators.settings.title' })
+		.dropdown({ translate: 'bt.elevators.settings.default_facing_direction', with: ['\n'] }, FacingDirections.map((word: string): string => word[0]!.toUpperCase() + word.slice(1)), FacingDirections.indexOf(elevatorsSettings.defaultFacingDirection))
+		.toggle({ translate: 'bt.elevators.settings.elevators_tick_particles', with: ['\n'] }, elevatorsSettings.elevatorsTickParticles)
+		.toggle({ translate: 'bt.elevators.settings.safe_teleport', with: ['\n'] }, elevatorsSettings.safeTeleport)
+		.toggle({ translate: 'bt.elevators.settings.camouflage', with: ['\n'] }, elevatorsSettings.camouflage)
+		.textField({ translate: 'bt.elevators.settings.xp_levels_use', with: ['\n'] }, '69', `${elevatorsSettings.xpLevelsUse}`);
 
 	form.show(player).then((formResponse: ModalFormResponse): void => {
 		if (formResponse.canceled) {
@@ -36,7 +36,7 @@ export const openSettingsInterface = (player: Player): void => {
 		const formValue4: number = Number(formValues[4]);
 
 		if (isNaN(formValue4) || !Number.isInteger(formValue4) || formValue4 < 0 || formValue4 > 1000) {
-			player.sendMessage({ translate: "bt.elevators.settings.invalid_number" });
+			player.sendMessage({ translate: 'bt.elevators.settings.invalid_number' });
 
 			return;
 		}

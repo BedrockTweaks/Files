@@ -1,4 +1,4 @@
-import { world } from "@minecraft/server";
+import { world } from '@minecraft/server';
 
 /**
  * @name uninstall
@@ -6,5 +6,5 @@ import { world } from "@minecraft/server";
  */
 export const uninstall = (): void => {
 	world.clearDynamicProperties();
-	world.sendMessage({ translate: "bt.elevators.uninstall" });
+	world.sendMessage({ translate: 'bt.elevators.uninstall' });
 };

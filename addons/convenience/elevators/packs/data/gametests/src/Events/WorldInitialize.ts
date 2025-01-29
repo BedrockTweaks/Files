@@ -1,8 +1,8 @@
-import { world, Player, EntityComponentTypes, Block, WorldInitializeBeforeEvent, BlockComponentStepOnEvent, BlockComponentStepOffEvent, BlockComponentTickEvent, BlockComponentOnPlaceEvent, BlockComponentPlayerInteractEvent, EntityInventoryComponent } from "@minecraft/server";
-import { ElevatorsBlockCustomComponents, ElevatorsBlockIndividualSettingsIds, Elevators, ElevatorsDynamicProperties } from "../Models";
-import { getElevatorBlockSettings, startElevatorTeleport, stopElevatorTeleport, tickElevatorParticles, initializeElevatorBlockSettings, initializeSettings, initializeBlocksSettings, updateConfig, isElevatorBlockBelow } from "../Actions";
-import { openBlockSettings } from "../UI";
-import { getProperties, setProperties } from "../Util";
+import { world, Player, EntityComponentTypes, Block, WorldInitializeBeforeEvent, BlockComponentStepOnEvent, BlockComponentStepOffEvent, BlockComponentTickEvent, BlockComponentOnPlaceEvent, BlockComponentPlayerInteractEvent, EntityInventoryComponent } from '@minecraft/server';
+import { ElevatorsBlockCustomComponents, ElevatorsBlockIndividualSettingsIds, Elevators, ElevatorsDynamicProperties } from '../Models';
+import { getElevatorBlockSettings, startElevatorTeleport, stopElevatorTeleport, tickElevatorParticles, initializeElevatorBlockSettings, initializeSettings, initializeBlocksSettings, updateConfig, isElevatorBlockBelow } from '../Actions';
+import { openBlockSettings } from '../UI';
+import { getProperties, setProperties } from '../Util';
 
 world.beforeEvents.worldInitialize.subscribe((worldInitializeEvent: WorldInitializeBeforeEvent): void => {
 	const { blockComponentRegistry } = worldInitializeEvent;

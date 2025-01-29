@@ -1,9 +1,9 @@
-import { system, BlockPermutation, Dimension, Block, Vector3, Entity, Player, ItemStack, TeleportOptions, Vector2 } from "@minecraft/server";
-import { Vector3Builder, Vector3Utils } from "@minecraft/math";
-import { Elevators, ElevatorsDynamicProperties, ElevatorsSettings, ElevatorsBlockIndividualSettings, ElevatorsBlockIndividualSettingsIds, ElevatorsSounds, ElevatorsParticles, ElevatorBlockTypes, WoolBlockTypes, ElevatorTickParticleMolang, WoolToElevatorParticleMolang, VanillaFullBlocksList, ElevatorsBlockStates, IllegalFullBlocksList } from "../Models";
-import { getProperties, setProperties } from "../Util";
-import { getSettings } from "./settings";
-import { initializeElevatorBlockSettings, getElevatorBlockSettings } from "./blocksSettings";
+import { system, BlockPermutation, Dimension, Block, Vector3, Entity, Player, ItemStack, TeleportOptions, Vector2 } from '@minecraft/server';
+import { Vector3Builder, Vector3Utils } from '@minecraft/math';
+import { Elevators, ElevatorsDynamicProperties, ElevatorsSettings, ElevatorsBlockIndividualSettings, ElevatorsBlockIndividualSettingsIds, ElevatorsSounds, ElevatorsParticles, ElevatorBlockTypes, WoolBlockTypes, ElevatorTickParticleMolang, WoolToElevatorParticleMolang, VanillaFullBlocksList, ElevatorsBlockStates, IllegalFullBlocksList } from '../Models';
+import { getProperties, setProperties } from '../Util';
+import { getSettings } from './settings';
+import { initializeElevatorBlockSettings, getElevatorBlockSettings } from './blocksSettings';
 
 /**
  * @name startElevatorTeleport
@@ -115,7 +115,7 @@ export const teleportToElevator = (player: Player, dimension: Dimension, elevato
 
 	if (elevatorsSettings.safeTeleport) {
 		if (!elevatorBlockAbove.isAir) {
-			player.sendMessage({ translate: "bt.elevators.teleport.not_safe_location" });
+			player.sendMessage({ translate: 'bt.elevators.teleport.not_safe_location' });
 
 			return;
 		}
@@ -123,7 +123,7 @@ export const teleportToElevator = (player: Player, dimension: Dimension, elevato
 
 	if (elevatorsSettings.xpLevelsUse > 0) {
 		if (player.level < elevatorsSettings.xpLevelsUse) {
-			player.sendMessage({ translate: "bt.elevators.teleport.insufficient_xp_levels", with: [`${elevatorsSettings.xpLevelsUse}`, `${elevatorsSettings.xpLevelsUse !== 1 ? "levels" : "level"}`] });
+			player.sendMessage({ translate: 'bt.elevators.teleport.insufficient_xp_levels', with: [`${elevatorsSettings.xpLevelsUse}`, `${elevatorsSettings.xpLevelsUse !== 1 ? 'levels' : 'level'}`] });
 
 			return;
 		}
@@ -139,7 +139,7 @@ export const teleportToElevator = (player: Player, dimension: Dimension, elevato
 
 	const teleportOptions: TeleportOptions = {
 		// We use rotation instead of facingDirection because it doesn't work for some reasons
-		...elevatorBlockSettings[ElevatorsBlockIndividualSettingsIds.facingDirection] !== "none" ? { rotation: getRotationalDirection(elevatorBlockSettings[ElevatorsBlockIndividualSettingsIds.facingDirection]) } : {},
+		...elevatorBlockSettings[ElevatorsBlockIndividualSettingsIds.facingDirection] !== 'none' ? { rotation: getRotationalDirection(elevatorBlockSettings[ElevatorsBlockIndividualSettingsIds.facingDirection]) } : {},
 	};
 
 	player.teleport(elevatorBlockAbove.center(), teleportOptions);
@@ -203,7 +203,7 @@ export const tickElevatorParticles = (elevatorBlockLocation: Vector3, elevatorDi
 	} catch (error) {
 		if (!(error instanceof Error)) throw error;
 
-		if (!error.message.includes("LocationInUnloadedChunkError")) throw error;
+		if (!error.message.includes('LocationInUnloadedChunkError')) throw error;
 	}
 };
 
@@ -247,7 +247,7 @@ export const woolToElevator = (enderPearlItemEntity: Entity): void => {
 
 				const { location: blockLocation } = block;
 
-				block.setType(`bt:e.${blockTypeId.replace(/minecraft:|_wool/g, "")}_elevator`);
+				block.setType(`bt:e.${blockTypeId.replace(/minecraft:|_wool/g, '')}_elevator`);
 
 				const blockInMiddleLocation: Vector3 = Vector3Utils.add(blockLocation, { x: 0.5, y: 0.5, z: 0.5 });
 
@@ -296,13 +296,13 @@ export const camouflageElevator = (player: Player, elevatorBlock: Block, item: I
 	const { typeId: itemTypeId } = item;
 
 	if (IllegalFullBlocksList.includes(itemTypeId)) {
-		player.sendMessage({ translate: "bt.elevators.camouflage.illegal_full_blocks" });
+		player.sendMessage({ translate: 'bt.elevators.camouflage.illegal_full_blocks' });
 
 		return;
 	}
 
 	if (!VanillaFullBlocksList.includes(itemTypeId)) {
-		player.sendMessage({ translate: "bt.elevators.camouflage.item_cannot_be_used", with: [(itemTypeId.startsWith("minecraft:") ? itemTypeId.replace(/minecraft:/g, "").split("_").map((word: string): string => word[0]!.toUpperCase() + word.slice(1)).join(" ") : null) ?? (itemTypeId.startsWith("bt:") ? itemTypeId.substring(itemTypeId.indexOf(".") + 1).split("_").map((word: string): string => word[0]!.toUpperCase() + word.slice(1)).join(" ") : itemTypeId)] });
+		player.sendMessage({ translate: 'bt.elevators.camouflage.item_cannot_be_used', with: [(itemTypeId.startsWith('minecraft:') ? itemTypeId.replace(/minecraft:/g, '').split('_').map((word: string): string => word[0]!.toUpperCase() + word.slice(1)).join(' ') : null) ?? (itemTypeId.startsWith('bt:') ? itemTypeId.substring(itemTypeId.indexOf('.') + 1).split('_').map((word: string): string => word[0]!.toUpperCase() + word.slice(1)).join(' ') : itemTypeId)] });
 
 		return;
 	}
@@ -321,12 +321,12 @@ export const camouflageElevator = (player: Player, elevatorBlock: Block, item: I
 export const getCamouflageBitStates = (fullBlockIndex: number): Record<string, boolean> => {
 	const maxBits: number = Math.ceil(Math.log2(VanillaFullBlocksList.length));
 
-	const binaryFullBlockIndex: string = fullBlockIndex.toString(2).padStart(maxBits, "0");
+	const binaryFullBlockIndex: string = fullBlockIndex.toString(2).padStart(maxBits, '0');
 
 	const bitStates: Record<string, boolean> = {};
 
-	binaryFullBlockIndex.split("").forEach((bit: string, bitIndex: number): void => {
-		bitStates[`${ElevatorsBlockStates.camouflageBit}${bitIndex + 1}`] = bit === "1";
+	binaryFullBlockIndex.split('').forEach((bit: string, bitIndex: number): void => {
+		bitStates[`${ElevatorsBlockStates.camouflageBit}${bitIndex + 1}`] = bit === '1';
 	});
 
 	return bitStates;
@@ -341,15 +341,15 @@ export const getCamouflageBitStates = (fullBlockIndex: number): Record<string, b
  */
 export const getRotationalDirection = (direction: string): Vector2 => {
 	switch (direction) {
-		case "north":
+		case 'north':
 			return { x: 0, y: 180 };
-		case "south":
+		case 'south':
 			return { x: 0, y: 0 };
-		case "east":
+		case 'east':
 			return { x: 0, y: -90 };
-		case "west":
+		case 'west':
 			return { x: 0, y: 90 };
 		default:
-			throw new Error("Invalid direction string provided.");
+			throw new Error('Invalid direction string provided.');
 	}
 };

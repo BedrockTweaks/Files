@@ -1,8 +1,8 @@
-import { Player } from "@minecraft/server";
-import { ActionFormData, ActionFormResponse } from "@minecraft/server-ui";
-import { ElevatorBlockTypes } from "../Models";
-import { giveElevatorBlock } from "../Actions";
-import { openConfigInterface } from "./Config";
+import { Player } from '@minecraft/server';
+import { ActionFormData, ActionFormResponse } from '@minecraft/server-ui';
+import { ElevatorBlockTypes } from '../Models';
+import { giveElevatorBlock } from '../Actions';
+import { openConfigInterface } from './Config';
 
 /**
  * @name openReceiveElevatorBlockInterface
@@ -11,12 +11,12 @@ import { openConfigInterface } from "./Config";
  */
 export const openReceiveElevatorBlockInterface = (player: Player): void => {
 	const form: ActionFormData = new ActionFormData()
-		.title({ translate: "bt.elevators.receive_elevator_block.title" });
+		.title({ translate: 'bt.elevators.receive_elevator_block.title' });
 
-	const allElevatorsColorList: string[] = ElevatorBlockTypes.map((elevatorBlockId: string): string => elevatorBlockId.replace(/bt:e.|_elevator/g, ""));
+	const allElevatorsColorList: string[] = ElevatorBlockTypes.map((elevatorBlockId: string): string => elevatorBlockId.replace(/bt:e.|_elevator/g, ''));
 
 	for (const color of allElevatorsColorList) {
-		form.button(color.split("_").map((word: string): string => word[0]!.toUpperCase() + word.slice(1)).join(" "));
+		form.button(color.split('_').map((word: string): string => word[0]!.toUpperCase() + word.slice(1)).join(' '));
 	}
 
 	form.show(player).then((formResponse: ActionFormResponse): void => {

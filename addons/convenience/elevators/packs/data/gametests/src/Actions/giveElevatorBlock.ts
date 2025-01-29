@@ -1,4 +1,4 @@
-import { ItemStack, EntityComponentTypes, Player, Container, EntityInventoryComponent } from "@minecraft/server";
+import { ItemStack, EntityComponentTypes, Player, Container, EntityInventoryComponent } from '@minecraft/server';
 
 /**
  * @name giveElevatorBlock
@@ -10,7 +10,7 @@ export const giveElevatorBlock = (player: Player, color: string): void => {
 	const playerInventory: Container = (player.getComponent(EntityComponentTypes.Inventory) as EntityInventoryComponent).container!;
 
 	if (playerInventory.emptySlotsCount === 0) {
-		player.sendMessage({ translate: "bt.elevators.no_empty_slot" });
+		player.sendMessage({ translate: 'bt.elevators.no_empty_slot' });
 
 		return;
 	}

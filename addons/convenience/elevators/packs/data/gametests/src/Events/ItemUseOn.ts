@@ -1,6 +1,6 @@
-import { world, system, ItemUseOnBeforeEvent } from "@minecraft/server";
-import { ElevatorsSettings, ElevatorBlockTypes } from "../Models";
-import { getSettings, camouflageElevator } from "../Actions";
+import { world, system, ItemUseOnBeforeEvent } from '@minecraft/server';
+import { ElevatorsSettings, ElevatorBlockTypes } from '../Models';
+import { getSettings, camouflageElevator } from '../Actions';
 
 export const itemUseOnEventSubscription: (arg: ItemUseOnBeforeEvent) => void = world.beforeEvents.itemUseOn.subscribe((itemUseOnEvent: ItemUseOnBeforeEvent): void => {
 	const elevatorsSettings: ElevatorsSettings = getSettings();

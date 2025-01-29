@@ -1,6 +1,6 @@
-import { world, EntityInitializationCause, EntityComponentTypes, ItemStack, EntitySpawnAfterEvent, EntityItemComponent } from "@minecraft/server";
-import { MinecraftItemTypes } from "@minecraft/vanilla-data";
-import { woolToElevator } from "../Actions";
+import { world, EntityInitializationCause, EntityComponentTypes, ItemStack, EntitySpawnAfterEvent, EntityItemComponent } from '@minecraft/server';
+import { MinecraftItemTypes } from '@minecraft/vanilla-data';
+import { woolToElevator } from '../Actions';
 
 world.afterEvents.entitySpawn.subscribe((entitySpawnEvent: EntitySpawnAfterEvent): void => {
 	if (entitySpawnEvent.cause !== EntityInitializationCause.Spawned) return;

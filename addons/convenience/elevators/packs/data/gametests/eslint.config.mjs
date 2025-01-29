@@ -81,12 +81,12 @@ export default [
 			"@typescript-eslint/no-unsafe-function-type": "error",
 			"@typescript-eslint/no-empty-object-type": ["error",
 				{
-					allowInterfaces: "always"
+					allowInterfaces: 'always'
 				}
 			],
 			"@typescript-eslint/ban-ts-comment": ["error",
 				{
-					"ts-expect-error": "allow-with-description"
+					'ts-expect-error': 'allow-with-description'
 				}
 			],
 
@@ -319,6 +319,13 @@ export default [
 			],
 
 			"@stylistic/quote-props": ["warn", "as-needed"],
+
+			"@stylistic/quotes": ["warn", "single",
+				{
+					avoidEscape: true,
+					allowTemplateLiterals: true,
+				}
+			],
 
 			"@stylistic/rest-spread-spacing": ["warn", "never"],
 			"@stylistic/semi": ["warn", "always"],

@@ -1,6 +1,6 @@
-import { LatestSettingsConfigVersion, LatestBlocksSettingsConfigVersion, ElevatorsSettings, ElevatorsBlocksSettings } from "../Models";
-import { initializeSettings, getSettings, setSettings } from "./settings";
-import { initializeBlocksSettings, getBlocksSettings, setBlocksSettings } from "./blocksSettings";
+import { LatestSettingsConfigVersion, LatestBlocksSettingsConfigVersion, ElevatorsSettings, ElevatorsBlocksSettings } from '../Models';
+import { initializeSettings, getSettings, setSettings } from './settings';
+import { initializeBlocksSettings, getBlocksSettings, setBlocksSettings } from './blocksSettings';
 
 /**
  * @name updateConfig
@@ -12,7 +12,7 @@ export const updateConfig = (): void => {
 
 	if (elevatorsSettings.configVersion !== LatestSettingsConfigVersion) {
 		if (elevatorsSettings.configVersion > LatestSettingsConfigVersion) {
-			console.error("Config version is higher than latest config version for global settings, resetting global settings to its default values.");
+			console.error('Config version is higher than latest config version for global settings, resetting global settings to its default values.');
 
 			elevatorsSettings.initialized = false;
 
@@ -25,7 +25,7 @@ export const updateConfig = (): void => {
 		while (elevatorsSettings.configVersion < LatestSettingsConfigVersion) {
 			switch (elevatorsSettings.configVersion) {
 				default:
-					console.error("Invalid config version detected for global settings, resetting global settings to its default values.");
+					console.error('Invalid config version detected for global settings, resetting global settings to its default values.');
 
 					elevatorsSettings.initialized = false;
 
@@ -41,7 +41,7 @@ export const updateConfig = (): void => {
 
 	if (elevatorsBlocksSettings.configVersion !== LatestBlocksSettingsConfigVersion) {
 		if (elevatorsBlocksSettings.configVersion > LatestBlocksSettingsConfigVersion) {
-			console.error("Config version is higher than latest config version for blocks settings, resetting blocks settings to its default values.");
+			console.error('Config version is higher than latest config version for blocks settings, resetting blocks settings to its default values.');
 
 			elevatorsBlocksSettings.initialized = false;
 
@@ -54,7 +54,7 @@ export const updateConfig = (): void => {
 		while (elevatorsBlocksSettings.configVersion < LatestBlocksSettingsConfigVersion) {
 			switch (elevatorsBlocksSettings.configVersion) {
 				default:
-					console.error("Invalid config version detected for blocks settings, resetting blocks settings to its default values.");
+					console.error('Invalid config version detected for blocks settings, resetting blocks settings to its default values.');
 
 					elevatorsBlocksSettings.initialized = false;
 

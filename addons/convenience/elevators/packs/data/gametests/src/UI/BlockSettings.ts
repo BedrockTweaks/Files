@@ -1,7 +1,7 @@
-import { Player, Block } from "@minecraft/server";
-import { ModalFormData, ModalFormResponse } from "@minecraft/server-ui";
-import { ElevatorsSettings, ElevatorsBlocksSettings, ElevatorsBlockIndividualSettings, ElevatorsBlockIndividualSettingsIds, FacingDirections } from "../Models";
-import { getSettings, getBlocksSettings, setBlocksSettings, getElevatorBlockSettings, deleteElevatorBlockSettings } from "../Actions";
+import { Player, Block } from '@minecraft/server';
+import { ModalFormData, ModalFormResponse } from '@minecraft/server-ui';
+import { ElevatorsSettings, ElevatorsBlocksSettings, ElevatorsBlockIndividualSettings, ElevatorsBlockIndividualSettingsIds, FacingDirections } from '../Models';
+import { getSettings, getBlocksSettings, setBlocksSettings, getElevatorBlockSettings, deleteElevatorBlockSettings } from '../Actions';
 
 /**
  * @name openBlockSettings
@@ -16,10 +16,10 @@ export const openBlockSettings = (player: Player, elevatorBlock: Block): void =>
 	if (!elevatorBlockSettings) return;
 
 	const form: ModalFormData = new ModalFormData()
-		.title({ translate: "bt.elevators.block_settings.title" })
-		.dropdown({ translate: "bt.elevators.block_settings.facing_direction", with: ["\n", elevatorsSettings.defaultFacingDirection[0]!.toUpperCase() + elevatorsSettings.defaultFacingDirection.slice(1)] }, FacingDirections.map((word: string): string => word[0]!.toUpperCase() + word.slice(1)), FacingDirections.indexOf(elevatorBlockSettings[ElevatorsBlockIndividualSettingsIds.facingDirection]));
+		.title({ translate: 'bt.elevators.block_settings.title' })
+		.dropdown({ translate: 'bt.elevators.block_settings.facing_direction', with: ['\n', elevatorsSettings.defaultFacingDirection[0]!.toUpperCase() + elevatorsSettings.defaultFacingDirection.slice(1)] }, FacingDirections.map((word: string): string => word[0]!.toUpperCase() + word.slice(1)), FacingDirections.indexOf(elevatorBlockSettings[ElevatorsBlockIndividualSettingsIds.facingDirection]));
 
-	if (elevatorsSettings.elevatorsTickParticles) form.toggle({ translate: "bt.elevators.block_settings.elevator_tick_particles", with: ["\n"] }, elevatorBlockSettings[ElevatorsBlockIndividualSettingsIds.elevatorTickParticles]);
+	if (elevatorsSettings.elevatorsTickParticles) form.toggle({ translate: 'bt.elevators.block_settings.elevator_tick_particles', with: ['\n'] }, elevatorBlockSettings[ElevatorsBlockIndividualSettingsIds.elevatorTickParticles]);
 
 	form.show(player).then((formResponse: ModalFormResponse): void => {
 		if (formResponse.canceled) return;
@@ -27,7 +27,7 @@ export const openBlockSettings = (player: Player, elevatorBlock: Block): void =>
 		const updatedElevatorBlockSettings: ElevatorsBlockIndividualSettings | undefined = getElevatorBlockSettings(elevatorBlock);
 
 		if (!updatedElevatorBlockSettings) {
-			player.sendMessage({ translate: "bt.elevators.block_settings.invalid_elevator_block" });
+			player.sendMessage({ translate: 'bt.elevators.block_settings.invalid_elevator_block' });
 
 			return;
 		}

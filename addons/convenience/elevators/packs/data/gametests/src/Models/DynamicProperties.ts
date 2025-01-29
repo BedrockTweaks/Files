@@ -1,13 +1,13 @@
-import { Vector3 } from "@minecraft/server";
+import { Vector3 } from '@minecraft/server';
 
 export enum ElevatorsSettingsDynamicProperties {
-	configVersion = "bt:e.settings_config_version",
-	initialized = "bt:e.settings_initialized",
-	defaultFacingDirection = "bt:e.settings_default_facing_direction",
-	elevatorsTickParticles = "bt:e.settings_elevators_tick_particles",
-	safeTeleport = "bt:e.settings_safe_teleport",
-	camouflage = "bt:e.settings_camouflage",
-	xpLevelsUse = "bt:e.settings_xp_levels_use"
+	configVersion = 'bt:e.settings_config_version',
+	initialized = 'bt:e.settings_initialized',
+	defaultFacingDirection = 'bt:e.settings_default_facing_direction',
+	elevatorsTickParticles = 'bt:e.settings_elevators_tick_particles',
+	safeTeleport = 'bt:e.settings_safe_teleport',
+	camouflage = 'bt:e.settings_camouflage',
+	xpLevelsUse = 'bt:e.settings_xp_levels_use'
 }
 
 export interface ElevatorsSettings {
@@ -28,9 +28,9 @@ export interface ElevatorsSettings {
 }
 
 export enum ElevatorsBlocksSettingsDynamicProperties {
-	configVersion = "bt:e.blocks_settings_config_version",
-	initialized = "bt:e.blocks_settings_initialized",
-	allBlockSettings = "bt:e.blocks_settings_all_block_settings"
+	configVersion = 'bt:e.blocks_settings_config_version',
+	initialized = 'bt:e.blocks_settings_initialized',
+	allBlockSettings = 'bt:e.blocks_settings_all_block_settings'
 }
 export interface ElevatorsBlocksSettings {
 	// The config version which is currently being used
@@ -42,12 +42,12 @@ export interface ElevatorsBlocksSettings {
 }
 
 export enum ElevatorsBlockIndividualSettingsIds {
-	isConfigured = "bt:e.block_individual_settings_is_configured",
-	blockLocation = "bt:e.block_individual_settings_block_location",
-	blockDimension = "bt:e.block_individual_settings_block_dimension",
-	facingDirection = "bt:e.block_individual_settings_facing_direction",
-	elevatorTickParticles = "bt:e.block_individual_settings_elevator_tick_particles",
-	previousElevatorTickParticles = "bt:e.block_individual_settings_previous_elevator_tick_particles"
+	isConfigured = 'bt:e.block_individual_settings_is_configured',
+	blockLocation = 'bt:e.block_individual_settings_block_location',
+	blockDimension = 'bt:e.block_individual_settings_block_dimension',
+	facingDirection = 'bt:e.block_individual_settings_facing_direction',
+	elevatorTickParticles = 'bt:e.block_individual_settings_elevator_tick_particles',
+	previousElevatorTickParticles = 'bt:e.block_individual_settings_previous_elevator_tick_particles'
 }
 
 export interface ElevatorsBlockIndividualSettings {
@@ -67,7 +67,7 @@ export interface ElevatorsBlockIndividualSettings {
 }
 
 export enum ElevatorsDynamicProperties {
-	teleportSystemRunId = "bt:e.teleport_system_run_id"
+	teleportSystemRunId = 'bt:e.teleport_system_run_id'
 }
 
 export interface Elevators {

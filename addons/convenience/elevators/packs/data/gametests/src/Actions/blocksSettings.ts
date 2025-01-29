@@ -1,8 +1,8 @@
-import { world, Block } from "@minecraft/server";
-import { Vector3Utils } from "@minecraft/math";
-import { LatestBlocksSettingsConfigVersion, ElevatorsSettings, ElevatorsBlocksSettings, ElevatorsBlocksSettingsDynamicProperties, ElevatorsBlockIndividualSettings, ElevatorsBlockIndividualSettingsIds } from "../Models";
-import { getProperties, setProperties } from "../Util";
-import { getSettings } from "./settings";
+import { world, Block } from '@minecraft/server';
+import { Vector3Utils } from '@minecraft/math';
+import { LatestBlocksSettingsConfigVersion, ElevatorsSettings, ElevatorsBlocksSettings, ElevatorsBlocksSettingsDynamicProperties, ElevatorsBlockIndividualSettings, ElevatorsBlockIndividualSettingsIds } from '../Models';
+import { getProperties, setProperties } from '../Util';
+import { getSettings } from './settings';
 
 /**
  * @name initializeBlocksSettings
