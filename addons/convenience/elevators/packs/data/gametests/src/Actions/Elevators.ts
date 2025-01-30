@@ -297,8 +297,6 @@ export const stopNearbyPlayersElevatorTeleport = (elevatorDimension: Dimension, 
  * This function can't be called in read-only mode.
  */
 export const camouflageElevator = (player: Player, elevatorBlock: Block, item: ItemStack): void => {
-	// TODO: Fix elevator camouflage for grass block top having grayscale texture instead of colored texture
-
 	const { typeId: itemTypeId } = item;
 
 	if (IllegalFullBlocksList.includes(itemTypeId)) {
