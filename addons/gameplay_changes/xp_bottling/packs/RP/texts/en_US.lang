@@ -1,20 +1,35 @@
 item.bt.bottle_of_xp=Bottle of Experience
 
-bt.xp.config.title=XP Bottling / Configuration
-bt.xb.config.example=This is debug code.
-bt.xb.config.global_settings=Edit Global Settings
+bt.xb.config.title=XP Bottling / Configuration
+bt.xb.config.globalSettings=Edit Global Settings
+bt.xb.config.playerSettings=Edit Your Player Settings
 
-bt.xp.settings.title=XP Bottling / Settings
-bt.xb.settings.amount_of_xp=Amount of XP%1§7The amount of XP to store in a bottle. %1§8Default: 23
-bt.xb.settings.instant_use=Instant Use§7When enabled, XP Bottles can be consumed instantly. %1§8Default: Disabled
-bt.xb.settings.time_to_use=Time to Use%1§7The time it takes to consume one XP Bottle. %1§8Default: 0.2
-bt.xb.settings.enable_stack_consume=Stack Consume%1§7When enabled, Shift + Right Click will consume an entire stack of XP Bottles. %1§8Default: Enabled
-bt.xb.settings.enable_stack_craft=Stack Craft%1§7When enabled, Shift + Right Click will store XP in the entire stack. %1§8Default: Enabled
+bt.xb.settings.title=XP Bottling / Settings
+bt.xb.settings.amountOfXp=Amount of XP %1§7The amount of XP to store in a bottle. %1§8Default: 22
+bt.xb.settings.instantUse=Instant Use %1§7When enabled, XP Bottles can be consumed instantly. %1§8Default: Disabled
+bt.xb.settings.timeToUse=Time to Use %1§7The time it takes to consume one XP Bottle. %1§8Default: 16
+bt.xb.settings.enableStackConsume=Stack Consume %1§7When enabled, Shift + Right Click will consume an entire stack of XP Bottles. %1§8Default: Enabled
+bt.xb.settings.stackMultiplier=Stack Consume Multiplier %1§7The amount the 'Time to Use' should be multiplied by when consuming a full stack. %1§8Default: 4
+bt.xb.settings.enableStackCraft=Stack Craft %1§7When enabled, Shift + Right Click will store XP in the entire stack. %1§8Default: Enabled
 
-bt.xb.xp.invalid=Not enough §qXP§r
-bt.xb.xp.increase=+%1 XP
-bt.xb.xp.decrease=-%1 XP
+bt.xb.playerSettings.title=XP Bottling / Player Settings
+bt.xb.playerSettings.enableToolTips=Player Tool Tips %1§7When enabled, tooltips will be shown above the hotbar showing the result of some actions. %1§8Default: Enabled
+bt.xb.playerSettings.consumeFullStack=Consume Full Stack %1§7When enabled, Shift + Right Click will drink the entire stack in your hand. %1§8Default: Disabled
+bt.xb.playerSettings.fillFullStack=Fill Full Stack %1§7When enabled, Shift + Right Click will attempt to fill the entire held stack or as many as possible, whichever is smaller. %1§8Default: Disabled
 
-bt.xb.uninstall==§eUninstalled Correctly§r%1Remove the pack from Behavior Packs to complete the uninstall.
+bt.xb.confirm.title=XP Bottling / Confirmation
+bt.xb.confirm.body=You are about to change the amount of XP stored per bottle from %2 to %3.%1This will change all current XP Bottles already made in the World and all future XP Bottles made.%1§l§6Are you sure you want to continue?§r
+bt.xb.confirm.yes=§l§qYes§r, change it.
+bt.xb.confirm.no=§l§mNo§r, leave it.
 
-bt.graves.settings.despawn_time.hours=Grave Despawn Time%1§7The time after which a grave and it's contents are deleted.%1A grave's despawn timer only runs while the grave is loaded.%1Enter §f0§7 to disable grave despawning. Items normally take §f5§7 minutes to despawn.%1§8Default. 0 hours, 0 minutes, 0 seconds§r%1Current hours
+bt.xb.tooltip.notEnough=Not enough §l§aXP§r
+bt.xb.tooltip.increase=+%1 §l§aXP§r
+bt.xb.tooltip.decrease=-%1 §l§aXP§r
+bt.xb.tooltip.worldDisabled=§l%2§r is not enabled on this World.%1If you are an OP, run §g/function xp_bottling/config§r to change the settings.
+bt.xb.tooltip.playerDisabled=§l%2§r is not enabled for your Player.%1You can Right Click with a §gGuide Book§r to change your settings.
+
+bt.xb.misc.stackCraft=Stack Crafting
+bt.xb.misc.stackConsume=Stack Consume
+
+bt.xb.uninstall=§eUninstalled Correctly§r%1Remove the pack from Behavior Packs to complete the uninstall.
+bt.xb.clearPlayer=§eReset Config for§r %2%1Settings have been reset to the default.

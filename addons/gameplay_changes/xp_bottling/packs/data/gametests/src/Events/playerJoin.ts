@@ -1,7 +1,9 @@
-import { PlayerSpawnAfterEvent, world } from '@minecraft/server';
-import { initializePlayerSettings } from '../Actions';
+import { world, PlayerSpawnAfterEvent } from '@minecraft/server';
+import { getPlayerSettings, initializePlayerSettings } from '../Actions';
+import { PlayerXpBottlingSettings } from '../Models';
 
-world.afterEvents.playerSpawn.subscribe(({ initialSpawn, player }: PlayerSpawnAfterEvent): void => {
-	if (!initialSpawn) return;
-	initializePlayerSettings(player);
+world.afterEvents.playerSpawn.subscribe(({ player }: PlayerSpawnAfterEvent): void => {
+	const { initialized }: PlayerXpBottlingSettings = getPlayerSettings(player);
+	if (initialized) return;
+	void initializePlayerSettings(player);
 });

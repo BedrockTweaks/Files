@@ -8,18 +8,19 @@
 			}
 		},
 		"components": {
-			"minecraft:max_stack_size": 1,
+			"minecraft:custom_components": [
+				"bt:xb.guideBookUsed"
+			],
+			"minecraft:display_name": {
+				"value": "Guide Book"
+			},
 			"minecraft:icon": {
 				"textures": {
 					"default": "bt:xb_guide_book"
 				}
 			},
-			"minecraft:display_name": {
-				"value": "Guide Book"
-			},
-			"minecraft:custom_components": [
-				 "bt:xb.openPlayerConfig"
-			]
+			"minecraft:interact_button": "Open the Settings Menu",
+			"minecraft:max_stack_size": 1
 		}
 	}
 }
