@@ -10,5 +10,7 @@ world.afterEvents.playerSpawn.subscribe((playerSpawnEvent: PlayerSpawnAfterEvent
 
 	const elevatorBlock: Block | undefined = isElevatorBlockBelow(playerDimension, player.location);
 
-	if (elevatorBlock) startElevatorTeleport(player, playerDimension, elevatorBlock);
+	if (elevatorBlock) {
+		startElevatorTeleport(player, playerDimension, elevatorBlock);
+	}
 });

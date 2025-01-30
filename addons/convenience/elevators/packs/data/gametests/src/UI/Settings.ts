@@ -13,6 +13,8 @@ import { openConfigInterface } from './Config';
 export const openSettingsInterface = (player: Player): void => {
 	const elevatorsSettings: ElevatorsSettings = getSettings();
 
+	if (!elevatorsSettings.initialized) return;
+
 	const form: ModalFormData = new ModalFormData()
 		.title({ translate: 'bt.elevators.settings.title' })
 		.dropdown({ translate: 'bt.elevators.settings.default_facing_direction', with: ['\n'] }, FacingDirections.map((word: string): string => word[0]!.toUpperCase() + word.slice(1)), FacingDirections.indexOf(elevatorsSettings.defaultFacingDirection))

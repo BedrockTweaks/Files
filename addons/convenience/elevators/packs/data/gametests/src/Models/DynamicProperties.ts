@@ -23,7 +23,7 @@ export interface ElevatorsSettings {
 	safeTeleport: boolean;
 	// Controls whether the elevators can be camouflaged by solid blocks or not
 	camouflage: boolean;
-	// The amount of xp levels to be consumed when using the elevator to teleport
+	// The amount of XP levels to be consumed when using the elevator to teleport
 	xpLevelsUse: number;
 }
 
@@ -32,6 +32,7 @@ export enum ElevatorsBlocksSettingsDynamicProperties {
 	initialized = 'bt:e.blocks_settings_initialized',
 	allBlockSettings = 'bt:e.blocks_settings_all_block_settings'
 }
+
 export interface ElevatorsBlocksSettings {
 	// The config version which is currently being used
 	configVersion: number;

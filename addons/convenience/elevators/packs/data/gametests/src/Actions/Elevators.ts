@@ -92,7 +92,9 @@ export const startElevatorTeleport = (player: Player, dimension: Dimension, elev
 export const stopElevatorTeleport = (player: Player): void => {
 	const runId: number | undefined = getProperties<Elevators>(player, ElevatorsDynamicProperties).teleportSystemRunId;
 
-	if (runId) clearElevatorsTeleportSystemRun(player, runId);
+	if (runId) {
+		clearElevatorsTeleportSystemRun(player, runId);
+	}
 };
 
 /**
@@ -259,7 +261,9 @@ export const woolToElevator = (enderPearlItemEntity: Entity): void => {
 				for (const player of enderPearlItemDimension.getPlayers({ location: blockLocation, minDistance: 0, maxDistance: 2 })) {
 					const checkElevatorBlockBelow: Block | undefined = isElevatorBlockBelow(enderPearlItemDimension, player.location);
 
-					if (checkElevatorBlockBelow && Vector3Utils.equals(checkElevatorBlockBelow.location, blockLocation)) startElevatorTeleport(player, enderPearlItemDimension, block);
+					if (checkElevatorBlockBelow && Vector3Utils.equals(checkElevatorBlockBelow.location, blockLocation)) {
+						startElevatorTeleport(player, enderPearlItemDimension, block);
+					}
 				}
 			}
 		}
@@ -277,7 +281,9 @@ export const stopNearbyPlayersElevatorTeleport = (elevatorDimension: Dimension, 
 	for (const nearbyPlayer of elevatorDimension.getPlayers({ location: elevatorBlockLocation, minDistance: 0, maxDistance: 10 })) {
 		const checkElevatorBlockBelow: Block | undefined = isElevatorBlockBelow(elevatorDimension, nearbyPlayer.location);
 
-		if (checkElevatorBlockBelow && checkElevatorBlockBelow.typeId === elevatorBlockTypeId && Vector3Utils.equals(checkElevatorBlockBelow.location, elevatorBlockLocation)) stopElevatorTeleport(nearbyPlayer);
+		if (checkElevatorBlockBelow && checkElevatorBlockBelow.typeId === elevatorBlockTypeId && Vector3Utils.equals(checkElevatorBlockBelow.location, elevatorBlockLocation)) {
+			stopElevatorTeleport(nearbyPlayer);
+		}
 	}
 };
 

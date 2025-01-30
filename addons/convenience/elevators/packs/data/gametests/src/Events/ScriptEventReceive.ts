@@ -8,7 +8,9 @@ system.afterEvents.scriptEventReceive.subscribe((scriptEventReceiveEvent: Script
 
 	switch (scriptEventReceiveEvent.id) {
 		case ElevatorsScriptEvents.config:
-			if (sourceEntity instanceof Player) openConfigInterface(sourceEntity);
+			if (sourceEntity instanceof Player) {
+				openConfigInterface(sourceEntity);
+			}
 
 			break;
 		case ElevatorsScriptEvents.uninstall:

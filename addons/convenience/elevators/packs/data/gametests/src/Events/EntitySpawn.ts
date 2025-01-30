@@ -11,5 +11,7 @@ world.afterEvents.entitySpawn.subscribe((entitySpawnEvent: EntitySpawnAfterEvent
 
 	const item: ItemStack = (entity.getComponent(EntityComponentTypes.Item) as EntityItemComponent).itemStack;
 
-	if (item.typeId === MinecraftItemTypes.EnderPearl) woolToElevator(entity);
+	if (item.typeId === MinecraftItemTypes.EnderPearl) {
+		woolToElevator(entity);
+	}
 });

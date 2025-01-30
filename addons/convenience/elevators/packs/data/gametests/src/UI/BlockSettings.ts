@@ -19,7 +19,9 @@ export const openBlockSettings = (player: Player, elevatorBlock: Block): void =>
 		.title({ translate: 'bt.elevators.block_settings.title' })
 		.dropdown({ translate: 'bt.elevators.block_settings.facing_direction', with: ['\n', elevatorsSettings.defaultFacingDirection[0]!.toUpperCase() + elevatorsSettings.defaultFacingDirection.slice(1)] }, FacingDirections.map((word: string): string => word[0]!.toUpperCase() + word.slice(1)), FacingDirections.indexOf(elevatorBlockSettings[ElevatorsBlockIndividualSettingsIds.facingDirection]));
 
-	if (elevatorsSettings.elevatorsTickParticles) form.toggle({ translate: 'bt.elevators.block_settings.elevator_tick_particles', with: ['\n'] }, elevatorBlockSettings[ElevatorsBlockIndividualSettingsIds.elevatorTickParticles]);
+	if (elevatorsSettings.elevatorsTickParticles) {
+		form.toggle({ translate: 'bt.elevators.block_settings.elevator_tick_particles', with: ['\n'] }, elevatorBlockSettings[ElevatorsBlockIndividualSettingsIds.elevatorTickParticles]);
+	}
 
 	form.show(player).then((formResponse: ModalFormResponse): void => {
 		if (formResponse.canceled) return;
