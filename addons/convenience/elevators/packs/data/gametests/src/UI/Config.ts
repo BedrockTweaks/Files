@@ -1,7 +1,7 @@
 import { Player } from '@minecraft/server';
 import { ActionFormData, ActionFormResponse } from '@minecraft/server-ui';
 import { openSettingsInterface } from './Settings';
-import { openReceiveElevatorBlockInterface } from './ReceiveElevatorBlock';
+import { openReceiveElevatorInterface } from './ReceiveElevator';
 
 /**
  * @name openConfigInterface
@@ -12,7 +12,7 @@ export const openConfigInterface = (player: Player): void => {
 	const form: ActionFormData = new ActionFormData()
 		.title({ translate: 'bt.elevators.config.title' })
 		.button({ translate: 'bt.elevators.config.change_settings' })
-		.button({ translate: 'bt.elevators.config.receive_elevator_block' });
+		.button({ translate: 'bt.elevators.config.receive_elevator' });
 
 	form.show(player).then((formResponse: ActionFormResponse): void => {
 		if (formResponse.canceled) return;
@@ -23,7 +23,7 @@ export const openConfigInterface = (player: Player): void => {
 
 				break;
 			case 1:
-				openReceiveElevatorBlockInterface(player);
+				openReceiveElevatorInterface(player);
 
 				break;
 		}

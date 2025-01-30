@@ -1,16 +1,8 @@
 import { world, system, ItemUseOnBeforeEvent } from '@minecraft/server';
-import { ElevatorsSettings, ElevatorBlockTypes } from '../Models';
-import { getSettings, camouflageElevator } from '../Actions';
+import { ElevatorBlockTypes } from '../Models';
+import { camouflageElevator } from '../Actions';
 
 export const itemUseOnEventSubscription: (arg: ItemUseOnBeforeEvent) => void = world.beforeEvents.itemUseOn.subscribe((itemUseOnEvent: ItemUseOnBeforeEvent): void => {
-	const elevatorsSettings: ElevatorsSettings = getSettings();
-
-	if (!elevatorsSettings.camouflage) {
-		system.run((): void => world.beforeEvents.itemUseOn.unsubscribe(itemUseOnEventSubscription));
-
-		return;
-	}
-
 	if (!itemUseOnEvent.isFirstEvent) return;
 
 	const { source: player, block, itemStack: item } = itemUseOnEvent;

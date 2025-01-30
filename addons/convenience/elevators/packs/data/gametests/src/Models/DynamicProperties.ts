@@ -5,6 +5,7 @@ export enum ElevatorsSettingsDynamicProperties {
 	initialized = 'bt:e.settings_initialized',
 	defaultFacingDirection = 'bt:e.settings_default_facing_direction',
 	elevatorsTickParticles = 'bt:e.settings_elevators_tick_particles',
+	sameColorTeleport = 'bt:e.settings_same_color_teleport',
 	safeTeleport = 'bt:e.settings_safe_teleport',
 	camouflage = 'bt:e.settings_camouflage',
 	xpLevelsUse = 'bt:e.settings_xp_levels_use'
@@ -19,6 +20,8 @@ export interface ElevatorsSettings {
 	defaultFacingDirection: string;
 	// Controls whether the elevators will tick particles on top of it or not
 	elevatorsTickParticles: boolean;
+	// Controls whether the elevator block above or below must be the same color of the elevator block which the player is standing on to teleport between them
+	sameColorTeleport: boolean;
 	// Controls whether the elevators will safely teleport the player by making sure there is no obstructions of blocks on top of the destination elevator block
 	safeTeleport: boolean;
 	// Controls whether the elevators can be camouflaged by solid blocks or not

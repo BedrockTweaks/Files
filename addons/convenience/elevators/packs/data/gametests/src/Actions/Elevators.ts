@@ -1,6 +1,6 @@
 import { system, BlockPermutation, Dimension, Block, Vector3, Entity, Player, ItemStack, TeleportOptions, Vector2 } from '@minecraft/server';
 import { Vector3Builder, Vector3Utils } from '@minecraft/math';
-import { Elevators, ElevatorsDynamicProperties, ElevatorsSettings, ElevatorsBlockIndividualSettings, ElevatorsBlockIndividualSettingsIds, ElevatorsSounds, ElevatorsParticles, ElevatorBlockTypes, WoolBlockTypes, ElevatorTickParticleMolang, WoolToElevatorParticleMolang, VanillaFullBlocksList, ElevatorsBlockStates, IllegalFullBlocksList } from '../Models';
+import { Elevators, ElevatorsDynamicProperties, ElevatorsSettings, ElevatorsBlockIndividualSettings, ElevatorsBlockIndividualSettingsIds, ElevatorsSounds, PlayerTeleportSoundOptions, ElevatorsParticles, ElevatorBlockTypes, WoolBlockTypes, ElevatorTickParticleMolang, WoolToElevatorParticleMolang, VanillaFullBlocksList, ElevatorsBlockStates, IllegalFullBlocksList } from '../Models';
 import { getProperties, setProperties } from '../Util';
 import { getSettings } from './settings';
 import { initializeElevatorBlockSettings, getElevatorBlockSettings } from './blocksSettings';
@@ -15,6 +15,8 @@ import { initializeElevatorBlockSettings, getElevatorBlockSettings } from './blo
  * This function can't be called in read-only mode.
  */
 export const startElevatorTeleport = (player: Player, dimension: Dimension, elevatorBlock: Block): void => {
+	const elevatorsSettings: ElevatorsSettings = getSettings();
+
 	const { max: dimensionMaxHeight, min: dimensionMinHeight } = dimension.heightRange;
 	const { typeId: elevatorBlockTypeId, location: elevatorBlockLocation } = elevatorBlock;
 
@@ -56,7 +58,9 @@ export const startElevatorTeleport = (player: Player, dimension: Dimension, elev
 
 				if (!aboveBlock) break;
 
-				if (aboveBlock.typeId === elevatorBlockTypeId) {
+				const { typeId: aboveBlockTypeId } = aboveBlock;
+
+				if (elevatorsSettings.sameColorTeleport ? aboveBlockTypeId === elevatorBlockTypeId : ElevatorBlockTypes.includes(aboveBlockTypeId)) {
 					teleportToElevator(player, dimension, elevatorTeleportRunId, aboveBlock);
 
 					break;
@@ -72,7 +76,9 @@ export const startElevatorTeleport = (player: Player, dimension: Dimension, elev
 
 				if (!belowBlock) break;
 
-				if (belowBlock.typeId === elevatorBlockTypeId) {
+				const { typeId: belowBlockTypeId } = belowBlock;
+
+				if (elevatorsSettings.sameColorTeleport ? belowBlockTypeId === elevatorBlockTypeId : ElevatorBlockTypes.includes(belowBlockTypeId)) {
 					teleportToElevator(player, dimension, elevatorTeleportRunId, belowBlock);
 
 					break;
@@ -137,7 +143,7 @@ export const teleportToElevator = (player: Player, dimension: Dimension, elevato
 
 	const { location: playerLocation } = player;
 
-	dimension.playSound(ElevatorsSounds.playerTeleport, playerLocation, { volume: ElevatorsSounds.playerTeleportVolume as number, pitch: ElevatorsSounds.playerTeleportPitch as number });
+	dimension.playSound(ElevatorsSounds.playerTeleport, playerLocation, PlayerTeleportSoundOptions);
 
 	const teleportOptions: TeleportOptions = {
 		// We use rotation instead of facingDirection because it doesn't work for some reasons
@@ -158,7 +164,7 @@ export const teleportToElevator = (player: Player, dimension: Dimension, elevato
 		const { location: newPlayerLocation } = player;
 
 		if (!Vector3Utils.equals(playerFloorLocation, Vector3Utils.floor(newPlayerLocation))) {
-			dimension.playSound(ElevatorsSounds.playerTeleport, newPlayerLocation, { volume: ElevatorsSounds.playerTeleportVolume as number, pitch: ElevatorsSounds.playerTeleportPitch as number });
+			dimension.playSound(ElevatorsSounds.playerTeleport, newPlayerLocation, PlayerTeleportSoundOptions);
 
 			system.clearRun(playSoundRunId);
 		}

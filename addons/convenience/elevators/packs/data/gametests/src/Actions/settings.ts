@@ -16,6 +16,7 @@ export const initializeSettings = (): void => {
 			initialized: true,
 			defaultFacingDirection: 'none',
 			elevatorsTickParticles: true,
+			sameColorTeleport: true,
 			safeTeleport: false,
 			camouflage: true,
 			xpLevelsUse: 0,

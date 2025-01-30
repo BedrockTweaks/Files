@@ -1,8 +1,9 @@
 import { world, Player, EntityComponentTypes, Block, WorldInitializeBeforeEvent, BlockComponentStepOnEvent, BlockComponentStepOffEvent, BlockComponentTickEvent, BlockComponentOnPlaceEvent, BlockComponentPlayerInteractEvent, EntityInventoryComponent } from '@minecraft/server';
 import { ElevatorsBlockCustomComponents, ElevatorsBlockIndividualSettingsIds, Elevators, ElevatorsDynamicProperties } from '../Models';
-import { getElevatorBlockSettings, startElevatorTeleport, stopElevatorTeleport, tickElevatorParticles, initializeElevatorBlockSettings, initializeSettings, initializeBlocksSettings, updateConfig, isElevatorBlockBelow } from '../Actions';
+import { getElevatorBlockSettings, startElevatorTeleport, stopElevatorTeleport, tickElevatorParticles, initializeElevatorBlockSettings, initializeSettings, initializeBlocksSettings, updateConfig, getSettings, isElevatorBlockBelow } from '../Actions';
 import { openBlockSettings } from '../UI';
 import { getProperties, setProperties } from '../Util';
+import { itemUseOnEventSubscription } from './ItemUseOn';
 
 world.beforeEvents.worldInitialize.subscribe((worldInitializeEvent: WorldInitializeBeforeEvent): void => {
 	const { blockComponentRegistry } = worldInitializeEvent;
@@ -50,6 +51,10 @@ world.afterEvents.worldInitialize.subscribe((): void => {
 	initializeSettings();
 	initializeBlocksSettings();
 	updateConfig();
+
+	if (!getSettings().camouflage) {
+		world.beforeEvents.itemUseOn.unsubscribe(itemUseOnEventSubscription);
+	}
 
 	for (const player of world.getAllPlayers()) {
 		const runId: number | undefined = getProperties<Elevators>(player, ElevatorsDynamicProperties).teleportSystemRunId;

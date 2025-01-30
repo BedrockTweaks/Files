@@ -3,28 +3,29 @@ bt.elevators.no_empty_slot=§cThere is no empty slot to give the item
 bt.elevators.camouflage.illegal_full_blocks=§cEducational blocks, unknown block and blocks that require rendering method which is currently not exposed cannot be used to camouflage the elevator
 bt.elevators.camouflage.item_cannot_be_used=§cThe %1 item cannot be used to camouflage the elevator. Only full blocks item are allowed to be used to camouflage the elevator
 
-bt.elevators.teleport.not_safe_location=§cElevator teleportation canceled, because the destination elevator block is unsafe for teleportation
+bt.elevators.teleport.not_safe_location=§cElevator teleportation canceled, because the destination elevator is unsafe for teleportation
 bt.elevators.teleport.insufficient_xp_levels=§cYour XP levels are insufficient to use the elevator for teleportation. You need a minimum of %1 XP %2 to use the elevator to teleport
 
 bt.elevators.config.title=Elevators / Configuration
 bt.elevators.config.change_settings=Change Settings
-bt.elevators.config.receive_elevator_block=Receive Elevator Block
+bt.elevators.config.receive_elevator=Receive Elevator
 
 bt.elevators.settings.title=Elevators / Global Settings
 bt.elevators.settings.default_facing_direction=Default Facing Direction%1§7Change the default facing direction the elevator teleports the player, so they face that direction upon teleportation. %1§8Default: None
 bt.elevators.settings.elevators_tick_particles=Elevators Tick Particles%1§7When enabled, elevators will tick particles on top of it. %1§8Default: Enabled
-bt.elevators.settings.safe_teleport=Safe Teleport%1§7When enabled, the elevators will safely teleport the player by ensuring no blocks obstruct the destination elevator block. %1§8Default: Disabled
-bt.elevators.settings.camouflage=Camouflage%1§7When enabled, the elevators will be able to be camouflaged by any solid block, i.e, the elevator block will have the same textures as the solid block. %1§8Default: Enabled
+bt.elevators.settings.same_color_teleport=Same Color Teleport%1§7When enabled, the elevator above or below must be the same color as the one the player is standing on to teleport between them. %1§8Default: Enabled
+bt.elevators.settings.safe_teleport=Safe Teleport%1§7When enabled, the elevators will safely teleport the player by ensuring no blocks obstruct the destination elevator. %1§8Default: Disabled
+bt.elevators.settings.camouflage=Camouflage%1§7When enabled, the elevators will be able to be camouflaged by any solid block, i.e, the elevator will have the same textures as the solid block. %1§8Default: Enabled
 bt.elevators.settings.xp_levels_use=XP Levels Use%1§7The amount of XP levels to be consumed when using elevator to teleport. %1§8Default: 0
 
 bt.elevators.settings.invalid_number=§cThe XP Levels should be a number, should be an integer (example: 1, 5, 7, etc) and it should fall between the range of 0-1000 levels
 
-bt.elevators.receive_elevator_block.title=Elevators / Receive Elevator Block
+bt.elevators.receive_elevator.title=Elevators / Receive Elevator
 
 bt.elevators.block_settings.title=Elevators / Block Settings
 bt.elevators.block_settings.facing_direction=Facing Direction%1§7Change the facing direction the elevator teleports the player, so they face that direction upon teleportation. %1§8Default: %2
 bt.elevators.block_settings.elevator_tick_particles=Elevator Tick Particles%1§7When enabled, the elevator will tick particles on top of it. %1§8Default: Enabled
 
-bt.elevators.block_settings.invalid_elevator_block=§cThe elevator block is no longer valid to save the block settings
+bt.elevators.block_settings.invalid_elevator=§cThe elevator is no longer valid to save the block settings
 
 bt.elevators.uninstall=Uninstalled correctly, remove the pack from Behavior Packs to complete the uninstall

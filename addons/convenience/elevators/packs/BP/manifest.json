@@ -2,7 +2,7 @@
 	"format_version": 2,
 	"header": {
 		"name": "Elevators - Convenience - Bedrock Tweaks",
-		"description": "Drop an ender pearl above a wool block to make it into an elevator. Jump on it to warp onto an elevator of the same color directly above. Sneak on it to warp onto one directly below",
+		"description": "Drop an ender pearl above a wool block to make it into an elevator. Jump on it to warp onto an elevator directly above. Sneak on it to warp onto one directly below",
 		"uuid": "f3f1160f-71d8-43df-8c10-76c117a5ae15",
 		"version": [
 			1,

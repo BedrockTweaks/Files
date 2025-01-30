@@ -29,7 +29,7 @@ export const openBlockSettings = (player: Player, elevatorBlock: Block): void =>
 		const updatedElevatorBlockSettings: ElevatorsBlockIndividualSettings | undefined = getElevatorBlockSettings(elevatorBlock);
 
 		if (!updatedElevatorBlockSettings) {
-			player.sendMessage({ translate: 'bt.elevators.block_settings.invalid_elevator_block' });
+			player.sendMessage({ translate: 'bt.elevators.block_settings.invalid_elevator' });
 
 			return;
 		}
