@@ -1,7 +1,12 @@
-// We are using Block.isSolid so, please make sure to use beta version of @minecraft/server module
+// * We are using Block.isSolid so, please make sure to use beta version of @minecraft/server module
 
-import { world, Block, Vector3, PlayerSpawnAfterEvent } from "@minecraft/server";
-import { MinecraftBlockTypes } from "@minecraft/vanilla-data";
+// ! NOTE: If any new additions of blocks are done, then this code will alphabetically sort them in an array, but the camouflage elevator block states are changed based
+// ! on the index number of the array, so the index number might change because sorting them alphabetically which will cause the already loaded camouflaged elevator block
+// ! to have different texture, to fix this we need to add the new blocks at the end of the array regardless of the alphabetically order of the array
+// ! In the next update, I will update the script to make sure that newer blocks are added at the end of the array
+
+import { world, Block, Vector3, PlayerSpawnAfterEvent } from '@minecraft/server';
+import { MinecraftBlockTypes } from '@minecraft/vanilla-data';
 
 // Blocks which aren't considered "solid" by the Block.isSolid but they should be an exception then, we have to make exceptions for them
 const exceptionBlocksList: string[] = [
@@ -24,9 +29,13 @@ const exceptionBlocksList: string[] = [
 	MinecraftBlockTypes.RedStainedGlass,
 	MinecraftBlockTypes.WhiteStainedGlass,
 	MinecraftBlockTypes.YellowStainedGlass,
+	// Ice
+	MinecraftBlockTypes.Ice,
 ];
-// Education blocks and unknown blocks are excluded as we can't change their texture
+// Education blocks, unknown block and blocks that require rendering method which is currently not exposed are excluded as we can't change their texture to replicate them exactly
 const excludeBlocksList: string[] = [
+	MinecraftBlockTypes.Barrier,
+	MinecraftBlockTypes.Beacon,
 	MinecraftBlockTypes.ChemicalHeat,
 	MinecraftBlockTypes.Element0,
 	MinecraftBlockTypes.Element1,
@@ -147,6 +156,9 @@ const excludeBlocksList: string[] = [
 	MinecraftBlockTypes.Element116,
 	MinecraftBlockTypes.Element117,
 	MinecraftBlockTypes.Element118,
+	MinecraftBlockTypes.GrassBlock,
+	MinecraftBlockTypes.HoneyBlock,
+	MinecraftBlockTypes.Slime,
 	MinecraftBlockTypes.UnderwaterTnt,
 	MinecraftBlockTypes.Unknown,
 ];

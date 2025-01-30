@@ -1,6 +1,6 @@
 bt.elevators.no_empty_slot=§cThere is no empty slot to give the item
 
-bt.elevators.camouflage.illegal_full_blocks=§cEducational blocks and unknown block cannot be used to camouflage the elevator
+bt.elevators.camouflage.illegal_full_blocks=§cEducational blocks, unknown block and blocks that require rendering method which is currently not exposed cannot be used to camouflage the elevator
 bt.elevators.camouflage.item_cannot_be_used=§cThe %1 item cannot be used to camouflage the elevator. Only full blocks item are allowed to be used to camouflage the elevator
 
 bt.elevators.teleport.not_safe_location=§cElevator teleportation canceled, because the destination elevator block is unsafe for teleportation
