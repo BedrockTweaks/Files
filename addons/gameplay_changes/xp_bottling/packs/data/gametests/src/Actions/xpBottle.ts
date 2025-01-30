@@ -1,18 +1,18 @@
+import { Player, ItemStack } from '@minecraft/server';
+import { MinecraftItemTypes } from '@minecraft/vanilla-data';
 import {
-	Player,
-	ItemStack,
-	EntityInventoryComponent,
-	Container,
-	EntityComponentTypes
-} from '@minecraft/server';
+	getSettings,
+	getPlayerSettings,
+	removeItemFromHand,
+	placeItemInHand,
+	updatePlayerSettings
+} from '../Actions';
 import {
 	XpBottlingsItemTypes,
 	XpBottleSounds,
 	XpBottlingSettings,
 	PlayerXpBottlingSettings
 } from '../Models';
-import { MinecraftItemTypes } from '@minecraft/vanilla-data';
-import { getSettings, getPlayerSettings } from '../Actions';
 
 /**
  * Grants the player an XP bottle if they have the required amount.
@@ -22,32 +22,41 @@ import { getSettings, getPlayerSettings } from '../Actions';
  */
 export const giveXpBottle = (player: Player, itemStack: ItemStack): void => {
 	const { amountOfXp, enableStackCrafting }: XpBottlingSettings = getSettings();
-	const { enableToolTips, fillFullStack }: PlayerXpBottlingSettings = getPlayerSettings(player);
+	const { enableToolTips, fillFullStack, recievedBook }: PlayerXpBottlingSettings = getPlayerSettings(player);
 	const currentXp: number = player.getTotalXp();
 
-	player.sendMessage(`${enableStackCrafting} | ${fillFullStack}`);
-	if (player.isSneaking && !enableStackCrafting) return;
-	if (player.isSneaking && !fillFullStack) return;
-
-	if (currentXp < amountOfXp) {
+	if (player.isSneaking && !enableStackCrafting) {
 		if (enableToolTips) {
-			void player.onScreenDisplay.setActionBar({ translate: 'bt.xb.xp.invalid' });
+			void player.sendMessage({ translate: 'bt.xb.tooltip.worldDisabled', with: { rawtext: [{ text: '\n' },	{ translate: 'bt.xb.misc.stackCraft' }] } });
+		}
+
+		return;
+	}
+	if (player.isSneaking && !fillFullStack) {
+		if (enableToolTips) {
+			void player.sendMessage({ translate: 'bt.xb.tooltip.playerDisabled', with: { rawtext: [{ text: '\n' },	{ translate: 'bt.xb.misc.stackCraft' }] } });
 		}
 
 		return;
 	}
 
-	// return;
+	if (currentXp < amountOfXp) {
+		if (enableToolTips) {
+			void player.onScreenDisplay.setActionBar({ translate: 'bt.xb.tooltip.notEnough' });
+		}
+
+		return;
+	}
 
 	if (!player.isSneaking) {
+		// single bottle filling
 		void removeItemFromHand(player, MinecraftItemTypes.GlassBottle, 1);
 		void reduceXP(player, amountOfXp);
 
-		// following line just displays a useful bit of info on the action bar to state what happened.
 		if (enableToolTips) {
-			void player.onScreenDisplay.setActionBar({ translate: 'bt.xb.xp.decrease', with: [amountOfXp.toString()] });
+			void player.onScreenDisplay.setActionBar({ translate: 'bt.xb.tooltip.decrease', with: [amountOfXp.toString()] });
 		}
-		void player.dimension.spawnItem(new ItemStack(XpBottlingsItemTypes.XpBottle, 1), player.location);
+		void placeItemInHand(player, XpBottlingsItemTypes.XpBottle, 1);
 
 		// randomise the pitch to make the sounds more interesting.
 		const pitchIndex: number = Math.round(Math.random() * 2);
@@ -55,37 +64,24 @@ export const giveXpBottle = (player: Player, itemStack: ItemStack): void => {
 
 		void player.playSound(XpBottleSounds.fillBottle, { volume: 0.5, pitch: pitches[pitchIndex] });
 	} else {
-		const numFillableBottles: number = currentXp / amountOfXp;
+		// stack bottle filling
+		const numFillableBottles: number = Math.floor(currentXp / amountOfXp);
 		const bottlesToFill: number = Math.min(itemStack.amount, numFillableBottles);
 
 		void removeItemFromHand(player, MinecraftItemTypes.GlassBottle, bottlesToFill);
 		void massReduceXP(player, bottlesToFill * amountOfXp);
 
 		if (enableToolTips) {
-			void player.onScreenDisplay.setActionBar({ translate: 'bt.xb.xp.decrease', with: [(bottlesToFill * amountOfXp).toString()] });
+			void player.onScreenDisplay.setActionBar({ translate: 'bt.xb.tooltip.decrease', with: [(bottlesToFill * amountOfXp).toString()] });
 		}
-		void player.dimension.spawnItem(new ItemStack(XpBottlingsItemTypes.XpBottle, 1), player.location);
+		void placeItemInHand(player, XpBottlingsItemTypes.XpBottle, bottlesToFill);
 
 		void player.playSound(XpBottleSounds.fillStack, { volume: 0.5, pitch: 1.5 });
 	}
-};
 
-/**
- * Removes one item from the held item stack.
- *
- * @param {Player} player - The player to have the item removed from.
- * @param {string} item - The item name to remove.
- * @param {number} amount - The number of items to remove.
- */
-export const removeItemFromHand = (player: Player, item: string, amount: number): void => {
-	const playerComponent = player.getComponent(EntityComponentTypes.Inventory) as EntityInventoryComponent;
-	const playerInventory = playerComponent.container as Container;
-	const playerStack = playerInventory.getItem(player.selectedSlotIndex) as ItemStack;
-
-	void playerInventory.setItem(player.selectedSlotIndex, undefined);
-
-	if (playerStack.amount > amount) {
-		void playerInventory.setItem(player.selectedSlotIndex, new ItemStack(item, playerStack.amount - amount));
+	if (!recievedBook) {
+		player.dimension.spawnItem(new ItemStack(XpBottlingsItemTypes.guideBook, 1), player.location);
+		void updatePlayerSettings(player, { recievedBook: true });
 	}
 };
 

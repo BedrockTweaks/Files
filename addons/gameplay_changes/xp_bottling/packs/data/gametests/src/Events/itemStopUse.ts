@@ -1,3 +1,11 @@
+import {
+	world,
+	ItemStopUseAfterEvent
+} from '@minecraft/server';
+import { MinecraftEntityTypes } from '@minecraft/vanilla-data';
+import { updatePlayerSettings } from '../Actions';
+import { XpBottlingsItemTypes } from '../Models';
+
 /**
  * * itemStopUse Event listeners
  * In this event we listen for when a player stop using the xp bottle and will
@@ -5,16 +13,10 @@
  * it will report back false and not follow through into the action
 */
 
-import {
-	world,
-	ItemStartUseAfterEvent
-} from '@minecraft/server';
-import { MinecraftEntityTypes } from '@minecraft/vanilla-data';
-import { XpBottlingsItemTypes } from '../Models';
-
-world.afterEvents.itemStartUse.subscribe(({ source, itemStack }: ItemStartUseAfterEvent): void => {
+world.afterEvents.itemStopUse.subscribe(({ source, itemStack }: ItemStopUseAfterEvent): void => {
 	if (!source.matches({ type: MinecraftEntityTypes.Player })) return;
-	if (!itemStack.matches(XpBottlingsItemTypes.XpBottle)) return;
+	if (!itemStack?.matches(XpBottlingsItemTypes.XpBottle)) return;
 
-	// TODO: when itemStopUse fires, remove DynProp set in ./itemStartUse.ts
+	// // TODO: when itemStopUse fires, remove DynProp set in ./itemStartUse.ts
+	void updatePlayerSettings(source, { usingSince: 0 });
 });

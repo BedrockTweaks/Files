@@ -1,4 +1,5 @@
 .regolith/
+build/
 node_modules/
 scripts/
 filters/

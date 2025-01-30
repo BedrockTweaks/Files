@@ -1,38 +1,66 @@
 import { Player } from '@minecraft/server';
-import { ModalFormData, ModalFormResponse } from '@minecraft/server-ui';
-import { XpBottlingSettings } from '../Models';
+import {
+	ActionFormResponse,
+	MessageFormData,
+	ModalFormData,
+	ModalFormResponse
+} from '@minecraft/server-ui';
 import { getSettings, setSettings } from '../Actions';
-import { openConfigInterface } from './config';
+import { XpBottlingSettings } from '../Models';
+import { openConfigInterface } from '../UI';
 
 export const openSettingsInterface = (player: Player): void => {
-	const xpBottlingSettings: XpBottlingSettings = getSettings();
+	const currentSettings: XpBottlingSettings = getSettings();
+	let newSettings: XpBottlingSettings = currentSettings;
 
-	const form: ModalFormData = new ModalFormData()
+	const settingsForm: ModalFormData = new ModalFormData()
 		.title({ translate: 'bt.xb.settings.title' })
-		.slider({ translate: 'bt.xb.settings.amount_of_xp', with: ['\n'] }, 1, 100, 1, 23)
-		.toggle({ translate: 'bt.xb.settings.instant_use', with: ['\n'] })
-		.slider({ translate: 'bt.xb.settings.time_to_use', with: ['\n'] }, 1, 100, 1, 20) // divide by 10 in use, otherwise way too long
-		.toggle({ translate: 'bt.xb.settings.enable_stack_consume', with: ['\n'] })
-		.toggle({ translate: 'bt.xb.settings.enable_stack_craft', with: ['\n'] });
+		.slider({ translate: 'bt.xb.settings.amountOfXp', with: ['\n'] }, 1, 40, 1, currentSettings.amountOfXp)
+		.toggle({ translate: 'bt.xb.settings.instantUse', with: ['\n'] }, currentSettings.instantUse)
+		.slider({ translate: 'bt.xb.settings.timeToUse', with: ['\n'] }, 4, 100, 4, currentSettings.timeToUse)
+		.toggle({ translate: 'bt.xb.settings.enableStackConsume', with: ['\n'] }, currentSettings.enableStackConsume)
+		.slider({ translate: 'bt.xb.settings.stackMultiplier', with: ['\n'] }, 1, 5, 1, currentSettings.stackMultiplier)
+		.toggle({ translate: 'bt.xb.settings.enableStackCraft', with: ['\n'] }, currentSettings.enableStackCrafting);
 
-	form.show(player).then((response: ModalFormResponse): void => {
-		if (response.formValues) {
+	settingsForm.show(player).then((settingsResponse: ModalFormResponse): void => {
+		if (settingsResponse.formValues) {
 			// toggle = boolean
 			// slider = number
 			// textField = string
-			const formValues: [number, boolean, number, boolean, boolean] = response.formValues as [number, boolean, number, boolean, boolean];
+			const settingsFormValues: [number, boolean, number, boolean, number, boolean] = settingsResponse.formValues as [number, boolean, number, boolean, number, boolean];
 
-			xpBottlingSettings.amountOfXp = formValues[0];
-			xpBottlingSettings.instantUse = formValues[1];
-			xpBottlingSettings.timeToUse = formValues[2];
-			xpBottlingSettings.enableStackConsume = formValues[3];
-			xpBottlingSettings.enableStackCrafting = formValues[4];
+			newSettings = {
+				initialized: currentSettings.initialized,
+				version: currentSettings.version,
+				amountOfXp: settingsFormValues[0],
+				instantUse: settingsFormValues[1],
+				timeToUse: settingsFormValues[2],
+				enableStackConsume: settingsFormValues[3],
+				stackMultiplier: settingsFormValues[4],
+				enableStackCrafting: settingsFormValues[5],
+			};
 		}
 
-		if (!response.canceled) {
-			setSettings(xpBottlingSettings);
+		const confirmForm: MessageFormData = new MessageFormData()
+			.title({ translate: 'bt.xb.confirm.title' })
+			.body({ translate: 'bt.xb.confirm.body', with: ['\n', currentSettings.amountOfXp.toString(), newSettings.amountOfXp.toString()] })
+			.button1({ translate: 'bt.xb.confirm.no' })
+			.button2({ translate: 'bt.xb.confirm.yes' });
 
-			openConfigInterface(player);
+		if (!settingsResponse.canceled) {
+			if (newSettings.amountOfXp !== currentSettings.amountOfXp) {
+				confirmForm.show(player).then((confirmResponse: ActionFormResponse): void => {
+					if (confirmResponse.selection) {
+						void setSettings(newSettings);
+					} else {
+						void openSettingsInterface(player);
+					}
+				});
+			} else {
+				void setSettings(newSettings);
+			}
+		} else {
+			void openConfigInterface(player);
 		}
 	});
 };
