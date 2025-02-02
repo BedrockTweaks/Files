@@ -34,7 +34,7 @@ export interface XpBottlingSettings {
 
 export enum PlayerXpBottlingSettingsDynamicProperties {
 	initialized = 'bt:xb.player_initialized',
-	recievedBook = 'bt:xb.playerRecievedBook',
+	receivedBook = 'bt:xb.playerRecievedBook',
 	enableToolTips = 'bt:xb.playerToolTips',
 	consumeFullStack = 'bt:xb.consumeFullStack',
 	fillFullStack = 'bt:xb.fillFullStack',
@@ -45,7 +45,7 @@ export interface PlayerXpBottlingSettings {
 	// Indicates whether the player has been initialized in the XpBottling system.
 	initialized: boolean;
 	// Indicated whether the player has recieved the guide book to let them configure settings.
-	recievedBook: boolean;
+	receivedBook: boolean;
 	// Controls whether actionbar tool tips are displayed.
 	enableToolTips: boolean;
 	// Controls whether Shift + Right Click a stack of XP Bottles drinks all of them.

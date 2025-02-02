@@ -11,9 +11,6 @@
 			"minecraft:custom_components": [
 				"bt:xb.guideBookUsed"
 			],
-			"minecraft:display_name": {
-				"value": "Guide Book"
-			},
 			"minecraft:icon": {
 				"textures": {
 					"default": "bt:xb_guide_book"

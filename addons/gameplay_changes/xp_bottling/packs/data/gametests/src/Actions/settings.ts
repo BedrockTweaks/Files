@@ -36,12 +36,13 @@ export const initializeSettings = (): void => {
 
 export const initializePlayerSettings = (player: Player): void => {
 	// TODO: overhaul to use a version stub vs generic "initialized" value for updating
-	if (getProperties<PlayerXpBottlingSettings>(player, PlayerXpBottlingSettingsDynamicProperties).initialized) {
+	if (!getProperties<PlayerXpBottlingSettings>(player, PlayerXpBottlingSettingsDynamicProperties).initialized) {
 		setProperties(
 			player,
 			PlayerXpBottlingSettingsDynamicProperties,
 			{
 				initialized: true,
+				receivedBook: false,
 				enableToolTips: true,
 				consumeFullStack: true,
 				fillFullStack: true,
