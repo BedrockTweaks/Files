@@ -6,37 +6,37 @@ import { getProperties, setProperties } from '../Util';
 import { itemUseOnEventSubscription } from './ItemUseOn';
 
 world.beforeEvents.worldInitialize.subscribe((worldInitializeEvent: WorldInitializeBeforeEvent): void => {
-	const { blockComponentRegistry } = worldInitializeEvent;
+	const { blockComponentRegistry }: WorldInitializeBeforeEvent = worldInitializeEvent;
 
 	blockComponentRegistry.registerCustomComponent(ElevatorsBlockCustomComponents.teleport, {
 		onStepOn: (stepOnEvent: BlockComponentStepOnEvent): void => {
-			const { entity: player, dimension, block } = stepOnEvent;
+			const { entity: player, dimension, block }: BlockComponentStepOnEvent = stepOnEvent;
 
 			if (!(player instanceof Player)) return;
 
 			startElevatorTeleport(player, dimension, block);
 		},
 		onStepOff: (stepOffEvent: BlockComponentStepOffEvent): void => {
-			const { entity: player } = stepOffEvent;
+			const { entity: player }: BlockComponentStepOffEvent = stepOffEvent;
 
 			if (!(player instanceof Player)) return;
 
 			stopElevatorTeleport(player);
 		},
 		onTick: (tickEvent: BlockComponentTickEvent): void => {
-			const { block, dimension } = tickEvent;
+			const { block, dimension }: BlockComponentTickEvent = tickEvent;
 
 			if (!getElevatorBlockSettings(block)?.[ElevatorsBlockIndividualSettingsIds.elevatorTickParticles]) return;
 
 			tickElevatorParticles(block.location, dimension);
 		},
 		onPlace: (placeEvent: BlockComponentOnPlaceEvent): void => {
-			const { block } = placeEvent;
+			const { block }: BlockComponentOnPlaceEvent = placeEvent;
 
 			initializeElevatorBlockSettings(block);
 		},
 		onPlayerInteract: (playerInteractEvent: BlockComponentPlayerInteractEvent): void => {
-			const { block, player } = playerInteractEvent;
+			const { block, player }: BlockComponentPlayerInteractEvent = playerInteractEvent;
 
 			if (!player) return;
 
@@ -60,7 +60,7 @@ world.afterEvents.worldInitialize.subscribe((): void => {
 		const runId: number | undefined = getProperties<Elevators>(player, ElevatorsDynamicProperties).teleportSystemRunId;
 
 		if (runId) {
-			const { dimension: playerDimension } = player;
+			const { dimension: playerDimension }: Player = player;
 
 			setProperties(player, ElevatorsDynamicProperties, { teleportSystemRunId: undefined } as Elevators);
 

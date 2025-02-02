@@ -6475,8 +6475,7 @@
 
 	if (doesntExist.length > 0) {
 		console.warn(`There are some block identifiers which we can't find the textures from bedrockSampleBlocksJson, please set them manually\n${JSON.stringify(doesntExist, null, 4)}`);
-	}
-	else {
+	} else {
 		console.log(JSON.stringify(vanillaFullBlocksListTextureMapping));
 	}
 })();

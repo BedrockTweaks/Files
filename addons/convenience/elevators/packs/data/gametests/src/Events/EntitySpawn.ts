@@ -5,7 +5,7 @@ import { woolToElevator } from '../Actions';
 world.afterEvents.entitySpawn.subscribe((entitySpawnEvent: EntitySpawnAfterEvent): void => {
 	if (entitySpawnEvent.cause !== EntityInitializationCause.Spawned) return;
 
-	const { entity } = entitySpawnEvent;
+	const { entity }: EntitySpawnAfterEvent = entitySpawnEvent;
 
 	if (!entity.hasComponent(EntityComponentTypes.Item)) return;
 

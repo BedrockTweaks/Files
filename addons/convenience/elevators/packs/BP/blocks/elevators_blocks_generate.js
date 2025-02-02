@@ -61,14 +61,19 @@ import path from "path";
 	const blockStates = {};
 	const blockPermutations = [];
 
-	const maxBits = Math.ceil(Math.log2(vanillaFullBlocksList.length));
+	const maxBits = Math.ceil(Math.log2(vanillaFullBlocksList.length + 1));
 
 	for (let bit = 1; bit <= maxBits; bit++) {
-		blockStates[`bt:e.camouflage_bit_${bit}`] = [true, false];
+		blockStates[`bt:e.camouflage_bit_${bit}`] = [false, true];
 	}
 
 	vanillaFullBlocksList.forEach((blockId, index) => {
-		const binaryIndex = index.toString(2).padStart(maxBits, "0");
+		// The index 0 will not be used because all the block states have their default value set to false, and it will cause the first permutation which
+		// have all the conditions set to
+		//  false to become the texture of elevator block as default texture
+		// which is not desirable so, index 0 has been reserved for this to not happen
+		const binaryIndex = (index + 1).toString(2).padStart(maxBits, "0").split("").reverse().join("");
+
 		const conditions = [];
 
 		for (let bit = 0; bit < maxBits; bit++) {
@@ -103,9 +108,16 @@ import path from "path";
 						"minecraft:destructible_by_explosion": {
 							explosion_resistance: 0.8
 						},
-						// TODO: Add item_specific_speeds for shears item to be faster
 						"minecraft:destructible_by_mining": {
-							seconds_to_destroy: 1.2
+							seconds_to_destroy: 0.8,
+							item_specific_speeds: [
+								{
+									item: {
+										tags: "query.any_tag('minecraft:is_shears')"
+									},
+									destroy_speed: 0.3
+								}
+							]
 						},
 						"minecraft:geometry": "minecraft:geometry.full_block",
 						"minecraft:material_instances": {
@@ -123,7 +135,8 @@ import path from "path";
 						},
 						"minecraft:redstone_conductivity": {
 							redstone_conductor: true
-						}
+						},
+						"tag:minecraft:is_shears_item_destructible": {}
 					},
 					permutations: blockPermutations
 				}

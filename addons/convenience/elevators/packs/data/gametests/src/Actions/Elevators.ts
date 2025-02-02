@@ -1,5 +1,6 @@
 import { system, BlockPermutation, Dimension, Block, Vector3, Entity, Player, ItemStack, TeleportOptions, Vector2 } from '@minecraft/server';
 import { Vector3Builder, Vector3Utils } from '@minecraft/math';
+import { NumberRange } from '@minecraft/common';
 import { Elevators, ElevatorsDynamicProperties, ElevatorsSettings, ElevatorsBlockIndividualSettings, ElevatorsBlockIndividualSettingsIds, ElevatorsSounds, PlayerTeleportSoundOptions, ElevatorsParticles, ElevatorBlockTypes, WoolBlockTypes, ElevatorTickParticleMolang, WoolToElevatorParticleMolang, VanillaFullBlocksList, ElevatorsBlockStates, IllegalFullBlocksList } from '../Models';
 import { getProperties, setProperties } from '../Util';
 import { getSettings } from './settings';
@@ -17,8 +18,8 @@ import { initializeElevatorBlockSettings, getElevatorBlockSettings } from './blo
 export const startElevatorTeleport = (player: Player, dimension: Dimension, elevatorBlock: Block): void => {
 	const elevatorsSettings: ElevatorsSettings = getSettings();
 
-	const { max: dimensionMaxHeight, min: dimensionMinHeight } = dimension.heightRange;
-	const { typeId: elevatorBlockTypeId, location: elevatorBlockLocation } = elevatorBlock;
+	const { max: dimensionMaxHeight, min: dimensionMinHeight }: NumberRange = dimension.heightRange;
+	const { typeId: elevatorBlockTypeId, location: elevatorBlockLocation }: Block = elevatorBlock;
 
 	const elevatorBlockAboveY: number = elevatorBlockLocation.y + 1;
 	const elevatorBlockBelowY: number = elevatorBlockLocation.y - 1;
@@ -58,7 +59,7 @@ export const startElevatorTeleport = (player: Player, dimension: Dimension, elev
 
 				if (!aboveBlock) break;
 
-				const { typeId: aboveBlockTypeId } = aboveBlock;
+				const { typeId: aboveBlockTypeId }: Block = aboveBlock;
 
 				if (elevatorsSettings.sameColorTeleport ? aboveBlockTypeId === elevatorBlockTypeId : ElevatorBlockTypes.includes(aboveBlockTypeId)) {
 					teleportToElevator(player, dimension, elevatorTeleportRunId, aboveBlock);
@@ -76,7 +77,7 @@ export const startElevatorTeleport = (player: Player, dimension: Dimension, elev
 
 				if (!belowBlock) break;
 
-				const { typeId: belowBlockTypeId } = belowBlock;
+				const { typeId: belowBlockTypeId }: Block = belowBlock;
 
 				if (elevatorsSettings.sameColorTeleport ? belowBlockTypeId === elevatorBlockTypeId : ElevatorBlockTypes.includes(belowBlockTypeId)) {
 					teleportToElevator(player, dimension, elevatorTeleportRunId, belowBlock);
@@ -141,7 +142,7 @@ export const teleportToElevator = (player: Player, dimension: Dimension, elevato
 
 	clearElevatorsTeleportSystemRun(player, elevatorTeleportRunId);
 
-	const { location: playerLocation } = player;
+	const { location: playerLocation }: Player = player;
 
 	dimension.playSound(ElevatorsSounds.playerTeleport, playerLocation, PlayerTeleportSoundOptions);
 
@@ -161,7 +162,7 @@ export const teleportToElevator = (player: Player, dimension: Dimension, elevato
 			return;
 		}
 
-		const { location: newPlayerLocation } = player;
+		const { location: newPlayerLocation }: Player = player;
 
 		if (!Vector3Utils.equals(playerFloorLocation, Vector3Utils.floor(newPlayerLocation))) {
 			dimension.playSound(ElevatorsSounds.playerTeleport, newPlayerLocation, PlayerTeleportSoundOptions);
@@ -232,7 +233,7 @@ export const woolToElevator = (enderPearlItemEntity: Entity): void => {
 		}
 
 		if (enderPearlItemEntity.getVelocity().y === 0) {
-			const { dimension: enderPearlItemDimension } = enderPearlItemEntity;
+			const { dimension: enderPearlItemDimension }: Entity = enderPearlItemEntity;
 
 			const block: Block | undefined = enderPearlItemDimension.getBlock(enderPearlItemEntity.location)?.below();
 
@@ -248,12 +249,12 @@ export const woolToElevator = (enderPearlItemEntity: Entity): void => {
 
 			system.clearRun(woolToElevatorRunId);
 
-			const { typeId: blockTypeId } = block;
+			const { typeId: blockTypeId }: Block = block;
 
 			if (WoolBlockTypes.includes(blockTypeId)) {
 				enderPearlItemEntity.remove();
 
-				const { location: blockLocation } = block;
+				const { location: blockLocation }: Block = block;
 
 				block.setType(`bt:e.${blockTypeId.replace(/minecraft:|_wool/g, '')}_elevator`);
 
@@ -303,7 +304,7 @@ export const stopNearbyPlayersElevatorTeleport = (elevatorDimension: Dimension, 
  * This function can't be called in read-only mode.
  */
 export const camouflageElevator = (player: Player, elevatorBlock: Block, item: ItemStack): void => {
-	const { typeId: itemTypeId } = item;
+	const { typeId: itemTypeId }: ItemStack = item;
 
 	if (IllegalFullBlocksList.includes(itemTypeId)) {
 		player.sendMessage({ translate: 'bt.elevators.camouflage.illegal_full_blocks' });
@@ -329,9 +330,9 @@ export const camouflageElevator = (player: Player, elevatorBlock: Block, item: I
  * @returns {Record<string, boolean>} Returns an object consisting of all the block states binary bits as keys with boolean as values.
  */
 export const getCamouflageBitStates = (fullBlockIndex: number): Record<string, boolean> => {
-	const maxBits: number = Math.ceil(Math.log2(VanillaFullBlocksList.length));
+	const maxBits: number = Math.ceil(Math.log2(VanillaFullBlocksList.length + 1));
 
-	const binaryFullBlockIndex: string = fullBlockIndex.toString(2).padStart(maxBits, '0');
+	const binaryFullBlockIndex: string = (fullBlockIndex + 1).toString(2).padStart(maxBits, '0').split('').reverse().join('');
 
 	const bitStates: Record<string, boolean> = {};
 

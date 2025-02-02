@@ -4,7 +4,7 @@ import { uninstall } from '../Actions';
 import { openConfigInterface } from '../UI';
 
 system.afterEvents.scriptEventReceive.subscribe((scriptEventReceiveEvent: ScriptEventCommandMessageAfterEvent): void => {
-	const { sourceEntity } = scriptEventReceiveEvent;
+	const { sourceEntity }: ScriptEventCommandMessageAfterEvent = scriptEventReceiveEvent;
 
 	switch (scriptEventReceiveEvent.id) {
 		case ElevatorsScriptEvents.config:

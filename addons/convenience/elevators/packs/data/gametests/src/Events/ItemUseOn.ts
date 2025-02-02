@@ -5,7 +5,7 @@ import { camouflageElevator } from '../Actions';
 export const itemUseOnEventSubscription: (arg: ItemUseOnBeforeEvent) => void = world.beforeEvents.itemUseOn.subscribe((itemUseOnEvent: ItemUseOnBeforeEvent): void => {
 	if (!itemUseOnEvent.isFirstEvent) return;
 
-	const { source: player, block, itemStack: item } = itemUseOnEvent;
+	const { source: player, block, itemStack: item }: ItemUseOnBeforeEvent = itemUseOnEvent;
 
 	if (!ElevatorBlockTypes.includes(block.typeId)) return;
 
