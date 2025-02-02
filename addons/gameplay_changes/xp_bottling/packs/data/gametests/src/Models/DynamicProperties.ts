@@ -26,9 +26,9 @@ export interface XpBottlingSettings {
 	timeToUse: number;
 	// When consuming a stack of bottles, the amount to multiply it by.
 	stackMultiplier: number;
-	// Controls whether Shift + Right Click consumes a full stack of XP bottles.
+	// Controls whether Sneak + Use consumes a full stack of XP bottles.
 	enableStackConsume: boolean;
-	// Controls whether Shift + Right Click fills an entire stack of empty Glass Bottles.
+	// Controls whether Sneak + Use fills an entire stack of empty Glass Bottles.
 	enableStackCrafting: boolean;
 }
 
@@ -48,9 +48,9 @@ export interface PlayerXpBottlingSettings {
 	receivedBook: boolean;
 	// Controls whether actionbar tool tips are displayed.
 	enableToolTips: boolean;
-	// Controls whether Shift + Right Click a stack of XP Bottles drinks all of them.
+	// Controls whether Sneak + Use a stack of XP Bottles drinks all of them.
 	consumeFullStack: boolean;
-	// Controls whether Shift + Right Click a stack of empty Glass Bottles fills all that it can.
+	// Controls whether Sneak + Use a stack of empty Glass Bottles fills all that it can.
 	fillFullStack: boolean;
 	// [Internal] Used to check if item has been used for global timeToUse setting.
 	usingSince: number;
