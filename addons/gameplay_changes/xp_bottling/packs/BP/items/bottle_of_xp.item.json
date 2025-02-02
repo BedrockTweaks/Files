@@ -9,9 +9,6 @@
 			}
 		},
 		"components": {
-			"minecraft:display_name": {
-				"value": "Bottle of Experience"
-			},
 			"minecraft:food": {
 				"can_always_eat": true,
 				"nutrition": 0,

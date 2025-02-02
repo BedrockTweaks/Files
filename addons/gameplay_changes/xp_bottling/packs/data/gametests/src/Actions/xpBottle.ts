@@ -22,7 +22,7 @@ import {
  */
 export const giveXpBottle = (player: Player, itemStack: ItemStack): void => {
 	const { amountOfXp, enableStackCrafting }: XpBottlingSettings = getSettings();
-	const { enableToolTips, fillFullStack, recievedBook }: PlayerXpBottlingSettings = getPlayerSettings(player);
+	const { enableToolTips, fillFullStack, receivedBook }: PlayerXpBottlingSettings = getPlayerSettings(player);
 	const currentXp: number = player.getTotalXp();
 
 	if (player.isSneaking && !enableStackCrafting) {
@@ -79,9 +79,9 @@ export const giveXpBottle = (player: Player, itemStack: ItemStack): void => {
 		void player.playSound(XpBottleSounds.fillStack, { volume: 0.5, pitch: 1.5 });
 	}
 
-	if (!recievedBook) {
+	if (!receivedBook) {
 		player.dimension.spawnItem(new ItemStack(XpBottlingsItemTypes.guideBook, 1), player.location);
-		void updatePlayerSettings(player, { recievedBook: true });
+		void updatePlayerSettings(player, { receivedBook: true });
 	}
 };
 

@@ -7,6 +7,6 @@
 import './itemStartUse';
 import './itemStopUse';
 import './itemUseOn';
-import './playerJoin';
+import './playerSpawn';
 import './scriptEventCommandMessage';
 import './worldInitialize';
