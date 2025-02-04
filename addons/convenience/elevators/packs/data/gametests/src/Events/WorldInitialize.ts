@@ -50,7 +50,7 @@ world.beforeEvents.worldInitialize.subscribe((worldInitializeEvent: WorldInitial
 
 		/**
 		 * In this custom component, we listen to player placing the elevator block
-		 * and initializes the block settings for that placed elevator block.
+		 * and then initializes the block settings for that placed elevator block.
 		 */
 		onPlace: (placeEvent: BlockComponentOnPlaceEvent): void => {
 			const { block }: BlockComponentOnPlaceEvent = placeEvent;
@@ -60,7 +60,7 @@ world.beforeEvents.worldInitialize.subscribe((worldInitializeEvent: WorldInitial
 
 		/**
 		 * In this custom component, we listen to every time a player interacts with the elevator block
-		 * while having their main hand empty and opening the block settings UI for the player of this elevator block.
+		 * while having their main hand empty and then we open the block settings UI for the player of this elevator block.
 		 */
 		onPlayerInteract: (playerInteractEvent: BlockComponentPlayerInteractEvent): void => {
 			const { block, player }: BlockComponentPlayerInteractEvent = playerInteractEvent;
@@ -76,7 +76,7 @@ world.beforeEvents.worldInitialize.subscribe((worldInitializeEvent: WorldInitial
 
 /**
  * In this event, we listen to every time the world initializes
- * and then we initialize all the settings and block settings if it isn't initialized yet
+ * and then we initialize all the settings and blocks settings if it isn't initialized yet
  * and update the config if there is an older config version being used.
  *
  * We also check if the camouflage is turned off, if it is, then we unsubscribe the itemUseOn event.

@@ -4,8 +4,8 @@ import { stopNearbyPlayersElevatorTeleport, deleteElevatorBlockSettings } from '
 
 /**
  * In this event, we listen to the player breaking an elevator block,
- * then it will stop all the players who are standing on top of this elevator block their elevator teleport process
- * and it will delete its elevator block settings.
+ * then we will stop all the players who are standing on top of this elevator block their elevator teleport process
+ * and we will delete its elevator block settings.
  */
 world.beforeEvents.playerBreakBlock.subscribe((playerBreakBlockEvent: PlayerBreakBlockBeforeEvent): void => {
 	const { dimension, block: elevatorBlock }: PlayerBreakBlockBeforeEvent = playerBreakBlockEvent;
