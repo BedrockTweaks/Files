@@ -11,6 +11,12 @@
 			"name": "Gameplay Changes",
 			"packs": [
 				{
+					"id": "anti_ghast_grief",
+					"name": "Anti Ghast Grief",
+					"description": "Prevents Creepers from blowing up blocks. /function anti_creeper_grief/config",
+					"version": "1.21 - 1.0.0"
+				},
+				{
 					"id": "graves",
 					"name": "Graves",
 					"description": "When you die, it places a grave to save all your drops. Hit a grave to retrieve your items. /function graves/config",

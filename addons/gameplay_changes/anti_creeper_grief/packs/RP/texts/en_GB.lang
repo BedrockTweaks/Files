@@ -1,0 +1,6 @@
+## Config
+bt.acg.config.title=Anti Creeper Grief / Configuration
+bt.acg.config.creepersDoDamage=Creepers do Damage%1§7When enabled, creepers will do damage to players. %1§8Default: Disabled
+
+## Misc
+bt.acg.misc.uninstall=§eUninstalled Correctly§r%1Remove §lAnti Creeper Grief§r from Behaviour Packs to complete the uninstall.
