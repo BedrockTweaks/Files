@@ -1,0 +1,37 @@
+{
+	"format_version": 2,
+	"header": {
+		"name": "Anti Creeper Grief - Gameplay Changes - Bedrock Tweaks",
+		"description": "TESTING.",
+		"uuid": "c7e4c3cb-bf32-42f1-8d0d-48ec3a617776",
+		"version": [
+			1,
+			0,
+			0
+		],
+		"min_engine_version": [
+			1,
+			21,
+			50
+		]
+	},
+	"modules": [
+		{
+			"type": "resources",
+			"uuid": "752ff32e-6899-4ac1-931d-6a7e2fe4b8ce",
+			"version": [
+				1,
+				0,
+				0
+			]
+		}
+	],
+	"dependencies": [],
+	"metadata": {
+		"authors": [
+			"Vanilla Tweaks",
+			"Bedrock Tweaks",
+			"SquatchHunter"
+		]
+	}
+}
