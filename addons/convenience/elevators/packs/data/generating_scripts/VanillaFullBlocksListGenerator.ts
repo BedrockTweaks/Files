@@ -3,7 +3,7 @@
 import { world, Player, Block, Vector3, PlayerSpawnAfterEvent } from '@minecraft/server';
 import { MinecraftBlockTypes } from '@minecraft/vanilla-data';
 
-// Blocks which aren't considered "solid" by the Block.isSolid but they should be an exception then, we have to make exceptions for them
+// Blocks which aren't considered "solid" by the Block.isSolid but they should be an exception, then we have to make exceptions for them
 const exceptionBlocksList: string[] = [
 	// Glass
 	MinecraftBlockTypes.Glass,
@@ -662,6 +662,21 @@ const currentVanillaFullBlocksList: string[] = [
 
 const newVanillaFullBlocksList: string[] = [];
 
+/**
+ * In this event, we listen to every time a player is joining the world
+ * and then we place all the vanilla blocks at the world height on top of the player
+ * and check if the block is a solid block or not.
+ *
+ * Usually if it is a solid block, then this means that it is a full block,
+ * but sometimes this isn't the case so, we have to make exceptions for those blocks.
+ *
+ * If the block is a solid block, but it should be excluded due to various reasons, then we skip these blocks and declare these blocks as illegal.
+ *
+ * Blocks which are already in the current vanilla full blocks list will be skipped and only newer full blocks will be added to the new vanilla full blocks list.
+ *
+ * If there is no new vanilla full blocks, then we just inform the players about it through content log,
+ * but if there are new vanilla full blocks, then we just print the entire vanilla full blocks list including the new blocks to the content log.
+ */
 world.afterEvents.playerSpawn.subscribe((playerSpawnEvent: PlayerSpawnAfterEvent): void => {
 	if (!playerSpawnEvent.initialSpawn) return;
 

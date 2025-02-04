@@ -68,9 +68,8 @@ import path from "path";
 	}
 
 	vanillaFullBlocksList.forEach((blockId, index) => {
-		// The index 0 will not be used because all the block states have their default value set to false, and it will cause the first permutation which
-		// have all the conditions set to
-		//  false to become the texture of elevator block as default texture
+		// The index 0 will not be used because all the block states have their default value set to false and this will cause the first permutation which
+		// have all the conditions set to false to become the texture of elevator block as default texture
 		// which is not desirable so, index 0 has been reserved for this to not happen
 		const binaryIndex = (index + 1).toString(2).padStart(maxBits, "0").split("").reverse().join("");
 

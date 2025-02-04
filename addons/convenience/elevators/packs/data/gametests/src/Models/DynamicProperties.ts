@@ -65,7 +65,7 @@ export interface ElevatorsBlockIndividualSettings {
 	[ElevatorsBlockIndividualSettingsIds.facingDirection]: string;
 	// Indicates whether the elevator block will tick particles on top of it or not
 	[ElevatorsBlockIndividualSettingsIds.elevatorTickParticles]: boolean;
-	// Preserves the previous elevator tick particles for each elevator blocks so that when the global elevators tick particles is set to disabled
+	// Preserves the previous elevator tick particles for each elevator blocks so that when the global elevators tick particles is set to disabled,
 	// then it won't lose its previous value if the global elevator ticks particles is set to enabled afterwards
 	[ElevatorsBlockIndividualSettingsIds.previousElevatorTickParticles]: boolean | undefined;
 }

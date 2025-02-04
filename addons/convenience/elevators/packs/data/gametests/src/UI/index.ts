@@ -1,2 +1,2 @@
 export { openConfigInterface } from './Config';
-export { openBlockSettings } from './BlockSettings';
+export { openBlockSettingsInterface } from './BlockSettings';

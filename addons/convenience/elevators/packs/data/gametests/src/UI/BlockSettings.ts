@@ -4,12 +4,12 @@ import { ElevatorsSettings, ElevatorsBlocksSettings, ElevatorsBlockIndividualSet
 import { getSettings, getBlocksSettings, setBlocksSettings, getElevatorBlockSettings, deleteElevatorBlockSettings } from '../Actions';
 
 /**
- * @name openBlockSettings
+ * @name openBlockSettingsInterface
  * @param {Player} player - The player who wants to open the UI.
  * @param {Block} elevatorBlock - The elevator block which has to set its block settings for.
  * @remarks Opens the block settings UI for the player.
  */
-export const openBlockSettings = (player: Player, elevatorBlock: Block): void => {
+export const openBlockSettingsInterface = (player: Player, elevatorBlock: Block): void => {
 	const elevatorsSettings: ElevatorsSettings = getSettings();
 	const elevatorBlockSettings: ElevatorsBlockIndividualSettings | undefined = getElevatorBlockSettings(elevatorBlock);
 
