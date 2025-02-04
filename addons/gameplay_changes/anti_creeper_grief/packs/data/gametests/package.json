@@ -1,0 +1,25 @@
+{
+	"main": "main.js",
+	"scripts": {
+		"lint": "npx eslint ."
+	},
+	"dependencies": {
+		"@minecraft/common": "1.2.0",
+		"@minecraft/math": "2.0.1",
+		"@minecraft/server": "1.16.0",
+		"@minecraft/server-ui": "1.3.0",
+		"@minecraft/vanilla-data": "1.21.50",
+		"@stylistic/eslint-config": "^1.1.0"
+	},
+	"devDependencies": {
+		"@eslint/js": "^9.16.0",
+		"@stylistic/eslint-plugin": "3.0.1",
+		"@typescript-eslint/eslint-plugin": "^8.17.0",
+		"@typescript-eslint/parser": "^8.17.0",
+		"eslint": "^9.16.0",
+		"eslint-plugin-minecraft-linting": "2.0.1",
+		"globals": "^15.8.0",
+		"typescript": "^5.7.2",
+		"typescript-eslint": "^8.17.0"
+	}
+}
