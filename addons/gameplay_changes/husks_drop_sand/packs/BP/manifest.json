@@ -1,0 +1,46 @@
+{
+	"format_version": 2,
+	"header": {
+		"name": "Husks Drop Sand - Gameplay Changes - Bedrock Tweaks",
+		"description": "Husks drop 0-2 sand on death, making it renewable. (With Looting, the amount is up to 2 + the Looting level)",
+		"uuid": "90d0e739-9b34-4f63-b873-1e76f638fb58",
+		"version": [
+			1,
+			0,
+			0
+		],
+		"min_engine_version": [
+			1,
+			21,
+			50
+		]
+	},
+	"modules": [
+		{
+			"type": "data",
+			"uuid": "89b6e6ef-3e18-434d-811d-22fc39d8b912",
+			"version": [
+				1,
+				0,
+				0
+			]
+		}
+	],
+	"dependencies": [
+		{
+			"uuid": "069d9f03-bd67-45c7-841d-419c59aa6458",
+			"version": [
+				1,
+				0,
+				0
+			]
+		}
+	],
+	"metadata": {
+		"authors": [
+			"Vanilla Tweaks",
+			"Bedrock Tweaks",
+			"SquatchHunter"
+		]
+	}
+}
