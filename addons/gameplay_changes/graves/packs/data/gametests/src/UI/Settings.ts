@@ -20,7 +20,7 @@ export const openSettingsInterface = (player: Player): void => {
 		if (response.formValues) {
 			// Toggle = boolean
 			// Slider = number
-			// Togggle, Toggle, Toggle, Slider, Slider, Slider
+			// Toggle, Toggle, Toggle, Slider, Slider, Slider
 			const formValues: [boolean, boolean, boolean, number, number, number] = response.formValues as [boolean, boolean, boolean, number, number, number];
 
 			gravesSettings.graveRobbing = formValues[0];
