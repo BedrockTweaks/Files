@@ -1,2 +1,30 @@
-/build
-/.regolith
+### General Folders ###
+# Regolith
+.regolith/
+build/
+
+# Yarn
+yarn.lock
+
+# NPM
+node_modules/
+package-lock.json
+
+# Addon
+scripts/
+
+### VisualStudioCode ###
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# Local History for Visual Studio Code
+.history/
+
+### VisualStudioCode Patch ###
+# Ignore all local history of files
+.history
+.ionide

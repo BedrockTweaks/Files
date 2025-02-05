@@ -25,4 +25,4 @@ bt.graves.misc.force_open_grave=Force open grave
 bt.graves.misc.keep_inventory=§4Graves requires keepInventory to be enabled, rolling back change
 bt.graves.misc.location=§6Your last grave is at §e(%1, %2, %3)§6 in %4.
 
-bt.graves.misc.uninstall=§eUninstalled Correctly§r%1Remove the Graves pack from Behavior Packs to complete the uninstall
+bt.graves.misc.uninstall=§eUninstalled Correctly§r%1Remove the Graves pack from Behaviour Packs to complete the uninstall
