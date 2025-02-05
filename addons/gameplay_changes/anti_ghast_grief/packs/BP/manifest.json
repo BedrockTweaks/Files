@@ -1,0 +1,46 @@
+{
+	"format_version": 2,
+	"header": {
+		"name": "Anti Ghast Grief - Gameplay Changes - Bedrock Tweaks",
+		"description": "Prevents Ghasts from blowing up blocks",
+		"uuid": "763c5849-4b72-4e03-bac3-7503bfa8b0e0",
+		"version": [
+			1,
+			0,
+			0
+		],
+		"min_engine_version": [
+			1,
+			21,
+			50
+		]
+	},
+	"modules": [
+		{
+			"type": "data",
+			"uuid": "102fee25-4f35-4c6e-843f-22fccb03b4f9",
+			"version": [
+				1,
+				0,
+				0
+			]
+		}
+	],
+	"dependencies": [
+		{
+			"uuid": "485189da-288e-4132-84fe-86d7fa855f5d",
+			"version": [
+				1,
+				0,
+				0
+			]
+		}
+	],
+	"metadata": {
+		"authors": [
+			"Vanilla Tweaks",
+			"Bedrock Tweaks",
+			"SquatchHunter"
+		]
+	}
+}
