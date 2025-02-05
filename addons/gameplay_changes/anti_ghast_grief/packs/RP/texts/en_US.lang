@@ -1,0 +1,6 @@
+## Config
+bt.acg.config.title=Anti Ghast Grief / Configuration
+bt.acg.config.creepersDoDamage=Ghasts do Damage%1§7When enabled, ghasts will do damage to players. %1§8Default: Disabled
+
+## Misc
+bt.agg.misc.uninstall=§eUninstalled Correctly§r%1Remove §lAnti Ghast Grief§r from Behavior Packs to complete the uninstall.
