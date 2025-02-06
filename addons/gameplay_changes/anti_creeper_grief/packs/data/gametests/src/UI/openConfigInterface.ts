@@ -7,7 +7,7 @@ export const openConfigInterface = (player: Player): void => {
 	const AntiCreeperGriefSettings: AntiCreeperGriefSettings = getSettings();
 	const form: ModalFormData = new ModalFormData()
 		.title({ translate: 'bt.acg.config.title' })
-		.toggle({ translate: 'bt.acg.config.do_damage', with: ['\n'] }, AntiCreeperGriefSettings.creepersDoDamage);
+		.toggle({ translate: 'bt.acg.config.creepersDoDamage', with: ['\n'] }, AntiCreeperGriefSettings.creepersDoDamage);
 
 	form.show(player).then((response: ModalFormResponse): void => {
 		if (response.formValues) {

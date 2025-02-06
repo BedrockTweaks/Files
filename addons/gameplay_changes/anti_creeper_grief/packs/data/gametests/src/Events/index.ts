@@ -6,3 +6,4 @@
  */
 import './explosion';
 import './scriptEventCommandMessage';
+import './worldInitialize';

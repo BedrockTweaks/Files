@@ -3,8 +3,8 @@
  * Enum keys and object properties should match for proper conversion.
  */
 export enum AntiCreeperGriefSettingsDynamicProperties {
-	initialized = 'bt:acg.settings_initialized',
-	creepersDoDamage = 'bt:acg.creepers_do_damage'
+	initialized = 'bt:acg.settings.initialized',
+	creepersDoDamage = 'bt:acg.settings.creepersDoDamage'
 }
 
 export interface AntiCreeperGriefSettings {

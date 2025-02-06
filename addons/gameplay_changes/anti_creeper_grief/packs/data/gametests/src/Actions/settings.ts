@@ -13,7 +13,7 @@ export const initializeSettings = (): void => {
 			AntiCreeperGriefSettingsDynamicProperties,
 			{
 				initialized: true,
-				creepers_do_damage: false,
+				creepersDoDamage: false,
 			},
 		);
 	}
