@@ -7,7 +7,7 @@ export const openConfigInterface = (player: Player): void => {
 	const AntiGhastGriefSettings: AntiGhastGriefSettings = getSettings();
 	const form: ModalFormData = new ModalFormData()
 		.title({ translate: 'bt.acg.config.title' })
-		.toggle({ translate: 'bt.acg.config.do_damage', with: ['\n'] }, AntiGhastGriefSettings.ghastsDoDamage);
+		.toggle({ translate: 'bt.acg.config.ghastsDoDamage', with: ['\n'] }, AntiGhastGriefSettings.ghastsDoDamage);
 
 	form.show(player).then((response: ModalFormResponse): void => {
 		if (response.formValues) {

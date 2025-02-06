@@ -13,7 +13,7 @@
 				{
 					"id": "anti_ghast_grief",
 					"name": "Anti Ghast Grief",
-					"description": "Prevents Ghasts from blowing up blocks",
+					"description": "Prevents Ghasts from blowing up blocks.",
 					"version": "1.21 - 1.0.0"
 				},
 				{

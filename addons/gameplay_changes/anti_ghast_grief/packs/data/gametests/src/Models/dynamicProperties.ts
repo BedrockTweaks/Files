@@ -3,8 +3,8 @@
  * Enum keys and object properties should match for proper conversion.
  */
 export enum AntiGhastGriefSettingsDynamicProperties {
-	initialized = 'bt:agg.settings_initialized',
-	ghastsDoDamage = 'bt:agg.Ghasts_do_damage'
+	initialized = 'bt:agg.settings.initialized',
+	ghastsDoDamage = 'bt:agg.settings.ghastsDoDamage'
 }
 
 export interface AntiGhastGriefSettings {
