@@ -2,8 +2,8 @@
  * Actions Module
  *
  * This module exports the functions which interact between the game and the addon
- *
  */
+
 export { removeItemFromHand, placeItemInHand, lockHeldItem } from './bottleUtil';
 export { giveGlassBottle } from './glassBottle';
 export {

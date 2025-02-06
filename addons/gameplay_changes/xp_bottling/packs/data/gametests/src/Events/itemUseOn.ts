@@ -12,9 +12,9 @@ import { giveXpBottle } from '../Actions';
 
 /**
  * * itemUseOn Event listeners
- * In this event we listen for when a player uses an empty glass bottle on an enchanting table
- * and cancel that interaction before we start processing the reponse action of storing the
- * players XP in bottle/s
+ * In this event we listen for when a player uses an empty glass bottle on an
+ * enchanting table and cancel that interaction before we start processing the
+ * reponse action of storing the players XP in bottle/s
 */
 
 world.beforeEvents.itemUseOn.subscribe(async(itemUseOnEvent: ItemUseOnBeforeEvent): Promise<void> => {

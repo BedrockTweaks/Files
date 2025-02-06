@@ -19,8 +19,10 @@ import {
 /**
  * * itemStartUse Event listeners
  * In this event we listen for when a player uses the xp bottle and do 1 of 2 things
- *  1) set a flag on the player to track if a player has used an item for the configured "use time"
- * 	2) if "instant_use" is enabled, this will interrupt the player currently using the bottle and instead do the corresponding action
+ *  1) set a flag on the player to track if a player has used an item for the
+ * 		configured "use time"
+ * 	2) if "instant_use" is enabled, this will interrupt the player currently using
+ * 		the bottle and instead do the corresponding action:
  * 		a) filling a bottle
  * 		b) drinking a bottle
  */
