@@ -41,6 +41,12 @@ export const openSettingsInterface = (player: Player): void => {
 			};
 		}
 
+		/**
+		 * TODO: split confirmation flow into seperate file
+		 * note: consider what is accessbile in this scope and how to access within new context
+		 *
+		 * TODO: simplify if / else logic below
+		 */
 		const confirmForm: MessageFormData = new MessageFormData()
 			.title({ translate: 'bt.xb.confirm.title' })
 			.body({ translate: 'bt.xb.confirm.body', with: ['\n', currentSettings.amountOfXp.toString(), newSettings.amountOfXp.toString()] })

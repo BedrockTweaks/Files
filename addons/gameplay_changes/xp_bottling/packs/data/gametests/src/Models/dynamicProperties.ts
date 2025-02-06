@@ -3,14 +3,14 @@
  * Enum keys and object properties should match for proper conversion.
  */
 export enum XpBottlingSettingsDynamicProperties {
-	initialized = 'bt:xb.settings_initialized',
-	version = 'bt:xb.version',
-	amountOfXp = 'bt:xb.amountOfXp',
-	instantUse = 'bt:xb.instantUse',
-	timeToUse = 'bt:xb.timeToUse',
-	stackMultiplier = 'bt:xb.stackMultiplier',
-	enableStackConsume = 'bt:xb.enableStackConsume',
-	enableStackCrafting = 'bt:xb.enableStackCrafting'
+	initialized = 'bt:xb.settings.initialized',
+	version = 'bt:xb.settings.version',
+	amountOfXp = 'bt:xb.settings.amountOfXp',
+	instantUse = 'bt:xb.settings.instantUse',
+	timeToUse = 'bt:xb.settings.timeToUse',
+	stackMultiplier = 'bt:xb.ssettings.tackMultiplier',
+	enableStackConsume = 'bt:xb.settings.enableStackConsume',
+	enableStackCrafting = 'bt:xb.settings.enableStackCrafting'
 }
 
 export interface XpBottlingSettings {
@@ -33,12 +33,12 @@ export interface XpBottlingSettings {
 }
 
 export enum PlayerXpBottlingSettingsDynamicProperties {
-	initialized = 'bt:xb.player_initialized',
-	receivedBook = 'bt:xb.playerRecievedBook',
-	enableToolTips = 'bt:xb.playerToolTips',
-	consumeFullStack = 'bt:xb.consumeFullStack',
-	fillFullStack = 'bt:xb.fillFullStack',
-	usingSince = 'bt:xb.using'
+	initialized = 'bt:xb.player.initialized',
+	receivedBook = 'bt:xb.player.recievedBook',
+	enableToolTips = 'bt:xb.player.enableToolTips',
+	consumeFullStack = 'bt:xb.player.consumeFullStack',
+	fillFullStack = 'bt:xb.player.fillFullStack',
+	usingSince = 'bt:xb.player.usingSince'
 }
 
 export interface PlayerXpBottlingSettings {

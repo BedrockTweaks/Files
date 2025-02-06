@@ -13,7 +13,7 @@ bt.xb.settings.amountOfXp=Amount of XP %1§7The amount of XP to store in a bottl
 bt.xb.settings.instantUse=Instant Use %1§7When enabled, XP Bottles can be consumed instantly. %1§8Default: Disabled
 bt.xb.settings.timeToUse=Time to Use %1§7The time it takes to consume one XP Bottle. %1§8Default: 16
 bt.xb.settings.enableStackConsume=Stack Consume %1§7When enabled, Sneak + Use will consume an entire stack of XP Bottles. %1§8Default: Disabled
-bt.xb.settings.stackMultiplier=Stack Consume Multiplier %1§7The amount the 'Time to Use' should be multiplied by when consuming a full stack. %1§8Default: 4
+bt.xb.settings.stackMultiplier=Stack Consume Multiplier %1§7The amount 'Time to Use' should be multiplied by when consuming a full stack. %1§8Default: 4
 bt.xb.settings.enableStackCraft=Stack Craft %1§7When enabled, Sneak + Use will store XP in the entire stack. %1§8Default: Disabled
 
 ## Player Settings menu
@@ -40,5 +40,5 @@ bt.xb.misc.stackCraft=Stack Crafting
 bt.xb.misc.stackConsume=Stack Consume
 
 ## Misc Translation keys - optional keys only shown if a user has issues with the addon.
-bt.xb.misc.uninstall=§eUninstalled Correctly§r%1Remove the pack from Behavior Packs to complete the uninstall.
+bt.xb.misc.uninstall=§eUninstalled Correctly§r%1Remove §lXP Bottling§r from Behaviour Packs to complete the uninstall.
 bt.xb.misc.clearPlayer=§eReset Config for§r %2%1Settings have been reset to the default.
