@@ -25,6 +25,14 @@ export const giveXpBottle = (player: Player, itemStack: ItemStack): void => {
 	const { enableToolTips, fillFullStack, receivedBook }: PlayerXpBottlingSettings = getPlayerSettings(player);
 	const currentXp: number = player.getTotalXp();
 
+	if (currentXp < amountOfXp) {
+		if (enableToolTips) {
+			void player.onScreenDisplay.setActionBar({ translate: 'bt.xb.tooltip.notEnough' });
+		}
+
+		return;
+	}
+
 	if (player.isSneaking && !enableStackCrafting) {
 		if (enableToolTips) {
 			void player.sendMessage({ translate: 'bt.xb.tooltip.worldDisabled', with: { rawtext: [{ text: '\n' },	{ translate: 'bt.xb.misc.stackCraft' }] } });
@@ -35,14 +43,6 @@ export const giveXpBottle = (player: Player, itemStack: ItemStack): void => {
 	if (player.isSneaking && !fillFullStack) {
 		if (enableToolTips) {
 			void player.sendMessage({ translate: 'bt.xb.tooltip.playerDisabled', with: { rawtext: [{ text: '\n' },	{ translate: 'bt.xb.misc.stackCraft' }] } });
-		}
-
-		return;
-	}
-
-	if (currentXp < amountOfXp) {
-		if (enableToolTips) {
-			void player.onScreenDisplay.setActionBar({ translate: 'bt.xb.tooltip.notEnough' });
 		}
 
 		return;

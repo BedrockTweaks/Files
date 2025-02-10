@@ -1,12 +1,12 @@
 {
 	"recommendations": [
 		"aaron-bond.better-comments",
-		"blockceptionltd.blockceptionvscodeminecraftbedrockdevelopmentextension",
+		"BlockceptionLtd.blockceptionvscodeminecraftbedrockdevelopmentextension",
+		"icrawl.discord-vscode",
 		"dbaeumer.vscode-eslint",
+		"GitHub.vscode-pull-request-github",
+		"euskadi31.json-pretty-printer",
 		"mojang-studios.minecraft-debugger",
-		"misodee.vscode-nbt",
-		"bedrockoss.regolith",
-		"jannisx11.snowstorm",
-		"netcorext.uuid-generator"
+		"BedrockOSS.regolith"
 	]
 }

@@ -1,5 +1,5 @@
 export enum XpBottlingScriptEvents {
-	config = 'bt:xb.config',
+	config = 'bt:xb.openConfig',
 	uninstall = 'bt:xb.uninstall',
-	clearPlayer = 'bt:xb.clear_player'
+	clearPlayer = 'bt:xb.clearPlayer'
 }

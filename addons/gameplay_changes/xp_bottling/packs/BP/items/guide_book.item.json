@@ -9,7 +9,7 @@
 		},
 		"components": {
 			"minecraft:custom_components": [
-				"bt:xb.guideBookUsed"
+				"bt:xb.guideBookCustomComponent"
 			],
 			"minecraft:icon": {
 				"textures": {

@@ -32,12 +32,13 @@ bt.xb.confirm.no=§l§mNo§r, leave it.
 bt.xb.tooltip.notEnough=Not enough §l§aXP§r
 bt.xb.tooltip.increase=+%1 §l§aXP§r
 bt.xb.tooltip.decrease=-%1 §l§aXP§r
-bt.xb.tooltip.worldDisabled=§l%2§r is not enabled on this World.%1If you are an OP, run §g/function xp_bottling/config§r to change the settings.
-bt.xb.tooltip.playerDisabled=§l%2§r is not enabled for your Player.%1You can Right Click with a §gGuide Book§r to change your settings.
+bt.xb.tooltip.worldDisabled=§l%2§r is not enabled on this World.%1If you are an OP, run §g/function xp_bottling/open_config§r to change the settings.
+bt.xb.tooltip.playerDisabled=§l%2§r is not enabled for your Player.%1You can open your §gGuide Book§r to change your settings.
 
 ## Substitutions for above tooltips
 bt.xb.misc.stackCraft=Stack Crafting
 bt.xb.misc.stackConsume=Stack Consume
+bt.xb.misc.notInitialized=§lXP Bottling§r encountered an §mError§r.%1The pack has not been loaded correctly. If you are op, try running §g/reload§r or open your §gGuide Book§r and hit submit
 
 ## Misc Translation keys - optional keys only shown if a user has issues with the addon.
 bt.xb.misc.uninstall=§eUninstalled Correctly§r%1Remove §lXP Bottling§r from Behavior Packs to complete the uninstall.
