@@ -8,7 +8,8 @@ import {
 	getSettings,
 	getPlayerSettings,
 	updatePlayerSettings,
-	giveGlassBottle
+	giveGlassBottle,
+	lockHeldItem
 } from '../Actions';
 import {
 	XpBottlingSettings,
@@ -32,14 +33,19 @@ world.afterEvents.itemStartUse.subscribe(({ source, itemStack }: ItemStartUseAft
 	if (!itemStack.matches(XpBottlingsItemTypes.XpBottle)) return;
 
 	// // TODO: when itemStartUse fires, check if "instant_use" is enabled and skip setting prop or timeout and jump straight to action
-	const { instantUse }: XpBottlingSettings = getSettings();
+	const { initialized, instantUse, timeToUse, stackMultiplier }: XpBottlingSettings = getSettings();
+	if (!initialized) {
+		source.sendMessage({ translate: 'bt.xb.misc.notInitialized', with: ['\n'] });
+		lockHeldItem(source);
+
+		return;
+	}
 	if (instantUse) {
 		void giveGlassBottle(source, itemStack);
 
 		return;
 	}
-	// fetch the global setting
-	const { timeToUse, stackMultiplier }: XpBottlingSettings = getSettings();
+
 	const startTick: number = system.currentTick;
 	const wasSneaking: boolean = source.isSneaking;
 

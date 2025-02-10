@@ -1,9 +1,12 @@
+### General Folders ###
+# Regolith
 .regolith/
 build/
-node_modules/
 scripts/
-filters/
+# Yarn
 yarn.lock
+# NPM
+node_modules/
 package-lock.json
 
 ### VisualStudioCode ###

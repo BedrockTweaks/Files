@@ -1,16 +1,16 @@
 {
-	"version": "0.3.0",
-	"configurations": [
-		{
-			"type": "minecraft-js",
-			"request": "attach",
-			"sourceMapRoot": "${workspaceFolder}/.regolith/tmp/BP/scripts/",
-			"generatedSourceRoot": "${workspaceFolder}/.regolith/tmp/BP/scripts/",
-			"localRoot": "${workspaceFolder}/packs/data/gametests/src/",
-			"name": "(gametests) Debug with Minecraft",
-			"mode": "listen",
-			"port": 19144,
-			"targetModuleUuid": "37a2a106-b936-439f-a83f-6b3aa19d5e20"
-		}
-	]
+    "version": "0.3.0",
+    "configurations": [
+        {
+            "type": "minecraft-js",
+            "request": "attach",
+            "sourceMapRoot": "${workspaceFolder}/.regolith/tmp/BP/scripts/",
+            "generatedSourceRoot": "${workspaceFolder}/.regolith/tmp/BP/scripts/",
+            "localRoot": "${workspaceFolder}/packs/data/gametests/src/",
+            "name": "(gametests) Debug with Minecraft",
+            "mode": "listen",
+            "port": 19144,
+            "targetModuleUuid": "504c57a1-da25-4037-babb-b4430fd04dbf"
+        }
+    ]
 }

@@ -8,7 +8,7 @@ export enum XpBottlingSettingsDynamicProperties {
 	amountOfXp = 'bt:xb.settings.amountOfXp',
 	instantUse = 'bt:xb.settings.instantUse',
 	timeToUse = 'bt:xb.settings.timeToUse',
-	stackMultiplier = 'bt:xb.ssettings.tackMultiplier',
+	stackMultiplier = 'bt:xb.settings.stackMultiplier',
 	enableStackConsume = 'bt:xb.settings.enableStackConsume',
 	enableStackCrafting = 'bt:xb.settings.enableStackCrafting'
 }

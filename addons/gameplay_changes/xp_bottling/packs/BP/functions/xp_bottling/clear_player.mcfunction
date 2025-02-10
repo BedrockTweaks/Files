@@ -1,1 +1,1 @@
-execute as @s run scriptevent bt:xb.clear_player @s
+execute as @s run scriptevent bt:xb.clearPlayer @s

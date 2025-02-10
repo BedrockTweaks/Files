@@ -8,7 +8,8 @@ import {
 	MinecraftEntityTypes,
 	MinecraftItemTypes
 } from '@minecraft/vanilla-data';
-import { giveXpBottle } from '../Actions';
+import { getSettings, giveXpBottle } from '../Actions';
+import { XpBottlingSettings } from '../Models';
 
 /**
  * * itemUseOn Event listeners
@@ -19,11 +20,18 @@ import { giveXpBottle } from '../Actions';
 
 world.beforeEvents.itemUseOn.subscribe(async(itemUseOnEvent: ItemUseOnBeforeEvent): Promise<void> => {
 	const { source, block, itemStack, isFirstEvent } = itemUseOnEvent;
-	if (!source.matches({ type: MinecraftEntityTypes.Player })) return;
 
-	if (!isFirstEvent && source.isSneaking) return;
+	if (!source.matches({ type: MinecraftEntityTypes.Player })) return;
 	if (!itemStack.matches(MinecraftItemTypes.GlassBottle)) return;
 	if (!block.matches(MinecraftBlockTypes.EnchantingTable)) return;
+	if (!isFirstEvent && source.isSneaking) return;
+
+	const { initialized }: XpBottlingSettings = getSettings();
+	if (!initialized) {
+		source.sendMessage({ translate: 'bt.xb.misc.notInitialized', with: ['\n'] });
+
+		return;
+	}
 
 	itemUseOnEvent.cancel = true;
 	await system.waitTicks(1);
