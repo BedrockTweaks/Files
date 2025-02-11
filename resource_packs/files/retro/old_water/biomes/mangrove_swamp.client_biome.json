@@ -5,6 +5,16 @@
 			"identifier": "mangrove_swamp"
 		},
 		"components": {
+			"minecraft:foliage_appearance": {
+				"color": {
+					"color_map": "mangrove_swamp_foliage"
+				}
+			},
+			"minecraft:grass_appearance": {
+				"color": {
+					"color_map": "swamp_grass"
+				}
+			},
 			"minecraft:fog_appearance": {
 				"fog_identifier": "minecraft:fog_mangrove_swamp"
 			},
