@@ -25,6 +25,6 @@
 			"down": "iron_block_bottom",
 			"side": "iron_block_side"
 		},
-		"sound": "metal"
+		"sound": "iron"
 	}
 }
