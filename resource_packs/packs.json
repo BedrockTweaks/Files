@@ -274,12 +274,8 @@
 				},
 				{
 					"id": "lush_grass_all_round",
-					"name": "Lush Grass (Mostly) All 'Round!",
-					"description": "Makes most of the world use a lush green colormap",
-					"message": {
-						"text": "This affects the majority of biomes, but Minecraft has moved away from their previous method of coloring biomes, meaning its not as easy to change the colormap for many of the modern biomes",
-						"severity": "warn"
-					}
+					"name": "Lush Grass All 'Round!",
+					"description": "Makes the world use a lush green colormap"
 				},
 				{
 					"id": "alternate_bedrock",
@@ -2835,8 +2831,30 @@
 			]
 		},
 		{
+			"id": "extras/terrain/lush_grass_clearer_water",
+			"combines": [
+				"terrain/lush_grass_all_round",
+				"terrain/clearer_water"
+			]
+		},
+		{
+			"id": "extras/terrain/lush_grass_old_water",
+			"combines": [
+				"terrain/lush_grass_all_round",
+				"retro/old_water"
+			]
+		},
+		{
 			"id": "extras/terrain/old_clearer_water",
 			"combines": [
+				"terrain/clearer_water",
+				"retro/old_water"
+			]
+		},
+		{
+			"id": "extras/terrain/lush_grass_old_clearer_water",
+			"combines": [
+				"terrain/lush_grass_all_round",
 				"terrain/clearer_water",
 				"retro/old_water"
 			]
