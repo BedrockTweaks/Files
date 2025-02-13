@@ -5,5 +5,8 @@
 	},
 	"sort_menu_first_button_content_panel/labels_stack_panel/current_sort_value_label_bottom": {
 		"color": "$light_button_default_text_color"
+	},
+	"sort_menu_first_button_content_panel/x_image_panel/x_image": {
+		"color": "$light_button_default_text_color"
 	}
 }
