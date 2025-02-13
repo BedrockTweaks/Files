@@ -16,6 +16,12 @@
 			},
 			"minecraft:biome_music": {
 				"volume_multiplier": 0
+			},
+			"minecraft:foliage_appearance": {
+				"color": "#878d76"
+			},
+			"minecraft:grass_appearance": {
+				"color": "#778272"
 			}
 		}
 	}
