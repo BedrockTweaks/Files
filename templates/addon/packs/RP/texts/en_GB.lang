@@ -1,0 +1,12 @@
+## In here, we add all the texts that are send to the chat, use in an UI like ModalFormData, etc
+## The main idea of adding texts here to keep them all organized and make them be able to translatable to other languages very easily
+
+## The format of all the keys with their text are as follows
+## bt.addon_name.category.action=Text
+## addon_name - The name of the addon
+## category - The category describes all the related actions with it like "settings"
+## action - The action is the specific operation performed related to the category
+
+## Replace the "example" word to your addon name with an underscore if needed for spaces like "anti_creeper_grief"
+## Replace the "Example" word to your addon name like "Anti Creeper Grief"
+bt.example.misc.uninstall=§eUninstalled Correctly§r%1Remove the Example pack from Behaviour Packs to complete the uninstall

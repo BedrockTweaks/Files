@@ -70,7 +70,7 @@
 								}
 							]
 						},
-						"interact_text": "bt.graves.force_open_grave"
+						"interact_text": "bt.graves.misc.force_open_grave"
 					}
 				]
 			}

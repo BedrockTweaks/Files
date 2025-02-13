@@ -6,5 +6,5 @@
  * For more examples, refer to
  * @see addons/gameplay_changes/graves/packs/data/gametests/src/Actions
  */
-export { uninstall } from './Uninstall';
+export { uninstall } from './uninstall';
 
