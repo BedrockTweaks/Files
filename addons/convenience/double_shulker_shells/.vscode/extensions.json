@@ -1,0 +1,13 @@
+{
+	"recommendations": [
+		"aaron-bond.better-comments",
+		"blockceptionltd.blockceptionvscodeminecraftbedrockdevelopmentextension",
+		"dbaeumer.vscode-eslint",
+		"mojang-studios.minecraft-debugger",
+		"misodee.vscode-nbt",
+		"bedrockoss.regolith",
+		"jannisx11.snowstorm",
+		"motivesoft.vscode-uuid-generator",
+		"streetsidesoftware.code-spell-checker"
+	]
+}

@@ -7,6 +7,18 @@
 	],
 	"categories": [
 		{
+			"id": "convenience",
+			"name": "Convenience",
+			"packs": [
+				{
+					"id": "double_shulker_shells",
+					"name": "Double Shulker Shells",
+					"description": "Makes all shulkers drop 2 shells",
+					"version": "1.21 - 1.0.0"
+				}
+			]
+		},
+		{
 			"id": "gameplay_changes",
 			"name": "Gameplay Changes",
 			"packs": [

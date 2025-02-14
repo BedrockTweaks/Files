@@ -1,0 +1,36 @@
+{
+	"format_version": 2,
+	"header": {
+		"name": "Double Shulker Shells - Convenience - Bedrock Tweaks",
+		"description": "Makes all shulkers drop 2 shells",
+		"uuid": "160b6b7d-59ec-40d9-bb02-6e4c4af7958e",
+		"version": [
+			1,
+			0,
+			0
+		],
+		"min_engine_version": [
+			1,
+			21,
+			0
+		]
+	},
+	"modules": [
+		{
+			"type": "data",
+			"uuid": "82875402-c815-4e67-8818-7a124570946c",
+			"version": [
+				1,
+				0,
+				0
+			]
+		}
+	],
+	"metadata": {
+		"authors": [
+			"Vanilla Tweaks",
+			"Bedrock Tweaks",
+			"PAPISOP"
+		]
+	}
+}
