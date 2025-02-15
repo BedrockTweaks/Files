@@ -16,7 +16,7 @@ export enum XpBottlingSettingsDynamicProperties {
 export interface XpBottlingSettings {
 	// Indicates whether the XpBottling system settings have been initialized.
 	initialized: boolean;
-	// Indicated the current loaded version of the addon.
+	// Indicates the current loaded version of the addon.
 	version: number;
 	// The amount of XP to store per bottle.
 	amountOfXp: number;
@@ -34,6 +34,7 @@ export interface XpBottlingSettings {
 
 export enum PlayerXpBottlingSettingsDynamicProperties {
 	initialized = 'bt:xb.player.initialized',
+	version = 'bt:xb.player.version',
 	receivedBook = 'bt:xb.player.recievedBook',
 	enableToolTips = 'bt:xb.player.enableToolTips',
 	consumeFullStack = 'bt:xb.player.consumeFullStack',
@@ -44,6 +45,8 @@ export enum PlayerXpBottlingSettingsDynamicProperties {
 export interface PlayerXpBottlingSettings {
 	// Indicates whether the player has been initialized in the XpBottling system.
 	initialized: boolean;
+	// Indicates the current loaded version of the addon.
+	version: number;
 	// Indicated whether the player has recieved the guide book to let them configure settings.
 	receivedBook: boolean;
 	// Controls whether actionbar tool tips are displayed.
