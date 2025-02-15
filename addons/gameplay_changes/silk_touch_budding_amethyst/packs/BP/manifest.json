@@ -1,0 +1,46 @@
+{
+	"format_version": 2,
+	"header": {
+		"name": "Silk Touch Budding Amethyst - Gameplay Changes - Bedrock Tweaks",
+		"description": "Lets you collect budding amethyst using Silk Touch",
+		"uuid": "3451c568-60d0-4f14-aba8-cfcfbc0fba57",
+		"version": [
+			1,
+			0,
+			0
+		],
+		"min_engine_version": [
+			1,
+			21,
+			50
+		]
+	},
+	"modules": [
+		{
+			"type": "data",
+			"uuid": "d6a8ab5b-ba68-4b01-a41b-42cefd912473",
+			"version": [
+				1,
+				0,
+				0
+			]
+		}
+	],
+	"dependencies": [
+		{
+			"uuid": "6123f563-baa1-438b-836a-92524983238a",
+			"version": [
+				1,
+				0,
+				0
+			]
+		}
+	],
+	"metadata": {
+		"authors": [
+			"Vanilla Tweaks",
+			"Bedrock Tweaks",
+			"SquatchHunter"
+		]
+	}
+}
