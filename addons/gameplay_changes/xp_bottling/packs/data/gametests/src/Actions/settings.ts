@@ -34,6 +34,8 @@ export const initializeSettings = (): void => {
 	}
 };
 
+// TODO: test if player props can be accessed if player offline
+// TODO: convert all player props to fake player props in world scope
 export const initializePlayerSettings = (player: Player): void => {
 	// TODO: overhaul to use a version stub vs generic "initialized" value for updating
 	if (!getProperties<PlayerXpBottlingSettings>(player, PlayerXpBottlingSettingsDynamicProperties).initialized) {
@@ -42,6 +44,7 @@ export const initializePlayerSettings = (player: Player): void => {
 			PlayerXpBottlingSettingsDynamicProperties,
 			{
 				initialized: true,
+				version: 1,
 				receivedBook: false,
 				enableToolTips: true,
 				consumeFullStack: true,
