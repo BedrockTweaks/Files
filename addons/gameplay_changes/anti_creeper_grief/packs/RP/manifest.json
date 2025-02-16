@@ -4,6 +4,7 @@
 		"name": "Anti Creeper Grief - Gameplay Changes - Bedrock Tweaks",
 		"description": "Prevents Creepers from blowing up blocks.",
 		"uuid": "c7e4c3cb-bf32-42f1-8d0d-48ec3a617776",
+		"pack_scope": "world",
 		"version": [
 			1,
 			0,
@@ -26,7 +27,16 @@
 			]
 		}
 	],
-	"dependencies": [],
+	"dependencies": [
+		{
+			"uuid": "8a3474e1-d8de-4a4c-b460-ac0345ed567c",
+			"version": [
+				1,
+				0,
+				0
+			]
+		}
+	],
 	"metadata": {
 		"authors": [
 			"Vanilla Tweaks",

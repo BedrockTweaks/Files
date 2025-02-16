@@ -3,7 +3,6 @@
 .regolith/
 build/
 scripts/
-filters/
 # Yarn
 yarn.lock
 # NPM
