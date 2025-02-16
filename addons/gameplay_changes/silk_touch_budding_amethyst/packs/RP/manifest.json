@@ -4,6 +4,7 @@
 		"name": "Silk Touch Budding Amethyst - Gameplay Changes - Bedrock Tweaks",
 		"description": "Lets you collect budding amethyst using Silk Touch",
 		"uuid": "6123f563-baa1-438b-836a-92524983238a",
+		"pack_scope": "world",
 		"version": [
 			1,
 			0,
