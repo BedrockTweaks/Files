@@ -1,0 +1,8 @@
+## Global Settings menu
+bt.hds.settings.title=Husks Drop Sand / Settings
+bt.hds.settings.lootingEnabled=Looting Enabled %1§7When Enabled, the looting enchant increases the amount of sand dropped. %1§8Default: Enabled
+bt.hds.settings.sandMax=Maximum Sand to Drop %1§7%1The maximum amount of sand to drop before looting is applied. §8Default: 2
+bt.hds.settings.sandMin=Minimum Sand to Drop %1§7%1The minimum amount of sand to drop before looting is applied. §8Default: 1
+
+## Misc Translation keys - optional keys only shown if a user has issues with the addon.
+bt.hds.misc.uninstall=§eUninstalled Correctly§r%1Remove the pack from Behavior Packs to complete the uninstall.
