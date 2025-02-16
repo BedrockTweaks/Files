@@ -1,5 +1,5 @@
 {
-	"format_version": "1.21.0",
+	"format_version": "1.21.50",
 	"minecraft:recipe_shapeless": {
 		"description": {
 			"identifier": "bt:ds.dark_prismarine_slab"
@@ -10,19 +10,16 @@
 		"priority": -1,
 		"ingredients": [
 			{
-				"item": "minecraft:prismarine",
-				"data": 1
+				"item": "minecraft:dark_prismarine"
 			}
 		],
 		"unlock": [
 			{
-				"item": "minecraft:prismarine",
-				"data": 1
+				"item": "minecraft:dark_prismarine"
 			}
 		],
 		"result": {
-			"item": "minecraft:stone_block_slab2",
-			"data": 3,
+			"item": "minecraft:dark_prismarine_slab",
 			"count": 2
 		}
 	}

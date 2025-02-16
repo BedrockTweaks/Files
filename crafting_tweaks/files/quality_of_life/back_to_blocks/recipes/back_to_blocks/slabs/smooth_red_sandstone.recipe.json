@@ -1,5 +1,5 @@
 {
-	"format_version": "1.21.0",
+	"format_version": "1.21.50",
 	"minecraft:recipe_shaped": {
 		"description": {
 			"identifier": "bt:bb.slabs.smooth_red_sandstone"
@@ -14,19 +14,16 @@
 		],
 		"key": {
 			"#": {
-				"item": "minecraft:stone_block_slab3",
-				"data": 1
+				"item": "minecraft:smooth_red_sandstone_slab"
 			}
 		},
 		"unlock": [
 			{
-				"item": "minecraft:stone_block_slab3",
-				"data": 1
+				"item": "minecraft:smooth_red_sandstone_slab"
 			}
 		],
 		"result": {
-			"item": "minecraft:red_sandstone",
-			"data": 3,
+			"item": "minecraft:smooth_red_sandstone",
 			"count": 1
 		}
 	}

@@ -1,5 +1,5 @@
 {
-	"format_version": "1.21.0",
+	"format_version": "1.21.50",
 	"minecraft:recipe_shaped": {
 		"description": {
 			"identifier": "bt:bb.slabs.sandstone"
@@ -24,7 +24,6 @@
 		],
 		"result": {
 			"item": "minecraft:sandstone",
-			"data": 0,
 			"count": 1
 		}
 	}
