@@ -1,0 +1,1 @@
+execute as @s run scriptevent bt:agg.uninstall
