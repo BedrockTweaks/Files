@@ -5,15 +5,15 @@
 	},
 	"dependencies": {
 		"@minecraft/common": "1.2.0",
-		"@minecraft/math": "2.0.1",
-		"@minecraft/server": "1.16.0",
+		"@minecraft/math": "2.1.0",
+		"@minecraft/server": "1.17.0",
 		"@minecraft/server-ui": "1.3.0",
-		"@minecraft/vanilla-data": "1.21.50",
+		"@minecraft/vanilla-data": "1.21.61",
 		"@stylistic/eslint-config": "^1.1.0"
 	},
 	"devDependencies": {
 		"@eslint/js": "^9.16.0",
-		"@stylistic/eslint-plugin": "3.0.0",
+		"@stylistic/eslint-plugin": "4.0.1",
 		"@typescript-eslint/eslint-plugin": "^8.17.0",
 		"@typescript-eslint/parser": "^8.17.0",
 		"eslint": "^9.16.0",
