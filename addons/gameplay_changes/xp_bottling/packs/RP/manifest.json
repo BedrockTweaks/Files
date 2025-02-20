@@ -4,6 +4,7 @@
 		"name": "XP Bottling - Gameplay Changes - Bedrock Tweaks",
 		"description": "Right-click an enchanting table with an empty bottle to fill it with some of your XP. Drink an XP bottle to losslessly get your XP back.",
 		"uuid": "3ec83eeb-0dc4-4d8e-ac8b-aa1f5eb35843",
+		"pack_scope": "world",
 		"version": [
 			1,
 			0,

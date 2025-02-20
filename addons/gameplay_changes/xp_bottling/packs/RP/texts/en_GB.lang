@@ -6,21 +6,26 @@ item.bt:xb.guide_book=Guide Book
 bt.xb.config.title=XP Bottling / Configuration
 bt.xb.config.globalSettings=Edit Global Settings
 bt.xb.config.playerSettings=Edit Your Player Settings
+bt.xb.config.resetPlayer=Reset a Player's Settings
 
 ## Global Settings menu
 bt.xb.settings.title=XP Bottling / Settings
-bt.xb.settings.amountOfXp=Amount of XP %1§7The amount of XP to store in a bottle. %1§8Default: 22
-bt.xb.settings.instantUse=Instant Use %1§7When enabled, XP Bottles can be consumed instantly. %1§8Default: Disabled
-bt.xb.settings.timeToUse=Time to Use %1§7The time it takes to consume one XP Bottle. %1§8Default: 16
-bt.xb.settings.enableStackConsume=Stack Consume %1§7When enabled, Sneak + Use will consume an entire stack of XP Bottles. %1§8Default: Disabled
-bt.xb.settings.stackMultiplier=Stack Consume Multiplier %1§7The amount 'Time to Use' should be multiplied by when consuming a full stack. %1§8Default: 4
-bt.xb.settings.enableStackCraft=Stack Craft %1§7When enabled, Sneak + Use will store XP in the entire stack. %1§8Default: Disabled
+bt.xb.settings.amountOfXp=Amount of XP%1§7The amount of XP to store in a bottle. %1§8Default: 22
+bt.xb.settings.instantUse=Instant Use%1§7When enabled, XP Bottles can be consumed instantly. %1§8Default: Disabled
+bt.xb.settings.timeToUse=Time to Use%1§7The time it takes to consume one XP Bottle. %1§8Default: 16
+bt.xb.settings.enableStackConsume=Stack Consume%1§7When enabled, Sneak + Use will consume an entire stack of XP Bottles. %1§8Default: Disabled
+bt.xb.settings.stackMultiplier=Stack Consume Multiplier%1§7The amount 'Time to Use' should be multiplied by when consuming a full stack. %1§8Default: 4
+bt.xb.settings.enableStackCraft=Stack Craft%1§7When enabled, Sneak + Use will store XP in the entire stack. %1§8Default: Disabled
 
 ## Player Settings menu
 bt.xb.playerSettings.title=XP Bottling / Player Settings
-bt.xb.playerSettings.enableToolTips=Player Tool Tips %1§7When enabled, tooltips will be shown above the hotbar showing the result for most actions. %1§8Default: Enabled
-bt.xb.playerSettings.consumeFullStack=Consume Full Stack %1§7When enabled, Sneak + Use will drink the entire stack in your hand. %1§8Default: Enabled
-bt.xb.playerSettings.fillFullStack=Fill Full Stack %1§7When enabled, Sneak + Use will attempt to fill the entire held stack or as many as possible, whichever is smaller. %1§8Default: Enabled
+bt.xb.playerSettings.enableToolTips=Player Tool Tips%1§7When enabled, tooltips will be shown above the hotbar showing the result for most actions. %1§8Default: Enabled
+bt.xb.playerSettings.consumeFullStack=Consume Full Stack%1§7When enabled, Sneak + Use will drink the entire stack in your hand. %1§8Default: Enabled
+bt.xb.playerSettings.fillFullStack=Fill Full Stack%1§7When enabled, Sneak + Use will attempt to fill the entire held stack or as many as possible, whichever is smaller. %1§8Default: Enabled
+
+## Reset Player Settings menu
+bt.xb.util.title=XP Bottling / Reset Player
+bt.xb.util.dropdown=Player to Reset%1§7The player to reset, doing this will reset all their progress and settings to the default.%1§lThis action cannot be undone
 
 ## Confirmation Pop Up - shown after an admin changes the amount of XP per bottle.
 bt.xb.confirm.title=XP Bottling / Confirmation
@@ -32,8 +37,8 @@ bt.xb.confirm.no=§l§mNo§r, leave it.
 bt.xb.tooltip.notEnough=Not enough §l§aXP§r
 bt.xb.tooltip.increase=+%1 §l§aXP§r
 bt.xb.tooltip.decrease=-%1 §l§aXP§r
-bt.xb.tooltip.worldDisabled=§l%2§r is not enabled on this World.%1If you are an OP, run §g/function xp_bottling/open_config§r to change the settings.
-bt.xb.tooltip.playerDisabled=§l%2§r is not enabled for your Player.%1You can open your §gGuide Book§r to change your settings.
+bt.xb.tooltip.worldDisabled=§l%2§r is not enabled on this World.%1If you are an OP, run §g/function xp_bottling/open_config§r to change the settings
+bt.xb.tooltip.playerDisabled=§l%2§r is not enabled for your Player.%1You can open your §gGuide Book§r to change your settings
 
 ## Substitutions for above tooltips
 bt.xb.misc.stackCraft=Stack Crafting
@@ -41,5 +46,5 @@ bt.xb.misc.stackConsume=Stack Consume
 bt.xb.misc.notInitialized=§lXP Bottling§r encountered an §mError§r.%1The pack has not been loaded correctly. If you are op, try running §g/reload§r or open your §gGuide Book§r and hit submit
 
 ## Misc Translation keys - optional keys only shown if a user has issues with the addon.
-bt.xb.misc.uninstall=§eUninstalled Correctly§r%1Remove §lXP Bottling§r from Behaviour Packs to complete the uninstall.
-bt.xb.misc.clearPlayer=§eReset Config for§r %2%1Settings have been reset to the default.
+bt.xb.misc.uninstall=§eUninstalled Correctly§r%1Remove §lXP Bottling§r from Behaviour Packs to complete the uninstall
+bt.xb.misc.clearPlayer=§eReset Config for§r%2%1Settings have been reset to the default

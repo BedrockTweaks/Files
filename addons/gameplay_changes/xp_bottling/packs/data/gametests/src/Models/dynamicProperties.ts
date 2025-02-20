@@ -8,8 +8,8 @@ export enum XpBottlingSettingsDynamicProperties {
 	amountOfXp = 'bt:xb.settings.amountOfXp',
 	instantUse = 'bt:xb.settings.instantUse',
 	timeToUse = 'bt:xb.settings.timeToUse',
-	stackMultiplier = 'bt:xb.settings.stackMultiplier',
 	enableStackConsume = 'bt:xb.settings.enableStackConsume',
+	stackMultiplier = 'bt:xb.settings.stackMultiplier',
 	enableStackCrafting = 'bt:xb.settings.enableStackCrafting'
 }
 
@@ -24,10 +24,10 @@ export interface XpBottlingSettings {
 	instantUse: boolean;
 	// The amount of time taken to drink a bottle.
 	timeToUse: number;
-	// When consuming a stack of bottles, the amount to multiply it by.
-	stackMultiplier: number;
 	// Controls whether Sneak + Use consumes a full stack of XP bottles.
 	enableStackConsume: boolean;
+	// When consuming a stack of bottles, the amount to multiply it by.
+	stackMultiplier: number;
 	// Controls whether Sneak + Use fills an entire stack of empty Glass Bottles.
 	enableStackCrafting: boolean;
 }
