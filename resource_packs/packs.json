@@ -48,12 +48,13 @@
 				{
 					"id": "desaturated_purpur",
 					"name": "Desaturated Purpur",
-					"description": "Desaturates the color of all purpur blocks"
+					"description": "Desaturates the color of all Purpur blocks"
 				},
 				{
 					"id": "desaturated_dark_oak",
 					"name": "Desaturated Dark Oak",
-					"description": "Desaturates Dark Oak Planks to give them a more neutral color"
+					"description": "Desaturates the color of all Dark Oak wood blocks",
+					"priority": 2
 				},
 				{
 					"id": "horizontal_nuggets",
@@ -78,7 +79,7 @@
 				{
 					"id": "brown_leather",
 					"name": "Brown Leather",
-					"description": "Recolours all leather related items to use a similar palette to Leather Armor"
+					"description": "Recolors all leather related items to use a similar palette to Leather Armor"
 				},
 				{
 					"id": "red_iron_golem_flowers",
@@ -143,12 +144,14 @@
 				{
 					"id": "smoother_warped_planks",
 					"name": "Smoother Warped Planks",
-					"description": "Removes the harsh contrast from Warped Planks"
+					"description": "Removes the harsh contrast from Warped Planks",
+					"priority": 2
 				},
 				{
 					"id": "consistent_bamboo_planks",
 					"name": "Consistent Bamboo Planks",
-					"description": "Makes Bamboo Planks and Bamboo Mosaics match the textures of the other plank types"
+					"description": "Makes Bamboo Planks and Bamboo Mosaics match the textures of the other plank types",
+					"priority": 2
 				},
 				{
 					"id": "alternate_cut_copper",
@@ -976,7 +979,7 @@
 				{
 					"id": "unlit_redstone_ore",
 					"name": "Unlit Redstone Ore",
-					"description": "Makes unlit Redstone Ore use the same palette as unlit Redstone Wire until its lit, when it then returns to its default, bright red colour"
+					"description": "Makes unlit Redstone Ore use the same palette as unlit Redstone Wire until its lit, when it then returns to its default, bright red color"
 				},
 				{
 					"id": "visible_tripwires",
@@ -1103,7 +1106,7 @@
 				{
 					"id": "no_vignette",
 					"name": "No Vignette",
-					"description": "Removes the darkened corners of the screen that occur in darker areas when graphics are set to 'fancy'"
+					"description": "Removes the darkened corners of the screen when in dark areas"
 				},
 				{
 					"id": "invisible_totem",
@@ -1920,14 +1923,14 @@
 			"name": "Retro",
 			"packs": [
 				{
-					"id": "classic_minecraft_logo",
-					"name": "Classic Minecraft Logo",
-					"description": "Brings back the classic pixelated Minecraft logo!"
-				},
-				{
 					"id": "alpha_minecraft_logo",
 					"name": "Alpha Minecraft Logo",
 					"description": "Brings back the old hand-built Cobblestone Minecraft logo from the Alpha days!"
+				},
+				{
+					"id": "classic_minecraft_logo",
+					"name": "Classic Minecraft Logo",
+					"description": "Brings back the classic pixelated Minecraft logo!"
 				},
 				{
 					"id": "old_bedrock_menu_title",
@@ -1962,7 +1965,8 @@
 				{
 					"id": "old_planks",
 					"name": "Old Planks",
-					"description": "Reverts all planks and signs to their old textures, including modern plank types"
+					"description": "Reverts all planks and signs to their old textures, including modern plank types",
+					"priority": 1
 				},
 				{
 					"id": "old_gravel",
@@ -2000,14 +2004,14 @@
 					"description": "Reverts all Ice blocks to their old textures"
 				},
 				{
-					"id": "old_lapis",
-					"name": "Old Lapis",
-					"description": "Reverts the texture of Lapis Lazuli Blocks to the Beta texture"
+					"id": "old_lapis_block",
+					"name": "Old Lapis Block",
+					"description": "Reverts Lapis Lazuli Blocks to their Beta texture"
 				},
 				{
 					"id": "old_sponge",
 					"name": "Old Sponge",
-					"description": "Reverts the texture of Sponges to the beta texture"
+					"description": "Reverts Sponges to their Beta texture"
 				},
 				{
 					"id": "old_wool_colors",
@@ -2138,7 +2142,8 @@
 				{
 					"id": "technoblade_pigs",
 					"name": "Technoblade Pigs",
-					"description": "In honor of Technoblade. RIP"
+					"description": "In honor of Technoblade. RIP",
+					"priority": 1
 				},
 				{
 					"id": "stridey_striders",
@@ -2485,7 +2490,7 @@
 				{
 					"id": "super_smash_bros_enderman",
 					"name": "Super Smash Bros Enderman",
-					"description": "Recolours Endermen to have the same palette as they do in 'Super Smash Bros Ultimate' and makes them shorter!"
+					"description": "Recolors Endermen to have the same palette as they do in 'Super Smash Bros Ultimate' and makes them shorter!"
 				},
 				{
 					"id": "legacy_console_emerald",
@@ -2631,7 +2636,7 @@
 				{
 					"id": "hoe_fix",
 					"name": "Hoe Fix",
-					"description": "Fixes the incorrect colour on the handles of wooden, stone and iron hoes"
+					"description": "Fixes the incorrect color on the handles of wooden, stone and iron hoes"
 				},
 				{
 					"id": "cloak_fix",
@@ -2652,13 +2657,6 @@
 			"combines": [
 				"aesthetic/consistent_bamboo_planks",
 				"retro/old_planks"
-			]
-		},
-		{
-			"id": "extras/bamboo/consistent_variated_bamboo",
-			"combines": [
-				"aesthetic/consistent_bamboo_planks",
-				"variation/variated_planks"
 			]
 		},
 		{
@@ -3121,7 +3119,7 @@
 			]
 		},
 		{
-			"id": "extras/pixel_consistent/pixel_consistent_warped_signs",
+			"id": "extras/pixel_consistent/pixel_consistent_smoother_warped_signs",
 			"combines": [
 				"fixes_and_consistency/pixel_consistent_signs",
 				"aesthetic/smoother_warped_planks"
@@ -3345,25 +3343,10 @@
 			]
 		},
 		{
-			"id": "extras/planks/old_variated_planks",
-			"combines": [
-				"retro/old_planks",
-				"variation/variated_planks"
-			]
-		},
-		{
 			"id": "extras/planks/oarless_old_planks",
 			"combines": [
 				"retro/oarless_boats",
 				"retro/old_planks"
-			]
-		},
-		{
-			"id": "extras/planks/oarless_old_variated_planks",
-			"combines": [
-				"retro/oarless_boats",
-				"retro/old_planks",
-				"variation/variated_planks"
 			]
 		},
 		{
