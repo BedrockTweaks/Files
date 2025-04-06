@@ -2020,6 +2020,11 @@
 					"description": "Recolors Shulkers and Shulker Boxes to their pre-1.12 colors"
 				},
 				{
+					"id":"snoutless_cows",
+					"name": "Snoutless Cows",
+					"description": "Flattens all Cow and Mooshroom snouts like they appeared before 1.21.70"
+				},
+				{
 					"id": "poppy_to_rose",
 					"name": "Poppy to Rose",
 					"description": "Changes the texture of the Poppy to that of the Rose from before 1.7.2"
