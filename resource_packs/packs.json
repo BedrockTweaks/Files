@@ -2496,6 +2496,11 @@
 					"id": "legacy_console_snowball",
 					"name": "Legacy Console Snowball",
 					"description": "Gives the Snowball its texture from old legacy console editions of Minecraft"
+				},
+				{
+					"id":"earth_wooly_cow",
+					"name": "Earth Wooly Cow",
+					"description": "Retextures the Cold Cow to the Wooly Cow from Minecraft: Earth"
 				}
 			]
 		},
