@@ -2020,6 +2020,11 @@
 					"description": "Recolors Shulkers and Shulker Boxes to their pre-1.12 colors"
 				},
 				{
+					"id": "old_spawn_eggs",
+					"name": "Old Spawn Eggs",
+					"description": "Reverts Spawn Eggs to their classic polka-dot textures"
+				},
+				{
 					"id": "poppy_to_rose",
 					"name": "Poppy to Rose",
 					"description": "Changes the texture of the Poppy to that of the Rose from before 1.7.2"
