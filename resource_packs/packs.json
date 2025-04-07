@@ -1020,14 +1020,9 @@
 					"description": "Makes many particles transparent or hollow for easier vision"
 				},
 				{
-					"id": "no_cherry_leaves_particles",
-					"name": "No Cherry Leaves Particles",
-					"description": "Removes Cherry Leaves particles for easier visibility in Cherry Groves"
-				},
-				{
-					"id": "no_pale_garden_leaves_particles",
-					"name": "No Pale Garden Leaves Particles",
-					"description": "Removes Pale Oak Leaves particles for easier visibility in Pale Gardens"
+					"id": "no_falling_leaf_particles",
+					"name": "No Falling Leaf Particles",
+					"description": "Removes falling leaf particles from all leaf blocks"
 				},
 				{
 					"id": "borderless_glass",
