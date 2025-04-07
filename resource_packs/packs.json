@@ -1020,14 +1020,9 @@
 					"description": "Makes many particles transparent or hollow for easier vision"
 				},
 				{
-					"id": "no_cherry_leaves_particles",
-					"name": "No Cherry Leaves Particles",
-					"description": "Removes Cherry Leaves particles for easier visibility in Cherry Groves"
-				},
-				{
-					"id": "no_pale_garden_leaves_particles",
-					"name": "No Pale Garden Leaves Particles",
-					"description": "Removes Pale Oak Leaves particles for easier visibility in Pale Gardens"
+					"id": "no_falling_leaf_particles",
+					"name": "No Falling Leaf Particles",
+					"description": "Removes falling leaf particles from all leaf blocks"
 				},
 				{
 					"id": "borderless_glass",
@@ -2019,10 +2014,15 @@
 					"name": "Old Shulker Boxes",
 					"description": "Recolors Shulkers and Shulker Boxes to their pre-1.12 colors"
 				},
+        {
+          "id": "old_spawn_eggs",
+					"name": "Old Spawn Eggs",
+					"description": "Reverts Spawn Eggs to their classic polka-dot textures"
+        },
 				{
 					"id":"snoutless_cows",
 					"name": "Snoutless Cows",
-					"description": "Flattens all Cow and Mooshroom snouts like they appeared before 1.21.70"
+					"description": "Flattens all Cow and Mooshroom snouts like they appeared before 1.21.70
 				},
 				{
 					"id": "poppy_to_rose",
@@ -2501,6 +2501,11 @@
 					"id": "legacy_console_snowball",
 					"name": "Legacy Console Snowball",
 					"description": "Gives the Snowball its texture from old legacy console editions of Minecraft"
+				},
+				{
+					"id":"earth_wooly_cow",
+					"name": "Earth Wooly Cow",
+					"description": "Retextures the Cold Cow to the Wooly Cow from Minecraft: Earth"
 				}
 			]
 		},
