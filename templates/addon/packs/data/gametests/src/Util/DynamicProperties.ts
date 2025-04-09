@@ -33,7 +33,7 @@ export function getProperties<T>(from: World | Entity, enumType: { [key: string]
  */
 export function setProperties(to: World | Entity, enumType: { [key: string]: string }, propertyObject: object): void {
 	Object.entries(propertyObject).forEach(([key, value]: [string, PropertiesTypes]): void => {
-		const identifier: string = enumType[key];
+		const identifier: string | undefined = enumType[key];
 
 		if (identifier) {
 			to.setDynamicProperty(identifier, value);
