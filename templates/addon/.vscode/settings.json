@@ -24,5 +24,6 @@
 	"eslint.workingDirectories": [
 		"./packs/data/gametests"
 	],
-	"editor.insertSpaces": false
+	"editor.insertSpaces": false,
+	"editor.detectIndentation": false
 }
