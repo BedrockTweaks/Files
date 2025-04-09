@@ -5,6 +5,12 @@
 			"identifier": "cherry_grove"
 		},
 		"components": {
+			"minecraft:foliage_appearance": {
+				"color": "#b6db61"
+			},
+			"minecraft:grass_appearance": {
+				"color": "#b6db61"
+			},
 			"minecraft:fog_appearance": {
 				"fog_identifier": "bt:fog_cherry_grove"
 			},
