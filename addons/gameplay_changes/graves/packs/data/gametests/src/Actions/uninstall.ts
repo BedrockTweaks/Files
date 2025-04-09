@@ -11,5 +11,5 @@ export const uninstall = (): void => {
 	world.gameRules.keepInventory = settings.keepInventory;
 
 	world.clearDynamicProperties();
-	world.sendMessage({ translate: 'bt.graves.misc.uninstall', with: ['\n'] });
+	world.sendMessage({ translate: 'bt.graves.uninstall' });
 };

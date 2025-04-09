@@ -1,6 +1,12 @@
 
 item.bt:g.grave_key=Grave Key
 
+bt.graves.force_open_grave=Force open grave
+
+bt.graves.keep_inventory=§4Graves requires keepInventory to be enabled, rolling back change
+
+bt.graves.location=§6Your last grave is at §e(%1, %2, %3)§6 in %4.
+
 bt.graves.list_graves.title=§l- All graves -
 bt.graves.list_graves.owner=§7%s:
 bt.graves.list_graves.grave=   §e(%1, %2, %3) §6in the %4 §7§o- %5h, %6m ago - §r§7Item count: §f%7§7, XP points: §f%8
@@ -20,9 +26,4 @@ bt.graves.settings.despawn_time.hours=Grave Despawn Time%1§7The time after whic
 bt.graves.settings.despawn_time.minutes=Current minutes
 bt.graves.settings.despawn_time.seconds=Current seconds
 
-bt.graves.misc.force_open_grave=Force open grave
-
-bt.graves.misc.keep_inventory=§4Graves requires keepInventory to be enabled, rolling back change
-bt.graves.misc.location=§6Your last grave is at §e(%1, %2, %3)§6 in %4.
-
-bt.graves.misc.uninstall=§eUninstalled Correctly§r%1Remove the Graves pack from Behavior Packs to complete the uninstall
+bt.graves.uninstall=Uninstalled correctly, remove the pack from Behavior Packs to complete the uninstall

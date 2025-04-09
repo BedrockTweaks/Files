@@ -50,7 +50,7 @@ export const spawnGrave = (player: Player): void => {
 		if (gravesSettings.graveLocating) {
 			player.sendMessage({
 				rawtext: [{
-					translate: 'bt.graves.misc.location',
+					translate: 'bt.graves.location',
 					with: [graveEntity.location.x.toString(), graveEntity.location.y.toString(), graveEntity.location.z.toString(), graveEntity.dimension.id],
 				}],
 			});
