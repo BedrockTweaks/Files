@@ -1,0 +1,29 @@
+{
+	"editor.formatOnSave": true,
+	"[typescript]": {
+		"editor.tabSize": 4,
+		"editor.insertSpaces": false
+	},
+	"[javascript]": {
+		"editor.tabSize": 4,
+		"editor.insertSpaces": false
+	},
+	"[json]": {
+		"editor.tabSize": 4,
+		"editor.insertSpaces": false
+	},
+	"[jsonc]": {
+		"editor.tabSize": 4,
+		"editor.insertSpaces": false
+	},
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": "always"
+	},
+	"files.eol": "\r\n",
+	"eslint.format.enable": true,
+	"eslint.workingDirectories": [
+		"./packs/data/gametests"
+	],
+	"editor.insertSpaces": false,
+	"editor.detectIndentation": false
+}

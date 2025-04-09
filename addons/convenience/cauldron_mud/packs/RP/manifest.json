@@ -1,0 +1,46 @@
+{
+	"format_version": 2,
+	"header": {
+		"name": "Cauldron Mud - Convenience - Bedrock Tweaks",
+		"description": "Drop dirt into a water cauldron to instantly convert all of it to mud",
+		"uuid": "d51e8d75-f8d1-4be4-8f34-5979c2d6ceb8",
+		"version": [
+			1,
+			0,
+			0
+		],
+		"min_engine_version": [
+			1,
+			21,
+			70
+		]
+	},
+	"modules": [
+		{
+			"type": "resources",
+			"uuid": "3b83aa06-de46-469b-a6d8-f49ea5637942",
+			"version": [
+				1,
+				0,
+				0
+			]
+		}
+	],
+	"dependencies": [
+		{
+			"uuid": "c322bff2-4376-4e76-b414-7c59a29837e0",
+			"version": [
+				1,
+				0,
+				0
+			]
+		}
+	],
+	"metadata": {
+		"authors": [
+			"Vanilla Tweaks",
+			"Bedrock Tweaks",
+			"PAPISOP"
+		]
+	}
+}

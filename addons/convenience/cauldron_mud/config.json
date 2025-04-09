@@ -1,0 +1,83 @@
+{
+	"$schema": "https://raw.githubusercontent.com/Bedrock-OSS/regolith-schemas/main/config/v1.4.json",
+	"author": "PAPISOP",
+	"name": "Cauldron Mud - Convenience - Bedrock Tweaks",
+	"packs": {
+		"behaviorPack": "./packs/BP",
+		"resourcePack": "./packs/RP"
+	},
+	"regolith": {
+		"dataPath": "./packs/data",
+		"formatVersion": "1.4.0",
+		"filterDefinitions": {
+			"gametests": {
+				"url": "github.com/Bedrock-OSS/regolith-filters",
+				"version": "1.7.1"
+			}
+		},
+		"profiles": {
+			"build": {
+				"export": {
+					"readOnly": true,
+					"target": "local",
+					"build": "standard"
+				},
+				"filters": [
+					{
+						"filter": "gametests",
+						"settings": {
+							"buildOptions": {
+								"bundle": true,
+								"entryPoints": [
+									"data/gametests/src/main.ts"
+								],
+								"format": "esm",
+								"minify": true,
+								"target": "es2020"
+							},
+							"manifest": "BP/manifest.json",
+							"moduleUUID": "8be1d5f9-1258-4dad-a3a1-391ec8c731c4",
+							"modules": [
+								"@minecraft/server@1.18.0",
+								"@minecraft/server-ui@1.3.0"
+							],
+							"outfile": "BP/scripts/main.js",
+							"debugBuild": false
+						}
+					}
+				]
+			},
+			"default": {
+				"export": {
+					"readOnly": false,
+					"target": "development",
+					"build": "standard"
+				},
+				"filters": [
+					{
+						"filter": "gametests",
+						"settings": {
+							"buildOptions": {
+								"bundle": true,
+								"entryPoints": [
+									"data/gametests/src/main.ts"
+								],
+								"format": "esm",
+								"minify": false,
+								"target": "es2020"
+							},
+							"manifest": "BP/manifest.json",
+							"moduleUUID": "8be1d5f9-1258-4dad-a3a1-391ec8c731c4",
+							"modules": [
+								"@minecraft/server@1.18.0",
+								"@minecraft/server-ui@1.3.0"
+							],
+							"outfile": "BP/scripts/main.js",
+							"debugBuild": true
+						}
+					}
+				]
+			}
+		}
+	}
+}
