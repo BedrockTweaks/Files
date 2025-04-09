@@ -3,29 +3,34 @@
 	"scripts": {
 		"lint": "npx eslint ."
 	},
+	/**
+	 * Run npm outdated at the packs/data/gametests directory in the terminal and update all the modules to the latest version
+	 * For @minecraft modules, look at how to update them below
+	 *
+	 * Update the @minecraft/math to the latest version available
+	 *
+	 * Update @minecraft/server, @minecraft/server-ui, @minecraft/vanilla-data and @minecraft/common to the latest version
+	 * that corresponds with the minecraft version you are using as the minimum supported version for your addon
+	 *
+	 * ! NOTE: Remove this comment during production or else it will throw an error during regolith building process
+	 */
 	"dependencies": {
-		/**
-		 * Update the @minecraft/math to the latest version available
-		 *
-		 * Update @minecraft/server, @minecraft/server-ui, @minecraft/vanilla-data and @minecraft/common to the latest version
-		 * that corresponds with the minecraft version you are using as the minimum supported version for your addon
-		 */
 		"@minecraft/common": "1.2.0",
-		"@minecraft/math": "2.0.1",
-		"@minecraft/server": "1.16.0",
-		"@minecraft/server-ui": "^1.3.0",
-		"@minecraft/vanilla-data": "1.21.50",
-		"@stylistic/eslint-config": "^1.1.0"
+		"@minecraft/math": "2.2.1",
+		"@minecraft/server": "1.18.0",
+		"@minecraft/server-ui": "1.3.0",
+		"@minecraft/vanilla-data": "1.21.70",
+		"@stylistic/eslint-config": "1.1.0"
 	},
 	"devDependencies": {
-		"@eslint/js": "^9.16.0",
-		"@stylistic/eslint-plugin": "^2.11.0",
-		"@typescript-eslint/eslint-plugin": "^8.17.0",
-		"@typescript-eslint/parser": "^8.17.0",
-		"eslint": "^9.16.0",
-		"eslint-plugin-minecraft-linting": "^1.2.6",
-		"globals": "^15.8.0",
-		"typescript": "^5.7.2",
-		"typescript-eslint": "^8.17.0"
+		"@eslint/js": "9.24.0",
+		"@stylistic/eslint-plugin": "4.2.0",
+		"@typescript-eslint/eslint-plugin": "8.29.1",
+		"@typescript-eslint/parser": "8.29.1",
+		"eslint": "9.24.0",
+		"eslint-plugin-minecraft-linting": "2.0.2",
+		"globals": "16.0.0",
+		"typescript": "5.8.3",
+		"typescript-eslint": "8.29.1"
 	}
 }

@@ -15,11 +15,13 @@
 		 * Please note that don't set the minimum minecraft version below the version array set in addon's packs.json
 		 *
 		 * It is highly recommended and preferred to always use the latest minecraft version release to use latest features
+		 *
+		 * ! NOTE: Remove this comment during production or else it will throw an error during regolith building process
 		 */
 		"min_engine_version": [
 			1,
 			21,
-			50
+			70
 		]
 	},
 	"modules": [
