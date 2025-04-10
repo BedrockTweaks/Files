@@ -73,7 +73,7 @@ Tweaks Mini Blocks Ancient Debris.
 Crafting Tweaks should be in a directory with the packs name inside the recipes directory to avoid conflicts. You can look at existing packs
 for reference.
 
-Vanilla files should follow the style guide.
+Vanilla files should not be renamed.
 
 ### JSON UI
 
