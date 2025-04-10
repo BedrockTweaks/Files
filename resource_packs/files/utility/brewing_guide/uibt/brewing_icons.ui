@@ -78,6 +78,21 @@
 		"anchor_from": "center",
 		"anchor_to": "center"
 	},
+	"block_icon": {
+		"type": "custom",
+		"layer": 10,
+		"renderer": "inventory_item_renderer",
+		"size": "$image_size",
+		"offset": [
+			0,
+			0
+		],
+		"anchor_from": "center",
+		"anchor_to": "center",
+		"property_bag": {
+			"#item_id_aux": "$block_aux_id"
+		}
+	},
 	"multi_item_panel": {
 		"type": "panel",
 		"layer": 5,
@@ -93,6 +108,27 @@
 		"controls": [
 			{
 				"item@item_icon": {}
+			},
+			{
+				"hover_button@hover_button": {}
+			}
+		]
+	},
+	"multi_block_panel": {
+		"type": "panel",
+		"layer": 5,
+		"$block_aux_id|default": 16252928,
+		"$image_size|default": [
+			16,
+			16
+		],
+		"size": [
+			18,
+			18
+		],
+		"controls": [
+			{
+				"block@block_icon": {}
 			},
 			{
 				"hover_button@hover_button": {}
@@ -355,8 +391,8 @@
 		"$item_texture": "textures/items/breeze_rod",
 		"$hover_text": "item.breeze_rod.name"
 	},
-	"stone@multi_item_panel": {
-		"$item_texture": "textures/ui/brewing_guide/stone",
+	"stone@multi_block_panel": {
+		"$block_aux_id": 65536,
 		"$hover_text": "tile.stone.stone.name"
 	},
 	"sugar@multi_item_panel": {
@@ -387,8 +423,8 @@
 		"$item_texture": "textures/blocks/web",
 		"$hover_text": "tile.web.name"
 	},
-	"slime_block@multi_item_panel": {
-		"$item_texture": "textures/ui/brewing_guide/slime_block",
+	"slime_block@multi_block_panel": {
+		"$block_aux_id": 10813440,
 		"$hover_text": "tile.slime.name"
 	},
 	"strength_effect@multi_item_panel": {
