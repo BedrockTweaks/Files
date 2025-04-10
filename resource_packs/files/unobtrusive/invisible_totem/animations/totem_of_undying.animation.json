@@ -1,0 +1,23 @@
+{
+	"format_version": "1.10.0",
+	"animations": {
+		"animation.rp.bt.totem_hold_third_person": {
+			"loop": true,
+			"bones": {
+				"totem": {
+					"rotation": [
+						270,
+						"c.item_slot == 'main_hand' ? 15 : -15",
+						"c.item_slot == 'main_hand' ? 190 : 180"
+					],
+					"position": [
+						"c.item_slot == 'main_hand' ? 3.2 : -1.7",
+						"c.item_slot == 'main_hand' ? 22.1 : 22.3",
+						"c.item_slot == 'main_hand' ? -9.3 : -8.6"
+					],
+					"scale": 0.56
+				}
+			}
+		}
+	}
+}
