@@ -7,9 +7,9 @@
 	 * Run npm outdated at the packs/data/gametests directory in the terminal and update all the modules to the latest version
 	 * For @minecraft modules, look at how to update them below
 	 *
-	 * Update the @minecraft/math to the latest version available
+	 * Update the @minecraft/math and @minecraft/common to the latest version available
 	 *
-	 * Update @minecraft/server, @minecraft/server-ui, @minecraft/vanilla-data and @minecraft/common to the latest version
+	 * Update @minecraft/server, @minecraft/server-ui and @minecraft/vanilla-data to the latest version
 	 * that corresponds with the minecraft version you are using as the minimum supported version for your addon
 	 *
 	 * ! NOTE: Remove this comment during production or else it will throw an error during regolith building process

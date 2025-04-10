@@ -41,12 +41,12 @@
 								/**
 								 * Add here any needed native minecraft module, available modules are
 								 * @minecraft/server
-								 * @minecraft/server-gametest (This module can only be used in BDS)
+								 * @minecraft/server-gametest
 								 * @minecraft/server-ui
-								 * @minecraft/server-admin (This module can only be used in BDS)
-								 * @minecraft/server-net (This module can only be used in BDS)
-								 * @minecraft/debug-utilities (This module doesn't work in Realms)
-								 * @minecraft/diagnostics (This module can only be used in BDS)
+								 * @minecraft/server-admin (This module can only be used in BDS and shouldn't be used)
+								 * @minecraft/server-net (This module can only be used in BDS and shouldn't be used)
+								 * @minecraft/debug-utilities (This module doesn't work in Realms and should only be used during developing and shouldn't be used in release)
+								 * @minecraft/diagnostics (This module can only be used in BDS and shouldn't be used)
 								 *
 								 * Use the latest version that corresponds with the minecraft version you are using as the minimum supported version for your addon
 								 *
@@ -88,12 +88,12 @@
 								/**
 								 * Add here any needed native minecraft module, available modules are
 								 * @minecraft/server
-								 * @minecraft/server-gametest (This module can only be used in BDS)
+								 * @minecraft/server-gametest
 								 * @minecraft/server-ui
-								 * @minecraft/server-admin (This module can only be used in BDS)
-								 * @minecraft/server-net (This module can only be used in BDS)
-								 * @minecraft/debug-utilities (This module doesn't work in Realms)
-								 * @minecraft/diagnostics (This module can only be used in BDS)
+								 * @minecraft/server-admin (This module can only be used in BDS and shouldn't be used)
+								 * @minecraft/server-net (This module can only be used in BDS and shouldn't be used)
+								 * @minecraft/debug-utilities (This module doesn't work in Realms and should only be used during developing and shouldn't be used in release)
+								 * @minecraft/diagnostics (This module can only be used in BDS and shouldn't be used)
 								 *
 								 * Use the latest version that corresponds with the minecraft version you are using as the minimum supported version for your addon
 								 *
