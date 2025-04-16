@@ -2442,6 +2442,11 @@
 			"name": "Parity",
 			"packs": [
 				{
+					"id": "a_minecraft_movie_logo",
+					"name": "'A Minecraft Movie' Logo",
+					"description": "Gives the game its logo from 'A Minecraft Movie'"
+				},
+				{
 					"id": "java_boom",
 					"name": "Java Boom",
 					"description": "Gives Explosion particles their texture from Minecraft: Java Edition"
