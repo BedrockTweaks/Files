@@ -2022,7 +2022,13 @@
 				{
 					"id":"snoutless_cows",
 					"name": "Snoutless Cows",
-					"description": "Flattens all Cow and Mooshroom snouts like they appeared before 1.21.70
+					"description": "Flattens all Cow and Mooshroom snouts like they appeared before 1.21.70"
+				},
+				{
+				  "id": "old_fireflies",
+				  "name": "Old Fireflies"
+				  "description": "Reverts Fireflies to their textures originally shown off for 1.19"
+				}
 				},
 				{
 					"id": "poppy_to_rose",
