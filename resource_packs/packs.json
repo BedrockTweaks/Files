@@ -46,6 +46,11 @@
 					"description": "Eliminates Slime Block transparency"
 				},
 				{
+				  "id": "desaturated_resin",
+				  "name": "Desaturated Resin",
+				  "description": "Desaturates the color of all resin blocks and items"
+				},
+				{
 					"id": "desaturated_purpur",
 					"name": "Desaturated Purpur",
 					"description": "Desaturates the color of all purpur blocks"
@@ -2022,7 +2027,7 @@
 				{
 					"id":"snoutless_cows",
 					"name": "Snoutless Cows",
-					"description": "Flattens all Cow and Mooshroom snouts like they appeared before 1.21.70
+					"description": "Flattens all Cow and Mooshroom snouts like they appeared before 1.21.70"
 				},
 				{
 					"id": "poppy_to_rose",
