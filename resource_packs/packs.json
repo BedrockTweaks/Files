@@ -2010,19 +2010,19 @@
 					"description": "Reverts the textures of Wool and Carpet to their pre-1.12 variants"
 				},
 				{
-					"id": "old_shulker_boxes",
-					"name": "Old Shulker Boxes",
+					"id": "old_shulker_colors",
+					"name": "Old Shulker Colors",
 					"description": "Recolors Shulkers and Shulker Boxes to their pre-1.12 colors"
 				},
-        {
-          "id": "old_spawn_eggs",
+				{
+					"id": "old_spawn_eggs",
 					"name": "Old Spawn Eggs",
 					"description": "Reverts Spawn Eggs to their classic polka-dot textures"
-        },
+				},
 				{
-					"id":"snoutless_cows",
+					"id": "snoutless_cows",
 					"name": "Snoutless Cows",
-					"description": "Flattens all Cow and Mooshroom snouts like they appeared before 1.21.70
+					"description": "Flattens all Cow and Mooshroom snouts like they appeared before 1.21.70"
 				},
 				{
 					"id": "poppy_to_rose",
@@ -2503,7 +2503,7 @@
 					"description": "Gives the Snowball its texture from old legacy console editions of Minecraft"
 				},
 				{
-					"id":"earth_wooly_cow",
+					"id": "earth_wooly_cow",
 					"name": "Earth Wooly Cow",
 					"description": "Retextures the Cold Cow to the Wooly Cow from Minecraft: Earth"
 				}
