@@ -1,0 +1,27 @@
+{
+	"format_version": "1.21.70",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "bt:slib.settings_book"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"ingredients": [
+			{
+				"item": "minecraft:glass_bottle"
+			},
+			{
+				"item": "minecraft:book"
+			}
+		],
+		"unlock": [
+			{
+				"item": "minecraft:glass_bottle"
+			}
+		],
+		"result": {
+			"item": "bt:slib.settings_book"
+		}
+	}
+}

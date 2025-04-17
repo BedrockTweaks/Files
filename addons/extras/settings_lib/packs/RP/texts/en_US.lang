@@ -1,0 +1,5 @@
+item.bt:slib.settings_book=Settings Book
+
+bt.settingsLib.settings.title=Settings
+
+bt.settingsLib.addonSettings.title=Settings / %1

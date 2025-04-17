@@ -1,0 +1,47 @@
+{
+	"format_version": 2,
+	"header": {
+		"name": "Settings Lib - Dependency - Bedrock Tweaks",
+		"description": "This is a dependency addon for handling Settings forms",
+		"uuid": "a85cab8c-0655-4d80-9f8b-8b809bbe8fc2",
+		"version": [
+			1,
+			0,
+			0
+		],
+		"min_engine_version": [
+			1,
+			21,
+			70
+		]
+	},
+	"modules": [
+		{
+			"type": "resources",
+			"uuid": "d35e39c8-86c6-4ea1-b722-58b41e64578f",
+			"version": [
+				1,
+				0,
+				0
+			]
+		}
+	],
+	"dependencies": [
+		{
+			"uuid": "acee214c-6b37-48e0-a1b8-fe117890a547",
+			"version": [
+				1,
+				0,
+				0
+			]
+		}
+	],
+	"metadata": {
+		"authors": [
+			"Vanilla Tweaks",
+			"Bedrock Tweaks",
+			"PAPISOP"
+		],
+		"product_type": "addon"
+	}
+}
