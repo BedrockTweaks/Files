@@ -2024,6 +2024,11 @@
 					"description": "Reverts Spawn Eggs to their classic polka-dot textures"
 				},
 				{
+					"id": "snoutless_pigs",
+					"name": "Snoutless Pigs",
+					"description": "Flattens all Pigs' snouts like they appeared before Beta 1.8"
+				},
+				{
 					"id": "snoutless_cows",
 					"name": "Snoutless Cows",
 					"description": "Flattens all Cow and Mooshroom snouts like they appeared before 1.21.70"
@@ -3377,6 +3382,13 @@
 			"combines": [
 				"fun/sus_sand_and_gravel",
 				"retro/old_gravel"
+			]
+		},
+		{
+			"id": "extras/fun/snoutless_technoblade_pigs",
+			"combines": [
+				"fun/technoblade_pigs",
+				"retro/snoutless_pigs"
 			]
 		},
 		{
