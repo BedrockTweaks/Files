@@ -2841,6 +2841,13 @@
 			]
 		},
 		{
+			"id": "extras/gui/old_bedrock_edition_title",
+			"combines": [
+				"gui/bedrock_edition_title",
+				"retro/old_bedrock_menu_title"
+			]
+		},
+		{
 			"id": "extras/terrain/lush_grass_clearer_water",
 			"combines": [
 				"terrain/lush_grass_all_round",
