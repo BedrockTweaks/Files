@@ -2841,6 +2841,13 @@
 			]
 		},
 		{
+			"id": "extras/gui/classic_bedrock_edition_title",
+			"combines": [
+				"gui/bedrock_edition_title",
+				"retro/classic_minecraft_logo"
+			]
+		},
+		{
 			"id": "extras/terrain/lush_grass_clearer_water",
 			"combines": [
 				"terrain/lush_grass_all_round",
