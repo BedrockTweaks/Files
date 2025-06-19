@@ -1975,6 +1975,12 @@
 					"description": "Reverts Lava to its Alpha texture"
 				},
 				{
+				  "id": "old_ghasts",
+	        "name": "Old Ghasts",
+				  "description" "Reverts Ghasts to their lower resolution textures, including Happy Ghasts and their harnesses"
+				}
+				},
+				{
 					"id": "old_obsidian",
 					"name": "Old Obsidian",
 					"description": "Reverts Obsidian and Crying Obsidian to their old textures"
@@ -2022,7 +2028,7 @@
 				{
 					"id":"snoutless_cows",
 					"name": "Snoutless Cows",
-					"description": "Flattens all Cow and Mooshroom snouts like they appeared before 1.21.70
+					"description": "Flattens all Cow and Mooshroom snouts like they appeared before 1.21.70"
 				},
 				{
 					"id": "poppy_to_rose",
