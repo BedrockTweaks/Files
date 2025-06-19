@@ -46,9 +46,9 @@
 					"description": "Eliminates Slime Block transparency"
 				},
 				{
-				  "id": "desaturated_resin",
-				  "name": "Desaturated Resin",
-				  "description": "Desaturates the color of all resin blocks and items"
+				        "id": "desaturated_resin",
+				        "name": "Desaturated Resin",
+				        "description": "Desaturates the color of all Resin blocks and items"
 				},
 				{
 					"id": "desaturated_purpur",
