@@ -2058,11 +2058,11 @@
 					"id": "oarless_boats",
 					"name": "Oarless Boats",
 					"description": "Removes the oars from all boat types from their item textures and entity models"
-            },
-            {
-               "id": "old_clouds",
-               "name": "Old Clouds",
-               "description": "Reverts clouds to their pre-1.21.90 texture"
+                                },
+                                {
+                                        "id": "old_clouds",
+                                        "name": "Old Clouds",
+                                        "description": "Reverts clouds to their pre-1.21.90 texture"
 				},
 				{
 					"id": "old_door_sound",
