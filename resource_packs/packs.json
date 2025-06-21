@@ -1801,11 +1801,11 @@
 					"id": "trial_chamber_panorama",
 					"name": "Trial Chamber Panorama",
 					"description": "Replaces the default Minecraft menu panorama with a 360° view of a Trial Chamber (from 1.21)"
-            },
-            {
-               "id": "spring_to_life_panorama",
-               "name": "Spring to Life Panorama",
-               "description": "Replaces the default Minecraft menu panorama with a 360° view of a forest and desert (from 1.21.70)"
+                                },
+                                {
+                                        "id": "spring_to_life_panorama",
+                                        "name": "Spring to Life Panorama",
+                                        "description": "Replaces the default Minecraft menu panorama with a 360° view of a forest and desert (from 1.21.70)"
 				},
 				{
 					"id": "the_end_panorama",
