@@ -1198,6 +1198,17 @@
 			]
 		},
 		{
+			"id": "gui/fonts",
+			"name": "GUI / Fonts",
+			"packs": [
+				{
+					"id": "anti_alias_font",
+					"name": "Anti-Alias Font",
+					"description": "Smoothens the font using anti-aliasing, from the 'Ice Cream' resource pack"
+				}
+			]
+		},
+		{
 			"id": "gui/crosshairs",
 			"name": "GUI / Crosshairs",
 			"packs": [
