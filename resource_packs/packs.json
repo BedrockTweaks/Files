@@ -1198,6 +1198,17 @@
 			]
 		},
 		{
+			"id": "gui/fonts",
+			"name": "GUI / Fonts",
+			"packs": [
+				{
+					"id": "anti_alias_font",
+					"name": "Anti-Alias Font",
+					"description": "Smoothens the font using anti-aliasing, from the 'Ice Cream' resource pack"
+				}
+			]
+		},
+		{
 			"id": "gui/crosshairs",
 			"name": "GUI / Crosshairs",
 			"packs": [
@@ -2500,6 +2511,11 @@
 					"name": "Java Inventory Slot Highlight",
 					"description": "Gives the inventory slot highlight its texture from Minecraft: Java Edition",
 					"priority": 1
+				},
+				{
+					"id": "classic_java_sheep",
+					"name": "Classic Java Sheep",
+					"description": "Reverts Sheep back to having white wool around their head and legs, and white wool patches on their body when sheared from Minecraft: Java Edition before 1.21.5"
 				},
 				{
 					"id": "dungeons_creepers",
