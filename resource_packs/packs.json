@@ -3618,6 +3618,13 @@
 				"world_of_color/enchantment_glints/rainbow_enchantment_glint",
 				"unobtrusive/unobtrusive_enchantment_glint"
 			]
+		},
+		{
+			"id": "extras/mobs/snoutless_earth_wooly_cows",
+			"combines": [
+				"parity/earth_wooly_cow",
+				"retro/snoutless_cows"
+			]
 		}
 	],
 	"deepMergeFiles": [
