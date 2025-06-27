@@ -29,7 +29,7 @@ By contributing to Bedrock Tweaks, you agree that your contributions will be lic
 
 ### Thanks to all the Contributors!
 
-You can find the pack creators of some of the original [Vanilla Tweaks](https://vanillatweaks.net) packs at each respective section of their site.
+You can find the pack creators of the original [Vanilla Tweaks](https://vanillatweaks.net) packs at the bottom of each respective section of their site.
 
 abc55, WavePlayz, r4isen1920, randomityguy, LukasPlaysGames, TheBlueShadow and axialeaa for their contributions and ideas on some packs prior to the GitHub repository.
 <!-- readme: collaborators,contributors -start -->
