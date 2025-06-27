@@ -1202,9 +1202,9 @@
 			"name": "GUI / Fonts",
 			"packs": [
 				{
-					"id": "doodle_font",
-					"name": "Doodle Font",
-					"description": "Changes the font to a cartoonish, doodly font, from the 'MS Painted' resource pack"
+					"id": "anti_alias_font",
+					"name": "Anti-Alias Font",
+					"description": "Smoothens the font using anti-aliasing, from the 'Ice Cream' resource pack"
 				}
 			]
 		},
