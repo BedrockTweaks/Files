@@ -46,9 +46,9 @@
 					"description": "Eliminates Slime Block transparency"
 				},
 				{
-				        "id": "desaturated_resin",
-				        "name": "Desaturated Resin",
-				        "description": "Desaturates the color of all Resin blocks and items"
+					"id": "desaturated_resin",
+					"name": "Desaturated Resin",
+					"description": "Desaturates the color of all Resin blocks and items"
 				},
 				{
 					"id": "desaturated_purpur",
@@ -1202,9 +1202,34 @@
 			"name": "GUI / Fonts",
 			"packs": [
 				{
+					"id": "smooth_font",
+					"name": "Smooth Font",
+					"description": "Changes the font to be smoother and higher-resolution, from the 'Faithful' resource pack"
+				},
+				{
 					"id": "anti_alias_font",
 					"name": "Anti-Alias Font",
 					"description": "Smoothens the font using anti-aliasing, from the 'Ice Cream' resource pack"
+				},
+				{
+					"id": "small_caps_font",
+					"name": "Small Caps Font",
+					"description": "Changes all lower-case letters to be smaller versions of upper-case letters"
+				},
+				{
+					"id": "square_font",
+					"name": "Square Font",
+					"description": "Retextures the font to be more square"
+				},
+				{
+					"id": "doodle_font",
+					"name": "Doodle Font",
+					"description": "Changes the font to a cartoonish, doodly font, from the 'MS Painted' resource pack"
+				},
+				{
+					"id": "blocky_font",
+					"name": "Blocky Font",
+					"description": "Changes the font to be bold and blocky, from the 'F8thful' resource pack"
 				}
 			]
 		},
@@ -1820,11 +1845,11 @@
 					"id": "trial_chamber_panorama",
 					"name": "Trial Chamber Panorama",
 					"description": "Replaces the default Minecraft menu panorama with a 360° view of a Trial Chamber (from 1.21)"
-                                },
-                                {
-                                        "id": "spring_to_life_panorama",
-                                        "name": "Spring to Life Panorama",
-                                        "description": "Replaces the default Minecraft menu panorama with a 360° view of a forest and desert (from 1.21.70)"
+				},
+				{
+					"id": "spring_to_life_panorama",
+					"name": "Spring to Life Panorama",
+					"description": "Replaces the default Minecraft menu panorama with a 360° view of a forest and desert (from 1.21.70)"
 				},
 				{
 					"id": "pale_garden_panorama",
@@ -2005,9 +2030,9 @@
 					"description": "Reverts Lava to its Alpha texture"
 				},
 				{
-				        "id": "old_ghasts",
-      	                                "name": "Old Ghasts",
-				        "description" "Reverts Ghasts to their lower resolution textures, including Happy Ghasts and their harnesses"
+					"id": "old_ghasts",
+					"name": "Old Ghasts",
+					"description": "Reverts Ghasts to their lower resolution textures, including Happy Ghasts and their harnesses"
 				},
 				{
 					"id": "old_obsidian",
@@ -2055,6 +2080,11 @@
 					"description": "Reverts Spawn Eggs to their classic polka-dot textures"
 				},
 				{
+					"id": "snoutless_pigs",
+					"name": "Snoutless Pigs",
+					"description": "Flattens all Pigs' snouts like they appeared before Beta 1.8"
+				},
+				{
 					"id": "snoutless_cows",
 					"name": "Snoutless Cows",
 					"description": "Flattens all Cows' and Mooshrooms' snouts like they appeared before 1.21.70"
@@ -2093,11 +2123,11 @@
 					"id": "oarless_boats",
 					"name": "Oarless Boats",
 					"description": "Removes the oars from all boat types from their item textures and entity models"
-                                },
-                                {
-                                        "id": "old_clouds",
-                                        "name": "Old Clouds",
-                                        "description": "Reverts clouds to their pre-1.21.90 texture"
+				},
+				{
+					"id": "old_clouds",
+					"name": "Old Clouds",
+					"description": "Reverts clouds to their pre-1.21.90 texture"
 				},
 				{
 					"id": "old_door_sound",
@@ -2511,6 +2541,11 @@
 					"id": "classic_java_sheep",
 					"name": "Classic Java Sheep",
 					"description": "Reverts Sheep back to having white wool around their head and legs, and white wool patches on their body when sheared from Minecraft: Java Edition before 1.21.5"
+				},
+				{
+					"id": "kinda_classic_java_sheep",
+					"name": "Kinda Classic Java Sheep",
+					"description": "Reverts Sheep back to having white wool around their head and legs, but keeps the wool patches on their body colored when sheared from Minecraft: Java Edition before 1.21.5"
 				},
 				{
 					"id": "dungeons_creepers",
@@ -3445,6 +3480,13 @@
 			]
 		},
 		{
+			"id": "extras/fun/snoutless_technoblade_pigs",
+			"combines": [
+				"fun/technoblade_pigs",
+				"retro/snoutless_pigs"
+			]
+		},
+		{
 			"id": "extras/colored_solid_slime/black_solid_slime",
 			"combines": [
 				"world_of_color/slimes/black_slime",
@@ -3582,6 +3624,13 @@
 			"combines": [
 				"world_of_color/enchantment_glints/rainbow_enchantment_glint",
 				"unobtrusive/unobtrusive_enchantment_glint"
+			]
+		},
+		{
+			"id": "extras/mobs/snoutless_earth_wooly_cows",
+			"combines": [
+				"parity/earth_wooly_cow",
+				"retro/snoutless_cows"
 			]
 		}
 	],
