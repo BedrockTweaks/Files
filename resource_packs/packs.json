@@ -2668,6 +2668,11 @@
 					"description": "Gives the Smooth Stone texture the same bevel as its slab counterpart"
 				},
 				{
+					"id": "sandstone_wall_top_fix",
+					"name": "Sandstone Wall Top Fix",
+					"description": "Gives Sandstone and Red Sandstone Walls their correct top and bottom textures to align with their block counterparts"
+				},
+				{
 					"id": "double_slab_fix",
 					"name": "Double Slab Fix",
 					"description": "Gives double slab variants of some blocks a clear line of separation"
