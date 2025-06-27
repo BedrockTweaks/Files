@@ -1030,7 +1030,7 @@
 				{
 					"id": "no_falling_leaf_particles",
 					"name": "No Falling Leaf Particles",
-					"description": "Removes falling leaf particles from all leaf blocks"
+					"description": "Removes falling leaf particles from all Leaves blocks"
 				},
 				{
 					"id": "borderless_glass",
