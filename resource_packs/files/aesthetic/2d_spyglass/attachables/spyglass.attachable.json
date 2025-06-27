@@ -15,8 +15,8 @@
 				"default": "geometry.bow_standby"
 			},
 			"animations": {
-				"holding": "animation.bt.spyglass.holding",
-				"scoping": "animation.bt.spyglass.scoping"
+				"holding": "animation.rp.bt.spyglass_holding",
+				"scoping": "animation.rp.bt.spyglass_scoping"
 			},
 			"scripts": {
 				"animate": [
