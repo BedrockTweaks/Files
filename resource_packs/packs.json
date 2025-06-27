@@ -2075,49 +2075,6 @@
 					"description": "Reverts the texture of the purple item tooltip back to the translucent black box."
 				},
 				{
-					"id": "rename_bamboo_slab_to_bamboo_planks_slab",
-					"name": "Rename 'Bamboo Slab' to 'Bamboo Planks Slab'",
-					"description": "Renames the Bamboo Slab back to 'Bamboo Planks Slab'"
-				},
-				{
-					"id": "rename_bamboo_stairs_to_bamboo_planks_stairs",
-					"name": "Rename 'Bamboo Stairs' to 'Bamboo Planks Stairs'",
-					"description": "Renames the Bamboo Stairs back to 'Bamboo Planks Stairs'"
-				},
-				{
-					"id": "rename_bamboo_fence_to_bamboo_fence_gate",
-					"name": "Rename 'Bamboo Fence' to 'Bamboo Fence Gate'",
-					"description": "Renames the Bamboo Fence back to 'Bamboo Fence Gate'"
-				},
-				{
-					"id": "rename_bamboo_fence_gate_to_bamboo_fence",
-					"name": "Rename 'Bamboo Fence Gate' to 'Bamboo Fence'",
-					"description": "Renames the Bamboo Fence Gate back to 'Bamboo Fence'"
-				},
-				{
-					"id": "old_elytra_texture",
-					"name": "Old Elytra Texture",
-					"description": "Reverts Elytra's texture to its pre-1.13 variant"
-				},
-				{
-					"id": "old_elytra_model",
-					"name": "Old Elytra Model",
-					"description": "Reverts Elytra's model to its pre-1.13 variant"
-				},
-				{
-					"id": "old_elytra_particles",
-					"name": "Old Elytra Particles",
-					"description": "Reverts Elytra's particles to their pre-1.13 variant"
-				},
-				{
-					"id": "old_elytra_sound",
-					"name": "Old Elytra Sound",
-					"description": "Reverts Elytra's sound effects to their pre-1.13 variant"
-				},
-				{
-					"id
-				},
-				{
 					"id": "zombie_pigman",
 					"name": "Zombie Pigman",
 					"description": "Changes the texture and model of the Zombified Piglin back to the old Zombie Pigman"
