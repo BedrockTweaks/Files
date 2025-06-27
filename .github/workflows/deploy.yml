@@ -26,7 +26,7 @@ jobs:
       # Step 2-dev: Deploy files via SSH
       - name: Deploy files via SSH and Git Pull
         if: github.ref_name == 'devel'
-        uses: appleboy/ssh-action@v0.1.7
+        uses: appleboy/ssh-action@v1.2.2
         with:
           host: ${{ secrets.SERVER_ADDRESS }}
           username: ${{ secrets.SERVER_USER }}
@@ -41,7 +41,7 @@ jobs:
       # Step 2-prod: Deploy files via SSH
       - name: Deploy files via SSH and Git Pull
         if: github.ref_name == 'main'
-        uses: appleboy/ssh-action@v0.1.7
+        uses: appleboy/ssh-action@v1.2.2
         with:
           host: ${{ secrets.SERVER_ADDRESS }}
           username: ${{ secrets.SERVER_USER }}
