@@ -2115,6 +2115,11 @@
 					"description": "Changes the newly named 'Dirt Path' back to 'Grass Path'"
 				},
 				{
+					"id": "beta_item_tooltip",
+					"name": "Beta Item Tooltip",
+					"description": "Reverts the texture of the purple item tooltip back to the translucent black box"
+				},
+				{
 					"id": "zombie_pigman",
 					"name": "Zombie Pigman",
 					"description": "Changes the texture and model of the Zombified Piglin back to the old Zombie Pigman"
