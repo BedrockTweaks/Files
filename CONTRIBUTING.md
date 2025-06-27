@@ -57,7 +57,8 @@ We discourage the use of deprecated code and carefully review the use of experim
 | BP Entity            | dragon.json                   | 
 | ID                   | bt:md.dragon *                |
 | Item                 | dragon_tooth.item.json        | 
-| Attachable           | dragon_tooth.attachable.json  | 
+| Attachable           | dragon_tooth.attachable.json  |
+| Client Biome         | dragon.client_biome.json      |  
 | Render Controller    | dragon.rc.json                | 
 | Loot Table           | dragon.loot.json              | 
 | Recipe               | dragon_saddle.recipe.json     | 
