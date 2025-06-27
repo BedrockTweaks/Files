@@ -1,0 +1,19 @@
+{
+	"format_version": "1.21.40",
+	"sandstone_wall": {
+		"sound": "stone",
+		"textures": {
+			"down": "flattened_sandstone_bottom",
+			"side": "sandstone_wall",
+			"up": "flattened_sandstone_top"
+		}
+	},
+	"red_sandstone_wall": {
+		"sound": "stone",
+		"textures": {
+			"down": "flattened_redsandstone_bottom",
+			"side": "red_sandstone_wall",
+			"up": "flattened_redsandstone_top"
+		}
+	}
+}
