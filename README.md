@@ -29,7 +29,7 @@ By contributing to Bedrock Tweaks, you agree that your contributions will be lic
 
 ### Thanks to all the Contributors!
 
-You can find the pack creators of some of the original [Vanilla Tweaks](https://vanillatweaks.net) packs at each respective section of their site.
+You can find the pack creators of the original [Vanilla Tweaks](https://vanillatweaks.net) packs at the bottom of each respective section of their site.
 
 abc55, WavePlayz, r4isen1920, randomityguy, LukasPlaysGames, TheBlueShadow and axialeaa for their contributions and ideas on some packs prior to the GitHub repository.
 <!-- readme: collaborators,contributors -start -->
@@ -44,10 +44,10 @@ abc55, WavePlayz, r4isen1920, randomityguy, LukasPlaysGames, TheBlueShadow and a
                 </a>
             </td>
             <td align="center">
-                <a href="https://github.com/NSPC911">
-                    <img src="https://avatars.githubusercontent.com/u/87571998?v=4" width="100;" alt="NSPC911"/>
+                <a href="https://github.com/PAPISOP">
+                    <img src="https://avatars.githubusercontent.com/u/85175982?v=4" width="100;" alt="PAPISOP"/>
                     <br />
-                    <sub><b>NSPC911</b></sub>
+                    <sub><b>PAPISOP</b></sub>
                 </a>
             </td>
             <td align="center">
@@ -58,10 +58,10 @@ abc55, WavePlayz, r4isen1920, randomityguy, LukasPlaysGames, TheBlueShadow and a
                 </a>
             </td>
             <td align="center">
-                <a href="https://github.com/yzabeast1">
-                    <img src="https://avatars.githubusercontent.com/u/78424865?v=4" width="100;" alt="yzabeast1"/>
+                <a href="https://github.com/NSPC911">
+                    <img src="https://avatars.githubusercontent.com/u/87571998?v=4" width="100;" alt="NSPC911"/>
                     <br />
-                    <sub><b>yzabeast1</b></sub>
+                    <sub><b>NSPC911</b></sub>
                 </a>
             </td>
             <td align="center">
@@ -72,10 +72,40 @@ abc55, WavePlayz, r4isen1920, randomityguy, LukasPlaysGames, TheBlueShadow and a
                 </a>
             </td>
             <td align="center">
-                <a href="https://github.com/PAPISOP">
-                    <img src="https://avatars.githubusercontent.com/u/85175982?v=4" width="100;" alt="PAPISOP"/>
+                <a href="https://github.com/yzabeast1">
+                    <img src="https://avatars.githubusercontent.com/u/78424865?v=4" width="100;" alt="yzabeast1"/>
                     <br />
-                    <sub><b>PAPISOP</b></sub>
+                    <sub><b>yzabeast1</b></sub>
+                </a>
+            </td>
+		</tr>
+		<tr>
+            <td align="center">
+                <a href="https://github.com/ZecaApelao">
+                    <img src="https://avatars.githubusercontent.com/u/206439936?v=4" width="100;" alt="ZecaApelao"/>
+                    <br />
+                    <sub><b>Zeca Apelão</b></sub>
+                </a>
+            </td>
+            <td align="center">
+                <a href="https://github.com/MPAD2277">
+                    <img src="https://avatars.githubusercontent.com/u/77268603?v=4" width="100;" alt="MPAD2277"/>
+                    <br />
+                    <sub><b>MPAD2277</b></sub>
+                </a>
+            </td>
+            <td align="center">
+                <a href="https://github.com/IdotIcom">
+                    <img src="https://avatars.githubusercontent.com/u/176992055?v=4" width="100;" alt="IdotIcom"/>
+                    <br />
+                    <sub><b>IdotIcom</b></sub>
+                </a>
+            </td>
+            <td align="center">
+                <a href="https://github.com/bedrocktweaksadmin">
+                    <img src="https://avatars.githubusercontent.com/u/172558280?v=4" width="100;" alt="bedrocktweaksadmin"/>
+                    <br />
+                    <sub><b>Bedrock Tweaks Admin</b></sub>
                 </a>
             </td>
 		</tr>
