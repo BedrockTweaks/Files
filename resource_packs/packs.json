@@ -1202,9 +1202,9 @@
 			"name": "GUI / Fonts",
 			"packs": [
 				{
-					"id": "square_font",
-					"name": "Square Font",
-					"description": "Retextures the font to be more square"
+					"id": "anti_alias_font",
+					"name": "Anti-Alias Font",
+					"description": "Smoothens the font using anti-aliasing, from the 'Ice Cream' resource pack"
 				}
 			]
 		},
