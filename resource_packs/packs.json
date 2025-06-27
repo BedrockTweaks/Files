@@ -46,6 +46,11 @@
 					"description": "Eliminates Slime Block transparency"
 				},
 				{
+				        "id": "desaturated_resin",
+				        "name": "Desaturated Resin",
+				        "description": "Desaturates the color of all Resin blocks and items"
+				},
+				{
 					"id": "desaturated_purpur",
 					"name": "Desaturated Purpur",
 					"description": "Desaturates the color of all purpur blocks"
@@ -1803,6 +1808,11 @@
 					"description": "Replaces the default Minecraft menu panorama with a 360° view of a Trial Chamber (from 1.21)"
 				},
 				{
+					"id": "pale_garden_panorama",
+					"name": "Pale Garden Panorama",
+					"description": "Replaces the default Minecraft menu panorama with a 360° view of a Pale Garden (from 1.21.4)"
+				},
+				{
 					"id": "the_end_panorama",
 					"name": "The End Panorama",
 					"description": "Replaces the default Minecraft menu panorama with a 360° view of the main End island"
@@ -2019,11 +2029,11 @@
 					"name": "Old Shulker Boxes",
 					"description": "Recolors Shulkers and Shulker Boxes to their pre-1.12 colors"
 				},
-        {
-          "id": "old_spawn_eggs",
+        		{
+         			 "id": "old_spawn_eggs",
 					"name": "Old Spawn Eggs",
 					"description": "Reverts Spawn Eggs to their classic polka-dot textures"
-        },
+     			},
 				{
 					"id":"snoutless_cows",
 					"name": "Snoutless Cows",
@@ -2447,6 +2457,11 @@
 			"name": "Parity",
 			"packs": [
 				{
+					"id": "a_minecraft_movie_logo",
+					"name": "'A Minecraft Movie' Logo",
+					"description": "Gives the game its logo from 'A Minecraft Movie'"
+				},
+				{
 					"id": "java_boom",
 					"name": "Java Boom",
 					"description": "Gives Explosion particles their texture from Minecraft: Java Edition"
@@ -2843,6 +2858,13 @@
 			"combines": [
 				"gui/dark_ui",
 				"fixes_and_consistency/brewing_stand_icons_fix"
+			]
+		},
+		{
+			"id": "extras/gui/old_bedrock_edition_title",
+			"combines": [
+				"gui/bedrock_edition_title",
+				"retro/old_bedrock_menu_title"
 			]
 		},
 		{
