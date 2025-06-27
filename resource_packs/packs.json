@@ -2034,8 +2034,8 @@
 					"description": "Reverts the textures of Wool and Carpet to their pre-1.12 variants"
 				},
 				{
-					"id": "old_shulker_boxes",
-					"name": "Old Shulker Boxes",
+					"id": "old_shulker_colors",
+					"name": "Old Shulker Colors",
 					"description": "Recolors Shulkers and Shulker Boxes to their pre-1.12 colors"
 				},
 				{
