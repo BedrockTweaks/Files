@@ -2933,9 +2933,9 @@
 			"combines": [
 				"gui/bedrock_edition_title",
 				"retro/classic_minecraft_logo"
-      ]
-    },
-    {
+			]
+		},
+		{
 			"id": "extras/gui/old_bedrock_edition_title",
 			"combines": [
 				"gui/bedrock_edition_title",
