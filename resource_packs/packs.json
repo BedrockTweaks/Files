@@ -1202,9 +1202,9 @@
 			"name": "GUI / Fonts",
 			"packs": [
 				{
-					"id": "small_caps_font",
-					"name": "Small Caps Font",
-					"description": "Changes all lower-case letters to be smaller versions of upper-case letters"
+					"id": "anti_alias_font",
+					"name": "Anti-Alias Font",
+					"description": "Smoothens the font using anti-aliasing, from the 'Ice Cream' resource pack"
 				}
 			]
 		},
