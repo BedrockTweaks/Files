@@ -1,15 +1,22 @@
 {
 	"namespace": "bt_quick_crafting",
-
 	"quick_craft_icon": {
 		"type": "image",
-		"size": [16, 16],
+		"size": [
+			16,
+			16
+		],
 		"texture": "textures/ui/quick_craft"
 	},
-
 	"quick_craft_button@common_buttons.light_content_button": {
-		"size": [18, 18],
-		"offset": [1, 2],
+		"size": [
+			18,
+			18
+		],
+		"offset": [
+			1,
+			2
+		],
 		"anchor_from": "bottom_right",
 		"anchor_to": "bottom_right",
 		"$button_content": "bt_quick_crafting.quick_craft_icon",
@@ -25,7 +32,6 @@
 			}
 		]
 	},
-
 	"stonecutter_quick_craft_button@quick_craft_button": {
 		"property_bag": {
 			"#collection_name": "stonecutter_result_items"
@@ -38,9 +44,11 @@
 			}
 		]
 	},
-
 	"quick_trade_button@quick_craft_button": {
-		"offset": [2, 0],
+		"offset": [
+			2,
+			0
+		],
 		"property_bag": {
 			"#collection_name": "trade2_result_item"
 		},
