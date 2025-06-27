@@ -3,7 +3,7 @@
 	"version": [
 		1,
 		21,
-		50
+		70
 	],
 	"categories": [
 		{
@@ -46,19 +46,20 @@
 					"description": "Eliminates Slime Block transparency"
 				},
 				{
-				        "id": "desaturated_resin",
-				        "name": "Desaturated Resin",
-				        "description": "Desaturates the color of all Resin blocks and items"
+					"id": "desaturated_resin",
+					"name": "Desaturated Resin",
+					"description": "Desaturates the color of all Resin blocks and items"
 				},
 				{
 					"id": "desaturated_purpur",
 					"name": "Desaturated Purpur",
-					"description": "Desaturates the color of all purpur blocks"
+					"description": "Desaturates the color of all Purpur blocks"
 				},
 				{
 					"id": "desaturated_dark_oak",
 					"name": "Desaturated Dark Oak",
-					"description": "Desaturates Dark Oak Planks to give them a more neutral color"
+					"description": "Desaturates the color of all Dark Oak wood blocks",
+					"priority": 2
 				},
 				{
 					"id": "horizontal_nuggets",
@@ -83,7 +84,7 @@
 				{
 					"id": "brown_leather",
 					"name": "Brown Leather",
-					"description": "Recolours all leather related items to use a similar palette to Leather Armor"
+					"description": "Recolors all leather related items to use a similar palette to Leather Armor"
 				},
 				{
 					"id": "red_iron_golem_flowers",
@@ -148,12 +149,14 @@
 				{
 					"id": "smoother_warped_planks",
 					"name": "Smoother Warped Planks",
-					"description": "Removes the harsh contrast from Warped Planks"
+					"description": "Removes the harsh contrast from Warped Planks",
+					"priority": 2
 				},
 				{
 					"id": "consistent_bamboo_planks",
 					"name": "Consistent Bamboo Planks",
-					"description": "Makes Bamboo Planks and Bamboo Mosaics match the textures of the other plank types"
+					"description": "Makes Bamboo Planks and Bamboo Mosaics match the textures of the other plank types",
+					"priority": 2
 				},
 				{
 					"id": "alternate_cut_copper",
@@ -981,7 +984,7 @@
 				{
 					"id": "unlit_redstone_ore",
 					"name": "Unlit Redstone Ore",
-					"description": "Makes unlit Redstone Ore use the same palette as unlit Redstone Wire until its lit, when it then returns to its default, bright red colour"
+					"description": "Makes unlit Redstone Ore use the same palette as unlit Redstone Wire until its lit, when it then returns to its default, bright red color"
 				},
 				{
 					"id": "visible_tripwires",
@@ -1027,7 +1030,7 @@
 				{
 					"id": "no_falling_leaf_particles",
 					"name": "No Falling Leaf Particles",
-					"description": "Removes falling leaf particles from all leaf blocks"
+					"description": "Removes falling leaf particles from all Leaves blocks"
 				},
 				{
 					"id": "borderless_glass",
@@ -1103,7 +1106,7 @@
 				{
 					"id": "no_vignette",
 					"name": "No Vignette",
-					"description": "Removes the darkened corners of the screen that occur in darker areas when graphics are set to 'fancy'"
+					"description": "Removes the darkened corners of the screen when in dark areas"
 				},
 				{
 					"id": "invisible_totem",
@@ -1191,6 +1194,42 @@
 					"id": "no_how_to_play",
 					"name": "No How To Play",
 					"description": "Removes the 'How to Play' Button from all screens so you do not accidentally misclick it"
+				}
+			]
+		},
+		{
+			"id": "gui/fonts",
+			"name": "GUI / Fonts",
+			"packs": [
+				{
+					"id": "smooth_font",
+					"name": "Smooth Font",
+					"description": "Changes the font to be smoother and higher-resolution, from the 'Faithful' resource pack"
+				},
+				{
+					"id": "anti_alias_font",
+					"name": "Anti-Alias Font",
+					"description": "Smoothens the font using anti-aliasing, from the 'Ice Cream' resource pack"
+				},
+				{
+					"id": "small_caps_font",
+					"name": "Small Caps Font",
+					"description": "Changes all lower-case letters to be smaller versions of upper-case letters"
+				},
+				{
+					"id": "square_font",
+					"name": "Square Font",
+					"description": "Retextures the font to be more square"
+				},
+				{
+					"id": "doodle_font",
+					"name": "Doodle Font",
+					"description": "Changes the font to a cartoonish, doodly font, from the 'MS Painted' resource pack"
+				},
+				{
+					"id": "blocky_font",
+					"name": "Blocky Font",
+					"description": "Changes the font to be bold and blocky, from the 'F8thful' resource pack"
 				}
 			]
 		},
@@ -1806,11 +1845,11 @@
 					"id": "trial_chamber_panorama",
 					"name": "Trial Chamber Panorama",
 					"description": "Replaces the default Minecraft menu panorama with a 360° view of a Trial Chamber (from 1.21)"
-                                },
-                                {
-                                        "id": "spring_to_life_panorama",
-                                        "name": "Spring to Life Panorama",
-                                        "description": "Replaces the default Minecraft menu panorama with a 360° view of a forest and desert (from 1.21.70)"
+				},
+				{
+					"id": "spring_to_life_panorama",
+					"name": "Spring to Life Panorama",
+					"description": "Replaces the default Minecraft menu panorama with a 360° view of a forest and desert (from 1.21.70)"
 				},
 				{
 					"id": "pale_garden_panorama",
@@ -1930,14 +1969,14 @@
 			"name": "Retro",
 			"packs": [
 				{
-					"id": "classic_minecraft_logo",
-					"name": "Classic Minecraft Logo",
-					"description": "Brings back the classic pixelated Minecraft logo!"
-				},
-				{
 					"id": "alpha_minecraft_logo",
 					"name": "Alpha Minecraft Logo",
 					"description": "Brings back the old hand-built Cobblestone Minecraft logo from the Alpha days!"
+				},
+				{
+					"id": "classic_minecraft_logo",
+					"name": "Classic Minecraft Logo",
+					"description": "Brings back the classic pixelated Minecraft logo!"
 				},
 				{
 					"id": "old_bedrock_menu_title",
@@ -1972,7 +2011,8 @@
 				{
 					"id": "old_planks",
 					"name": "Old Planks",
-					"description": "Reverts all planks and signs to their old textures, including modern plank types"
+					"description": "Reverts all planks and signs to their old textures, including modern plank types",
+					"priority": 1
 				},
 				{
 					"id": "old_gravel",
@@ -1990,9 +2030,9 @@
 					"description": "Reverts Lava to its Alpha texture"
 				},
 				{
-				        "id": "old_ghasts",
-      	                                "name": "Old Ghasts",
-				        "description" "Reverts Ghasts to their lower resolution textures, including Happy Ghasts and their harnesses"
+					"id": "old_ghasts",
+					"name": "Old Ghasts",
+					"description": "Reverts Ghasts to their lower resolution textures, including Happy Ghasts and their harnesses"
 				},
 				{
 					"id": "old_obsidian",
@@ -2015,14 +2055,14 @@
 					"description": "Reverts all Ice blocks to their old textures"
 				},
 				{
-					"id": "old_lapis",
-					"name": "Old Lapis",
-					"description": "Reverts the texture of Lapis Lazuli Blocks to the Beta texture"
+					"id": "old_lapis_block",
+					"name": "Old Lapis Block",
+					"description": "Reverts Lapis Lazuli Blocks to their Beta texture"
 				},
 				{
 					"id": "old_sponge",
 					"name": "Old Sponge",
-					"description": "Reverts the texture of Sponges to the beta texture"
+					"description": "Reverts Sponges to their Beta texture"
 				},
 				{
 					"id": "old_wool_colors",
@@ -2030,19 +2070,24 @@
 					"description": "Reverts the textures of Wool and Carpet to their pre-1.12 variants"
 				},
 				{
-					"id": "old_shulker_boxes",
-					"name": "Old Shulker Boxes",
+					"id": "old_shulker_colors",
+					"name": "Old Shulker Colors",
 					"description": "Recolors Shulkers and Shulker Boxes to their pre-1.12 colors"
 				},
-        		{
-         			 "id": "old_spawn_eggs",
+				{
+					"id": "old_spawn_eggs",
 					"name": "Old Spawn Eggs",
 					"description": "Reverts Spawn Eggs to their classic polka-dot textures"
-     			},
+				},
 				{
-					"id":"snoutless_cows",
+					"id": "snoutless_pigs",
+					"name": "Snoutless Pigs",
+					"description": "Flattens all Pigs' snouts like they appeared before Beta 1.8"
+				},
+				{
+					"id": "snoutless_cows",
 					"name": "Snoutless Cows",
-					"description": "Flattens all Cow and Mooshroom snouts like they appeared before 1.21.70"
+					"description": "Flattens all Cows' and Mooshrooms' snouts like they appeared before 1.21.70"
 				},
 				{
 					"id": "poppy_to_rose",
@@ -2078,11 +2123,11 @@
 					"id": "oarless_boats",
 					"name": "Oarless Boats",
 					"description": "Removes the oars from all boat types from their item textures and entity models"
-                                },
-                                {
-                                        "id": "old_clouds",
-                                        "name": "Old Clouds",
-                                        "description": "Reverts clouds to their pre-1.21.90 texture"
+				},
+				{
+					"id": "old_clouds",
+					"name": "Old Clouds",
+					"description": "Reverts clouds to their pre-1.21.90 texture"
 				},
 				{
 					"id": "old_door_sound",
@@ -2493,6 +2538,16 @@
 					"priority": 1
 				},
 				{
+					"id": "classic_java_sheep",
+					"name": "Classic Java Sheep",
+					"description": "Reverts Sheep back to having white wool around their head and legs, and white wool patches on their body when sheared from Minecraft: Java Edition before 1.21.5"
+				},
+				{
+					"id": "kinda_classic_java_sheep",
+					"name": "Kinda Classic Java Sheep",
+					"description": "Reverts Sheep back to having white wool around their head and legs, but keeps the wool patches on their body colored when sheared from Minecraft: Java Edition before 1.21.5"
+				},
+				{
 					"id": "dungeons_creepers",
 					"name": "Dungeons Creepers",
 					"description": "Gives the Creeper its texture from Minecraft: Dungeons"
@@ -2520,7 +2575,7 @@
 				{
 					"id": "super_smash_bros_enderman",
 					"name": "Super Smash Bros Enderman",
-					"description": "Recolours Endermen to have the same palette as they do in 'Super Smash Bros Ultimate' and makes them shorter!"
+					"description": "Recolors Endermen to have the same palette as they do in 'Super Smash Bros Ultimate' and makes them shorter!"
 				},
 				{
 					"id": "legacy_console_emerald",
@@ -2533,7 +2588,7 @@
 					"description": "Gives the Snowball its texture from old legacy console editions of Minecraft"
 				},
 				{
-					"id":"earth_wooly_cow",
+					"id": "earth_wooly_cow",
 					"name": "Earth Wooly Cow",
 					"description": "Retextures the Cold Cow to the Wooly Cow from Minecraft: Earth"
 				}
@@ -2664,6 +2719,11 @@
 					"description": "Gives the Smooth Stone texture the same bevel as its slab counterpart"
 				},
 				{
+					"id": "sandstone_wall_top_fix",
+					"name": "Sandstone Wall Top Fix",
+					"description": "Gives Sandstone and Red Sandstone Walls their correct top and bottom textures to align with their block counterparts"
+				},
+				{
 					"id": "double_slab_fix",
 					"name": "Double Slab Fix",
 					"description": "Gives double slab variants of some blocks a clear line of separation"
@@ -2671,7 +2731,7 @@
 				{
 					"id": "hoe_fix",
 					"name": "Hoe Fix",
-					"description": "Fixes the incorrect colour on the handles of wooden, stone and iron hoes"
+					"description": "Fixes the incorrect color on the handles of wooden, stone and iron hoes"
 				},
 				{
 					"id": "cloak_fix",
@@ -2692,13 +2752,6 @@
 			"combines": [
 				"aesthetic/consistent_bamboo_planks",
 				"retro/old_planks"
-			]
-		},
-		{
-			"id": "extras/bamboo/consistent_variated_bamboo",
-			"combines": [
-				"aesthetic/consistent_bamboo_planks",
-				"variation/variated_planks"
 			]
 		},
 		{
@@ -2871,6 +2924,13 @@
 			]
 		},
 		{
+			"id": "extras/gui/classic_bedrock_edition_title",
+			"combines": [
+				"gui/bedrock_edition_title",
+				"retro/classic_minecraft_logo"
+      ]
+    },
+    {
 			"id": "extras/gui/old_bedrock_edition_title",
 			"combines": [
 				"gui/bedrock_edition_title",
@@ -3168,7 +3228,7 @@
 			]
 		},
 		{
-			"id": "extras/pixel_consistent/pixel_consistent_warped_signs",
+			"id": "extras/pixel_consistent/pixel_consistent_smoother_warped_signs",
 			"combines": [
 				"fixes_and_consistency/pixel_consistent_signs",
 				"aesthetic/smoother_warped_planks"
@@ -3392,25 +3452,10 @@
 			]
 		},
 		{
-			"id": "extras/planks/old_variated_planks",
-			"combines": [
-				"retro/old_planks",
-				"variation/variated_planks"
-			]
-		},
-		{
 			"id": "extras/planks/oarless_old_planks",
 			"combines": [
 				"retro/oarless_boats",
 				"retro/old_planks"
-			]
-		},
-		{
-			"id": "extras/planks/oarless_old_variated_planks",
-			"combines": [
-				"retro/oarless_boats",
-				"retro/old_planks",
-				"variation/variated_planks"
 			]
 		},
 		{
@@ -3432,6 +3477,13 @@
 			"combines": [
 				"fun/sus_sand_and_gravel",
 				"retro/old_gravel"
+			]
+		},
+		{
+			"id": "extras/fun/snoutless_technoblade_pigs",
+			"combines": [
+				"fun/technoblade_pigs",
+				"retro/snoutless_pigs"
 			]
 		},
 		{
@@ -3572,6 +3624,13 @@
 			"combines": [
 				"world_of_color/enchantment_glints/rainbow_enchantment_glint",
 				"unobtrusive/unobtrusive_enchantment_glint"
+			]
+		},
+		{
+			"id": "extras/mobs/snoutless_earth_wooly_cows",
+			"combines": [
+				"parity/earth_wooly_cow",
+				"retro/snoutless_cows"
 			]
 		}
 	],
