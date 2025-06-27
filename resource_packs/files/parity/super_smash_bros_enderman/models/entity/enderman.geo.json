@@ -1,6 +1,6 @@
 {
 	"format_version": "1.8.0",
-	"geometry.bt.enderman": {
+	"geometry.bt_enderman": {
 		"texturewidth": 64,
 		"textureheight": 32,
 		"visible_bounds_width": 2,
