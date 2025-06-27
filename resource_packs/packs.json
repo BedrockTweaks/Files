@@ -700,7 +700,7 @@
 				{
 					"id": "quieter_ghasts",
 					"name": "Quieter Ghasts",
-					"description": "Decreases Ghast sounds by 95%"
+					"description": "Decreases Ghast and Happy Ghast sounds by 95%"
 				},
 				{
 					"id": "quieter_goats",
@@ -2113,6 +2113,11 @@
 					"id": "rename_dirt_path_to_grass_path",
 					"name": "Rename 'Dirt Path' to 'Grass Path'",
 					"description": "Changes the newly named 'Dirt Path' back to 'Grass Path'"
+				},
+				{
+					"id": "beta_item_tooltip",
+					"name": "Beta Item Tooltip",
+					"description": "Reverts the texture of the purple item tooltip back to the translucent black box"
 				},
 				{
 					"id": "zombie_pigman",
