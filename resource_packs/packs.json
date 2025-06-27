@@ -700,7 +700,7 @@
 				{
 					"id": "quieter_ghasts",
 					"name": "Quieter Ghasts",
-					"description": "Decreases Ghast sounds by 95%"
+					"description": "Decreases Ghast and Happy Ghast sounds by 95%"
 				},
 				{
 					"id": "quieter_goats",
@@ -1202,9 +1202,34 @@
 			"name": "GUI / Fonts",
 			"packs": [
 				{
+					"id": "smooth_font",
+					"name": "Smooth Font",
+					"description": "Changes the font to be smoother and higher-resolution, from the 'Faithful' resource pack"
+				},
+				{
 					"id": "anti_alias_font",
 					"name": "Anti-Alias Font",
 					"description": "Smoothens the font using anti-aliasing, from the 'Ice Cream' resource pack"
+				},
+				{
+					"id": "small_caps_font",
+					"name": "Small Caps Font",
+					"description": "Changes all lower-case letters to be smaller versions of upper-case letters"
+				},
+				{
+					"id": "square_font",
+					"name": "Square Font",
+					"description": "Retextures the font to be more square"
+				},
+				{
+					"id": "doodle_font",
+					"name": "Doodle Font",
+					"description": "Changes the font to a cartoonish, doodly font, from the 'MS Painted' resource pack"
+				},
+				{
+					"id": "blocky_font",
+					"name": "Blocky Font",
+					"description": "Changes the font to be bold and blocky, from the 'F8thful' resource pack"
 				}
 			]
 		},
@@ -2055,6 +2080,11 @@
 					"description": "Reverts Spawn Eggs to their classic polka-dot textures"
 				},
 				{
+					"id": "snoutless_pigs",
+					"name": "Snoutless Pigs",
+					"description": "Flattens all Pigs' snouts like they appeared before Beta 1.8"
+				},
+				{
 					"id": "snoutless_cows",
 					"name": "Snoutless Cows",
 					"description": "Flattens all Cows' and Mooshrooms' snouts like they appeared before 1.21.70"
@@ -2083,6 +2113,11 @@
 					"id": "rename_dirt_path_to_grass_path",
 					"name": "Rename 'Dirt Path' to 'Grass Path'",
 					"description": "Changes the newly named 'Dirt Path' back to 'Grass Path'"
+				},
+				{
+					"id": "beta_item_tooltip",
+					"name": "Beta Item Tooltip",
+					"description": "Reverts the texture of the purple item tooltip back to the translucent black box"
 				},
 				{
 					"id": "zombie_pigman",
@@ -2513,6 +2548,11 @@
 					"description": "Reverts Sheep back to having white wool around their head and legs, and white wool patches on their body when sheared from Minecraft: Java Edition before 1.21.5"
 				},
 				{
+					"id": "kinda_classic_java_sheep",
+					"name": "Kinda Classic Java Sheep",
+					"description": "Reverts Sheep back to having white wool around their head and legs, but keeps the wool patches on their body colored when sheared from Minecraft: Java Edition before 1.21.5"
+				},
+				{
 					"id": "dungeons_creepers",
 					"name": "Dungeons Creepers",
 					"description": "Gives the Creeper its texture from Minecraft: Dungeons"
@@ -2889,6 +2929,13 @@
 			]
 		},
 		{
+			"id": "extras/gui/classic_bedrock_edition_title",
+			"combines": [
+				"gui/bedrock_edition_title",
+				"retro/classic_minecraft_logo"
+      ]
+    },
+    {
 			"id": "extras/gui/old_bedrock_edition_title",
 			"combines": [
 				"gui/bedrock_edition_title",
@@ -3438,6 +3485,13 @@
 			]
 		},
 		{
+			"id": "extras/fun/snoutless_technoblade_pigs",
+			"combines": [
+				"fun/technoblade_pigs",
+				"retro/snoutless_pigs"
+			]
+		},
+		{
 			"id": "extras/colored_solid_slime/black_solid_slime",
 			"combines": [
 				"world_of_color/slimes/black_slime",
@@ -3575,6 +3629,13 @@
 			"combines": [
 				"world_of_color/enchantment_glints/rainbow_enchantment_glint",
 				"unobtrusive/unobtrusive_enchantment_glint"
+			]
+		},
+		{
+			"id": "extras/mobs/snoutless_earth_wooly_cows",
+			"combines": [
+				"parity/earth_wooly_cow",
+				"retro/snoutless_cows"
 			]
 		}
 	],
