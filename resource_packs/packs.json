@@ -46,6 +46,11 @@
 					"description": "Eliminates Slime Block transparency"
 				},
 				{
+				        "id": "desaturated_resin",
+				        "name": "Desaturated Resin",
+				        "description": "Desaturates the color of all Resin blocks and items"
+				},
+				{
 					"id": "desaturated_purpur",
 					"name": "Desaturated Purpur",
 					"description": "Desaturates the color of all purpur blocks"
@@ -1801,6 +1806,16 @@
 					"id": "trial_chamber_panorama",
 					"name": "Trial Chamber Panorama",
 					"description": "Replaces the default Minecraft menu panorama with a 360° view of a Trial Chamber (from 1.21)"
+                                },
+                                {
+                                        "id": "spring_to_life_panorama",
+                                        "name": "Spring to Life Panorama",
+                                        "description": "Replaces the default Minecraft menu panorama with a 360° view of a forest and desert (from 1.21.70)"
+				},
+				{
+					"id": "pale_garden_panorama",
+					"name": "Pale Garden Panorama",
+					"description": "Replaces the default Minecraft menu panorama with a 360° view of a Pale Garden (from 1.21.4)"
 				},
 				{
 					"id": "the_end_panorama",
@@ -1975,6 +1990,11 @@
 					"description": "Reverts Lava to its Alpha texture"
 				},
 				{
+				        "id": "old_ghasts",
+      	                                "name": "Old Ghasts",
+				        "description" "Reverts Ghasts to their lower resolution textures, including Happy Ghasts and their harnesses"
+				},
+				{
 					"id": "old_obsidian",
 					"name": "Old Obsidian",
 					"description": "Reverts Obsidian and Crying Obsidian to their old textures"
@@ -2058,6 +2078,11 @@
 					"id": "oarless_boats",
 					"name": "Oarless Boats",
 					"description": "Removes the oars from all boat types from their item textures and entity models"
+                                },
+                                {
+                                        "id": "old_clouds",
+                                        "name": "Old Clouds",
+                                        "description": "Reverts clouds to their pre-1.21.90 texture"
 				},
 				{
 					"id": "old_door_sound",
@@ -2441,6 +2466,11 @@
 			"id": "parity",
 			"name": "Parity",
 			"packs": [
+				{
+					"id": "a_minecraft_movie_logo",
+					"name": "'A Minecraft Movie' Logo",
+					"description": "Gives the game its logo from 'A Minecraft Movie'"
+				},
 				{
 					"id": "java_boom",
 					"name": "Java Boom",
@@ -2838,6 +2868,13 @@
 			"combines": [
 				"gui/dark_ui",
 				"fixes_and_consistency/brewing_stand_icons_fix"
+			]
+		},
+		{
+			"id": "extras/gui/old_bedrock_edition_title",
+			"combines": [
+				"gui/bedrock_edition_title",
+				"retro/old_bedrock_menu_title"
 			]
 		},
 		{
