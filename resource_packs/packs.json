@@ -1806,6 +1806,11 @@
 					"description": "Replaces the default Minecraft menu panorama with a 360° view of a Trial Chamber (from 1.21)"
 				},
 				{
+					"id": "pale_garden_panorama",
+					"name": "Pale Garden Panorama",
+					"description": "Replaces the default Minecraft menu panorama with a 360° view of a Pale Garden (from 1.21.4)"
+				},
+				{
 					"id": "the_end_panorama",
 					"name": "The End Panorama",
 					"description": "Replaces the default Minecraft menu panorama with a 360° view of the main End island"
@@ -2445,6 +2450,11 @@
 			"id": "parity",
 			"name": "Parity",
 			"packs": [
+				{
+					"id": "a_minecraft_movie_logo",
+					"name": "'A Minecraft Movie' Logo",
+					"description": "Gives the game its logo from 'A Minecraft Movie'"
+				},
 				{
 					"id": "java_boom",
 					"name": "Java Boom",
