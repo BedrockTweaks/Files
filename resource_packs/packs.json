@@ -46,9 +46,9 @@
 					"description": "Eliminates Slime Block transparency"
 				},
 				{
-				        "id": "desaturated_resin",
-				        "name": "Desaturated Resin",
-				        "description": "Desaturates the color of all Resin blocks and items"
+					"id": "desaturated_resin",
+					"name": "Desaturated Resin",
+					"description": "Desaturates the color of all Resin blocks and items"
 				},
 				{
 					"id": "desaturated_purpur",
@@ -1202,9 +1202,34 @@
 			"name": "GUI / Fonts",
 			"packs": [
 				{
+					"id": "smooth_font",
+					"name": "Smooth Font",
+					"description": "Changes the font to be smoother and higher-resolution, from the 'Faithful' resource pack"
+				},
+				{
 					"id": "anti_alias_font",
 					"name": "Anti-Alias Font",
 					"description": "Smoothens the font using anti-aliasing, from the 'Ice Cream' resource pack"
+				},
+				{
+					"id": "small_caps_font",
+					"name": "Small Caps Font",
+					"description": "Changes all lower-case letters to be smaller versions of upper-case letters"
+				},
+				{
+					"id": "square_font",
+					"name": "Square Font",
+					"description": "Retextures the font to be more square"
+				},
+				{
+					"id": "doodle_font",
+					"name": "Doodle Font",
+					"description": "Changes the font to a cartoonish, doodly font, from the 'MS Painted' resource pack"
+				},
+				{
+					"id": "blocky_font",
+					"name": "Blocky Font",
+					"description": "Changes the font to be bold and blocky, from the 'F8thful' resource pack"
 				}
 			]
 		},
@@ -1820,11 +1845,11 @@
 					"id": "trial_chamber_panorama",
 					"name": "Trial Chamber Panorama",
 					"description": "Replaces the default Minecraft menu panorama with a 360° view of a Trial Chamber (from 1.21)"
-                                },
-                                {
-                                        "id": "spring_to_life_panorama",
-                                        "name": "Spring to Life Panorama",
-                                        "description": "Replaces the default Minecraft menu panorama with a 360° view of a forest and desert (from 1.21.70)"
+				},
+				{
+					"id": "spring_to_life_panorama",
+					"name": "Spring to Life Panorama",
+					"description": "Replaces the default Minecraft menu panorama with a 360° view of a forest and desert (from 1.21.70)"
 				},
 				{
 					"id": "pale_garden_panorama",
@@ -2005,9 +2030,9 @@
 					"description": "Reverts Lava to its Alpha texture"
 				},
 				{
-				        "id": "old_ghasts",
-      	                                "name": "Old Ghasts",
-				        "description" "Reverts Ghasts to their lower resolution textures, including Happy Ghasts and their harnesses"
+					"id": "old_ghasts",
+					"name": "Old Ghasts",
+					"description": "Reverts Ghasts to their lower resolution textures, including Happy Ghasts and their harnesses"
 				},
 				{
 					"id": "old_obsidian",
@@ -2098,11 +2123,11 @@
 					"id": "oarless_boats",
 					"name": "Oarless Boats",
 					"description": "Removes the oars from all boat types from their item textures and entity models"
-                                },
-                                {
-                                        "id": "old_clouds",
-                                        "name": "Old Clouds",
-                                        "description": "Reverts clouds to their pre-1.21.90 texture"
+				},
+				{
+					"id": "old_clouds",
+					"name": "Old Clouds",
+					"description": "Reverts clouds to their pre-1.21.90 texture"
 				},
 				{
 					"id": "old_door_sound",
