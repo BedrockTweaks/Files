@@ -51,13 +51,25 @@
 					"imitate.ghast": {
 						"volume": 0.035
 					},
+					"imitate.guardian": {
+						"volume": 0.035
+					},
 					"imitate.husk": {
 						"volume": 0.03
 					},
 					"imitate.magma_cube": {
 						"volume": 0.03
 					},
+					"imitate.phantom": {
+						"volume": 0.035
+					},
+					"imitate.pillager": {
+						"volume": 0.035
+					},
 					"imitate.polar_bear": {
+						"volume": 0.035
+					},
+					"imitate.ravager": {
 						"volume": 0.035
 					},
 					"imitate.shulker": {
@@ -98,6 +110,9 @@
 					},
 					"imitate.wolf": {
 						"volume": 0.03
+					},
+					"imitate.zoglin": {
+						"volume": 0.035
 					},
 					"imitate.zombie": {
 						"volume": 0.03
