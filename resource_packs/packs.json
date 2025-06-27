@@ -1198,17 +1198,6 @@
 			]
 		},
 		{
-			"id": "gui/fonts",
-			"name": "GUI / Fonts",
-			"packs": [
-				{
-					"id": "blocky_font",
-					"name": "Blocky Font",
-					"description": "Changes the font to be bold and blocky, from the 'F8thful' resource pack"
-				}
-			]
-		},
-		{
 			"id": "gui/crosshairs",
 			"name": "GUI / Crosshairs",
 			"packs": [
