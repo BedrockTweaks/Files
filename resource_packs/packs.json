@@ -2012,7 +2012,7 @@
 				{
 					"id": "old_ghasts",
 					"name": "Old Ghasts",
-					"description""Reverts Ghasts to their lower resolution textures, including Happy Ghasts and their harnesses"
+					"description": "Reverts Ghasts to their lower resolution textures, including Happy Ghasts and their harnesses"
 				},
 				{
 					"id": "old_obsidian",
