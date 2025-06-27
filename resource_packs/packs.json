@@ -1202,9 +1202,34 @@
 			"name": "GUI / Fonts",
 			"packs": [
 				{
+					"id": "smooth_font",
+					"name": "Smooth Font",
+					"description": "Changes the font to be smoother and higher-resolution, from the 'Faithful' resource pack"
+				},
+				{
 					"id": "anti_alias_font",
 					"name": "Anti-Alias Font",
 					"description": "Smoothens the font using anti-aliasing, from the 'Ice Cream' resource pack"
+				},
+				{
+					"id": "small_caps_font",
+					"name": "Small Caps Font",
+					"description": "Changes all lower-case letters to be smaller versions of upper-case letters"
+				},
+				{
+					"id": "square_font",
+					"name": "Square Font",
+					"description": "Retextures the font to be more square"
+				},
+				{
+					"id": "doodle_font",
+					"name": "Doodle Font",
+					"description": "Changes the font to a cartoonish, doodly font, from the 'MS Painted' resource pack"
+				},
+				{
+					"id": "blocky_font",
+					"name": "Blocky Font",
+					"description": "Changes the font to be bold and blocky, from the 'F8thful' resource pack"
 				}
 			]
 		},
@@ -2053,6 +2078,11 @@
 					"id": "old_spawn_eggs",
 					"name": "Old Spawn Eggs",
 					"description": "Reverts Spawn Eggs to their classic polka-dot textures"
+				},
+				{
+					"id": "snoutless_pigs",
+					"name": "Snoutless Pigs",
+					"description": "Flattens all Pigs' snouts like they appeared before Beta 1.8"
 				},
 				{
 					"id": "snoutless_cows",
@@ -3440,6 +3470,13 @@
 			"combines": [
 				"fun/sus_sand_and_gravel",
 				"retro/old_gravel"
+			]
+		},
+		{
+			"id": "extras/fun/snoutless_technoblade_pigs",
+			"combines": [
+				"fun/technoblade_pigs",
+				"retro/snoutless_pigs"
 			]
 		},
 		{
