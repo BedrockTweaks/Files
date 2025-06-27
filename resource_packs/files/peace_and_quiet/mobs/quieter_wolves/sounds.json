@@ -7,6 +7,29 @@
 						"volume": 0.0325
 					}
 				},
+				"variants": {
+					"key": "query.property('minecraft:sound_variant')",
+					"map": {
+						"big": {
+							"volume": 0.05
+						},
+						"cute": {
+							"volume": 0.05
+						},
+						"grumpy": {
+							"volume": 0.05
+						},
+						"mad": {
+							"volume": 0.05
+						},
+						"puglin": {
+							"volume": 0.05
+						},
+						"sad": {
+							"volume": 0.05
+						}
+					}
+				},
 				"volume": 0.05
 			}
 		}
