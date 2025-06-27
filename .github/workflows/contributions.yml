@@ -12,6 +12,10 @@ jobs:
       contents: write
       pull-requests: write
     steps:
+      - name: Checkout PR branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
       - name: Contribute List
         uses: akhilmhdh/contributors-readme-action@v2.3.10
         env:
