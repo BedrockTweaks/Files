@@ -1030,7 +1030,7 @@
 				{
 					"id": "no_falling_leaf_particles",
 					"name": "No Falling Leaf Particles",
-					"description": "Removes falling leaf particles from all leaf blocks"
+					"description": "Removes falling leaf particles from all Leaves blocks"
 				},
 				{
 					"id": "borderless_glass",
@@ -2034,8 +2034,8 @@
 					"description": "Reverts the textures of Wool and Carpet to their pre-1.12 variants"
 				},
 				{
-					"id": "old_shulker_boxes",
-					"name": "Old Shulker Boxes",
+					"id": "old_shulker_colors",
+					"name": "Old Shulker Colors",
 					"description": "Recolors Shulkers and Shulker Boxes to their pre-1.12 colors"
 				},
 				{
@@ -2051,7 +2051,7 @@
 				{
 					"id": "snoutless_cows",
 					"name": "Snoutless Cows",
-					"description": "Flattens all Cow and Mooshroom snouts like they appeared before 1.21.70"
+					"description": "Flattens all Cows' and Mooshrooms' snouts like they appeared before 1.21.70"
 				},
 				{
 					"id": "poppy_to_rose",
@@ -2671,6 +2671,11 @@
 					"id": "consistent_smooth_stone",
 					"name": "Consistent Smooth Stone",
 					"description": "Gives the Smooth Stone texture the same bevel as its slab counterpart"
+				},
+				{
+					"id": "sandstone_wall_top_fix",
+					"name": "Sandstone Wall Top Fix",
+					"description": "Gives Sandstone and Red Sandstone Walls their correct top and bottom textures to align with their block counterparts"
 				},
 				{
 					"id": "double_slab_fix",
