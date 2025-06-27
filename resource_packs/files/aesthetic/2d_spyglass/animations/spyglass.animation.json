@@ -1,7 +1,7 @@
 {
 	"format_version": "1.10.0",
 	"animations": {
-		"animation.bt.spyglass.holding": {
+		"animation.rp.bt.spyglass_holding": {
 			"loop": true,
 			"bones": {
 				"rightitem": {
@@ -18,7 +18,7 @@
 				}
 			}
 		},
-		"animation.bt.spyglass.scoping": {
+		"animation.rp.bt.spyglass_scoping": {
 			"loop": true,
 			"bones": {
 				"rightitem": {
