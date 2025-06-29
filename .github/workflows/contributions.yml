@@ -3,9 +3,7 @@ name: Add contributors to README
 on:
   push:
     branches:
-      - '**'
-      - '!master'
-      - '!devel'
+      - devel
 
 jobs:
   contributions:
