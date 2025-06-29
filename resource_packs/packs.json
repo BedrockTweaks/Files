@@ -3,7 +3,7 @@
 	"version": [
 		1,
 		21,
-		70
+		92
 	],
 	"categories": [
 		{
@@ -2223,7 +2223,8 @@
 				{
 					"id": "stridey_striders",
 					"name": "Stridey Striders",
-					"description": "Awful pack that makes Striders look like Stridey, Sorry"
+					"description": "Awful pack that makes Striders look like Stridey, Sorry",
+					"priority": 1
 				},
 				{
 					"id": "emeralds_to_rubies",
@@ -2933,9 +2934,9 @@
 			"combines": [
 				"gui/bedrock_edition_title",
 				"retro/classic_minecraft_logo"
-      ]
-    },
-    {
+			]
+		},
+		{
 			"id": "extras/gui/old_bedrock_edition_title",
 			"combines": [
 				"gui/bedrock_edition_title",
@@ -3489,6 +3490,13 @@
 			"combines": [
 				"fun/technoblade_pigs",
 				"retro/snoutless_pigs"
+			]
+		},
+		{
+			"id": "extras/fun/brown_stridey_striders_leather",
+			"combines": [
+				"fun/stridey_striders",
+				"aesthetic/brown_leather"
 			]
 		},
 		{
