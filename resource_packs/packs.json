@@ -2223,7 +2223,8 @@
 				{
 					"id": "stridey_striders",
 					"name": "Stridey Striders",
-					"description": "Awful pack that makes Striders look like Stridey, Sorry"
+					"description": "Awful pack that makes Striders look like Stridey, Sorry",
+					"priority": 1
 				},
 				{
 					"id": "emeralds_to_rubies",
@@ -3489,6 +3490,13 @@
 			"combines": [
 				"fun/technoblade_pigs",
 				"retro/snoutless_pigs"
+			]
+		},
+		{
+			"id": "extras/fun/brown_stridey_striders_leather",
+			"combines": [
+				"fun/stridey_striders",
+				"aesthetic/brown_leather"
 			]
 		},
 		{
