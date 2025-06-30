@@ -2930,6 +2930,13 @@
 			]
 		},
 		{
+			"id": "extras/gui/alpha_bedrock_edition_title",
+			"combines": [
+				"gui/bedrock_edition_title",
+				"retro/alpha_minecraft_logo"
+			]
+		},
+		{
 			"id": "extras/gui/classic_bedrock_edition_title",
 			"combines": [
 				"gui/bedrock_edition_title",
@@ -3833,4 +3840,5 @@
 			"filepath": "/render_controllers/zombie.rc.json"
 		}
 	]
+}	]
 }
