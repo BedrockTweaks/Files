@@ -1,0 +1,6 @@
+{
+	"namespace": "promo_timeline",
+	"promo_banner_holiday_panel/banner_full_button": {
+		"$default_text_color": "$light_button_default_text_color"
+	}
+}
