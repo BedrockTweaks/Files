@@ -14,7 +14,7 @@
 					"key": "query.is_baby ? 'ghastling' : 'adult'",
 					"map": {
 						"adult": {
-							"volume": 0.05
+							"volume": 0.2
 						},
 						"ghastling": {
 							"volume": 0.05
