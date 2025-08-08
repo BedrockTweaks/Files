@@ -40,7 +40,7 @@ abc55, WavePlayz, r4isen1920, randomityguy, LukasPlaysGames, TheBlueShadow and a
                 <a href="https://github.com/drav0011">
                     <img src="https://avatars.githubusercontent.com/u/43525295?v=4" width="100;" alt="drav0011"/>
                     <br />
-                    <sub><b>DrAv0011</b></sub>
+                    <sub><b>drav0011</b></sub>
                 </a>
             </td>
             <td align="center">
@@ -68,7 +68,7 @@ abc55, WavePlayz, r4isen1920, randomityguy, LukasPlaysGames, TheBlueShadow and a
                 <a href="https://github.com/Chi-a11y">
                     <img src="https://avatars.githubusercontent.com/u/172836508?v=4" width="100;" alt="Chi-a11y"/>
                     <br />
-                    <sub><b>Arachi</b></sub>
+                    <sub><b>Chi-a11y</b></sub>
                 </a>
             </td>
             <td align="center">
@@ -84,14 +84,7 @@ abc55, WavePlayz, r4isen1920, randomityguy, LukasPlaysGames, TheBlueShadow and a
                 <a href="https://github.com/ZecaApelao">
                     <img src="https://avatars.githubusercontent.com/u/206439936?v=4" width="100;" alt="ZecaApelao"/>
                     <br />
-                    <sub><b>Zeca Apelão</b></sub>
-                </a>
-            </td>
-            <td align="center">
-                <a href="https://github.com/MPAD2277">
-                    <img src="https://avatars.githubusercontent.com/u/77268603?v=4" width="100;" alt="MPAD2277"/>
-                    <br />
-                    <sub><b>MPAD2277</b></sub>
+                    <sub><b>ZecaApelao</b></sub>
                 </a>
             </td>
             <td align="center">
@@ -102,10 +95,17 @@ abc55, WavePlayz, r4isen1920, randomityguy, LukasPlaysGames, TheBlueShadow and a
                 </a>
             </td>
             <td align="center">
+                <a href="https://github.com/MPAD2277">
+                    <img src="https://avatars.githubusercontent.com/u/77268603?v=4" width="100;" alt="MPAD2277"/>
+                    <br />
+                    <sub><b>MPAD2277</b></sub>
+                </a>
+            </td>
+            <td align="center">
                 <a href="https://github.com/bedrocktweaksadmin">
                     <img src="https://avatars.githubusercontent.com/u/172558280?v=4" width="100;" alt="bedrocktweaksadmin"/>
                     <br />
-                    <sub><b>Bedrock Tweaks Admin</b></sub>
+                    <sub><b>bedrocktweaksadmin</b></sub>
                 </a>
             </td>
 		</tr>
