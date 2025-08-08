@@ -1,5 +1,5 @@
 {
-	"format_version": "1.10.0",
+	"format_version": "1.21.0",
 	"minecraft:attachable": {
 		"description": {
 			"identifier": "minecraft:spyglass",
@@ -12,7 +12,7 @@
 				"enchanted": "textures/misc/enchanted_item_glint"
 			},
 			"geometry": {
-				"default": "geometry.bow_standby"
+				"default": "geometry.bt_spyglass"
 			},
 			"animations": {
 				"holding": "animation.rp.bt.spyglass_holding",
@@ -29,7 +29,7 @@
 				]
 			},
 			"render_controllers": [
-				"controller.render.default"
+				"controller.render.bt.spyglass"
 			]
 		}
 	}

@@ -1,0 +1,50 @@
+{
+	"format_version": "1.21.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.bt_spyglass",
+				"texture_width": 16,
+				"texture_height": 16,
+				"visible_bounds_width": 1,
+				"visible_bounds_height": 1,
+				"visible_bounds_offset": [
+					0,
+					0,
+					0
+				]
+			},
+			"bones": [
+				{
+					"name": "spyglass",
+					"pivot": [
+						0,
+						0,
+						0
+					],
+					"binding": "q.item_slot_to_bone_name(q.main_hand_item_use_duration > 0.0f && !c.is_first_person ? 'head' : 'main_hand')",
+					"texture_meshes": [
+						{
+							"texture": "default",
+							"position": [
+								2,
+								1,
+								-2
+							],
+							"rotation": [
+								0,
+								-135,
+								90
+							],
+							"local_pivot": [
+								6,
+								0,
+								6
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}
