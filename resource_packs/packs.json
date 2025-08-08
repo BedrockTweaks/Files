@@ -2951,6 +2951,13 @@
 			]
 		},
 		{
+			"id": "extras/gui/movie_bedrock_edition_title",
+			"combines": [
+				"gui/bedrock_edition_title",
+				"parity/a_minecraft_movie_logo"
+			]
+		},
+		{
 			"id": "extras/terrain/lush_grass_clearer_water",
 			"combines": [
 				"terrain/lush_grass_all_round",
