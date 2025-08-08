@@ -1,30 +1,47 @@
-name: Build and deploy files
+name: Deploy
 
 on:
   push:
-    branches:
-      - main
-      - devel
+    branches: [ "main", "devel" ]
   workflow_dispatch:
     inputs:
       branch:
         description: 'Branch to deploy'
         required: true
         default: 'main'
+        type: string
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
-      # Step 1: Checkout the repository
-      - name: Checkout repository
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
-          ref: ${{ github.event.inputs.branch || github.ref_name }}
+          lfs: true
 
-      # Step 2-dev: Deploy files via SSH
-      - name: Deploy files via SSH and Git Pull
+      # Step 1: Create project artifact
+      - name: Create project archive
+        run: |
+          tar -czf project.tar.gz \
+            --exclude='.git' \
+            --exclude='.github' \
+            --exclude='node_modules' \
+            .
+
+      # Step 2-dev: Deploy to development server
+      - name: Deploy to dev server
+        if: github.ref_name == 'devel'
+        uses: appleboy/scp-action@v1.0.0
+        with:
+          host: ${{ secrets.SERVER_ADDRESS }}
+          username: ${{ secrets.SERVER_USER }}
+          password: ${{ secrets.SERVER_PASSWORD }}
+          port: 22
+          source: "project.tar.gz"
+          target: "/opt/bedrock_tweaks/files_dev"
+
+      - name: Extract files on dev server
         if: github.ref_name == 'devel'
         uses: appleboy/ssh-action@v1.2.2
         with:
@@ -33,13 +50,23 @@ jobs:
           password: ${{ secrets.SERVER_PASSWORD }}
           port: 22
           script: |
-            cd "/opt/bedrock_tweaks/files_dev" || exit
-            git fetch --all
-            git reset --hard origin/${{ github.event.inputs.branch || github.ref_name }}
-            git pull origin ${{ github.event.inputs.branch || github.ref_name }} --force
+            cd "/opt/bedrock_tweaks/files_dev"
+            tar -xzf project.tar.gz --strip-components=0 --overwrite
+            rm project.tar.gz
 
-      # Step 2-prod: Deploy files via SSH
-      - name: Deploy files via SSH and Git Pull
+      # Step 2-prod: Deploy to production server
+      - name: Deploy to production server
+        if: github.ref_name == 'main'
+        uses: appleboy/scp-action@v1.0.0
+        with:
+          host: ${{ secrets.SERVER_ADDRESS }}
+          username: ${{ secrets.SERVER_USER }}
+          password: ${{ secrets.SERVER_PASSWORD }}
+          port: 22
+          source: "project.tar.gz"
+          target: "/opt/bedrock_tweaks/files"
+
+      - name: Extract files on production server
         if: github.ref_name == 'main'
         uses: appleboy/ssh-action@v1.2.2
         with:
@@ -48,10 +75,9 @@ jobs:
           password: ${{ secrets.SERVER_PASSWORD }}
           port: 22
           script: |
-            cd "/opt/bedrock_tweaks/files" || exit
-            git fetch --all
-            git reset --hard origin/${{ github.event.inputs.branch || github.ref_name }}
-            git pull origin ${{ github.event.inputs.branch || github.ref_name }} --force
+            cd "/opt/bedrock_tweaks/files"
+            tar -xzf project.tar.gz --strip-components=0 --overwrite
+            rm project.tar.gz
 
       - name: Output job status
         id: job-status
