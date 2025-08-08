@@ -12,23 +12,25 @@ To get started with contributing, follow these steps:
 
 1. Fork the repository.
 2. Clone the forked repository to your local machine.
-3. Run npm install on the root (only needed if working with addons)
-4. Create a new branch for your changes.
-5. Make your desired changes.
+3. Install Git LFS if you haven't already (visit https://git-lfs.com for installation instructions).
+4. Run `git lfs install` to set up Git LFS for your repository.
+5. Run `npm install` on the root (this will set up both project dependencies and Husky git hooks)
+6. Create a new branch for your changes.
+7. Make your desired changes.
 
 - Before making a pack make sure:
   - There is not an existing [Pull Request](https://github.com/BedrockTweaks/Files/pulls) for the same pack.
   - The pack is a confirmed [Issue](https://github.com/BedrockTweaks/Files/issues)
     or [Discussion](https://github.com/BedrockTweaks/Files/discussions)
 
-6. Test your changes thoroughly.
+8. Test your changes thoroughly.
 
 - For consoles, you can test by joining a world with the pack applied hosted in another device (phone/computer) in the same network.
 - At least need to be tested in 1 device.
 
-7. Commit your changes with the following format.
-8. Push your changes to your forked repository.
-9. Submit a pull request with the following format to the main repository.
+9. Commit your changes with the following format.
+10. Push your changes to your forked repository.
+11. Submit a pull request with the following format to the main repository.
 
 ## Style Guide
 
