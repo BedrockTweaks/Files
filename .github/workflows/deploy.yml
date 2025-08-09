@@ -26,17 +26,19 @@ jobs:
       - name: Git LFS Pull
         run: git lfs pull
 
-      # Step 1: Create project artifact
-      # Ensure we're in a clean state
-      - name: Create project archive
-        run: |
-          git clean -fdx
-          
-          tar -czf project.tar.gz \
-            --exclude='.git' \
-            --exclude='.github' \
-            --exclude='node_modules' \
-            .
+      # Step 1: Clean and create project artifact
+      - name: Clean project
+        run: git clean -fdx
+
+      - name: Compress project
+        uses: somaz94/compress-decompress@v1
+        with:
+          command: compress
+          source: .
+          format: zip
+          destfilename: project
+          exclude: '.git .github node_modules'
+          includeRoot: 'false'
 
       # Step 2-dev: Deploy to development server
       - name: Deploy to dev server
@@ -47,7 +49,7 @@ jobs:
           username: ${{ secrets.SERVER_USER }}
           password: ${{ secrets.SERVER_PASSWORD }}
           port: 22
-          source: "project.tar.gz"
+          source: "project.zip"
           target: "/opt/bedrock_tweaks/files_dev"
 
       - name: Extract files on dev server
@@ -60,8 +62,8 @@ jobs:
           port: 22
           script: |
             cd "/opt/bedrock_tweaks/files_dev"
-            tar -xzf project.tar.gz --strip-components=0 --overwrite
-            rm project.tar.gz
+            unzip -o project.zip
+            rm project.zip
 
       # Step 2-prod: Deploy to production server
       - name: Deploy to production server
@@ -72,7 +74,7 @@ jobs:
           username: ${{ secrets.SERVER_USER }}
           password: ${{ secrets.SERVER_PASSWORD }}
           port: 22
-          source: "project.tar.gz"
+          source: "project.zip"
           target: "/opt/bedrock_tweaks/files"
 
       - name: Extract files on production server
@@ -85,8 +87,8 @@ jobs:
           port: 22
           script: |
             cd "/opt/bedrock_tweaks/files"
-            tar -xzf project.tar.gz --strip-components=0 --overwrite
-            rm project.tar.gz
+            unzip -o project.zip
+            rm project.zip
 
       - name: Output job status
         id: job-status
