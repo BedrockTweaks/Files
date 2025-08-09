@@ -1,0 +1,5 @@
+#!/usr/bin/env sh
+if [ -f "lfs-hooks/post-commit" ]; then
+  ./lfs-hooks/post-commit "$@"
+fi
+. "$(dirname -- "$0")/_/husky.sh"

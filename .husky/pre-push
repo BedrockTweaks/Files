@@ -1,0 +1,5 @@
+#!/usr/bin/env sh
+if [ -f "lfs-hooks/pre-push" ]; then
+  ./lfs-hooks/pre-push "$@"
+fi
+. "$(dirname -- "$0")/_/husky.sh"
