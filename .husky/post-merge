@@ -1,0 +1,5 @@
+#!/usr/bin/env sh
+if [ -f "lfs-hooks/post-merge" ]; then
+  ./lfs-hooks/post-merge "$@"
+fi
+. "$(dirname -- "$0")/_/husky.sh"
