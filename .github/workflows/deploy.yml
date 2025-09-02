@@ -62,6 +62,8 @@ jobs:
           port: 22
           script: |
             cd "/opt/bedrock_tweaks/files_dev"
+            # Remove all existing files/directories except the uploaded archive to avoid stale leftovers
+            find . -mindepth 1 -maxdepth 1 ! -name 'project.zip' -exec rm -rf {} +
             unzip -o project.zip
             rm project.zip
 
@@ -87,6 +89,8 @@ jobs:
           port: 22
           script: |
             cd "/opt/bedrock_tweaks/files"
+            # Remove all existing files/directories except the uploaded archive to avoid stale leftovers
+            find . -mindepth 1 -maxdepth 1 ! -name 'project.zip' -exec rm -rf {} +
             unzip -o project.zip
             rm project.zip
 
