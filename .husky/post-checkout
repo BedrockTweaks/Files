@@ -1,0 +1,5 @@
+#!/usr/bin/env sh
+if [ -f "lfs-hooks/post-checkout" ]; then
+  ./lfs-hooks/post-checkout "$@"
+fi
+. "$(dirname -- "$0")/_/husky.sh"
