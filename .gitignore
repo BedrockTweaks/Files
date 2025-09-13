@@ -5,6 +5,3 @@
 .env
 node_modules/
 package-lock.json
-.husky/
-.vscode/
-lfs-hooks/
