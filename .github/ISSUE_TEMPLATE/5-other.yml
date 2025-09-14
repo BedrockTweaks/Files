@@ -1,0 +1,11 @@
+name: Other
+description: A blank template for other issues not related to the above. For suggestions, please
+  use Discussions. For missing Vanilla Tweaks packs, administration will create the
+  issues.
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Add a description
+    validations:
+      required: false
