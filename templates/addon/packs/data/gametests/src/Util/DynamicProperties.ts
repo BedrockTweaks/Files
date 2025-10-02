@@ -27,16 +27,16 @@ export function getProperties<T>(from: World | Entity, enumType: { [key: string]
  * and saves them in the provided world or entity.
  * Enum keys and object properties should match for proper conversion.
  *
+ * @template {Record<string, PropertiesTypes>} T - The type of a JavaScript object containing property keys and their corresponding values to be set.
+ * @template {Record<keyof T, string>} K - The type of an object mapping property keys of T to dynamic property identifiers.
  * @param {World | Entity} to - The world or entity where the properties will be set.
- * @param {{ [key: string]: string }} enumType - An object mapping property keys to dynamic property identifiers.
- * @param {object} propertyObject - A JavaScript object containing the properties to be set.
+ * @param {K} enumType - An object mapping property keys to dynamic property identifiers.
+ * @param {T} propertyObject - A JavaScript object containing the properties to be set.
  */
-export function setProperties(to: World | Entity, enumType: { [key: string]: string }, propertyObject: object): void {
-	Object.entries(propertyObject).forEach(([key, value]: [string, PropertiesTypes]): void => {
+export function setProperties<T extends Record<string, PropertiesTypes>, K extends Record<keyof T, string>>(to: World | Entity, enumType: K, propertyObject: T): void {
+	Object.entries(propertyObject).forEach(([key, value]: [keyof T, PropertiesTypes]): void => {
 		const identifier: string = enumType[key];
 
-		if (identifier) {
-			to.setDynamicProperty(identifier, value);
-		}
+		to.setDynamicProperty(identifier, value);
 	});
 }

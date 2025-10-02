@@ -9,11 +9,19 @@
 			0,
 			0
 		],
-		// Update to latest minecraft release
+		/**
+		 * Set the minimum Minecraft version which your addon will support
+		 *
+		 * Please note that don't set the minimum Minecraft version below the version array set in the addon's packs.json
+		 *
+		 * It is highly recommended and preferred to always use the latest Minecraft version release to use the latest features
+		 *
+		 * ! NOTE: Remove this comment during production, or else it will throw an error during Regolith pack building process
+		 */
 		"min_engine_version": [
 			1,
 			21,
-			50
+			70
 		]
 	},
 	"modules": [
@@ -42,6 +50,7 @@
 			"Vanilla Tweaks",
 			"Bedrock Tweaks",
 			"<author name/username>"
-		]
+		],
+		"product_type": "addon"
 	}
 }

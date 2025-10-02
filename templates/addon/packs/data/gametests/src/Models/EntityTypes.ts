@@ -1,3 +1,1 @@
-export enum ExampleEntityTypes {
-	Example = 'bt:ex.example'
-}
+export enum ExampleEntityTypes { Example = 'bt:ex.example' }

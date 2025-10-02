@@ -2,7 +2,11 @@
 	"editor.formatOnSave": true,
 	"[typescript]": {
 		"editor.tabSize": 4,
-		"editor.insertSpaces": true
+		"editor.insertSpaces": false
+	},
+	"[javascript]": {
+		"editor.tabSize": 4,
+		"editor.insertSpaces": false
 	},
 	"[json]": {
 		"editor.tabSize": 4,
@@ -20,5 +24,6 @@
 	"eslint.workingDirectories": [
 		"./packs/data/gametests"
 	],
-	"editor.insertSpaces": false
+	"editor.insertSpaces": false,
+	"editor.detectIndentation": false
 }

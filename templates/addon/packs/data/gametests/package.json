@@ -3,23 +3,34 @@
 	"scripts": {
 		"lint": "npx eslint ."
 	},
+	/**
+	 * Run npm outdated at the packs/data/gametests directory in the terminal and update all the modules to the latest version
+	 * For @minecraft modules, look at how to update them below
+	 *
+	 * Update the @minecraft/math and @minecraft/common to the latest version available
+	 *
+	 * Update @minecraft/server, @minecraft/server-ui and @minecraft/vanilla-data to the latest version
+	 * that corresponds with the Minecraft version you are using as the minimum supported version for your addon
+	 *
+	 * ! NOTE: Remove this comment during production, or else it will throw an error during Regolith pack building process
+	 */
 	"dependencies": {
 		"@minecraft/common": "1.2.0",
-		"@minecraft/math": "1.4.0",
-		"@minecraft/server": "1.13.0",
-		"@minecraft/server-ui": "^1.2.0",
-		"@minecraft/vanilla-data": "1.21.20",
-		"@stylistic/eslint-config": "^1.1.0"
+		"@minecraft/math": "2.2.1",
+		"@minecraft/server": "1.18.0",
+		"@minecraft/server-ui": "1.3.0",
+		"@minecraft/vanilla-data": "1.21.70",
+		"@stylistic/eslint-config": "1.1.0"
 	},
 	"devDependencies": {
-		"@eslint/js": "^9.16.0",
-		"@stylistic/eslint-plugin": "^2.11.0",
-		"@typescript-eslint/eslint-plugin": "^8.17.0",
-		"@typescript-eslint/parser": "^8.17.0",
-		"eslint": "^9.16.0",
-		"eslint-plugin-minecraft-linting": "^1.2.6",
-		"globals": "^15.8.0",
-		"typescript": "^5.7.2",
-		"typescript-eslint": "^8.17.0"
+		"@eslint/js": "9.36.0",
+		"@stylistic/eslint-plugin": "5.4.0",
+		"@typescript-eslint/eslint-plugin": "8.45.0",
+		"@typescript-eslint/parser": "8.45.0",
+		"eslint": "9.36.0",
+		"eslint-plugin-minecraft-linting": "2.0.10",
+		"globals": "16.4.0",
+		"typescript": "5.9.3",
+		"typescript-eslint": "8.45.0"
 	}
 }
