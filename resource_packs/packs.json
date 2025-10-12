@@ -1698,6 +1698,42 @@
 			]
 		},
 		{
+			"id": "gui/armor_bars",
+			"name": "GUI / Armor Bars",
+			"packs": [
+				{
+					"id": "leather_armor_bar",
+					"name": "Leather Armor Bar",
+					"description": ""
+				},
+				{
+					"id": "chainmail_armor_bar",
+					"name": "Chainmail Armor Bar",
+					"description": ""
+				},
+				{
+					"id": "copper_armor_bar",
+					"name": "Copper Armor Bar",
+					"description": ""
+				},
+				{
+					"id": "golden_armor_bar",
+					"name": "Golden Armor Bar",
+					"description": ""
+				},
+				{
+					"id": "diamond_armor_bar",
+					"name": "Diamond Armor Bar",
+					"description": ""
+				},
+				{
+					"id": "netherite_armor_bar",
+					"name": "Netherite Armor Bar",
+					"description": ""
+				}
+			]
+		},
+		{
 			"id": "gui/hotbar_selector",
 			"name": "GUI / Hotbar Selector",
 			"packs": [
