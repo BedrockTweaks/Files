@@ -69,7 +69,7 @@
 				{
 					"id": "vertical_nuggets",
 					"name": "Vertical Nuggets",
-					"description": "Rotates the Iron Nugget to be consistent with the Gold Nugget"
+					"description": "Rotates Copper and Iron Nuggets to be consistent with the Gold Nugget"
 				},
 				{
 					"id": "clean_wool",
