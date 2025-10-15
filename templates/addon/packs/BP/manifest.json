@@ -46,11 +46,11 @@
 		}
 	],
 	"metadata": {
+		"product_type": "addon",
 		"authors": [
 			"Vanilla Tweaks",
 			"Bedrock Tweaks",
 			"<author name/username>"
-		],
-		"product_type": "addon"
+		]
 	}
 }

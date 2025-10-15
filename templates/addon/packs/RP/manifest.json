@@ -4,6 +4,7 @@
 		"name": "<pack_name> - <pack_category> - Bedrock Tweaks",
 		"description": "<description>",
 		"uuid": "<rp_uuid>",
+		"pack_scope": "world",
 		"version": [
 			1,
 			0,
@@ -46,11 +47,11 @@
 		}
 	],
 	"metadata": {
+		"product_type": "addon",
 		"authors": [
 			"Vanilla Tweaks",
 			"Bedrock Tweaks",
 			"<author name/username>"
-		],
-		"product_type": "addon"
+		]
 	}
 }
