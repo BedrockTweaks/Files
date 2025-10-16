@@ -358,77 +358,77 @@
 			]
 		},
 		{
-			"id": "terrain/lower_and_sides",
-			"name": "Terrain / Lower and Sides",
+			"id": "terrain/lower_and_full_sides",
+			"name": "Terrain / Lower and Full Sides",
 			"packs": [
 				{
-					"id": "lower_grass",
-					"name": "Lower Grass",
+					"id": "lower_grass_sides",
+					"name": "Lower Grass Sides",
 					"description": "Lowers the sides of Grass Blocks to provide a smoother and greener landscape"
 				},
 				{
-					"id": "grass_sides",
-					"name": "Grass Sides",
+					"id": "full_grass_sides",
+					"name": "Full Grass Sides",
 					"description": "Completely covers the sides of Grass Blocks to provide a smoother and greener landscape"
 				},
 				{
-					"id": "lower_mycelium",
-					"name": "Lower Mycelium",
-					"description": "Lowers the sides of Mycelium Blocks to provide a smoother and mushroomier landscape"
-				},
-				{
-					"id": "mycelium_sides",
-					"name": "Mycelium Sides",
-					"description": "Completely covers the sides of Mycelium Blocks to provide a smoother and mushroomier landscape"
-				},
-				{
-					"id": "lower_grass_paths",
-					"name": "Lower Grass Paths",
-					"description": "Lowers the sides of Path Blocks to provide a smoother-looking pathway"
-				},
-				{
-					"id": "grass_path_sides",
-					"name": "Grass Path Sides",
-					"description": "Completely covers the sides of Path Blocks to provide a smoother-looking pathway"
-				},
-				{
-					"id": "lower_podzol",
-					"name": "Lower Podzol",
-					"description": "Lowers the sides of Podzol Blocks to provide a smoother and more consistent landscape"
-				},
-				{
-					"id": "podzol_sides",
-					"name": "Podzol Sides",
-					"description": "Completely covers the sides of Podzol Blocks to provide a smoother and more consistent landscape"
-				},
-				{
-					"id": "lower_snow",
-					"name": "Lower Snow",
+					"id": "lower_snowy_grass_sides",
+					"name": "Lower Snowy Grass Sides",
 					"description": "Lowers the sides of Grass Blocks to provide a smoother and whiter snowy landscape"
 				},
 				{
-					"id": "snow_sides",
-					"name": "Snow Sides",
+					"id": "full_snowy_grass_sides",
+					"name": "Full Snowy Grass Sides",
 					"description": "Completely covers the sides of Grass Blocks to provide a smoother and whiter snowy landscape"
 				},
 				{
-					"id": "lower_crimson_nylium",
-					"name": "Lower Crimson Nylium",
+					"id": "lower_mycelium_sides",
+					"name": "Lower Mycelium Sides",
+					"description": "Lowers the sides of Mycelium Blocks to provide a smoother and mushroomier landscape"
+				},
+				{
+					"id": "full_mycelium_sides",
+					"name": "Full Mycelium Sides",
+					"description": "Completely covers the sides of Mycelium Blocks to provide a smoother and mushroomier landscape"
+				},
+				{
+					"id": "lower_dirt_path_sides",
+					"name": "Lower Dirt Path Sides",
+					"description": "Lowers the sides of Path Blocks to provide a smoother-looking pathway"
+				},
+				{
+					"id": "full_dirt_path_sides",
+					"name": "Full Dirt Path Sides",
+					"description": "Completely covers the sides of Path Blocks to provide a smoother-looking pathway"
+				},
+				{
+					"id": "lower_podzol_sides",
+					"name": "Lower Podzol Sides",
+					"description": "Lowers the sides of Podzol Blocks to provide a smoother and more consistent landscape"
+				},
+				{
+					"id": "full_podzol_sides",
+					"name": "Full Podzol Sides",
+					"description": "Completely covers the sides of Podzol Blocks to provide a smoother and more consistent landscape"
+				},
+				{
+					"id": "lower_crimson_nylium_sides",
+					"name": "Lower Crimson Nylium Sides",
 					"description": "Lowers the sides of Crimson Nylium to provide a smoother and redder landscape"
 				},
 				{
-					"id": "crimson_nylium_sides",
-					"name": "Crimson Nylium Sides",
+					"id": "full_crimson_nylium_sides",
+					"name": "Full Crimson Nylium Sides",
 					"description": "Completely covers the sides of Crimson Nylium to provide a smoother and redder landscape"
 				},
 				{
-					"id": "lower_warped_nylium",
-					"name": "Lower Warped Nylium",
+					"id": "lower_warped_nylium_sides",
+					"name": "Lower Warped Nylium Sides",
 					"description": "Lowers the sides of Warped Nylium to provide a smoother and bluer landscape"
 				},
 				{
-					"id": "warped_nylium_sides",
-					"name": "Warped Nylium Sides",
+					"id": "full_warped_nylium_sides",
+					"name": "Full Warped Nylium Sides",
 					"description": "Completely covers the sides of Warped Nylium to provide a smoother and bluer landscape"
 				}
 			]
@@ -2880,10 +2880,10 @@
 			]
 		},
 		{
-			"id": "extras/dirt/golden_savanna_grass_sides",
+			"id": "extras/dirt/golden_savanna_full_grass_sides",
 			"combines": [
 				"terrain/golden_savanna",
-				"terrain/lower_and_sides/grass_sides"
+				"terrain/lower_and_full_sides/full_grass_sides"
 			]
 		},
 		{
@@ -2894,32 +2894,32 @@
 			]
 		},
 		{
-			"id": "extras/dirt/lush_grass_sides",
+			"id": "extras/dirt/lush_full_grass_sides",
 			"combines": [
 				"terrain/lush_grass_all_round",
-				"terrain/lower_and_sides/grass_sides"
+				"terrain/lower_and_full_sides/full_grass_sides"
 			]
 		},
 		{
-			"id": "extras/dirt/golden_savanna_lush_grass_sides",
+			"id": "extras/dirt/golden_savanna_lush_full_grass_sides",
 			"combines": [
 				"terrain/golden_savanna",
 				"terrain/lush_grass_all_round",
-				"terrain/lower_and_sides/grass_sides"
+				"terrain/lower_and_full_sides/full_grass_sides"
 			]
 		},
 		{
-			"id": "extras/snow/whiter_lower_snow",
+			"id": "extras/snow/whiter_lower_snowy_grass_sides",
 			"combines": [
 				"terrain/whiter_snow",
-				"terrain/lower_and_sides/lower_snow"
+				"terrain/lower_and_full_sides/lower_snowy_grass_sides"
 			]
 		},
 		{
-			"id": "extras/snow/whiter_snow_sides",
+			"id": "extras/snow/whiter_full_snowy_grass_sides",
 			"combines": [
 				"terrain/whiter_snow",
-				"terrain/lower_and_sides/snow_sides"
+				"terrain/lower_and_full_sides/full_snowy_grass_sides"
 			]
 		},
 		{
@@ -2994,49 +2994,49 @@
 			]
 		},
 		{
-			"id": "extras/terrain/brighter_lower_crimson_nylium",
+			"id": "extras/terrain/brighter_lower_crimson_nylium_sides",
 			"combines": [
 				"terrain/brighter_nether",
-				"terrain/lower_and_sides/lower_crimson_nylium"
+				"terrain/lower_and_full_sides/lower_crimson_nylium_sides"
 			]
 		},
 		{
-			"id": "extras/terrain/brighter_lower_warped_nylium",
+			"id": "extras/terrain/brighter_lower_warped_nylium_sides",
 			"combines": [
 				"terrain/brighter_nether",
-				"terrain/lower_and_sides/lower_warped_nylium"
+				"terrain/lower_and_full_sides/lower_warped_nylium_sides"
 			]
 		},
 		{
-			"id": "extras/terrain/brighter_lower_crimson_warped_nylium",
+			"id": "extras/terrain/brighter_lower_crimson_warped_nylium_sides",
 			"combines": [
 				"terrain/brighter_nether",
-				"terrain/lower_and_sides/lower_crimson_nylium",
-				"terrain/lower_and_sides/lower_warped_nylium"
+				"terrain/lower_and_full_sides/lower_crimson_nylium_sides",
+				"terrain/lower_and_full_sides/lower_warped_nylium_sides"
 			]
 		},
 		{
-			"id": "extras/terrain/brighter_black_nether_bricks_lower_crimson_nylium",
+			"id": "extras/terrain/brighter_black_nether_bricks_lower_crimson_nylium_sides",
 			"combines": [
 				"terrain/brighter_nether",
-				"terrain/lower_and_sides/lower_crimson_nylium",
+				"terrain/lower_and_full_sides/lower_crimson_nylium_sides",
 				"aesthetic/black_nether_bricks"
 			]
 		},
 		{
-			"id": "extras/terrain/brighter_black_nether_bricks_lower_warped_nylium",
+			"id": "extras/terrain/brighter_black_nether_bricks_lower_warped_nylium_sides",
 			"combines": [
 				"terrain/brighter_nether",
-				"terrain/lower_and_sides/lower_warped_nylium",
+				"terrain/lower_and_full_sides/lower_warped_nylium_sides",
 				"aesthetic/black_nether_bricks"
 			]
 		},
 		{
-			"id": "extras/terrain/brighter_black_nether_bricks_lower_crimson_warped_nylium",
+			"id": "extras/terrain/brighter_black_nether_bricks_lower_crimson_warped_nylium_sides",
 			"combines": [
 				"terrain/brighter_nether",
-				"terrain/lower_and_sides/lower_crimson_nylium",
-				"terrain/lower_and_sides/lower_warped_nylium",
+				"terrain/lower_and_full_sides/lower_crimson_nylium_sides",
+				"terrain/lower_and_full_sides/lower_warped_nylium_sides",
 				"aesthetic/black_nether_bricks"
 			]
 		},
