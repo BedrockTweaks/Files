@@ -2298,7 +2298,11 @@
 			"id": "world_of_color",
 			"name": "World of Color",
 			"packs": [
-				
+				{
+					"id": "unique_dyes",
+					"name": "Unique Dyes",
+					"description": "Adds variation to the dyes by making each one different"
+				}
 			]
 		},
 		{
