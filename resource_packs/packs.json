@@ -2298,11 +2298,7 @@
 			"id": "world_of_color",
 			"name": "World of Color",
 			"packs": [
-				{
-					"id": "alternate_dyes",
-					"name": "Alternate Dyes",
-					"description": "Retextures dyes to make them even more unique to each other"
-				}
+				
 			]
 		},
 		{
