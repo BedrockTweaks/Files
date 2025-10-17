@@ -1,0 +1,63 @@
+name: Crafting Tweaks Bug
+description: Report a bug or issue related to crafting tweaks.
+title: "[CATEGORY] PACK"
+labels: ["bug", "crafting_tweaks"]
+body:
+  - type: input
+    id: pack_name
+    attributes:
+      label: Pack name
+      description: Pack or combination of packs which has the bug.
+      placeholder: "Example: Double Slabs"
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Describe the bug
+      description: A clear and concise description of what the bug is.
+      placeholder: "Example: An andesite block gives 3 andesite slabs instead of 2 when crafted."
+    validations:
+      required: true
+  - type: textarea
+    id: media
+    attributes:
+      label: Media
+      description: If applicable, add screenshots or videos to help explain your problem.
+    validations:
+      required: false
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      description: The platform you are using to play Minecraft.
+      multiple: true
+      options:
+        - Mobile
+        - PC
+        - Console
+    validations:
+      required: true
+  - type: input
+    id: os
+    attributes:
+      label: Operating system
+      description: If applicable, enter your operating system.
+      placeholder: "Example: Android 15"
+    validations:
+      required: false
+  - type: input
+    id: minecraft_version
+    attributes:
+      label: Minecraft version
+      description: Enter your Minecraft version.
+      placeholder: "Example: 1.21.100"
+    validations:
+      required: true
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: Additional context
+      description: Add any other context about the problem here.
+    validations:
+      required: false
