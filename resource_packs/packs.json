@@ -2299,9 +2299,14 @@
 			"name": "World of Color",
 			"packs": [
 				{
-					"id": "unique_dyes",
-					"name": "Unique Dyes",
-					"description": "Adds variation to the dyes by making each one different"
+					"id": "alternate_dyes",
+					"name": "Alternate Dyes",
+					"description": "Retextures dyes to make them even more unique to each other"
+				},
+				{
+					"id": "paletteless_dyes",
+					"name": "Paletteless Dyes",
+					"description": "Removes the palettes from under all dyes"
 				}
 			]
 		},
@@ -3658,6 +3663,13 @@
 			"combines": [
 				"parity/earth_wooly_cow",
 				"retro/snoutless_cows"
+			]
+		},
+		{
+			"id": "extras/dyes/paletteless_alternate_dyes",
+			"combines": [
+				"world_of_color/paletteless_dyes",
+				"world_of_color/alternate_dyes"
 			]
 		}
 	],
