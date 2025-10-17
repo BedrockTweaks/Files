@@ -2,7 +2,7 @@
 	"format_version": "1.21.110",
 	"minecraft:recipe_shaped": {
 		"description": {
-			"identifier": "bt:bb.slabs.prismarine"
+			"identifier": "bt:bb.slabs.stone_brick"
 		},
 		"tags": [
 			"crafting_table"
@@ -14,16 +14,16 @@
 		],
 		"key": {
 			"#": {
-				"item": "minecraft:prismarine_slab"
+				"item": "minecraft:stone_brick_slab"
 			}
 		},
 		"unlock": [
 			{
-				"item": "minecraft:prismarine_slab"
+				"item": "minecraft:stone_brick_slab"
 			}
 		],
 		"result": {
-			"item": "minecraft:prismarine",
+			"item": "minecraft:stone_bricks",
 			"count": 1
 		}
 	}

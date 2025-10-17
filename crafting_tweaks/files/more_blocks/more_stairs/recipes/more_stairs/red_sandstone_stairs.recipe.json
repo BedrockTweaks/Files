@@ -1,5 +1,5 @@
 {
-	"format_version": "1.21.0",
+	"format_version": "1.21.110",
 	"minecraft:recipe_shaped": {
 		"description": {
 			"identifier": "bt:ms.red_sandstone_stairs"
@@ -15,14 +15,12 @@
 		],
 		"key": {
 			"#": {
-				"item": "minecraft:red_sandstone",
-				"data": 0
+				"item": "minecraft:red_sandstone"
 			}
 		},
 		"unlock": [
 			{
-				"item": "minecraft:red_sandstone",
-				"data": 0
+				"item": "minecraft:red_sandstone"
 			}
 		],
 		"result": {

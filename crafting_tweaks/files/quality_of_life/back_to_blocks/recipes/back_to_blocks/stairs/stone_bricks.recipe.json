@@ -2,29 +2,30 @@
 	"format_version": "1.21.110",
 	"minecraft:recipe_shaped": {
 		"description": {
-			"identifier": "bt:bb.slabs.prismarine"
+			"identifier": "bt:bb.stairs.stone_brick"
 		},
 		"tags": [
 			"crafting_table"
 		],
-		"group": "slabs_to_blocks",
+		"group": "stairs_to_blocks",
 		"priority": -1,
 		"pattern": [
+			"##",
 			"##"
 		],
 		"key": {
 			"#": {
-				"item": "minecraft:prismarine_slab"
+				"item": "minecraft:stone_brick_stairs"
 			}
 		},
 		"unlock": [
 			{
-				"item": "minecraft:prismarine_slab"
+				"item": "minecraft:stone_brick_stairs"
 			}
 		],
 		"result": {
-			"item": "minecraft:prismarine",
-			"count": 1
+			"item": "minecraft:stone_bricks",
+			"count": 3
 		}
 	}
 }
