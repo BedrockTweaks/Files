@@ -1,9 +1,10 @@
 {
 	"format_version": 2,
 	"header": {
-		"name": "Graves BP - Gameplay Changes - Bedrock Tweaks",
+		"name": "Graves RP - Gameplay Changes - Bedrock Tweaks",
 		"description": "When you die it places a grave to save all your drops",
-		"uuid": "c7bec17f-9394-4cad-8f14-4aae4374d51f",
+		"uuid": "e9412201-d5f3-4d0f-bb25-cc3bb051c9b9",
+		"pack_scope": "world",
 		"version": [
 			1,
 			0,
@@ -17,8 +18,8 @@
 	},
 	"modules": [
 		{
-			"type": "data",
-			"uuid": "36f57ff3-733b-41e0-9ba5-6e204969bd0c",
+			"type": "resources",
+			"uuid": "7976dd03-48fb-4705-8a46-5d378c59a913",
 			"version": [
 				1,
 				0,
@@ -28,7 +29,7 @@
 	],
 	"dependencies": [
 		{
-			"uuid": "e9412201-d5f3-4d0f-bb25-cc3bb051c9b9",
+			"uuid": "c7bec17f-9394-4cad-8f14-4aae4374d51f",
 			"version": [
 				1,
 				0,
@@ -37,6 +38,7 @@
 		}
 	],
 	"metadata": {
+		"product_type": "addon",
 		"authors": [
 			"Vanilla Tweaks",
 			"Bedrock Tweaks",

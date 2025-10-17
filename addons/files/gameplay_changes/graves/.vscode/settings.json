@@ -1,0 +1,41 @@
+{
+	"editor.formatOnSave": false,
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": "explicit"
+	},
+	"editor.detectIndentation": false,
+	"editor.insertSpaces": false,
+	"editor.tabSize": 2,
+	"[typescript]": {
+		"editor.defaultFormatter": "dbaeumer.vscode-eslint",
+		"editor.insertSpaces": false,
+		"editor.tabSize": 4
+	},
+	"[javascript]": {
+		"editor.defaultFormatter": "dbaeumer.vscode-eslint",
+		"editor.insertSpaces": false,
+		"editor.tabSize": 4
+	},
+	"[json]": {
+		"editor.defaultFormatter": "vscode.json-language-features",
+		"editor.insertSpaces": false,
+		"editor.tabSize": 4
+	},
+	"[jsonc]": {
+		"editor.defaultFormatter": "vscode.json-language-features",
+		"editor.insertSpaces": false,
+		"editor.tabSize": 4
+	},
+	"typescript.tsdk": "node_modules/typescript/lib",
+	"typescript.enablePromptUseWorkspaceTsdk": true,
+	"eslint.validate": [
+		"typescript",
+		"json",
+		"jsonc"
+	],
+	"files.associations": {
+		"*.json": "jsonc"
+	},
+	"eslint.enable": true,
+	"eslint.format.enable": true
+}

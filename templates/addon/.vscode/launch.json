@@ -10,7 +10,7 @@
 			"name": "(gametests) Debug with Minecraft",
 			"mode": "listen",
 			"port": 19144,
-			"targetModuleUuid": "49fa5a52-8055-45ec-ab6a-ca5279638300"
+			"targetModuleUuid": "<scripting-uuid>"
 		}
 	]
 }

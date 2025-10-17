@@ -7,6 +7,7 @@
 		"misodee.vscode-nbt",
 		"bedrockoss.regolith",
 		"jannisx11.snowstorm",
-		"netcorext.uuid-generator"
+		"netcorext.uuid-generator",
+		"christian-kohler.npm-intellisense"
 	]
 }

@@ -1,0 +1,14 @@
+## In here, we add all the texts that are send to the chat, use in a UI like ModalFormData, etc
+## The main idea of adding texts here is to keep them all organized and make them easily translatable to other languages
+
+## The format of all the keys with their text is as follows
+## bt.addon_name.category.action=Text
+## addon_name - The name of the addon
+## category - The category describes all the related actions associated with it, like "settings"
+## action - The action is the specific operation performed related to the category
+
+## Replace the word "example" with your addon name, using an underscore for spaces if needed, like "anti_creeper_grief"
+## Replace the word "Example" with your addon name, like "Anti Creeper Grief"
+pack.name=<pack_name> - <pack_category> - Bedrock Tweaks
+pack.description=<pack_description>
+bt.example.misc.uninstall=§eUninstalled Correctly§r%1Remove the Example pack from Behaviour Packs to complete the uninstall.

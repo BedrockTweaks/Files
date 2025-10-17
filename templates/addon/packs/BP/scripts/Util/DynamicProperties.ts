@@ -31,9 +31,12 @@ export function getProperties<T>(from: World | Entity, enumType: { [key: string]
  * @param {{ [key: string]: string }} enumType - An object mapping property keys to dynamic property identifiers.
  * @param {object} propertyObject - A JavaScript object containing the properties to be set.
  */
-export function setProperties(to: World | Entity, enumType: { [key: string]: string }, propertyObject: object): void {
+export function setProperties<
+	T extends Record<string, PropertiesTypes>,
+	K extends Record<keyof T, string>
+>(to: World | Entity, enumType: K, propertyObject: T): void {
 	Object.entries(propertyObject).forEach(([key, value]: [string, PropertiesTypes]): void => {
-		const identifier: string = enumType[key];
+		const identifier: string = enumType[key as keyof T];
 
 		if (identifier) {
 			to.setDynamicProperty(identifier, value);
