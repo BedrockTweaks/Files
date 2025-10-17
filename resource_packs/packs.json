@@ -46,6 +46,12 @@
 					"description": "Eliminates Slime Block transparency"
 				},
 				{
+					"id": "desaturated_dark_oak",
+					"name": "Desaturated Dark Oak",
+					"description": "Desaturates the color of Dark Oak wood",
+					"priority": 2
+				},
+				{
 					"id": "desaturated_resin",
 					"name": "Desaturated Resin",
 					"description": "Desaturates the color of all Resin blocks and items"
@@ -54,12 +60,6 @@
 					"id": "desaturated_purpur",
 					"name": "Desaturated Purpur",
 					"description": "Desaturates the color of all Purpur blocks"
-				},
-				{
-					"id": "desaturated_dark_oak",
-					"name": "Desaturated Dark Oak",
-					"description": "Desaturates the color of all Dark Oak wood blocks",
-					"priority": 2
 				},
 				{
 					"id": "horizontal_nuggets",
@@ -2793,6 +2793,20 @@
 			]
 		},
 		{
+			"id": "extras/aesthetic/desaturated_dark_oak_hanging_sign_logs",
+			"combines": [
+				"aesthetic/desaturated_dark_oak",
+				"fixes_and_consistency/hanging_sign_logs"
+			]
+		},
+		{
+			"id": "extras/aesthetic/desaturated_dark_oak_glass_doors_and_trapdoors",
+			"combines": [
+				"aesthetic/desaturated_dark_oak",
+				"aesthetic/glass_doors_and_trapdoors"
+			]
+		},
+		{
 			"id": "extras/aesthetic/accurate_translucent_spyglass_overlay",
 			"combines": [
 				"aesthetic/accurate_spyglass",
@@ -3255,6 +3269,13 @@
 			]
 		},
 		{
+			"id": "extras/pixel_consistent/pixel_consistent_desaturated_dark_oak_signs",
+			"combines": [
+				"fixes_and_consistency/pixel_consistent_signs",
+				"aesthetic/desaturated_dark_oak"
+			]
+		},
+		{
 			"id": "extras/hunger_preview/apple_hunger_preview",
 			"combines": [
 				"utility/hunger_preview",
@@ -3476,6 +3497,21 @@
 			"combines": [
 				"retro/oarless_boats",
 				"retro/old_planks"
+			]
+		},
+		{
+			"id": "extras/planks/oarless_desaturated_dark_oak",
+			"combines": [
+				"retro/oarless_boats",
+				"aesthetic/desaturated_dark_oak"
+			]
+		},
+		{
+			"id": "extras/planks/oarless_old_desaturated_dark_oak",
+			"combines": [
+				"retro/oarless_boats",
+				"retro/old_planks",
+				"aesthetic/desaturated_dark_oak"
 			]
 		},
 		{
