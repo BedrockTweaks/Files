@@ -1,0 +1,11 @@
+{
+	"name": "@bedrock-tweaks/graves",
+	"version": "1.21.0-1.0.0",
+	"description": "Graves addon - place graves when you die to retrieve your items",
+	"private": true,
+	"scripts": {
+		"build": "regolith run build",
+		"dev": "regolith watch",
+		"lint": "eslint ."
+	}
+}

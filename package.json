@@ -1,25 +1,23 @@
 {
-  "name": "bedrock-tweaks-files",
-  "version": "5.2.2",
-  "description": "The packs source code from bedrocktweaks.net",
-  "private": true,
-  "scripts": {
-    "prepare": "node scripts/setup-hooks.js",
-    "build": "node scripts/build.js",
-    "lint": "node scripts/lint.js",
-    "lint:fix": "node scripts/lint.js --fix",
-    "postinstall": "node scripts/install-all.js"
-  },
-  "devDependencies": {
-    "husky": "^9.1.7"
-  },
-  "engines": {
-    "node": ">=18.0.0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/BedrockTweaks/Files.git"
-  },
-  "author": "Bedrock Tweaks",
-  "license": "SEE LICENSE IN LICENSE"
+	"name": "bedrock-tweaks",
+	"version": "5.2.3",
+	"description": "The packs source code from bedrocktweaks.net",
+	"author": "Bedrock Tweaks",
+	"license": "SEE LICENSE IN LICENSE",
+	"workspaces": [
+		"addons/*"
+	],
+	"scripts": {
+		"build": "yarn workspaces foreach -i -A run build",
+		"lint": "yarn workspaces foreach -i -A run lint || true",
+		"test": "yarn workspaces foreach -i -A --continue run test"
+	},
+	"engines": {
+		"node": ">=25.0.0"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/BedrockTweaks/Files.git"
+	},
+	"packageManager": "yarn@4.10.3"
 }

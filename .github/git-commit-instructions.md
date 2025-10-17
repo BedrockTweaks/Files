@@ -2,15 +2,15 @@
 
 ## Git Formats
 
-#### Branch Name
+### Branch Name
 
-```
+```md
 <type>/<title>
 ```
 
 ### Commit
 
-```
+```md
 <type>(<scope>): <title>
 // blank line
 <description_commit>
@@ -19,15 +19,15 @@
 
 ### Pull Request
 
-#### Title
+#### PR Title
 
-```
+```md
 <type>(<scope>): <title>
 ```
 
 #### Description
 
-```
+```md
 <description_pr>
 
 By checking the following boxes with an X, you ensure that:
@@ -45,7 +45,7 @@ By checking the following boxes with an X, you ensure that:
 [ ] (Optional) Tested in BDS
 ```
 
-##### Type
+##### Type tag
 
 Must be one of the following:
 
@@ -57,72 +57,72 @@ Must be one of the following:
   - Only PR's from a confirmed [issue](https://github.com/BedrockTweaks/Files/issues) will be accepted.
 - chore: Changes to the build process, tools, documentation...
 
-##### Scope
+##### Scope tag
 
 The scope will always be (files). It indicates this is a commit to
 the [Bedrock Tweaks Files](https://github.com/Bedrock-Tweaks/Bedrock-Tweaks-Files) repository.
 
-##### Title
+##### Title tag
 
 A brief description of the changes. Usually the pack or category name.
 Branch Name title and PR title should be the same.
 
-##### Description Commit
+##### Description Commit tag
 
 A detailed description of the changes. Usually the pack description.
 Prefer to use bullet points for each change
 
-##### Description PR
+##### Description PR tag
 
 Contains all the commits descriptions of the PR, the issue or discussion link (if exists), and the checklist.
 
 ### Examples
 
-```
+```md
 feat/bedrock_edition_title
 ```
 
-```
+```md
 feat(files): Bedrock Edition Title
 
 Add a Bedrock Edition Logo to the Minecraft Title.
 ```
 
-```
+```md
 update/alternate_bedrock
 ```
 
-```
+```md
 update(files): Alternate Bedrock
 
 Updated pack to 1.21.0
 ```
 
-```
+```md
 update/terrain
 ```
 
-```
+```md
 update(files): Terrain
 
 Updated all terrain packs to 1.21.0
 ```
 
-```
+```md
 fix/clearer_water
 ```
 
-```
+```md
 fix(files): Clearer water
 
 Fixed pack making end sky bright
 ```
 
-```
+```md
 chore/documentation_update
 ```
 
-```
+```md
 chore(files): documentation update
 
 added README.md

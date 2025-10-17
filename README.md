@@ -3,9 +3,11 @@
         height="130">
 </p>
 
+[![Better Stack Badge](https://uptime.betterstack.com/status-badges/v3/monitor/25yg7.svg)](https://uptime.betterstack.com/?utm_source=status_badge)
+
 # Files
 
-The packs source code and directory from https://bedrocktweaks.net
+The packs source code and directory from <https://bedrocktweaks.net>
 
 ## Contact
 
@@ -21,21 +23,36 @@ in or contributing to the project.
 
 For more detailed instructions, please refer to our [Contributing Guidelines](CONTRIBUTING.md).
 
-Note: not accepting Addons PR at the moment.
+### Project Structure
+
+This is a **Yarn 4 monorepo** where addons are managed as workspace packages and rest are static files:
+
+```md
+├── addons/                      # Yarn workspaces
+│   ├── package.json             # Root workspace
+│   ├── gameplay_changes/        # Category workspace
+│   │   ├── package.json         # Category-level workspace
+│   │   └── graves/              # Addon package
+│   │       └── package.json
+│   └── packs.json               # Addon catalog
+├── resource_packs/              # Resource packs
+├── crafting_tweaks/             # Crafting tweaks
+└── scripts/                     # Setup & maintenance
+```
 
 ## License
 
 By contributing to Bedrock Tweaks, you agree that your contributions will be licensed under the [License](LICENSE).
 
-### Thanks to all the Contributors!
+### Thanks to all the Contributors
 
 You can find the pack creators of the original [Vanilla Tweaks](https://vanillatweaks.net) packs at the bottom of each respective section of their site.
 
 abc55, WavePlayz, r4isen1920, randomityguy, LukasPlaysGames, TheBlueShadow and axialeaa for their contributions and ideas on some packs prior to the GitHub repository.
 <!-- readme: collaborators,contributors -start -->
 <table>
-	<tbody>
-		<tr>
+ <tbody>
+  <tr>
             <td align="center">
                 <a href="https://github.com/drav0011">
                     <img src="https://avatars.githubusercontent.com/u/43525295?v=4" width="100;" alt="drav0011"/>
@@ -78,8 +95,8 @@ abc55, WavePlayz, r4isen1920, randomityguy, LukasPlaysGames, TheBlueShadow and a
                     <sub><b>yzabeast1</b></sub>
                 </a>
             </td>
-		</tr>
-		<tr>
+  </tr>
+  <tr>
             <td align="center">
                 <a href="https://github.com/ZecaApelao">
                     <img src="https://avatars.githubusercontent.com/u/206439936?v=4" width="100;" alt="ZecaApelao"/>
@@ -108,7 +125,7 @@ abc55, WavePlayz, r4isen1920, randomityguy, LukasPlaysGames, TheBlueShadow and a
                     <sub><b>bedrocktweaksadmin</b></sub>
                 </a>
             </td>
-		</tr>
-	<tbody>
+  </tr>
+ <tbody>
 </table>
 <!-- readme: collaborators,contributors -end -->
