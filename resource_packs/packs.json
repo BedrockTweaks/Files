@@ -2302,11 +2302,6 @@
 					"id": "unique_dyes",
 					"name": "Unique Dyes",
 					"description": "Adds variation to the dyes by making each one different"
-				},
-				{
-					"id": "paletteless_dyes",
-					"name": "Paletteless Dyes",
-					"description": "Removes the palette from under all dyes."
 				}
 			]
 		},
