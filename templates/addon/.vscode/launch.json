@@ -1,16 +1,16 @@
 {
-    "version": "0.3.0",
-    "configurations": [
-        {
-            "type": "minecraft-js",
-            "request": "attach",
-            "sourceMapRoot": "${workspaceFolder}/.regolith/tmp/BP/scripts/",
-            "generatedSourceRoot": "${workspaceFolder}/.regolith/tmp/BP/scripts/",
-            "localRoot": "${workspaceFolder}/packs/data/gametests/src/",
-            "name": "(gametests) Debug with Minecraft",
-            "mode": "listen",
-            "port": 19144,
-            "targetModuleUuid": "<scripting_module_uuid>"
-        }
-    ]
+	"version": "0.3.0",
+	"configurations": [
+		{
+			"type": "minecraft-js",
+			"request": "attach",
+			"sourceMapRoot": "${env:LOCALAPPDATA}/Packages/Microsoft.MinecraftUWP_8wekyb3d8bbwe/LocalState/games/com.mojang/development_behavior_packs/<pack_name> - <pack_category> - Bedrock Tweaks/scripts/",
+			"generatedSourceRoot": "${env:LOCALAPPDATA}/Packages/Microsoft.MinecraftUWP_8wekyb3d8bbwe/LocalState/games/com.mojang/development_behavior_packs/<pack_name> - <pack_category> - Bedrock Tweaks/scripts/",
+			"localRoot": "${workspaceFolder}/packs/BP/scripts/",
+			"name": "(gametests) Debug with Minecraft",
+			"mode": "listen",
+			"port": 19144,
+			"targetModuleUuid": "49fa5a52-8055-45ec-ab6a-ca5279638300"
+		}
+	]
 }

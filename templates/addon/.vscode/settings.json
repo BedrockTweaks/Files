@@ -1,24 +1,41 @@
 {
-	"editor.formatOnSave": true,
+	"editor.formatOnSave": false,
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": "explicit"
+	},
+	"editor.detectIndentation": false,
+	"editor.insertSpaces": false,
+	"editor.tabSize": 2,
 	"[typescript]": {
-		"editor.tabSize": 4,
-		"editor.insertSpaces": true
+		"editor.defaultFormatter": "dbaeumer.vscode-eslint",
+		"editor.insertSpaces": false,
+		"editor.tabSize": 4
+	},
+	"[javascript]": {
+		"editor.defaultFormatter": "dbaeumer.vscode-eslint",
+		"editor.insertSpaces": false,
+		"editor.tabSize": 4
 	},
 	"[json]": {
-		"editor.tabSize": 4,
-		"editor.insertSpaces": false
+		"editor.defaultFormatter": "vscode.json-language-features",
+		"editor.insertSpaces": false,
+		"editor.tabSize": 4
 	},
 	"[jsonc]": {
-		"editor.tabSize": 4,
-		"editor.insertSpaces": false
+		"editor.defaultFormatter": "vscode.json-language-features",
+		"editor.insertSpaces": false,
+		"editor.tabSize": 4
 	},
-	"editor.codeActionsOnSave": {
-		"source.fixAll.eslint": "always"
-	},
-	"files.eol": "\r\n",
-	"eslint.format.enable": true,
-	"eslint.workingDirectories": [
-		"./packs/data/gametests"
+	"typescript.tsdk": "node_modules/typescript/lib",
+	"typescript.enablePromptUseWorkspaceTsdk": true,
+	"eslint.validate": [
+		"typescript",
+		"json",
+		"jsonc"
 	],
-	"editor.insertSpaces": false
+	"files.associations": {
+		"*.json": "jsonc"
+	},
+	"eslint.enable": true,
+	"eslint.format.enable": true
 }

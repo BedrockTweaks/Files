@@ -5,9 +5,9 @@ __metadata:
   version: 8
   cacheKey: 10c0
 
-"@bedrock-tweaks/graves@workspace:addons/gameplay_changes/graves":
+"@bedrock-tweaks/<pack-name>@workspace:.":
   version: 0.0.0-use.local
-  resolution: "@bedrock-tweaks/graves@workspace:addons/gameplay_changes/graves"
+  resolution: "@bedrock-tweaks/<pack-name>@workspace:."
   dependencies:
     "@eslint/js": "npm:^9.38.0"
     "@eslint/json": "npm:^0.13.2"
@@ -604,12 +604,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"bedrock-tweaks@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "bedrock-tweaks@workspace:."
-  languageName: unknown
-  linkType: soft
-
 "brace-expansion@npm:^1.1.7":
   version: 1.1.12
   resolution: "brace-expansion@npm:1.1.12"
@@ -950,12 +944,6 @@ __metadata:
   checksum: 10c0/e957a1c6b0254aa15b8cce8533e24165abd98fadc98575db082b786b5da1b7d72062b81bfdcd1da2f4d46b6ed93bec2434e62333e9b4261d79ef2e75a10dd538
   languageName: node
   linkType: hard
-
-"gameplay_changes-b14f53@workspace:addons/gameplay_changes":
-  version: 0.0.0-use.local
-  resolution: "gameplay_changes-b14f53@workspace:addons/gameplay_changes"
-  languageName: unknown
-  linkType: soft
 
 "glob-parent@npm:^5.1.2":
   version: 5.1.2

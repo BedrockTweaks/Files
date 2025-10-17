@@ -9,7 +9,7 @@
 	],
 	"scripts": {
 		"build": "yarn workspaces foreach -i -A run build",
-		"lint": "yarn workspaces foreach -i -A run lint || true",
+		"lint": "yarn workspaces foreach -i -A run lint",
 		"test": "yarn workspaces foreach -i -A --continue run test"
 	},
 	"engines": {
