@@ -264,7 +264,7 @@ export default defineConfig([
 			"@stylistic/function-paren-newline": ["warn", "consistent"],
 			"@stylistic/generator-star-spacing": "off",
 			"@stylistic/implicit-arrow-linebreak": ["warn", "beside"],
-			"@stylistic/indent": ["warn", 2],
+			"@stylistic/indent": ["warn", "tab"],
 			"@stylistic/jsx-quotes": "off",
 
 			"@stylistic/key-spacing": ["warn",

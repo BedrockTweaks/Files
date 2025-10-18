@@ -7,7 +7,7 @@
 			"sourceMapRoot": "${env:LOCALAPPDATA}/Packages/Microsoft.MinecraftUWP_8wekyb3d8bbwe/LocalState/games/com.mojang/development_behavior_packs/<pack_name> - <pack_category> - Bedrock Tweaks/scripts/",
 			"generatedSourceRoot": "${env:LOCALAPPDATA}/Packages/Microsoft.MinecraftUWP_8wekyb3d8bbwe/LocalState/games/com.mojang/development_behavior_packs/<pack_name> - <pack_category> - Bedrock Tweaks/scripts/",
 			"localRoot": "${workspaceFolder}/packs/BP/scripts/",
-			"name": "(gametests) Debug with Minecraft",
+			"name": "Debug with Minecraft",
 			"mode": "listen",
 			"port": 19144,
 			"targetModuleUuid": "<scripting-uuid>"

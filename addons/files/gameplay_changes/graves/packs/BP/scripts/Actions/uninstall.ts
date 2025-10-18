@@ -1,5 +1,5 @@
 import { world } from '@minecraft/server';
-import { getSettings } from './Settings';
+import { getSettings } from './settings';
 import { GravesSettings } from '../Models';
 
 /**

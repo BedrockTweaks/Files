@@ -18,7 +18,7 @@ import {
 } from '@minecraft/server';
 import { Grave, GraveDynamicProperties, GravesList, GravesListDynamicProperties, GravesSettings } from '../Models';
 import { getProperties, setProperties } from '../Util';
-import { getSettings } from './Settings';
+import { getSettings } from './settings';
 import { clampNumber, Vector3Utils } from '@minecraft/math';
 import { MinecraftBlockTypes, MinecraftDimensionTypes } from '@minecraft/vanilla-data';
 import { GravesEntityTypes } from '../Models';
@@ -129,9 +129,9 @@ const transferItemsToGrave = (player: Player, grave: Entity): number => {
 	let itemCount: number = 0;
 
 	const playerContainer: Container = (player.getComponent(EntityComponentTypes.Inventory) as EntityInventoryComponent)
-		?.container as Container;
+		?.container;
 	const graveContainer: Container = (grave.getComponent(EntityComponentTypes.Inventory) as EntityInventoryComponent)
-		?.container as Container;
+		?.container;
 	const playerArmor: EntityEquippableComponent = player.getComponent(EntityComponentTypes.Equippable) as EntityEquippableComponent;
 
 	const playerContainerSize: number = playerContainer?.size;
@@ -177,9 +177,9 @@ const transferItemsToGrave = (player: Player, grave: Entity): number => {
  */
 const transferItemsToPlayer = (player: Player, grave: Entity): void => {
 	const playerContainer: Container = (player.getComponent(EntityComponentTypes.Inventory) as EntityInventoryComponent)
-		?.container as Container;
+		?.container;
 	const graveContainer: Container = (grave.getComponent(EntityComponentTypes.Inventory) as EntityInventoryComponent)
-		?.container as Container;
+		?.container;
 	const playerArmor: EntityEquippableComponent = player.getComponent(EntityComponentTypes.Equippable) as EntityEquippableComponent;
 
 	const playerContainerSize: number = playerContainer?.size;
@@ -229,7 +229,7 @@ const transferItemsToPlayer = (player: Player, grave: Entity): void => {
  */
 const getAllItems = (grave: Entity): void => {
 	const graveContainer: Container = (grave.getComponent(EntityComponentTypes.Inventory) as EntityInventoryComponent)
-		?.container as Container;
+		?.container;
 
 	const containerSize: number = graveContainer?.size;
 
@@ -265,11 +265,14 @@ const spawnItemsInWorld = (grave: Entity, itemsToSpawn: ItemStack[]): void => {
  * @returns {boolean} - Returns true if all slots are empty; false otherwise.
  */
 const isInventoryEmpty = (player: Player): boolean => {
-	const playerContainer: Container = (player.getComponent(EntityComponentTypes.Inventory) as EntityInventoryComponent)
-		?.container as Container;
-	const playerArmor: EntityEquippableComponent = player.getComponent(EntityComponentTypes.Equippable) as EntityEquippableComponent;
+	const playerContainer: Container | undefined = player.getComponent(EntityComponentTypes.Inventory)?.container;
+	const playerArmor: EntityEquippableComponent | undefined = player.getComponent(EntityComponentTypes.Equippable);
 
-	let emptySlotsCount: number = playerContainer.emptySlotsCount;
+	if (!playerContainer || !playerArmor) {
+		return true;
+	}
+
+	let emptySlotsCount: number = playerContainer.emptySlotsCount || 0;
 	playerArmor.getEquipment(EquipmentSlot.Head) === undefined && emptySlotsCount++;
 	playerArmor.getEquipment(EquipmentSlot.Chest) === undefined && emptySlotsCount++;
 	playerArmor.getEquipment(EquipmentSlot.Legs) === undefined && emptySlotsCount++;

@@ -1,6 +1,6 @@
 import { world } from '@minecraft/server';
 import { initializeSettings } from '../Actions';
 
-world.afterEvents.worldInitialize.subscribe((): void => {
+world.afterEvents.worldLoad.subscribe((): void => {
 	initializeSettings();
 });

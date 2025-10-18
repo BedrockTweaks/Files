@@ -1,6 +1,6 @@
-export { giveGraveKey } from './GiveGraveKey';
+export { giveGraveKey } from './giveGraveKey';
 export { forceOpenGrave, openGrave, spawnGrave, tickGrave } from './Grave';
-export { listAllGraves } from './ListGraves';
-export { getSettings, initializeSettings, setSettings } from './Settings';
-export { uninstall } from './Uninstall';
+export { listAllGraves } from './listGraves';
+export { getSettings, initializeSettings, setSettings } from './settings';
+export { uninstall } from './uninstall';
 

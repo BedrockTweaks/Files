@@ -7,7 +7,7 @@ import { GravesItemTypes } from '../Models';
  * @param {Player} player - The player to which the Grave Key will be given.
  */
 export const giveGraveKey = (player: Player): void => {
-	const playerInventory: EntityInventoryComponent | undefined = player.getComponent(EntityComponentTypes.Inventory) as EntityInventoryComponent | undefined;
+	const playerInventory: EntityInventoryComponent | undefined = player.getComponent(EntityComponentTypes.Inventory);
 	const playerContainer: Container | undefined = playerInventory?.container;
 
 	playerContainer?.addItem(new ItemStack(GravesItemTypes.GraveKey));
