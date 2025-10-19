@@ -4,6 +4,7 @@
 	"description": "<pack-description>",
 	"private": true,
 	"scripts": {
+		"regolith-install": "regolith install-all",
 		"build": "regolith run build",
 		"dev": "regolith watch",
 		"lint": "npx eslint ."

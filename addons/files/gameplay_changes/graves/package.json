@@ -4,6 +4,7 @@
 	"description": "Graves addon - place graves when you die to retrieve your items",
 	"private": true,
 	"scripts": {
+		"regolith-install": "regolith install-all",
 		"build": "regolith run build",
 		"dev": "regolith watch",
 		"lint": "npx eslint ."

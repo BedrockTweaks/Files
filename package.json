@@ -5,9 +5,10 @@
 	"author": "Bedrock Tweaks",
 	"license": "SEE LICENSE IN LICENSE",
 	"workspaces": [
-		"addons/*"
+		"addons/files/*"
 	],
 	"scripts": {
+		"regolith-install": "yarn workspaces foreach -i -A --topological --jobs=1 run regolith-install",
 		"build": "yarn workspaces foreach -i -A run build",
 		"lint": "yarn workspaces foreach -i -A run lint",
 		"test": "yarn workspaces foreach -i -A --continue run test"

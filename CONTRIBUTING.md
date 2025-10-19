@@ -14,17 +14,18 @@ To get started with contributing, follow these steps:
 2. Clone the forked repository to your local machine.
 3. Install Git LFS if you haven't already (visit <https://git-lfs.com> for installation instructions).
 4. Run `yarn install` on the root to install all dependencies.
-5. Run `git config core.hooksPath .githooks` to enable Git pre-commit linting hooks.
-6. Run `git lfs install` to set up Git LFS for your repository.
-7. Create a new branch for your changes.
-8. Make your desired changes.
+5. Run `yarn regolith-install` to install Regolith filters and dependencies for all addons.
+6. Run `git config core.hooksPath .githooks` to enable Git pre-commit linting hooks.
+7. Run `git lfs install` to set up Git LFS for your repository.
+8. Create a new branch for your changes.
+9. Make your desired changes.
 
 Before making a pack make sure:
 
 - There is not an existing [Pull Request](https://github.com/BedrockTweaks/Files/pulls) for the same pack.
 - The pack is a confirmed [Issue](https://github.com/BedrockTweaks/Files/issues) or [Discussion](https://github.com/BedrockTweaks/Files/discussions)
 
-9. Test your changes thoroughly.
+10. Test your changes thoroughly.
 
 Pack testing requirements:
 
@@ -33,9 +34,9 @@ Pack testing requirements:
 - For consoles, you can test by joining a world with the pack applied hosted in another device (phone/computer) in the same network.
 - At least one device must be tested.
 
-10. Commit your changes with the following format.
-11. Push your changes to your forked repository.
-12. Submit a pull request with the following format to the main repository.
+11. Commit your changes with the following format.
+12. Push your changes to your forked repository.
+13. Submit a pull request with the following format to the main repository.
 
 ## Style Guide
 
@@ -146,14 +147,17 @@ right of the IDE.
 
 **Development workflow:**
 
-After installing the monorepo, **open each addon as a standalone VSCode instance** and run commands from that directory:
+After installing the monorepo with `yarn install`, run `yarn regolith-install` once to set up Regolith filters and dependencies.
 
-- **Watch mode** (live recompilation): `yarn run dev`
-- **Build once**: `yarn run build`
-- **Lint addon**: `yarn run lint`
+Then, **open each addon as a standalone VSCode instance** and run commands from that directory:
+
+- **Watch mode** (live recompilation): `yarn run dev` (runs `regolith watch`)
+- **Build once**: `yarn run build` (runs `regolith run build`)
+- **Lint addon**: `yarn run lint` (runs `eslint .`)
 
 From the root directory, use these commands to manage the entire monorepo:
 
+- **Install Regolith for all addons**: `yarn regolith-install`
 - **Build all addons**: `yarn build`
 - **Lint all packages**: `yarn lint`
 - **Test all packages**: `yarn test` (skips packages without test script)

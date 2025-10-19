@@ -5,9 +5,9 @@ __metadata:
   version: 8
   cacheKey: 10c0
 
-"@bedrock-tweaks/graves@workspace:addons/gameplay_changes/graves":
+"@bedrock-tweaks/graves@workspace:addons/files/gameplay_changes/graves":
   version: 0.0.0-use.local
-  resolution: "@bedrock-tweaks/graves@workspace:addons/gameplay_changes/graves"
+  resolution: "@bedrock-tweaks/graves@workspace:addons/files/gameplay_changes/graves"
   dependencies:
     "@eslint/js": "npm:^9.38.0"
     "@eslint/json": "npm:^0.13.2"
@@ -291,18 +291,18 @@ __metadata:
   linkType: hard
 
 "@stylistic/eslint-plugin@npm:^5.4.0":
-  version: 5.4.0
-  resolution: "@stylistic/eslint-plugin@npm:5.4.0"
+  version: 5.5.0
+  resolution: "@stylistic/eslint-plugin@npm:5.5.0"
   dependencies:
     "@eslint-community/eslint-utils": "npm:^4.9.0"
-    "@typescript-eslint/types": "npm:^8.44.0"
+    "@typescript-eslint/types": "npm:^8.46.1"
     eslint-visitor-keys: "npm:^4.2.1"
     espree: "npm:^10.4.0"
     estraverse: "npm:^5.3.0"
     picomatch: "npm:^4.0.3"
   peerDependencies:
     eslint: ">=9.0.0"
-  checksum: 10c0/02db4ec387c75300f07417641fb26eb41fd2a202608d1d752ed799cb72a8cea270abcc0a36eafa2ab7488e8cbe5a51e778afa56100f69ade572d1ec4051e8883
+  checksum: 10c0/39e56c32064f9359d49ba2cd95ab7fbda6391cc30211ae214895269aca96793f72b3c0d866132f661cf6783e5c2e19a239b2eb57f9c0d392f3445e7b8294a9a0
   languageName: node
   linkType: hard
 
@@ -446,7 +446,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/types@npm:8.46.1, @typescript-eslint/types@npm:^8.44.0, @typescript-eslint/types@npm:^8.46.1":
+"@typescript-eslint/types@npm:8.46.1, @typescript-eslint/types@npm:^8.46.1":
   version: 8.46.1
   resolution: "@typescript-eslint/types@npm:8.46.1"
   checksum: 10c0/90887acaa5b33b45af20cf7f87ec4ae098c0daa88484245473e73903fa6e542f613247c22148132167891ca06af6549a60b9d2fd14a65b22871e016901ce3756
@@ -951,9 +951,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gameplay_changes-b14f53@workspace:addons/gameplay_changes":
+"gameplay_changes-b20603@workspace:addons/files/gameplay_changes":
   version: 0.0.0-use.local
-  resolution: "gameplay_changes-b14f53@workspace:addons/gameplay_changes"
+  resolution: "gameplay_changes-b20603@workspace:addons/files/gameplay_changes"
   languageName: unknown
   linkType: soft
 
