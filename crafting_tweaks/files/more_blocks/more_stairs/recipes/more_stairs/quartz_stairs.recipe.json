@@ -1,5 +1,5 @@
 {
-	"format_version": "1.21.0",
+	"format_version": "1.21.110",
 	"minecraft:recipe_shaped": {
 		"description": {
 			"identifier": "bt:ms.quartz_stairs"
@@ -15,14 +15,12 @@
 		],
 		"key": {
 			"#": {
-				"item": "minecraft:quartz_block",
-				"data": 0
+				"item": "minecraft:quartz_block"
 			}
 		},
 		"unlock": [
 			{
-				"item": "minecraft:quartz_block",
-				"data": 0
+				"item": "minecraft:quartz_block"
 			}
 		],
 		"result": {

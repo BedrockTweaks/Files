@@ -2,7 +2,7 @@
 	"format_version": "1.21.110",
 	"minecraft:recipe_shapeless": {
 		"description": {
-			"identifier": "bt:ds.sandstone_slab"
+			"identifier": "bt:ds.end_brick_slab"
 		},
 		"tags": [
 			"crafting_table"
@@ -10,16 +10,16 @@
 		"priority": -1,
 		"ingredients": [
 			{
-				"item": "minecraft:sandstone"
+				"item": "minecraft:end_bricks"
 			}
 		],
 		"unlock": [
 			{
-				"item": "minecraft:sandstone"
+				"item": "minecraft:end_bricks"
 			}
 		],
 		"result": {
-			"item": "minecraft:sandstone_slab",
+			"item": "minecraft:end_stone_brick_slab",
 			"count": 2
 		}
 	}
