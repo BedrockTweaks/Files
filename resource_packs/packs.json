@@ -2158,6 +2158,11 @@
 					"id": "legacy_bedrock_dried_kelp",
 					"name": "Legacy Bedrock Dried Kelp",
 					"description": "Gives the Dried Kelp item its texture from previous versions of Minecraft: Bedrock Edition"
+				},
+				{
+					"id": "old_dyes",
+					"name": "Old Dyes",
+					"description": "Reverts all dyes to their pre-1.21.100 textures"
 				}
 			]
 		},
