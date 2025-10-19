@@ -64,7 +64,7 @@
 				{
 					"id": "horizontal_nuggets",
 					"name": "Horizontal Nuggets",
-					"description": "Rotates Gold Nuggets to be consistent with the Iron Nugget"
+					"description": "Rotates Copper and Gold Nuggets to be consistent with the Iron Nugget"
 				},
 				{
 					"id": "vertical_nuggets",
