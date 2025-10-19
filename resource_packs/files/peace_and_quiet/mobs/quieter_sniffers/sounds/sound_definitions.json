@@ -2,9 +2,6 @@
 	"format_version": "1.20.20",
 	"sound_definitions": {
 		"mob.sniffer.drop_seed": {
-			"category": "neutral",
-			"max_distance": null,
-			"min_distance": null,
 			"sounds": [
 				{
 					"name": "sounds/random/pop",
@@ -24,9 +21,6 @@
 			]
 		},
 		"mob.sniffer.sniffsniff": {
-			"category": "neutral",
-			"max_distance": null,
-			"min_distance": null,
 			"sounds": [
 				{
 					"name": "sounds/mob/sniffer/scenting1",
@@ -43,9 +37,6 @@
 			]
 		},
 		"mob.sniffer.searching": {
-			"category": "neutral",
-			"max_distance": null,
-			"min_distance": null,
 			"sounds": [
 				{
 					"name": "sounds/mob/sniffer/searching1",
@@ -98,9 +89,6 @@
 			]
 		},
 		"mob.sniffer.long_sniff": {
-			"category": "neutral",
-			"max_distance": null,
-			"min_distance": null,
 			"sounds": [
 				{
 					"name": "sounds/mob/sniffer/sniffing1",
@@ -117,9 +105,6 @@
 			]
 		},
 		"mob.sniffer.digging": {
-			"category": "neutral",
-			"max_distance": null,
-			"min_distance": null,
 			"sounds": [
 				{
 					"name": "sounds/mob/sniffer/longdig1",
@@ -132,9 +117,6 @@
 			]
 		},
 		"mob.sniffer.stand_up": {
-			"category": "neutral",
-			"max_distance": null,
-			"min_distance": null,
 			"sounds": [
 				{
 					"name": "sounds/mob/sniffer/digging_stop1",
@@ -147,9 +129,6 @@
 			]
 		},
 		"mob.sniffer.happy": {
-			"category": "neutral",
-			"max_distance": null,
-			"min_distance": null,
 			"sounds": [
 				{
 					"name": "sounds/mob/sniffer/happy1",

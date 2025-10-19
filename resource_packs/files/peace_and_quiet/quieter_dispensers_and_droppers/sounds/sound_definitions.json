@@ -2,9 +2,6 @@
 	"format_version": "1.20.20",
 	"sound_definitions": {
 		"block.click": {
-			"category": "block",
-			"max_distance": null,
-			"min_distance": null,
 			"sounds": [
 				{
 					"name": "sounds/random/click",

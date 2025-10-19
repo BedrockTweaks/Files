@@ -2,9 +2,6 @@
 	"format_version": "1.20.20",
 	"sound_definitions": {
 		"mob.breeze.charge": {
-			"category": "hostile",
-			"max_distance": 16.0,
-			"min_distance": null,
 			"sounds": [
 				{
 					"name": "sounds/mob/breeze/charge1",
@@ -24,9 +21,6 @@
 			]
 		},
 		"mob.breeze.inhale": {
-			"category": "hostile",
-			"max_distance": 16.0,
-			"min_distance": null,
 			"sounds": [
 				{
 					"name": "sounds/mob/breeze/inhale1",
@@ -51,9 +45,6 @@
 			]
 		},
 		"mob.breeze.slide": {
-			"category": "hostile",
-			"max_distance": 16.0,
-			"min_distance": null,
 			"sounds": [
 				{
 					"name": "sounds/mob/breeze/slide1",
@@ -78,9 +69,6 @@
 			]
 		},
 		"mob.breeze.whirl": {
-			"category": "hostile",
-			"max_distance": 16.0,
-			"min_distance": null,
 			"sounds": [
 				{
 					"name": "sounds/mob/breeze/whirl1",
@@ -105,9 +93,6 @@
 			]
 		},
 		"mob.breeze.idle_ground": {
-			"category": "hostile",
-			"max_distance": null,
-			"min_distance": null,
 			"sounds": [
 				{
 					"name": "sounds/mob/breeze/idle1",

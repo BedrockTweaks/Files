@@ -2,9 +2,6 @@
 	"format_version": "1.20.20",
 	"sound_definitions": {
 		"mob.warden.emerge": {
-			"category": "hostile",
-			"max_distance": 80.0,
-			"min_distance": null,
 			"sounds": [
 				{
 					"name": "sounds/mob/warden/emerge",
@@ -13,9 +10,6 @@
 			]
 		},
 		"mob.warden.sniff": {
-			"category": "hostile",
-			"max_distance": 80.0,
-			"min_distance": null,
 			"sounds": [
 				{
 					"name": "sounds/mob/warden/sniff_1",
@@ -36,9 +30,6 @@
 			]
 		},
 		"mob.warden.dig": {
-			"category": "hostile",
-			"max_distance": 80.0,
-			"min_distance": null,
 			"sounds": [
 				{
 					"name": "sounds/mob/warden/dig",
@@ -47,9 +38,6 @@
 			]
 		},
 		"mob.warden.roar": {
-			"category": "hostile",
-			"max_distance": 48.0,
-			"min_distance": null,
 			"sounds": [
 				{
 					"name": "sounds/mob/warden/roar_1",
@@ -74,9 +62,6 @@
 			]
 		},
 		"mob.warden.clicking": {
-			"category": "hostile",
-			"max_distance": 80.0,
-			"min_distance": null,
 			"sounds": [
 				{
 					"name": "sounds/mob/warden/tendril_clicks_1",
