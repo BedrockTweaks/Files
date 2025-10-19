@@ -102,13 +102,6 @@ abc55, WavePlayz, r4isen1920, randomityguy, LukasPlaysGames, TheBlueShadow and a
                 </a>
             </td>
             <td align="center">
-                <a href="https://github.com/daniswastaken">
-                    <img src="https://avatars.githubusercontent.com/u/143309460?v=4" width="100;" alt="daniswastaken"/>
-                    <br />
-                    <sub><b>daniswastaken</b></sub>
-                </a>
-            </td>
-            <td align="center">
                 <a href="https://github.com/bedrocktweaksadmin">
                     <img src="https://avatars.githubusercontent.com/u/172558280?v=4" width="100;" alt="bedrocktweaksadmin"/>
                     <br />
