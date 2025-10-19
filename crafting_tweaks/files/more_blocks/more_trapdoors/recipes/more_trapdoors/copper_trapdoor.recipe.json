@@ -1,0 +1,31 @@
+{
+	"format_version": "1.21.110",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "bt:mt.copper_trapdoor"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"group": "metal_trap_door",
+		"priority": -1,
+		"pattern": [
+			"##",
+			"##"
+		],
+		"key": {
+			"#": {
+				"item": "minecraft:copper_ingot"
+			}
+		},
+		"unlock": [
+			{
+				"item": "minecraft:copper_ingot"
+			}
+		],
+		"result": {
+			"item": "minecraft:copper_trapdoor",
+			"count": 4
+		}
+	}
+}

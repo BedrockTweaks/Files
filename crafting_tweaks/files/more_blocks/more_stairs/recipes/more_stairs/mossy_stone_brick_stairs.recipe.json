@@ -1,5 +1,5 @@
 {
-	"format_version": "1.21.0",
+	"format_version": "1.21.110",
 	"minecraft:recipe_shaped": {
 		"description": {
 			"identifier": "bt:ms.mossy_stone_brick_stairs"
@@ -15,14 +15,12 @@
 		],
 		"key": {
 			"#": {
-				"item": "minecraft:stonebrick",
-				"data": 1
+				"item": "minecraft:mossy_stone_bricks"
 			}
 		},
 		"unlock": [
 			{
-				"item": "minecraft:stonebrick",
-				"data": 1
+				"item": "minecraft:mossy_stone_bricks"
 			}
 		],
 		"result": {

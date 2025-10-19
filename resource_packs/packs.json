@@ -46,6 +46,12 @@
 					"description": "Eliminates Slime Block transparency"
 				},
 				{
+					"id": "desaturated_dark_oak",
+					"name": "Desaturated Dark Oak",
+					"description": "Desaturates the color of Dark Oak wood",
+					"priority": 2
+				},
+				{
 					"id": "desaturated_resin",
 					"name": "Desaturated Resin",
 					"description": "Desaturates the color of all Resin blocks and items"
@@ -56,20 +62,14 @@
 					"description": "Desaturates the color of all Purpur blocks"
 				},
 				{
-					"id": "desaturated_dark_oak",
-					"name": "Desaturated Dark Oak",
-					"description": "Desaturates the color of all Dark Oak wood blocks",
-					"priority": 2
-				},
-				{
 					"id": "horizontal_nuggets",
 					"name": "Horizontal Nuggets",
-					"description": "Rotates Gold Nuggets to be consistent with the Iron Nugget"
+					"description": "Rotates Copper and Gold Nuggets to be consistent with the Iron Nugget"
 				},
 				{
 					"id": "vertical_nuggets",
 					"name": "Vertical Nuggets",
-					"description": "Rotates the Iron Nugget to be consistent with the Gold Nugget"
+					"description": "Rotates Copper and Iron Nuggets to be consistent with the Gold Nugget"
 				},
 				{
 					"id": "clean_wool",
@@ -989,7 +989,7 @@
 				{
 					"id": "visible_tripwires",
 					"name": "Visible Tripwires",
-					"description": "Makes tripwire a bright blue so you can easily see them"
+					"description": "Retextures tripwires to a glowing bright blue color so you can easily see them"
 				},
 				{
 					"id": "compass_lodestone",
@@ -1698,6 +1698,42 @@
 			]
 		},
 		{
+			"id": "gui/armor_bars",
+			"name": "GUI / Armor Bars",
+			"packs": [
+				{
+					"id": "leather_armor_bar",
+					"name": "Leather Armor Bar",
+					"description": ""
+				},
+				{
+					"id": "chainmail_armor_bar",
+					"name": "Chainmail Armor Bar",
+					"description": ""
+				},
+				{
+					"id": "copper_armor_bar",
+					"name": "Copper Armor Bar",
+					"description": ""
+				},
+				{
+					"id": "golden_armor_bar",
+					"name": "Golden Armor Bar",
+					"description": ""
+				},
+				{
+					"id": "diamond_armor_bar",
+					"name": "Diamond Armor Bar",
+					"description": ""
+				},
+				{
+					"id": "netherite_armor_bar",
+					"name": "Netherite Armor Bar",
+					"description": ""
+				}
+			]
+		},
+		{
 			"id": "gui/hotbar_selector",
 			"name": "GUI / Hotbar Selector",
 			"packs": [
@@ -1850,6 +1886,12 @@
 					"id": "spring_to_life_panorama",
 					"name": "Spring to Life Panorama",
 					"description": "Replaces the default Minecraft menu panorama with a 360° view of a forest and desert (from 1.21.70)"
+				},
+				{
+					"id": "happy_ghasts_panorama",
+					"name": "Happy Ghasts Panorama",
+					"description": "Replaces the default Minecraft menu panorama with a 360° view of Happy Ghasts flying around a valley! (from 1.21.90)"
+					
 				},
 				{
 					"id": "pale_garden_panorama",
@@ -2158,6 +2200,11 @@
 					"id": "legacy_bedrock_dried_kelp",
 					"name": "Legacy Bedrock Dried Kelp",
 					"description": "Gives the Dried Kelp item its texture from previous versions of Minecraft: Bedrock Edition"
+				},
+				{
+					"id": "old_dyes",
+					"name": "Old Dyes",
+					"description": "Reverts all dyes to their pre-1.21.100 textures"
 				}
 			]
 		},
@@ -2299,9 +2346,14 @@
 			"name": "World of Color",
 			"packs": [
 				{
-					"id": "unique_dyes",
-					"name": "Unique Dyes",
-					"description": "Adds variation to the dyes by making each one different"
+					"id": "alternate_dyes",
+					"name": "Alternate Dyes",
+					"description": "Retextures dyes to make them even more unique to each other"
+				},
+				{
+					"id": "paletteless_dyes",
+					"name": "Paletteless Dyes",
+					"description": "Removes the palettes from under all dyes"
 				}
 			]
 		},
@@ -2793,6 +2845,20 @@
 			]
 		},
 		{
+			"id": "extras/aesthetic/desaturated_dark_oak_hanging_sign_logs",
+			"combines": [
+				"aesthetic/desaturated_dark_oak",
+				"fixes_and_consistency/hanging_sign_logs"
+			]
+		},
+		{
+			"id": "extras/aesthetic/desaturated_dark_oak_glass_doors_and_trapdoors",
+			"combines": [
+				"aesthetic/desaturated_dark_oak",
+				"aesthetic/glass_doors_and_trapdoors"
+			]
+		},
+		{
 			"id": "extras/aesthetic/accurate_translucent_spyglass_overlay",
 			"combines": [
 				"aesthetic/accurate_spyglass",
@@ -3255,6 +3321,13 @@
 			]
 		},
 		{
+			"id": "extras/pixel_consistent/pixel_consistent_desaturated_dark_oak_signs",
+			"combines": [
+				"fixes_and_consistency/pixel_consistent_signs",
+				"aesthetic/desaturated_dark_oak"
+			]
+		},
+		{
 			"id": "extras/hunger_preview/apple_hunger_preview",
 			"combines": [
 				"utility/hunger_preview",
@@ -3479,6 +3552,21 @@
 			]
 		},
 		{
+			"id": "extras/planks/oarless_desaturated_dark_oak",
+			"combines": [
+				"retro/oarless_boats",
+				"aesthetic/desaturated_dark_oak"
+			]
+		},
+		{
+			"id": "extras/planks/oarless_old_desaturated_dark_oak",
+			"combines": [
+				"retro/oarless_boats",
+				"retro/old_planks",
+				"aesthetic/desaturated_dark_oak"
+			]
+		},
+		{
 			"id": "extras/fun/smiley_green_axolotl",
 			"combines": [
 				"fun/smiley_axolotls",
@@ -3658,6 +3746,13 @@
 			"combines": [
 				"parity/earth_wooly_cow",
 				"retro/snoutless_cows"
+			]
+		},
+		{
+			"id": "extras/dyes/paletteless_alternate_dyes",
+			"combines": [
+				"world_of_color/paletteless_dyes",
+				"world_of_color/alternate_dyes"
 			]
 		}
 	],
