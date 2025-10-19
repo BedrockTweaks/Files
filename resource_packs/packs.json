@@ -989,7 +989,7 @@
 				{
 					"id": "visible_tripwires",
 					"name": "Visible Tripwires",
-					"description": "Makes tripwire a bright blue so you can easily see them"
+					"description": "Retextures tripwires to a glowing bright blue color so you can easily see them"
 				},
 				{
 					"id": "compass_lodestone",
