@@ -128,20 +128,7 @@ right of the IDE.
 
 1. Copy the template from `templates/addon/` to `addons/<category>/<addon_name>/`
 2. Update `addons/<category>/package.json` to include the new addon in workspaces
-3. Create `addons/<category>/<addon_name>/package.json` using the graves example as reference:
-
-   ```json
-   {
-     "name": "@bedrock-tweaks/<addon_name>",
-     "version": "1.21.0-1.0.0",
-     "scripts": {
-       "build": "regolith run build",
-       "dev": "regolith watch",
-       "lint": "eslint ."
-     }
-   }
-   ```
-
+3. Update `addons/<category>/<addon_name>/package.json` using the graves example as reference:
 4. Update UUIDs, pack name, and descriptions in BP/RP manifest.json and config.json
 5. Update module versions in config.json and package.json as needed
 
@@ -180,10 +167,10 @@ Resource Pack JSON UI modifications for addons are not accepted at this moment.
 
 #### Technical Details
 
-- Addons should not have functions except for the ones the player runs to activate the different forms
-(functions are public and can be run by any player with operator permissions, having a player run a functions which they should not could possibly break the addon)
-- All settings and interactions should be in-game or in server forms opened by a single simple command or text message
-- Player should not be expected to run commands except for opening an ui
+- Addons should not have functions
+- All settings and interactions should be in-game or in server forms
+- Addons should have a basic `/bt:<addon_name> config` (TBD specifics discuss in discord) base command which should open a config server form
+- Addon could have extra commands for quick access if necesary for commodity (for example tpa) but prefer server forms, easier for normal users
 - The code in the template is an example it could be removed and changed as long as it follows the structure
 - Prefer interfaces to types.
 - Prefer functional programming over object-oriented programming.
