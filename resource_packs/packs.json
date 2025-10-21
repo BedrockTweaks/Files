@@ -1891,7 +1891,6 @@
 					"id": "happy_ghasts_panorama",
 					"name": "Happy Ghasts Panorama",
 					"description": "Replaces the default Minecraft menu panorama with a 360° view of Happy Ghasts flying around a valley! (from 1.21.90)"
-					
 				},
 				{
 					"id": "pale_garden_panorama",
@@ -3269,6 +3268,13 @@
 			"combines": [
 				"utility/visual_waxed_copper_items",
 				"aesthetic/alternate_cut_copper"
+			]
+		},
+		{
+			"id": "extras/utility/visual_waxed_glass_doors_and_trapdoors",
+			"combines": [
+				"utility/visual_waxed_copper_items",
+				"aesthetic/glass_doors_and_trapdoors"
 			]
 		},
 		{
