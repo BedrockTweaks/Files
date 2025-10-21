@@ -9,7 +9,8 @@
 				"fog_identifier": "bt:fog_semi_humid"
 			},
 			"minecraft:water_appearance": {
-				"surface_color": "#44AFF5"
+				"surface_color": "#44AFF5",
+				"surface_opacity": 0.4
 			},
 			"minecraft:dry_foliage_color": {
 				"color": "#7B5334"

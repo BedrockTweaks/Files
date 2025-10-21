@@ -9,7 +9,8 @@
 				"fog_identifier": "bt:fog_ice_mountains"
 			},
 			"minecraft:water_appearance": {
-				"surface_color": "#1156a7"
+				"surface_color": "#1156a7",
+				"surface_opacity": 0.4
 			},
 			"minecraft:atmosphere_identifier": {
 				"atmosphere_identifier": "minecraft:default_atmospherics"

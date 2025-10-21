@@ -10,7 +10,7 @@
 			},
 			"minecraft:water_appearance": {
 				"surface_color": "#02B0E5",
-				"surface_opacity": 0.55
+				"surface_opacity": 0.4
 			},
 			"minecraft:atmosphere_identifier": {
 				"atmosphere_identifier": "minecraft:warmish_atmospherics"

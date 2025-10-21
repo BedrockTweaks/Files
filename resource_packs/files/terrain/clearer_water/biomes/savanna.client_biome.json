@@ -9,7 +9,8 @@
 				"fog_identifier": "bt:fog_savanna"
 			},
 			"minecraft:water_appearance": {
-				"surface_color": "#2C8B9C"
+				"surface_color": "#2C8B9C",
+				"surface_opacity": 0.4
 			},
 			"minecraft:atmosphere_identifier": {
 				"atmosphere_identifier": "minecraft:warmish_atmospherics"
