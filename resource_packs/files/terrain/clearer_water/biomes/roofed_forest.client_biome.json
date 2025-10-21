@@ -28,6 +28,9 @@
 			},
 			"minecraft:grass_appearance": {
 				"grass_is_shaded": true
+			},
+			"minecraft:biome_music": {
+				"music_definition": "roofed_forest"
 			}
 		}
 	}
