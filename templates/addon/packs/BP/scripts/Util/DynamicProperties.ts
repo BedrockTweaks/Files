@@ -36,7 +36,7 @@ export function setProperties<
 	K extends Record<keyof T, string>
 >(to: World | Entity, enumType: K, propertyObject: T): void {
 	Object.entries(propertyObject).forEach(([key, value]: [string, PropertiesTypes]): void => {
-		const identifier: string = enumType[key as keyof T];
+		const identifier: string = enumType[key];
 
 		if (identifier) {
 			to.setDynamicProperty(identifier, value);

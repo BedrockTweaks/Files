@@ -5,6 +5,6 @@
  * It centralizes all model-related exports for easier import and management across different parts of the application.
  *
  * For more examples, refer to
- * @see addons/gameplay_changes/graves/packs/data/gametests/src/Models
+ * @see addons/files/gameplay_changes/graves/packs/BP/scripts/Models
  */
 export { ExampleEntityTypes } from './EntityTypes';

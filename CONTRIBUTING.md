@@ -170,7 +170,7 @@ Resource Pack JSON UI modifications for addons are not accepted at this moment.
 - Addons should not have functions
 - All settings and interactions should be in-game or in server forms
 - Addons should have a basic `/bt:<addon_name> config` (TBD specifics discuss in discord) base command which should open a config server form
-- Addon could have extra commands for quick access if necesary for commodity (for example tpa) but prefer server forms, easier for normal users
+- Addon could have extra commands for quick access if necessary for commodity (for example tpa) but prefer server forms, easier for normal users
 - The code in the template is an example it could be removed and changed as long as it follows the structure
 - Prefer interfaces to types.
 - Prefer functional programming over object-oriented programming.
@@ -187,7 +187,7 @@ When making an addon from the template you should look for these keys and replac
 <author name/username>
 <bp_uuid>
 <data_module_uuid>
-<scripting_module_uuid>
+<scripting_uuid>
 <rp_uuid>
 <resources_module_uuid>
 ```

@@ -30,7 +30,7 @@
 		{
 			"type": "script",
 			"language": "javascript",
-			"uuid": "<scripting-uuid>",
+			"uuid": "<scripting_uuid>",
 			"entry": "scripts/main.js",
 			"version": [
 				1,

@@ -37,7 +37,6 @@ This is a **Yarn 4 monorepo** where addons are managed as workspace packages and
 │   └── packs.json               # Addon catalog
 ├── resource_packs/              # Resource packs
 ├── crafting_tweaks/             # Crafting tweaks
-└── scripts/                     # Setup & maintenance
 ```
 
 ## License
