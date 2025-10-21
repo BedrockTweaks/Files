@@ -50,8 +50,8 @@ You can find the pack creators of the original [Vanilla Tweaks](https://vanillat
 abc55, WavePlayz, r4isen1920, randomityguy, LukasPlaysGames, TheBlueShadow and axialeaa for their contributions and ideas on some packs prior to the GitHub repository.
 <!-- readme: collaborators,contributors -start -->
 <table>
- <tbody>
-  <tr>
+	<tbody>
+		<tr>
             <td align="center">
                 <a href="https://github.com/drav0011">
                     <img src="https://avatars.githubusercontent.com/u/43525295?v=4" width="100;" alt="drav0011"/>
@@ -94,8 +94,8 @@ abc55, WavePlayz, r4isen1920, randomityguy, LukasPlaysGames, TheBlueShadow and a
                     <sub><b>Chi-a11y</b></sub>
                 </a>
             </td>
-  </tr>
-  <tr>
+		</tr>
+		<tr>
             <td align="center">
                 <a href="https://github.com/ZecaApelao">
                     <img src="https://avatars.githubusercontent.com/u/206439936?v=4" width="100;" alt="ZecaApelao"/>
@@ -131,7 +131,7 @@ abc55, WavePlayz, r4isen1920, randomityguy, LukasPlaysGames, TheBlueShadow and a
                     <sub><b>bedrocktweaksadmin</b></sub>
                 </a>
             </td>
-  </tr>
- <tbody>
+		</tr>
+	<tbody>
 </table>
 <!-- readme: collaborators,contributors -end -->
