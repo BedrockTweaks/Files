@@ -1,0 +1,26 @@
+{
+	"format_version": "1.21.0",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "bt:ui.ice_from_packed_ice"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"priority": -1,
+		"ingredients": [
+			{
+				"item": "minecraft:packed_ice"
+			}
+		],
+		"unlock": [
+			{
+				"item": "minecraft:packed_ice"
+			}
+		],
+		"result": {
+			"item": "minecraft:ice",
+			"count": 9
+		}
+	}
+}

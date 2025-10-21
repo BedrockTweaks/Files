@@ -1,0 +1,35 @@
+{
+	"compilerOptions": {
+		"target": "ES2023",
+		"module": "esnext",
+		"declaration": true,
+		"declarationMap": false,
+		"sourceMap": true,
+		"inlineSources": true,
+		"rootDir": "packs/BP/scripts",
+		"stripInternal": true,
+		"strict": true,
+		"moduleResolution": "bundler",
+		"esModuleInterop": true,
+		"forceConsistentCasingInFileNames": true,
+		"skipLibCheck": true,
+		"allowSyntheticDefaultImports": true,
+		"noImplicitAny": true,
+		"removeComments": true,
+		"preserveConstEnums": true,
+		"noImplicitReturns": true,
+		"allowJs": false,
+		"resolveJsonModule": true
+	},
+	"files": [
+		"packs/BP/scripts/main.ts"
+	],
+	"include": [
+		"packs/BP/scripts/**/*"
+	],
+	"exclude": [
+		"node_modules",
+		"**/__tests__/*",
+		"eslint.config.mjs"
+	]
+}

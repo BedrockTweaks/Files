@@ -1,0 +1,16 @@
+{
+	"version": "0.3.0",
+	"configurations": [
+		{
+			"type": "minecraft-js",
+			"request": "attach",
+			"sourceMapRoot": "${env:LOCALAPPDATA}/Packages/Microsoft.MinecraftUWP_8wekyb3d8bbwe/LocalState/games/com.mojang/development_behavior_packs/bedrock-tweaks/graves/scripts/",
+			"generatedSourceRoot": "${env:LOCALAPPDATA}/Packages/Microsoft.MinecraftUWP_8wekyb3d8bbwe/LocalState/games/com.mojang/development_behavior_packs/bedrock-tweaks/graves/scripts/",
+			"localRoot": "${workspaceFolder}/packs/BP/scripts/",
+			"name": "Debug with Minecraft",
+			"mode": "listen",
+			"port": 19144,
+			"targetModuleUuid": "da5802ff-6c19-46d8-a27a-1f717580968b"
+		}
+	]
+}

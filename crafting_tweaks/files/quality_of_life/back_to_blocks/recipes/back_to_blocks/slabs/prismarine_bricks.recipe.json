@@ -1,5 +1,5 @@
 {
-	"format_version": "1.21.0",
+	"format_version": "1.21.110",
 	"minecraft:recipe_shaped": {
 		"description": {
 			"identifier": "bt:bb.slabs.prismarine_bricks"
@@ -14,19 +14,16 @@
 		],
 		"key": {
 			"#": {
-				"item": "minecraft:stone_block_slab2",
-				"data": 4
+				"item": "minecraft:prismarine_brick_slab"
 			}
 		},
 		"unlock": [
 			{
-				"item": "minecraft:stone_block_slab2",
-				"data": 4
+				"item": "minecraft:prismarine_brick_slab"
 			}
 		],
 		"result": {
-			"item": "minecraft:prismarine",
-			"data": 2,
+			"item": "minecraft:prismarine_bricks",
 			"count": 1
 		}
 	}
