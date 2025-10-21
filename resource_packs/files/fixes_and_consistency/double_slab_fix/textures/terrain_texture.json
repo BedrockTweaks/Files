@@ -4,14 +4,11 @@
 	"padding": 8,
 	"num_mip_levels": 4,
 	"texture_data": {
-		"stone_slab_side_4": {
-			"textures": [
-				"textures/blocks/stonebrick_mossy",
-				"textures/blocks/quartz_block_bottom",
-				"textures/blocks/stone",
-				"textures/blocks/slab_sides/cut_sandstone_slab_side",
-				"textures/blocks/slab_sides/cut_red_sandstone_slab_side"
-			]
+		"cut_red_sandstone_double_slab": {
+			"textures": "textures/blocks/slab_sides/cut_red_sandstone_slab_side"
+		},
+		"cut_sandstone_double_slab": {
+			"textures": "textures/blocks/slab_sides/cut_sandstone_slab_side"
 		},
 		"polished_andesite_double_slab": {
 			"textures": "textures/blocks/slab_sides/polished_andesite_slab_side"
@@ -25,15 +22,6 @@
 		"prismarine_brick_double_slab": {
 			"textures": "textures/blocks/slab_sides/prismarine_brick_slab_side"
 		},
-		"sandstone_slab_side": {
-			"textures": "textures/blocks/slab_sides/sandstone_slab_side"
-		},
-		"red_sandstone_slab_side": {
-			"textures": "textures/blocks/slab_sides/red_sandstone_slab_side"
-		},
-		"quartz_slab_side": {
-			"textures": "textures/blocks/slab_sides/quartz_block_slab_side"
-		},
 		"polished_blackstone_double_slab": {
 			"textures": "textures/blocks/slab_sides/polished_blackstone_slab_side"
 		},
@@ -42,6 +30,15 @@
 		},
 		"polished_tuff_double_slab": {
 			"textures": "textures/blocks/slab_sides/polished_tuff_slab_side"
+		},
+		"quartz_double_slab": {
+			"textures": "textures/blocks/slab_sides/quartz_block_slab_side"
+		},
+		"red_sandstone_double_slab": {
+			"textures": "textures/blocks/slab_sides/red_sandstone_slab_side"
+		},
+		"sandstone_double_slab": {
+			"textures": "textures/blocks/slab_sides/sandstone_slab_side"
 		}
 	}
 }
