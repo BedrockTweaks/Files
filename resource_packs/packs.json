@@ -1891,7 +1891,6 @@
 					"id": "happy_ghasts_panorama",
 					"name": "Happy Ghasts Panorama",
 					"description": "Replaces the default Minecraft menu panorama with a 360° view of Happy Ghasts flying around a valley! (from 1.21.90)"
-					
 				},
 				{
 					"id": "pale_garden_panorama",
@@ -3290,6 +3289,13 @@
 			"combines": [
 				"unobtrusive/unobtrusive_rain",
 				"unobtrusive/unobtrusive_snow"
+			]
+		},
+		{
+			"id": "extras/unobtrusive/unobtrusive_java_boom",
+			"combines": [
+				"unobtrusive/unobtrusive_particles",
+				"parity/java_boom"
 			]
 		},
 		{
