@@ -480,7 +480,7 @@
 				{
 					"id": "variated_gravel",
 					"name": "Variated Gravel",
-					"description": "Gravel will be randomized using a selection of 16 textures"
+					"description": "Randomly rotates Gravel to break up ugly grid patterns"
 				},
 				{
 					"id": "variated_mycelium",
@@ -1891,7 +1891,6 @@
 					"id": "happy_ghasts_panorama",
 					"name": "Happy Ghasts Panorama",
 					"description": "Replaces the default Minecraft menu panorama with a 360° view of Happy Ghasts flying around a valley! (from 1.21.90)"
-					
 				},
 				{
 					"id": "pale_garden_panorama",
