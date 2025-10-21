@@ -1891,7 +1891,6 @@
 					"id": "happy_ghasts_panorama",
 					"name": "Happy Ghasts Panorama",
 					"description": "Replaces the default Minecraft menu panorama with a 360° view of Happy Ghasts flying around a valley! (from 1.21.90)"
-					
 				},
 				{
 					"id": "pale_garden_panorama",
@@ -2119,7 +2118,8 @@
 				{
 					"id": "old_spawn_eggs",
 					"name": "Old Spawn Eggs",
-					"description": "Reverts Spawn Eggs to their classic polka-dot textures"
+					"description": "Reverts Spawn Eggs to their classic polka-dot textures",
+					"priority": 1
 				},
 				{
 					"id": "snoutless_pigs",
@@ -2270,8 +2270,7 @@
 				{
 					"id": "stridey_striders",
 					"name": "Stridey Striders",
-					"description": "Awful pack that makes Striders look like Stridey, Sorry",
-					"priority": 1
+					"description": "Awful pack that makes Striders look like Stridey, Sorry"
 				},
 				{
 					"id": "emeralds_to_rubies",
