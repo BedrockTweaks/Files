@@ -1891,7 +1891,6 @@
 					"id": "happy_ghasts_panorama",
 					"name": "Happy Ghasts Panorama",
 					"description": "Replaces the default Minecraft menu panorama with a 360° view of Happy Ghasts flying around a valley! (from 1.21.90)"
-					
 				},
 				{
 					"id": "pale_garden_panorama",
@@ -2986,6 +2985,13 @@
 			"combines": [
 				"terrain/whiter_snow",
 				"terrain/lower_and_full_sides/full_snowy_grass_sides"
+			]
+		},
+		{
+			"id": "extras/gui/dark_numbered_hotbar",
+			"combines": [
+				"gui/dark_ui",
+				"gui/numbered_hotbar"
 			]
 		},
 		{
