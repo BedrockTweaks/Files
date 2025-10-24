@@ -3309,6 +3309,13 @@
 			]
 		},
 		{
+			"id": "extras/unobtrusive/unobtrusive_java_boom",
+			"combines": [
+				"unobtrusive/unobtrusive_particles",
+				"parity/java_boom"
+			]
+		},
+		{
 			"id": "extras/unobtrusive/accurate_unobtrusive_scaffolding",
 			"combines": [
 				"aesthetic/accurate_scaffolding",
