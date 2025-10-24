@@ -2007,6 +2007,11 @@
 					"id": "season_9",
 					"name": "Season 9",
 					"description": "Replaces the default Minecraft menu panorama with a 360° view of Xisuma's base from Hermitcraft Season 9"
+				},
+				{
+					"id": "season_10",
+					"name": "Season 10",
+					"description": "Replaces the default Minecraft menu panorama with a 360° view of Xisuma's base from Hermitcraft Season 10"
 				}
 			]
 		},
