@@ -3288,6 +3288,13 @@
 			]
 		},
 		{
+			"id": "extras/utility/visual_waxed_glass_doors_and_trapdoors",
+			"combines": [
+				"utility/visual_waxed_copper_items",
+				"aesthetic/glass_doors_and_trapdoors"
+			]
+		},
+		{
 			"id": "extras/utility/updated_directional_observers_texture",
 			"combines": [
 				"fixes_and_consistency/updated_observer_texture",
