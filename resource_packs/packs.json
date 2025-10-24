@@ -3765,6 +3765,13 @@
 			]
 		},
 		{
+			"id": "extras/mobs/dungeons_creepers_old_planks",
+			"combines": [
+				"parity/dungeons_creepers",
+				"retro/old_planks"
+			]
+		},
+		{
 			"id": "extras/dyes/paletteless_alternate_dyes",
 			"combines": [
 				"world_of_color/paletteless_dyes",
