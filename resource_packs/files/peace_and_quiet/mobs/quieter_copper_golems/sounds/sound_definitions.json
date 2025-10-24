@@ -1,0 +1,133 @@
+{
+	"format_version": "1.20.20",
+	"sound_definitions": {
+		"mob.copper_golem.spin": {
+			"sounds": [
+				{
+					"name": "sounds/mob/copper_golem/regular/spin1",
+					"volume": 0.05
+				},
+				{
+					"name": "sounds/mob/copper_golem/regular/spin2",
+					"volume": 0.05
+				},
+				{
+					"name": "sounds/mob/copper_golem/regular/spin3",
+					"volume": 0.05
+				},
+				{
+					"name": "sounds/mob/copper_golem/regular/spin4",
+					"volume": 0.05
+				},
+				{
+					"name": "sounds/mob/copper_golem/regular/spin5",
+					"volume": 0.05
+				},
+				{
+					"name": "sounds/mob/copper_golem/regular/spin6",
+					"volume": 0.05
+				},
+				{
+					"name": "sounds/mob/copper_golem/regular/spin7",
+					"volume": 0.05
+				}
+			]
+		},
+		"mob.copper_golem.weathered.spin": {
+			"sounds": [
+				{
+					"name": "sounds/mob/copper_golem/weathered/spin1",
+					"volume": 0.05
+				},
+				{
+					"name": "sounds/mob/copper_golem/weathered/spin2",
+					"volume": 0.05
+				},
+				{
+					"name": "sounds/mob/copper_golem/weathered/spin3",
+					"volume": 0.05
+				},
+				{
+					"name": "sounds/mob/copper_golem/weathered/spin4",
+					"volume": 0.05
+				},
+				{
+					"name": "sounds/mob/copper_golem/weathered/spin5",
+					"volume": 0.05
+				},
+				{
+					"name": "sounds/mob/copper_golem/weathered/spin6",
+					"volume": 0.05
+				},
+				{
+					"name": "sounds/mob/copper_golem/weathered/spin7",
+					"volume": 0.05
+				}
+			]
+		},
+		"mob.copper_golem.oxidized.spin": {
+			"sounds": [
+				{
+					"name": "sounds/mob/copper_golem/oxidized/spin1",
+					"volume": 0.05
+				},
+				{
+					"name": "sounds/mob/copper_golem/oxidized/spin2",
+					"volume": 0.05
+				},
+				{
+					"name": "sounds/mob/copper_golem/oxidized/spin3",
+					"volume": 0.05
+				},
+				{
+					"name": "sounds/mob/copper_golem/oxidized/spin4",
+					"volume": 0.05
+				},
+				{
+					"name": "sounds/mob/copper_golem/oxidized/spin5",
+					"volume": 0.05
+				},
+				{
+					"name": "sounds/mob/copper_golem/oxidized/spin6",
+					"volume": 0.05
+				},
+				{
+					"name": "sounds/mob/copper_golem/oxidized/spin7",
+					"volume": 0.05
+				}
+			]
+		},
+		"mob.copper_golem.chest_interaction.put_item": {
+			"sounds": [
+				{
+					"name": "sounds/mob/copper_golem/chest_interaction/put_item",
+					"volume": 0.05
+				}
+			]
+		},
+		"mob.copper_golem.chest_interaction.put_item_fail": {
+			"sounds": [
+				{
+					"name": "sounds/mob/copper_golem/chest_interaction/put_item_fail",
+					"volume": 0.05
+				}
+			]
+		},
+		"mob.copper_golem.chest_interaction.take_item": {
+			"sounds": [
+				{
+					"name": "sounds/mob/copper_golem/chest_interaction/take_item",
+					"volume": 0.05
+				}
+			]
+		},
+		"mob.copper_golem.chest_interaction.take_item_fail": {
+			"sounds": [
+				{
+					"name": "sounds/mob/copper_golem/chest_interaction/take_item_fail",
+					"volume": 0.05
+				}
+			]
+		}
+	}
+}
