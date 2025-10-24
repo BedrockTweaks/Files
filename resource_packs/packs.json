@@ -649,6 +649,11 @@
 					"description": "Decreases Chicken sounds by 95%"
 				},
 				{
+					"id": "quieter_copper_golems",
+					"name": "Quieter Copper Golems",
+					"description": "Decreases Copper Golem sounds by 95%"
+				},
+				{
 					"id": "quieter_cows",
 					"name": "Quieter Cows",
 					"description": "Decreases Cow and Mooshroom sounds by 95%"
@@ -1891,7 +1896,6 @@
 					"id": "happy_ghasts_panorama",
 					"name": "Happy Ghasts Panorama",
 					"description": "Replaces the default Minecraft menu panorama with a 360° view of Happy Ghasts flying around a valley! (from 1.21.90)"
-					
 				},
 				{
 					"id": "pale_garden_panorama",
@@ -2003,6 +2007,11 @@
 					"id": "season_9",
 					"name": "Season 9",
 					"description": "Replaces the default Minecraft menu panorama with a 360° view of Xisuma's base from Hermitcraft Season 9"
+				},
+				{
+					"id": "season_10",
+					"name": "Season 10",
+					"description": "Replaces the default Minecraft menu panorama with a 360° view of Xisuma's base from Hermitcraft Season 10"
 				}
 			]
 		},
