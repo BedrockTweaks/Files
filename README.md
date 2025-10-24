@@ -3,9 +3,11 @@
         height="130">
 </p>
 
+[![Better Stack Badge](https://uptime.betterstack.com/status-badges/v3/monitor/25yg7.svg)](https://uptime.betterstack.com/?utm_source=status_badge)
+
 # Files
 
-The packs source code and directory from https://bedrocktweaks.net
+The packs source code and directory from <https://bedrocktweaks.net>
 
 ## Contact
 
@@ -21,13 +23,27 @@ in or contributing to the project.
 
 For more detailed instructions, please refer to our [Contributing Guidelines](CONTRIBUTING.md).
 
-Note: not accepting Addons PR at the moment.
+### Project Structure
+
+This is a **Yarn 4 monorepo** where addons are managed as workspace packages and rest are static files:
+
+```md
+├── addons/                      # Yarn workspaces
+│   ├── package.json             # Root workspace
+│   ├── gameplay_changes/        # Category workspace
+│   │   ├── package.json         # Category-level workspace
+│   │   └── graves/              # Addon package
+│   │       └── package.json
+│   └── packs.json               # Addon catalog
+├── resource_packs/              # Resource packs
+├── crafting_tweaks/             # Crafting tweaks
+```
 
 ## License
 
 By contributing to Bedrock Tweaks, you agree that your contributions will be licensed under the [License](LICENSE).
 
-### Thanks to all the Contributors!
+### Thanks to all the Contributors
 
 You can find the pack creators of the original [Vanilla Tweaks](https://vanillatweaks.net) packs at the bottom of each respective section of their site.
 
@@ -65,17 +81,17 @@ abc55, WavePlayz, r4isen1920, randomityguy, LukasPlaysGames, TheBlueShadow and a
                 </a>
             </td>
             <td align="center">
-                <a href="https://github.com/Chi-a11y">
-                    <img src="https://avatars.githubusercontent.com/u/172836508?v=4" width="100;" alt="Chi-a11y"/>
-                    <br />
-                    <sub><b>Chi-a11y</b></sub>
-                </a>
-            </td>
-            <td align="center">
                 <a href="https://github.com/yzabeast1">
                     <img src="https://avatars.githubusercontent.com/u/78424865?v=4" width="100;" alt="yzabeast1"/>
                     <br />
                     <sub><b>yzabeast1</b></sub>
+                </a>
+            </td>
+            <td align="center">
+                <a href="https://github.com/Chi-a11y">
+                    <img src="https://avatars.githubusercontent.com/u/172836508?v=4" width="100;" alt="Chi-a11y"/>
+                    <br />
+                    <sub><b>Chi-a11y</b></sub>
                 </a>
             </td>
 		</tr>
@@ -99,6 +115,13 @@ abc55, WavePlayz, r4isen1920, randomityguy, LukasPlaysGames, TheBlueShadow and a
                     <img src="https://avatars.githubusercontent.com/u/77268603?v=4" width="100;" alt="MPAD2277"/>
                     <br />
                     <sub><b>MPAD2277</b></sub>
+                </a>
+            </td>
+            <td align="center">
+                <a href="https://github.com/daniswastaken">
+                    <img src="https://avatars.githubusercontent.com/u/143309460?v=4" width="100;" alt="daniswastaken"/>
+                    <br />
+                    <sub><b>daniswastaken</b></sub>
                 </a>
             </td>
             <td align="center">

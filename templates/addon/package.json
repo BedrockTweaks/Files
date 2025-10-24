@@ -1,0 +1,31 @@
+{
+	"name": "@bedrock-tweaks/<pack-name>",
+	"version": "<pack_version>",
+	"description": "<pack-description>",
+	"private": true,
+	"scripts": {
+		"regolith-install": "regolith install-all",
+		"build": "regolith run build",
+		"dev": "regolith watch",
+		"lint": "npx eslint ."
+	},
+	"dependencies": {
+		"@minecraft/common": "1.2.0",
+		"@minecraft/math": "2.2.11",
+		"@minecraft/server": "2.2.0",
+		"@minecraft/server-ui": "^2.0.0",
+		"@minecraft/vanilla-data": "1.21.114",
+		"@stylistic/eslint-config": "^1.1.0"
+	},
+	"devDependencies": {
+		"@eslint/js": "^9.38.0",
+		"@eslint/json": "^0.13.2",
+		"@stylistic/eslint-plugin": "^5.4.0",
+		"@typescript-eslint/eslint-plugin": "^8.46.1",
+		"@typescript-eslint/parser": "^8.46.1",
+		"eslint": "^9.38.0",
+		"eslint-plugin-minecraft-linting": "^2.0.10",
+		"typescript": "^5.9.3",
+		"typescript-eslint": "^8.46.1"
+	}
+}
