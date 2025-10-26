@@ -11,6 +11,9 @@
 			"minecraft:water_appearance": {
 				"surface_color": "#0056FF"
 			},
+			"minecraft:biome_music": {
+				"music_definition": "forest"
+			},
 			"minecraft:atmosphere_identifier": {
 				"atmosphere_identifier": "minecraft:default_atmospherics"
 			},
