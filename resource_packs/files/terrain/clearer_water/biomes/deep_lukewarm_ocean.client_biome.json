@@ -9,7 +9,8 @@
 				"fog_identifier": "bt:fog_deep_lukewarm_ocean"
 			},
 			"minecraft:water_appearance": {
-				"surface_color": "#0D96DB"
+				"surface_color": "#0D96DB",
+				"surface_opacity": 0.4
 			},
 			"minecraft:atmosphere_identifier": {
 				"atmosphere_identifier": "minecraft:warmish_atmospherics"
