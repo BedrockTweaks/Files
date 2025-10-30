@@ -2771,11 +2771,6 @@
 					"description": "Fixes the Blaze's rods' color on the bottom face"
 				},
 				{
-					"id": "brewing_stand_icons_fix",
-					"name": "Brewing Stand Icons Fix",
-					"description": "Removes the extra pixels on the Brewing Stand's potion slot icons"
-				},
-				{
 					"id": "nicer_fast_leaves",
 					"name": "Nicer Fast Leaves",
 					"description": "Replaces the random green parts in leaves to a darker green when having fancy leaves disabled"
@@ -3002,13 +2997,6 @@
 			"combines": [
 				"gui/dark_ui",
 				"gui/numbered_hotbar"
-			]
-		},
-		{
-			"id": "extras/gui/dark_brewing_stand_icons_fix",
-			"combines": [
-				"gui/dark_ui",
-				"fixes_and_consistency/brewing_stand_icons_fix"
 			]
 		},
 		{
