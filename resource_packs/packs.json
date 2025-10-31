@@ -513,6 +513,11 @@
 					"description": "Bookshelves will be randomized using a selection of 7 textures"
 				},
 				{
+					"id": "variated_carved_pumpkins",
+					"name": "Variated Carved Pumpkins",
+					"description": "Carved Pumpkin and Jack O' Lantern faces will be randomized using a selection of 26 textures. Textures are winners from the Vanilla Tweaks 2025 Pumpkin Carving Competition!"
+				},
+				{
 					"id": "variated_villagers",
 					"name": "Variated Villagers",
 					"description": "Adds varying skin tones to Villagers depending on their biome. Villagers in colder biomes have lighter skin tones and Villagers in hotter biomes have darker skin tones"
