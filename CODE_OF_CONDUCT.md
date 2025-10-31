@@ -34,8 +34,8 @@ This Code of Conduct applies both within project spaces and in public spaces whe
 
 ## Enforcement
 
-Instances of abusive, harassing, or otherwise unacceptable behavior may be reported by contacting administration team at contact@bedrocktweaks.net. All complaints will be reviewed and investigated and will result in a response that is deemed necessary and appropriate to the circumstances. The administration team is obligated to maintain confidentiality with regard to the report of an incident.
+Instances of abusive, harassing, or otherwise unacceptable behavior may be reported by contacting administration team at <contact@bedrocktweaks.net>. All complaints will be reviewed and investigated and will result in a response that is deemed necessary and appropriate to the circumstances. The administration team is obligated to maintain confidentiality with regard to the report of an incident.
 
 ## Attribution
 
-This Code of Conduct is adapted from the [Contributor Covenant](https://www.contributor-covenant.org), version 1.4, available at https://www.contributor-covenant.org/version/1/4/code-of-conduct.html
+This Code of Conduct is adapted from the [Contributor Covenant](https://www.contributor-covenant.org), version 1.4, available at <https://www.contributor-covenant.org/version/1/4/code-of-conduct.html>

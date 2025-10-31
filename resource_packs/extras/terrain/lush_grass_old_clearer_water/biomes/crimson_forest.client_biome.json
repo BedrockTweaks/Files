@@ -1,20 +1,29 @@
 {
-	"format_version": "1.21.70",
+	"format_version": "1.21.120",
 	"minecraft:client_biome": {
 		"description": {
-			"identifier": "crimson_forest"
+			"identifier": "minecraft:crimson_forest"
 		},
 		"components": {
 			"minecraft:fog_appearance": {
 				"fog_identifier": "bt:fog_crimson_forest"
 			},
 			"minecraft:water_appearance": {
-				"surface_color": "#0056FF"
+				"surface_color": "#0056FF",
+				"surface_opacity": 0.4
 			},
 			"minecraft:ambient_sounds": {
-				"addition": "ambient.crimson_forest.additions",
+				"addition": {
+					"asset": "ambient.crimson_forest.additions",
+					"chance": 0.0111
+				},
 				"loop": "ambient.crimson_forest.loop",
-				"mood": "ambient.crimson_forest.mood"
+				"mood": "ambient.crimson_forest.mood",
+				"underwater_addition": {
+					"asset": "ambient.underwater.additions",
+					"chance": 0.01
+				},
+				"underwater_loop": "ambient.underwater.loop"
 			},
 			"minecraft:atmosphere_identifier": {
 				"atmosphere_identifier": "minecraft:crimson_forest_atmospherics"
@@ -27,6 +36,12 @@
 			},
 			"minecraft:water_identifier": {
 				"water_identifier": "minecraft:default_water"
+			},
+			"minecraft:precipitation": {
+				"red_spores": 0.25
+			},
+			"minecraft:biome_music": {
+				"music_definition": "crimson_forest"
 			}
 		}
 	}

@@ -1,5 +1,5 @@
 {
-	"format_version": "1.21.0",
+	"format_version": "1.21.110",
 	"minecraft:recipe_shaped": {
 		"description": {
 			"identifier": "bt:ms.smooth_sandstone_stairs"
@@ -15,14 +15,12 @@
 		],
 		"key": {
 			"#": {
-				"item": "minecraft:sandstone",
-				"data": 3
+				"item": "minecraft:smooth_sandstone"
 			}
 		},
 		"unlock": [
 			{
-				"item": "minecraft:sandstone",
-				"data": 3
+				"item": "minecraft:smooth_sandstone"
 			}
 		],
 		"result": {

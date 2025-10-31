@@ -46,6 +46,12 @@
 					"description": "Eliminates Slime Block transparency"
 				},
 				{
+					"id": "desaturated_dark_oak",
+					"name": "Desaturated Dark Oak",
+					"description": "Desaturates the color of Dark Oak wood",
+					"priority": 2
+				},
+				{
 					"id": "desaturated_resin",
 					"name": "Desaturated Resin",
 					"description": "Desaturates the color of all Resin blocks and items"
@@ -56,20 +62,14 @@
 					"description": "Desaturates the color of all Purpur blocks"
 				},
 				{
-					"id": "desaturated_dark_oak",
-					"name": "Desaturated Dark Oak",
-					"description": "Desaturates the color of all Dark Oak wood blocks",
-					"priority": 2
-				},
-				{
 					"id": "horizontal_nuggets",
 					"name": "Horizontal Nuggets",
-					"description": "Rotates Gold Nuggets to be consistent with the Iron Nugget"
+					"description": "Rotates Copper and Gold Nuggets to be consistent with the Iron Nugget"
 				},
 				{
 					"id": "vertical_nuggets",
 					"name": "Vertical Nuggets",
-					"description": "Rotates the Iron Nugget to be consistent with the Gold Nugget"
+					"description": "Rotates Copper and Iron Nuggets to be consistent with the Gold Nugget"
 				},
 				{
 					"id": "clean_wool",
@@ -358,77 +358,77 @@
 			]
 		},
 		{
-			"id": "terrain/lower_and_sides",
-			"name": "Terrain / Lower and Sides",
+			"id": "terrain/lower_and_full_sides",
+			"name": "Terrain / Lower and Full Sides",
 			"packs": [
 				{
-					"id": "lower_grass",
-					"name": "Lower Grass",
+					"id": "lower_grass_sides",
+					"name": "Lower Grass Sides",
 					"description": "Lowers the sides of Grass Blocks to provide a smoother and greener landscape"
 				},
 				{
-					"id": "grass_sides",
-					"name": "Grass Sides",
+					"id": "full_grass_sides",
+					"name": "Full Grass Sides",
 					"description": "Completely covers the sides of Grass Blocks to provide a smoother and greener landscape"
 				},
 				{
-					"id": "lower_mycelium",
-					"name": "Lower Mycelium",
-					"description": "Lowers the sides of Mycelium Blocks to provide a smoother and mushroomier landscape"
-				},
-				{
-					"id": "mycelium_sides",
-					"name": "Mycelium Sides",
-					"description": "Completely covers the sides of Mycelium Blocks to provide a smoother and mushroomier landscape"
-				},
-				{
-					"id": "lower_grass_paths",
-					"name": "Lower Grass Paths",
-					"description": "Lowers the sides of Path Blocks to provide a smoother-looking pathway"
-				},
-				{
-					"id": "grass_path_sides",
-					"name": "Grass Path Sides",
-					"description": "Completely covers the sides of Path Blocks to provide a smoother-looking pathway"
-				},
-				{
-					"id": "lower_podzol",
-					"name": "Lower Podzol",
-					"description": "Lowers the sides of Podzol Blocks to provide a smoother and more consistent landscape"
-				},
-				{
-					"id": "podzol_sides",
-					"name": "Podzol Sides",
-					"description": "Completely covers the sides of Podzol Blocks to provide a smoother and more consistent landscape"
-				},
-				{
-					"id": "lower_snow",
-					"name": "Lower Snow",
+					"id": "lower_snowy_grass_sides",
+					"name": "Lower Snowy Grass Sides",
 					"description": "Lowers the sides of Grass Blocks to provide a smoother and whiter snowy landscape"
 				},
 				{
-					"id": "snow_sides",
-					"name": "Snow Sides",
+					"id": "full_snowy_grass_sides",
+					"name": "Full Snowy Grass Sides",
 					"description": "Completely covers the sides of Grass Blocks to provide a smoother and whiter snowy landscape"
 				},
 				{
-					"id": "lower_crimson_nylium",
-					"name": "Lower Crimson Nylium",
+					"id": "lower_mycelium_sides",
+					"name": "Lower Mycelium Sides",
+					"description": "Lowers the sides of Mycelium Blocks to provide a smoother and mushroomier landscape"
+				},
+				{
+					"id": "full_mycelium_sides",
+					"name": "Full Mycelium Sides",
+					"description": "Completely covers the sides of Mycelium Blocks to provide a smoother and mushroomier landscape"
+				},
+				{
+					"id": "lower_dirt_path_sides",
+					"name": "Lower Dirt Path Sides",
+					"description": "Lowers the sides of Path Blocks to provide a smoother-looking pathway"
+				},
+				{
+					"id": "full_dirt_path_sides",
+					"name": "Full Dirt Path Sides",
+					"description": "Completely covers the sides of Path Blocks to provide a smoother-looking pathway"
+				},
+				{
+					"id": "lower_podzol_sides",
+					"name": "Lower Podzol Sides",
+					"description": "Lowers the sides of Podzol Blocks to provide a smoother and more consistent landscape"
+				},
+				{
+					"id": "full_podzol_sides",
+					"name": "Full Podzol Sides",
+					"description": "Completely covers the sides of Podzol Blocks to provide a smoother and more consistent landscape"
+				},
+				{
+					"id": "lower_crimson_nylium_sides",
+					"name": "Lower Crimson Nylium Sides",
 					"description": "Lowers the sides of Crimson Nylium to provide a smoother and redder landscape"
 				},
 				{
-					"id": "crimson_nylium_sides",
-					"name": "Crimson Nylium Sides",
+					"id": "full_crimson_nylium_sides",
+					"name": "Full Crimson Nylium Sides",
 					"description": "Completely covers the sides of Crimson Nylium to provide a smoother and redder landscape"
 				},
 				{
-					"id": "lower_warped_nylium",
-					"name": "Lower Warped Nylium",
+					"id": "lower_warped_nylium_sides",
+					"name": "Lower Warped Nylium Sides",
 					"description": "Lowers the sides of Warped Nylium to provide a smoother and bluer landscape"
 				},
 				{
-					"id": "warped_nylium_sides",
-					"name": "Warped Nylium Sides",
+					"id": "full_warped_nylium_sides",
+					"name": "Full Warped Nylium Sides",
 					"description": "Completely covers the sides of Warped Nylium to provide a smoother and bluer landscape"
 				}
 			]
@@ -480,7 +480,7 @@
 				{
 					"id": "variated_gravel",
 					"name": "Variated Gravel",
-					"description": "Gravel will be randomized using a selection of 16 textures"
+					"description": "Randomly rotates Gravel to break up ugly grid patterns"
 				},
 				{
 					"id": "variated_mycelium",
@@ -511,6 +511,11 @@
 					"id": "variated_bookshelves",
 					"name": "Variated Bookshelves",
 					"description": "Bookshelves will be randomized using a selection of 7 textures"
+				},
+				{
+					"id": "variated_carved_pumpkins",
+					"name": "Variated Carved Pumpkins",
+					"description": "Carved Pumpkin and Jack O' Lantern faces will be randomized using a selection of 26 textures. Textures are winners from the Vanilla Tweaks 2025 Pumpkin Carving Competition!"
 				},
 				{
 					"id": "variated_villagers",
@@ -647,6 +652,11 @@
 					"id": "quieter_chickens",
 					"name": "Quieter Chickens",
 					"description": "Decreases Chicken sounds by 95%"
+				},
+				{
+					"id": "quieter_copper_golems",
+					"name": "Quieter Copper Golems",
+					"description": "Decreases Copper Golem sounds by 95%"
 				},
 				{
 					"id": "quieter_cows",
@@ -989,7 +999,7 @@
 				{
 					"id": "visible_tripwires",
 					"name": "Visible Tripwires",
-					"description": "Makes tripwire a bright blue so you can easily see them"
+					"description": "Retextures tripwires to a glowing bright blue color so you can easily see them"
 				},
 				{
 					"id": "compass_lodestone",
@@ -1698,6 +1708,42 @@
 			]
 		},
 		{
+			"id": "gui/armor_bars",
+			"name": "GUI / Armor Bars",
+			"packs": [
+				{
+					"id": "leather_armor_bar",
+					"name": "Leather Armor Bar",
+					"description": ""
+				},
+				{
+					"id": "chainmail_armor_bar",
+					"name": "Chainmail Armor Bar",
+					"description": ""
+				},
+				{
+					"id": "copper_armor_bar",
+					"name": "Copper Armor Bar",
+					"description": ""
+				},
+				{
+					"id": "golden_armor_bar",
+					"name": "Golden Armor Bar",
+					"description": ""
+				},
+				{
+					"id": "diamond_armor_bar",
+					"name": "Diamond Armor Bar",
+					"description": ""
+				},
+				{
+					"id": "netherite_armor_bar",
+					"name": "Netherite Armor Bar",
+					"description": ""
+				}
+			]
+		},
+		{
 			"id": "gui/hotbar_selector",
 			"name": "GUI / Hotbar Selector",
 			"packs": [
@@ -1852,6 +1898,11 @@
 					"description": "Replaces the default Minecraft menu panorama with a 360° view of a forest and desert (from 1.21.70)"
 				},
 				{
+					"id": "happy_ghasts_panorama",
+					"name": "Happy Ghasts Panorama",
+					"description": "Replaces the default Minecraft menu panorama with a 360° view of Happy Ghasts flying around a valley! (from 1.21.90)"
+				},
+				{
 					"id": "pale_garden_panorama",
 					"name": "Pale Garden Panorama",
 					"description": "Replaces the default Minecraft menu panorama with a 360° view of a Pale Garden (from 1.21.4)"
@@ -1961,6 +2012,11 @@
 					"id": "season_9",
 					"name": "Season 9",
 					"description": "Replaces the default Minecraft menu panorama with a 360° view of Xisuma's base from Hermitcraft Season 9"
+				},
+				{
+					"id": "season_10",
+					"name": "Season 10",
+					"description": "Replaces the default Minecraft menu panorama with a 360° view of Xisuma's base from Hermitcraft Season 10"
 				}
 			]
 		},
@@ -2077,7 +2133,8 @@
 				{
 					"id": "old_spawn_eggs",
 					"name": "Old Spawn Eggs",
-					"description": "Reverts Spawn Eggs to their classic polka-dot textures"
+					"description": "Reverts Spawn Eggs to their classic polka-dot textures",
+					"priority": 1
 				},
 				{
 					"id": "snoutless_pigs",
@@ -2158,6 +2215,11 @@
 					"id": "legacy_bedrock_dried_kelp",
 					"name": "Legacy Bedrock Dried Kelp",
 					"description": "Gives the Dried Kelp item its texture from previous versions of Minecraft: Bedrock Edition"
+				},
+				{
+					"id": "old_dyes",
+					"name": "Old Dyes",
+					"description": "Reverts all dyes to their pre-1.21.100 textures"
 				}
 			]
 		},
@@ -2223,8 +2285,7 @@
 				{
 					"id": "stridey_striders",
 					"name": "Stridey Striders",
-					"description": "Awful pack that makes Striders look like Stridey, Sorry",
-					"priority": 1
+					"description": "Awful pack that makes Striders look like Stridey, Sorry"
 				},
 				{
 					"id": "emeralds_to_rubies",
@@ -2299,9 +2360,14 @@
 			"name": "World of Color",
 			"packs": [
 				{
-					"id": "unique_dyes",
-					"name": "Unique Dyes",
-					"description": "Adds variation to the dyes by making each one different"
+					"id": "alternate_dyes",
+					"name": "Alternate Dyes",
+					"description": "Retextures dyes to make them even more unique to each other"
+				},
+				{
+					"id": "paletteless_dyes",
+					"name": "Paletteless Dyes",
+					"description": "Removes the palettes from under all dyes"
 				}
 			]
 		},
@@ -2710,11 +2776,6 @@
 					"description": "Fixes the Blaze's rods' color on the bottom face"
 				},
 				{
-					"id": "brewing_stand_icons_fix",
-					"name": "Brewing Stand Icons Fix",
-					"description": "Removes the extra pixels on the Brewing Stand's potion slot icons"
-				},
-				{
 					"id": "nicer_fast_leaves",
 					"name": "Nicer Fast Leaves",
 					"description": "Replaces the random green parts in leaves to a darker green when having fancy leaves disabled"
@@ -2790,6 +2851,20 @@
 			"combines": [
 				"aesthetic/desaturated_dark_oak",
 				"terrain/circular_log_tops"
+			]
+		},
+		{
+			"id": "extras/aesthetic/desaturated_dark_oak_hanging_sign_logs",
+			"combines": [
+				"aesthetic/desaturated_dark_oak",
+				"fixes_and_consistency/hanging_sign_logs"
+			]
+		},
+		{
+			"id": "extras/aesthetic/desaturated_dark_oak_glass_doors_and_trapdoors",
+			"combines": [
+				"aesthetic/desaturated_dark_oak",
+				"aesthetic/glass_doors_and_trapdoors"
 			]
 		},
 		{
@@ -2880,10 +2955,10 @@
 			]
 		},
 		{
-			"id": "extras/dirt/golden_savanna_grass_sides",
+			"id": "extras/dirt/golden_savanna_full_grass_sides",
 			"combines": [
 				"terrain/golden_savanna",
-				"terrain/lower_and_sides/grass_sides"
+				"terrain/lower_and_full_sides/full_grass_sides"
 			]
 		},
 		{
@@ -2894,39 +2969,39 @@
 			]
 		},
 		{
-			"id": "extras/dirt/lush_grass_sides",
+			"id": "extras/dirt/lush_full_grass_sides",
 			"combines": [
 				"terrain/lush_grass_all_round",
-				"terrain/lower_and_sides/grass_sides"
+				"terrain/lower_and_full_sides/full_grass_sides"
 			]
 		},
 		{
-			"id": "extras/dirt/golden_savanna_lush_grass_sides",
+			"id": "extras/dirt/golden_savanna_lush_full_grass_sides",
 			"combines": [
 				"terrain/golden_savanna",
 				"terrain/lush_grass_all_round",
-				"terrain/lower_and_sides/grass_sides"
+				"terrain/lower_and_full_sides/full_grass_sides"
 			]
 		},
 		{
-			"id": "extras/snow/whiter_lower_snow",
+			"id": "extras/snow/whiter_lower_snowy_grass_sides",
 			"combines": [
 				"terrain/whiter_snow",
-				"terrain/lower_and_sides/lower_snow"
+				"terrain/lower_and_full_sides/lower_snowy_grass_sides"
 			]
 		},
 		{
-			"id": "extras/snow/whiter_snow_sides",
+			"id": "extras/snow/whiter_full_snowy_grass_sides",
 			"combines": [
 				"terrain/whiter_snow",
-				"terrain/lower_and_sides/snow_sides"
+				"terrain/lower_and_full_sides/full_snowy_grass_sides"
 			]
 		},
 		{
-			"id": "extras/gui/dark_brewing_stand_icons_fix",
+			"id": "extras/gui/dark_numbered_hotbar",
 			"combines": [
 				"gui/dark_ui",
-				"fixes_and_consistency/brewing_stand_icons_fix"
+				"gui/numbered_hotbar"
 			]
 		},
 		{
@@ -2994,49 +3069,49 @@
 			]
 		},
 		{
-			"id": "extras/terrain/brighter_lower_crimson_nylium",
+			"id": "extras/terrain/brighter_lower_crimson_nylium_sides",
 			"combines": [
 				"terrain/brighter_nether",
-				"terrain/lower_and_sides/lower_crimson_nylium"
+				"terrain/lower_and_full_sides/lower_crimson_nylium_sides"
 			]
 		},
 		{
-			"id": "extras/terrain/brighter_lower_warped_nylium",
+			"id": "extras/terrain/brighter_lower_warped_nylium_sides",
 			"combines": [
 				"terrain/brighter_nether",
-				"terrain/lower_and_sides/lower_warped_nylium"
+				"terrain/lower_and_full_sides/lower_warped_nylium_sides"
 			]
 		},
 		{
-			"id": "extras/terrain/brighter_lower_crimson_warped_nylium",
+			"id": "extras/terrain/brighter_lower_crimson_warped_nylium_sides",
 			"combines": [
 				"terrain/brighter_nether",
-				"terrain/lower_and_sides/lower_crimson_nylium",
-				"terrain/lower_and_sides/lower_warped_nylium"
+				"terrain/lower_and_full_sides/lower_crimson_nylium_sides",
+				"terrain/lower_and_full_sides/lower_warped_nylium_sides"
 			]
 		},
 		{
-			"id": "extras/terrain/brighter_black_nether_bricks_lower_crimson_nylium",
+			"id": "extras/terrain/brighter_black_nether_bricks_lower_crimson_nylium_sides",
 			"combines": [
 				"terrain/brighter_nether",
-				"terrain/lower_and_sides/lower_crimson_nylium",
+				"terrain/lower_and_full_sides/lower_crimson_nylium_sides",
 				"aesthetic/black_nether_bricks"
 			]
 		},
 		{
-			"id": "extras/terrain/brighter_black_nether_bricks_lower_warped_nylium",
+			"id": "extras/terrain/brighter_black_nether_bricks_lower_warped_nylium_sides",
 			"combines": [
 				"terrain/brighter_nether",
-				"terrain/lower_and_sides/lower_warped_nylium",
+				"terrain/lower_and_full_sides/lower_warped_nylium_sides",
 				"aesthetic/black_nether_bricks"
 			]
 		},
 		{
-			"id": "extras/terrain/brighter_black_nether_bricks_lower_crimson_warped_nylium",
+			"id": "extras/terrain/brighter_black_nether_bricks_lower_crimson_warped_nylium_sides",
 			"combines": [
 				"terrain/brighter_nether",
-				"terrain/lower_and_sides/lower_crimson_nylium",
-				"terrain/lower_and_sides/lower_warped_nylium",
+				"terrain/lower_and_full_sides/lower_crimson_nylium_sides",
+				"terrain/lower_and_full_sides/lower_warped_nylium_sides",
 				"aesthetic/black_nether_bricks"
 			]
 		},
@@ -3206,6 +3281,13 @@
 			]
 		},
 		{
+			"id": "extras/utility/visual_waxed_glass_doors_and_trapdoors",
+			"combines": [
+				"utility/visual_waxed_copper_items",
+				"aesthetic/glass_doors_and_trapdoors"
+			]
+		},
+		{
 			"id": "extras/utility/updated_directional_observers_texture",
 			"combines": [
 				"fixes_and_consistency/updated_observer_texture",
@@ -3224,6 +3306,13 @@
 			"combines": [
 				"unobtrusive/unobtrusive_rain",
 				"unobtrusive/unobtrusive_snow"
+			]
+		},
+		{
+			"id": "extras/unobtrusive/unobtrusive_java_boom",
+			"combines": [
+				"unobtrusive/unobtrusive_particles",
+				"parity/java_boom"
 			]
 		},
 		{
@@ -3252,6 +3341,13 @@
 			"combines": [
 				"fixes_and_consistency/pixel_consistent_signs",
 				"aesthetic/smoother_warped_planks"
+			]
+		},
+		{
+			"id": "extras/pixel_consistent/pixel_consistent_desaturated_dark_oak_signs",
+			"combines": [
+				"fixes_and_consistency/pixel_consistent_signs",
+				"aesthetic/desaturated_dark_oak"
 			]
 		},
 		{
@@ -3479,6 +3575,21 @@
 			]
 		},
 		{
+			"id": "extras/planks/oarless_desaturated_dark_oak",
+			"combines": [
+				"retro/oarless_boats",
+				"aesthetic/desaturated_dark_oak"
+			]
+		},
+		{
+			"id": "extras/planks/oarless_old_desaturated_dark_oak",
+			"combines": [
+				"retro/oarless_boats",
+				"retro/old_planks",
+				"aesthetic/desaturated_dark_oak"
+			]
+		},
+		{
 			"id": "extras/fun/smiley_green_axolotl",
 			"combines": [
 				"fun/smiley_axolotls",
@@ -3658,6 +3769,20 @@
 			"combines": [
 				"parity/earth_wooly_cow",
 				"retro/snoutless_cows"
+			]
+		},
+		{
+			"id": "extras/mobs/dungeons_creepers_old_planks",
+			"combines": [
+				"parity/dungeons_creepers",
+				"retro/old_planks"
+			]
+		},
+		{
+			"id": "extras/dyes/paletteless_alternate_dyes",
+			"combines": [
+				"world_of_color/paletteless_dyes",
+				"world_of_color/alternate_dyes"
 			]
 		}
 	],

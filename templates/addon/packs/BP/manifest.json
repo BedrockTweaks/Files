@@ -1,9 +1,10 @@
 {
 	"format_version": 2,
 	"header": {
-		"name": "<pack_name> - <pack_category> - Bedrock Tweaks",
-		"description": "<description>",
+		"name": "pack.name",
+		"description": "pack.description",
 		"uuid": "<bp_uuid>",
+		"pack_scope": "world",
 		"version": [
 			1,
 			0,
@@ -25,6 +26,17 @@
 				0,
 				0
 			]
+		},
+		{
+			"type": "script",
+			"language": "javascript",
+			"uuid": "<scripting_uuid>",
+			"entry": "scripts/main.js",
+			"version": [
+				1,
+				0,
+				0
+			]
 		}
 	],
 	"dependencies": [
@@ -38,6 +50,7 @@
 		}
 	],
 	"metadata": {
+		"product_type": "addon",
 		"authors": [
 			"Vanilla Tweaks",
 			"Bedrock Tweaks",

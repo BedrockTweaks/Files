@@ -1,5 +1,5 @@
 {
-	"format_version": "1.21.0",
+	"format_version": "1.21.110",
 	"minecraft:recipe_shaped": {
 		"description": {
 			"identifier": "minecraft:piston"
@@ -21,10 +21,10 @@
 				"tag": "minecraft:stone_crafting_materials"
 			},
 			"C": {
-				"item": "iron_ingot"
+				"item": "minecraft:iron_ingot"
 			},
 			"D": {
-				"item": "redstone"
+				"item": "minecraft:redstone"
 			}
 		},
 		"unlock": [
@@ -33,7 +33,7 @@
 			}
 		],
 		"result": {
-			"item": "piston",
+			"item": "minecraft:piston",
 			"count": 1,
 			"data": 1
 		}
