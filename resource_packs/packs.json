@@ -937,6 +937,15 @@
 					}
 				},
 				{
+					"id": "fullbright",
+					"name": "Fullbright",
+					"description": "Increases brightness everywhere, as if its always daytime, including in caves and areas with low light levels",
+					"message": {
+						"text": "This will ONLY work when Graphics Mode is set to <b>Vibrant Visuals</b> in Video Settings",
+						"severity": "warn"
+					}
+				},
+				{
 					"id": "fully_aged_crop_marker",
 					"name": "Fully Aged Crop Marker",
 					"description": "Adds an animated glint to all fully developed crops"
