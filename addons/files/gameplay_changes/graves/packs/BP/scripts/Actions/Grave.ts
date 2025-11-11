@@ -32,8 +32,6 @@ export const spawnGrave = (player: Player): void => {
 	if (!isInventoryEmpty(player)) {
 		const gravesSettings: GravesSettings = getSettings();
 
-		// TODO if bottom of the world and empty below place on top of cobble slab
-		// TODO After spawning tp grave 1 block up to be able to do above
 		const graveLocation: Vector3 = calculateGraveLocation(player.location, player.dimension);
 
 		// Spawn grave entity at the determined location
@@ -321,32 +319,65 @@ const setGraveProperties = (player: Player, grave: Entity, itemCount: number): v
  * @returns {Vector3} - A valid grave location.
  */
 const calculateGraveLocation = (initialLocation: Vector3, dimension: Dimension): Vector3 => {
-	// Define spawning limits
-	const minLimit: Vector3 = Vector3Utils.floor({
-		x: initialLocation.x - 1,
+	const flooredInitialLocation: Vector3 = Vector3Utils.floor(initialLocation);
+	
+	// Define spawning limits (search nearby blocks)
+	const minLimit: Vector3 = {
+		x: flooredInitialLocation.x - 1,
 		y: dimension.heightRange.min,
-		z: initialLocation.z - 1,
-	});
-	const maxLimit: Vector3 = Vector3Utils.floor({
-		x: initialLocation.x + 1,
+		z: flooredInitialLocation.z - 1,
+	};
+	const maxLimit: Vector3 = {
+		x: flooredInitialLocation.x + 1,
 		y: dimension.heightRange.max,
-		z: initialLocation.z + 1,
-	});
+		z: flooredInitialLocation.z + 1,
+	};
 
-	if (!isValidSpawnBlock(initialLocation, dimension)) {
-		for (let y: number = minLimit.y; y <= maxLimit.y; y++) {
+	// Try to find a valid spawn location starting from the initial location
+	if (isValidSpawnBlock(flooredInitialLocation, dimension)) {
+		return flooredInitialLocation;
+	}
+
+	// Search nearby blocks, prioritizing closer Y levels first
+	for (let yOffset: number = 0; yOffset <= maxLimit.y - flooredInitialLocation.y; yOffset++) {
+		for (const ySign of [0, 1, -1]) {
+			const y: number = flooredInitialLocation.y + yOffset * ySign;
+			
+			if (y < minLimit.y || y > maxLimit.y) {
+				continue;
+			}
+
 			for (let x: number = minLimit.x; x <= maxLimit.x; x++) {
 				for (let z: number = minLimit.z; z <= maxLimit.z; z++) {
-					if (isValidSpawnBlock({ x, y, z }, dimension)) {
-						return { x, y, z };
+					const testLocation: Vector3 = { x, y, z };
+					
+					if (isValidSpawnBlock(testLocation, dimension)) {
+						// Special handling for bottom of the world
+						if (y === dimension.heightRange.min) {
+							// Try to place a support block below the grave
+							const belowLocation: Vector3 = { x, y: y - 1, z };
+							const blockBelow: Block | undefined = dimension.getBlock(belowLocation);
+							
+							// If there's empty space below at the minimum height, place a cobblestone slab
+							if (blockBelow && blockBelow.matches(MinecraftBlockTypes.Air)) {
+								try {
+									blockBelow.setType(MinecraftBlockTypes.CobblestoneSlab);
+								} catch {
+									// If we can't place a support block, continue searching
+									continue;
+								}
+							}
+						}
+						
+						return testLocation;
 					}
 				}
 			}
 		}
 	}
 
-	// If initialLocation is valid or no other valid location found, return the initial location clamped to world limits
-	return Vector3Utils.floor({ ...initialLocation, y: clampNumber(initialLocation.y, dimension.heightRange.min, dimension.heightRange.max) });
+	// If no valid location found, return the initial location clamped to world limits
+	return { ...flooredInitialLocation, y: clampNumber(flooredInitialLocation.y, dimension.heightRange.min, dimension.heightRange.max) };
 };
 
 /**
@@ -366,10 +397,82 @@ const calculateGraveLocation = (initialLocation: Vector3, dimension: Dimension):
  */
 const isValidSpawnBlock = (location: Vector3, dimension: Dimension): boolean => {
 	const validBlocks: MinecraftBlockTypes[] = [
+		// Air and fluids
 		MinecraftBlockTypes.Air,
 		MinecraftBlockTypes.Water,
-		// TODO add "pass-through" blocks like tall grass, flowers, kelp...
-		// TODO check flowing_water
+		MinecraftBlockTypes.FlowingWater,
+		
+		// Vegetation - Grass types
+		MinecraftBlockTypes.ShortGrass,
+		MinecraftBlockTypes.TallGrass,
+		MinecraftBlockTypes.ShortDryGrass,
+		MinecraftBlockTypes.TallDryGrass,
+		MinecraftBlockTypes.Fern,
+		MinecraftBlockTypes.LargeFern,
+		
+		// Aquatic plants
+		MinecraftBlockTypes.Seagrass,
+		MinecraftBlockTypes.Kelp,
+		
+		// Flowers
+		MinecraftBlockTypes.Dandelion,
+		MinecraftBlockTypes.Poppy,
+		MinecraftBlockTypes.Allium,
+		MinecraftBlockTypes.AzureBluet,
+		MinecraftBlockTypes.RedTulip,
+		MinecraftBlockTypes.OrangeTulip,
+		MinecraftBlockTypes.WhiteTulip,
+		MinecraftBlockTypes.PinkTulip,
+		MinecraftBlockTypes.OxeyeDaisy,
+		MinecraftBlockTypes.Cornflower,
+		MinecraftBlockTypes.LilyOfTheValley,
+		MinecraftBlockTypes.WitherRose,
+		MinecraftBlockTypes.Sunflower,
+		MinecraftBlockTypes.Lilac,
+		MinecraftBlockTypes.RoseBush,
+		MinecraftBlockTypes.Peony,
+		MinecraftBlockTypes.Torchflower,
+		MinecraftBlockTypes.PitcherPlant,
+		
+		// Saplings
+		MinecraftBlockTypes.OakSapling,
+		MinecraftBlockTypes.SpruceSapling,
+		MinecraftBlockTypes.BirchSapling,
+		MinecraftBlockTypes.JungleSapling,
+		MinecraftBlockTypes.AcaciaSapling,
+		MinecraftBlockTypes.DarkOakSapling,
+		MinecraftBlockTypes.CherrySapling,
+		MinecraftBlockTypes.PaleOakSapling,
+		
+		// Small plants and decorations
+		MinecraftBlockTypes.Deadbush,
+		MinecraftBlockTypes.Waterlily,
+		MinecraftBlockTypes.BrownMushroom,
+		MinecraftBlockTypes.RedMushroom,
+		MinecraftBlockTypes.CrimsonFungus,
+		MinecraftBlockTypes.WarpedFungus,
+		MinecraftBlockTypes.CrimsonRoots,
+		MinecraftBlockTypes.WarpedRoots,
+		
+		// Vines
+		MinecraftBlockTypes.Vine,
+		MinecraftBlockTypes.TwistingVines,
+		MinecraftBlockTypes.WeepingVines,
+		MinecraftBlockTypes.CaveVines,
+		MinecraftBlockTypes.CaveVinesBodyWithBerries,
+		MinecraftBlockTypes.CaveVinesHeadWithBerries,
+		
+		// Fire and light sources
+		MinecraftBlockTypes.Fire,
+		MinecraftBlockTypes.SoulFire,
+		MinecraftBlockTypes.Torch,
+		MinecraftBlockTypes.SoulTorch,
+		MinecraftBlockTypes.RedstoneTorch,
+		MinecraftBlockTypes.UnlitRedstoneTorch,
+		
+		// Snow
+		MinecraftBlockTypes.SnowLayer,
+		MinecraftBlockTypes.PowderSnow,
 	];
 
 	const block: Block | undefined = dimension.getBlock(location);
