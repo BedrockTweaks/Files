@@ -44,6 +44,18 @@ export const spawnGrave = (player: Player): void => {
 
 		setGraveProperties(player, graveEntity, itemCount);
 
+		// Spawn visual effects for grave placement
+		try {
+			player.dimension.spawnParticle('minecraft:villager_happy', {
+				x: graveLocation.x,
+				y: graveLocation.y + 1,
+				z: graveLocation.z,
+			});
+			player.playSound('block.end_portal_frame.fill', { location: graveLocation, volume: 0.5 });
+		} catch {
+			// Particle effects are optional, continue if they fail
+		}
+
 		// Notify player of grave location if enabled in settings
 		if (gravesSettings.graveLocating) {
 			player.sendMessage({
@@ -64,20 +76,67 @@ export const spawnGrave = (player: Player): void => {
  * @param {Entity} grave - The grave entity to be opened.
  */
 export const openGrave = (player: Player, grave: Entity): void => {
+	// Validate grave entity
+	if (!grave || !grave.isValid) {
+		player.sendMessage({ translate: 'bt.graves.invalid_grave' });
+		return;
+	}
+
 	const gravesSettings: GravesSettings = getSettings();
 	const graveProperties: Grave = getProperties(grave, GraveDynamicProperties);
 
-	if (player.id === graveProperties.ownerId || gravesSettings.graveRobbing) {
-		transferItemsToPlayer(player, grave);
-
-		if (gravesSettings.xpCollection) {
-			player.addExperience(graveProperties.playerExperience);
-		}
-
-		removeGraveFromList(grave);
-
-		grave.remove();
+	// Check if player is the owner or if grave robbing is enabled
+	const isOwner: boolean = player.id === graveProperties.ownerId;
+	
+	if (!isOwner && !gravesSettings.graveRobbing) {
+		// Notify player they can't open this grave
+		player.sendMessage({
+			rawtext: [{
+				translate: 'bt.graves.cannot_open',
+				with: [graveProperties.ownerName],
+			}],
+		});
+		return;
 	}
+
+	// Transfer items and experience
+	transferItemsToPlayer(player, grave);
+
+	if (gravesSettings.xpCollection) {
+		player.addExperience(graveProperties.playerExperience);
+	}
+
+	// Notify player of successful retrieval
+	if (isOwner) {
+		player.sendMessage({
+			rawtext: [{
+				translate: 'bt.graves.retrieved_own',
+				with: [graveProperties.itemCount.toString(), graveProperties.playerExperience.toString()],
+			}],
+		});
+	} else {
+		player.sendMessage({
+			rawtext: [{
+				translate: 'bt.graves.retrieved_other',
+				with: [graveProperties.ownerName, graveProperties.itemCount.toString()],
+			}],
+		});
+	}
+
+	// Play sound and particle effects for feedback
+	try {
+		player.dimension.spawnParticle('minecraft:totem_particle', {
+			x: grave.location.x,
+			y: grave.location.y + 1,
+			z: grave.location.z,
+		});
+		player.playSound('random.levelup', { volume: 0.5 });
+	} catch {
+		// Effects are optional, continue if they fail
+	}
+
+	removeGraveFromList(grave);
+	grave.remove();
 };
 
 /**
@@ -94,6 +153,7 @@ export const forceOpenGrave = (grave: Entity): void => {
 
 /**
  * Checks all graves in all dimensions and removes those that have exceeded the despawn time.
+ * Shows warning particles when graves are close to despawning.
  */
 export const tickGrave = (): void => {
 	const gravesSettings: GravesSettings = getSettings();
@@ -104,12 +164,31 @@ export const tickGrave = (): void => {
 			const currentDimensionGraves: Entity[] = dimension.getEntities({ type: GravesEntityTypes.Grave });
 
 			currentDimensionGraves.forEach((grave: Entity): void => {
+				if (!grave || !grave.isValid) {
+					return;
+				}
+
 				const graveProperties: Grave = getProperties<Grave>(grave, GraveDynamicProperties);
+				const timeSinceSpawn: number = (system.currentTick - graveProperties.spawnTime) / TicksPerSecond;
 
-				if ((system.currentTick - graveProperties.spawnTime) / TicksPerSecond > gravesSettings.despawnTime) {
+				if (timeSinceSpawn > gravesSettings.despawnTime) {
+					// Grave has expired, remove it
 					removeGraveFromList(grave);
-
 					grave.remove();
+				} else if (timeSinceSpawn > gravesSettings.despawnTime - 60) {
+					// Grave is about to despawn (less than 60 seconds remaining)
+					// Show warning particles every 5 seconds
+					if (Math.floor(timeSinceSpawn) % 5 === 0) {
+						try {
+							dimension.spawnParticle('minecraft:critical_hit_emitter', {
+								x: grave.location.x,
+								y: grave.location.y + 1.5,
+								z: grave.location.z,
+							});
+						} catch {
+							// Particle effects are optional
+						}
+					}
 				}
 			});
 		});
