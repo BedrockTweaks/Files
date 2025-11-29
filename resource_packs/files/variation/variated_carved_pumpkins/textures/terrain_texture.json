@@ -1,0 +1,177 @@
+{
+	"resource_pack_name": "vanilla",
+	"texture_name": "atlas.terrain",
+	"padding": 8,
+	"num_mip_levels": 4,
+	"texture_data": {
+		"pumpkin_face": {
+			"textures": [
+				{
+					"variations": [
+						{
+							"path": "textures/blocks/pumpkin_face_off"
+						},
+						{
+							"path": "textures/blocks/carved_pumpkin/agonizing_guy"
+						},
+						{
+							"path": "textures/blocks/carved_pumpkin/arthropod"
+						},
+						{
+							"path": "textures/blocks/carved_pumpkin/creeper"
+						},
+						{
+							"path": "textures/blocks/carved_pumpkin/cross_eyed"
+						},
+						{
+							"path": "textures/blocks/carved_pumpkin/eeyees"
+						},
+						{
+							"path": "textures/blocks/carved_pumpkin/evil"
+						},
+						{
+							"path": "textures/blocks/carved_pumpkin/fake_angry"
+						},
+						{
+							"path": "textures/blocks/carved_pumpkin/goofy"
+						},
+						{
+							"path": "textures/blocks/carved_pumpkin/green_guy1"
+						},
+						{
+							"path": "textures/blocks/carved_pumpkin/green_guy2"
+						},
+						{
+							"path": "textures/blocks/carved_pumpkin/guardian"
+						},
+						{
+							"path": "textures/blocks/carved_pumpkin/happy_ghast"
+						},
+						{
+							"path": "textures/blocks/carved_pumpkin/hysterical"
+						},
+						{
+							"path": "textures/blocks/carved_pumpkin/ioblackshaw2"
+						},
+						{
+							"path": "textures/blocks/carved_pumpkin/jackenstein"
+						},
+						{
+							"path": "textures/blocks/carved_pumpkin/little_angry_guy"
+						},
+						{
+							"path": "textures/blocks/carved_pumpkin/long_boy"
+						},
+						{
+							"path": "textures/blocks/carved_pumpkin/loopy_ghost"
+						},
+						{
+							"path": "textures/blocks/carved_pumpkin/melting"
+						},
+						{
+							"path": "textures/blocks/carved_pumpkin/mischievous"
+						},
+						{
+							"path": "textures/blocks/carved_pumpkin/mr_jive"
+						},
+						{
+							"path": "textures/blocks/carved_pumpkin/orange_cat_activities"
+						},
+						{
+							"path": "textures/blocks/carved_pumpkin/surveyor"
+						},
+						{
+							"path": "textures/blocks/carved_pumpkin/taking_too_long"
+						},
+						{
+							"path": "textures/blocks/carved_pumpkin/unease"
+						}
+					]
+				},
+				{
+					"variations": [
+						{
+							"path": "textures/blocks/pumpkin_face_on"
+						},
+						{
+							"path": "textures/blocks/jack_o_lantern/agonizing_guy"
+						},
+						{
+							"path": "textures/blocks/jack_o_lantern/arthropod"
+						},
+						{
+							"path": "textures/blocks/jack_o_lantern/creeper"
+						},
+						{
+							"path": "textures/blocks/jack_o_lantern/cross_eyed"
+						},
+						{
+							"path": "textures/blocks/jack_o_lantern/eeyees"
+						},
+						{
+							"path": "textures/blocks/jack_o_lantern/evil"
+						},
+						{
+							"path": "textures/blocks/jack_o_lantern/fake_angry"
+						},
+						{
+							"path": "textures/blocks/jack_o_lantern/goofy"
+						},
+						{
+							"path": "textures/blocks/jack_o_lantern/green_guy1"
+						},
+						{
+							"path": "textures/blocks/jack_o_lantern/green_guy2"
+						},
+						{
+							"path": "textures/blocks/jack_o_lantern/guardian"
+						},
+						{
+							"path": "textures/blocks/jack_o_lantern/happy_ghast"
+						},
+						{
+							"path": "textures/blocks/jack_o_lantern/hysterical"
+						},
+						{
+							"path": "textures/blocks/jack_o_lantern/ioblackshaw2"
+						},
+						{
+							"path": "textures/blocks/jack_o_lantern/jackenstein"
+						},
+						{
+							"path": "textures/blocks/jack_o_lantern/little_angry_guy"
+						},
+						{
+							"path": "textures/blocks/jack_o_lantern/long_boy"
+						},
+						{
+							"path": "textures/blocks/jack_o_lantern/loopy_ghost"
+						},
+						{
+							"path": "textures/blocks/jack_o_lantern/melting"
+						},
+						{
+							"path": "textures/blocks/jack_o_lantern/mischievous"
+						},
+						{
+							"path": "textures/blocks/jack_o_lantern/mr_jive"
+						},
+						{
+							"path": "textures/blocks/jack_o_lantern/orange_cat_activities"
+						},
+						{
+							"path": "textures/blocks/jack_o_lantern/surveyor"
+						},
+						{
+							"path": "textures/blocks/jack_o_lantern/taking_too_long"
+						},
+						{
+							"path": "textures/blocks/jack_o_lantern/unease"
+						}
+					]
+				},
+				"textures/blocks/pumpkin_side"
+			]
+		}
+	}
+}
