@@ -1,0 +1,59 @@
+{
+    "individual_event_sounds": {
+        "events": {
+            "chest.open": {
+                "volume": 0.025
+            },
+            "chest.close": {
+                "volume": 0.025
+            }
+        }
+    },
+    "block_sounds": {
+        "copper_chest": {
+            "base": "copper",
+            "events": {
+                "chest.closed": {
+                    "pitch": [0.9, 1.0],
+                    "sound": "block.copper_chest.closed"
+                },
+                "chest.open": {
+                    "pitch": [0.9, 1.0],
+                    "sound": "block.copper_chest.open"
+                }
+            },
+            "pitch": 1.0,
+            "volume": 0.05
+        },
+        "copper_chest_oxidized": {
+            "base": "copper",
+            "events": {
+                "chest.closed": {
+                    "pitch": [0.9, 1.0],
+                    "sound": "block.copper_chest.oxidized.closed"
+                },
+                "chest.open": {
+                    "pitch": [0.9, 1.0],
+                    "sound": "block.copper_chest.oxidized.open"
+                }
+            },
+            "pitch": 1.0,
+            "volume": 0.05
+        },
+        "copper_chest_weathered": {
+            "base": "copper",
+            "events": {
+                "chest.closed": {
+                    "pitch": [0.9, 1.0],
+                    "sound": "block.copper_chest.weathered.closed"
+                },
+                "chest.open": {
+                    "pitch": [0.9, 1.0],
+                    "sound": "block.copper_chest.weathered.open"
+                }
+            },
+            "pitch": 1.0,
+            "volume": 0.05
+        }
+    }
+}

@@ -539,6 +539,11 @@
 					"description": "Decreases thunder sounds by 95%"
 				},
 				{
+					"id": "quieter_chests",
+					"name": "Quieter Chests",
+					"description": "Decreases Chest and Copper Chest sounds by 95%"
+				},
+				{
 					"id": "quieter_explosions",
 					"name": "Quieter Explosions",
 					"description": "Decreases explosion sounds by 95%"
