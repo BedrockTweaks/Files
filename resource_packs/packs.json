@@ -1535,6 +1535,11 @@
 					"description": ""
 				},
 				{
+					"id": "disability",
+					"name": "Disability",
+					"description": ""
+				},
+				{
 					"id": "ally",
 					"name": "Ally",
 					"description": ""
