@@ -1,0 +1,14 @@
+{
+  "default_styled_button_text_label@common_buttons.new_ui_binding_button_label": {
+    "color": [0.996, 0.996, 0.996],
+    "modifications": [
+      {
+        "array_name": "bindings",
+        "operation": "remove",
+        "where": {
+          "binding_name_override": "#color"
+        }
+      }
+    ]
+  }
+}
