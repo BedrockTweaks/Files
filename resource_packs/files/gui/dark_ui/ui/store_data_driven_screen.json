@@ -1,12 +1,14 @@
 {
-	"color": "$light_button_default_text_color",
-	"modifications": [
-		{
-			"array_name": "bindings",
-			"operation": "remove",
-			"where": {
-				"binding_name_override": "#color"
-			}
-		}
-	]
+  "default_styled_button_text_label": {
+    "color": "$light_button_default_text_color",
+    "modifications": [
+      {
+        "array_name": "bindings",
+        "operation": "remove",
+        "where": {
+          "binding_name_override": "#color"
+        }
+      }
+    ]
+  }
 }
