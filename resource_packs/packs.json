@@ -2230,6 +2230,11 @@
 					"id": "old_dyes",
 					"name": "Old Dyes",
 					"description": "Reverts all dyes to their pre-1.21.100 textures"
+				},
+				{
+					"id": "pre_26_0_stripped_spruce",
+					"name": "Pre-26.0 Stripped Spruce",
+					"description": "Reverts stripped spruce to use its pre-26.0 texture"
 				}
 			]
 		},
