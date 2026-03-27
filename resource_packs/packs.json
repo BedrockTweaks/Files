@@ -179,6 +179,12 @@
 					"description": "Removes the brown overlay from Leather Armor"
 				},
 				{
+					"id": "plain_wolf_armor",
+					"name": "Plain Wolf Armor",
+					"description": "Dyeing Wolf Armor covers the whole armor instead of only small sections."
+
+				},
+				{
 					"id": "golden_crown",
 					"name": "Golden Crown",
 					"description": "Retextures the Golden Helmet to look like a crown"
