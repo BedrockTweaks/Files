@@ -30,6 +30,12 @@
 					},
 					{
 						"path": "textures/blocks/cobblestone/7"
+					},
+					{
+						"path": "textures/blocks/cobblestone/8"
+					},
+					{
+						"path": "textures/blocks/cobblestone/9"
 					}
 				]
 			}
@@ -60,6 +66,12 @@
 					},
 					{
 						"path": "textures/blocks/cobblestone/7"
+					},
+					{
+						"path": "textures/blocks/cobblestone/8"
+					},
+					{
+						"path": "textures/blocks/cobblestone/9"
 					}
 				]
 			}
@@ -90,6 +102,12 @@
 					},
 					{
 						"path": "textures/blocks/cobblestone/7"
+					},
+					{
+						"path": "textures/blocks/cobblestone/8"
+					},
+					{
+						"path": "textures/blocks/cobblestone/9"
 					}
 				]
 			}
