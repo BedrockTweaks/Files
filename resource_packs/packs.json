@@ -2701,6 +2701,11 @@
 					"description": "Adds some extra pixels to the Redstone Wire texture to make sure the whole line joins up"
 				},
 				{
+					"id":"consistent_chicken_egg_names",
+					"name": "Consistent Chicken Egg Names",
+					"description":"Renames Chicken Eggs to be consistent with other mob eggs, specifying the mob it is from.<br><br>''Egg'' -> ''White Chicken Egg''<br>''Brown Egg'' -> ''Brown Chicken Egg''<br>''Blue Egg'' -> ''Blue Chicken Egg''"
+				},
+				{
 					"id": "consistent_blank_decorated_pot",
 					"name": "Consistent Blank Decorated Pot",
 					"description": "Adds the gold trim to blank decorated pot sides to match the decorated sides"
