@@ -724,6 +724,11 @@
 					"description": "Decreases Ghast and Happy Ghast sounds by 95%"
 				},
 				{
+					"id": "quieter_happy_ghasts",
+					"name": "Quieter Happy Ghasts",
+					"description": "Decreases Happy Ghast sounds by 95%"
+				},
+				{
 					"id": "quieter_goats",
 					"name": "Quieter Goats",
 					"description": "Decreases Goat sounds by 95%"
