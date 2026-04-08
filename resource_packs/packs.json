@@ -721,7 +721,7 @@
 				{
 					"id": "quieter_ghasts",
 					"name": "Quieter Ghasts",
-					"description": "Decreases Ghast and Happy Ghast sounds by 95%"
+					"description": "Decreases Ghast sounds by 95%"
 				},
 				{
 					"id": "quieter_happy_ghasts",
