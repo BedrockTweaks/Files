@@ -1,0 +1,38 @@
+{
+	"format_version": "1.8.0",
+	"render_controllers": {
+		"controller.render.villager_v3_base": {
+			"arrays": {
+				"textures": {
+					"Array.biomes_skin": [
+						"Texture.plains_villager",
+						"Texture.desert_villager",
+						"Texture.jungle_villager",
+						"Texture.savanna_villager",
+						"Texture.snow_villager",
+						"Texture.swamp_villager",
+						"Texture.taiga_villager"
+					],
+					"Array.biomes_skin_baby": [
+						"Texture.plains_villager_baby",
+						"Texture.desert_villager_baby",
+						"Texture.jungle_villager_baby",
+						"Texture.savanna_villager_baby",
+						"Texture.snow_villager_baby",
+						"Texture.swamp_villager_baby",
+						"Texture.taiga_villager_baby"
+					]
+				}
+			},
+			"geometry": "query.is_baby ? Geometry.baby : Geometry.default",
+			"materials": [
+				{
+					"*": "Material.default"
+				}
+			],
+			"textures": [
+				"query.is_baby ? Array.biomes_skin_baby[query.mark_variant] : Array.biomes_skin[query.mark_variant]"
+			]
+		}
+	}
+}
