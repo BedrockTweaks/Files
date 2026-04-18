@@ -455,7 +455,7 @@
 				{
 					"id": "variated_cobblestone",
 					"name": "Variated Cobblestone",
-					"description": "Cobblestone will be randomized using a selection of 7 textures"
+					"description": "Cobblestone will be randomized using a selection of 10 textures"
 				},
 				{
 					"id": "variated_moss",
