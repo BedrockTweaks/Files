@@ -490,7 +490,7 @@
 				{
 					"id": "variated_mycelium",
 					"name": "Variated Mycelium",
-					"description": "Mycelium will be randomized using a selection of 16 textures"
+					"description": "Mycelium will be randomized using a selection of 6 textures"
 				},
 				{
 					"id": "variated_planks",
@@ -500,12 +500,12 @@
 				{
 					"id": "variated_stone",
 					"name": "Variated Stone",
-					"description": "Stone will be randomized using a selection of 16 textures"
+					"description": "Stone will be randomized using a selection of 6 textures"
 				},
 				{
 					"id": "variated_terracotta",
 					"name": "Variated Terracotta",
-					"description": "Terracotta will be randomized using a selection of 16 textures"
+					"description": "Terracotta will be randomized using a selection of 7 textures"
 				},
 				{
 					"id": "variated_unpolished_stones",
