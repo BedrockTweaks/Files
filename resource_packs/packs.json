@@ -455,7 +455,7 @@
 				{
 					"id": "variated_cobblestone",
 					"name": "Variated Cobblestone",
-					"description": "Cobblestone will be randomized using a selection of 7 textures"
+					"description": "Cobblestone will be randomized using a selection of 10 textures"
 				},
 				{
 					"id": "variated_moss",
@@ -480,7 +480,7 @@
 				{
 					"id": "variated_end_stone",
 					"name": "Variated End Stone",
-					"description": "End Stone will be randomized using a selection of 5 textures"
+					"description": "End Stone will be randomized using a selection of 9 textures"
 				},
 				{
 					"id": "variated_gravel",
