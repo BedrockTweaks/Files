@@ -25,20 +25,20 @@
 				],
 				"facing_camera_mode": "lookat_xyz",
 				"uv": {
-					"texture_width": 32,
-					"texture_height": 512,
+					"texture_width": 128,
+					"texture_height": 128,
 					"flipbook": {
 						"base_UV": [
 							0,
-							0
+							80
 						],
 						"size_UV": [
-							32,
-							32
+							8,
+							8
 						],
 						"step_UV": [
-							0,
-							32
+							8,
+							0
 						],
 						"frames_per_second": 8,
 						"max_frame": 16,

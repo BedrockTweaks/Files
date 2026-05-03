@@ -2,9 +2,6 @@
 	"format_version": "1.20.20",
 	"sound_definitions": {
 		"mob.camel.sit": {
-			"category": "neutral",
-			"max_distance": null,
-			"min_distance": null,
 			"sounds": [
 				{
 					"name": "sounds/mob/camel/sit1",
@@ -25,9 +22,6 @@
 			]
 		},
 		"mob.camel.stand": {
-			"category": "neutral",
-			"max_distance": null,
-			"min_distance": null,
 			"sounds": [
 				{
 					"name": "sounds/mob/camel/stand1",
@@ -52,9 +46,6 @@
 			]
 		},
 		"mob.camel.dash": {
-			"category": "neutral",
-			"max_distance": null,
-			"min_distance": null,
 			"sounds": [
 				{
 					"name": "sounds/mob/camel/dash1",

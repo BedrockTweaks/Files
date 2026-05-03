@@ -24,6 +24,15 @@
 					},
 					{
 						"path": "textures/blocks/end_stone/5"
+					},
+					{
+						"path": "textures/blocks/end_stone/6"
+					},
+					{
+						"path": "textures/blocks/end_stone/7"
+					},
+					{
+						"path": "textures/blocks/end_stone/8"
 					}
 				]
 			}

@@ -2,9 +2,6 @@
 	"format_version": "1.20.20",
 	"sound_definitions": {
 		"mob.armadillo.roll": {
-			"category": "neutral",
-			"max_distance": null,
-			"min_distance": null,
 			"sounds": [
 				{
 					"name": "sounds/mob/armadillo/roll1",
@@ -25,9 +22,6 @@
 			]
 		},
 		"mob.armadillo.land": {
-			"category": "neutral",
-			"max_distance": null,
-			"min_distance": null,
 			"sounds": [
 				{
 					"name": "sounds/mob/armadillo/land1",
@@ -48,9 +42,6 @@
 			]
 		},
 		"mob.armadillo.peek": {
-			"category": "neutral",
-			"max_distance": null,
-			"min_distance": null,
 			"sounds": [
 				{
 					"name": "sounds/mob/armadillo/peek",
@@ -59,9 +50,6 @@
 			]
 		},
 		"mob.armadillo.unroll_start": {
-			"category": "neutral",
-			"max_distance": null,
-			"min_distance": null,
 			"sounds": [
 				{
 					"name": "sounds/mob/armadillo/unroll_start",
@@ -70,9 +58,6 @@
 			]
 		},
 		"mob.armadillo.unroll_finish": {
-			"category": "neutral",
-			"max_distance": null,
-			"min_distance": null,
 			"sounds": [
 				{
 					"name": "sounds/mob/armadillo/unroll_finish1",

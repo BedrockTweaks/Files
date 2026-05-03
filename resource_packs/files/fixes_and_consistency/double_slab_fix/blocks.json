@@ -1,5 +1,21 @@
 {
 	"format_version": "1.21.40",
+	"cut_red_sandstone_double_slab": {
+		"sound": "stone",
+		"textures": {
+			"down": "cut_red_sandstone_slab_top",
+			"side": "cut_red_sandstone_double_slab",
+			"up": "cut_red_sandstone_slab_top"
+		}
+	},
+	"cut_sandstone_double_slab": {
+		"sound": "stone",
+		"textures": {
+			"down": "cut_sandstone_slab_top",
+			"side": "cut_sandstone_double_slab",
+			"up": "cut_sandstone_slab_top"
+		}
+	},
 	"polished_andesite_double_slab": {
 		"sound": "stone",
 		"textures": {
@@ -55,6 +71,30 @@
 			"down": "polished_tuff",
 			"side": "polished_tuff_double_slab",
 			"up": "polished_tuff"
+		}
+	},
+	"quartz_double_slab": {
+		"sound": "stone",
+		"textures": {
+			"down": "quartz_slab_bottom",
+			"side": "quartz_double_slab",
+			"up": "quartz_slab_top"
+		}
+	},
+	"red_sandstone_double_slab": {
+		"sound": "stone",
+		"textures": {
+			"down": "red_sandstone_slab_bottom",
+			"side": "red_sandstone_double_slab",
+			"up": "red_sandstone_slab_top"
+		}
+	},
+	"sandstone_double_slab": {
+		"sound": "stone",
+		"textures": {
+			"down": "sandstone_slab_bottom",
+			"side": "sandstone_double_slab",
+			"up": "sandstone_slab_top"
 		}
 	}
 }

@@ -25,36 +25,6 @@
 						},
 						{
 							"path": "textures/blocks/mycelium_top/5"
-						},
-						{
-							"path": "textures/blocks/mycelium_top/6"
-						},
-						{
-							"path": "textures/blocks/mycelium_top/7"
-						},
-						{
-							"path": "textures/blocks/mycelium_top/8"
-						},
-						{
-							"path": "textures/blocks/mycelium_top/9"
-						},
-						{
-							"path": "textures/blocks/mycelium_top/10"
-						},
-						{
-							"path": "textures/blocks/mycelium_top/11"
-						},
-						{
-							"path": "textures/blocks/mycelium_top/12"
-						},
-						{
-							"path": "textures/blocks/mycelium_top/13"
-						},
-						{
-							"path": "textures/blocks/mycelium_top/14"
-						},
-						{
-							"path": "textures/blocks/mycelium_top/15"
 						}
 					]
 				},
@@ -77,39 +47,36 @@
 						},
 						{
 							"path": "textures/blocks/mycelium_top/5"
-						},
-						{
-							"path": "textures/blocks/mycelium_top/6"
-						},
-						{
-							"path": "textures/blocks/mycelium_top/7"
-						},
-						{
-							"path": "textures/blocks/mycelium_top/8"
-						},
-						{
-							"path": "textures/blocks/mycelium_top/9"
-						},
-						{
-							"path": "textures/blocks/mycelium_top/10"
-						},
-						{
-							"path": "textures/blocks/mycelium_top/11"
-						},
-						{
-							"path": "textures/blocks/mycelium_top/12"
-						},
-						{
-							"path": "textures/blocks/mycelium_top/13"
-						},
-						{
-							"path": "textures/blocks/mycelium_top/14"
-						},
-						{
-							"path": "textures/blocks/mycelium_top/15"
 						}
 					]
 				}
+			]
+		},
+		"mycelium_side": {
+			"textures": [
+				{
+					"variations": [
+						{
+							"path": "textures/blocks/mycelium_side/0"
+						},
+						{
+							"path": "textures/blocks/mycelium_side/1"
+						},
+						{
+							"path": "textures/blocks/mycelium_side/2"
+						},
+						{
+							"path": "textures/blocks/mycelium_side/3"
+						},
+						{
+							"path": "textures/blocks/mycelium_side/4"
+						},
+						{
+							"path": "textures/blocks/mycelium_side/5"
+						}
+					]
+				},
+				"textures/blocks/grass_side_snowed"
 			]
 		}
 	}

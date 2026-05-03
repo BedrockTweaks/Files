@@ -1,0 +1,20 @@
+{
+	"entity_sounds": {
+		"entities": {
+			"copper_golem": {
+				"variants": {
+					"key": "query.property('minecraft:oxidation_level')",
+					"map": {
+						"oxidized": {
+							"volume": 0.05
+						},
+						"weathered": {
+							"volume": 0.05
+						}
+					}
+				},
+				"volume": 0.05
+			}
+		}
+	}
+}
