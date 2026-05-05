@@ -6,11 +6,18 @@
 			"textures": {
 				"plains_villager": "textures/entity/villager2/villager",
 				"desert_villager": "textures/entity/villager2/villager_dark",
-				"jungle_villager": "textures/entity/villager2/villager_biracial_dark",
+				"jungle_villager": "textures/entity/villager2/villager_middark",
 				"savanna_villager": "textures/entity/villager2/villager_dark",
 				"snow_villager": "textures/entity/villager2/villager_light",
 				"swamp_villager": "textures/entity/villager2/villager",
-				"taiga_villager": "textures/entity/villager2/villager_biracial_light"
+				"taiga_villager": "textures/entity/villager2/villager_midlight",
+				"plains_villager_baby": "textures/entity/villager2/villager_baby",
+				"desert_villager_baby": "textures/entity/villager2/villager_baby_dark",
+				"jungle_villager_baby": "textures/entity/villager2/villager_baby_middark",
+				"savanna_villager_baby": "textures/entity/villager2/villager_baby_dark",
+				"snow_villager_baby": "textures/entity/villager2/villager_baby_light",
+				"swamp_villager_baby": "textures/entity/villager2/villager_baby",
+				"taiga_villager_baby": "textures/entity/villager2/villager_baby_midlight"
 			}
 		}
 	}
