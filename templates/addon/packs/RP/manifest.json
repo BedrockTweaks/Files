@@ -13,8 +13,8 @@
 		// Update to latest minecraft release
 		"min_engine_version": [
 			1,
-			21,
-			50
+			26,
+			1
 		]
 	},
 	"modules": [
