@@ -149,12 +149,6 @@
 					"version": "1.0.0"
 				},
 				{
-					"id": "craftable_name_tags",
-					"name": "Craftable Name Tags",
-					"description": "Allows you to craft Name Tags",
-					"version": "1.0.0"
-				},
-				{
 					"id": "craftable_blackstone",
 					"name": "Craftable Blackstone",
 					"description": "Allows you to craft Blackstone or Polished Blackstone, using Basalt & Coal/Charcoal",
