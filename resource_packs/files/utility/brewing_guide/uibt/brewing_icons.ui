@@ -1,228 +1,5 @@
 {
 	"namespace": "bt_brewing_icons",
-	"single_item_cell": {
-		"type": "panel",
-		"layer": 5,
-		"$item_texture|default": "textures/misc/missing_texture",
-		"$image_size|default": [
-			16,
-			16
-		],
-		"size": [
-			18,
-			18
-		],
-		"controls": [
-			{
-				"background": {
-					"type": "image",
-					"layer": 6,
-					"texture": "textures/ui/cell_image_lock",
-					"size": [
-						18,
-						18
-					],
-					"offset": [
-						0,
-						0
-					],
-					"anchor_from": "center",
-					"anchor_to": "center"
-				}
-			},
-			{
-				"item@item_icon": {}
-			},
-			{
-				"hover_button@hover_button": {}
-			}
-		]
-	},
-	"multi_item_cell": {
-		"type": "panel",
-		"layer": 5,
-		"size": [
-			18,
-			144
-		],
-		"$background_size|default": [
-			18,
-			144
-		],
-		"controls": [
-			{
-				"background": {
-					"type": "image",
-					"layer": 6,
-					"texture": "textures/ui/cell_image_lock",
-					"size": "$background_size",
-					"offset": [
-						0,
-						18
-					],
-					"anchor_from": "center",
-					"anchor_to": "center"
-				}
-			}
-		]
-	},
-	"item_icon": {
-		"type": "image",
-		"layer": 10,
-		"texture": "$item_texture",
-		"size": "$image_size",
-		"offset": [
-			0,
-			0
-		],
-		"anchor_from": "center",
-		"anchor_to": "center"
-	},
-	"block_icon": {
-		"type": "custom",
-		"layer": 10,
-		"renderer": "inventory_item_renderer",
-		"size": "$image_size",
-		"offset": [
-			0,
-			0
-		],
-		"anchor_from": "center",
-		"anchor_to": "center",
-		"property_bag": {
-			"#item_id_aux": "$block_aux_id"
-		}
-	},
-	"multi_item_panel": {
-		"type": "panel",
-		"layer": 5,
-		"$item_texture|default": "textures/misc/missing_texture",
-		"$image_size|default": [
-			16,
-			16
-		],
-		"size": [
-			18,
-			18
-		],
-		"controls": [
-			{
-				"item@item_icon": {}
-			},
-			{
-				"hover_button@hover_button": {}
-			}
-		]
-	},
-	"multi_block_panel": {
-		"type": "panel",
-		"layer": 5,
-		"$block_aux_id|default": 16252928,
-		"$image_size|default": [
-			16,
-			16
-		],
-		"size": [
-			18,
-			18
-		],
-		"controls": [
-			{
-				"block@block_icon": {}
-			},
-			{
-				"hover_button@hover_button": {}
-			}
-		]
-	},
-	"hover_button@common.button": {
-		"layer": 15,
-		"$pressed_button_name": "by DrAv0011",
-		"size": [
-			18,
-			18
-		],
-		"sound_volume": 0.0,
-		"default_control": "",
-		"pressed_control": "",
-		"controls": [
-			{
-				"hover@common.empty_panel": {
-					"size": [
-						18,
-						18
-					],
-					"controls": [
-						{
-							"hover_text_image@bt_brewing_icons.hover_text_image": {}
-						},
-						{
-							"white_border@common.white_border_slot": {
-								"layer": 2,
-								"size": [
-									18,
-									18
-								]
-							}
-						}
-					]
-				}
-			}
-		]
-	},
-	"hover_text_image": {
-		"type": "image",
-		"allow_clipping": false,
-		"alpha": 1.0,
-		"texture": "textures/ui/purpleBorder",
-		"size": [
-			"100%c+8px",
-			"100%c+8px"
-		],
-		"anchor_from": "left_middle",
-		"anchor_to": "left_middle",
-		"$hover_offset|default": [
-			"-100%x",
-			0
-		],
-		"offset": "$hover_offset",
-		"layer": 25,
-		"controls": [
-			{
-				"hover_text_panel": {
-					"type": "panel",
-					"size": [
-						"100%cm - 1px",
-						9
-					],
-					"controls": [
-						{
-							"hover_text@hover_text": {
-								"text": "$hover_text"
-							}
-						}
-					]
-				}
-			}
-		]
-	},
-	"hover_text": {
-		"type": "label",
-		"offset": [
-			-0.5,
-			-1.5
-		],
-		"anchor_from": "top_left",
-		"anchor_to": "top_left",
-		"layer": 2,
-		"color": [
-			1.0,
-			1.0,
-			1.0
-		],
-		"$hover_text|default": "Unset",
-		"shadow": false
-	},
 	"left_arrow": {
 		"type": "image",
 		"layer": 10,
@@ -283,7 +60,7 @@
 		"anchor_from": "center",
 		"anchor_to": "center"
 	},
-	"ii@single_item_cell": {
+	"ii@bt_brewing_layout.item": {
 		"$image_size": [
 			8,
 			8
@@ -295,7 +72,7 @@
 			0
 		]
 	},
-	"glowstone@single_item_cell": {
+	"glowstone@bt_brewing_layout.item": {
 		"$item_texture": "textures/items/glowstone_dust",
 		"$hover_text": "item.glowstone_dust.name",
 		"$hover_offset": [
@@ -303,7 +80,7 @@
 			0
 		]
 	},
-	"redstone@single_item_cell": {
+	"redstone@bt_brewing_layout.item": {
 		"$item_texture": "textures/items/redstone_dust",
 		"$hover_text": "item.redstone.name",
 		"$hover_offset": [
@@ -311,7 +88,7 @@
 			0
 		]
 	},
-	"gunpowder@single_item_cell": {
+	"gunpowder@bt_brewing_layout.item": {
 		"$item_texture": "textures/items/gunpowder",
 		"$hover_text": "item.gunpowder.name",
 		"$hover_offset": [
@@ -319,7 +96,7 @@
 			0
 		]
 	},
-	"dragons_breath@single_item_cell": {
+	"dragons_breath@bt_brewing_layout.item": {
 		"$item_texture": "textures/items/dragons_breath",
 		"$hover_text": "item.dragon_breath.name",
 		"$hover_offset": [
@@ -327,7 +104,7 @@
 			0
 		]
 	},
-	"clock@single_item_cell": {
+	"clock@bt_brewing_layout.item": {
 		"$item_texture": "textures/items/clock_item",
 		"$hover_text": "bt.bg.extended.potion",
 		"$hover_offset": [
@@ -335,7 +112,7 @@
 			0
 		]
 	},
-	"splash@single_item_cell": {
+	"splash@bt_brewing_layout.item": {
 		"$item_texture": "textures/items/potion_bottle_splash",
 		"$hover_text": "bt.bg.splash.potion",
 		"$hover_offset": [
@@ -343,7 +120,7 @@
 			0
 		]
 	},
-	"lingering@single_item_cell": {
+	"lingering@bt_brewing_layout.item": {
 		"$item_texture": "textures/items/potion_bottle_lingering",
 		"$hover_text": "bt.bg.lingering.potion",
 		"$hover_offset": [
@@ -351,155 +128,155 @@
 			0
 		]
 	},
-	"effects@single_item_cell": {
+	"effects@bt_brewing_layout.item": {
 		"$item_texture": "textures/ui/brewing_guide/effects",
 		"$hover_text": "bt.bg.effect.potion"
 	},
-	"curser@single_item_cell": {
+	"curser@bt_brewing_layout.item": {
 		"$item_texture": "textures/items/spider_eye_fermented",
 		"$hover_text": "item.fermented_spider_eye.name"
 	},
-	"nether_wart@single_item_cell": {
+	"nether_wart@bt_brewing_layout.item": {
 		"$item_texture": "textures/items/nether_wart",
 		"$hover_text": "item.nether_wart.name"
 	},
-	"blaze_powder@multi_item_panel": {
+	"blaze_powder@bt_brewing_layout.item": {
 		"$item_texture": "textures/items/blaze_powder",
 		"$hover_text": "item.blaze_powder.name"
 	},
-	"magma_cream@multi_item_panel": {
+	"magma_cream@bt_brewing_layout.item": {
 		"$item_texture": "textures/items/magma_cream",
 		"$hover_text": "item.magma_cream.name"
 	},
-	"ghast_tear@multi_item_panel": {
+	"ghast_tear@bt_brewing_layout.item": {
 		"$item_texture": "textures/items/ghast_tear",
 		"$hover_text": "item.ghast_tear.name"
 	},
-	"fish_pufferfish_raw@multi_item_panel": {
+	"fish_pufferfish_raw@bt_brewing_layout.item": {
 		"$item_texture": "textures/items/fish_pufferfish_raw",
 		"$hover_text": "item.pufferfish.name"
 	},
-	"phantom_membrane@multi_item_panel": {
+	"phantom_membrane@bt_brewing_layout.item": {
 		"$item_texture": "textures/items/phantom_membrane",
 		"$hover_text": "item.phantom_membrane.name"
 	},
-	"turtle_helmet@multi_item_panel": {
+	"turtle_helmet@bt_brewing_layout.item": {
 		"$item_texture": "textures/items/turtle_helmet",
 		"$hover_text": "item.turtle_helmet.name"
 	},
-	"breeze_rod@multi_item_panel": {
+	"breeze_rod@bt_brewing_layout.item": {
 		"$item_texture": "textures/items/breeze_rod",
 		"$hover_text": "item.breeze_rod.name"
 	},
-	"stone@multi_block_panel": {
+	"stone@bt_brewing_layout.block": {
 		"$block_aux_id": 65536,
 		"$hover_text": "tile.stone.stone.name"
 	},
-	"sugar@multi_item_panel": {
+	"sugar@bt_brewing_layout.item": {
 		"$item_texture": "textures/items/sugar",
 		"$hover_text": "item.sugar.name"
 	},
-	"rabbit_foot@multi_item_panel": {
+	"rabbit_foot@bt_brewing_layout.item": {
 		"$item_texture": "textures/items/rabbit_foot",
 		"$hover_text": "item.rabbit_foot.name"
 	},
-	"spider_eye@multi_item_panel": {
+	"spider_eye@bt_brewing_layout.item": {
 		"$item_texture": "textures/items/spider_eye",
 		"$hover_text": "item.spider_eye.name"
 	},
-	"melon_speckled@multi_item_panel": {
+	"melon_speckled@bt_brewing_layout.item": {
 		"$item_texture": "textures/items/melon_speckled",
 		"$hover_text": "item.speckled_melon.name"
 	},
-	"carrot_golden@multi_item_panel": {
+	"carrot_golden@bt_brewing_layout.item": {
 		"$item_texture": "textures/items/carrot_golden",
 		"$hover_text": "item.golden_carrot.name"
 	},
-	"spider_eye_fermented@multi_item_panel": {
+	"spider_eye_fermented@bt_brewing_layout.item": {
 		"$item_texture": "textures/items/spider_eye_fermented",
 		"$hover_text": "item.fermented_spider_eye.name"
 	},
-	"cobweb@multi_item_panel": {
+	"cobweb@bt_brewing_layout.item": {
 		"$item_texture": "textures/blocks/web",
 		"$hover_text": "tile.web.name"
 	},
-	"slime_block@multi_block_panel": {
+	"slime_block@bt_brewing_layout.block": {
 		"$block_aux_id": 10813440,
 		"$hover_text": "tile.slime.name"
 	},
-	"strength_effect@multi_item_panel": {
+	"strength_effect@bt_brewing_layout.item": {
 		"$item_texture": "textures/ui/strength_effect",
 		"$hover_text": "potion.damageBoost.name"
 	},
-	"fire_resistance_effect@multi_item_panel": {
+	"fire_resistance_effect@bt_brewing_layout.item": {
 		"$item_texture": "textures/ui/fire_resistance_effect",
 		"$hover_text": "potion.fireResistance.name"
 	},
-	"regeneration_effect@multi_item_panel": {
+	"regeneration_effect@bt_brewing_layout.item": {
 		"$item_texture": "textures/ui/regeneration_effect",
 		"$hover_text": "potion.regeneration.name"
 	},
-	"water_breathing_effect@multi_item_panel": {
+	"water_breathing_effect@bt_brewing_layout.item": {
 		"$item_texture": "textures/ui/water_breathing_effect",
 		"$hover_text": "potion.waterBreathing.name"
 	},
-	"slow_falling_effect@multi_item_panel": {
+	"slow_falling_effect@bt_brewing_layout.item": {
 		"$item_texture": "textures/ui/slow_falling_effect",
 		"$hover_text": "potion.slowFalling.name"
 	},
-	"slowness_resistance@multi_item_panel": {
+	"slowness_resistance@bt_brewing_layout.item": {
 		"$item_texture": "textures/ui/brewing_guide/slowness_resistance",
 		"$hover_text": "potion.turtleMaster.name"
 	},
-	"wind_charged_effect@multi_item_panel": {
+	"wind_charged_effect@bt_brewing_layout.item": {
 		"$item_texture": "textures/ui/wind_charged_effect",
 		"$hover_text": "potion.windCharged.name"
 	},
-	"infested_effect@multi_item_panel": {
+	"infested_effect@bt_brewing_layout.item": {
 		"$item_texture": "textures/ui/infested_effect",
 		"$hover_text": "potion.infested.name"
 	},
-	"speed_effect@multi_item_panel": {
+	"speed_effect@bt_brewing_layout.item": {
 		"$item_texture": "textures/ui/speed_effect",
 		"$hover_text": "potion.moveSpeed.name"
 	},
-	"jump_boost_effect@multi_item_panel": {
+	"jump_boost_effect@bt_brewing_layout.item": {
 		"$item_texture": "textures/ui/jump_boost_effect",
 		"$hover_text": "potion.jump.name"
 	},
-	"poison_effect@multi_item_panel": {
+	"poison_effect@bt_brewing_layout.item": {
 		"$item_texture": "textures/ui/poison_effect",
 		"$hover_text": "potion.poison.name"
 	},
-	"health_plus@multi_item_panel": {
+	"health_plus@bt_brewing_layout.item": {
 		"$item_texture": "textures/ui/brewing_guide/health_plus",
 		"$hover_text": "potion.heal.name"
 	},
-	"night_vision_effect@multi_item_panel": {
+	"night_vision_effect@bt_brewing_layout.item": {
 		"$item_texture": "textures/ui/night_vision_effect",
 		"$hover_text": "potion.nightVision.name"
 	},
-	"weakness_effect@multi_item_panel": {
+	"weakness_effect@bt_brewing_layout.item": {
 		"$item_texture": "textures/ui/weakness_effect",
 		"$hover_text": "potion.weakness.name"
 	},
-	"weaving_effect@multi_item_panel": {
+	"weaving_effect@bt_brewing_layout.item": {
 		"$item_texture": "textures/ui/weaving_effect",
 		"$hover_text": "potion.weaving.name"
 	},
-	"oozing_effect@multi_item_panel": {
+	"oozing_effect@bt_brewing_layout.item": {
 		"$item_texture": "textures/ui/oozing_effect",
 		"$hover_text": "potion.oozing.name"
 	},
-	"slowness_effect@multi_item_panel": {
+	"slowness_effect@bt_brewing_layout.item": {
 		"$item_texture": "textures/ui/slowness_effect",
 		"$hover_text": "potion.moveSlowdown.name"
 	},
-	"health_minus@multi_item_panel": {
+	"health_minus@bt_brewing_layout.item": {
 		"$item_texture": "textures/ui/brewing_guide/health_minus",
 		"$hover_text": "potion.harm.name"
 	},
-	"invisibility_effect@multi_item_panel": {
+	"invisibility_effect@bt_brewing_layout.item": {
 		"$item_texture": "textures/ui/invisibility_effect",
 		"$hover_text": "potion.invisibility.name"
 	}
