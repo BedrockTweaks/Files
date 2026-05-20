@@ -1,5 +1,5 @@
 {
-	"format_version": "1.10.0",
+	"format_version": "1.26.0",
 	"minecraft:client_entity": {
 		"description": {
 			"identifier": "minecraft:zombie",
@@ -8,7 +8,8 @@
 				"default": "zombie"
 			},
 			"textures": {
-				"kai": "textures/entity/zombie/kai"
+				"kai": "textures/entity/zombie/kai",
+				"kai_baby": "textures/entity/zombie/kai_baby"
 			},
 			"geometry": {
 				"default": "geometry.bt_zombie"

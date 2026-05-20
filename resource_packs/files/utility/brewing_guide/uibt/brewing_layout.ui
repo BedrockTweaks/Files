@@ -1,0 +1,161 @@
+{
+	"namespace": "bt_brewing_layout",
+	"row": {
+		"type": "stack_panel",
+		"orientation": "horizontal",
+		"size": [
+			"100%c",
+			"100%cm"
+		]
+	},
+	"cell": {
+		"type": "panel",
+		"layer": 5,
+		"$image_size|default": [
+			16,
+			16
+		],
+		"size": [
+			18,
+			18
+		]
+	},
+	"item@cell": {
+		"$item_texture|default": "textures/misc/missing_texture",
+		"controls": [
+			{
+				"item@bt_brewing_layout.item_icon": {}
+			},
+			{
+				"hover_button@bt_brewing_layout.hover_button": {}
+			}
+		]
+	},
+	"block@cell": {
+		"$block_aux_id|default": 16252928,
+		"controls": [
+			{
+				"block@bt_brewing_layout.block_icon": {}
+			},
+			{
+				"hover_button@bt_brewing_layout.hover_button": {}
+			}
+		]
+	},
+	"item_icon": {
+		"type": "image",
+		"layer": 10,
+		"texture": "$item_texture",
+		"size": "$image_size",
+		"offset": [
+			0,
+			0
+		],
+		"anchor_from": "center",
+		"anchor_to": "center"
+	},
+	"block_icon": {
+		"type": "custom",
+		"layer": 10,
+		"renderer": "inventory_item_renderer",
+		"size": "$image_size",
+		"offset": [
+			0,
+			0
+		],
+		"anchor_from": "center",
+		"anchor_to": "center",
+		"property_bag": {
+			"#item_id_aux": "$block_aux_id"
+		}
+	},
+	"hover_button@common.button": {
+		"layer": 15,
+		"$pressed_button_name": "by DrAv0011",
+		"size": [
+			18,
+			18
+		],
+		"sound_volume": 0.0,
+		"default_control": "",
+		"pressed_control": "",
+		"controls": [
+			{
+				"hover": {
+					"type": "panel",
+					"size": [
+						18,
+						18
+					],
+					"controls": [
+						{
+							"hover_text_image@bt_brewing_layout.hover_text_image": {}
+						},
+						{
+							"white_border@common.white_border_slot": {
+								"layer": 2,
+								"size": [
+									18,
+									18
+								]
+							}
+						}
+					]
+				}
+			}
+		]
+	},
+	"hover_text_image": {
+		"type": "image",
+		"allow_clipping": false,
+		"alpha": 1.0,
+		"texture": "textures/ui/purpleBorder",
+		"size": [
+			"100%c+8px",
+			"100%c+8px"
+		],
+		"anchor_from": "left_middle",
+		"anchor_to": "left_middle",
+		"$hover_offset|default": [
+			"-100%x",
+			0
+		],
+		"offset": "$hover_offset",
+		"layer": 25,
+		"controls": [
+			{
+				"hover_text_panel": {
+					"type": "panel",
+					"size": [
+						"100%cm - 1px",
+						9
+					],
+					"controls": [
+						{
+							"hover_text@bt_brewing_layout.hover_text": {
+								"text": "$hover_text"
+							}
+						}
+					]
+				}
+			}
+		]
+	},
+	"hover_text": {
+		"type": "label",
+		"offset": [
+			-0.5,
+			-1.5
+		],
+		"anchor_from": "top_left",
+		"anchor_to": "top_left",
+		"layer": 2,
+		"color": [
+			1.0,
+			1.0,
+			1.0
+		],
+		"$hover_text|default": "Unset",
+		"shadow": false
+	}
+}
