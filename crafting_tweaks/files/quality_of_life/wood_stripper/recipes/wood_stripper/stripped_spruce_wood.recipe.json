@@ -1,0 +1,24 @@
+{
+	"format_version": "1.21.0",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "bt:ws.stripped_spruce_wood"
+		},
+		"tags": [
+			"stonecutter"
+		],
+		"ingredients": [
+			{
+				"item": "minecraft:spruce_wood"
+			}
+		],
+		"unlock": [
+			{
+				"item": "minecraft:spruce_wood"
+			}
+		],
+		"result": {
+			"item": "minecraft:stripped_spruce_wood"
+		}
+	}
+}
