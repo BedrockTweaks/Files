@@ -10,11 +10,11 @@
 		"lint": "npx eslint ."
 	},
 	"dependencies": {
-		"@minecraft/common": "1.2.0",
-		"@minecraft/math": "2.2.11",
-		"@minecraft/server": "2.2.0",
+		"@minecraft/common": "^1.2.0",
+		"@minecraft/math": "^2.4.0",
+		"@minecraft/server": "^2.6.0",
 		"@minecraft/server-ui": "^2.0.0",
-		"@minecraft/vanilla-data": "1.21.114",
+		"@minecraft/vanilla-data": "^1.26.13",
 		"@stylistic/eslint-config": "^1.1.0"
 	},
 	"devDependencies": {

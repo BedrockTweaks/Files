@@ -8,20 +8,6 @@
 					}
 				},
 				"volume": 0.25
-			},
-			"happy_ghast": {
-				"variants": {
-					"key": "query.is_baby ? 'ghastling' : 'adult'",
-					"map": {
-						"adult": {
-							"volume": 0.2
-						},
-						"ghastling": {
-							"volume": 0.05
-						}
-					}
-				},
-				"volume": 0.05
 			}
 		}
 	}
