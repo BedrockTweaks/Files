@@ -68,12 +68,12 @@
 				{
 					"id": "powder_to_glass",
 					"name": "Powder to Glass",
-					"description": "Smelt all colors of Concrete Powder into their respective Stained Glass color",
+					"description": "Smelt all colors of Concrete Powder into their respective Stained Glass color"
 				},
 				{
 					"id": "wood_stripper",
 					"name": "Wood Stripper",
-					"description": "Allows you to strip logs and wood using a stonecutter",
+					"description": "Allows you to strip logs and wood using a stonecutter"
 				}
 			]
 		},
