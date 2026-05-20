@@ -455,7 +455,7 @@
 				{
 					"id": "variated_cobblestone",
 					"name": "Variated Cobblestone",
-					"description": "Cobblestone will be randomized using a selection of 7 textures"
+					"description": "Cobblestone will be randomized using a selection of 10 textures"
 				},
 				{
 					"id": "variated_moss",
@@ -480,7 +480,7 @@
 				{
 					"id": "variated_end_stone",
 					"name": "Variated End Stone",
-					"description": "End Stone will be randomized using a selection of 5 textures"
+					"description": "End Stone will be randomized using a selection of 9 textures"
 				},
 				{
 					"id": "variated_gravel",
@@ -490,7 +490,7 @@
 				{
 					"id": "variated_mycelium",
 					"name": "Variated Mycelium",
-					"description": "Mycelium will be randomized using a selection of 16 textures"
+					"description": "Mycelium will be randomized using a selection of 6 textures"
 				},
 				{
 					"id": "variated_planks",
@@ -500,12 +500,12 @@
 				{
 					"id": "variated_stone",
 					"name": "Variated Stone",
-					"description": "Stone will be randomized using a selection of 16 textures"
+					"description": "Stone will be randomized using a selection of 6 textures"
 				},
 				{
 					"id": "variated_terracotta",
 					"name": "Variated Terracotta",
-					"description": "Terracotta will be randomized using a selection of 16 textures"
+					"description": "Terracotta will be randomized using a selection of 7 textures"
 				},
 				{
 					"id": "variated_unpolished_stones",
