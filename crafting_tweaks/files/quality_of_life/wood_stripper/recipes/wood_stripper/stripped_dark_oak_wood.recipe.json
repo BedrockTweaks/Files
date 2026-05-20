@@ -1,0 +1,24 @@
+{
+	"format_version": "1.21.0",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "bt:ws.stripped_dark_oak_wood"
+		},
+		"tags": [
+			"stonecutter"
+		],
+		"ingredients": [
+			{
+				"item": "minecraft:dark_oak_wood"
+			}
+		],
+		"unlock": [
+			{
+				"item": "minecraft:dark_oak_wood"
+			}
+		],
+		"result": {
+			"item": "minecraft:stripped_dark_oak_wood"
+		}
+	}
+}
