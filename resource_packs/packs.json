@@ -3354,6 +3354,35 @@
 			]
 		},
 		{
+			"id": "extras/planks/oarless_old_planks",
+			"combines": [
+				"retro/oarless_boats",
+				"retro/old_planks"
+			]
+		},
+		{
+			"id": "extras/planks/oarless_desaturated_dark_oak",
+			"combines": [
+				"retro/oarless_boats",
+				"aesthetic/desaturated_dark_oak"
+			]
+		},
+		{
+			"id": "extras/planks/oarless_old_desaturated_dark_oak",
+			"combines": [
+				"retro/oarless_boats",
+				"retro/old_planks",
+				"aesthetic/desaturated_dark_oak"
+			]
+		},
+		{
+			"id": "extras/fun/ilmango_hunger_bar",
+			"combines": [
+				"gui/hunger_bars/golden_apple_hunger_bar",
+				"fun/ilmango_golden_apples"
+			]
+		},
+		{
 			"id": "extras/fun/smiley_green_axolotl",
 			"combines": [
 				"fun/smiley_axolotls",
