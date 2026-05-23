@@ -2711,9 +2711,9 @@
 					"description": "Adds some extra pixels to the Redstone Wire texture to make sure the whole line joins up"
 				},
 				{
-					"id":"consistent_chicken_egg_names",
+					"id": "consistent_chicken_egg_names",
 					"name": "Consistent Chicken Egg Names",
-					"description":"Renames Chicken Eggs to be consistent with other mob eggs, specifying the mob it is from.<br><br>''Egg'' -> ''White Chicken Egg''<br>''Brown Egg'' -> ''Brown Chicken Egg''<br>''Blue Egg'' -> ''Blue Chicken Egg''"
+					"description": "Renames Chicken Eggs to be consistent with other mob eggs, specifying the mob it is from.<br><br>''Egg'' -> ''White Chicken Egg''<br>''Brown Egg'' -> ''Brown Chicken Egg''<br>''Blue Egg'' -> ''Blue Chicken Egg''"
 				},
 				{
 					"id": "consistent_blank_decorated_pot",
@@ -2845,59 +2845,6 @@
 	],
 	"combinations": [
 		{
-			"id": "extras/bamboo/consistent_old_bamboo",
-			"combines": [
-				"aesthetic/consistent_bamboo_planks",
-				"retro/old_planks"
-			]
-		},
-		{
-			"id": "extras/bamboo/consistent_old_variated_bamboo",
-			"combines": [
-				"aesthetic/consistent_bamboo_planks",
-				"retro/old_planks",
-				"variation/variated_planks"
-			]
-		},
-		{
-			"id": "extras/bamboo/consistent_oarless_old_bamboo",
-			"combines": [
-				"aesthetic/consistent_bamboo_planks",
-				"retro/oarless_boats",
-				"retro/old_planks"
-			]
-		},
-		{
-			"id": "extras/bamboo/consistent_oarless_old_variated_bamboo",
-			"combines": [
-				"aesthetic/consistent_bamboo_planks",
-				"retro/oarless_boats",
-				"retro/old_planks",
-				"variation/variated_planks"
-			]
-		},
-		{
-			"id": "extras/aesthetic/circular_desaturated_dark_oak_log_tops",
-			"combines": [
-				"aesthetic/desaturated_dark_oak",
-				"terrain/circular_log_tops"
-			]
-		},
-		{
-			"id": "extras/aesthetic/desaturated_dark_oak_hanging_sign_logs",
-			"combines": [
-				"aesthetic/desaturated_dark_oak",
-				"fixes_and_consistency/hanging_sign_logs"
-			]
-		},
-		{
-			"id": "extras/aesthetic/desaturated_dark_oak_glass_doors_and_trapdoors",
-			"combines": [
-				"aesthetic/desaturated_dark_oak",
-				"aesthetic/glass_doors_and_trapdoors"
-			]
-		},
-		{
 			"id": "extras/aesthetic/accurate_translucent_spyglass_overlay",
 			"combines": [
 				"aesthetic/accurate_spyglass",
@@ -2933,14 +2880,6 @@
 			]
 		},
 		{
-			"id": "extras/aesthetic/classic_consistent_netherite_golden_crown",
-			"combines": [
-				"aesthetic/classic_style_netherite_armor",
-				"aesthetic/golden_crown",
-				"fixes_and_consistency/consistent_helmets"
-			]
-		},
-		{
 			"id": "extras/dirt/pebbleless_dungeons_dirt",
 			"combines": [
 				"terrain/pebbleless_dirt",
@@ -2950,14 +2889,6 @@
 		{
 			"id": "extras/dirt/dungeons_dirt_background",
 			"combines": [
-				"parity/dungeons_dirt",
-				"retro/dirt_background"
-			]
-		},
-		{
-			"id": "extras/dirt/pebbleless_dungeons_dirt_background",
-			"combines": [
-				"terrain/pebbleless_dirt",
 				"parity/dungeons_dirt",
 				"retro/dirt_background"
 			]
@@ -2974,43 +2905,6 @@
 			"combines": [
 				"variation/variated_dirt",
 				"terrain/pebbleless_dirt"
-			]
-		},
-		{
-			"id": "extras/dirt/variated_pebbleless_dirt_and_coarse_dirt",
-			"combines": [
-				"variation/variated_dirt",
-				"terrain/pebbleless_dirt",
-				"terrain/pebbleless_coarse_dirt"
-			]
-		},
-		{
-			"id": "extras/dirt/golden_savanna_full_grass_sides",
-			"combines": [
-				"terrain/golden_savanna",
-				"terrain/lower_and_full_sides/full_grass_sides"
-			]
-		},
-		{
-			"id": "extras/dirt/golden_savanna_lush_grass",
-			"combines": [
-				"terrain/golden_savanna",
-				"terrain/lush_grass_all_round"
-			]
-		},
-		{
-			"id": "extras/dirt/lush_full_grass_sides",
-			"combines": [
-				"terrain/lush_grass_all_round",
-				"terrain/lower_and_full_sides/full_grass_sides"
-			]
-		},
-		{
-			"id": "extras/dirt/golden_savanna_lush_full_grass_sides",
-			"combines": [
-				"terrain/golden_savanna",
-				"terrain/lush_grass_all_round",
-				"terrain/lower_and_full_sides/full_grass_sides"
 			]
 		},
 		{
@@ -3063,110 +2957,6 @@
 			]
 		},
 		{
-			"id": "extras/terrain/lush_grass_clearer_water",
-			"combines": [
-				"terrain/lush_grass_all_round",
-				"terrain/clearer_water"
-			]
-		},
-		{
-			"id": "extras/terrain/lush_grass_old_water",
-			"combines": [
-				"terrain/lush_grass_all_round",
-				"retro/old_water"
-			]
-		},
-		{
-			"id": "extras/terrain/old_clearer_water",
-			"combines": [
-				"terrain/clearer_water",
-				"retro/old_water"
-			]
-		},
-		{
-			"id": "extras/terrain/lush_grass_old_clearer_water",
-			"combines": [
-				"terrain/lush_grass_all_round",
-				"terrain/clearer_water",
-				"retro/old_water"
-			]
-		},
-		{
-			"id": "extras/terrain/brighter_black_nether_bricks",
-			"combines": [
-				"terrain/brighter_nether",
-				"aesthetic/black_nether_bricks"
-			]
-		},
-		{
-			"id": "extras/terrain/brighter_lower_crimson_nylium_sides",
-			"combines": [
-				"terrain/brighter_nether",
-				"terrain/lower_and_full_sides/lower_crimson_nylium_sides"
-			]
-		},
-		{
-			"id": "extras/terrain/brighter_lower_warped_nylium_sides",
-			"combines": [
-				"terrain/brighter_nether",
-				"terrain/lower_and_full_sides/lower_warped_nylium_sides"
-			]
-		},
-		{
-			"id": "extras/terrain/brighter_lower_crimson_warped_nylium_sides",
-			"combines": [
-				"terrain/brighter_nether",
-				"terrain/lower_and_full_sides/lower_crimson_nylium_sides",
-				"terrain/lower_and_full_sides/lower_warped_nylium_sides"
-			]
-		},
-		{
-			"id": "extras/terrain/brighter_black_nether_bricks_lower_crimson_nylium_sides",
-			"combines": [
-				"terrain/brighter_nether",
-				"terrain/lower_and_full_sides/lower_crimson_nylium_sides",
-				"aesthetic/black_nether_bricks"
-			]
-		},
-		{
-			"id": "extras/terrain/brighter_black_nether_bricks_lower_warped_nylium_sides",
-			"combines": [
-				"terrain/brighter_nether",
-				"terrain/lower_and_full_sides/lower_warped_nylium_sides",
-				"aesthetic/black_nether_bricks"
-			]
-		},
-		{
-			"id": "extras/terrain/brighter_black_nether_bricks_lower_crimson_warped_nylium_sides",
-			"combines": [
-				"terrain/brighter_nether",
-				"terrain/lower_and_full_sides/lower_crimson_nylium_sides",
-				"terrain/lower_and_full_sides/lower_warped_nylium_sides",
-				"aesthetic/black_nether_bricks"
-			]
-		},
-		{
-			"id": "extras/ores/uniform_ore_borders",
-			"combines": [
-				"terrain/uniform_ores",
-				"utility/ore_borders"
-			]
-		},
-		{
-			"id": "extras/ores/dungeons_ore_borders",
-			"combines": [
-				"utility/ore_borders",
-				"parity/dungeons_stone"
-			]
-		},
-		{
-			"id": "extras/ores/classic_ores_borders",
-			"combines": [
-				"utility/ore_borders",
-				"retro/classic_ores"
-			]
-		},
-		{
 			"id": "extras/ores/classic_unlit_redstone_ores",
 			"combines": [
 				"utility/unlit_redstone_ore",
@@ -3174,126 +2964,10 @@
 			]
 		},
 		{
-			"id": "extras/ores/brighter_nether_ore_borders",
-			"combines": [
-				"terrain/brighter_nether",
-				"utility/ore_borders"
-			]
-		},
-		{
-			"id": "extras/ores/uniform_brighter_nether_ores",
-			"combines": [
-				"terrain/brighter_nether",
-				"terrain/uniform_ores"
-			]
-		},
-		{
-			"id": "extras/ores/uniform_brighter_nether_ore_borders",
-			"combines": [
-				"terrain/brighter_nether",
-				"terrain/uniform_ores",
-				"utility/ore_borders"
-			]
-		},
-		{
-			"id": "extras/ores/brighter_black_nether_bricks_ore_borders",
-			"combines": [
-				"aesthetic/black_nether_bricks",
-				"terrain/brighter_nether",
-				"utility/ore_borders"
-			]
-		},
-		{
-			"id": "extras/ores/uniform_brighter_black_nether_bricks_ores",
-			"combines": [
-				"aesthetic/black_nether_bricks",
-				"terrain/brighter_nether",
-				"terrain/uniform_ores"
-			]
-		},
-		{
-			"id": "extras/ores/uniform_brighter_black_nether_bricks_ore_borders",
-			"combines": [
-				"aesthetic/black_nether_bricks",
-				"terrain/brighter_nether",
-				"terrain/uniform_ores",
-				"utility/ore_borders"
-			]
-		},
-		{
-			"id": "extras/ores/rubies_ore_borders",
+			"id": "extras/ores/classic_ores_borders",
 			"combines": [
 				"utility/ore_borders",
-				"fun/emeralds_to_rubies"
-			]
-		},
-		{
-			"id": "extras/ores/uniform_rubies_ores",
-			"combines": [
-				"terrain/uniform_ores",
-				"fun/emeralds_to_rubies"
-			]
-		},
-		{
-			"id": "extras/ores/rubies_variated_villagers_ores",
-			"combines": [
-				"variation/variated_villagers",
-				"fun/emeralds_to_rubies"
-			]
-		},
-		{
-			"id": "extras/ores/uniform_rubies_variated_villagers_ores",
-			"combines": [
-				"variation/variated_villagers",
-				"terrain/uniform_ores",
-				"fun/emeralds_to_rubies"
-			]
-		},
-		{
-			"id": "extras/ores/rubies_variated_villagers_ore_borders",
-			"combines": [
-				"variation/variated_villagers",
-				"utility/ore_borders",
-				"fun/emeralds_to_rubies"
-			]
-		},
-		{
-			"id": "extras/ores/uniform_rubies_ore_borders",
-			"combines": [
-				"terrain/uniform_ores",
-				"utility/ore_borders",
-				"fun/emeralds_to_rubies"
-			]
-		},
-		{
-			"id": "extras/ores/uniform_rubies_variated_villagers_ore_borders",
-			"combines": [
-				"variation/variated_villagers",
-				"terrain/uniform_ores",
-				"utility/ore_borders",
-				"fun/emeralds_to_rubies"
-			]
-		},
-		{
-			"id": "extras/ores/old_netherrack_ore_borders",
-			"combines": [
-				"utility/ore_borders",
-				"retro/old_netherrack"
-			]
-		},
-		{
-			"id": "extras/ores/uniform_old_netherrack_ores",
-			"combines": [
-				"terrain/uniform_ores",
-				"retro/old_netherrack"
-			]
-		},
-		{
-			"id": "extras/ores/uniform_old_netherrack_ore_borders",
-			"combines": [
-				"terrain/uniform_ores",
-				"utility/ore_borders",
-				"retro/old_netherrack"
+				"retro/classic_ores"
 			]
 		},
 		{
@@ -3371,13 +3045,6 @@
 			"combines": [
 				"fixes_and_consistency/pixel_consistent_signs",
 				"aesthetic/smoother_warped_planks"
-			]
-		},
-		{
-			"id": "extras/pixel_consistent/pixel_consistent_desaturated_dark_oak_signs",
-			"combines": [
-				"fixes_and_consistency/pixel_consistent_signs",
-				"aesthetic/desaturated_dark_oak"
 			]
 		},
 		{
@@ -3598,28 +3265,6 @@
 			]
 		},
 		{
-			"id": "extras/planks/oarless_old_planks",
-			"combines": [
-				"retro/oarless_boats",
-				"retro/old_planks"
-			]
-		},
-		{
-			"id": "extras/planks/oarless_desaturated_dark_oak",
-			"combines": [
-				"retro/oarless_boats",
-				"aesthetic/desaturated_dark_oak"
-			]
-		},
-		{
-			"id": "extras/planks/oarless_old_desaturated_dark_oak",
-			"combines": [
-				"retro/oarless_boats",
-				"retro/old_planks",
-				"aesthetic/desaturated_dark_oak"
-			]
-		},
-		{
 			"id": "extras/fun/smiley_green_axolotl",
 			"combines": [
 				"fun/smiley_axolotls",
@@ -3813,6 +3458,307 @@
 			"combines": [
 				"world_of_color/paletteless_dyes",
 				"world_of_color/alternate_dyes"
+			]
+		},
+		{
+			"id": "extras/hierarchy/consistent_oarless_old_variated_bamboo/consistent_old_bamboo",
+			"combines": [
+				"aesthetic/consistent_bamboo_planks",
+				"retro/old_planks"
+			]
+		},
+		{
+			"id": "extras/hierarchy/consistent_oarless_old_variated_bamboo/consistent_old_variated_bamboo",
+			"combines": [
+				"aesthetic/consistent_bamboo_planks",
+				"retro/old_planks",
+				"variation/variated_planks"
+			]
+		},
+		{
+			"id": "extras/hierarchy/consistent_oarless_old_variated_bamboo/consistent_oarless_old_bamboo",
+			"combines": [
+				"aesthetic/consistent_bamboo_planks",
+				"retro/oarless_boats",
+				"retro/old_planks"
+			]
+		},
+		{
+			"id": "extras/hierarchy/golden_savanna_lush_full_grass_sides/golden_savanna_full_grass_sides",
+			"combines": [
+				"terrain/golden_savanna",
+				"terrain/lower_and_full_sides/full_grass_sides"
+			]
+		},
+		{
+			"id": "extras/hierarchy/golden_savanna_lush_full_grass_sides/golden_savanna_lush_grass",
+			"combines": [
+				"terrain/golden_savanna",
+				"terrain/lush_grass_all_round"
+			]
+		},
+		{
+			"id": "extras/hierarchy/golden_savanna_lush_full_grass_sides/lush_full_grass_sides",
+			"combines": [
+				"terrain/lush_grass_all_round",
+				"terrain/lower_and_full_sides/full_grass_sides"
+			]
+		},
+		{
+			"id": "extras/hierarchy/golden_savanna_lush_full_grass_sides/golden_savanna_lush_full_grass_sides",
+			"combines": [
+				"terrain/golden_savanna",
+				"terrain/lush_grass_all_round",
+				"terrain/lower_and_full_sides/full_grass_sides"
+			]
+		},
+		{
+			"id": "extras/hierarchy/lush_grass_old_clearer_water/lush_grass_clearer_water",
+			"combines": [
+				"terrain/lush_grass_all_round",
+				"terrain/clearer_water"
+			]
+		},
+		{
+			"id": "extras/hierarchy/lush_grass_old_clearer_water/lush_grass_old_water",
+			"combines": [
+				"terrain/lush_grass_all_round",
+				"retro/old_water"
+			]
+		},
+		{
+			"id": "extras/hierarchy/lush_grass_old_clearer_water/old_clearer_water",
+			"combines": [
+				"terrain/clearer_water",
+				"retro/old_water"
+			]
+		},
+		{
+			"id": "extras/hierarchy/lush_grass_old_clearer_water/lush_grass_old_clearer_water",
+			"combines": [
+				"terrain/lush_grass_all_round",
+				"terrain/clearer_water",
+				"retro/old_water"
+			]
+		},
+		{
+			"id": "extras/hierarchy/ores_and_terrain/brighter_black_nether_bricks",
+			"combines": [
+				"terrain/brighter_nether",
+				"aesthetic/black_nether_bricks"
+			]
+		},
+		{
+			"id": "extras/hierarchy/ores_and_terrain/brighter_lower_crimson_nylium_sides",
+			"combines": [
+				"terrain/brighter_nether",
+				"terrain/lower_and_full_sides/lower_crimson_nylium_sides"
+			]
+		},
+		{
+			"id": "extras/hierarchy/ores_and_terrain/brighter_lower_warped_nylium_sides",
+			"combines": [
+				"terrain/brighter_nether",
+				"terrain/lower_and_full_sides/lower_warped_nylium_sides"
+			]
+		},
+		{
+			"id": "extras/hierarchy/ores_and_terrain/uniform_ore_borders",
+			"combines": [
+				"terrain/uniform_ores",
+				"utility/ore_borders"
+			]
+		},
+		{
+			"id": "extras/hierarchy/ores_and_terrain/brighter_nether_ore_borders",
+			"combines": [
+				"terrain/brighter_nether",
+				"utility/ore_borders"
+			]
+		},
+		{
+			"id": "extras/hierarchy/ores_and_terrain/uniform_brighter_nether_ores",
+			"combines": [
+				"terrain/brighter_nether",
+				"terrain/uniform_ores"
+			]
+		},
+		{
+			"id": "extras/hierarchy/ores_and_terrain/uniform_brighter_nether_ore_borders",
+			"combines": [
+				"terrain/brighter_nether",
+				"terrain/uniform_ores",
+				"utility/ore_borders"
+			]
+		},
+		{
+			"id": "extras/hierarchy/ores_and_terrain/rubies_ore_borders",
+			"combines": [
+				"utility/ore_borders",
+				"fun/emeralds_to_rubies"
+			]
+		},
+		{
+			"id": "extras/hierarchy/ores_and_terrain/uniform_rubies_ores",
+			"combines": [
+				"terrain/uniform_ores",
+				"fun/emeralds_to_rubies"
+			]
+		},
+		{
+			"id": "extras/hierarchy/ores_and_terrain/rubies_variated_villagers_ores",
+			"combines": [
+				"variation/variated_villagers",
+				"fun/emeralds_to_rubies"
+			]
+		},
+		{
+			"id": "extras/hierarchy/ores_and_terrain/uniform_rubies_ore_borders",
+			"combines": [
+				"terrain/uniform_ores",
+				"utility/ore_borders",
+				"fun/emeralds_to_rubies"
+			]
+		},
+		{
+			"id": "extras/hierarchy/ores_and_terrain/old_netherrack_ore_borders",
+			"combines": [
+				"utility/ore_borders",
+				"retro/old_netherrack"
+			]
+		},
+		{
+			"id": "extras/hierarchy/ores_and_terrain/uniform_old_netherrack_ores",
+			"combines": [
+				"terrain/uniform_ores",
+				"retro/old_netherrack"
+			]
+		},
+		{
+			"id": "extras/hierarchy/ores_and_terrain/uniform_old_netherrack_ore_borders",
+			"combines": [
+				"terrain/uniform_ores",
+				"retro/old_netherrack",
+				"utility/ore_borders"
+			]
+		},
+		{
+			"id": "extras/hierarchy/ores_and_terrain/old_netherrack_lower_crimson_nylium_sides",
+			"combines": [
+				"retro/old_netherrack",
+				"terrain/lower_and_full_sides/lower_crimson_nylium_sides"
+			]
+		},
+		{
+			"id": "extras/hierarchy/ores_and_terrain/old_netherrack_lower_warped_nylium_sides",
+			"combines": [
+				"retro/old_netherrack",
+				"terrain/lower_and_full_sides/lower_warped_nylium_sides"
+			]
+		},
+		{
+			"id": "extras/hierarchy/ores_and_terrain/brighter_old_netherrack",
+			"combines": [
+				"terrain/brighter_nether",
+				"retro/old_netherrack"
+			]
+		},
+		{
+			"id": "extras/hierarchy/ores_and_terrain/brighter_old_netherrack_lower_crimson_nylium_sides",
+			"combines": [
+				"terrain/brighter_nether",
+				"retro/old_netherrack",
+				"terrain/lower_and_full_sides/lower_crimson_nylium_sides"
+			]
+		},
+		{
+			"id": "extras/hierarchy/ores_and_terrain/brighter_old_netherrack_lower_warped_nylium_sides",
+			"combines": [
+				"terrain/brighter_nether",
+				"retro/old_netherrack",
+				"terrain/lower_and_full_sides/lower_warped_nylium_sides"
+			]
+		},
+		{
+			"id": "extras/hierarchy/ores_and_terrain/uniform_brighter_old_netherrack_ores",
+			"combines": [
+				"terrain/uniform_ores",
+				"terrain/brighter_nether",
+				"retro/old_netherrack"
+			]
+		},
+		{
+			"id": "extras/hierarchy/ores_and_terrain/brighter_old_netherrack_ore_borders",
+			"combines": [
+				"terrain/brighter_nether",
+				"retro/old_netherrack",
+				"utility/ore_borders"
+			]
+		},
+		{
+			"id": "extras/hierarchy/ores_and_terrain/uniform_brighter_old_netherrack_ore_borders",
+			"combines": [
+				"terrain/uniform_ores",
+				"terrain/brighter_nether",
+				"retro/old_netherrack",
+				"utility/ore_borders"
+			]
+		},
+		{
+			"id": "extras/hierarchy/ores_and_terrain/dungeons_ore_borders",
+			"combines": [
+				"utility/ore_borders",
+				"parity/dungeons_stone"
+			]
+		},
+		{
+			"id": "extras/hierarchy/desaturated_dark_oak/circular_desaturated_dark_oak_log_tops",
+			"combines": [
+				"aesthetic/desaturated_dark_oak",
+				"terrain/circular_log_tops"
+			]
+		},
+		{
+			"id": "extras/hierarchy/desaturated_dark_oak/desaturated_dark_oak_hanging_sign_logs",
+			"combines": [
+				"aesthetic/desaturated_dark_oak",
+				"fixes_and_consistency/hanging_sign_logs"
+			]
+		},
+		{
+			"id": "extras/hierarchy/desaturated_dark_oak/desaturated_dark_oak_glass_doors_and_trapdoors",
+			"combines": [
+				"aesthetic/desaturated_dark_oak",
+				"aesthetic/glass_doors_and_trapdoors"
+			]
+		},
+		{
+			"id": "extras/hierarchy/desaturated_dark_oak/pixel_consistent_desaturated_dark_oak_signs",
+			"combines": [
+				"fixes_and_consistency/pixel_consistent_signs",
+				"aesthetic/desaturated_dark_oak"
+			]
+		},
+		{
+			"id": "extras/hierarchy/oarless_boats/oarless_old_planks",
+			"combines": [
+				"retro/oarless_boats",
+				"retro/old_planks"
+			]
+		},
+		{
+			"id": "extras/hierarchy/oarless_boats/oarless_desaturated_dark_oak",
+			"combines": [
+				"retro/oarless_boats",
+				"aesthetic/desaturated_dark_oak"
+			]
+		},
+		{
+			"id": "extras/hierarchy/oarless_boats/oarless_old_desaturated_dark_oak",
+			"combines": [
+				"retro/oarless_boats",
+				"retro/old_planks",
+				"aesthetic/desaturated_dark_oak"
 			]
 		}
 	],
