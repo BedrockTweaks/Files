@@ -1925,7 +1925,21 @@
 				{
 					"id": "pale_garden_panorama",
 					"name": "Pale Garden Panorama",
-					"description": "Replaces the default Minecraft menu panorama with a 360° view of a Pale Garden (from 1.21.4)"
+					"description": "Replaces the default Minecraft menu panorama with a 360° view of a Pale Garden (from 1.21.50)"
+				},
+				{
+					"id": "copper_golem_village_panorama",
+					"name": "Copper Golem Village Panorama",
+					"description":"Replaces the default Minecraft menu panorama with a 360° view of Copper Golems in a village! (from 1.21.111)"
+				},
+				{
+					"id": "mounts_of_mayhem_panorama",
+					"name": "Mounts of Mayhem Panorama",
+					"description":"Replaces the default Minecraft menu panorama with a 360° view of Zombies and Drowneds riding Horses and Nautilus! (from 1.21.130)"},
+				{
+					"id": "tiny_takeover_panorama",
+					"name": "Tiny Takeover Panorama",
+					"description": "Replaces the default Minecraft menu panorama with a 360° view of baby mobs in a cherry grove! (from 26.10)"
 				},
 				{
 					"id": "the_end_panorama",
