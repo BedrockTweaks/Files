@@ -1191,11 +1191,6 @@
 					"description": "Makes Hearts more visible when under the 'Wither' effect"
 				},
 				{
-					"id": "rainbow_experience_bar",
-					"name": "Rainbow Experience Bar",
-					"description": "Changes the default green XP bar to a rainbow XP bar"
-				},
-				{
 					"id": "translucent_tooltips",
 					"name": "Translucent Tooltips",
 					"description": "Makes item tooltips translucent"
@@ -1760,6 +1755,77 @@
 					"id": "netherite_armor_bar",
 					"name": "Netherite Armor Bar",
 					"description": ""
+				}
+			]
+		},
+		{
+			"id": "gui/experience_bars",
+			"name": "GUI / Experience Bars",
+			"packs": [
+				{
+					"id": "white_xp_bar",
+					"name": "White Experience Bar",
+					"description": ""
+				},
+				{
+					"id": "brown_xp_bar",
+					"name": "Brown Elytra",
+					"description": ""
+				},
+				{
+					"id": "red_xp_bar",
+					"name": "Red Experience Bar",
+					"description": ""
+				},
+				{
+					"id": "orange_xp_bar",
+					"name": "Orange Experience Bar",
+					"description": ""
+				},
+				{
+					"id": "yellow_xp_bar",
+					"name": "Yellow Experience Bar",
+					"description": ""
+				},
+				{
+					"id": "green_xp_bar",
+					"name": "Green Experience Bar",
+					"description": ""
+				},
+				{
+					"id": "cyan_xp_bar",
+					"name": "Cyan Experience Bar",
+					"description": ""
+				},
+				{
+					"id": "light_blue_xp_bar",
+					"name": "Light Blue Experience Bar",
+					"description": ""
+				},
+				{
+					"id": "blue_xp_bar",
+					"name": "Blue Experience Bar",
+					"description": ""
+				},
+				{
+					"id": "purple_xp_bar",
+					"name": "Purple Experience Bar",
+					"description": ""
+				},
+				{
+					"id": "magenta_xp_bar",
+					"name": "Magenta Experience Bar",
+					"description": ""
+				},
+				{
+					"id": "pink_xp_bar",
+					"name": "Pink Experience Bar",
+					"description": ""
+				},
+				{
+					"id": "rainbow_experience_bar",
+					"name": "Rainbow Experience Bar",
+					"description": "Changes the default green XP bar to a rainbow XP bar"
 				}
 			]
 		},
