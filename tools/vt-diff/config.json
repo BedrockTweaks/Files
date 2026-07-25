@@ -1,0 +1,65 @@
+{
+	"repository": "BedrockTweaks/Files",
+	"vanillaTweaks": {
+		"version": "26.2",
+		"catalogUrl": "https://vanillatweaks.net/assets/resources/json/{version}/{kind}categories.json",
+		"iconUrl": "https://vanillatweaks.net/assets/resources/icons/{iconDir}/{version}/{name}.png",
+		"pickerUrl": "https://vanillatweaks.net/picker/{picker}/"
+	},
+	"sections": [
+		{
+			"id": "resource_packs",
+			"name": "Resource Packs",
+			"vtKind": "rp",
+			"vtIconDir": "resourcepacks",
+			"vtPicker": "resource-packs",
+			"label": "resource_packs"
+		},
+		{
+			"id": "addons",
+			"name": "Addons",
+			"vtKind": "dp",
+			"vtIconDir": "datapacks",
+			"vtPicker": "datapacks",
+			"label": "addons"
+		},
+		{
+			"id": "crafting_tweaks",
+			"name": "Crafting Tweaks",
+			"vtKind": "ct",
+			"vtIconDir": "craftingtweaks",
+			"vtPicker": "crafting-tweaks",
+			"label": "crafting_tweaks"
+		}
+	],
+	"issues": {
+		"createLabels": ["enhancement"],
+		"nonPackTitlePrefixes": ["update", "combination", "website", "bug", "site", "question"],
+		"closeRequiresLabels": ["enhancement"],
+		"closeExcludesLabels": ["bug", "not_possible"],
+		"markerStart": "<!-- vt-diff:start -->",
+		"markerEnd": "<!-- vt-diff:end -->"
+	},
+	"suggestionMaxDistance": 4,
+	"feasibility": {
+		"batchSize": 10,
+		"verdicts": ["possible", "partial", "blocked", "unknown"],
+		"verdictLabels": {
+			"possible": ["enhancement"],
+			"partial": ["enhancement", "help wanted"],
+			"blocked": ["not_possible"],
+			"unknown": ["enhancement"]
+		},
+		"skipCreateVerdicts": [],
+		"minimumSources": 1,
+		"trustedSourceHosts": [
+			"learn.microsoft.com",
+			"wiki.bedrock.dev",
+			"raw.githubusercontent.com",
+			"github.com",
+			"bugs.mojang.com",
+			"feedback.minecraft.net",
+			"minecraft.wiki"
+		]
+	}
+}

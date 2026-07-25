@@ -11,7 +11,11 @@
 		"regolith-install": "yarn workspaces foreach -i -A --topological --jobs=1 run regolith-install",
 		"build": "yarn workspaces foreach -i -A run build",
 		"lint": "yarn workspaces foreach -i -A run lint",
-		"test": "yarn workspaces foreach -i -A --continue run test"
+		"test": "yarn workspaces foreach -i -A --continue run test",
+		"vt:fetch": "node tools/vt-diff/fetch.mjs",
+		"vt:diff": "node tools/vt-diff/fetch.mjs && node tools/vt-diff/diff.mjs",
+		"vt:feasibility": "node tools/vt-diff/feasibility.mjs",
+		"vt:issues": "node tools/vt-diff/issues.mjs"
 	},
 	"engines": {
 		"node": ">=25.0.0"

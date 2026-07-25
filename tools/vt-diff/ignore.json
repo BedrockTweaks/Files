@@ -1,0 +1,39 @@
+{
+	"$comment": "Vanilla Tweaks packs that will never be ported. Keys are Vanilla Tweaks pack `name` values, values are the reason. These are excluded from the missing list and from issue creation.",
+	"resource_packs": {
+		"WarmGlow": "Closed as not planned in BedrockTweaks/Files#5",
+		"EndlessEndRods": "Closed as not planned in BedrockTweaks/Files#6",
+		"AnimatedCampfireItem": "Closed as not planned in BedrockTweaks/Files#7",
+		"MossCarpetOverhang": "Closed as not planned in BedrockTweaks/Files#10",
+		"BushyLeaves": "Closed as not planned in BedrockTweaks/Files#15",
+		"WavyLeaves": "Closed as not planned in BedrockTweaks/Files#16",
+		"WavyPlants": "Closed as not planned in BedrockTweaks/Files#17",
+		"WavyWater": "Closed as not planned in BedrockTweaks/Files#18",
+		"TwinklingStars": "Closed as not planned in BedrockTweaks/Files#20",
+		"TallerSunflowers": "Closed as not planned in BedrockTweaks/Files#21",
+		"RandomCoarseDirtRotation": "Closed as not planned in BedrockTweaks/Files#22",
+		"VariatedNylium": "Closed as not planned in BedrockTweaks/Files#324",
+		"RandomSunflowerRotation": "Closed as not planned in BedrockTweaks/Files#23",
+		"DiminishingTools": "Closed as not planned in BedrockTweaks/Files#30",
+		"UniquePaintingItems": "Closed as not planned in BedrockTweaks/Files#550",
+		"UniqueAxolotlBuckets": "Closed as not planned in BedrockTweaks/Files#551",
+		"MobSpawnIndicator": "Closed as not planned in BedrockTweaks/Files#31",
+		"DirectionalDispensersDroppers": "Closed as not planned in BedrockTweaks/Files#37",
+		"GroovyLevers": "Closed as not planned in BedrockTweaks/Files#38",
+		"VisualCauldronStages": "Closed as not planned in BedrockTweaks/Files#39",
+		"VisualComposterStages": "Closed as not planned in BedrockTweaks/Files#40",
+		"VisualSaplingGrowth": "Closed as not planned in BedrockTweaks/Files#41",
+		"NoteblockBanners": "Closed as not planned in BedrockTweaks/Files#42",
+		"NoBeaconBeam": "Closed as not planned in BedrockTweaks/Files#45",
+		"OldAlexSteve": "Closed as not planned in BedrockTweaks/Files#56",
+		"HardcoreDarkness": "Closed as not planned in BedrockTweaks/Files#57",
+		"SpinningBurningSkullPainting": "Closed as not planned in BedrockTweaks/Files#58",
+		"DungeonsAlexSteve": "Closed as not planned in BedrockTweaks/Files#161"
+	},
+	"addons": {
+		"player head drops": "Closed as not planned in BedrockTweaks/Files#442",
+		"unlock all recipes": "Closed as not planned in BedrockTweaks/Files#463",
+		"custom villager shops": "Closed as not planned in BedrockTweaks/Files#490"
+	},
+	"crafting_tweaks": {}
+}

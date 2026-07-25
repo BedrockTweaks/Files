@@ -1,0 +1,20 @@
+{
+	"$comment": "Bedrock feasibility verdicts for Vanilla Tweaks packs we do not ship. Populated by the agent research pass described in AGENTS.md. Every entry must cite at least one trusted source — `feasibility.mjs --validate` enforces it. Keys are Vanilla Tweaks pack `name` values.",
+	"$example": {
+		"SomeVanillaTweaksPackName": {
+			"verdict": "possible | partial | blocked | unknown",
+			"confidence": "high | medium | low",
+			"summary": "One sentence a maintainer can read without opening anything else.",
+			"mechanism": "How it would actually be built on Bedrock, or what specifically blocks it.",
+			"caveats": "Optional. Partial support, version floor, platform differences.",
+			"sources": [
+				"https://wiki.bedrock.dev/..."
+			],
+			"checkedAt": "2026-07-25",
+			"checkedBy": "agent"
+		}
+	},
+	"resource_packs": {},
+	"addons": {},
+	"crafting_tweaks": {}
+}

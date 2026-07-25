@@ -1,0 +1,18 @@
+{
+	"$comment": "Manual overrides where a Vanilla Tweaks pack ships under a different name on Bedrock Tweaks. Keys are Vanilla Tweaks pack `name` values, values are Bedrock Tweaks pack ids. Add an entry whenever the diff reports a pack as missing that we already ship under another name.",
+	"resource_packs": {
+		"ClassicSheep": "classic_java_sheep",
+		"KindaClassicSheep": "kinda_classic_java_sheep",
+		"PackPngPanorama": "pack_panorama",
+		"PotterySherdToShard": "rename_pottery_sherds_to_pottery_shards",
+		"ColoredXpBarsBrown": "brown_xp_bar",
+		"UniversalLushGrass": "lush_grass_all_round",
+		"DirtPanoramaOverlay": "dirt_background",
+		"SGAToEnglish": "english_enchanting_table_translation"
+	},
+	"addons": {},
+	"crafting_tweaks": {
+		"blackstone cobblestone": "alternate_cobblestone",
+		"craftable notch apples": "craftable_enchanted_golden_apple"
+	}
+}
