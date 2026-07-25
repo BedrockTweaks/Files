@@ -1,0 +1,11 @@
+{
+	"namespace": "crafting",
+	"tab_content/tab_content_search_bar_panel/items_panel": {
+		"modifications": [
+			{
+				"control_name": "shadow_stack",
+				"operation": "remove"
+			}
+		]
+	}
+}

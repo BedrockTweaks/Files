@@ -1,0 +1,23 @@
+{
+    "individual_event_sounds": {
+        "events": {
+            "chest.open": {
+                "volume": 0.025
+            },
+            "chest.close": {
+                "volume": 0.025
+            }
+        }
+    },
+    "block_sounds": {
+        "copper_chest": {
+            "volume": 0.05
+        },
+        "copper_chest_oxidized": {
+            "volume": 0.05
+        },
+        "copper_chest_weathered": {
+            "volume": 0.05
+        }
+    }
+}

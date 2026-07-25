@@ -74,17 +74,17 @@ abc55, WavePlayz, r4isen1920, randomityguy, LukasPlaysGames, TheBlueShadow and a
                 </a>
             </td>
             <td align="center">
-                <a href="https://github.com/NSPC911">
-                    <img src="https://avatars.githubusercontent.com/u/87571998?v=4" width="100;" alt="NSPC911"/>
-                    <br />
-                    <sub><b>NSPC911</b></sub>
-                </a>
-            </td>
-            <td align="center">
                 <a href="https://github.com/yzabeast1">
                     <img src="https://avatars.githubusercontent.com/u/78424865?v=4" width="100;" alt="yzabeast1"/>
                     <br />
                     <sub><b>yzabeast1</b></sub>
+                </a>
+            </td>
+            <td align="center">
+                <a href="https://github.com/NSPC911">
+                    <img src="https://avatars.githubusercontent.com/u/87571998?v=4" width="100;" alt="NSPC911"/>
+                    <br />
+                    <sub><b>NSPC911</b></sub>
                 </a>
             </td>
             <td align="center">
@@ -111,17 +111,17 @@ abc55, WavePlayz, r4isen1920, randomityguy, LukasPlaysGames, TheBlueShadow and a
                 </a>
             </td>
             <td align="center">
-                <a href="https://github.com/MPAD2277">
-                    <img src="https://avatars.githubusercontent.com/u/77268603?v=4" width="100;" alt="MPAD2277"/>
-                    <br />
-                    <sub><b>MPAD2277</b></sub>
-                </a>
-            </td>
-            <td align="center">
                 <a href="https://github.com/daniswastaken">
                     <img src="https://avatars.githubusercontent.com/u/143309460?v=4" width="100;" alt="daniswastaken"/>
                     <br />
                     <sub><b>daniswastaken</b></sub>
+                </a>
+            </td>
+            <td align="center">
+                <a href="https://github.com/MPAD2277">
+                    <img src="https://avatars.githubusercontent.com/u/77268603?v=4" width="100;" alt="MPAD2277"/>
+                    <br />
+                    <sub><b>MPAD2277</b></sub>
                 </a>
             </td>
             <td align="center">

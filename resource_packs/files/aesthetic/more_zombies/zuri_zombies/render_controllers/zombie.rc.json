@@ -6,17 +6,20 @@
 				"textures": {
 					"Array.skin": [
 						"Texture.zuri"
+					],
+					"Array.skin_baby": [
+						"Texture.zuri_baby"
 					]
 				}
 			},
-			"geometry": "Geometry.default",
+			"geometry": "query.is_baby ? Geometry.baby : Geometry.default",
 			"materials": [
 				{
 					"*": "Material.default"
 				}
 			],
 			"textures": [
-				"Array.skin[v.zombie_skin]"
+				"query.is_baby ? Array.skin_baby[v.zombie_skin] : Array.skin[v.zombie_skin]"
 			]
 		}
 	}

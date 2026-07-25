@@ -1,5 +1,5 @@
 {
-	"format_version": "1.21.110",
+	"format_version": "1.21.120",
 	"minecraft:client_biome": {
 		"description": {
 			"identifier": "minecraft:warped_forest"
@@ -13,9 +13,17 @@
 				"surface_opacity": 0.4
 			},
 			"minecraft:ambient_sounds": {
-				"addition": "ambient.warped_forest.additions",
+				"addition": {
+					"asset": "ambient.warped_forest.additions",
+					"chance": 0.0111
+				},
 				"loop": "ambient.warped_forest.loop",
-				"mood": "ambient.warped_forest.mood"
+				"mood": "ambient.warped_forest.mood",
+				"underwater_addition": {
+					"asset": "ambient.underwater.additions",
+					"chance": 0.01
+				},
+				"underwater_loop": "ambient.underwater.loop"
 			},
 			"minecraft:atmosphere_identifier": {
 				"atmosphere_identifier": "minecraft:warped_forest_atmospherics"
