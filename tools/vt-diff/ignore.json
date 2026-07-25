@@ -68,7 +68,8 @@
 		"JappaSpecIcons": "Bedrock has no spectator menu, so there are no spectator icons to retexture.",
 		"NoJavaEditionTitle": "Does not apply to Bedrock — there is no \"Java Edition\" subtitle to remove. We ship bedrock_edition_title, the counterpart that adds a Bedrock Edition logo.",
 		"PingColorIndicator": "Already native on Bedrock — the play screen selects Ping_Green/Yellow/Red at runtime via the #info_ping_texture_name binding. Nothing to port.",
-		"LiteralGameruleNames": "Does not apply to Bedrock — the Java gamerule menu this renames does not exist here."
+		"LiteralGameruleNames": "Does not apply to Bedrock — the Java gamerule menu this renames does not exist here.",
+		"GlowierGlow": "Closed as not planned in BedrockTweaks/Files#927. The Java pack works by editing core shaders; Bedrock resource packs expose no shader or material control point under Render Dragon."
 	},
 	"addons": {
 		"player head drops": "Closed as not planned in BedrockTweaks/Files#442",
