@@ -38,7 +38,33 @@
 		"closeRequiresLabels": ["enhancement"],
 		"closeExcludesLabels": ["bug", "not_possible"],
 		"markerStart": "<!-- vt-diff:start -->",
-		"markerEnd": "<!-- vt-diff:end -->"
+		"markerEnd": "<!-- vt-diff:end -->",
+		"$groupsComment": "Colour-variant families tracked as one issue instead of one per colour. `category` is the slugged Vanilla Tweaks category trail, matched against `targetCategory` on missing packs and `vanillaCategory` on matched ones. Group only families where every member is the same pack in a different palette — same verdict, same mechanism. Packs that merely share a root cause (3D block remodels, Parity no-ops) still get one issue each, because each names different work.",
+		"groups": [
+			{
+				"id": "world_of_color/block_outlines",
+				"section": "resource_packs",
+				"category": "world_of_color/block_outlines",
+				"title": "[World of Color > Block Outlines] Colored Block Outlines",
+				"note": "Vanilla Tweaks ships one pack per colour. They are one implementation with a different palette, so they are tracked here as a single issue."
+			},
+			{
+				"id": "world_of_color/enchantment_glints",
+				"section": "resource_packs",
+				"category": "world_of_color/enchantment_glints",
+				"title": "[World of Color > Enchantment Glints] Colored Enchantment Glints",
+				"note": "Vanilla Tweaks ships one pack per colour. They are one implementation with a different palette, so they are tracked here as a single issue.",
+				"groupSummary": "Recolouring the enchantment glint is a two-texture swap on Bedrock, using the exact method this repo already ships for the red, orange, yellow, blue and rainbow glints."
+			},
+			{
+				"id": "gui/tooltips",
+				"section": "resource_packs",
+				"category": "gui/tooltips",
+				"title": "[GUI > Tooltips] Colored Tooltips",
+				"note": "Vanilla Tweaks ships one pack per colour. They are one implementation with a different palette, so they are tracked here as a single issue.",
+				"groupSummary": "Straightforward port — Bedrock draws the item hover tooltip from the single nine-sliced texture `textures/ui/purpleBorder.png`, which a resource pack can replace with a recoloured frame."
+			}
+		]
 	},
 	"suggestionMaxDistance": 4,
 	"feasibility": {

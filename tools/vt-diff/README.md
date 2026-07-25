@@ -108,6 +108,39 @@ packs still get a documented issue explaining why.
 | `skipped` | Not created, because its verdict is in `skipCreateVerdicts` |
 | `reopenCandidates` | **Report only** — closed as completed, yet still absent from `packs.json` |
 | `rejected` | **Report only** — closed as not planned; feed into `ignore.json` |
+| `groupConflicts` | **Report only** — a grouped pack that also has its own open issue |
+
+## Grouped colour families
+
+Some Vanilla Tweaks categories ship the same pack once per colour. One issue per colour is noise, so
+`issues.groups` in `config.json` collapses a whole category into a single issue carrying a checklist
+of members — ticked once each one ships.
+
+```json
+{
+	"id": "gui/tooltips",
+	"section": "resource_packs",
+	"category": "gui/tooltips",
+	"title": "[GUI > Tooltips] Colored Tooltips",
+	"note": "Shown above the checklist, explaining why the family is one issue.",
+	"groupSummary": "Optional. Replaces the sampled per-pack summary, which names its own colour."
+}
+```
+
+`category` is the slugged Vanilla Tweaks category trail — matched against `targetCategory` on missing
+packs and `vanillaCategory` on matched ones, so shipped members appear ticked rather than vanishing.
+
+Group only families where every member is the same pack in a different palette: same verdict, same
+mechanism. Packs that merely share a *root cause* — the 3D block remodels, the Parity no-ops — still
+get one issue each, because each names different work. Grouping is deliberate config, never inferred:
+a "these look similar" heuristic misfires exactly where it costs most.
+
+A group closes only when every member has shipped. Feasibility coverage is counted in packs, not
+issues, so grouping never inflates it.
+
+**Add a group before `--apply`, not after.** Once per-colour issues exist, grouping means closing and
+reopening them; `groupConflicts` reports any member that already has its own issue rather than
+silently opening a duplicate.
 
 Managed issue bodies carry a block delimited by `<!-- vt-diff:start -->` and `<!-- vt-diff:end -->`
 containing a `<!-- vt-diff:id=rp/PackName -->` marker. The marker is what makes reruns idempotent —

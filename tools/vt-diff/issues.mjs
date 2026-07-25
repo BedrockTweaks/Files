@@ -69,6 +69,18 @@ if (apply && !authenticated)
 const run = (args) => execFileSync(gh, args, { encoding: 'utf8', maxBuffer: 64 * 1024 * 1024 });
 
 /**
+ * Reports whether a gh failure is GitHub refusing the write rather than the call being malformed.
+ *
+ * Retrying a malformed call as a comment would post nonsense, so only genuine permission and
+ * lock failures fall back.
+ *
+ * @param {any} error - The error thrown by `run`.
+ * @returns {boolean} True when the write was refused.
+ */
+const isPermissionFailure = (error) => /403|404|not authorized|must have admin|permission|read-only|locked|HTTP 401/i
+	.test(`${error?.stderr ?? ''}${error?.stdout ?? ''}${error?.message ?? ''}`);
+
+/**
  * Reads every issue, preferring gh and falling back to the public REST API for dry runs.
  *
  * @returns {Promise<any[]>} The issues.
@@ -130,6 +142,110 @@ const parseTitle = (title) => {
  * @returns {string} The marker comment.
  */
 const packMarker = (section, pack) => `<!-- vt-diff:id=${section.vtKind}/${pack.name} -->`;
+
+/**
+ * Builds the marker for a grouped colour-variant family.
+ *
+ * Groups carry one marker for the whole family rather than one per member, so the regex in the
+ * issue scan resolves a group issue to its group id and never to a member pack.
+ *
+ * @param {any} section - A section entry from `config.json`.
+ * @param {any} group - A group entry from `config.issues.groups`.
+ * @returns {string} The marker comment.
+ */
+const groupMarker = (section, group) => `<!-- vt-diff:id=${section.vtKind}/group:${group.id} -->`;
+
+/**
+ * Resolves the group a pack belongs to, if any.
+ *
+ * @param {any} section - A section entry from `config.json`.
+ * @param {any} pack - A missing Vanilla Tweaks pack.
+ * @returns {any | undefined} The matching group entry.
+ */
+const groupFor = (section, pack) => (config.issues.groups ?? []).find(
+	(group) => group.section === section.id && group.category === pack.targetCategory,
+);
+
+/**
+ * Renders the managed block for a grouped family: one checklist plus one shared verdict.
+ *
+ * Shipped members are ticked, so the issue doubles as a progress tracker for the family.
+ *
+ * @param {any} section - A section entry from `config.json`.
+ * @param {any} group - A group entry from `config.issues.groups`.
+ * @param {any[]} missing - Member packs still absent from packs.json.
+ * @param {any[]} shipped - Member packs already matched.
+ * @returns {string} The block, including its markers.
+ */
+const renderGroupBlock = (section, group, missing, shipped) => {
+	const sample = missing[0];
+	const verdict = verdictFor(section.id, sample.name);
+	const verdicts = [...new Set(missing.map((pack) => verdictFor(section.id, pack.name)?.verdict ?? 'unknown'))];
+
+	const lines = [
+		config.issues.markerStart,
+		'### Vanilla Tweaks reference',
+		'',
+		'| | |',
+		'| --- | --- |',
+		`| Family | **${missing.length + shipped.length} packs** in one issue |`,
+		`| Section | ${section.name} |`,
+		`| Vanilla Tweaks category | ${sample.categoryPath.join(' > ')} |`,
+		`| Bedrock Tweaks category | \`${sample.targetCategory}\`${sample.targetCategoryExists ? '' : ' — **does not exist yet**'} |`,
+		`| Picker | ${sample.picker} |`,
+		`| Version | \`${config.vanillaTweaks.version}\` |`,
+		'',
+		`> ${group.note}`,
+		'',
+		`### Packs (${shipped.length}/${missing.length + shipped.length} shipped)`,
+		'',
+	];
+
+	for (const pack of shipped) lines.push(`- [x] **${pack.display}** — shipped as \`${pack.bedrockId}\``);
+	for (const pack of missing) lines.push(`- [ ] **${pack.display}** (\`${pack.name}\`)`);
+
+	lines.push('', `<img src="${sample.icon}" width="96" alt="${sample.display}">`);
+
+	if (verdicts.length > 1)
+		lines.push('', `> [!WARNING]`, `> Members of this group do not share one verdict (\`${verdicts.join('`, `')}\`). Consider splitting it in \`config.json\`.`);
+
+	if (verdict) {
+		lines.push(
+			'',
+			'### Bedrock feasibility',
+			'',
+			'| | |',
+			'| --- | --- |',
+			`| Verdict | **${verdict.verdict}** (${verdict.confidence} confidence) |`,
+			`| Checked | ${verdict.checkedAt} by ${verdict.checkedBy} |`,
+			'',
+			'_The whole family shares one implementation, so one verdict covers every colour._',
+			'',
+			// Recorded summaries are written per pack and name their own colour, which reads wrong on a
+			// family issue. `groupSummary` lets the family speak for itself without editing the research.
+			group.groupSummary ?? verdict.summary,
+			'',
+			`**How it would work on Bedrock.** ${verdict.mechanism}`,
+		);
+
+		if (verdict.caveats) lines.push('', `**Caveats.** ${verdict.caveats}`);
+
+		lines.push('', '<details><summary>Sources</summary>', '');
+		for (const source of verdict.sources ?? []) lines.push(`- ${source}`);
+		lines.push('', '</details>');
+	} else {
+		lines.push('', '### Bedrock feasibility', '', '_Not researched yet._');
+	}
+
+	lines.push(
+		'',
+		'<sub>Maintained by `tools/vt-diff`. Edits inside this block are overwritten on the next run.</sub>',
+		groupMarker(section, group),
+		config.issues.markerEnd,
+	);
+
+	return lines.join('\n');
+};
 
 /**
  * Renders the managed block appended to (or refreshed inside) an issue body.
@@ -246,14 +362,92 @@ for (const issue of issues) {
 	byName.get(key).push(issue);
 };
 
-const plan = { create: [], update: [], close: [], skipped: [], reopenCandidates: [], rejected: [], upToDate: [] };
+const plan = { create: [], update: [], close: [], skipped: [], reopenCandidates: [], rejected: [], upToDate: [], groupConflicts: [] };
 
 for (const section of config.sections) {
 	const entry = report.sections[section.id];
 
 	if (!entry) continue;
 
+	const groups = (config.issues.groups ?? []).filter((group) => group.section === section.id);
+	const grouped = new Set();
+
+	for (const group of groups) {
+		const missing = entry.missing.filter((pack) => pack.targetCategory === group.category);
+
+		if (!missing.length) continue;
+
+		const shipped = entry.matched.filter((match) => match.vanillaCategory === group.category);
+		const marker = `${section.vtKind}/group:${group.id}`;
+		const issue = byMarker.get(marker);
+		const block = renderGroupBlock(section, group, missing, shipped);
+		const packs = missing.map((pack) => pack.name);
+		const verdict = verdictFor(section.id, missing[0].name)?.verdict ?? 'unknown';
+		const labels = [...new Set(missing.flatMap((pack) => labelsFor(section, pack)))];
+
+		// A member with its own pre-existing issue would be tracked twice. Report it instead of
+		// silently opening a duplicate — the maintainer decides whether to fold it in or ungroup.
+		for (const pack of missing) {
+			const own = (byName.get(norm(pack.display)) ?? byName.get(norm(pack.name)) ?? [])
+				.filter((candidate) => candidate.state === 'OPEN');
+
+			for (const candidate of own)
+				plan.groupConflicts.push({
+					section: section.id,
+					group: group.id,
+					pack: pack.name,
+					display: pack.display,
+					number: candidate.number,
+					title: candidate.title,
+					url: candidate.url,
+				});
+		}
+
+		for (const pack of missing) grouped.add(pack.name);
+
+		if (!issue) {
+			plan.create.push({ section: section.id, group: group.id, pack: group.id, packs, title: group.title, labels, verdict, body: block });
+			continue;
+		}
+
+		if (issue.state !== 'OPEN') {
+			plan.reopenCandidates.push({
+				section: section.id,
+				group: group.id,
+				pack: group.id,
+				display: group.title,
+				number: issue.number,
+				title: issue.title,
+				url: issue.url,
+				stateReason: issue.stateReason ?? null,
+			});
+			continue;
+		}
+
+		const body = applyBlock(issue.body ?? '', block);
+		const addLabels = labels.filter((label) => !issue.labels.map((entry) => entry.name).includes(label));
+		const bodyChanged = body.trim() !== (issue.body ?? '').trim();
+
+		if (!bodyChanged && !addLabels.length) plan.upToDate.push({ number: issue.number, title: issue.title });
+		else plan.update.push({ section: section.id, group: group.id, pack: group.id, packs, number: issue.number, title: issue.title, url: issue.url, verdict, addLabels, bodyChanged, body });
+	}
+
+	// A group whose members have all shipped leaves nothing in `missing`, so it is handled here
+	// rather than in the loop above: close it once, when the last member lands.
+	for (const group of groups) {
+		if (entry.missing.some((pack) => pack.targetCategory === group.category)) continue;
+
+		const issue = byMarker.get(`${section.vtKind}/group:${group.id}`);
+
+		if (!issue || issue.state !== 'OPEN') continue;
+		if (!entry.matched.some((match) => match.vanillaCategory === group.category)) continue;
+
+		plan.close.push({ section: section.id, group: group.id, number: issue.number, title: issue.title, url: issue.url, labels: issue.labels.map((label) => label.name) });
+	}
+
 	for (const pack of entry.missing) {
+		if (grouped.has(pack.name)) continue;
+
 		const marker = `${section.vtKind}/${pack.name}`;
 		const candidates = byMarker.has(marker)
 			? [byMarker.get(marker)]
@@ -273,6 +467,7 @@ for (const section of config.sections) {
 			plan.create.push({
 				section: section.id,
 				pack: pack.name,
+				packs: [pack.name],
 				title: `[${pack.categoryPath.join(' > ')}] ${pack.display}`,
 				labels: labelsFor(section, pack),
 				verdict,
@@ -314,6 +509,7 @@ for (const section of config.sections) {
 			plan.update.push({
 				section: section.id,
 				pack: pack.name,
+				packs: [pack.name],
 				number: issue.number,
 				title: issue.title,
 				url: issue.url,
@@ -334,6 +530,8 @@ for (const section of config.sections) {
 
 		const labels = issue.labels.map((label) => label.name);
 
+		// Group issues close only when every member has shipped, which is decided above.
+		if (/<!-- vt-diff:id=[^ ]*\/group:/.test(issue.body ?? '')) continue;
 		if (config.issues.nonPackTitlePrefixes.includes(prefix.toLowerCase())) continue;
 		if (!labels.includes(section.label)) continue;
 		if (!config.issues.closeRequiresLabels.every((label) => labels.includes(label))) continue;
@@ -346,8 +544,17 @@ for (const section of config.sections) {
 }
 
 const planned = [...plan.create, ...plan.update];
-const researched = planned.filter((item) => item.verdict && item.verdict !== 'unknown').length;
-const unresearched = planned.length - researched;
+
+// Counted in packs, not issues: one grouped issue covers many packs, and reporting it as a single
+// unit would overstate coverage.
+const plannedPacks = planned.flatMap((item) => (item.packs ?? [item.pack]).map((pack) => ({ section: item.section, pack })));
+const researched = plannedPacks.filter(({ section, pack }) => {
+	const verdict = verdictFor(section, pack)?.verdict;
+
+	return verdict && verdict !== 'unknown';
+}).length;
+const unresearched = plannedPacks.length - researched;
+const groupedIssues = planned.filter((item) => item.group).length;
 
 const lines = [
 	'# Vanilla Tweaks issue plan',
@@ -364,6 +571,8 @@ const lines = [
 	'',
 	`Feasibility coverage: ${researched} of ${researched + unresearched} planned packs have a verdict.${unresearched ? ` Run \`node tools/vt-diff/feasibility.mjs\` and complete the research pass before applying.` : ''}`,
 	'',
+	`${plannedPacks.length} packs are covered by ${planned.length} issues${groupedIssues ? `, because ${groupedIssues} colour-variant ${groupedIssues === 1 ? 'family is' : 'families are'} grouped into one issue each` : ''}.`,
+	'',
 	'Only **Create**, **Update** and **Close** are executed by `--apply`. The two closed-issue buckets are reports for a human.',
 	'',
 	'Run `node tools/vt-diff/issues.mjs --apply` to execute.',
@@ -378,6 +587,12 @@ if (plan.reopenCandidates.length) {
 	lines.push('', '## Closed as completed, yet still missing from packs.json', '', 'Either `aliases.json` needs an entry, or the pack was never actually shipped.', '');
 	for (const item of plan.reopenCandidates)
 		lines.push(`- **${item.display}** (\`${item.pack}\`) → #${item.number} ${item.title} — ${item.url}`);
+}
+
+if (plan.groupConflicts.length) {
+	lines.push('', '## Grouped packs that already have their own issue', '', 'These would be tracked twice. Either fold the existing issue into the group and close it, or remove the group from `config.json`.', '');
+	for (const item of plan.groupConflicts)
+		lines.push(`- **${item.display}** (\`${item.pack}\`) is in group \`${item.group}\` but also has #${item.number} ${item.title} — ${item.url}`);
 }
 
 if (plan.rejected.length) {
@@ -397,7 +612,7 @@ if (plan.update.length) {
 
 if (plan.create.length) {
 	lines.push('', '## Create', '');
-	for (const item of plan.create) lines.push(`- \`${item.section}\` **${item.title}** — labels: ${item.labels.join(', ')} — verdict \`${item.verdict}\``);
+	for (const item of plan.create) lines.push(`- \`${item.section}\` **${item.title}** — labels: ${item.labels.join(', ')} — verdict \`${item.verdict}\`${item.group ? ` — grouped, covers ${item.packs.length} packs` : ''}`);
 }
 
 if (plan.skipped.length) {
@@ -408,8 +623,12 @@ if (plan.skipped.length) {
 writeJson(join(OUT_DIR, 'issue-plan.json'), plan);
 writeText(join(OUT_DIR, 'issue-plan.md'), `${lines.join('\n')}\n`);
 
-console.log(`\ncreate=${plan.create.length} update=${plan.update.length} close=${plan.close.length} skipped=${plan.skipped.length} reopenCandidates=${plan.reopenCandidates.length} rejected=${plan.rejected.length} upToDate=${plan.upToDate.length}`);
-console.log(`feasibility: ${researched} researched, ${unresearched} still unknown`);
+// Written on the dry run too, so every body can be read as Markdown before anything is sent.
+for (const item of plan.create) writeText(join(OUT_DIR, 'bodies', `create-${item.section}-${norm(item.pack)}.md`), item.body);
+for (const item of plan.update) writeText(join(OUT_DIR, 'bodies', `update-${item.number}.md`), item.body);
+
+console.log(`\ncreate=${plan.create.length} update=${plan.update.length} close=${plan.close.length} skipped=${plan.skipped.length} reopenCandidates=${plan.reopenCandidates.length} rejected=${plan.rejected.length} upToDate=${plan.upToDate.length}${plan.groupConflicts.length ? ` groupConflicts=${plan.groupConflicts.length}` : ''}`);
+console.log(`feasibility: ${researched} researched, ${unresearched} still unknown (${plannedPacks.length} packs across ${planned.length} issues, ${groupedIssues} grouped)`);
 console.log(`Wrote ${join(OUT_DIR, 'issue-plan.json')}\nWrote ${join(OUT_DIR, 'issue-plan.md')}`);
 
 if (process.argv.includes('--seed-ignore')) {
@@ -437,6 +656,9 @@ if (!apply) {
 
 console.log('\nApplying ...');
 
+const failures = [];
+const commented = [];
+
 for (const item of plan.update) {
 	const path = join(OUT_DIR, 'bodies', `update-${item.number}.md`);
 	const args = ['issue', 'edit', String(item.number), '--repo', config.repository];
@@ -448,8 +670,31 @@ for (const item of plan.update) {
 
 	for (const label of item.addLabels) args.push('--add-label', label);
 
-	run(args);
-	console.log(`  updated #${item.number}${item.addLabels.length ? ` (+${item.addLabels.join(' +')})` : ''}`);
+	try {
+		run(args);
+		console.log(`  updated #${item.number}${item.addLabels.length ? ` (+${item.addLabels.join(' +')})` : ''}`);
+	} catch (error) {
+		if (!isPermissionFailure(error)) {
+			failures.push({ what: `update #${item.number}`, reason: (error.stderr ?? error.message ?? '').trim() });
+			console.log(`  FAILED #${item.number} — ${(error.stderr ?? error.message ?? '').trim().split('\n')[0]}`);
+			continue;
+		}
+
+		// No write access to the body. Post the block as a comment instead, so the reference still
+		// reaches the issue without touching anything somebody else wrote.
+		const commentPath = join(OUT_DIR, 'bodies', `comment-${item.number}.md`);
+
+		writeText(commentPath, `${item.body}\n\n<sub>Posted as a comment because \`tools/vt-diff\` could not edit this issue.</sub>`);
+
+		try {
+			run(['issue', 'comment', String(item.number), '--repo', config.repository, '--body-file', commentPath]);
+			commented.push({ number: item.number, title: item.title });
+			console.log(`  commented on #${item.number} (no edit permission)`);
+		} catch (commentError) {
+			failures.push({ what: `update #${item.number}`, reason: `edit and comment both refused: ${(commentError.stderr ?? commentError.message ?? '').trim()}` });
+			console.log(`  FAILED #${item.number} — edit and comment both refused`);
+		}
+	}
 }
 
 for (const item of plan.create) {
@@ -461,12 +706,34 @@ for (const item of plan.create) {
 
 	for (const label of item.labels) args.push('--label', label);
 
-	console.log(`  created ${run(args).trim()}`);
+	try {
+		console.log(`  created ${run(args).trim()}`);
+	} catch (error) {
+		failures.push({ what: `create "${item.title}"`, reason: (error.stderr ?? error.message ?? '').trim() });
+		console.log(`  FAILED to create "${item.title}" — ${(error.stderr ?? error.message ?? '').trim().split('\n')[0]}`);
+	}
 }
 
 for (const item of plan.close) {
-	run(['issue', 'close', String(item.number), '--repo', config.repository, '--comment', 'This pack is now available on Bedrock Tweaks. Closed automatically by `tools/vt-diff`.']);
-	console.log(`  closed #${item.number}`);
+	try {
+		run(['issue', 'close', String(item.number), '--repo', config.repository, '--comment', 'This pack is now available on Bedrock Tweaks. Closed automatically by `tools/vt-diff`.']);
+		console.log(`  closed #${item.number}`);
+	} catch (error) {
+		failures.push({ what: `close #${item.number}`, reason: (error.stderr ?? error.message ?? '').trim() });
+		console.log(`  FAILED to close #${item.number} — ${(error.stderr ?? error.message ?? '').trim().split('\n')[0]}`);
+	}
+}
+
+if (commented.length) {
+	console.log(`\n${commented.length} issue(s) received a comment instead of a body edit:`);
+	for (const item of commented) console.log(`  #${item.number} ${item.title}`);
+}
+
+if (failures.length) {
+	console.log(`\n${failures.length} operation(s) failed:`);
+	for (const failure of failures) console.log(`  ${failure.what} — ${failure.reason.split('\n')[0]}`);
+	console.log('\nRe-running is safe: the managed marker makes every operation idempotent.');
+	process.exitCode = 1;
 }
 
 console.log('\nDone.');

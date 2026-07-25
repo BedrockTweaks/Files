@@ -56,7 +56,8 @@
 		"ColoredInvMagenta": "Vanilla Tweaks ships this under GUI > Inventories & Containers [WIP/EXPERIMENTAL]; we do not track experimental Vanilla Tweaks packs.",
 		"ColoredWidgetsMagenta": "Bedrock's UI is different by default — Java widget recolouring does not translate. Menu buttons on the screens that matter have migrated to Ore UI, which resource packs cannot modify, and the hotbar selector is already shipped separately as gui/hotbar_selector. Colored Tooltips are still wanted and remain tracked.",
 		"ColoredInvPink": "Vanilla Tweaks ships this under GUI > Inventories & Containers [WIP/EXPERIMENTAL]; we do not track experimental Vanilla Tweaks packs.",
-		"ColoredWidgetsPink": "Bedrock's UI is different by default — Java widget recolouring does not translate. Menu buttons on the screens that matter have migrated to Ore UI, which resource packs cannot modify, and the hotbar selector is already shipped separately as gui/hotbar_selector. Colored Tooltips are still wanted and remain tracked."
+		"ColoredWidgetsPink": "Bedrock's UI is different by default — Java widget recolouring does not translate. Menu buttons on the screens that matter have migrated to Ore UI, which resource packs cannot modify, and the hotbar selector is already shipped separately as gui/hotbar_selector. Colored Tooltips are still wanted and remain tracked.",
+		"BlueWidgetsHighlight": "Bedrock's UI is different by default — we are not porting widget packs. The highlighted-button outline is a menu widget, same rationale as the ColoredWidgets family."
 	},
 	"addons": {
 		"player head drops": "Closed as not planned in BedrockTweaks/Files#442",

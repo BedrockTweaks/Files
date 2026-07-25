@@ -261,8 +261,14 @@ Read `out/issue-plan.md`, then verify before presenting it:
    shipped pack. The filters in `config.json` (`closeRequiresLabels`, `closeExcludesLabels`) already
    exclude bugs; verify the survivors anyway.
 4. **`create`** — check the generated titles match the repo convention, `[Category > Sub] Pack Name`.
-5. **Feasibility coverage** — the plan prints how many planned packs still have no verdict. Applying
+   A Vanilla Tweaks category whose own name contains brackets will produce a nested-bracket title;
+   that is a signal the category needs a group or an `ignore.json` entry, not a title patch.
+5. **`groupConflicts`** — a pack collapsed into a grouped issue that already has its own open issue.
+   Non-empty means something would be tracked twice. Either fold the existing issue into the group
+   and close it, or drop the group from `config.json`. Never apply with this bucket populated.
+6. **Feasibility coverage** — the plan prints how many planned packs still have no verdict. Applying
    with a large unresearched count publishes issues that say "not researched yet". Say so plainly.
+   Coverage counts packs, not issues, so a grouped family cannot flatter the number.
 
 Then stop. Present counts, the verified `reopenCandidates`, and anything that looks wrong. Ask the
 developer to approve. Do not apply.
