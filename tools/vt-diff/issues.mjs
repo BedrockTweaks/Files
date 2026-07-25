@@ -1,5 +1,5 @@
 import { execFileSync } from 'node:child_process';
-import { existsSync } from 'node:fs';
+import { existsSync, rmSync } from 'node:fs';
 import { join } from 'node:path';
 
 import { OUT_DIR, TOOL_DIR, config, norm, readJson, writeJson, writeText } from './lib.mjs';
@@ -637,6 +637,10 @@ writeJson(join(OUT_DIR, 'issue-plan.json'), plan);
 writeText(join(OUT_DIR, 'issue-plan.md'), `${lines.join('\n')}\n`);
 
 // Written on the dry run too, so every body can be read as Markdown before anything is sent.
+// Cleared first: a pack that has since been ignored or folded into a group would otherwise leave a
+// stale file behind, and the directory is what a human reviews before approving the plan.
+rmSync(join(OUT_DIR, 'bodies'), { recursive: true, force: true });
+
 for (const item of plan.create) writeText(join(OUT_DIR, 'bodies', `create-${item.section}-${norm(item.pack)}.md`), item.body);
 for (const item of plan.update) writeText(join(OUT_DIR, 'bodies', `update-${item.number}.md`), item.body);
 
