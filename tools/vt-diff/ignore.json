@@ -57,7 +57,18 @@
 		"ColoredWidgetsMagenta": "Bedrock's UI is different by default — Java widget recolouring does not translate. Menu buttons on the screens that matter have migrated to Ore UI, which resource packs cannot modify, and the hotbar selector is already shipped separately as gui/hotbar_selector. Colored Tooltips are still wanted and remain tracked.",
 		"ColoredInvPink": "Vanilla Tweaks ships this under GUI > Inventories & Containers [WIP/EXPERIMENTAL]; we do not track experimental Vanilla Tweaks packs.",
 		"ColoredWidgetsPink": "Bedrock's UI is different by default — Java widget recolouring does not translate. Menu buttons on the screens that matter have migrated to Ore UI, which resource packs cannot modify, and the hotbar selector is already shipped separately as gui/hotbar_selector. Colored Tooltips are still wanted and remain tracked.",
-		"BlueWidgetsHighlight": "Bedrock's UI is different by default — we are not porting widget packs. The highlighted-button outline is a menu widget, same rationale as the ColoredWidgets family."
+		"BlueWidgetsHighlight": "Bedrock's UI is different by default — we are not porting widget packs. The highlighted-button outline is a menu widget, same rationale as the ColoredWidgets family.",
+		"BedrockPistonArms": "Inverse parity pack: it back-ports a Bedrock asset into Java, so it is already the default on Bedrock. We ship the mirror image instead. See java_boom / java_map / java_ender_dragon_ball / java_inventory_slot_highlight.",
+		"BedrockExplosion": "Inverse parity pack: it back-ports a Bedrock asset into Java, so it is already the default on Bedrock. We ship the mirror image instead. We ship java_boom, the same change inverted.",
+		"BedrockMapItem": "Inverse parity pack: it back-ports a Bedrock asset into Java, so it is already the default on Bedrock. We ship the mirror image instead. We ship java_map, the same change inverted.",
+		"BedrockDragonProjectile": "Inverse parity pack: it back-ports a Bedrock asset into Java, so it is already the default on Bedrock. We ship the mirror image instead. We ship java_ender_dragon_ball, the same change inverted.",
+		"BedrockSlotHighlight": "Inverse parity pack: it back-ports a Bedrock asset into Java, so it is already the default on Bedrock. We ship the mirror image instead. We ship java_inventory_slot_highlight, the same change inverted.",
+		"DirtBG": "Does not apply to Bedrock — the Java options-menu dirt background has no Bedrock counterpart worth shipping. The main-menu variant is already covered by our dirt_background pack.",
+		"JappaStatsIcons": "Bedrock has no statistics screen, so there are no stat icons to retexture.",
+		"JappaSpecIcons": "Bedrock has no spectator menu, so there are no spectator icons to retexture.",
+		"NoJavaEditionTitle": "Does not apply to Bedrock — there is no \"Java Edition\" subtitle to remove. We ship bedrock_edition_title, the counterpart that adds a Bedrock Edition logo.",
+		"PingColorIndicator": "Already native on Bedrock — the play screen selects Ping_Green/Yellow/Red at runtime via the #info_ping_texture_name binding. Nothing to port.",
+		"LiteralGameruleNames": "Does not apply to Bedrock — the Java gamerule menu this renames does not exist here."
 	},
 	"addons": {
 		"player head drops": "Closed as not planned in BedrockTweaks/Files#442",

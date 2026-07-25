@@ -102,6 +102,17 @@ const loadIssues = async () => {
 		const url = `https://api.github.com/repos/${config.repository}/issues?state=all&per_page=100&page=${page}`;
 		const response = await fetch(url, { headers: { Accept: 'application/vnd.github+json' } });
 
+		if (response.status === 403 || response.status === 429) {
+			const reset = Number(response.headers.get('x-ratelimit-reset'));
+			const minutes = reset ? Math.max(1, Math.ceil((reset * 1000 - Date.now()) / 60000)) : null;
+
+			throw new Error([
+				'GitHub rejected the request: the unauthenticated API allows only 60 requests an hour.',
+				minutes ? `The limit resets in about ${minutes} minute(s).` : null,
+				'Run `gh auth login` to lift it — authenticated runs get 5000 an hour and never hit this.',
+			].filter(Boolean).join('\n  '));
+		}
+
 		if (!response.ok) throw new Error(`${url} responded ${response.status}`);
 
 		const batch = await response.json();
@@ -379,7 +390,9 @@ for (const section of config.sections) {
 
 		const shipped = entry.matched.filter((match) => match.vanillaCategory === group.category);
 		const marker = `${section.vtKind}/group:${group.id}`;
-		const issue = byMarker.get(marker);
+		// `group.issue` adopts an issue that already tracks the family by hand. It only matters on the
+		// first run: once the block lands, the marker resolves it like any other managed issue.
+		const issue = byMarker.get(marker) ?? (group.issue ? issues.find((candidate) => candidate.number === group.issue) : undefined);
 		const block = renderGroupBlock(section, group, missing, shipped);
 		const packs = missing.map((pack) => pack.name);
 		const verdict = verdictFor(section.id, missing[0].name)?.verdict ?? 'unknown';
@@ -389,7 +402,7 @@ for (const section of config.sections) {
 		// silently opening a duplicate — the maintainer decides whether to fold it in or ungroup.
 		for (const pack of missing) {
 			const own = (byName.get(norm(pack.display)) ?? byName.get(norm(pack.name)) ?? [])
-				.filter((candidate) => candidate.state === 'OPEN');
+				.filter((candidate) => candidate.state === 'OPEN' && candidate.number !== issue?.number);
 
 			for (const candidate of own)
 				plan.groupConflicts.push({

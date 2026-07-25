@@ -39,8 +39,17 @@
 		"closeExcludesLabels": ["bug", "not_possible"],
 		"markerStart": "<!-- vt-diff:start -->",
 		"markerEnd": "<!-- vt-diff:end -->",
-		"$groupsComment": "Colour-variant families tracked as one issue instead of one per colour. `category` is the slugged Vanilla Tweaks category trail, matched against `targetCategory` on missing packs and `vanillaCategory` on matched ones. Group only families where every member is the same pack in a different palette — same verdict, same mechanism. Packs that merely share a root cause (3D block remodels, Parity no-ops) still get one issue each, because each names different work.",
+		"$groupsComment": "Families tracked as one issue instead of one per pack. `category` is the slugged Vanilla Tweaks category trail, matched against `targetCategory` on missing packs and `vanillaCategory` on matched ones. Optional `issue` adopts an issue that already tracks the family by hand, instead of opening a new one. Group colour variants (one pack, many palettes) and families the repo has already decided to track as a unit.",
 		"groups": [
+			{
+				"id": "3d",
+				"section": "resource_packs",
+				"category": "3d",
+				"issue": 47,
+				"title": "[3D] 3D Packs",
+				"note": "The repo already tracks every 3D pack in one issue. Vanilla block geometry is not data-driven on Bedrock, so the whole family stands or falls on one engine limitation.",
+				"groupSummary": "Bedrock resource packs cannot remodel vanilla blocks — `blocks.json` exposes only textures, carried textures, sound and isotropic, and the vanilla pack ships no block geometry — so every 3D block pack in this family is blocked on the same limitation. 3D Items is the exception: held-in-hand geometry works through attachables, as this repo already ships for the Mace."
+			},
 			{
 				"id": "world_of_color/block_outlines",
 				"section": "resource_packs",
