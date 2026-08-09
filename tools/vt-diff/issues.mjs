@@ -363,9 +363,11 @@ const byMarker = new Map();
 const byName = new Map();
 
 for (const issue of issues) {
-	const marker = /<!-- vt-diff:id=([^ ]+) -->/.exec(issue.body ?? '');
+	// Non-greedy, not `[^ ]+`: addons and crafting_tweaks pack names contain spaces, and a
+	// space-excluding class fails to match the marker at all rather than truncating it.
+	const marker = /<!-- vt-diff:id=(.*?) -->/.exec(issue.body ?? '');
 
-	if (marker) byMarker.set(marker[1], issue);
+	if (marker) byMarker.set(marker[1].trim(), issue);
 
 	const key = norm(parseTitle(issue.title).name);
 
