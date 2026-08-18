@@ -5,17 +5,73 @@ __metadata:
   version: 9
   cacheKey: 10c0
 
+"@bedrock-core/config@link:../../../../../../Minecraft/Proyectos/@bedrock-core/ui/packages/config::locator=%40bedrock-tweaks%2Fgraves%40workspace%3Aaddons%2Ffiles%2Fgameplay_changes%2Fgraves":
+  version: 0.0.0-use.local
+  resolution: "@bedrock-core/config@link:../../../../../../Minecraft/Proyectos/@bedrock-core/ui/packages/config::locator=%40bedrock-tweaks%2Fgraves%40workspace%3Aaddons%2Ffiles%2Fgameplay_changes%2Fgraves"
+  languageName: node
+  linkType: soft
+
+"@bedrock-core/flexbox@link:../../../../../../Minecraft/Proyectos/@bedrock-core/ui/packages/flexbox::locator=%40bedrock-tweaks%2Fgraves%40workspace%3Aaddons%2Ffiles%2Fgameplay_changes%2Fgraves":
+  version: 0.0.0-use.local
+  resolution: "@bedrock-core/flexbox@link:../../../../../../Minecraft/Proyectos/@bedrock-core/ui/packages/flexbox::locator=%40bedrock-tweaks%2Fgraves%40workspace%3Aaddons%2Ffiles%2Fgameplay_changes%2Fgraves"
+  languageName: node
+  linkType: soft
+
+"@bedrock-core/guides@link:../../../../../../Minecraft/Proyectos/@bedrock-core/ui/packages/guides::locator=%40bedrock-tweaks%2Fgraves%40workspace%3Aaddons%2Ffiles%2Fgameplay_changes%2Fgraves":
+  version: 0.0.0-use.local
+  resolution: "@bedrock-core/guides@link:../../../../../../Minecraft/Proyectos/@bedrock-core/ui/packages/guides::locator=%40bedrock-tweaks%2Fgraves%40workspace%3Aaddons%2Ffiles%2Fgameplay_changes%2Fgraves"
+  languageName: node
+  linkType: soft
+
+"@bedrock-core/navigation@link:../../../../../../Minecraft/Proyectos/@bedrock-core/ui/packages/navigation::locator=%40bedrock-tweaks%2Fgraves%40workspace%3Aaddons%2Ffiles%2Fgameplay_changes%2Fgraves":
+  version: 0.0.0-use.local
+  resolution: "@bedrock-core/navigation@link:../../../../../../Minecraft/Proyectos/@bedrock-core/ui/packages/navigation::locator=%40bedrock-tweaks%2Fgraves%40workspace%3Aaddons%2Ffiles%2Fgameplay_changes%2Fgraves"
+  languageName: node
+  linkType: soft
+
+"@bedrock-core/ore-styled@link:../../../../../../Minecraft/Proyectos/@bedrock-core/ui/packages/ore-styled::locator=%40bedrock-tweaks%2Fgraves%40workspace%3Aaddons%2Ffiles%2Fgameplay_changes%2Fgraves":
+  version: 0.0.0-use.local
+  resolution: "@bedrock-core/ore-styled@link:../../../../../../Minecraft/Proyectos/@bedrock-core/ui/packages/ore-styled::locator=%40bedrock-tweaks%2Fgraves%40workspace%3Aaddons%2Ffiles%2Fgameplay_changes%2Fgraves"
+  languageName: node
+  linkType: soft
+
+"@bedrock-core/server-runtime@link:../../../../../../Minecraft/Proyectos/@bedrock-core/server-public/packages/server-runtime::locator=%40bedrock-tweaks%2Fgraves%40workspace%3Aaddons%2Ffiles%2Fgameplay_changes%2Fgraves":
+  version: 0.0.0-use.local
+  resolution: "@bedrock-core/server-runtime@link:../../../../../../Minecraft/Proyectos/@bedrock-core/server-public/packages/server-runtime::locator=%40bedrock-tweaks%2Fgraves%40workspace%3Aaddons%2Ffiles%2Fgameplay_changes%2Fgraves"
+  languageName: node
+  linkType: soft
+
+"@bedrock-core/sync@link:../../../../../../Minecraft/Proyectos/@bedrock-core/server-public/packages/sync::locator=%40bedrock-tweaks%2Fgraves%40workspace%3Aaddons%2Ffiles%2Fgameplay_changes%2Fgraves":
+  version: 0.0.0-use.local
+  resolution: "@bedrock-core/sync@link:../../../../../../Minecraft/Proyectos/@bedrock-core/server-public/packages/sync::locator=%40bedrock-tweaks%2Fgraves%40workspace%3Aaddons%2Ffiles%2Fgameplay_changes%2Fgraves"
+  languageName: node
+  linkType: soft
+
+"@bedrock-core/ui-runtime@link:../../../../../../Minecraft/Proyectos/@bedrock-core/ui/packages/ui-runtime::locator=%40bedrock-tweaks%2Fgraves%40workspace%3Aaddons%2Ffiles%2Fgameplay_changes%2Fgraves":
+  version: 0.0.0-use.local
+  resolution: "@bedrock-core/ui-runtime@link:../../../../../../Minecraft/Proyectos/@bedrock-core/ui/packages/ui-runtime::locator=%40bedrock-tweaks%2Fgraves%40workspace%3Aaddons%2Ffiles%2Fgameplay_changes%2Fgraves"
+  languageName: node
+  linkType: soft
+
 "@bedrock-tweaks/graves@workspace:addons/files/gameplay_changes/graves":
   version: 0.0.0-use.local
   resolution: "@bedrock-tweaks/graves@workspace:addons/files/gameplay_changes/graves"
   dependencies:
+    "@bedrock-core/config": "link:../../../../../../Minecraft/Proyectos/@bedrock-core/ui/packages/config"
+    "@bedrock-core/flexbox": "link:../../../../../../Minecraft/Proyectos/@bedrock-core/ui/packages/flexbox"
+    "@bedrock-core/guides": "link:../../../../../../Minecraft/Proyectos/@bedrock-core/ui/packages/guides"
+    "@bedrock-core/navigation": "link:../../../../../../Minecraft/Proyectos/@bedrock-core/ui/packages/navigation"
+    "@bedrock-core/ore-styled": "link:../../../../../../Minecraft/Proyectos/@bedrock-core/ui/packages/ore-styled"
+    "@bedrock-core/server-runtime": "link:../../../../../../Minecraft/Proyectos/@bedrock-core/server-public/packages/server-runtime"
+    "@bedrock-core/sync": "link:../../../../../../Minecraft/Proyectos/@bedrock-core/server-public/packages/sync"
+    "@bedrock-core/ui-runtime": "link:../../../../../../Minecraft/Proyectos/@bedrock-core/ui/packages/ui-runtime"
     "@eslint/js": "npm:^9.38.0"
     "@eslint/json": "npm:^0.13.2"
-    "@minecraft/common": "npm:1.2.0"
-    "@minecraft/math": "npm:2.2.11"
-    "@minecraft/server": "npm:2.2.0"
-    "@minecraft/server-ui": "npm:^2.0.0"
-    "@minecraft/vanilla-data": "npm:1.21.114"
+    "@minecraft/common": "npm:1.3.0"
+    "@minecraft/math": "npm:2.4.0"
+    "@minecraft/server": "npm:2.8.0"
+    "@minecraft/server-ui": "npm:2.1.0"
+    "@minecraft/vanilla-data": "npm:1.26.32"
     "@stylistic/eslint-config": "npm:^1.1.0"
     "@stylistic/eslint-plugin": "npm:^5.4.0"
     "@typescript-eslint/eslint-plugin": "npm:^8.46.1"
@@ -265,46 +321,46 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@minecraft/common@npm:1.2.0, @minecraft/common@npm:^1.0.0":
-  version: 1.2.0
-  resolution: "@minecraft/common@npm:1.2.0"
-  checksum: 10c0/597c3ff8ab275ba5d5fb3037e68970e59ac96e8793b7738178c95b17d22a8f48a4412425314ed494f664466dd9a342e2a9eff52af544e57689f103c2ae965e10
+"@minecraft/common@npm:1.3.0":
+  version: 1.3.0
+  resolution: "@minecraft/common@npm:1.3.0"
+  checksum: 10c0/6f335029426b6bab2b0c22562863c6a0681d855767ffa8d8e3f0e579ce940505ad2175bd4c96bb5c35b90344ee758757d1d7807908623b6fe00f5f73ea596911
   languageName: node
   linkType: hard
 
-"@minecraft/math@npm:2.2.11":
-  version: 2.2.11
-  resolution: "@minecraft/math@npm:2.2.11"
+"@minecraft/math@npm:2.4.0":
+  version: 2.4.0
+  resolution: "@minecraft/math@npm:2.4.0"
   peerDependencies:
     "@minecraft/server": ^1.15.0 || ^2.0.0
-  checksum: 10c0/28600e0d9933f9a0e0feb1d5fb338eb2d193e6ca7567eb8573f517cdabfa1609b52e4860f59dab66faece29f92120a5c981a6645efd73a0182d573668d595d7d
+  checksum: 10c0/b38640384285cef98d7757b1e2587e729dd2dd00cdd25716b0e594f12598d7dfca35ec9c0fc02631f246967d5276e0a8b2a312cc890a42fefa56c4e8429d87e8
   languageName: node
   linkType: hard
 
-"@minecraft/server-ui@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "@minecraft/server-ui@npm:2.0.0"
-  dependencies:
-    "@minecraft/common": "npm:^1.0.0"
-    "@minecraft/server": "npm:^2.0.0"
-  checksum: 10c0/5cf1b82b87b86837530e7d63a879dbca33bc04d3ceaa9398bf504e9f0f2a0e3a352d1635aef82388d453e815716c841c101616cb66fbba6c39d3f610a2c09ab7
+"@minecraft/server-ui@npm:2.1.0":
+  version: 2.1.0
+  resolution: "@minecraft/server-ui@npm:2.1.0"
+  peerDependencies:
+    "@minecraft/common": ^1.0.0
+    "@minecraft/server": ^2.0.0
+  checksum: 10c0/b32fd20d0d384b227d6168860d43b0094069c5503a9982061cb324e85f8be432f2efb6daec9556c5c4a399f203a9c0fbea6d16d2d375249fdda0b676cffe1aa3
   languageName: node
   linkType: hard
 
-"@minecraft/server@npm:2.2.0, @minecraft/server@npm:^2.0.0":
-  version: 2.2.0
-  resolution: "@minecraft/server@npm:2.2.0"
+"@minecraft/server@npm:2.8.0":
+  version: 2.8.0
+  resolution: "@minecraft/server@npm:2.8.0"
   peerDependencies:
     "@minecraft/common": ^1.2.0
     "@minecraft/vanilla-data": ">=1.20.70"
-  checksum: 10c0/16ea1fb69c7e322a1738b22cc3b183170f71da1f1a41e64b13e74f0135b1ec92d4ff991cacd2cc55b71849ad059827e56827b462f23cbe51e40f78e1b79ccdac
+  checksum: 10c0/bb4f8a8a90b52831786f51ce320bbf2a8494f7d71d4d6329c22c9710a10a36ed7096acd4f1ff9d2c9971d95c391b8ba36ef674bda47629f9c671c9134994786d
   languageName: node
   linkType: hard
 
-"@minecraft/vanilla-data@npm:1.21.114":
-  version: 1.21.114
-  resolution: "@minecraft/vanilla-data@npm:1.21.114"
-  checksum: 10c0/77a66fe4643ec08f0054dc9afe0f021d9250ea245c5ca5b2a0d3fda13df8bf5c40231ec5d759611a392a7dbff5f377945c66ad6594d840128dfa406f70cd95c2
+"@minecraft/vanilla-data@npm:1.26.32":
+  version: 1.26.32
+  resolution: "@minecraft/vanilla-data@npm:1.26.32"
+  checksum: 10c0/7e17dc24e0c588194f6f196e3f69ea0589e23f55187e456e635ecc2e28bc3cd68960e67e56cd53ff8d122f44c0c85c3f32686aab86da0d7a860dd736e8f210fc
   languageName: node
   linkType: hard
 
