@@ -113,6 +113,8 @@ If there is need to scale the template use closest neighbor instead of other sam
 
 JSON, JS and TS files should be formatted using 1 tab with size 4 for indentation.
 
+An addon may override this for its own JS/TS as long as its ESLint config is configured to match, so the linter and the editor agree.
+
 ### Addons (Yarn Monorepo Packages)
 
 Addons are managed as Yarn workspace packages. To start working in addons you will need to have the following:
