@@ -1,0 +1,28 @@
+{
+	"format_version": 2,
+	"header": {
+		"name": "pack.name",
+		"description": "pack.description",
+		"uuid": "49af505d-e4b5-43b7-9e6e-847a41228ece",
+		"pack_scope": "world",
+		"version": [1, 0, 0],
+		"min_engine_version": [1, 26, 30]
+	},
+	"modules": [
+		{
+			"type": "resources",
+			"uuid": "9751c88f-10f1-4f6c-9ca0-e139ee9b48df",
+			"version": [1, 0, 0]
+		}
+	],
+	"dependencies": [
+		{
+			"uuid": "b3dcb4e4-69cb-4088-8ff3-2313367c42b8",
+			"version": [1, 0, 0]
+		}
+	],
+	"metadata": {
+		"product_type": "addon",
+		"authors": ["Bedrock Tweaks", "DrAv0011"]
+	}
+}

@@ -1,0 +1,14 @@
+{
+	"format_version": "1.10.0",
+	"animations": {
+		"animation.rp.bt.grave_shake": {
+			"loop": true,
+			"animation_length": 0.5,
+			"bones": {
+				"root": {
+					"rotation": [0, 0, "math.sin(q.anim_time * 2160) * 6"]
+				}
+			}
+		}
+	}
+}

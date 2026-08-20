@@ -1,0 +1,16 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"type": "minecraft-js",
+			"request": "attach",
+			"sourceMapRoot": "${env:APPDATA}/Minecraft Bedrock/Users/Shared/games/com.mojang/development_behavior_packs/gc_graves/scripts/",
+			"generatedSourceRoot": "${env:APPDATA}/Minecraft Bedrock/Users/Shared/games/com.mojang/development_behavior_packs/gc_graves/scripts/",
+			"localRoot": "${workspaceFolder}/packs/BP/scripts/",
+			"name": "Debug with Minecraft",
+			"mode": "listen",
+			"port": 19144,
+			"targetModuleUuid": "8ec2e94f-b226-4d04-b966-69f89812700e"
+		}
+	]
+}

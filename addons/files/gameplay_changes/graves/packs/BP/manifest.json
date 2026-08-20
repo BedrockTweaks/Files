@@ -1,0 +1,47 @@
+{
+	"format_version": 2,
+	"header": {
+		"name": "pack.name",
+		"description": "pack.description",
+		"uuid": "b3dcb4e4-69cb-4088-8ff3-2313367c42b8",
+		"pack_scope": "world",
+		"version": [1, 0, 0],
+		"min_engine_version": [1, 26, 30]
+	},
+	"modules": [
+		{
+			"type": "data",
+			"uuid": "3f2ff7a8-2482-49e7-9a76-5622b61c5318",
+			"version": [1, 0, 0]
+		},
+		{
+			"type": "script",
+			"language": "javascript",
+			"uuid": "8ec2e94f-b226-4d04-b966-69f89812700e",
+			"entry": "scripts/main.js",
+			"version": [1, 0, 0]
+		}
+	],
+	"dependencies": [
+		{
+			"uuid": "49af505d-e4b5-43b7-9e6e-847a41228ece",
+			"version": [1, 0, 0]
+		},
+		{
+			"uuid": "761ecd37-ad1c-4a64-862a-d6cc38767426",
+			"version": [1, 10, 0]
+		},
+		{
+			"module_name": "@minecraft/server",
+			"version": "2.8.0"
+		},
+		{
+			"module_name": "@minecraft/server-ui",
+			"version": "2.1.0"
+		}
+	],
+	"metadata": {
+		"product_type": "addon",
+		"authors": ["Bedrock Tweaks", "DrAv0011"]
+	}
+}

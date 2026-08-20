@@ -1,0 +1,94 @@
+{
+	"$schema": "https://raw.githubusercontent.com/Bedrock-OSS/regolith-schemas/main/config/v1.4.json",
+	"author": "DrAv0011",
+	"description": "When you die, it places a grave to save all your drops instead of dropping them.",
+	"name": "gc_graves",
+	"packs": {
+		"behaviorPack": "./packs/BP",
+		"resourcePack": "./packs/RP"
+	},
+	"regolith": {
+		"dataPath": "./packs/data",
+		"filterDefinitions": {
+			"bundler": {
+				"url": "github.com/bedrock-core/regolith-filters",
+				"version": "1.1.1"
+			},
+			"generator": {
+				"url": "github.com/bedrock-core/regolith-filters",
+				"version": "1.1.0"
+			},
+			"guides": {
+				"url": "github.com/bedrock-core/regolith-filters",
+				"version": "1.1.1"
+			},
+			"i18n": {
+				"url": "github.com/bedrock-core/regolith-filters",
+				"version": "1.0.1"
+			}
+		},
+		"formatVersion": "1.4.0",
+		"profiles": {
+			"build": {
+				"export": {
+					"build": "standard",
+					"readOnly": true,
+					"target": "local"
+				},
+				"filters": [
+					{
+						"filter": "generator",
+						"settings": {
+							"include": ["**/*.ts"],
+							"exclude": ["BP/scripts/**", "data/**", "**/*.d.ts"],
+							"pretty": false
+						}
+					},
+					{
+						"filter": "guides",
+						"settings": {
+							"namespace": "bt_gc_graves"
+						}
+					},
+					{ "filter": "i18n" },
+					{
+						"filter": "bundler",
+						"settings": {
+							"debug": false
+						}
+					}
+				]
+			},
+			"default": {
+				"export": {
+					"build": "standard",
+					"readOnly": false,
+					"target": "development"
+				},
+				"filters": [
+					{
+						"filter": "generator",
+						"settings": {
+							"include": ["**/*.ts"],
+							"exclude": ["BP/scripts/**", "data/**", "**/*.d.ts"],
+							"pretty": true
+						}
+					},
+					{
+						"filter": "guides",
+						"settings": {
+							"namespace": "bt_gc_graves"
+						}
+					},
+					{ "filter": "i18n" },
+					{
+						"filter": "bundler",
+						"settings": {
+							"debug": true
+						}
+					}
+				]
+			}
+		}
+	}
+}
