@@ -8,6 +8,7 @@
 		"addons/files/*"
 	],
 	"scripts": {
+		"create-addon": "node tools/create-addon.mjs",
 		"regolith-install": "yarn workspaces foreach -i -A --topological --jobs=1 run regolith-install",
 		"build": "yarn workspaces foreach -i -A run build",
 		"lint": "yarn workspaces foreach -i -A run lint",
