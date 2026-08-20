@@ -18,6 +18,7 @@ import { WAYPOINT_COLOR, WAYPOINT_TEXTURE } from './constants';
 import { visibleRecordsOf } from './index/store';
 import { config, core } from './registration';
 import type { GraveRecord } from './types';
+import { dimensionOf } from './util';
 
 /** One tracked waypoint and the record position it was built from. */
 interface Tracked {
@@ -57,7 +58,7 @@ const selectorFor = (custom: boolean): { textureBoundsList: [{ lowerBound: numbe
 let customTextureBroken = false;
 
 const buildWaypoint = (record: GraveRecord): LocationWaypoint | undefined => {
-  const dimension = world.getDimension(record.dim);
+  const dimension = dimensionOf(record.dim);
 
   if (!dimension) {
     return undefined;
@@ -154,7 +155,7 @@ export const sync = (player: Player): void => {
       // A grave that drifted (reconcile refreshed its position) moves its
       // marker rather than rebuilding it — the handle stays valid.
       if (existing.dim !== record.dim || existing.x !== record.x || existing.y !== record.y || existing.z !== record.z) {
-        const dimension = world.getDimension(record.dim);
+        const dimension = dimensionOf(record.dim);
 
         if (dimension) {
           try {

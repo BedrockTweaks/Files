@@ -7,12 +7,11 @@
 import { Fragment, Panel, Scroll, Text, usePlayer, useExit, useTranslation, type JSX } from '@bedrock-core/ui';
 import { Button, Card, Divider, Header, theme } from '@bedrock-core/ui/ore-styled';
 import { isOperator } from '@bedrock-core/server';
-import { world } from '@minecraft/server';
 import type { ScreenProps } from '@bedrock-core/ui/navigation';
 import { i18n } from './i18n';
 import { byEntityId, markPurge } from '../index/store';
 import { graveEntity, removeGrave } from '../lifecycle';
-import { agoStr, causeText, dimName, posStr } from '../util';
+import { agoStr, causeText, dimensionOf, dimName, posStr } from '../util';
 import type { GravesRoutes } from './GravesApp';
 
 const { fontColor, spacing } = theme.tokens;
@@ -41,10 +40,17 @@ export function GraveDetail({ navigation, route }: ScreenProps<GravesRoutes, 'De
   const cause = causeText(bound, record.cause, record.killer);
 
   const teleport = (): void => {
-    player.teleport(
-      { x: record.x + 0.5, y: record.y, z: record.z + 0.5 },
-      { dimension: world.getDimension(record.dim) },
-    );
+    const dimension = dimensionOf(record.dim);
+
+    if (!dimension) {
+      // The record outlived its dimension: nothing to teleport to, and the
+      // screen stays open rather than dropping the operator somewhere else.
+      console.warn(`[graves] cannot teleport to grave ${record.id}: dimension '${record.dim}' is gone`);
+
+      return;
+    }
+
+    player.teleport({ x: record.x + 0.5, y: record.y, z: record.z + 0.5 }, { dimension });
     exit();
   };
 

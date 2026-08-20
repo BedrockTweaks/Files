@@ -1,9 +1,27 @@
 /** Small formatting helpers and guards shared across the addon. */
-import type { Entity, Player, RawMessage } from '@minecraft/server';
+import type { Dimension, Entity, Player, RawMessage } from '@minecraft/server';
+import { world } from '@minecraft/server';
 import { MinecraftEntityTypes } from '@minecraft/vanilla-data';
 import { i18n } from './UI/i18n';
 
 export const isPlayer = (entity: Entity): entity is Player => entity.typeId === MinecraftEntityTypes.Player;
+
+/**
+ * A stored `record.dim` resolved back to a live dimension, or undefined.
+ *
+ * `world.getDimension` throws on an id it does not know rather than returning
+ * undefined, and records outlive the session that wrote them: an id from a
+ * custom-dimension pack survives that pack being removed. Every read of
+ * `record.dim` goes through here so a stale id skips work instead of taking
+ * down the caller (purge.ts guards its own, inside the ticking-area loop).
+ */
+export const dimensionOf = (dimId: string): Dimension | undefined => {
+  try {
+    return world.getDimension(dimId);
+  } catch {
+    return undefined;
+  }
+};
 
 /** The verb set i18n.forPlayer()/useTranslation() hand out. */
 export type Bound = ReturnType<typeof i18n.forPlayer>;
