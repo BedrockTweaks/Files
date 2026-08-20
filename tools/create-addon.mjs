@@ -100,14 +100,44 @@ mkdirSync(categoryDir, { recursive: true });
 // The CLI author must be `bt` — it becomes the creator id half of the addon
 // namespace. The real author is patched in below; that split is a BT thing,
 // not a bedrock-core one.
-const quote = (value) => `"${value.replace(/"/g, '\\"')}"`;
 const cliArgs = [projectName, '--author', 'bt', '--description', description];
-const command = process.env.BEDROCK_CORE_CLI
-	? `node ${quote(process.env.BEDROCK_CORE_CLI)} ${cliArgs.map(quote).join(' ')}`
-	: `npx @bedrock-core/cli ${cliArgs.map(quote).join(' ')}`;
 
-console.info(`▶ ${command}`);
-const result = spawnSync(command, { cwd: categoryDir, stdio: 'inherit', shell: true });
+// npm ships `npx` as a .cmd shim on Windows, and Node refuses to spawn those
+// without a shell (CVE-2024-27980). Running npm's own CLI entry through this
+// Node binary skips the shim, so the scaffold never needs a shell at all.
+const npxCli = () => {
+	const nodeDir = path.dirname(process.execPath);
+
+	return [
+		path.join(nodeDir, 'node_modules', 'npm', 'bin', 'npx-cli.js'),
+		path.join(nodeDir, '..', 'lib', 'node_modules', 'npm', 'bin', 'npx-cli.js'),
+	].find(existsSync);
+};
+
+// No shell, ever: the description is free text, and `$(...)`, backticks, `&`
+// or `%VAR%` in it would be read as syntax rather than as characters.
+const resolveCommand = () => {
+	if (process.env.BEDROCK_CORE_CLI) {
+		return [process.execPath, [process.env.BEDROCK_CORE_CLI, ...cliArgs]];
+	}
+
+	const npx = npxCli();
+
+	if (npx) {
+		return [process.execPath, [npx, '@bedrock-core/cli', ...cliArgs]];
+	}
+
+	if (process.platform === 'win32') {
+		fail("Could not find npm's npx-cli.js next to this Node install. Set BEDROCK_CORE_CLI to a checked-out @bedrock-core/cli entry point.");
+	}
+
+	return ['npx', ['@bedrock-core/cli', ...cliArgs]];
+};
+
+const [command, commandArgs] = resolveCommand();
+
+console.info(`▶ ${command} ${commandArgs.join(' ')}`);
+const result = spawnSync(command, commandArgs, { cwd: categoryDir, stdio: 'inherit' });
 
 if (result.status !== 0 || !existsSync(scaffoldDir)) {
 	fail('The bedrock-core CLI did not produce a project.');
