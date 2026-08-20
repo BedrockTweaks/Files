@@ -129,7 +129,7 @@ right of the IDE.
 Addons are built on the [bedrock-core](https://bedrock-core.drav.dev/) stack. Scaffold them with the repo wrapper around its CLI:
 
 1. Run `yarn create-addon <category> <addon_name> [--author <name>] [description...]` from the repo root (example: `yarn create-addon gameplay_changes graves When you die, a grave saves all your drops.`)
-2. It scaffolds `addons/files/<category>/<addon_name>/` with creator `bt` and namespace `bt_<category_initials>_<addon_name>` (example: `bt_gc_graves`), credits you as the author (your git user.name, or `--author`) in `config.json`, the manifests and the bedrock-core addon list (`<author> · Bedrock Tweaks`), adapts the package to the monorepo (`@bedrock-tweaks/<addon_name>`, private, no addon-local yarn files) and registers it in the category workspaces
+2. It scaffolds `addons/files/<category>/<addon_name>/` with creator `bt` and namespace `bt_<category_initials>_<addon_name>` (example: `bt_gc_graves`), credits you as the author (your git user.name, or `--author`) in `config.json`, the manifests and the bedrock-core addon list (`<author>, Bedrock Tweaks`), adapts the package to the monorepo (`@bedrock-tweaks/<addon_name>`, private, no addon-local yarn files) and registers it in the category workspaces
 3. Run `yarn install` at the root, then build the addon from its directory
 4. Add the pack entry to `addons/packs.json` with id `<addon_name>` under its category (the `bt_<category_initials>_<addon_name>` namespace is only for commands, tags and identifiers inside the addon)
 5. Use the latest stable Minecraft module versions and `min_engine_version`; experimental/beta APIs are not accepted
