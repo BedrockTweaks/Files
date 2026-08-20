@@ -146,8 +146,8 @@ export default {
   list: {
     title: 'Your Graves',
     empty: 'You have no graves. Lucky you!',
-    row_one: '{{count}} item · {{xp}} XP',
-    row_other: '{{count}} items · {{xp}} XP',
+    row_one: '{{count}} item — {{xp}} XP',
+    row_other: '{{count}} items — {{xp}} XP',
     floating: 'floating over the void',
   },
   detail: {

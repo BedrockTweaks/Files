@@ -11,7 +11,7 @@
 	},
 	"dependencies": {
 		"@bedrock-core/server": "^0.1.0",
-		"@bedrock-core/ui": "^0.10.0",
+		"@bedrock-core/ui": "^0.11.0",
 		"@minecraft/common": "1.2.0",
 		"@minecraft/server": "2.8.0",
 		"@minecraft/server-ui": "2.1.0",

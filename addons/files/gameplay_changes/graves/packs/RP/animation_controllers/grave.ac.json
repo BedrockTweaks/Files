@@ -1,0 +1,25 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.rp.bt.grave_shake": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"shaking": "q.property('bt:shaking')"
+						}
+					]
+				},
+				"shaking": {
+					"animations": ["shake"],
+					"transitions": [
+						{
+							"default": "!q.property('bt:shaking')"
+						}
+					]
+				}
+			}
+		}
+	}
+}

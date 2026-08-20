@@ -14,13 +14,12 @@
 				"default": "geometry.bt.grave"
 			},
 			"animations": {
-				"shake": "animation.rp.bt.grave_shake"
+				"shake": "animation.rp.bt.grave_shake",
+				"shake_controller": "controller.animation.rp.bt.grave_shake"
 			},
 			"scripts": {
 				"animate": [
-					{
-						"shake": "q.property('bt:shaking')"
-					}
+					"shake_controller"
 				]
 			},
 			"render_controllers": [

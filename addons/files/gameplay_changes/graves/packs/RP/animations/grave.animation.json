@@ -2,11 +2,11 @@
 	"format_version": "1.10.0",
 	"animations": {
 		"animation.rp.bt.grave_shake": {
-			"loop": true,
+			"loop": false,
 			"animation_length": 0.5,
 			"bones": {
 				"root": {
-					"rotation": [0, 0, "math.sin(q.anim_time * 2160) * 6"]
+					"rotation": [0, "math.sin(q.anim_time * 3600) * 8 * math.exp(-6 * q.anim_time)", 0]
 				}
 			}
 		}

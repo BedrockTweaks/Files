@@ -29,7 +29,7 @@
 		},
 		{
 			"uuid": "761ecd37-ad1c-4a64-862a-d6cc38767426",
-			"version": [1, 10, 0]
+			"version": [1, 11, 0]
 		},
 		{
 			"module_name": "@minecraft/server",

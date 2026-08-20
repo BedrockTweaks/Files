@@ -145,8 +145,8 @@ export default {
   list: {
     title: 'Tus Tumbas',
     empty: 'No tienes tumbas. ¡Qué suerte!',
-    row_one: '{{count}} objeto · {{xp}} XP',
-    row_other: '{{count}} objetos · {{xp}} XP',
+    row_one: '{{count}} objeto — {{xp}} XP',
+    row_other: '{{count}} objetos — {{xp}} XP',
     floating: 'flotando sobre el vacío',
   },
   detail: {
