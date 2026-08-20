@@ -44,6 +44,13 @@ let authorArg;
 
 if (authorFlag !== -1) {
 	authorArg = rawArgs[authorFlag + 1];
+
+	// A bare `--author` used to fall through to the git name AND eat the next
+	// argument, silently turning the addon name into the description.
+	if (!authorArg || authorArg.startsWith('--')) {
+		fail('--author needs a name, e.g. --author "Your Name".');
+	}
+
 	rawArgs.splice(authorFlag, 2);
 }
 
@@ -71,7 +78,7 @@ if (!NAME_RE.test(name)) {
 }
 
 // gameplay_changes -> gc; nested categories join their initials with '_'.
-const initials = (segment) => segment.split('_').map(word => word[0]).join('');
+const initials = (segment) => segment.split('_').filter(Boolean).map(word => word[0]).join('');
 const prefix = segments.map(initials).join('_');
 const projectName = `${prefix}_${name}`;
 const categoryDir = path.join(root, 'addons', 'files', ...segments);
