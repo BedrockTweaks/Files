@@ -25,6 +25,8 @@ export interface GraveRecord {
   killer?: string;
   /** §3b row 11 — hovering over the void (no platform placed). */
   floating?: true;
+  /** Owner ticked this grave off their locator bar (§8). Absent means shown. */
+  noWaypoint?: true;
   /** Tombstone — remove the entity the moment its chunk loads (§6a). */
   purge?: true;
 }

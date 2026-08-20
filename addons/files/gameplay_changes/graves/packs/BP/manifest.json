@@ -6,7 +6,7 @@
 		"uuid": "b3dcb4e4-69cb-4088-8ff3-2313367c42b8",
 		"pack_scope": "world",
 		"version": [1, 0, 0],
-		"min_engine_version": [1, 26, 30]
+		"min_engine_version": [1, 26, 40]
 	},
 	"modules": [
 		{
@@ -33,7 +33,7 @@
 		},
 		{
 			"module_name": "@minecraft/server",
-			"version": "2.8.0"
+			"version": "2.9.0"
 		},
 		{
 			"module_name": "@minecraft/server-ui",

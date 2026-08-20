@@ -35,6 +35,10 @@ export default {
       label: 'Permitir Saqueo De Tumbas',
       desc: 'Si está activado, cualquiera puede abrir la tumba de otro jugador sin llave.',
     },
+    allowLocating: {
+      label: 'Mostrar Tumbas En La Barra De Localización',
+      desc: 'Si está activado, cada jugador ve sus propias tumbas como puntos en la barra de localización.',
+    },
     graveKeyEnabled: {
       label: 'Llave De Tumba',
       desc: 'Si está activada, una llave de tumba en cualquier mano abre cualquier tumba (se consume una llave).',
@@ -95,6 +99,10 @@ export default {
       label: 'Mostrar Ubicación Al Morir',
       desc: 'Recibe un mensaje con las coordenadas de tu tumba cuando mueres.',
     },
+    showOnLocatorBar: {
+      label: 'Mis Tumbas En La Barra De Localización',
+      desc: 'Muestra tus propias tumbas como puntos en tu barra de localización.',
+    },
     graveNameStyle: {
       label: 'Nombre De La Tumba',
       desc: 'Qué muestra el nombre flotante sobre tus tumbas.',
@@ -143,6 +151,7 @@ export default {
     days: 'hace {{d}}d {{h}}h',
   },
   list: {
+    waypointHint: 'Marca una tumba para mostrarla en tu barra de localización.',
     title: 'Tus Tumbas',
     empty: 'No tienes tumbas. ¡Qué suerte!',
     row_one: '{{count}} objeto — {{xp}} XP',
@@ -163,7 +172,6 @@ export default {
     pendingPurge: 'Marcada para eliminación — desaparecerá cuando su chunk vuelva a cargarse.',
     teleport: 'Teletransportar',
     purge: 'Purgar',
-    close: 'Cerrar',
   },
   admin: {
     title: 'Todas Las Tumbas',

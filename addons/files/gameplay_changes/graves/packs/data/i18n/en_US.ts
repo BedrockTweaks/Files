@@ -36,6 +36,10 @@ export default {
       label: 'Allow Grave Robbing',
       desc: 'When enabled, anyone can open anyone else\'s grave without a key.',
     },
+    allowLocating: {
+      label: 'Show Graves On Locator Bar',
+      desc: 'When enabled, each player sees their own graves as waypoints on the locator bar.',
+    },
     graveKeyEnabled: {
       label: 'Grave Key',
       desc: 'When enabled, a grave key in either hand opens any grave (one key is consumed).',
@@ -96,6 +100,10 @@ export default {
       label: 'Show Grave Location On Death',
       desc: 'Get a chat message with your grave\'s coordinates when you die.',
     },
+    showOnLocatorBar: {
+      label: 'My Graves On Locator Bar',
+      desc: 'Show your own graves as waypoints on your locator bar.',
+    },
     graveNameStyle: {
       label: 'Grave Name Tag',
       desc: 'What the floating name over your graves shows.',
@@ -144,6 +152,7 @@ export default {
     days: '{{d}}d {{h}}h ago',
   },
   list: {
+    waypointHint: 'Tick a grave to show it on your locator bar.',
     title: 'Your Graves',
     empty: 'You have no graves. Lucky you!',
     row_one: '{{count}} item — {{xp}} XP',
@@ -164,7 +173,6 @@ export default {
     pendingPurge: 'Marked for deletion — it disappears when its chunk next loads.',
     teleport: 'Teleport',
     purge: 'Purge',
-    close: 'Close',
   },
   admin: {
     title: 'All Graves',

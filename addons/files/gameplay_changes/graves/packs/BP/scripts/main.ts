@@ -13,6 +13,7 @@ import { initGate } from './open/gate';
 import { initAttack } from './open/attack';
 import { initReconcile } from './index/reconcile';
 import { initDespawn } from './despawn';
+import { initLocator } from './locator';
 import { initCommands } from './commands';
 import { initRpc } from './rpc';
 
@@ -27,4 +28,5 @@ initGate();
 initAttack();
 initReconcile();
 initDespawn();
+initLocator();
 initRpc();

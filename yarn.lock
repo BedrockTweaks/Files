@@ -139,10 +139,10 @@ __metadata:
     "@bedrock-core/ui": "npm:^0.11.0"
     "@eslint/js": "npm:^10.0.1"
     "@eslint/json": "npm:^2.0.0"
-    "@minecraft/common": "npm:1.2.0"
-    "@minecraft/server": "npm:2.8.0"
+    "@minecraft/common": "npm:1.3.0"
+    "@minecraft/server": "npm:2.9.0"
     "@minecraft/server-ui": "npm:2.1.0"
-    "@minecraft/vanilla-data": "npm:1.26.32"
+    "@minecraft/vanilla-data": "npm:1.26.44"
     "@stylistic/eslint-plugin": "npm:^5.10.0"
     eslint: "npm:^10.4.1"
     eslint-plugin-minecraft-linting: "npm:^1.2.7"
@@ -341,10 +341,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@minecraft/common@npm:1.2.0":
-  version: 1.2.0
-  resolution: "@minecraft/common@npm:1.2.0"
-  checksum: 10c0/597c3ff8ab275ba5d5fb3037e68970e59ac96e8793b7738178c95b17d22a8f48a4412425314ed494f664466dd9a342e2a9eff52af544e57689f103c2ae965e10
+"@minecraft/common@npm:1.3.0":
+  version: 1.3.0
+  resolution: "@minecraft/common@npm:1.3.0"
+  checksum: 10c0/6f335029426b6bab2b0c22562863c6a0681d855767ffa8d8e3f0e579ce940505ad2175bd4c96bb5c35b90344ee758757d1d7807908623b6fe00f5f73ea596911
   languageName: node
   linkType: hard
 
@@ -358,20 +358,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@minecraft/server@npm:2.8.0":
-  version: 2.8.0
-  resolution: "@minecraft/server@npm:2.8.0"
+"@minecraft/server@npm:2.9.0":
+  version: 2.9.0
+  resolution: "@minecraft/server@npm:2.9.0"
   peerDependencies:
     "@minecraft/common": ^1.2.0
     "@minecraft/vanilla-data": ">=1.20.70"
-  checksum: 10c0/bb4f8a8a90b52831786f51ce320bbf2a8494f7d71d4d6329c22c9710a10a36ed7096acd4f1ff9d2c9971d95c391b8ba36ef674bda47629f9c671c9134994786d
+  checksum: 10c0/0a88cd6ad7c5f8a626c3e386a485bd4aab57984dca7f3e35544885f9be25bda94f953efec9fb799a08190920e1676629509934e7ab275add9946c9f4331b8562
   languageName: node
   linkType: hard
 
-"@minecraft/vanilla-data@npm:1.26.32":
-  version: 1.26.32
-  resolution: "@minecraft/vanilla-data@npm:1.26.32"
-  checksum: 10c0/7e17dc24e0c588194f6f196e3f69ea0589e23f55187e456e635ecc2e28bc3cd68960e67e56cd53ff8d122f44c0c85c3f32686aab86da0d7a860dd736e8f210fc
+"@minecraft/vanilla-data@npm:1.26.44":
+  version: 1.26.44
+  resolution: "@minecraft/vanilla-data@npm:1.26.44"
+  checksum: 10c0/fec0637bdc0860acf3c91f8bb0cadfe960e0178985aed4c3c6dc5b2d3f5bc44af95c1bf9879e33bc8f30fe8ec617298f0a05dda0ef1f4706cc32216fe18bfe5d
   languageName: node
   linkType: hard
 

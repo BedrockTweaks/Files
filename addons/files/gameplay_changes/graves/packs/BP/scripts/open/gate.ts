@@ -47,7 +47,7 @@ export function initGate(): void {
 
     // Native container path: let the engine open the screen, then watch it.
     system.run(() => {
-      if (!target.isValid) {
+      if (!target.isValid || !player.isValid) {
         return;
       }
 

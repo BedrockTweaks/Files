@@ -56,7 +56,7 @@ lerna-debug.log*
 *.tmp
 *.temp
 .cache
-**.regolith/
+**/.regolith/
 
 TODO
 .claude

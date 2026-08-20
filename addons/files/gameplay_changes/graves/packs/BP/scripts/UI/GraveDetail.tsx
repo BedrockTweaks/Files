@@ -4,7 +4,7 @@
  * purge actions. Core screen shell: Card parent, Header flush on top, info
  * scrolls below it, actions pinned under the scroll.
  */
-import { Panel, Scroll, Text, usePlayer, useExit, useTranslation, type JSX } from '@bedrock-core/ui';
+import { Fragment, Panel, Scroll, Text, usePlayer, useExit, useTranslation, type JSX } from '@bedrock-core/ui';
 import { Button, Card, Divider, Header, theme } from '@bedrock-core/ui/ore-styled';
 import { isOperator } from '@bedrock-core/server';
 import { world } from '@minecraft/server';
@@ -80,16 +80,21 @@ export function GraveDetail({ navigation, route }: ScreenProps<GravesRoutes, 'De
             </Panel>
           </Scroll>
         </Panel>
-        <Divider />
+        {/* No Close button: the header already carries back and close, and a
+            third way out only crowds the screen. Operators still get their
+            actions, and the divider comes with them rather than floating over
+            an empty footer. */}
         {admin
           ? (
-              <Panel flexDirection={'row'} gap={spacing.md}>
-                <Button flex={1} onPress={teleport}>{t($ => $.detail.teleport)}</Button>
-                <Button flex={1} variant={'danger'} onPress={purge}>{t($ => $.detail.purge)}</Button>
-              </Panel>
+              <Fragment>
+                <Divider />
+                <Panel flexDirection={'row'} gap={spacing.md}>
+                  <Button flex={1} onPress={teleport}>{t($ => $.detail.teleport)}</Button>
+                  <Button flex={1} variant={'danger'} onPress={purge}>{t($ => $.detail.purge)}</Button>
+                </Panel>
+              </Fragment>
             )
           : undefined}
-        <Button onPress={exit}>{t($ => $.detail.close)}</Button>
       </Panel>
     </Card>
   );

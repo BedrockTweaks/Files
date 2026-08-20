@@ -30,6 +30,10 @@ export const PROP_PREV_KEEP_INVENTORY = `${NAMESPACE}:prevKeepInventory`;
 export const GRAVE_INVENTORY_SIZE = 41;
 export const PLAYER_CONTAINER_SLOTS = 36;
 
+/** Locator bar (§8) — the grave icon shipped in the RP, and its bar tint. */
+export const WAYPOINT_TEXTURE = 'textures/ui/grave_waypoint';
+export const WAYPOINT_COLOR = { red: 0.62, green: 0.62, blue: 0.66 };
+
 /** Ticks the grave keeps shaking after the first hit — the second-hit window. */
 export const SHAKE_WINDOW_TICKS = 10;
 

@@ -23,6 +23,12 @@ export const configDef = {
         label: i18n.key($ => $.config.graveKeyEnabled.label),
         description: i18n.key($ => $.config.graveKeyEnabled.desc),
       },
+      allowLocating: {
+        type: 'boolean',
+        default: true,
+        label: i18n.key($ => $.config.allowLocating.label),
+        description: i18n.key($ => $.config.allowLocating.desc),
+      },
     },
     contents: {
       $label: i18n.key($ => $.config.groups.contents.label),
@@ -141,6 +147,12 @@ export const configDef = {
       default: true,
       label: i18n.key($ => $.config.showDeathToast.label),
       description: i18n.key($ => $.config.showDeathToast.desc),
+    },
+    showOnLocatorBar: {
+      type: 'boolean',
+      default: true,
+      label: i18n.key($ => $.config.showOnLocatorBar.label),
+      description: i18n.key($ => $.config.showOnLocatorBar.desc),
     },
     graveNameStyle: {
       type: 'enum',

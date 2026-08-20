@@ -10,6 +10,9 @@ never burns, never explodes, floats on lava, and gets rescued from the void.
 Only the owner can open a grave, unless grave robbing is enabled or the opener
 holds a grave key (consumed on use).
 
+Your own graves show as waypoints on the locator bar (owner only, both a
+server-wide and a per-player toggle).
+
 ## Commands
 
 | Command | Who | What |
