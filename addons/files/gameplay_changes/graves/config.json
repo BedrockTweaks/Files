@@ -12,11 +12,11 @@
 		"filterDefinitions": {
 			"bundler": {
 				"url": "github.com/bedrock-core/regolith-filters",
-				"version": "1.1.1"
+				"version": "1.1.2"
 			},
 			"generator": {
 				"url": "github.com/bedrock-core/regolith-filters",
-				"version": "1.1.0"
+				"version": "1.1.1"
 			},
 			"guides": {
 				"url": "github.com/bedrock-core/regolith-filters",
@@ -25,6 +25,10 @@
 			"i18n": {
 				"url": "github.com/bedrock-core/regolith-filters",
 				"version": "1.0.1"
+			},
+			"manifest": {
+				"url": "github.com/bedrock-core/regolith-filters",
+				"version": "1.0.0"
 			}
 		},
 		"formatVersion": "1.4.0",
@@ -37,10 +41,19 @@
 				},
 				"filters": [
 					{
+						"filter": "manifest"
+					},
+					{
 						"filter": "generator",
 						"settings": {
-							"include": ["**/*.ts"],
-							"exclude": ["BP/scripts/**", "data/**", "**/*.d.ts"],
+							"include": [
+								"**/*.ts"
+							],
+							"exclude": [
+								"BP/scripts/**",
+								"data/**",
+								"**/*.d.ts"
+							],
 							"pretty": false
 						}
 					},
@@ -50,7 +63,9 @@
 							"namespace": "bt_gc_graves"
 						}
 					},
-					{ "filter": "i18n" },
+					{
+						"filter": "i18n"
+					},
 					{
 						"filter": "bundler",
 						"settings": {
@@ -67,10 +82,19 @@
 				},
 				"filters": [
 					{
+						"filter": "manifest"
+					},
+					{
 						"filter": "generator",
 						"settings": {
-							"include": ["**/*.ts"],
-							"exclude": ["BP/scripts/**", "data/**", "**/*.d.ts"],
+							"include": [
+								"**/*.ts"
+							],
+							"exclude": [
+								"BP/scripts/**",
+								"data/**",
+								"**/*.d.ts"
+							],
 							"pretty": true
 						}
 					},
@@ -80,11 +104,105 @@
 							"namespace": "bt_gc_graves"
 						}
 					},
-					{ "filter": "i18n" },
+					{
+						"filter": "i18n"
+					},
 					{
 						"filter": "bundler",
 						"settings": {
 							"debug": true
+						}
+					}
+				]
+			},
+			"test": {
+				"export": {
+					"build": "standard",
+					"readOnly": false,
+					"target": "development"
+				},
+				"filters": [
+					{
+						"filter": "manifest",
+						"settings": {
+							"manifestPath": "BP/manifest.test.json"
+						}
+					},
+					{
+						"filter": "generator",
+						"settings": {
+							"include": [
+								"**/*.ts"
+							],
+							"exclude": [
+								"BP/scripts/**",
+								"data/**",
+								"**/*.d.ts"
+							],
+							"pretty": true
+						}
+					},
+					{
+						"filter": "guides",
+						"settings": {
+							"namespace": "bt_gc_graves"
+						}
+					},
+					{
+						"filter": "i18n"
+					},
+					{
+						"filter": "bundler",
+						"settings": {
+							"debug": true,
+							"tsConfigPath": "tsconfig.test.json"
+						}
+					}
+				]
+			},
+			"build-test": {
+				"export": {
+					"build": "standard",
+					"bpPath": "./build/test/BP",
+					"readOnly": false,
+					"rpPath": "./build/test/RP",
+					"target": "exact"
+				},
+				"filters": [
+					{
+						"filter": "manifest",
+						"settings": {
+							"manifestPath": "BP/manifest.test.json"
+						}
+					},
+					{
+						"filter": "generator",
+						"settings": {
+							"include": [
+								"**/*.ts"
+							],
+							"exclude": [
+								"BP/scripts/**",
+								"data/**",
+								"**/*.d.ts"
+							],
+							"pretty": true
+						}
+					},
+					{
+						"filter": "guides",
+						"settings": {
+							"namespace": "bt_gc_graves"
+						}
+					},
+					{
+						"filter": "i18n"
+					},
+					{
+						"filter": "bundler",
+						"settings": {
+							"debug": true,
+							"tsConfigPath": "tsconfig.test.json"
 						}
 					}
 				]

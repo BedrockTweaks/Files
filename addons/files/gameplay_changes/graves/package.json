@@ -6,7 +6,10 @@
 	"scripts": {
 		"regolith-install": "regolith install-all",
 		"build": "regolith run build",
+		"build:test": "yarn pad && regolith run build-test",
+		"pad": "node tools/pad.mjs",
 		"watch": "regolith watch",
+		"watch:test": "yarn pad && regolith watch test",
 		"lint": "eslint ."
 	},
 	"dependencies": {
@@ -20,6 +23,7 @@
 	"devDependencies": {
 		"@eslint/js": "^10.0.1",
 		"@eslint/json": "^2.0.0",
+		"@minecraft/server-gametest": "1.0.0-beta.1.26.44-stable",
 		"@stylistic/eslint-plugin": "^5.10.0",
 		"eslint": "^10.4.1",
 		"eslint-plugin-minecraft-linting": "^1.2.7",
