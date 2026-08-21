@@ -31,6 +31,19 @@ export interface GraveRecord {
   purge?: true;
 }
 
+/**
+ * The summary the index republishes to `core.state` on every write (§6/§7), so
+ * other addons can read grave counts synchronously instead of over RPC.
+ */
+export interface GraveSummary {
+  total: number;
+  /** player.id → how many graves they currently have. Owners at zero are absent. */
+  owners: Record<string, number>;
+}
+
+/** The `core.state` key that summary is published under. */
+export const GRAVES_STATE_KEY = 'graves';
+
 /** Cross-addon RPC surface (§7), served in rpc.ts via `core.rpc.serve<GravesRPC>`. */
 export interface GravesRPC {
   getGraves(params: { playerId: string }): GraveRecord[];

@@ -15,11 +15,23 @@ let configIds: readonly string[] = [];
 
 const normalize = (id: string): string => (id.includes(':') ? id : `minecraft:${id}`);
 
-export const isImpenetrable = (block: Block): boolean =>
-  block.hasTag(IMPENETRABLE_TAG)
-  || runtimeIds.has(block.typeId)
-  || configIds.includes(block.typeId)
-  || VANILLA_IMPENETRABLE.has(block.typeId);
+/**
+ * Every read here goes through the world, and a `Block` handle can outlive the
+ * chunk being TICKING — `getBlock` hands one back for a chunk that is merely
+ * loaded, and then `typeId`/`hasTag` throw `LocationInUnloadedChunkError`. A
+ * block nobody can read is not a block we have an opinion about, so an
+ * unreadable one is reported as penetrable and the caller's own guards decide.
+ */
+export const isImpenetrable = (block: Block): boolean => {
+  try {
+    return runtimeIds.has(block.typeId)
+      || configIds.includes(block.typeId)
+      || VANILLA_IMPENETRABLE.has(block.typeId)
+      || block.hasTag(IMPENETRABLE_TAG);
+  } catch {
+    return false;
+  }
+};
 
 /** Layer 3 — called by the typed RPC surface. Returns the runtime set's size. */
 export const addRuntimeImpenetrable = (ids: readonly string[], from: string): number => {

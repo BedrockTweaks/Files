@@ -195,8 +195,22 @@ export const sync = (player: Player): void => {
 };
 
 const syncAll = (): void => {
+  const live = new Set<string>();
+
   for (const player of world.getAllPlayers()) {
+    live.add(player.id);
     sync(player);
+  }
+
+  // Self-healing: whatever we still hold for a player the world no longer
+  // lists is bookkeeping over a dead handle, and the per-player config
+  // subscription in it would read dynamic properties off that handle on the
+  // next broadcast. Events tell us about the ordinary exits; this covers the
+  // ones they miss.
+  for (const playerId of [...unsubscribes.keys()]) {
+    if (!live.has(playerId)) {
+      forget(playerId);
+    }
   }
 };
 
@@ -228,6 +242,16 @@ export function initLocator(): void {
 
   world.afterEvents.playerLeave.subscribe(({ playerId }) => {
     forget(playerId);
+  });
+
+  // A player can also leave the world without leaving the game: a simulated
+  // player is REMOVED, and `playerLeave` never fires for it. The per-player
+  // config subscription above would then outlive the entity it closes over,
+  // and the next config broadcast would read dynamic properties off a dead
+  // handle. `entityRemove` is the one signal that covers both exits; for
+  // anything that is not a tracked player the two Map deletes are no-ops.
+  world.afterEvents.entityRemove.subscribe(({ removedEntityId }) => {
+    forget(removedEntityId);
   });
 
   // Every index write already republishes the grave summary to `core.state`

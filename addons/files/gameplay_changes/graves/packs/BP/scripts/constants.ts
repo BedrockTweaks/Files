@@ -34,8 +34,19 @@ export const PLAYER_CONTAINER_SLOTS = 36;
 export const WAYPOINT_TEXTURE = 'textures/ui/grave_waypoint';
 export const WAYPOINT_COLOR = { red: 0.62, green: 0.62, blue: 0.66 };
 
-/** Ticks the grave keeps shaking after the first hit — the second-hit window. */
-export const SHAKE_WINDOW_TICKS = 10;
+/**
+ * Ticks the grave keeps shaking after the first hit — the second-hit window.
+ *
+ * Must stay comfortably ABOVE the ~10 ticks of damage invulnerability an entity
+ * gets after being hit. At 10 the two cancelled out exactly: every swing inside
+ * the window produced no damage event at all, so the gate never saw it, and the
+ * first swing that could land was already past the window. Attack ×2 could not
+ * be completed — not by a test, and not by a player either. Measured in game
+ * with `graves:open_attack_scatter`.
+ *
+ * 30 ticks is 1.5 s, which is also a kinder window for a human than 0.5 s.
+ */
+export const SHAKE_WINDOW_TICKS = 30;
 
 /**
  * §3b-i layer 4 — vanilla blocks a grave must never occupy or replace.

@@ -17,6 +17,15 @@ import type { Placement } from '../types';
 
 const DOWN: Vector3 = { x: 0, y: -1, z: 0 };
 
+/**
+ * The middle of a block cell.
+ *
+ * An integer block position is the cell's MINIMUM corner, so a ray cast
+ * straight down from it begins in the cell below and on the boundary between
+ * the four columns that meet there. Every sounding starts from the centre.
+ */
+const centreOf = (at: Vector3): Vector3 => ({ x: at.x + 0.5, y: at.y + 0.5, z: at.z + 0.5 });
+
 const clamp = (value: number, min: number, max: number): number => Math.min(Math.max(value, min), max);
 
 /** `getBlock` throws outside world bounds and returns undefined in unloaded chunks — never assume. */
@@ -36,11 +45,24 @@ const hasRepeller = (dim: Dimension, pos: Vector3): boolean => {
   }
 };
 
-/** A cell the grave may occupy: air or liquid, not impenetrable, not already claimed. */
+/**
+ * A cell the grave may occupy: air or liquid, not impenetrable, not already
+ * claimed.
+ *
+ * `safeBlock` only covers the lookup. Every read on the handle it returns —
+ * `isAir`, `isLiquid`, and the tag read inside `isImpenetrable` — goes back to
+ * the world and throws once the chunk stops ticking, which a long ring search
+ * near the edge of the loaded area will find. Unreadable ground is not ground
+ * we may bury in.
+ */
 const isFreeCell = (dim: Dimension, pos: Vector3): boolean => {
-  const block = safeBlock(dim, pos);
+  try {
+    const block = safeBlock(dim, pos);
 
-  if (!block || (!block.isAir && !block.isLiquid) || isImpenetrable(block)) {
+    if (!block || (!block.isAir && !block.isLiquid) || isImpenetrable(block)) {
+      return false;
+    }
+  } catch {
     return false;
   }
 
@@ -94,6 +116,54 @@ const antiStack = (dim: Dimension, pos: Vector3): Vector3 => {
   return pos;
 };
 
+/**
+ * The first fluid surface below `from`, or undefined.
+ *
+ * `includeLiquidBlocks: true` is NOT enough on its own: a liquid is a passable
+ * block, so `includePassableBlocks: false` discards it before the liquid flag
+ * is ever consulted, and the ray sails straight through a lake to the bed
+ * underneath. Measured in game — from six blocks over a two-deep water source
+ * column, `passable=false, liquid=true` returns the STONE below it, and only
+ * `passable=true, liquid=true` returns the water.
+ *
+ * Taking passable blocks means also stopping on things that are neither ground
+ * nor fluid — a lily pad on a pond, a sign, a plant — so a non-liquid hit is
+ * stepped over and the sounding continues from just below it.
+ */
+const firstFluid = (dim: Dimension, from: Vector3, maxDistance: number): Block | undefined => {
+  // Drowning: the cell the solver picked IS the surface, and no ray will say so
+  // — one cast downward from inside a block starts past it.
+  const here = safeBlock(dim, from);
+
+  if (here?.isLiquid) {
+    return here;
+  }
+
+  let origin = centreOf(from);
+  let remaining = maxDistance;
+
+  for (let step = 0; step < 4 && remaining > 0; step++) {
+    const hit = dim.getBlockFromRay(origin, DOWN, {
+      includePassableBlocks: true,
+      includeLiquidBlocks: true,
+      maxDistance: remaining,
+    });
+
+    if (!hit) {
+      return undefined;
+    }
+
+    if (hit.block.isLiquid) {
+      return hit.block;
+    }
+
+    remaining -= origin.y - hit.block.location.y + 1;
+    origin = centreOf({ x: from.x, y: hit.block.location.y - 1, z: from.z });
+  }
+
+  return undefined;
+};
+
 /** §3b row 15 — never lose the items: player spawn, then world spawn. */
 const fallbackToSpawn = (owner: Player): Placement => {
   const spawn = owner.getSpawnPoint();
@@ -133,30 +203,46 @@ export function solvePlacement(dim: Dimension, start: Vector3, owner: Player): P
     return fallbackToSpawn(owner);
   }
 
+  // A ray this long routinely leaves the ticking area, and every read on what
+  // it hits can throw there. Losing the items is not on the table, so a failed
+  // sounding falls back to spawn rather than taking the handler down.
+  try {
+    return solveDownward(dim, free, protection, min, max);
+  } catch (error) {
+    console.warn(`[graves] placement sounding failed at ${String(free.x)} ${String(free.y)} ${String(free.z)}: ${String(error)}`);
+
+    return fallbackToSpawn(owner);
+  }
+}
+
+/** The two soundings plus the void handling, split out so `solvePlacement` can guard them. */
+function solveDownward(
+  dim: Dimension,
+  free: Vector3,
+  protection: ReturnType<typeof config.server.protection.get>,
+  min: number,
+  max: number,
+): Placement {
   const maxDistance = free.y - min;
 
   if (maxDistance > 0) {
     // 1. First block that actually STOPS something — engine decides passability (row 6).
-    const ground = dim.getBlockFromRay(free, DOWN, {
+    const ground = dim.getBlockFromRay(centreOf(free), DOWN, {
       includePassableBlocks: false,
       includeLiquidBlocks: false,
       maxDistance,
     });
 
     // 2. First fluid surface. Only matters if it sits ABOVE the ground hit (rows 7–9).
-    const fluid = dim.getBlockFromRay(free, DOWN, {
-      includePassableBlocks: false,
-      includeLiquidBlocks: true,
-      maxDistance,
-    });
+    const fluid = firstFluid(dim, free, maxDistance);
 
-    if (fluid?.block.isLiquid) {
-      const isSource = fluid.block.permutation.getState('liquid_depth') === 0;
-      const isLava = fluid.block.typeId.includes('lava');
-      const aboveGround = !ground || fluid.block.location.y > ground.block.location.y;
+    if (fluid) {
+      const isSource = fluid.permutation.getState('liquid_depth') === 0;
+      const isLava = fluid.typeId.includes('lava');
+      const aboveGround = !ground || fluid.location.y > ground.block.location.y;
 
       if (isSource && aboveGround && (!isLava || protection.floatOnLava)) {
-        const rest = antiStack(dim, fluid.block.location);
+        const rest = antiStack(dim, fluid.location);
 
         return { x: rest.x, y: rest.y, z: rest.z };
       }

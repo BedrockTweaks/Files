@@ -40,6 +40,14 @@ export function initCapture(): void {
 
     const player = deadEntity;
 
+    // The handle can already be gone by the time this runs — a player that left
+    // on the same tick it died, or any entity removed rather than killed. Every
+    // read below goes to the engine and throws on a dead handle, so the whole
+    // capture is skipped rather than taking the event handler down with it.
+    if (!player.isValid) {
+      return;
+    }
+
     if (player.getGameMode() === GameMode.Spectator) {
       return;
     }

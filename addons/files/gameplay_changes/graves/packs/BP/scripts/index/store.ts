@@ -8,7 +8,8 @@
 import { world } from '@minecraft/server';
 import { core } from '../registration';
 import { PROP_IDX_PREFIX, PROP_OWNERS } from '../constants';
-import type { GraveRecord } from '../types';
+import { GRAVES_STATE_KEY } from '../types';
+import type { GraveRecord, GraveSummary } from '../types';
 
 const readJson = <T>(key: string): T | undefined => {
   const value = world.getDynamicProperty(key);
@@ -75,7 +76,7 @@ const publishSummary = (): void => {
     }
   }
 
-  core.state.set('graves', { total, owners });
+  core.state.set<GraveSummary>(GRAVES_STATE_KEY, { total, owners });
 };
 
 const writeOwner = (ownerId: string, records: GraveRecord[]): void => {
