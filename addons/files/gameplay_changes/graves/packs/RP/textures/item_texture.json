@@ -1,8 +1,8 @@
 {
-	"resource_pack_name": "bedrock_tweaks_graves",
+	"resource_pack_name": "bt.gc_graves",
 	"texture_name": "atlas.items",
 	"texture_data": {
-		"bt:grave_key": {
+		"bt.gc_graves.grave_key": {
 			"textures": "textures/items/grave_key"
 		}
 	}
