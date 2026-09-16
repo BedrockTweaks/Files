@@ -2017,6 +2017,11 @@
 					"description": "Replaces the default Minecraft menu panorama with a 360° view of baby mobs in a cherry grove! (from 26.10)"
 				},
 				{
+					"id": "sulfur_caves_panorama",
+					"name": "Sulfur Caves Panorama",
+					"description": "Replaces the default Minecraft menu panorama with a 360° view of sulfur cubes in a sulfur cave! (from 26.2)"
+				},
+				{
 					"id": "the_end_panorama",
 					"name": "The End Panorama",
 					"description": "Replaces the default Minecraft menu panorama with a 360° view of the main End island"
