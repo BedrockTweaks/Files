@@ -8,3 +8,6 @@ package-lock.json
 .yarn/install-state.gz
 tools/vt-diff/.cache
 tools/vt-diff/out
+
+# Bedrock Dedicated Server tree used by bc-bds (cache, server, worlds, logs)
+/.bds

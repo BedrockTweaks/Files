@@ -1,8 +1,14 @@
 /**
  * GameTests for this addon.
  *
- * Build and deploy them with `yarn build:test`, then open a world with Beta
- * APIs enabled, cheats on, creative, flat, normal difficulty:
+ * `yarn test` runs the whole suite headlessly on a Bedrock Dedicated Server and
+ * exits non-zero if anything fails — no client, no world to set up. One group
+ * on its own is `yarn gametest --tag graves_placement`, and `--keep-alive`
+ * holds the server open afterwards so a client can join and look at the plots.
+ * `bds-runner.json` pins the engine the suite runs against.
+ *
+ * To run them from inside a client instead, `yarn build:test` and open a world
+ * with Beta APIs enabled, cheats on, creative, flat, normal difficulty:
  *
  *   /gametest runset graves_ready      — everything that is written and should pass
  *   /gametest runset graves_todo       — everything still to write; all red, on purpose

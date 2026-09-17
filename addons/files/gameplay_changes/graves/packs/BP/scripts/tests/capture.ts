@@ -18,7 +18,7 @@
  * stale handle inside `@bedrock-core/server-runtime`, not a fault here, and the
  * bodies below are long enough that it rarely fires.
  */
-import { EntityDamageCause, EquipmentSlot, GameMode } from '@minecraft/server';
+import { Difficulty, EntityDamageCause, EquipmentSlot, GameMode } from '@minecraft/server';
 import { MinecraftEntityTypes, MinecraftItemTypes } from '@minecraft/vanilla-data';
 import { GRAVE_INVENTORY_SIZE, PLAYER_CONTAINER_SLOTS, PROP_CAUSE, PROP_KILLER } from '../constants';
 import { EQUIP_SLOTS, graveContainer } from '../lifecycle';
@@ -39,6 +39,7 @@ import {
   padAt,
   revive,
   todo,
+  withDifficulty,
   withServerConfig,
 } from './harness';
 
@@ -172,28 +173,33 @@ graveTestAsync('capture_spectator_skipped', async (test) => {
 }, options);
 
 graveTestAsync('capture_cause_and_killer', async (test) => {
-  const player = arrive(test, 'grave_slain');
-  const killer = test.spawn(MinecraftEntityTypes.Zombie, padAt(test, { x: 12, y: 1, z: 12 }));
+  // Easy, because a hostile mob cannot be spawned into a peaceful world at all
+  // — and peaceful is what a headless server runs at by default.
+  await withDifficulty(test, Difficulty.Easy, async () => {
+    const player = arrive(test, 'grave_slain');
+    const killer = test.spawn(MinecraftEntityTypes.Zombie, padAt(test, { x: 12, y: 1, z: 12 }));
 
-  giveItem(player, 0, MinecraftItemTypes.DiamondSword);
-  await test.idle(2);
+    giveItem(player, 0, MinecraftItemTypes.DiamondSword);
+    await test.idle(2);
 
-  const already = new Set(visibleRecordsOf(player.id).map(r => r.id));
+    const already = new Set(visibleRecordsOf(player.id).map(r => r.id));
 
-  // Scripted rather than fought: a real zombie decides for itself when to
-  // swing, and a test that waits on mob AI is a test that fails on a slow tick.
-  player.applyDamage(1000, { cause: EntityDamageCause.entityAttack, damagingEntity: killer });
-  await test.idle(40);
+    // Scripted rather than fought: a real zombie decides for itself when to
+    // swing, and a test that waits on mob AI is a test that fails on a slow tick.
+    player.applyDamage(1000, { cause: EntityDamageCause.entityAttack, damagingEntity: killer });
+    await test.idle(40);
 
-  const record = must(visibleRecordsOf(player.id).find(r => !already.has(r.id)), 'a slain player should still get a grave');
+    const record = must(visibleRecordsOf(player.id).find(r => !already.has(r.id)), 'a slain player should still get a grave');
 
-  test.assert(record.killer === MinecraftEntityTypes.Zombie, `record.killer should be the zombie, found ${String(record.killer)}`);
-  test.assert(record.cause !== undefined, 'record.cause should carry the damage cause');
+    test.assert(record.killer === MinecraftEntityTypes.Zombie, `record.killer should be the zombie, found ${String(record.killer)}`);
+    test.assert(record.cause !== undefined, 'record.cause should carry the damage cause');
 
-  const grave = graveOf(record);
+    const grave = graveOf(record);
 
-  test.assert(grave.getDynamicProperty(PROP_KILLER) === record.killer, 'the grave entity should carry the same killer as the record');
-  test.assert(grave.getDynamicProperty(PROP_CAUSE) === record.cause, 'the grave entity should carry the same cause as the record');
+    test.assert(grave.getDynamicProperty(PROP_KILLER) === record.killer, 'the grave entity should carry the same killer as the record');
+    test.assert(grave.getDynamicProperty(PROP_CAUSE) === record.cause, 'the grave entity should carry the same cause as the record');
+  });
+
   test.succeed();
 }, options);
 

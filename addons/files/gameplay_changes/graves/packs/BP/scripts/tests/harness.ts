@@ -26,7 +26,7 @@
 import { BlockPermutation, EntityComponentTypes, GameMode, ItemStack, world } from '@minecraft/server';
 // `Block` must be imported explicitly: the generator filter puts a global
 // `Block` (the block BEHAVIOUR document) in scope, and it wins otherwise.
-import type { Block, Container, Entity, EntityEquippableComponent, Player, Vector3 } from '@minecraft/server';
+import type { Block, Container, Difficulty, Entity, EntityEquippableComponent, Player, Vector3 } from '@minecraft/server';
 import { register, registerAsync } from '@minecraft/server-gametest';
 import type { RegistrationBuilder, SimulatedPlayer, Test } from '@minecraft/server-gametest';
 import { config } from '../registration';
@@ -543,36 +543,51 @@ export function withServerConfig<T>(test: Test, overrides: ServerConfigPatch, bo
   });
 }
 
-// ─── Players ───────────────────────────────────────────────────────────────────
-
 /**
- * The player who started the run.
+ * Run `body` at `difficulty`, then put the world difficulty back.
  *
- * Prefer this over `arrive` wherever a test needs a Player but not a BODY —
- * the placement solver, for one, only wants an owner to read a spawn point
- * off. A simulated player that is spawned and torn down inside one short test
- * makes the framework log `InvalidEntityError ... at loadPlayerValues`: it
- * subscribes to `playerSpawn` and reads the new player's dynamic properties,
- * and that queued handler runs after the test has already removed them. It is
- * noise from a real handle going stale, not a fault in this addon, and the way
- * to not produce it is to not churn players.
+ * World difficulty is global and the runset is parallel, so this takes the same
+ * lock as `withServerConfig` — a neighbour that reads difficulty must not see
+ * another test's value. Set through `world.setDifficulty` rather than
+ * `/difficulty`: a command runs a tick later and reports nothing back.
+ *
+ * Peaceful is the reason this exists. A headless server defaults to it, and
+ * `test.spawn` of a hostile mob is refused outright there with
+ * `gameTest.assert.errorSpawnHostileInPeacefulWorld`.
  */
-export function anyPlayer(): Player {
-  const [player] = world.getAllPlayers();
+export function withDifficulty<T>(test: Test, difficulty: Difficulty, body: () => Promise<T>): Promise<T> {
+  return serial(async () => {
+    if (test.isCompleted()) {
+      throw new Error('timed out waiting for the difficulty lock — raise maxTicks on this test, or run one group at a time');
+    }
 
-  if (!player) {
-    throw new Error('this test needs a player in the world — run it from in game, not from a script');
-  }
+    const snapshot = world.getDifficulty();
 
-  return player;
+    world.setDifficulty(difficulty);
+
+    try {
+      return await body();
+    } finally {
+      world.setDifficulty(snapshot);
+    }
+  });
 }
+
+// ─── Players ───────────────────────────────────────────────────────────────────
 
 /**
  * A simulated player inside the pad, registered as ours so its graves are
  * cleaned up afterwards. `at` is relative to the pad.
  *
- * Only for tests that need a body to die, hold an item or swing at something.
- * See `anyPlayer` for why a short-lived one is worth avoiding.
+ * The only way a test gets a Player. `world.getAllPlayers()` is not: headless
+ * there is nobody, and in a parallel runset it hands back whichever simulated
+ * player a NEIGHBOURING test happens to have spawned, so a test written that
+ * way passes or fails on its position in the run order.
+ *
+ * The cost is that the framework logs `InvalidEntityError ... at
+ * loadPlayerValues` when one is torn down before its own `playerSpawn` handler
+ * has run — noise from a stale handle inside `@bedrock-core/server-runtime`,
+ * not a fault here.
  */
 export function arrive(test: Test, name: string, at: Vector3 = PAD_CENTER, gameMode: GameMode = GameMode.Survival): SimulatedPlayer {
   const player = test.spawnSimulatedPlayer(padAt(test, at), name, gameMode);

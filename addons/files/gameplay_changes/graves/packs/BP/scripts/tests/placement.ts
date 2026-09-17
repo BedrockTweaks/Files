@@ -31,10 +31,11 @@ import { config } from '../registration';
 import {
   LOCKED_TICKS,
   TAG_PLACEMENT,
-  anyPlayer,
+  arrive,
   expectPlacementAt,
   fill,
   fillPermutation,
+  must,
   padAt,
   padBlock,
   padOf,
@@ -53,6 +54,14 @@ const slowOptions = { tags: [TAG_PLACEMENT], ticks: LOCKED_TICKS };
 const ABOVE: Vector3 = { x: 8, y: 6, z: 8 };
 
 /**
+ * Where a test's owner stands. The solver only reads a spawn point off the
+ * owner, so the body is in the way rather than in play: this corner is clear of
+ * every basin, wall and fill the tests below build, and far enough from the
+ * centre column that the player is never what the solver is measuring.
+ */
+const OWNER_SPOT: Vector3 = { x: 2, y: 1, z: 2 };
+
+/**
  * A sealed 3×3 basin at pad x/z 7–9, y 1–3, holding a two-block source column
  * of `fluid` at (8, 2–3, 8). Sealing matters: an open pool spreads over the
  * following ticks and the test stops being deterministic.
@@ -66,7 +75,7 @@ const basin = (test: Test, fluid: string): void => {
 const blockAt = (test: Test, x: number, y: number, z: number): string => padBlock(test, padOf(test, { x, y, z })).typeId;
 
 graveTest('placement_ground', (test) => {
-  const owner = anyPlayer();
+  const owner = arrive(test, 'grave_ground', OWNER_SPOT);
   const placement = solvePlacement(test.getDimension(), padWorld(test, ABOVE), owner);
 
   // Row 6 — the engine's collision model picks the ground; the grave rests on top of it.
@@ -81,7 +90,7 @@ graveTest('placement_inside_wall', (test) => {
   fill(test, { x: 7, y: 3, z: 7 }, { x: 9, y: 5, z: 9 }, MinecraftBlockTypes.Stone);
   place(test, { x: 9, y: 4, z: 8 }, MinecraftBlockTypes.Air);
 
-  const owner = anyPlayer();
+  const owner = arrive(test, 'grave_wall', OWNER_SPOT);
   const placement = solvePlacement(test.getDimension(), padWorld(test, { x: 8, y: 4, z: 8 }), owner);
 
   // The ring search prefers a horizontal step, and the pocket is the only free cell.
@@ -93,7 +102,7 @@ graveTestAsync('placement_water_source', async (test) => {
   basin(test, MinecraftBlockTypes.Water);
   await test.idle(5);
 
-  const owner = anyPlayer();
+  const owner = arrive(test, 'grave_water', OWNER_SPOT);
   const surface = padBlock(test, { x: 8, y: 3, z: 8 });
 
   test.assert(surface.isLiquid, 'setup: the basin should be full of water');
@@ -122,7 +131,7 @@ graveTestAsync('placement_flowing_water', async (test) => {
   fillPermutation(test, { x: 6, y: 2, z: 8 }, { x: 9, y: 2, z: 8 }, BlockPermutation.resolve(MinecraftBlockTypes.FlowingWater, { liquid_depth: 3 }));
   await test.idle(20);
 
-  const owner = anyPlayer();
+  const owner = arrive(test, 'grave_flowing', OWNER_SPOT);
   const stream = padBlock(test, { x: 8, y: 2, z: 8 });
 
   test.assert(stream.isLiquid, 'setup: the water should have reached the middle of the trough');
@@ -139,7 +148,7 @@ graveTestAsync('placement_lava_float', async (test) => {
   basin(test, MinecraftBlockTypes.Lava);
   await test.idle(5);
 
-  const owner = anyPlayer();
+  const owner = arrive(test, 'grave_lava_float', OWNER_SPOT);
 
   await withServerConfig(test, { protection: { floatOnLava: true } }, async () => {
     const placement = solvePlacement(test.getDimension(), padWorld(test, ABOVE), owner);
@@ -156,7 +165,7 @@ graveTestAsync('placement_lava_sink', async (test) => {
   basin(test, MinecraftBlockTypes.Lava);
   await test.idle(5);
 
-  const owner = anyPlayer();
+  const owner = arrive(test, 'grave_lava_sink', OWNER_SPOT);
 
   await withServerConfig(test, { protection: { floatOnLava: false } }, async () => {
     const placement = solvePlacement(test.getDimension(), padWorld(test, ABOVE), owner);
@@ -175,7 +184,7 @@ graveTestAsync('placement_impenetrable_config', async (test) => {
   basin(test, MinecraftBlockTypes.Water);
   await test.idle(5);
 
-  const owner = anyPlayer();
+  const owner = arrive(test, 'grave_impen_cfg', OWNER_SPOT);
   const dimension = test.getDimension();
   // Dying INSIDE the pool: water is a legal cell, so this is where an
   // impenetrable ruling can actually change the answer.
@@ -219,7 +228,7 @@ graveTest('placement_impenetrable_rpc', (test) => {
 }, options);
 
 graveTest('placement_anti_stack', (test) => {
-  const owner = anyPlayer();
+  const owner = arrive(test, 'grave_anti_stack', OWNER_SPOT);
   const dimension = test.getDimension();
   const start = padWorld(test, ABOVE);
   // Rows 13–14 — the cell the solver would otherwise choose, already taken.
@@ -237,36 +246,34 @@ graveTest('placement_anti_stack', (test) => {
   test.succeed();
 }, options);
 
-graveTest('placement_fallback_spawn', (test) => {
+graveTestAsync('placement_fallback_spawn', async (test) => {
   // Row 15 — never lose the items. Fill the solver's whole r <= 4 search volume
   // so there is no free cell anywhere near the death, and it must fall back.
   fill(test, { x: 4, y: 4, z: 4 }, { x: 12, y: 12, z: 12 }, MinecraftBlockTypes.Stone);
 
-  const owner = anyPlayer();
+  const owner = arrive(test, 'grave_fallback', OWNER_SPOT);
   const dimension = test.getDimension();
+
+  // A personal spawn point, so the branch under test is the one that reads it
+  // rather than the world-spawn fallback behind it. The owner is a simulated
+  // player torn down with the test, so moving its spawn costs nobody anything.
+  const bed = padWorld(test, { x: 14, y: 1, z: 14 });
+
+  owner.setSpawnPoint({ ...bed, dimension });
+  await test.idle(2);
+
+  const spawn = must(owner.getSpawnPoint(), 'setSpawnPoint did not take');
   const placement = solvePlacement(dimension, padWorld(test, { x: 8, y: 8, z: 8 }), owner);
 
   test.assert(placement.fallback === true, 'a solver with nowhere to go must report fallback');
 
-  // Asserted against whatever spawn point the owner already has, rather than
-  // setting one: this test runs as a real player, and moving somebody's bed
-  // spawn is not a side effect a test gets to have.
-  const spawn = owner.getSpawnPoint();
+  const want = { x: Math.floor(spawn.x), y: Math.floor(spawn.y) + 1, z: Math.floor(spawn.z) };
 
-  if (spawn) {
-    const want = { x: Math.floor(spawn.x), y: Math.floor(spawn.y) + 1, z: Math.floor(spawn.z) };
-
-    test.assert(placement.dim === spawn.dimension.id, `fallback should use the spawn dimension ${spawn.dimension.id}, got ${String(placement.dim)}`);
-    test.assert(
-      placement.x === want.x && placement.y === want.y && placement.z === want.z,
-      `fallback should be one block above the owner spawn point ${String(want.x)} ${String(want.y)} ${String(want.z)}, got ${String(placement.x)} ${String(placement.y)} ${String(placement.z)}`,
-    );
-  } else {
-    const overworld = 'minecraft:overworld';
-
-    test.assert(placement.dim === overworld, `with no personal spawn the fallback is the world spawn in ${overworld}, got ${String(placement.dim)}`);
-  }
-
+  test.assert(placement.dim === spawn.dimension.id, `fallback should use the spawn dimension ${spawn.dimension.id}, got ${String(placement.dim)}`);
+  test.assert(
+    placement.x === want.x && placement.y === want.y && placement.z === want.z,
+    `fallback should be one block above the owner spawn point ${String(want.x)} ${String(want.y)} ${String(want.z)}, got ${String(placement.x)} ${String(placement.y)} ${String(placement.z)}`,
+  );
   test.succeed();
 }, slowOptions);
 

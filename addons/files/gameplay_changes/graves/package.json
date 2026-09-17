@@ -7,6 +7,8 @@
 		"regolith-install": "regolith install-all",
 		"build": "regolith run build",
 		"build:test": "yarn pad && regolith run build-test",
+		"test": "yarn build:test && yarn gametest --tag graves_ready",
+		"gametest": "yarn run -T bc-bds run --packs ./build/test --packs ../../../../../../Minecraft/Proyectos/@bedrock-core/ui/packages/resource-pack/build/@bedrock-core_ui_rp",
 		"pad": "node tools/pad.mjs",
 		"watch": "regolith watch",
 		"watch:test": "yarn pad && regolith watch test",

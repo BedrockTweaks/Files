@@ -29,9 +29,15 @@ server-wide and a per-player toggle).
 yarn run watch  # live recompilation
 yarn run build
 yarn run lint
+yarn run test   # the GameTest suite, headless on a dedicated server
 ```
 
 - Run a build once after cloning so the generated i18n/guides modules exist.
+- `yarn test` boots the dedicated server shared by the repository, pinned in
+  `bds-runner.json` at the repository root, so the first run is slow and needs
+  network. `yarn gametest --tag graves_placement` runs one group; add
+  `--keep-alive` to join the server and inspect the plots. See
+  `packs/BP/scripts/tests/index.ts` for the tags.
 - Install the `core-ui-*.mcpack` in your test world to see the custom UI.
 - The grave entity is unkillable by design; the only removal path is
   `entity.remove()` — never `/kill`, never `runCommand('kill ...')`.

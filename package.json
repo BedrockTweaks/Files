@@ -9,10 +9,14 @@
 	],
 	"scripts": {
 		"create-addon": "node tools/create-addon.mjs",
+		"bds": "bc-bds",
 		"regolith-install": "yarn workspaces foreach -i -A --topological --jobs=1 run regolith-install",
 		"build": "yarn workspaces foreach -i -A run build",
 		"lint": "yarn workspaces foreach -i -A run lint",
 		"test": "yarn workspaces foreach -i -A --continue run test"
+	},
+	"devDependencies": {
+		"@bedrock-core/bds-runner": "portal:../../Minecraft/Proyectos/@bedrock-core/bds-runner"
 	},
 	"engines": {
 		"node": ">=25.0.0"

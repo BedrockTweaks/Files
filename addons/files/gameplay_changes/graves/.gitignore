@@ -12,6 +12,7 @@ node_modules
 # Build outputs
 /build
 /.regolith
+
 dist
 **/dist
 *.tsbuildinfo
