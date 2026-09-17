@@ -244,6 +244,30 @@
 				]
 			}
 		},
+		"poplar_planks": {
+			"textures": {
+				"variations": [
+					{
+						"path": "textures/blocks/poplar_planks"
+					},
+					{
+						"path": "textures/blocks/poplar_planks/1"
+					},
+					{
+						"path": "textures/blocks/poplar_planks/2"
+					},
+					{
+						"path": "textures/blocks/poplar_planks/3"
+					},
+					{
+						"path": "textures/blocks/poplar_planks/4"
+					},
+					{
+						"path": "textures/blocks/poplar_planks/5"
+					}
+				]
+			}
+		},
 		"spruce_planks": {
 			"textures": {
 				"variations": [
