@@ -2713,11 +2713,6 @@
 					"description": "Gives Explosion particles their texture from Minecraft: Java Edition"
 				},
 				{
-					"id": "java_map",
-					"name": "Java Map",
-					"description": "Gives all Map item variants their textures from Minecraft: Java Edition"
-				},
-				{
 					"id": "java_ender_dragon_ball",
 					"name": "Java Ender Dragon Ball",
 					"description": "Gives the Ender Dragon's projectile its texture from Minecraft: Java Edition"
