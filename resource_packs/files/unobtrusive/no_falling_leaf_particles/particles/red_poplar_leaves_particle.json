@@ -8,11 +8,11 @@
         "texture": "textures/particle/red_poplar_leaves_atlas"
       }
     },
-		"components": {
-			"minecraft:emitter_lifetime_expression": {},
-			"minecraft:emitter_rate_manual": {
-				"max_particles": 0
-			}
-		}
-	}
+    "components": {
+      "minecraft:emitter_lifetime_expression": {},
+      "minecraft:emitter_rate_manual": {
+        "max_particles": 0
+      }
+    }
+  }
 }
