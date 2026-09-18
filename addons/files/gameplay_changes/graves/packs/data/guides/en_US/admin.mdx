@@ -1,0 +1,45 @@
+---
+title: For Operators
+sidebar_position: 4
+access: op
+description: The admin panel, purging, and the keepInventory contract.
+---
+
+# For Operators
+
+## The admin panel
+
+`/bt_gc_graves:gravesadmin panel` lists every grave in the world — owner,
+dimension, position, contents and age — without loading a single chunk. From a
+grave's detail screen you can teleport to it or purge it.
+
+## Purging
+
+- `/bt_gc_graves:gravesadmin purge [player]` — removes graves now where their
+  chunks are loaded, and *tombstones* the rest: they vanish the moment their
+  chunk next loads. Tombstoned graves are invisible everywhere and cost
+  nothing.
+- `/bt_gc_graves:gravesadmin purgestatus` — how many tombstones are pending.
+- `/bt_gc_graves:gravesadmin forcepurge` — physically removes every tombstoned
+  grave right away by briefly ticking each chunk. Use before a world export.
+
+## keepInventory
+
+There is no before-death event in Bedrock scripting, so Graves keeps the
+`keepInventory` gamerule **on** and does the dropping itself — that is what
+makes capture lossless. If anything turns the rule off, Graves turns it back
+on and tells operators.
+
+To hand the gamerule back:
+
+- `/bt_gc_graves:gravesadmin disable` — refuses while graves still exist.
+- `/bt_gc_graves:gravesadmin forcedisable` — releases immediately, restoring
+  the value `keepInventory` had before Graves was installed. Existing graves
+  are left alone and can still be opened.
+- `/bt_gc_graves:gravesadmin enable` — re-arms everything.
+
+## For addon developers
+
+Blocks tagged `bt:gc_graves.impenetrable` are never occupied or replaced by a grave.
+Over RPC (`bt_gc_graves`): `getGraves`, `countGraves` and
+`registerImpenetrable` — see the repository for the typed interface.

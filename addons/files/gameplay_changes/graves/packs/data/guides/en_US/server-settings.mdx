@@ -1,0 +1,24 @@
+---
+title: Server Settings
+sidebar_position: 3
+access: op
+description: Every server-wide setting, and where to change it.
+---
+
+# Server Settings
+
+Open the shared config screen with `/bt_gc_graves:config`, or reach any scope
+with `/bt_gc_graves:configat`.
+
+- **Allow Grave Robbing** — anyone can open anyone's grave.
+- **Grave Key** — whether keys work at all.
+- **Collect XP** and **XP Kept (%)** — how much experience the grave stores.
+- **Restore Original Slots** — sneak-opening puts items back where they were.
+- **Despawn Time** — graves older than this are deleted, contents included.
+- **Max Graves Per Player** — cap with either *drop oldest* or *block new*
+  (blocking a new grave means the player simply keeps their items on death).
+- **Void Rescue Platform**, **Height** and **Block** — the anti-void safety
+  net.
+- **Extra Impenetrable Blocks** — block ids a grave must never occupy. Edit it
+  in the config screen, or from chat:
+  `/bt_gc_graves:config add extraImpenetrableBlocks <id>`.
