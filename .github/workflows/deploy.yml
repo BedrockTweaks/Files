@@ -54,9 +54,16 @@ jobs:
                 ;;
             esac
 
-            command -v git >/dev/null
-            command -v git-lfs >/dev/null
-            command -v rsync >/dev/null
+            for tool in git rsync; do
+              if ! command -v "$tool" >/dev/null 2>&1; then
+                echo "Missing server command: $tool" >&2
+                exit 1
+              fi
+            done
+            if ! git lfs version >/dev/null 2>&1; then
+              echo 'Git LFS is not available on the server.' >&2
+              exit 1
+            fi
 
             repo_url=https://github.com/BedrockTweaks/Files.git
             export GIT_LFS_SKIP_SMUDGE=1
