@@ -374,8 +374,7 @@
 				{
 					"id": "full_grass_sides",
 					"name": "Full Grass Sides",
-					"description": "Completely covers the sides of Grass Blocks to provide a smoother and greener landscape",
-					"priority": 1
+					"description": "Completely covers the sides of Grass Blocks to provide a smoother and greener landscape"
 				},
 				{
 					"id": "lower_snowy_grass_sides",
