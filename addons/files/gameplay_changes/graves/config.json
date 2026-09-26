@@ -1,186 +1,44 @@
 {
 	"$schema": "https://raw.githubusercontent.com/Bedrock-OSS/regolith-schemas/main/config/v1.4.json",
+	"name": "bedrock-tweaks/graves",
 	"author": "DrAv0011",
-	"description": "When you die, it places a grave to save all your drops instead of dropping them.",
-	"name": "gc_graves",
 	"packs": {
 		"behaviorPack": "./packs/BP",
 		"resourcePack": "./packs/RP"
 	},
 	"regolith": {
 		"dataPath": "./packs/data",
+		"formatVersion": "1.4.0",
 		"filterDefinitions": {
-			"core": {
-				"url": "github.com/bedrock-core/regolith-filters",
-				"version": "1.0.0"
-			},
 			"bundler": {
 				"url": "github.com/bedrock-core/regolith-filters",
-				"version": "1.2.0"
-			},
-			"generator": {
-				"url": "github.com/bedrock-core/regolith-filters",
-				"version": "1.2.0"
-			},
-			"guides": {
-				"url": "github.com/bedrock-core/regolith-filters",
-				"version": "1.2.0"
-			},
-			"i18n": {
-				"url": "github.com/bedrock-core/regolith-filters",
-				"version": "1.2.0"
-			},
-			"manifest": {
-				"url": "github.com/bedrock-core/regolith-filters",
-				"version": "2.0.0"
-			},
-			"ui-compiler": {
-				"url": "github.com/bedrock-core/regolith-filters",
-				"version": "0.1.0"
+				"version": "1.0.1"
 			}
 		},
-		"formatVersion": "1.4.0",
 		"profiles": {
 			"build": {
 				"export": {
 					"build": "standard",
-					"readOnly": true,
+					"readOnly": false,
 					"target": "local"
 				},
 				"filters": [
 					{
-						"filter": "core",
-						"settings": {
-							"shared": {
-								"namespace": "bt_gc_graves",
-								"pretty": false
-							},
-							"generator": {
-								"include": [
-									"**/*.ts"
-								],
-								"exclude": [
-									"BP/scripts/**",
-									"data/**",
-									"**/*.d.ts"
-								],
-								"pretty": false
-							},
-							"bundler": {
-								"debug": false
-							}
-						}
+						"filter": "bundler"
 					}
 				]
 			},
 			"default": {
 				"export": {
-					"build": "standard",
 					"readOnly": false,
-					"target": "development"
+					"target": "development",
+					"build": "standard"
 				},
 				"filters": [
 					{
-						"filter": "core",
+						"filter": "bundler",
 						"settings": {
-							"shared": {
-								"namespace": "bt_gc_graves",
-								"pretty": {
-									"indent": "tab"
-								}
-							},
-							"generator": {
-								"include": [
-									"**/*.ts"
-								],
-								"exclude": [
-									"BP/scripts/**",
-									"data/**",
-									"**/*.d.ts"
-								],
-								"pretty": true
-							},
-							"bundler": {
-								"debug": true
-							}
-						}
-					}
-				]
-			},
-			"test": {
-				"export": {
-					"build": "standard",
-					"readOnly": false,
-					"target": "development"
-				},
-				"filters": [
-					{
-						"filter": "core",
-						"settings": {
-							"shared": {
-								"namespace": "bt_gc_graves",
-								"pretty": {
-									"indent": "tab"
-								}
-							},
-							"manifest": {
-								"manifestPath": "BP/manifest.test.json"
-							},
-							"generator": {
-								"include": [
-									"**/*.ts"
-								],
-								"exclude": [
-									"BP/scripts/**",
-									"data/**",
-									"**/*.d.ts"
-								],
-								"pretty": true
-							},
-							"bundler": {
-								"debug": true,
-								"tsConfigPath": "tsconfig.test.json"
-							}
-						}
-					}
-				]
-			},
-			"build-test": {
-				"export": {
-					"build": "standard",
-					"bpPath": "./build/test/BP",
-					"readOnly": false,
-					"rpPath": "./build/test/RP",
-					"target": "exact"
-				},
-				"filters": [
-					{
-						"filter": "core",
-						"settings": {
-							"shared": {
-								"namespace": "bt_gc_graves",
-								"pretty": {
-									"indent": "tab"
-								}
-							},
-							"manifest": {
-								"manifestPath": "BP/manifest.test.json"
-							},
-							"generator": {
-								"include": [
-									"**/*.ts"
-								],
-								"exclude": [
-									"BP/scripts/**",
-									"data/**",
-									"**/*.d.ts"
-								],
-								"pretty": true
-							},
-							"bundler": {
-								"debug": true,
-								"tsConfigPath": "tsconfig.test.json"
-							}
+							"debug": true
 						}
 					}
 				]

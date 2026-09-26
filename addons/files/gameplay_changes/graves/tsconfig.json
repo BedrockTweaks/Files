@@ -1,10 +1,12 @@
 {
 	"compilerOptions": {
-		"target": "esnext",
+		"target": "ES2023",
 		"module": "esnext",
-		"declaration": false,
+		"declaration": true,
 		"declarationMap": false,
 		"sourceMap": true,
+		"inlineSources": true,
+		"rootDir": "packs/BP/scripts",
 		"stripInternal": true,
 		"strict": true,
 		"moduleResolution": "bundler",
@@ -16,32 +18,14 @@
 		"removeComments": true,
 		"preserveConstEnums": true,
 		"noImplicitReturns": true,
-		"allowJs": true,
-		"resolveJsonModule": true,
-		"rootDir": ".",
-		"jsx": "react-jsx",
-		"jsxImportSource": "@bedrock-core/ui",
-		"paths": {
-			"@bedrock-core/generated/i18n": [
-				"./packs/data/i18n/i18n.generated.json"
-			],
-			"@bedrock-core/generated/guides": [
-				"./packs/data/guides/guides.generated.json"
-			],
-			"@bedrock-core/generated/ui": [
-				"./packs/data/ui/ui.generated.ts"
-			]
-		}
+		"allowJs": false,
+		"resolveJsonModule": true
 	},
 	"files": [
 		"packs/BP/scripts/main.ts"
 	],
 	"include": [
-		"packs/BP/scripts/**/*",
-		"packs/BP/blocks/**/*",
-		"packs/BP/entities/**/*",
-		"packs/BP/items/**/*",
-		"packs/data/**/*"
+		"packs/BP/scripts/**/*"
 	],
 	"exclude": [
 		"node_modules",
