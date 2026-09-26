@@ -1,5 +1,7 @@
 # Graves
 
+Work in progress. Graves is not available for download yet.
+
 When you die, a grave keeps everything — inventory, armor, offhand and XP. It
 never burns, never explodes, floats on lava, and gets rescued from the void.
 
@@ -41,5 +43,24 @@ yarn run test   # the GameTest suite, headless on a dedicated server
 - Install the `core-ui-*.mcpack` in your test world to see the custom UI.
 - The grave entity is unkillable by design; the only removal path is
   `entity.remove()` — never `/kill`, never `runCommand('kill ...')`.
-- The grave index (world dynamic properties) is the source of truth; grave
-  entities in unloaded chunks do not exist to `getEntities()`.
+- `scripts/storage/documents.ts` declares the entity documents, world grave
+  directory and world state. The directory keeps graves discoverable while
+  their entities are unloaded; entity documents allow recovery on chunk load.
+- `scripts/main.ts` initializes registration, documents and gameplay listeners.
+  `scripts/UI/navigation.tsx` opens the list, detail and administration screens.
+- `grave_container.screen.tsx` owns the 41 inventory cells. Container callbacks
+  update item totals and award XP when emptied; framework protocol slots are
+  excluded from inventory operations.
+
+## Placement extensions
+
+Operators can edit **Extra Impenetrable Blocks** and **Extra Repelling Entities**
+in settings. IDs without a namespace use `minecraft:`.
+
+Other add-ons can call `registerImpenetrable({ ids })` and
+`registerRepelling({ ids })` through `core.rpc.typed<GravesRPC>('bt_gc_graves')`.
+Registration deduplicates IDs and returns the runtime set size. Register on each
+world session; operator lists are persisted by the config app.
+
+The block tag `bt:gc_graves.impenetrable` prevents placement in that block.
+The entity tag `bt:gc_graves.repelling` prevents sharing that entity's block cell.

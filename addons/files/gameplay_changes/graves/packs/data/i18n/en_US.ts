@@ -92,6 +92,10 @@ export default {
       label: 'Float On Lava',
       desc: 'Graves float on lava source blocks instead of sinking to the bottom.',
     },
+    extraRepellingEntities: {
+      label: 'Extra Repelling Entities',
+      desc: 'Entity ids that graves must not share a block cell with, in addition to the built-in list.',
+    },
     extraImpenetrableBlocks: {
       label: 'Extra Impenetrable Blocks',
       desc: 'Block ids a grave must never occupy or replace, in addition to the built-in list.',

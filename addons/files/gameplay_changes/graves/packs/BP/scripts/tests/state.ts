@@ -1,3 +1,4 @@
+import { worldState } from '../storage/documents';
 /**
  * §6, §6a, §7 — the index, the purge mechanisms, the despawn sweep, the
  * keepInventory enforcement and the RPC surface.
@@ -14,27 +15,29 @@
  */
 import { GameRule, world } from '@minecraft/server';
 import { MinecraftBlockTypes, MinecraftItemTypes } from '@minecraft/vanilla-data';
-import { GRAVE_ENTITY, PROP_DISABLED } from '../constants';
-import { core } from '../registration';
+import { GRAVE_ENTITY } from '../constants';
+import { config, core } from '../registration';
 import { disableAddon, isAddonDisabled } from '../death/keepInventory';
 import { addRuntimeImpenetrable } from '../death/impenetrable';
-import { purgeGraves, pendingTombstones } from '../index/purge';
-import { allRecords, markPurge, recordsOf, updateRecord, visibleRecordsOf } from '../index/store';
-import { GRAVES_STATE_KEY } from '../types';
-import type { GraveSummary, GravesRPC } from '../types';
+import { purgeGraves, pendingTombstones } from '../storage/purge';
+import type { GravesRPC } from '../types';
 import {
   LOCKED_TICKS,
   TAG_STATE,
   arrive,
+  allRecords,
   die,
   giveItem,
   graveOf,
   graveTestAsync,
-  must,
+  markPurge,
   padBlock,
   place,
   revive,
+  recordsOf,
   todo,
+  updateRecord,
+  visibleRecordsOf,
   withServerConfig,
 } from './harness';
 
@@ -71,35 +74,6 @@ graveTestAsync('state_record_shape', async (test) => {
     test.assert(record.items === 18, `record.items should count 18 items, counted ${String(record.items)}`);
     test.assert(record.xp === 12, `record.xp should be 12, was ${String(record.xp)}`);
     test.assert(record.diedAt >= before && record.diedAt <= Date.now(), 'record.diedAt should be stamped at the death, not later');
-  });
-
-  test.succeed();
-}, options);
-
-graveTestAsync('state_summary_published', async (test) => {
-  await withServerConfig(test, DEFAULTS, async () => {
-    const player = arrive(test, 'state_summary');
-
-    giveItem(player, 0, MinecraftItemTypes.Cobblestone);
-    await test.idle(2);
-
-    const record = await die(test, player);
-
-    await test.idle(5);
-
-    // Read back through the same typed key a consuming addon would use — no
-    // cast, because the key carries its own shape.
-    const summary = must(core.state.get<GraveSummary>(GRAVES_STATE_KEY), 'the index should publish a graves summary to core.state');
-
-    test.assert(summary.owners[player.id] === 1, `the summary should report 1 grave for the owner, reported ${String(summary.owners[player.id])}`);
-
-    purgeGraves(player.id);
-    await test.idle(5);
-
-    const after = must(core.state.get<GraveSummary>(GRAVES_STATE_KEY), 'the summary should still be published after a purge');
-
-    test.assert(after.owners[player.id] === undefined, 'an owner with no graves left should drop out of the summary');
-    test.assert(!visibleRecordsOf(player.id).some(r => r.id === record.id), 'and the record should be gone');
   });
 
   test.succeed();
@@ -180,7 +154,7 @@ graveTestAsync('state_purge_skips_tombstones', async (test) => {
 }, options);
 
 graveTestAsync('state_despawn_sweep', async (test) => {
-  await withServerConfig(test, { ...DEFAULTS, lifetime: { ...DEFAULTS.lifetime, despawnSeconds: 1 } }, async () => {
+  await withServerConfig(test, DEFAULTS, async () => {
     const player = arrive(test, 'state_despawn');
 
     giveItem(player, 0, MinecraftItemTypes.Cobblestone);
@@ -193,6 +167,7 @@ graveTestAsync('state_despawn_sweep', async (test) => {
     // so ageing the record is the same thing as ageing the grave, and it keeps
     // the test to one sweep interval instead of one despawn period.
     updateRecord({ ...record, diedAt: Date.now() - 60_000 });
+    config.server.lifetime.despawnSeconds.set(1);
 
     // The sweep runs every SWEEP_INTERVAL_TICKS (200); give it two turns.
     await test.idle(420);
@@ -245,10 +220,10 @@ graveTestAsync('state_disable_refused_with_graves', async (test) => {
 
     test.assert(visibleRecordsOf(player.id).length === before, 'a disabled addon must not capture another grave');
 
-    // Cleanup restores PROP_DISABLED from the pre-suite snapshot, but leaving
+    // Cleanup restores world state from the pre-suite snapshot, but leaving
     // the switch off for even one later test in the same run would be enough to
     // break it, so it goes back now.
-    world.setDynamicProperty(PROP_DISABLED, undefined);
+    worldState.patch({ disabled: undefined });
     world.gameRules[GameRule.KeepInventory] = true;
     await test.idle(2);
     test.assert(!isAddonDisabled(), 'the addon should be back on before the next test sees it');
@@ -258,26 +233,10 @@ graveTestAsync('state_disable_refused_with_graves', async (test) => {
 }, options);
 
 graveTestAsync('state_rpc_surface', async (test) => {
-  await withServerConfig(test, DEFAULTS, async () => {
-    const player = arrive(test, 'state_rpc');
+  const graves = core.rpc.typed<GravesRPC>('bt_gc_graves');
+  const size = await graves.registerImpenetrable({ ids: [MinecraftBlockTypes.Sponge] });
 
-    giveItem(player, 0, MinecraftItemTypes.Cobblestone);
-    await test.idle(2);
-
-    const record = await die(test, player);
-
-    // Typed end to end, exactly the way a consuming addon would reach it.
-    const graves = core.rpc.typed<GravesRPC>('bt_gc_graves');
-    const listed = await graves.getGraves({ playerId: player.id });
-    const counted = await graves.countGraves({ playerId: player.id });
-
-    test.assert(counted === 1, `countGraves should report 1, reported ${String(counted)}`);
-    test.assert(listed.length === 1 && listed[0].id === record.id, 'getGraves should return the owner\'s own record');
-
-    const size = await graves.registerImpenetrable({ ids: [MinecraftBlockTypes.Sponge] });
-
-    test.assert(size > 0, 'registerImpenetrable should report the runtime set size');
-  });
+  test.assert(size > 0, 'registerImpenetrable should report the runtime set size');
 
   test.succeed();
 }, options);
@@ -318,18 +277,6 @@ graveTestAsync('state_cleanup_leaves_nothing', async (test) => {
 
   test.succeed();
 }, options);
-
-todo(
-  'state_reconcile_purges',
-  'reconcile executing a tombstone (record.purge set, entity removed on sight) fires from entityLoad, which needs a real chunk load — a gametest pad is loaded by definition, and purgeGraves deliberately skips tombstones (state_purge_skips_tombstones). Manual check: tombstone a grave, reload the world, the grave is gone and its record with it',
-  { tags: [TAG_STATE] },
-);
-
-todo(
-  'state_reconcile_adopts',
-  'reconcile adopting an ORPHAN grave (entity present, no index record) needs entityLoad to fire, which only happens on a real chunk load — a gametest pad is loaded by definition. Manual check: make a grave, edit it out of the index, reload the world, watch for the "adopted orphan grave" line in the content log',
-  { tags: [TAG_STATE] },
-);
 
 todo(
   'state_forcepurge',

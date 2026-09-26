@@ -8,15 +8,15 @@
 import { GameRule, system, world } from '@minecraft/server';
 import { isOperator } from '@bedrock-core/server';
 import { config } from '../registration';
-import { PROP_DISABLED, PROP_PREV_KEEP_INVENTORY } from '../constants';
+import { worldState } from '../storage/documents';
 import { i18n } from '../UI/i18n';
 
-export const isAddonDisabled = (): boolean => world.getDynamicProperty(PROP_DISABLED) === true;
+export const isAddonDisabled = (): boolean => worldState.get()?.disabled === true;
 
 const snapshotAndEnforce = (): void => {
   // Remember the operator's original value once, so force-disable can put it back.
-  if (world.getDynamicProperty(PROP_PREV_KEEP_INVENTORY) === undefined) {
-    world.setDynamicProperty(PROP_PREV_KEEP_INVENTORY, world.gameRules.keepInventory);
+  if (worldState.get()?.previousKeepInventory === undefined) {
+    worldState.patch({ previousKeepInventory: world.gameRules.keepInventory });
   }
 
   world.gameRules.keepInventory = true;
@@ -62,8 +62,11 @@ export function enableAddon(): boolean {
     return false;
   }
 
-  world.setDynamicProperty(PROP_DISABLED, undefined);
-  snapshotAndEnforce();
+  worldState.patch({ disabled: undefined });
+
+  if (config.server.capture.enforceKeepInventory.get()) {
+    snapshotAndEnforce();
+  }
 
   return true;
 }
@@ -74,11 +77,13 @@ export function enableAddon(): boolean {
  * Returns the restored value.
  */
 export function disableAddon(): boolean {
-  const previous = world.getDynamicProperty(PROP_PREV_KEEP_INVENTORY);
+  const previous = worldState.get()?.previousKeepInventory;
 
-  world.setDynamicProperty(PROP_DISABLED, true);
-  world.setDynamicProperty(PROP_PREV_KEEP_INVENTORY, undefined);
-  world.gameRules.keepInventory = previous === true;
+  worldState.patch({ disabled: true, previousKeepInventory: undefined });
+
+  if (previous !== undefined) {
+    world.gameRules.keepInventory = previous;
+  }
 
   return previous === true;
 }

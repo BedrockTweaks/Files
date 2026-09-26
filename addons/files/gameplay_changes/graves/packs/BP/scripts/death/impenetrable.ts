@@ -2,13 +2,37 @@
  * §3b-i — "may a grave occupy or replace this block?" is policy, not physics,
  * so it is as dynamic as Bedrock allows. Four layers, checked in order:
  *  1. block tag `bt:gc_graves.impenetrable` — any addon opts its blocks in, zero coupling
- *  2. config list `server.protection.extraImpenetrableBlocks` — operator-editable
+ *  2. config list `server.extraImpenetrableBlocks` — operator-editable
  *  3. RPC `registerImpenetrable` (served in rpc.ts) — other addons, at runtime
  *  4. a small vanilla fallback set
  */
-import type { Block } from '@minecraft/server';
+import { system, type Block } from '@minecraft/server';
 import { config } from '../registration';
-import { IMPENETRABLE_TAG, VANILLA_IMPENETRABLE } from '../constants';
+
+/**
+ * §3b-i layer 4 — vanilla blocks a grave must never occupy or replace.
+ * Layers 1–3 (block tag, config list, RPC) extend this at runtime.
+ */
+const VANILLA_IMPENETRABLE: ReadonlySet<string> = new Set([
+  'minecraft:bedrock',
+  'minecraft:barrier',
+  'minecraft:command_block',
+  'minecraft:chain_command_block',
+  'minecraft:repeating_command_block',
+  'minecraft:structure_block',
+  'minecraft:structure_void',
+  'minecraft:jigsaw',
+  'minecraft:light_block',
+  'minecraft:end_portal',
+  'minecraft:end_portal_frame',
+  'minecraft:end_gateway',
+  'minecraft:allow',
+  'minecraft:deny',
+  'minecraft:border_block',
+]);
+
+/** Block tag other addons can put on their blocks to keep graves out (§3b-i layer 1). */
+export const IMPENETRABLE_TAG = 'bt:gc_graves.impenetrable';
 
 const runtimeIds = new Set<string>();
 let configIds: readonly string[] = [];
@@ -48,5 +72,7 @@ export function initImpenetrable(): void {
   config.server.extraImpenetrableBlocks.subscribe((next) => {
     configIds = next.map(normalize);
   });
-  configIds = config.server.extraImpenetrableBlocks.get().map(normalize);
+  system.run(() => {
+    configIds = config.server.extraImpenetrableBlocks.get().map(normalize);
+  });
 }

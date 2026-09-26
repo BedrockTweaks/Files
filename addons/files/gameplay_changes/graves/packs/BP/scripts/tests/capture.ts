@@ -1,3 +1,4 @@
+import { graveDocuments } from '../storage/documents';
 /**
  * §3c — death capture.
  *
@@ -20,9 +21,8 @@
  */
 import { Difficulty, EntityDamageCause, EquipmentSlot, GameMode } from '@minecraft/server';
 import { MinecraftEntityTypes, MinecraftItemTypes } from '@minecraft/vanilla-data';
-import { GRAVE_INVENTORY_SIZE, PLAYER_CONTAINER_SLOTS, PROP_CAUSE, PROP_KILLER } from '../constants';
-import { EQUIP_SLOTS, graveContainer } from '../lifecycle';
-import { visibleRecordsOf } from '../index/store';
+import { GRAVE_INVENTORY_SIZE, PLAYER_CONTAINER_SLOTS, graveSlotForPlayerSlot } from '../constants';
+import { EQUIP_SLOTS, graveContainer } from '../inventory';
 import {
   LOCKED_TICKS,
   TAG_CAPTURE,
@@ -39,6 +39,7 @@ import {
   padAt,
   revive,
   todo,
+  visibleRecordsOf,
   withDifficulty,
   withServerConfig,
 } from './harness';
@@ -61,7 +62,9 @@ graveTestAsync('capture_container_slots', async (test) => {
   test.assert(container.size >= GRAVE_INVENTORY_SIZE, `the grave container is ${String(container.size)} slots, wanted at least ${String(GRAVE_INVENTORY_SIZE)}`);
 
   for (const [slot, stack] of given) {
-    expectStack(test, container.getItem(slot), stack, `grave slot ${String(slot)} mirrors the player slot`);
+    const graveSlot = graveSlotForPlayerSlot(slot);
+
+    expectStack(test, container.getItem(graveSlot), stack, `grave slot ${String(graveSlot)} mirrors player slot ${String(slot)}`);
   }
 
   const left = inventoryOf(player);
@@ -196,8 +199,8 @@ graveTestAsync('capture_cause_and_killer', async (test) => {
 
     const grave = graveOf(record);
 
-    test.assert(grave.getDynamicProperty(PROP_KILLER) === record.killer, 'the grave entity should carry the same killer as the record');
-    test.assert(grave.getDynamicProperty(PROP_CAUSE) === record.cause, 'the grave entity should carry the same cause as the record');
+    test.assert(graveDocuments.for(grave).get()?.killer === record.killer, 'the grave entity should carry the same killer as the record');
+    test.assert(graveDocuments.for(grave).get()?.cause === record.cause, 'the grave entity should carry the same cause as the record');
   });
 
   test.succeed();

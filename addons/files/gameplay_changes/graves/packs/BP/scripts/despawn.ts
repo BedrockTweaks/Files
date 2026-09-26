@@ -5,8 +5,8 @@
  */
 import { system } from '@minecraft/server';
 import { config } from './registration';
+import { graveDirectory as graves } from './storage/documents';
 import { graveEntity, removeGrave } from './lifecycle';
-import { allRecords, markPurge } from './index/store';
 
 const SWEEP_INTERVAL_TICKS = 200; // every 10 s — despawn granularity is seconds anyway
 
@@ -20,7 +20,7 @@ export function initDespawn(): void {
 
     const cutoff = Date.now() - seconds * 1000;
 
-    for (const record of allRecords()) {
+    for (const record of Object.values(graves.get()?.records ?? {}).filter(record => !record.purge)) {
       if (record.diedAt > cutoff) {
         continue;
       }
@@ -30,7 +30,7 @@ export function initDespawn(): void {
       if (entity) {
         removeGrave(entity);
       } else {
-        markPurge(record.id);
+        graves.patch({ records: { [record.id]: { ...record, purge: true } } });
       }
     }
   }, SWEEP_INTERVAL_TICKS);

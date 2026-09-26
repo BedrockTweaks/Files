@@ -9,8 +9,9 @@
 import { EntityComponentTypes } from '@minecraft/server';
 import type { Entity, ItemStack, Player } from '@minecraft/server';
 import { config } from '../registration';
-import { PLAYER_CONTAINER_SLOTS } from '../constants';
-import { EQUIP_SLOTS, dropAt, grantXp, graveContainer, graveXp, removeGrave } from '../lifecycle';
+import { PLAYER_CONTAINER_SLOTS, playerSlotForGraveSlot } from '../constants';
+import { dropAt, grantXp, graveXp, removeGrave } from '../lifecycle';
+import { EQUIP_SLOTS, graveContainer } from '../inventory';
 import { i18n } from '../UI/i18n';
 
 export function restoreToPlayer(grave: Entity, player: Player): void {
@@ -27,15 +28,16 @@ export function restoreToPlayer(grave: Entity, player: Player): void {
   let overflow = 0;
 
   // Pass 1 — exact restores, while no displaced item has taken anyone's home.
-  for (let slot = 0; slot < PLAYER_CONTAINER_SLOTS && slot < container.size; slot++) {
-    const item = container.getItem(slot);
+  for (let graveSlot = 0; graveSlot < PLAYER_CONTAINER_SLOTS && graveSlot < container.size; graveSlot++) {
+    const playerSlot = playerSlotForGraveSlot(graveSlot);
+    const item = container.getItem(graveSlot);
 
     if (!item) {
       continue;
     }
 
-    if (toOriginalSlots && !inventory.getItem(slot)) {
-      inventory.setItem(slot, item);
+    if (toOriginalSlots && !inventory.getItem(playerSlot)) {
+      inventory.setItem(playerSlot, item);
     } else {
       displaced.push(item);
     }

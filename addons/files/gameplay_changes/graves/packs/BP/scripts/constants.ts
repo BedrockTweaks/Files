@@ -1,82 +1,32 @@
-/**
- * Identifiers shared across the addon. The bedrock-core namespace
- * (`bt_gc_graves`) prefixes commands, i18n keys and dynamic properties;
- * entity/item identifiers follow the repo's `bt:<pack>.<name>` convention.
- */
-export const NAMESPACE = 'bt_gc_graves';
-
+/** Shared pack identifiers and fixed inventory layout. */
 export const GRAVE_ENTITY = 'bt:gc_graves.grave';
 export const GRAVE_KEY_ITEM = 'bt:gc_graves.grave_key';
 
 /** Entity property (client_sync) driving the RP shake animation. */
 export const SHAKING_PROPERTY = 'bt:shaking';
 
-/** Dynamic-property keys on the grave entity. */
-export const PROP_OWNER = `${NAMESPACE}:owner`;
-export const PROP_OWNER_NAME = `${NAMESPACE}:ownerName`;
-export const PROP_XP = `${NAMESPACE}:xp`;
-export const PROP_CAUSE = `${NAMESPACE}:cause`;
-export const PROP_KILLER = `${NAMESPACE}:killer`;
-export const PROP_DIED_AT = `${NAMESPACE}:diedAt`;
-export const PROP_SHAKE_UNTIL = `${NAMESPACE}:shakeUntilTick`;
-
-/** World dynamic-property keys. */
-export const PROP_IDX_PREFIX = `${NAMESPACE}:idx:`;
-export const PROP_OWNERS = `${NAMESPACE}:owners`;
-export const PROP_DISABLED = `${NAMESPACE}:disabled`;
-export const PROP_PREV_KEEP_INVENTORY = `${NAMESPACE}:prevKeepInventory`;
-
-/** Grave container layout: 0–35 mirror the player container, 36–40 equipment. */
+/**
+ * Grave storage order: the player's main inventory (slots 9–35) fills rows 1–3,
+ * the hotbar (slots 0–8) fills row 4, and equipment follows at slots 36–40.
+ */
 export const GRAVE_INVENTORY_SIZE = 41;
 export const PLAYER_CONTAINER_SLOTS = 36;
+export const PLAYER_HOTBAR_SLOTS = 9;
+
+/** Convert a player inventory slot into its row-ordered grave slot. */
+export const graveSlotForPlayerSlot = (playerSlot: number): number => (
+  playerSlot < PLAYER_HOTBAR_SLOTS
+    ? PLAYER_CONTAINER_SLOTS - PLAYER_HOTBAR_SLOTS + playerSlot
+    : playerSlot - PLAYER_HOTBAR_SLOTS
+);
+
+/** Convert a row-ordered grave slot back into the player's inventory slot. */
+export const playerSlotForGraveSlot = (graveSlot: number): number => (
+  graveSlot < PLAYER_CONTAINER_SLOTS - PLAYER_HOTBAR_SLOTS
+    ? graveSlot + PLAYER_HOTBAR_SLOTS
+    : graveSlot - (PLAYER_CONTAINER_SLOTS - PLAYER_HOTBAR_SLOTS)
+);
 
 /** Locator bar (§8) — the grave icon shipped in the RP, and its bar tint. */
 export const WAYPOINT_TEXTURE = 'textures/ui/grave_waypoint';
 export const WAYPOINT_COLOR = { red: 0.62, green: 0.62, blue: 0.66 };
-
-/**
- * Ticks the grave keeps shaking after the first hit — the second-hit window.
- *
- * Must stay comfortably ABOVE the ~10 ticks of damage invulnerability an entity
- * gets after being hit. At 10 the two cancelled out exactly: every swing inside
- * the window produced no damage event at all, so the gate never saw it, and the
- * first swing that could land was already past the window. Attack ×2 could not
- * be completed — not by a test, and not by a player either. Measured in game
- * with `graves:open_attack_scatter`.
- *
- * 30 ticks is 1.5 s, which is also a kinder window for a human than 0.5 s.
- */
-export const SHAKE_WINDOW_TICKS = 30;
-
-/**
- * §3b-i layer 4 — vanilla blocks a grave must never occupy or replace.
- * Layers 1–3 (block tag, config list, RPC) extend this at runtime.
- */
-export const VANILLA_IMPENETRABLE: ReadonlySet<string> = new Set([
-  'minecraft:bedrock',
-  'minecraft:barrier',
-  'minecraft:command_block',
-  'minecraft:chain_command_block',
-  'minecraft:repeating_command_block',
-  'minecraft:structure_block',
-  'minecraft:structure_void',
-  'minecraft:jigsaw',
-  'minecraft:light_block',
-  'minecraft:end_portal',
-  'minecraft:end_portal_frame',
-  'minecraft:end_gateway',
-  'minecraft:allow',
-  'minecraft:deny',
-  'minecraft:border_block',
-]);
-
-/** Block tag other addons can put on their blocks to keep graves out (§3b-i layer 1). */
-export const IMPENETRABLE_TAG = 'bt:gc_graves.impenetrable';
-
-/** Entities a grave placement cell must not share (§3b rows 13–14). */
-export const REPELLING_ENTITIES: ReadonlySet<string> = new Set([
-  GRAVE_ENTITY,
-  'minecraft:ender_crystal',
-  'minecraft:shulker',
-  'minecraft:armor_stand',
-]);

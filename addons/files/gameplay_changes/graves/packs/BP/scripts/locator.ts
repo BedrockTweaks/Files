@@ -15,8 +15,8 @@
 import type { LocatorBar, Player } from '@minecraft/server';
 import { LocationWaypoint, system, WaypointTexture, world } from '@minecraft/server';
 import { WAYPOINT_COLOR, WAYPOINT_TEXTURE } from './constants';
-import { visibleRecordsOf } from './index/store';
-import { config, core } from './registration';
+import { config } from './registration';
+import { graveDirectory as graves } from './storage/documents';
 import type { GraveRecord } from './types';
 import { dimensionOf } from './util';
 
@@ -108,22 +108,21 @@ const wanted = (player: Player): GraveRecord[] => {
     return [];
   }
 
-  // visibleRecordsOf is keyed by owner: a player is only ever handed their own
-  // graves, so no waypoint can point at someone else's death pile — not with
-  // robbing on, not from the admin panel, not at all.
+  // A player is only ever handed their own graves, so no waypoint can point at
+  // someone else's death pile — not with robbing on, not from the admin panel.
   // Newest first, so the cap below keeps the graves a player is most likely
   // to still want rather than an arbitrary slice.
-  return [...visibleRecordsOf(player.id)]
-    .filter(record => !record.noWaypoint)
+  return Object.values(graves.get()?.records ?? {})
+    .filter(record => record.owner === player.id && !record.purge && !record.noWaypoint)
     .sort((a, b) => b.diedAt - a.diedAt);
 };
 
 /**
  * Reconcile one player's bar with the index.
  *
- * Cheap enough to run on every index write: it reads one dynamic property and
- * walks a handful of records, and it only touches the bar where the two sides
- * actually disagree.
+ * Cheap enough to run on every index write: it reads Core's cached collection
+ * document, walks a handful of records, and only touches the bar where the two
+ * sides actually disagree.
  */
 export const sync = (player: Player): void => {
   let mine = tracked.get(player.id);
@@ -227,17 +226,31 @@ export function initLocator(): void {
   // grave. Bookkeeping is dropped first — a rejoining player gets a fresh bar
   // from the engine, so last session's handles are stale by definition.
   world.afterEvents.playerSpawn.subscribe(({ player, initialSpawn }) => {
+    const playerId = player.id;
+
     if (initialSpawn) {
-      forget(player.id);
+      forget(playerId);
 
-      const unsubscribe = config.player.for(player).showOnLocatorBar.subscribe(() => {
-        sync(player);
-      });
+      try {
+        const unsubscribe = config.player.for(player).showOnLocatorBar.subscribe(() => {
+          if (player.isValid) {
+            sync(player);
+          } else {
+            forget(playerId);
+          }
+        });
 
-      unsubscribes.set(player.id, unsubscribe);
+        unsubscribes.set(playerId, unsubscribe);
+      } catch {
+        // The handle can already be stale when a simulated player is removed
+        // in the same tick as its delayed initial-spawn event.
+        forget(playerId);
+      }
     }
 
-    sync(player);
+    if (player.isValid) {
+      sync(player);
+    }
   });
 
   world.afterEvents.playerLeave.subscribe(({ playerId }) => {
@@ -254,15 +267,10 @@ export function initLocator(): void {
     forget(removedEntityId);
   });
 
-  // Every index write already republishes the grave summary to `core.state`
-  // (see store.ts), and a set() always emits — even when the summary value is
-  // unchanged, as a position-only update leaves it. So this one subscription
-  // covers a grave created, looted, purged, despawned or moved, with no
-  // second notification channel to keep in step with the first.
-  //
-  // Index writes happen inside read-only-ish handlers (entityDie, entityLoad);
-  // the bar is a privileged API, so touch it next tick.
-  core.state.subscribe(() => {
+  // Collection writes cover graves created, looted, purged, despawned or moved.
+  // They can happen inside read-only-ish handlers (entityDie, entityLoad); the
+  // bar is a privileged API, so touch it next tick.
+  graves.subscribe(() => {
     system.run(syncAll);
   });
 

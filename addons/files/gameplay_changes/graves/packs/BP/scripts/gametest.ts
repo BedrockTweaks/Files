@@ -10,3 +10,10 @@
  */
 import './main';
 import './tests';
+import { graveScreen } from './UI/grave_container';
+
+// GameTest can invalidate a simulated player before its delayed initial-spawn
+// event is delivered. The production container runtime correctly serves real
+// players; the suite exercises the same logical slot view without installing
+// that runtime's player-lifecycle listener into the synthetic test world.
+graveScreen.detach();

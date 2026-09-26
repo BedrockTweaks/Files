@@ -1,42 +1,18 @@
+import { isGraveShaking, SHAKE_WINDOW_TICKS } from '../open/attack';
 /**
- * §3a — the three ways into a grave, and the three gates in front of them.
- *
- * Paths: right-click (native container screen + the watch poll), sneak +
- * interact (restore straight to the inventory), attack twice (scatter).
- * Gates: owner, `allowRobbing`, grave key.
- *
- * Two things cannot be driven from a test, and pretending otherwise would make
- * this file a set of tests that pass without proving anything:
- *
- *  - The native container SCREEN. No script API opens or closes an engine
- *    container for a simulated player. `watchGrave`, the half that is ours, is
- *    started directly instead.
- *  - A simulated interaction, as a way to reach the restore path. Sneaking
- *    itself DOES stick (`open_sneak_gate` asserts it), but driving the gate is
- *    a chain of engine behaviour — reach, aim, the before-event, a deferred
- *    `system.run` — and a failure anywhere in it reads only as "nothing
- *    happened". So the RESTORE tests call `restoreToPlayer` directly and
- *    `open_sneak_gate` is the single end-to-end check of the wiring.
- *
- * Authorisation is tested against `authorize`/`consumeKey` rather than through
- * an interaction, for the same reason: they are pure, and a failure names the
- * rule that broke instead of "nothing happened".
- *
- * Everything that reads server config takes the config lock, because a runset
- * runs tests in parallel and the config is world-global — a neighbouring test
- * setting `xpPercent: 50` silently halved this one's expected XP before that
- * was true of every config-sensitive test here.
+ * Restore, scatter, authorization and container lifecycle tests. Container
+ * callbacks run directly because simulated players cannot open native screens.
+ * Tests that change shared config hold the harness lock.
  */
 import { EquipmentSlot, GameMode } from '@minecraft/server';
 import type { Entity } from '@minecraft/server';
 import { MinecraftItemTypes } from '@minecraft/vanilla-data';
 import type { SimulatedPlayer, Test } from '@minecraft/server-gametest';
-import { GRAVE_ENTITY, GRAVE_KEY_ITEM, PLAYER_CONTAINER_SLOTS, PROP_SHAKE_UNTIL, SHAKE_WINDOW_TICKS } from '../constants';
-import { graveContainer } from '../lifecycle';
+import { GRAVE_ENTITY, GRAVE_KEY_ITEM, PLAYER_CONTAINER_SLOTS, graveSlotForPlayerSlot } from '../constants';
+import { graveContainer } from '../inventory';
 import { authorize, consumeKey } from '../open/auth';
-import { watchGrave } from '../open/container';
+import { updateGraveContainer } from '../open/container';
 import { restoreToPlayer } from '../open/restore';
-import { visibleRecordsOf } from '../index/store';
 import type { GraveRecord } from '../types';
 import {
   LOCKED_TICKS,
@@ -53,6 +29,7 @@ import {
   must,
   revive,
   todo,
+  visibleRecordsOf,
   withServerConfig,
 } from './harness';
 
@@ -228,7 +205,7 @@ graveTestAsync('open_attack_scatter', async (test) => {
 
     // Split out so a swing the engine swallowed reads differently from a second
     // swing that arrived too late.
-    test.assert(typeof grave.getDynamicProperty(PROP_SHAKE_UNTIL) === 'number', 'the first hit should arm the shake window — the attack never reached the grave');
+    test.assert(isGraveShaking(grave.id), 'the first hit should arm the shake window — the attack never reached the grave');
 
     // An entity that has just been hit is invulnerable for about ten ticks, and
     // a swing inside that window produces no damage event at all — the gate
@@ -257,7 +234,7 @@ graveTestAsync('open_attack_window_expires', async (test) => {
     await faceUp(test, player, grave);
     player.attackEntity(grave);
     await test.idle(2);
-    test.assert(typeof grave.getDynamicProperty(PROP_SHAKE_UNTIL) === 'number', 'the first hit should arm the shake window');
+    test.assert(isGraveShaking(grave.id), 'the first hit should arm the shake window');
 
     // Past the window, so the next hit is a FIRST hit again, not a second one.
     await test.idle(SHAKE_WINDOW_TICKS + 10);
@@ -268,7 +245,7 @@ graveTestAsync('open_attack_window_expires', async (test) => {
 
     const container = must(graveContainer(grave), 'the grave lost its container');
 
-    test.assert(container.getItem(0)?.typeId === MinecraftItemTypes.DiamondSword, 'and must not empty it either');
+    test.assert(container.getItem(graveSlotForPlayerSlot(0))?.typeId === MinecraftItemTypes.DiamondSword, 'and must not empty it either');
     test.assert(visibleRecordsOf(record.owner).some(r => r.id === record.id), 'the index record should survive too');
   });
 
@@ -329,7 +306,7 @@ graveTestAsync('open_auth_refused', async (test) => {
 
     const container = must(graveContainer(grave), 'the grave lost its container');
 
-    test.assert(container.getItem(0)?.typeId === MinecraftItemTypes.DiamondSword, 'and must keep every item');
+    test.assert(container.getItem(graveSlotForPlayerSlot(0))?.typeId === MinecraftItemTypes.DiamondSword, 'and must keep every item');
     test.assert(inventoryOf(thief).getItem(0) === undefined, 'and the thief must come away with nothing');
   });
 
@@ -403,25 +380,21 @@ graveTestAsync('open_key_survives_creative', async (test) => {
   test.succeed();
 }, options);
 
-// ─── The container watch (§3a action 1) ────────────────────────────────────────
+// ─── Container callbacks (§3a action 1) ────────────────────────────────────────
 
-graveTestAsync('open_watch_removes_empty', async (test) => {
+graveTestAsync('open_container_removes_empty', async (test) => {
   await withServerConfig(test, DEFAULTS, async () => {
     const { player, record, grave } = await bury(test, 'open_watch', [[0, MinecraftItemTypes.DiamondSword]] as const, 15);
 
-    // The native screen cannot be opened from a script, so the poll it would
-    // have started is started here instead — emptying is what it watches for.
-    watchGrave(grave, player);
-    await test.idle(2);
-
+    // Drive the same callback used by JSX slot and close events.
     const container = must(graveContainer(grave), 'the grave lost its container');
 
     for (let slot = 0; slot < container.size; slot++) {
       container.setItem(slot, undefined);
     }
 
-    // The poll runs every WATCH_INTERVAL_TICKS (10); give it two turns.
-    await test.idle(25);
+    updateGraveContainer({ host: grave, player, container });
+    await test.idle(2);
 
     test.assert(player.getTotalXp() === record.xp, `the opener should get the grave's xp, found ${String(player.getTotalXp())}`);
     graveIsGone(test, record, 'an emptied grave');

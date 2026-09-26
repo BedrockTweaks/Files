@@ -1,25 +1,21 @@
 /**
  * Spawn the grave entity at a solved placement, fill its engine-persisted
- * container (slots 0–35 mirror the player container, 36–40 the equipment),
- * stamp its dynamic properties and index it. The entity is frozen by its own
+ * container (rows 1–3 hold player slots 9–35, row 4 holds hotbar slots 0–8,
+ * and slots 36–40 hold equipment),
+ * write its documents. The entity is frozen by its own
  * components — position is set exactly once, here.
  */
 import { world } from '@minecraft/server';
 import type { Dimension, Entity, ItemStack, Player } from '@minecraft/server';
 import { config } from '../registration';
+import { graveDocuments, graveDirectory as graves } from '../storage/documents';
 import {
   GRAVE_ENTITY,
   GRAVE_INVENTORY_SIZE,
   PLAYER_CONTAINER_SLOTS,
-  PROP_CAUSE,
-  PROP_DIED_AT,
-  PROP_KILLER,
-  PROP_OWNER,
-  PROP_OWNER_NAME,
-  PROP_XP,
+  playerSlotForGraveSlot,
 } from '../constants';
-import { graveContainer } from '../lifecycle';
-import { addRecord } from '../index/store';
+import { graveContainer } from '../inventory';
 import { i18n } from '../UI/i18n';
 import { dateStamp } from '../util';
 import type { GraveRecord, Placement } from '../types';
@@ -73,11 +69,11 @@ export function spawnGrave(dim: Dimension, placement: Placement, owner: Player, 
     return undefined;
   }
 
-  for (let slot = 0; slot < PLAYER_CONTAINER_SLOTS; slot++) {
-    const item = snapshot.items[slot];
+  for (let graveSlot = 0; graveSlot < PLAYER_CONTAINER_SLOTS; graveSlot++) {
+    const item = snapshot.items[playerSlotForGraveSlot(graveSlot)];
 
     if (item) {
-      container.setItem(slot, item);
+      container.setItem(graveSlot, item);
     }
   }
 
@@ -87,19 +83,6 @@ export function spawnGrave(dim: Dimension, placement: Placement, owner: Player, 
     if (item) {
       container.setItem(PLAYER_CONTAINER_SLOTS + i, item);
     }
-  }
-
-  grave.setDynamicProperty(PROP_OWNER, owner.id);
-  grave.setDynamicProperty(PROP_OWNER_NAME, owner.name);
-  grave.setDynamicProperty(PROP_XP, snapshot.xp);
-  grave.setDynamicProperty(PROP_DIED_AT, diedAt);
-
-  if (snapshot.cause) {
-    grave.setDynamicProperty(PROP_CAUSE, snapshot.cause);
-  }
-
-  if (snapshot.killer) {
-    grave.setDynamicProperty(PROP_KILLER, snapshot.killer);
   }
 
   grave.nameTag = nameFor(owner, diedAt);
@@ -120,7 +103,8 @@ export function spawnGrave(dim: Dimension, placement: Placement, owner: Player, 
     ...placement.floating ? { floating: true as const } : {},
   };
 
-  addRecord(record);
+  graveDocuments.for(grave).set(record);
+  graves.patch({ records: { [record.id]: record } });
 
   return record;
 }

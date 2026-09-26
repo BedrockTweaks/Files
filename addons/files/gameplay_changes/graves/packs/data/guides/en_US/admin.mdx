@@ -41,5 +41,6 @@ To hand the gamerule back:
 ## For addon developers
 
 Blocks tagged `bt:gc_graves.impenetrable` are never occupied or replaced by a grave.
-Over RPC (`bt_gc_graves`): `getGraves`, `countGraves` and
-`registerImpenetrable` — see the repository for the typed interface.
+Entities tagged `bt:gc_graves.repelling` keep graves out of their block cell.
+Over RPC (`bt_gc_graves`), `registerImpenetrable` and `registerRepelling` accept
+`{ ids: string[] }` — see `GravesRPC` for the typed interface.

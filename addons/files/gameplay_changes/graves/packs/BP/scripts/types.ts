@@ -1,7 +1,7 @@
 /**
- * The grave index record (§6). The index — world dynamic properties, one per
- * owner — is authoritative; the grave entity is the payload. A grave in an
- * unloaded chunk exists only here.
+ * One entry in the authoritative Bedrock Core grave collection. Grave entities
+ * carry the inventory payload; this record keeps the grave discoverable while
+ * its chunk is unloaded.
  */
 export interface GraveRecord {
   /** entity.id — the handle for world.getEntity() once its chunk is loaded. */
@@ -16,7 +16,7 @@ export interface GraveRecord {
   z: number;
   /** Epoch ms at death — survives restarts, unlike tick counters. */
   diedAt: number;
-  /** Occupied slot count, for list summaries. */
+  /** Total stored item count, for list summaries. */
   items: number;
   xp: number;
   /** damageSource.cause at death. */
@@ -31,25 +31,18 @@ export interface GraveRecord {
   purge?: true;
 }
 
-/**
- * The summary the index republishes to `core.state` on every write (§6/§7), so
- * other addons can read grave counts synchronously instead of over RPC.
- */
-export interface GraveSummary {
-  total: number;
-  /** player.id → how many graves they currently have. Owners at zero are absent. */
-  owners: Record<string, number>;
+/** The world-scoped document stored by the Bedrock Core `graves` collection. */
+export interface GraveCollectionDocument {
+  /** Entity id -> grave metadata. A map keeps lookup and replacement atomic. */
+  records: Record<string, GraveRecord>;
 }
-
-/** The `core.state` key that summary is published under. */
-export const GRAVES_STATE_KEY = 'graves';
 
 /** Cross-addon RPC surface (§7), served in rpc.ts via `core.rpc.serve<GravesRPC>`. */
 export interface GravesRPC {
-  getGraves(params: { playerId: string }): GraveRecord[];
-  countGraves(params: { playerId: string }): number;
   /** §3b-i layer 3 — register block ids graves must never occupy or replace. */
   registerImpenetrable(params: { ids: string[] }): number;
+  /** Register entity types that graves must not share a cell with. */
+  registerRepelling(params: { ids: string[] }): number;
 }
 
 export interface Placement {

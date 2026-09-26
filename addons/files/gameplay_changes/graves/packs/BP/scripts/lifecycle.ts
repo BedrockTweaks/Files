@@ -3,19 +3,10 @@
  * call in the codebase is `entity.remove()` — never `kill` (the damage sensor
  * makes graves unkillable by design, §3a).
  */
-import { EntityComponentTypes, EquipmentSlot, world } from '@minecraft/server';
-import type { Container, Entity, ItemStack, Player, Vector3 } from '@minecraft/server';
-import { GRAVE_ENTITY, PROP_XP } from './constants';
-import { removeRecord } from './index/store';
-
-/** Grave container slots 36–40, in order (§6 slot mapping). */
-export const EQUIP_SLOTS: readonly EquipmentSlot[] = [
-  EquipmentSlot.Head,
-  EquipmentSlot.Chest,
-  EquipmentSlot.Legs,
-  EquipmentSlot.Feet,
-  EquipmentSlot.Offhand,
-];
+import { world } from '@minecraft/server';
+import type { Entity, ItemStack, Player, Vector3 } from '@minecraft/server';
+import { GRAVE_ENTITY } from './constants';
+import { graveDocuments, graveDirectory as graves } from './storage/documents';
 
 export const isGrave = (entity: Entity): boolean => entity.typeId === GRAVE_ENTITY;
 
@@ -26,17 +17,12 @@ export const graveEntity = (graveId: string): Entity | undefined => {
   return entity && isGrave(entity) ? entity : undefined;
 };
 
-export const graveContainer = (grave: Entity): Container | undefined => grave.getComponent<EntityComponentTypes.Inventory>(EntityComponentTypes.Inventory)?.container;
-
-export const graveXp = (grave: Entity): number => {
-  const xp = grave.getDynamicProperty(PROP_XP);
-
-  return typeof xp === 'number' ? xp : 0;
-};
+export const graveXp = (grave: Entity): number => graveDocuments.for(grave).get()?.xp ?? 0;
 
 /** Delete the index record, then the entity — always in that order (§6). */
 export const removeGrave = (grave: Entity): void => {
-  removeRecord(grave.id);
+  graves.patch({ records: { [grave.id]: undefined } });
+  graveDocuments.for(grave).delete();
   grave.remove();
 };
 

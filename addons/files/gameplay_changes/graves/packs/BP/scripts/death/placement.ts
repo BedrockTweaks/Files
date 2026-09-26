@@ -11,7 +11,7 @@
 import type { Block, Dimension, Player, Vector3 } from '@minecraft/server';
 import { world } from '@minecraft/server';
 import { config } from '../registration';
-import { REPELLING_ENTITIES } from '../constants';
+import { isRepelling } from './repelling';
 import { isImpenetrable } from './impenetrable';
 import type { Placement } from '../types';
 
@@ -39,7 +39,7 @@ const safeBlock = (dim: Dimension, pos: Vector3): Block | undefined => {
 
 const hasRepeller = (dim: Dimension, pos: Vector3): boolean => {
   try {
-    return dim.getEntitiesAtBlockLocation(pos).some(e => REPELLING_ENTITIES.has(e.typeId));
+    return dim.getEntitiesAtBlockLocation(pos).some(isRepelling);
   } catch {
     return false;
   }

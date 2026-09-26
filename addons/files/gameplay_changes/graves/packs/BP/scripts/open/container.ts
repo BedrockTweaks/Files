@@ -1,54 +1,44 @@
-/**
- * §3a action 1 — right-click opens the grave's native container screen (the
- * engine does that for free). There is no close event for entity containers,
- * so an opened grave is watched with a short poll: fully emptied → XP goes to
- * the opener and the grave removes itself; anything left → it survives.
- */
 import { system } from '@minecraft/server';
-import type { Entity, Player } from '@minecraft/server';
-import { grantXp, graveContainer, graveXp, removeGrave } from '../lifecycle';
+import type { ContainerEvent } from '@bedrock-core/ui';
+import { grantXp, removeGrave } from '../lifecycle';
 
-const WATCH_INTERVAL_TICKS = 10;
-const WATCH_TIMEOUT_TICKS = 6000; // 5 minutes — a screen never stays open that long
+import { graveDocuments, graveDirectory } from '../storage/documents';
 
-const watched = new Set<string>();
-
-export function watchGrave(grave: Entity, opener: Player): void {
-  if (watched.has(grave.id)) {
+/** Reconcile the author's slots after the container runtime finishes a move. */
+export const updateGraveContainer = ({ host, container, player }: ContainerEvent): void => {
+  if ('permutation' in host) {
     return;
   }
 
-  watched.add(grave.id);
-  const startedAt = system.currentTick;
-
-  const interval = system.runInterval(() => {
-    const stop = (): void => {
-      watched.delete(grave.id);
-      system.clearRun(interval);
-    };
-
-    if (!grave.isValid || system.currentTick - startedAt > WATCH_TIMEOUT_TICKS) {
-      stop();
-
+  system.run(() => {
+    if (!host.isValid || !container.isValid) {
       return;
     }
 
-    const container = graveContainer(grave);
+    const document = graveDocuments.for(host);
+    const stored = document.get();
 
-    if (!container) {
-      stop();
-
+    if (!stored) {
       return;
     }
 
-    if (container.emptySlotsCount === container.size) {
-      if (opener.isValid) {
-        grantXp(opener, graveXp(grave));
+    let items = 0;
+
+    for (let slot = 0; slot < container.size; slot++) {
+      items += container.getItem(slot)?.amount ?? 0;
+    }
+
+    if (items > 0 || !player.isValid) {
+      if (stored.items !== items) {
+        document.patch({ items });
+        graveDirectory.patch({ records: { [host.id]: { items } } });
       }
 
-      grave.dimension.playSound('armor.equip_generic', grave.location);
-      removeGrave(grave);
-      stop();
+      return;
     }
-  }, WATCH_INTERVAL_TICKS);
-}
+
+    grantXp(player, stored.xp);
+    host.dimension.playSound('armor.equip_generic', host.location);
+    removeGrave(host);
+  });
+};

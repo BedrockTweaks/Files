@@ -1,7 +1,7 @@
 /**
- * Custom commands. `ui(core)` already provides `<ns>:config`, `<ns>:configat`,
- * `<ns>:guide` and `<ns>:list`; these are the addon's own, and the namespace
- * is taken from `core.id` — never spelled by hand.
+ * Custom commands. The registered Bedrock Core apps provide their shared
+ * config, guide and catalog surfaces; these commands are the addon's own, and
+ * the namespace is taken from `core.id` — never spelled by hand.
  *
  * Command callbacks may not touch the world, so every action defers into
  * `system.run()` and reports through chat rather than the command result.
@@ -16,11 +16,11 @@ import {
 } from '@minecraft/server';
 import type { CustomCommandOrigin, CustomCommandResult, Player } from '@minecraft/server';
 import { config, core } from './registration';
+import { graveDirectory as graves } from './storage/documents';
 import { GRAVE_KEY_ITEM } from './constants';
-import { allRecords } from './index/store';
-import { forcePurge, isForcePurgeRunning, pendingTombstones, purgeGraves } from './index/purge';
+import { forcePurge, isForcePurgeRunning, pendingTombstones, purgeGraves } from './storage/purge';
 import { disableAddon, enableAddon, isAddonDisabled } from './death/keepInventory';
-import { openAdminPanel, openGraveList } from './UI/GravesApp';
+import { openAdminPanel, openGraveList } from './UI/navigation';
 import { i18n } from './UI/i18n';
 import { isPlayer } from './util';
 
@@ -96,7 +96,7 @@ const runAdminAction = (player: Player, action: AdminAction, target?: Player): v
         break;
       }
 
-      const count = allRecords().length;
+      const count = Object.values(graves.get()?.records ?? {}).filter(record => !record.purge).length;
 
       if (count > 0) {
         player.sendMessage(t($ => $.admin.refuseDisable, { count }));

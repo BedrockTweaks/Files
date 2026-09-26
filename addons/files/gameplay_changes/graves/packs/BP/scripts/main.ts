@@ -1,28 +1,31 @@
 /**
- * Entry point. `core.register()` happens in ./registration (imported first so
- * every module sees the typed config); `ui(core)` mounts the shared config /
- * guide / addon-list UI and this addon's `<ns>:config|configat|guide|list`
- * commands. Everything else is explicit wiring, in dependency order.
+ * Entry point. Initializes registration, documents and gameplay listeners. The
+ * generated UI import installs the compiled action/container screen metadata
+ * before any player can open one.
  */
-import { ui } from '@bedrock-core/ui/config';
-import { core } from './registration';
+import '@bedrock-core/generated/ui';
+import { initCommands } from './commands';
+import { initCapture } from './death/capture';
 import { initImpenetrable } from './death/impenetrable';
 import { initKeepInventory } from './death/keepInventory';
-import { initCapture } from './death/capture';
-import { initGate } from './open/gate';
-import { initAttack } from './open/attack';
-import { initReconcile } from './index/reconcile';
 import { initDespawn } from './despawn';
+import { initReconcile } from './storage/reconcile';
 import { initLocator } from './locator';
-import { initCommands } from './commands';
+import { initAttack } from './open/attack';
+import { initGate } from './open/gate';
 import { initRpc } from './rpc';
+import { initRegistration } from './registration';
+import { initDocuments } from './storage/documents';
+import { initRepelling } from './death/repelling';
 
-ui(core);
+initRegistration();
+initDocuments();
 
 // initCommands must subscribe to system.beforeEvents.startup in early execution.
 initCommands();
 initKeepInventory();
 initImpenetrable();
+initRepelling();
 initCapture();
 initGate();
 initAttack();

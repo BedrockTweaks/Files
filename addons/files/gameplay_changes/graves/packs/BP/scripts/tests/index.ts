@@ -37,6 +37,7 @@ import './placement';
 import './capture';
 import './open';
 import './state';
+import './documents';
 
 // Reads world state, so it may not run at module load (early execution).
 system.run(snapshotWorld);

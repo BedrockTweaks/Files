@@ -6,9 +6,10 @@
  */
 import { EntityComponentTypes, GameMode, world } from '@minecraft/server';
 import { config } from '../registration';
+import { graveDirectory as graves } from '../storage/documents';
 import { PLAYER_CONTAINER_SLOTS } from '../constants';
-import { EQUIP_SLOTS, graveEntity, removeGrave } from '../lifecycle';
-import { markPurge, visibleRecordsOf } from '../index/store';
+import { graveEntity, removeGrave } from '../lifecycle';
+import { EQUIP_SLOTS } from '../inventory';
 import { solvePlacement } from './placement';
 import { spawnGrave, dimensionFor, type DeathSnapshot } from './spawn';
 import { isAddonDisabled } from './keepInventory';
@@ -17,7 +18,9 @@ import { dimName, isPlayer } from '../util';
 
 /** drop_oldest: tombstone (or remove, if loaded) the owner's oldest grave. */
 const dropOldest = (ownerId: string): void => {
-  const oldest = [...visibleRecordsOf(ownerId)].sort((a, b) => a.diedAt - b.diedAt)[0];
+  const oldest = Object.values(graves.get()?.records ?? {})
+    .filter(record => record.owner === ownerId && !record.purge)
+    .sort((a, b) => a.diedAt - b.diedAt)[0];
 
   if (!oldest) {
     return;
@@ -28,7 +31,7 @@ const dropOldest = (ownerId: string): void => {
   if (entity) {
     removeGrave(entity);
   } else {
-    markPurge(oldest.id);
+    graves.patch({ records: { [oldest.id]: { ...oldest, purge: true } } });
   }
 };
 
@@ -94,7 +97,7 @@ export function initCapture(): void {
 
     const { t } = i18n.forPlayer(player);
     const lifetime = config.server.lifetime.get();
-    const graveCount = visibleRecordsOf(player.id).length;
+    const graveCount = Object.values(graves.get()?.records ?? {}).filter(record => record.owner === player.id && !record.purge).length;
 
     if (lifetime.maxGravesPerPlayer > 0 && graveCount >= lifetime.maxGravesPerPlayer) {
       if (lifetime.onLimitReached === 'block_new') {

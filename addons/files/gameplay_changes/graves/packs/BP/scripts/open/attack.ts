@@ -6,11 +6,18 @@
  */
 import { system, world } from '@minecraft/server';
 import type { Entity, Player } from '@minecraft/server';
-import { PROP_SHAKE_UNTIL, SHAKE_WINDOW_TICKS, SHAKING_PROPERTY } from '../constants';
-import { dropAt, grantXp, graveContainer, graveXp, isGrave, removeGrave } from '../lifecycle';
+import { SHAKING_PROPERTY } from '../constants';
+import { dropAt, grantXp, graveXp, isGrave, removeGrave } from '../lifecycle';
+import { graveContainer } from '../inventory';
 import { authorize, consumeKey, refuse } from './auth';
 import { i18n } from '../UI/i18n';
 import { isPlayer } from '../util';
+
+/** Longer than the engine's damage invulnerability window. */
+export const SHAKE_WINDOW_TICKS = 30;
+const shakeWindows = new Map<string, number>();
+
+export const isGraveShaking = (graveId: string): boolean => (shakeWindows.get(graveId) ?? -1) >= system.currentTick;
 
 const scatter = (grave: Entity, player: Player): void => {
   const container = graveContainer(grave);
@@ -46,23 +53,28 @@ export function initAttack(): void {
       return;
     }
 
-    const shakeUntil = hitEntity.getDynamicProperty(PROP_SHAKE_UNTIL);
+    const shakeUntil = shakeWindows.get(hitEntity.id);
 
     if (typeof shakeUntil === 'number' && system.currentTick <= shakeUntil) {
       if (auth.needsKey) {
         consumeKey(player);
       }
 
+      shakeWindows.delete(hitEntity.id);
       scatter(hitEntity, player);
 
       return;
     }
 
     // First hit: shake, and nudge the player toward the tidy path.
-    hitEntity.setDynamicProperty(PROP_SHAKE_UNTIL, system.currentTick + SHAKE_WINDOW_TICKS);
+    shakeWindows.set(hitEntity.id, system.currentTick + SHAKE_WINDOW_TICKS);
     hitEntity.setProperty(SHAKING_PROPERTY, true);
     hitEntity.dimension.playSound('hit.stone', hitEntity.location);
+    const graveId = hitEntity.id;
+
     system.runTimeout(() => {
+      shakeWindows.delete(graveId);
+
       if (hitEntity.isValid) {
         hitEntity.setProperty(SHAKING_PROPERTY, false);
       }

@@ -92,7 +92,7 @@ export const configDef = {
         description: i18n.key($ => $.config.maxGravesPerPlayer.desc),
       },
       onLimitReached: {
-        type: 'enum',
+        type: 'select',
         default: 'drop_oldest',
         options: ['drop_oldest', 'block_new'],
         label: i18n.key($ => $.config.onLimitReached.label),
@@ -117,7 +117,7 @@ export const configDef = {
         description: i18n.key($ => $.config.voidRescueY.desc),
       },
       voidPlatformBlock: {
-        type: 'enum',
+        type: 'select',
         default: 'cobblestone_slab',
         options: ['cobblestone_slab', 'stone', 'obsidian'],
         label: i18n.key($ => $.config.voidPlatformBlock.label),
@@ -132,9 +132,15 @@ export const configDef = {
     },
     // At the scope root, beside only sections, so the config UI gives it a
     // real list editor instead of the stranded-in-a-form chat fallback.
+    extraRepellingEntities: {
+      type: 'list',
+      maxItems: 64,
+      default: [],
+      label: i18n.key($ => $.config.extraRepellingEntities.label),
+      description: i18n.key($ => $.config.extraRepellingEntities.desc),
+    },
     extraImpenetrableBlocks: {
       type: 'list',
-      itemType: 'string',
       maxItems: 64,
       default: [],
       label: i18n.key($ => $.config.extraImpenetrableBlocks.label),
@@ -155,7 +161,7 @@ export const configDef = {
       description: i18n.key($ => $.config.showOnLocatorBar.desc),
     },
     graveNameStyle: {
-      type: 'enum',
+      type: 'select',
       default: 'name',
       options: ['name', 'name_and_time', 'hidden'],
       label: i18n.key($ => $.config.graveNameStyle.label),

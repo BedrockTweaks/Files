@@ -91,6 +91,10 @@ export default {
       label: 'Flotar En Lava',
       desc: 'Las tumbas flotan sobre bloques de lava en vez de hundirse hasta el fondo.',
     },
+    extraRepellingEntities: {
+      label: 'Entidades Repelentes Extra',
+      desc: 'Ids de entidades con las que una tumba no debe compartir una celda, además de la lista integrada.',
+    },
     extraImpenetrableBlocks: {
       label: 'Bloques Impenetrables Extra',
       desc: 'Ids de bloques que una tumba nunca debe ocupar ni reemplazar, además de la lista integrada.',

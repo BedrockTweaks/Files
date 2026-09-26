@@ -4,11 +4,11 @@
  * Graves is harder to test than a mob-behaviour pack for three reasons, and
  * this module is where each one is answered once:
  *
- *  1. **The index is world state.** Records live in world dynamic properties
- *     (`bt_gc_graves:idx:<owner>`, `:owners`), so a test that dies halfway
- *     leaves debris behind for the next one — and for the dev world the suite
- *     is running in. Everything the harness creates is tracked and undone in
- *     `test.runOnFinish`, and nothing outside that set is ever touched.
+ *  1. **The index is world state.** Records live in a world-scoped Bedrock Core
+ *     collection, so a test that dies halfway leaves debris behind for the next
+ *     one — and for the dev world the suite is running in. Everything the
+ *     harness creates is tracked and undone in `test.runOnFinish`, and nothing
+ *     outside that set is ever touched.
  *  2. **Config is world-global, tests are not.** A runset places its tests
  *     side by side and runs them at the same time, so two tests flipping
  *     `allowRobbing` would read each other's value. `withServerConfig` funnels
@@ -23,16 +23,38 @@
  *
  * @see index.ts for how to run the suite.
  */
-import { BlockPermutation, EntityComponentTypes, GameMode, ItemStack, world } from '@minecraft/server';
+import { BlockPermutation, EntityComponentTypes, GameMode, ItemStack, system, world } from '@minecraft/server';
 // `Block` must be imported explicitly: the generator filter puts a global
 // `Block` (the block BEHAVIOUR document) in scope, and it wins otherwise.
 import type { Block, Container, Difficulty, Entity, EntityEquippableComponent, Player, Vector3 } from '@minecraft/server';
 import { register, registerAsync } from '@minecraft/server-gametest';
 import type { RegistrationBuilder, SimulatedPlayer, Test } from '@minecraft/server-gametest';
 import { config } from '../registration';
-import { GRAVE_ENTITY, PROP_DISABLED, PROP_IDX_PREFIX, PROP_OWNERS, PROP_PREV_KEEP_INVENTORY } from '../constants';
-import { ownerIds, visibleRecordsOf } from '../index/store';
+import { graveDirectory as graves, worldState, type WorldState } from '../storage/documents';
+import { GRAVE_ENTITY } from '../constants';
 import type { GraveRecord, Placement } from '../types';
+
+/** Test-only collection queries keep assertions independent of application code. */
+export const recordsOf = (ownerId: string): GraveRecord[] =>
+  Object.values(graves.get()?.records ?? {}).filter(record => record.owner === ownerId);
+
+export const visibleRecordsOf = (ownerId: string): GraveRecord[] =>
+  recordsOf(ownerId).filter(record => !record.purge);
+
+export const allRecords = (includeTombstones = false): GraveRecord[] =>
+  Object.values(graves.get()?.records ?? {}).filter(record => includeTombstones || !record.purge);
+
+export const updateRecord = (record: GraveRecord): void => {
+  graves.patch({ records: { [record.id]: record } });
+};
+
+export const markPurge = (graveId: string): void => {
+  const record = graves.get()?.records[graveId];
+
+  if (record && !record.purge) {
+    graves.patch({ records: { [record.id]: { ...record, purge: true } } });
+  }
+};
 
 /** Test class name — `/gametest run graves:<name>`. */
 export const SUITE = 'graves';
@@ -254,18 +276,11 @@ const scopeOf = (test: Test): Scope => {
   return fresh;
 };
 
-/** What a dynamic property is allowed to hold — mirrors `getDynamicProperty`. */
-type PropertyValue = string | number | boolean | Vector3 | undefined;
-
-/** World properties as they were before the suite touched anything. */
-let before: { disabled: PropertyValue; prevKeepInventory: PropertyValue } | undefined;
+let before: WorldState | undefined;
 
 /** Remember the addon's pre-suite world state. Called once, from `index.ts`. */
 export function snapshotWorld(): void {
-  before = {
-    disabled: world.getDynamicProperty(PROP_DISABLED),
-    prevKeepInventory: world.getDynamicProperty(PROP_PREV_KEEP_INVENTORY),
-  };
+  before = worldState.get() ?? {};
 }
 
 /** Register an owner id as this test's, so its cleanup may drop those records. */
@@ -294,26 +309,32 @@ export function cleanup(test: Test): void {
   scopes.delete(test);
 
   for (const guest of scope.guests) {
-    try {
-      guest.disconnect();
-    } catch {
-      // Already torn down by the framework — nothing left to say goodbye to.
-    }
+    // Let initial-spawn subscribers finish before invalidating the handle.
+    system.run(() => {
+      try {
+        if (guest.isValid) {
+          guest.disconnect();
+        }
+      } catch {
+        // Already torn down by the framework — nothing left to say goodbye to.
+      }
+    });
   }
 
   for (const ownerId of scope.owners) {
-    world.setDynamicProperty(`${PROP_IDX_PREFIX}${ownerId}`, undefined);
-  }
+    const owned = recordsOf(ownerId);
 
-  world.setDynamicProperty(PROP_OWNERS, JSON.stringify(ownerIds().filter(id => !scope.owners.has(id))));
+    if (owned.length > 0) {
+      graves.patch({ records: Object.fromEntries(owned.map(record => [record.id, undefined])) });
+    }
+  }
 
   for (const grave of gravesInPad(test)) {
     grave.remove();
   }
 
   if (before) {
-    world.setDynamicProperty(PROP_DISABLED, before.disabled);
-    world.setDynamicProperty(PROP_PREV_KEEP_INVENTORY, before.prevKeepInventory);
+    worldState.set(before);
   }
 
   world.gameRules.keepInventory = true;
@@ -468,7 +489,7 @@ export function graveTest(name: string, body: (test: Test) => void, options: Tes
   }), TAG_READY, options);
 }
 
-/** An async test — anything that waits on ticks, deaths or the container watch. */
+/** An async test for tick-driven gameplay and container callbacks. */
 export function graveTestAsync(name: string, body: (test: Test) => Promise<void>, options: TestOptions = {}): RegistrationBuilder {
   return apply(registerAsync(SUITE, name, async (test) => {
     test.runOnFinish(() => {

@@ -9,7 +9,8 @@
  */
 import { system, world } from '@minecraft/server';
 import { graveEntity, removeGrave } from '../lifecycle';
-import { allRecords, markPurge, removeRecord, tombstoneCount } from './store';
+
+import { graveDirectory as graves } from './documents';
 
 export interface PurgeReport {
   total: number;
@@ -19,7 +20,7 @@ export interface PurgeReport {
 
 /** Mechanism A. `ownerId` narrows the purge to one player's graves. */
 export const purgeGraves = (ownerId?: string): PurgeReport => {
-  const targets = allRecords().filter(r => !ownerId || r.owner === ownerId);
+  const targets = Object.values(graves.get()?.records ?? {}).filter(record => !record.purge && (!ownerId || record.owner === ownerId));
   let removed = 0;
 
   for (const record of targets) {
@@ -29,14 +30,14 @@ export const purgeGraves = (ownerId?: string): PurgeReport => {
       removeGrave(entity);
       removed++;
     } else {
-      markPurge(record.id);
+      graves.patch({ records: { [record.id]: { ...record, purge: true } } });
     }
   }
 
   return { total: targets.length, removed, tombstoned: targets.length - removed };
 };
 
-export const pendingTombstones = (): number => tombstoneCount();
+export const pendingTombstones = (): number => Object.values(graves.get()?.records ?? {}).filter(record => record.purge).length;
 
 let forcePurgeRunning = false;
 
@@ -65,7 +66,7 @@ const sweepStaleAreas = (): void => {
 
 const runForcePurge = async (): Promise<number> => {
   const manager = world.tickingAreaManager;
-  const pending = allRecords(true).filter(r => r.purge);
+  const pending = Object.values(graves.get()?.records ?? {}).filter(record => record.purge);
   let count = 0;
 
   sweepStaleAreas();
@@ -101,11 +102,11 @@ const runForcePurge = async (): Promise<number> => {
       const entity = world.getEntity(record.id);
 
       if (entity) {
-        entity.remove();
+        removeGrave(entity);
         count++;
       }
 
-      removeRecord(record.id);
+      graves.patch({ records: { [record.id]: undefined } });
     } catch (error) {
       console.warn(`[graves] force purge failed for grave ${record.id}: ${String(error)}`);
     } finally {
@@ -130,7 +131,7 @@ const runForcePurge = async (): Promise<number> => {
  * how many tombstones the run set out to remove.
  */
 export function forcePurge(done: (count: number) => void): number {
-  const pending = tombstoneCount();
+  const pending = pendingTombstones();
 
   if (forcePurgeRunning || pending === 0) {
     return pending;

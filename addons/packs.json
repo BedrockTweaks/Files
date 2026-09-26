@@ -1,5 +1,6 @@
 {
 	"section": "addons",
+	"version": [1, 21, 0],
 	"categories": [
 		{
 			"id": "gameplay_changes",
@@ -8,7 +9,12 @@
 				{
 					"id": "graves",
 					"name": "Graves",
-					"description": "When you die, it places a grave to save all your drops. Open a grave to retrieve your items. Type /bt_gc_graves:config to configure."
+					"description": "When you die, it places a grave to save all your drops. Open a grave to retrieve your items. Type /bt_gc_graves:config to configure.",
+					"disabled": true,
+					"message": {
+						"text": "Work in progress. Downloads are not available yet.",
+						"severity": "warn"
+					}
 				}
 			]
 		}

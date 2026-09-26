@@ -6,9 +6,9 @@
  */
 import { system, world } from '@minecraft/server';
 import { isGrave } from '../lifecycle';
+
 import { authorize, consumeKey, refuse } from './auth';
 import { restoreToPlayer } from './restore';
-import { watchGrave } from './container';
 
 export function initGate(): void {
   world.beforeEvents.playerInteractWithEntity.subscribe((event) => {
@@ -45,17 +45,6 @@ export function initGate(): void {
       return;
     }
 
-    // Native container path: let the engine open the screen, then watch it.
-    system.run(() => {
-      if (!target.isValid || !player.isValid) {
-        return;
-      }
-
-      if (auth.needsKey) {
-        consumeKey(player);
-      }
-
-      watchGrave(target, player);
-    });
+    // The engine opens the JSX container; onOpen consumes a key on success.
   });
 }

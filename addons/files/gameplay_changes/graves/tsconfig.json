@@ -27,6 +27,9 @@
 			],
 			"@bedrock-core/generated/guides": [
 				"./packs/data/guides/guides.generated.json"
+			],
+			"@bedrock-core/generated/ui": [
+				"./packs/data/ui/ui.generated.ts"
 			]
 		}
 	},
