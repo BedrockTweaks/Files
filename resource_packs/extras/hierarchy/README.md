@@ -31,15 +31,15 @@ Because of this, files from higher hierarchy combinations take priority over low
 For example:
 
 ```txt
-golden_savanna_lush_full_grass_sides
+lush_grass_old_clearer_water
 ```
 
 is generated before:
 
 ```txt
-golden_savanna_lush_grass
-golden_savanna_full_grass_sides
-lush_full_grass_sides
+lush_grass_clearer_water
+lush_grass_old_water
+old_clearer_water
 ```
 
 ---
