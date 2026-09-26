@@ -13,7 +13,7 @@
 		"sound": "grass",
 		"textures": {
 			"down": "grass_bottom",
-			"side": "grass_side_bt",
+			"side": "grass_side",
 			"up": "grass_top"
 		}
 	}

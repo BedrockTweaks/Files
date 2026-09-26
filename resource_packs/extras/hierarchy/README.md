@@ -25,21 +25,21 @@ Each level should only add the textures or changes that are unique to that level
 
 Combinations are generated in descending hierarchy order.
 
-More specific combinations are placed before less specific combinations during pack generation.  
+More specific combinations are placed after less specific combinations during pack generation.  
 Because of this, files from higher hierarchy combinations take priority over lower hierarchy combinations.
 
 For example:
 
 ```txt
-golden_savanna_lush_full_grass_sides
+lush_grass_old_clearer_water
 ```
 
-is generated before:
+is generated after:
 
 ```txt
-golden_savanna_lush_grass
-golden_savanna_full_grass_sides
-lush_full_grass_sides
+lush_grass_clearer_water
+lush_grass_old_water
+old_clearer_water
 ```
 
 ---
