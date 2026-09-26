@@ -1,99 +1,92 @@
 name: Deploy
 
 on:
+  push:
+    branches:
+      - devel
   workflow_dispatch:
     inputs:
       branch:
         description: 'Branch to deploy'
         required: true
-        default: 'main'
-        type: string
+        type: choice
+        options:
+          - devel
+          - main
+        default: devel
+
+concurrency:
+  group: files-deploy-${{ github.event_name == 'workflow_dispatch' && inputs.branch || github.ref_name }}
+  cancel-in-progress: false
 
 jobs:
-  build-and-deploy:
+  deploy:
     runs-on: ubuntu-latest
-    # Skip if the commit message indicates it's from the contributors action
-    if: ${{ !contains(github.event.head_commit.message, 'docs(contributor)') }}
-
+    environment: ${{ inputs.branch == 'main' && 'prod' || 'dev' }}
     steps:
-      - uses: actions/checkout@v4
-        with:
-          lfs: true
-          fetch-depth: 0
-
-      - name: Git LFS Pull
-        run: git lfs pull
-
-      # Step 1: Clean and create project artifact
-      - name: Clean project
-        run: git clean -fdx
-
-      - name: Compress project
-        uses: somaz94/compress-decompress@v1
-        with:
-          command: compress
-          source: .
-          format: zip
-          destfilename: project
-          exclude: '.git .github node_modules'
-          includeRoot: 'false'
-
-      # Step 2-dev: Deploy to development server
-      - name: Deploy to dev server
-        if: github.ref_name == 'devel'
-        uses: appleboy/scp-action@v1.0.0
-        with:
-          host: ${{ secrets.SERVER_ADDRESS }}
-          username: ${{ secrets.SERVER_USER }}
-          password: ${{ secrets.SERVER_PASSWORD }}
-          port: 22
-          source: "project.zip"
-          target: "/opt/bedrock_tweaks/files_dev"
-
-      - name: Extract files on dev server
-        if: github.ref_name == 'devel'
+      - name: Sync content on server
         uses: appleboy/ssh-action@v1.2.2
+        env:
+          FILES_BRANCH: ${{ inputs.branch || github.ref_name }}
+          FILES_SOURCE_DIR: ${{ vars.FILES_SOURCE_DIR }}
+          FILES_DEPLOY_DIR: ${{ vars.FILES_DEPLOY_DIR }}
         with:
           host: ${{ secrets.SERVER_ADDRESS }}
           username: ${{ secrets.SERVER_USER }}
           password: ${{ secrets.SERVER_PASSWORD }}
           port: 22
+          command_timeout: 30m
+          envs: FILES_BRANCH,FILES_SOURCE_DIR,FILES_DEPLOY_DIR
           script: |
-            cd "/opt/bedrock_tweaks/files_dev"
-            # Remove all existing files/directories except the uploaded archive to avoid stale leftovers
-            find . -mindepth 1 -maxdepth 1 ! -name 'project.zip' -exec rm -rf {} +
-            unzip -o project.zip
-            rm project.zip
+            set -eu
 
-      # Step 2-prod: Deploy to production server
-      - name: Deploy to production server
-        if: github.ref_name == 'main'
-        uses: appleboy/scp-action@v1.0.0
-        with:
-          host: ${{ secrets.SERVER_ADDRESS }}
-          username: ${{ secrets.SERVER_USER }}
-          password: ${{ secrets.SERVER_PASSWORD }}
-          port: 22
-          source: "project.zip"
-          target: "/opt/bedrock_tweaks/files"
+            branch="$FILES_BRANCH"
+            source_dir="$FILES_SOURCE_DIR"
+            target_dir="$FILES_DEPLOY_DIR"
 
-      - name: Extract files on production server
-        if: github.ref_name == 'main'
-        uses: appleboy/ssh-action@v1.2.2
-        with:
-          host: ${{ secrets.SERVER_ADDRESS }}
-          username: ${{ secrets.SERVER_USER }}
-          password: ${{ secrets.SERVER_PASSWORD }}
-          port: 22
-          script: |
-            cd "/opt/bedrock_tweaks/files"
-            # Remove all existing files/directories except the uploaded archive to avoid stale leftovers
-            find . -mindepth 1 -maxdepth 1 ! -name 'project.zip' -exec rm -rf {} +
-            unzip -o project.zip
-            rm project.zip
+            case "$branch:$source_dir:$target_dir" in
+              devel:/opt/bedrock_tweaks/.files_source_devel:/opt/bedrock_tweaks/files_dev | \
+              main:/opt/bedrock_tweaks/.files_source_main:/opt/bedrock_tweaks/files)
+                ;;
+              *)
+                echo 'Branch and environment paths do not match.' >&2
+                exit 1
+                ;;
+            esac
 
-      - name: Output job status
-        id: job-status
-        if: ${{ always() }}
-        run: |
-          echo "status=${{ job.status }}" >> $GITHUB_OUTPUT
+            command -v git >/dev/null
+            command -v git-lfs >/dev/null
+            command -v rsync >/dev/null
+
+            repo_url=https://github.com/BedrockTweaks/Files.git
+            export GIT_LFS_SKIP_SMUDGE=1
+
+            if [ ! -d "$source_dir/.git" ]; then
+              git clone --depth=1 --filter=blob:none --sparse --branch "$branch" "$repo_url" "$source_dir"
+            fi
+
+            if [ "$(git -C "$source_dir" remote get-url origin)" != "$repo_url" ]; then
+              echo "Unexpected Git remote in $source_dir" >&2
+              exit 1
+            fi
+
+            git -C "$source_dir" sparse-checkout set addons resource_packs crafting_tweaks
+            git -C "$source_dir" fetch --depth=1 origin "$branch"
+            git -C "$source_dir" reset --hard FETCH_HEAD
+            git -C "$source_dir" clean -fdx
+            git -C "$source_dir" lfs pull --include='addons,resource_packs,crafting_tweaks'
+
+            # LATER: Include the addon build script and its dependencies in the sparse checkout.
+            # Run the local Node build here and wait for success before syncing addons.
+
+            mkdir -p "$target_dir"
+            for section in addons resource_packs crafting_tweaks; do
+              test -f "$source_dir/$section/packs.json"
+              mkdir -p "$target_dir/$section"
+              rsync -a --delete-delay --delay-updates \
+                "$source_dir/$section/" "$target_dir/$section/"
+              # The API uses packs.json mtime to refresh its icon lookup cache.
+              touch "$target_dir/$section/packs.json"
+            done
+
+            echo "Deployed $(git -C "$source_dir" rev-parse --short HEAD) from $branch"

@@ -4,7 +4,7 @@
 	"padding": 8,
 	"num_mip_levels": 4,
 	"texture_data": {
-		"grass_side_bt": {
+		"grass_side": {
 			"textures": [
 				{
 					"overlay_color": "#79c05a",
@@ -72,6 +72,14 @@
 				},
 				{
 					"overlay_color": "#778272",
+					"path": "textures/blocks/grass_top"
+				},
+				{
+					"overlay_color": "#df6827",
+					"path": "textures/blocks/grass_top"
+				},
+				{
+					"overlay_color": "#ffbc58",
 					"path": "textures/blocks/grass_top"
 				},
 				"textures/blocks/grass_side_snowed"

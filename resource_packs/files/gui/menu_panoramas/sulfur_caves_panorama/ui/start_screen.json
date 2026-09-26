@@ -1,0 +1,26 @@
+{
+	"namespace": "start",
+	"panorama_overlay_image": {
+		"type": "image",
+		"size": [
+			"fill",
+			"fill"
+		],
+		"texture": "textures/ui/panorama_overlay"
+	},
+	"start_screen_content": {
+		"modifications": [
+			{
+				"array_name": "controls",
+				"operation": "insert_back",
+				"value": [
+					{
+						"panorama_overlay@start.panorama_overlay_image": {
+							"layer": -10
+						}
+					}
+				]
+			}
+		]
+	}
+}
