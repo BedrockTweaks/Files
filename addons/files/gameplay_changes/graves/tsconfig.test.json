@@ -1,0 +1,10 @@
+{
+	"extends": "./tsconfig.json",
+	"files": [
+		"packs/BP/scripts/gametest.ts"
+	],
+	"exclude": [
+		"node_modules",
+		"eslint.config.mjs"
+	]
+}

@@ -1,20 +1,30 @@
+// mc-disable behaviorpack.entities.missing
 {
-    "format_version": "1.20.41",
-    "minecraft:client_entity": {
-        "description": {
-            "identifier": "bt:g.grave",
-            "materials": {
-                "default": "entity_alphatest"
-            },
-            "textures": {
-                "default": "textures/entity/grave"
-            },
-            "geometry": {
-                "default": "geometry.bt.grave"
-            },
-            "render_controllers": [
-                "controller.render.default"
-            ]
-        }
-    }
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "bt:gc_graves.grave",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/grave"
+			},
+			"geometry": {
+				"default": "geometry.bt.grave"
+			},
+			"animations": {
+				"shake": "animation.rp.bt.grave_shake",
+				"shake_controller": "controller.animation.rp.bt.grave_shake"
+			},
+			"scripts": {
+				"animate": [
+					"shake_controller"
+				]
+			},
+			"render_controllers": [
+				"controller.render.bt.grave"
+			]
+		}
+	}
 }
