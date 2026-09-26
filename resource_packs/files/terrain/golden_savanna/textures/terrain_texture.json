@@ -13,7 +13,8 @@
 				{
 					"path": "textures/blocks/grass_side",
 					"overlay_color": "#ffbc58"
-				}
+				},
+				"textures/blocks/grass_side_snowed"
 			]
 		}
 	}
