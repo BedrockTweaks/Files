@@ -1,0 +1,24 @@
+{
+	"format_version": "1.21.0",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "bt:ws.stripped_mangrove_log"
+		},
+		"tags": [
+			"stonecutter"
+		],
+		"ingredients": [
+			{
+				"item": "minecraft:mangrove_log"
+			}
+		],
+		"unlock": [
+			{
+				"item": "minecraft:mangrove_log"
+			}
+		],
+		"result": {
+			"item": "minecraft:stripped_mangrove_log"
+		}
+	}
+}
