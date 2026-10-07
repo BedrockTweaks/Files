@@ -4,17 +4,17 @@
 		"source.fixAll.eslint": "explicit"
 	},
 	"editor.detectIndentation": false,
-	"editor.insertSpaces": false,
+	"editor.insertSpaces": true,
 	"editor.tabSize": 2,
 	"[typescript]": {
 		"editor.defaultFormatter": "dbaeumer.vscode-eslint",
-		"editor.insertSpaces": false,
-		"editor.tabSize": 4
+		"editor.insertSpaces": true,
+		"editor.tabSize": 2
 	},
 	"[javascript]": {
 		"editor.defaultFormatter": "dbaeumer.vscode-eslint",
-		"editor.insertSpaces": false,
-		"editor.tabSize": 4
+		"editor.insertSpaces": true,
+		"editor.tabSize": 2
 	},
 	"[json]": {
 		"editor.defaultFormatter": "vscode.json-language-features",
@@ -26,9 +26,10 @@
 		"editor.insertSpaces": false,
 		"editor.tabSize": 4
 	},
-	"typescript.tsdk": "node_modules/typescript/lib",
-	"typescript.enablePromptUseWorkspaceTsdk": true,
+	"js/ts.tsdk.path": "node_modules/typescript/lib",
+	"js/ts.tsdk.promptToUseWorkspaceVersion": true,
 	"eslint.validate": [
+		"javascript",
 		"typescript",
 		"json",
 		"jsonc"
@@ -37,5 +38,10 @@
 		"*.json": "jsonc"
 	},
 	"eslint.enable": true,
-	"eslint.format.enable": true
+	"eslint.format.enable": true,
+	"eslint.workingDirectories": [
+		{
+			"mode": "auto"
+		}
+	]
 }
