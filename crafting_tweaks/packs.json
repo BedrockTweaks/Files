@@ -103,6 +103,11 @@
 			"name": "Craftables",
 			"packs": [
 				{
+					"id": "craftable_bundle_rabbit_hide",
+					"name": "Craftable Bundle (Rabbit Hide)",
+					"description": "Allows you to craft Bundles using Rabbit Hide"
+				},
+				{
 					"id": "craftable_gravel",
 					"name": "Craftable Gravel",
 					"description": "Allows you to craft Gravel from Flint"
