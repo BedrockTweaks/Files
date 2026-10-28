@@ -1,4 +1,6 @@
 /** Shared pack identifiers and fixed inventory layout. */
+import { EquipmentSlot } from '@minecraft/server';
+
 export const GRAVE_ENTITY = 'bt:gc_graves.grave';
 export const GRAVE_KEY_ITEM = 'bt:gc_graves.grave_key';
 
@@ -12,6 +14,15 @@ export const SHAKING_PROPERTY = 'bt:shaking';
 export const GRAVE_INVENTORY_SIZE = 41;
 export const PLAYER_CONTAINER_SLOTS = 36;
 export const PLAYER_HOTBAR_SLOTS = 9;
+
+/** Equipment stored after the player's 36 inventory slots. */
+export const EQUIP_SLOTS: readonly EquipmentSlot[] = [
+  EquipmentSlot.Head,
+  EquipmentSlot.Chest,
+  EquipmentSlot.Legs,
+  EquipmentSlot.Feet,
+  EquipmentSlot.Offhand,
+];
 
 /** Convert a player inventory slot into its row-ordered grave slot. */
 export const graveSlotForPlayerSlot = (playerSlot: number): number => (

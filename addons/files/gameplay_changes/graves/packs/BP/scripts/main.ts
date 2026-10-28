@@ -1,9 +1,7 @@
 /**
  * Entry point. Initializes registration, documents and gameplay listeners. The
- * generated UI import installs the compiled action/container screen metadata
- * before any player can open one.
+ * builder installs compiled action/container screen metadata before gameplay.
  */
-import '@bedrock-core/generated/ui';
 import { initCommands } from './commands';
 import { initCapture } from './death/capture';
 import { initImpenetrable } from './death/impenetrable';

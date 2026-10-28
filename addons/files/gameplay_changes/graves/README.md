@@ -6,8 +6,11 @@ When you die, a grave keeps everything — inventory, armor, offhand and XP. It
 never burns, never explodes, floats on lava, and gets rescued from the void.
 
 - **Interact** — opens the grave like a chest; it disappears once emptied.
+- **Top inventory button** — moves everything that fits into your inventory; overflow stays in the grave.
 - **Sneak + interact** — everything straight back into its original slots.
 - **Hit it twice** — scatters the contents on the ground.
+
+The XP bottle shows the complete levels represented by the stored experience.
 
 Only the owner can open a grave, unless grave robbing is enabled or the opener
 holds a grave key (consumed on use).
@@ -31,6 +34,7 @@ server-wide and a per-player toggle).
 yarn run watch  # live recompilation
 yarn run build
 yarn run lint
+yarn run typecheck
 yarn run test   # the GameTest suite, headless on a dedicated server
 ```
 
@@ -40,7 +44,13 @@ yarn run test   # the GameTest suite, headless on a dedicated server
   network. `yarn gametest --tag graves_placement` runs one group; add
   `--keep-alive` to join the server and inspect the plots. See
   `packs/BP/scripts/tests/index.ts` for the tags.
-- Install the `core-ui-*.mcpack` in your test world to see the custom UI.
+- Install `core-ui-0.14.0.mcpack` in your test world to see the custom UI.
+  Download it from the matching [UI release](https://github.com/bedrock-core/ui/releases/tag/%40bedrock-core%2Fui%400.14.0).
+- `config.json` defines builder profiles: `build` exports to `build/gc_graves_bp`
+  and `build/gc_graves_rp`; `build-test` exports to `build/test/BP` and `build/test/RP`.
+  Development profiles export to Minecraft development pack directories.
+- Translations live in `packs/BP/i18n/`; guides live in `packs/BP/guides/`.
+  Builder generates editor declarations and caches under `.bedrock-core/`.
 - The grave entity is unkillable by design; the only removal path is
   `entity.remove()` — never `/kill`, never `runCommand('kill ...')`.
 - `scripts/storage/documents.ts` declares the entity documents, world grave

@@ -14,18 +14,17 @@ To get started with contributing, follow these steps:
 2. Clone the forked repository to your local machine.
 3. Install Git LFS if you haven't already (visit <https://git-lfs.com> for installation instructions).
 4. Run `yarn install` on the root to install all dependencies.
-5. Run `yarn regolith-install` to install Regolith filters and dependencies for all addons.
-6. Run `git config core.hooksPath .githooks` to enable Git pre-commit linting hooks.
-7. Run `git lfs install` to set up Git LFS for your repository.
-8. Create a new branch for your changes.
-9. Make your desired changes.
+5. Run `git config core.hooksPath .githooks` to enable Git pre-commit linting hooks.
+6. Run `git lfs install` to set up Git LFS for your repository.
+7. Create a new branch for your changes.
+8. Make your desired changes.
 
 Before making a pack make sure:
 
 - There is not an existing [Pull Request](https://github.com/BedrockTweaks/Files/pulls) for the same pack.
 - The pack is a confirmed [Issue](https://github.com/BedrockTweaks/Files/issues) or [Discussion](https://github.com/BedrockTweaks/Files/discussions)
 
-10. Test your changes thoroughly.
+9. Test your changes thoroughly.
 
 Pack testing requirements:
 
@@ -121,7 +120,7 @@ Addons are managed as Yarn workspace packages. To start working in addons you wi
 
 - Node.js 25+ (<https://nodejs.org/en/>)
 - Yarn 4.10+ (automatically available after `yarn install`)
-- Regolith <https://bedrock-oss.github.io/regolith/>
+- `@bedrock-core/builder` (installed with the workspace dependencies)
 
 It is recommended to use VSCode with the suggested extensions. On opening the project you will be prompted to install them at the bottom
 right of the IDE.
@@ -130,25 +129,24 @@ right of the IDE.
 
 Addons are built on the [bedrock-core](https://bedrock-core.drav.dev/) stack. Scaffold them with the repo wrapper around its CLI:
 
-1. Run `yarn create-addon <category> <addon_name> [--author <name>] [description...]` from the repo root (example: `yarn create-addon gameplay_changes graves When you die, a grave saves all your drops.`)
-2. It scaffolds `addons/files/<category>/<addon_name>/` with creator `bt` and namespace `bt_<category_initials>_<addon_name>` (example: `bt_gc_graves`), credits you as the author (your git user.name, or `--author`) in `config.json`, the manifests and the bedrock-core addon list (`<author>, Bedrock Tweaks`), adapts the package to the monorepo (`@bedrock-tweaks/<addon_name>`, private, no addon-local yarn files) and registers it in the category workspaces
+1. Run `yarn create-addon` from the repo root for interactive category, name, author, description, preset and installation prompts. For command-line use, run `yarn create-addon <category> <addon_name> [--author <name>] [description...] --yes` (example: `yarn create-addon gameplay_changes my_addon When you die, a grave saves all your drops. --yes`)
+2. It scaffolds `addons/files/<category>/<addon_name>/` with creator `bt` and namespace `bt_<category_initials>_<addon_name>` (example: `bt_gc_graves`), credits you as the author (your git user.name, or `--author`) in `config.json`, the manifests and the bedrock-core addon list (`Bedrock Tweaks, <author>`), adapts the package to the monorepo (`@bedrock-tweaks/<addon_name>`, private, no addon-local yarn files) and registers it in the category workspaces
 3. Run `yarn install` at the root, then build the addon from its directory
 4. Add the pack entry to `addons/packs.json` with id `<addon_name>` under its category (the `bt_<category_initials>_<addon_name>` namespace is only for commands, tags and identifiers inside the addon)
 5. Use the latest stable Minecraft module versions and `min_engine_version`; experimental/beta APIs are not accepted
 
 **Development workflow:**
 
-After installing the monorepo with `yarn install`, run `yarn regolith-install` once to set up Regolith filters and dependencies.
+Install the monorepo with `yarn install`. Builder dependencies are managed by Yarn.
 
 Then, **open each addon as a standalone VSCode instance** and run commands from that directory:
 
-- **Watch mode** (live recompilation): `yarn run watch` (runs `regolith watch`)
-- **Build once**: `yarn run build` (runs `regolith run build`)
+- **Watch mode** (live recompilation): `yarn run watch` (runs `bc-builder watch config.json default`)
+- **Build once**: `yarn run build` (runs `bc-builder build config.json build`)
 - **Lint addon**: `yarn run lint` (runs `eslint .`)
 
 From the root directory, use these commands to manage the entire monorepo:
 
-- **Install Regolith for all addons**: `yarn regolith-install`
 - **Build all addons**: `yarn build`
 - **Lint all packages**: `yarn lint`
 - **Test all packages**: `yarn test` (skips packages without test script)
@@ -162,10 +160,10 @@ From the root directory, use these commands to manage the entire monorepo:
 **Monorepo structure:**
 
 - Addons are managed as Yarn workspace packages
-- Shared dependencies (TypeScript, ESLint, Regolith modules) are installed once at root
+- Shared dependencies (TypeScript, ESLint, builder packages) are installed once at root
 - Root `package.json` is used for validation, initial setup, and general monorepo management
 
-Regarding regolith filters, currently it is only accepted filters which run on node.
+Custom builder plugins must run on Node.js.
 
 #### Technical Details
 

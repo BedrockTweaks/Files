@@ -3,7 +3,9 @@
 	"texture_name": "atlas.items",
 	"texture_data": {
 		"bt.gc_graves.grave_key": {
-			"textures": "textures/items/grave_key"
+			"textures": [
+				"textures/items/grave_key"
+			]
 		}
 	}
 }

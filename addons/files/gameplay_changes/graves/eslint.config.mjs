@@ -13,8 +13,7 @@ export default defineConfig([
   {
     ignores: [
       'node_modules/**',
-      '**/*.generated.*', // Filter-generated files (i18n bundle + declarations)
-      'packs/data/generated/**', // Minecraft schema types (generator filter)
+      '**/*.generated.*',
       '.*/**',
       '**/*.*js',
       'filters/**',

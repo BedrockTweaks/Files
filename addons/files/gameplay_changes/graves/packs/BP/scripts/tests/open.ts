@@ -4,15 +4,17 @@ import { isGraveShaking, SHAKE_WINDOW_TICKS } from '../open/attack';
  * callbacks run directly because simulated players cannot open native screens.
  * Tests that change shared config hold the harness lock.
  */
-import { EquipmentSlot, GameMode } from '@minecraft/server';
+import { EquipmentSlot, GameMode, ItemStack } from '@minecraft/server';
 import type { Entity } from '@minecraft/server';
 import { MinecraftItemTypes } from '@minecraft/vanilla-data';
 import type { SimulatedPlayer, Test } from '@minecraft/server-gametest';
 import { GRAVE_ENTITY, GRAVE_KEY_ITEM, PLAYER_CONTAINER_SLOTS, graveSlotForPlayerSlot } from '../constants';
 import { graveContainer } from '../inventory';
+import { graveDocuments } from '../storage/documents';
 import { authorize, consumeKey } from '../open/auth';
-import { updateGraveContainer } from '../open/container';
+import { retrieveAvailableItems, updateGraveContainer } from '../open/container';
 import { restoreToPlayer } from '../open/restore';
+import { levelsForXp } from '../util';
 import type { GraveRecord } from '../types';
 import {
   LOCKED_TICKS,
@@ -184,6 +186,176 @@ graveTestAsync('open_restore_original_slots_off', async (test) => {
 
   test.succeed();
 }, options);
+
+graveTestAsync('open_retrieve_partial_capacity', async (test) => {
+  await withServerConfig(test, DEFAULTS, async () => {
+    const { player, grave } = await bury(test, 'retrieve_partial', [[0, MinecraftItemTypes.Diamond]] as const, 30);
+    const inventory = inventoryOf(player);
+    const container = must(graveContainer(grave), 'the grave must have a logical container');
+
+    container.setItem(graveSlotForPlayerSlot(0), giveItem(player, 0, MinecraftItemTypes.Diamond, 7));
+
+    for (let slot = 0; slot < PLAYER_CONTAINER_SLOTS; slot++) {
+      giveItem(player, slot, MinecraftItemTypes.Cobblestone, 64);
+    }
+
+    giveItem(player, 0, MinecraftItemTypes.Diamond, 63);
+    retrieveAvailableItems({ host: grave, container, player });
+    await test.idle(3);
+    expectStack(test, inventory.getItem(0), new ItemStack(MinecraftItemTypes.Diamond, 64), 'retrieve fills the available stack space');
+    expectStack(test, container.getItem(graveSlotForPlayerSlot(0)), new ItemStack(MinecraftItemTypes.Diamond, 6), 'overflow stays in the grave');
+    test.assert(graveDocuments.for(grave).get()?.items === 6, 'the grave document tracks remaining items');
+    test.assert(player.getTotalXp() === 0, 'a partial retrieval retains stored XP');
+    test.assert(itemsInPad(test).every(item => item.typeId !== MinecraftItemTypes.Diamond), 'retrieval never drops overflow');
+    retrieveAvailableItems({ host: grave, container, player });
+    await test.idle(2);
+    expectStack(test, container.getItem(graveSlotForPlayerSlot(0)), new ItemStack(MinecraftItemTypes.Diamond, 6), 'a full inventory leaves the grave intact');
+  });
+  test.succeed();
+}, options);
+
+graveTestAsync('open_retrieve_equipment_and_finalize', async (test) => {
+  await withServerConfig(test, DEFAULTS, async () => {
+    const player = arrive(test, 'retrieve_all');
+    const worn = [
+      [EquipmentSlot.Head, MinecraftItemTypes.DiamondHelmet],
+      [EquipmentSlot.Chest, MinecraftItemTypes.IronChestplate],
+      [EquipmentSlot.Legs, MinecraftItemTypes.GoldenLeggings],
+      [EquipmentSlot.Feet, MinecraftItemTypes.ChainmailBoots],
+      [EquipmentSlot.Offhand, MinecraftItemTypes.Shield],
+    ] as const;
+
+    for (const [slot, id] of worn) {
+      const stack = new ItemStack(id);
+
+      stack.nameTag = `Stored ${slot}`;
+      equipmentOf(player).setEquipment(slot, stack);
+    }
+
+    giveItem(player, 0, MinecraftItemTypes.DiamondSword);
+    giveItem(player, 1, MinecraftItemTypes.GoldenApple);
+    giveItem(player, 8, MinecraftItemTypes.Diamond, 3);
+    giveItem(player, 20, MinecraftItemTypes.IronIngot, 7);
+    player.addExperience(17);
+    await test.idle(2);
+    const record = await die(test, player);
+
+    await revive(test, player);
+    giveItem(player, 0, MinecraftItemTypes.Cobblestone, 64);
+    const container = must(graveContainer(graveOf(record)), 'the grave must have a logical container');
+    const event = { host: graveOf(record), container, player };
+
+    retrieveAvailableItems(event);
+    retrieveAvailableItems(event);
+    await test.idle(4);
+    expectStack(test, inventoryOf(player).getItem(0), new ItemStack(MinecraftItemTypes.Cobblestone, 64), 'existing inventory items are preserved');
+    expectStack(test, inventoryOf(player).getItem(1), new ItemStack(MinecraftItemTypes.GoldenApple), 'original slots are reserved before displaced items are packed');
+    expectStack(test, inventoryOf(player).getItem(2), new ItemStack(MinecraftItemTypes.DiamondSword), 'a displaced item uses the next free inventory slot');
+    expectStack(test, inventoryOf(player).getItem(8), new ItemStack(MinecraftItemTypes.Diamond, 3), 'hotbar items return to their original slots');
+    expectStack(test, inventoryOf(player).getItem(20), new ItemStack(MinecraftItemTypes.IronIngot, 7), 'main inventory items return to their original slots');
+
+    for (const [slot, id] of worn) {
+      const stack = equipmentOf(player).getEquipment(slot);
+
+      expectStack(test, stack, new ItemStack(id), `${slot} returns to its equipment slot`);
+      test.assert(stack?.nameTag === `Stored ${slot}`, `${slot} retains its item metadata`);
+    }
+
+    test.assert(player.getTotalXp() === record.xp, 'repeated retrieval grants stored XP once');
+    graveIsGone(test, record, 'a completely retrieved grave');
+  });
+  test.succeed();
+}, options);
+
+graveTestAsync('open_retrieve_full_inventory_equipment', async (test) => {
+  await withServerConfig(test, DEFAULTS, async () => {
+    const { player, record, grave } = await bury(test, 'retrieve_full_equipment', [[0, MinecraftItemTypes.DiamondSword]] as const, 17);
+    const inventory = inventoryOf(player);
+    const container = must(graveContainer(grave), 'the grave must have a logical container');
+
+    container.setItem(36, new ItemStack(MinecraftItemTypes.DiamondHelmet));
+    container.setItem(40, new ItemStack(MinecraftItemTypes.Shield));
+
+    for (let slot = 0; slot < PLAYER_CONTAINER_SLOTS; slot++) {
+      giveItem(player, slot, MinecraftItemTypes.Cobblestone, 64);
+    }
+
+    retrieveAvailableItems({ host: grave, container, player });
+    await test.idle(3);
+    expectStack(test, equipmentOf(player).getEquipment(EquipmentSlot.Head), new ItemStack(MinecraftItemTypes.DiamondHelmet), 'armor can be restored with a full inventory');
+    expectStack(test, equipmentOf(player).getEquipment(EquipmentSlot.Offhand), new ItemStack(MinecraftItemTypes.Shield), 'offhand can be restored with a full inventory');
+    test.assert(container.getItem(36) === undefined && container.getItem(40) === undefined, 'equipped items are removed from grave storage');
+    expectStack(test, container.getItem(graveSlotForPlayerSlot(0)), new ItemStack(MinecraftItemTypes.DiamondSword), 'inventory overflow remains in the grave');
+    test.assert(graveDocuments.for(grave).get()?.items === 1, 'remaining item count excludes restored equipment');
+    test.assert(player.getTotalXp() === 0, 'partial equipment retrieval retains stored XP');
+    test.assert(itemsInPad(test).every(item => item.typeId !== MinecraftItemTypes.DiamondSword), 'inventory overflow is not dropped');
+    inventory.setItem(0, undefined);
+    retrieveAvailableItems({ host: grave, container, player });
+    await test.idle(3);
+    expectStack(test, inventory.getItem(0), new ItemStack(MinecraftItemTypes.DiamondSword), 'remaining items can be retrieved after making room');
+    test.assert(player.getTotalXp() === record.xp, 'finishing retrieval grants stored XP');
+    graveIsGone(test, record, 'a completed equipment retrieval');
+  });
+  test.succeed();
+}, options);
+
+graveTestAsync('open_retrieve_occupied_equipment', async (test) => {
+  await withServerConfig(test, DEFAULTS, async () => {
+    const { player, record, grave } = await bury(test, 'retrieve_occupied', [[8, MinecraftItemTypes.Diamond]] as const);
+    const container = must(graveContainer(grave), 'the grave must have a logical container');
+
+    container.setItem(36, new ItemStack(MinecraftItemTypes.DiamondHelmet));
+    container.setItem(40, new ItemStack(MinecraftItemTypes.Shield));
+    equipmentOf(player).setEquipment(EquipmentSlot.Head, new ItemStack(MinecraftItemTypes.IronHelmet));
+    equipmentOf(player).setEquipment(EquipmentSlot.Offhand, new ItemStack(MinecraftItemTypes.TotemOfUndying));
+    retrieveAvailableItems({ host: grave, container, player });
+    await test.idle(3);
+    expectStack(test, equipmentOf(player).getEquipment(EquipmentSlot.Head), new ItemStack(MinecraftItemTypes.IronHelmet), 'worn armor is preserved');
+    expectStack(test, equipmentOf(player).getEquipment(EquipmentSlot.Offhand), new ItemStack(MinecraftItemTypes.TotemOfUndying), 'the occupied offhand is preserved');
+    expectStack(test, inventoryOf(player).getItem(0), new ItemStack(MinecraftItemTypes.DiamondHelmet), 'displaced armor falls back to inventory');
+    expectStack(test, inventoryOf(player).getItem(1), new ItemStack(MinecraftItemTypes.Shield), 'displaced offhand falls back to inventory');
+    expectStack(test, inventoryOf(player).getItem(8), new ItemStack(MinecraftItemTypes.Diamond), 'inventory original slots are preserved before equipment fallback');
+    graveIsGone(test, record, 'a retrieval with occupied equipment');
+  });
+  test.succeed();
+}, options);
+
+graveTestAsync('open_retrieve_original_slots_off', async (test) => {
+  await withServerConfig(test, { ...DEFAULTS, contents: { ...DEFAULTS.contents, restoreToOriginalSlots: false } }, async () => {
+    const { player, record, grave } = await bury(test, 'retrieve_anyslot', [[8, MinecraftItemTypes.Diamond]] as const);
+    const container = must(graveContainer(grave), 'the grave must have a logical container');
+
+    container.setItem(36, new ItemStack(MinecraftItemTypes.DiamondHelmet));
+    container.setItem(40, new ItemStack(MinecraftItemTypes.Shield));
+    retrieveAvailableItems({ host: grave, container, player });
+    await test.idle(3);
+    expectStack(test, inventoryOf(player).getItem(0), new ItemStack(MinecraftItemTypes.Diamond), 'disabled original-slot restoration packs inventory from its first free slot');
+    expectStack(test, inventoryOf(player).getItem(1), new ItemStack(MinecraftItemTypes.DiamondHelmet), 'armor uses inventory when original-slot restoration is disabled');
+    expectStack(test, inventoryOf(player).getItem(2), new ItemStack(MinecraftItemTypes.Shield), 'offhand uses inventory when original-slot restoration is disabled');
+    test.assert(equipmentOf(player).getEquipment(EquipmentSlot.Head) === undefined, 'disabled original-slot restoration leaves armor unequipped');
+    test.assert(equipmentOf(player).getEquipment(EquipmentSlot.Offhand) === undefined, 'disabled original-slot restoration leaves offhand empty');
+    graveIsGone(test, record, 'a retrieval with original-slot restoration disabled');
+  });
+  test.succeed();
+}, options);
+
+graveTestAsync('open_xp_levels_match_engine', async (test) => {
+  await withServerConfig(test, DEFAULTS, async () => {
+    const player = arrive(test, 'xp_levels');
+
+    for (const points of [0, 6, 7, 351, 352, 353, 393, 394, 395, 1506, 1507, 1508, 1627, 1628, 1629, 10000]) {
+      player.resetLevel();
+      player.addExperience(points);
+      await test.idle(1);
+      // A completed native XP bar can remain on the preceding level.
+      const completeLevel = player.level + Number(player.xpEarnedAtCurrentLevel >= player.totalXpNeededForNextLevel);
+
+      test.assert(player.getTotalXp() === points, 'the XP fixture must contain exactly the requested points');
+      test.assert(levelsForXp(points) === completeLevel, `XP display for ${String(points)} points must match ${String(completeLevel)} complete levels`);
+    }
+  });
+  test.succeed();
+}, { ...options, tags: [TAG_OPEN, 'graves_xp_levels'] });
 
 // ─── The interact gate (§3a) ───────────────────────────────────────────────────
 

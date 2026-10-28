@@ -12,10 +12,10 @@ export const initRegistration = (): void => {
     manifest: {
       creator: 'bt',
       pack: 'gc_graves',
-      packName: i18n.key($ => $.meta.name),
-      creatorName: i18n.key($ => $.meta.creator),
+      packName: i18n.key($ => $.pack.name),
+      creatorName: i18n.key($ => $.pack.creator),
       version: '1.0.0',
-      description: i18n.key($ => $.meta.description),
+      description: i18n.key($ => $.pack.description),
       icon: 'textures/ui/icon.png',
     },
     catalog: registerCatalog(),

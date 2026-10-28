@@ -4,8 +4,8 @@
 		{
 			"type": "minecraft-js",
 			"request": "attach",
-			"sourceMapRoot": "${env:APPDATA}/Minecraft Bedrock/Users/Shared/games/com.mojang/development_behavior_packs/gc_graves/scripts/",
-			"generatedSourceRoot": "${env:APPDATA}/Minecraft Bedrock/Users/Shared/games/com.mojang/development_behavior_packs/gc_graves/scripts/",
+			"sourceMapRoot": "${env:APPDATA}/Minecraft Bedrock/Users/Shared/games/com.mojang/development_behavior_packs/gc_graves_bp/scripts/",
+			"generatedSourceRoot": "${env:APPDATA}/Minecraft Bedrock/Users/Shared/games/com.mojang/development_behavior_packs/gc_graves_bp/scripts/",
 			"localRoot": "${workspaceFolder}/packs/BP/scripts/",
 			"name": "Debug with Minecraft",
 			"mode": "listen",

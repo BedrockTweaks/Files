@@ -1,17 +1,20 @@
-import { graveDirectory, graveRecords } from '../storage/documents';
-import { List, Panel, Screen, Scroll, Text, useExit, useObservable, useState, type JSX } from '@bedrock-core/ui';
-import { Button, Card, Checkbox, Header, MenuRow, theme } from '@bedrock-core/ui/ore-styled';
+import { graveRecords } from '../storage/documents';
+import { List, Panel, Screen, Scroll, Text, useExit, useObservable, type JSX } from '@bedrock-core/ui';
+import { Card, Checkbox, MenuRow, theme } from '@bedrock-core/ui/ore-styled';
 import { world } from '@minecraft/server';
 import { config } from '../registration';
 import { agoStr, dimName, posStr } from '../util';
 import { i18n } from './i18n';
+import { GravePageHeader, GravePagination } from './layout';
+import { setWaypointVisibility } from './waypoints';
+import { openGraveDetail, openGraveList } from './navigation';
 
 const { spacing } = theme.tokens;
 const ROWS_PER_PAGE = 8;
 
 export interface GraveListScreenProps {
   playerId: string;
-  onOpen?: (graveId: string) => void;
+  page?: number;
 }
 
 interface GraveListRow {
@@ -22,10 +25,9 @@ interface GraveListRow {
 }
 
 /** The viewer's graves, derived from the live world collection. */
-export default function GraveListScreen({ playerId, onOpen }: GraveListScreenProps): JSX.Element {
+export default function GraveListScreen({ playerId, page = 0 }: GraveListScreenProps): JSX.Element {
   const exit = useExit();
   const document = useObservable(graveRecords);
-  const [page, setPage] = useState(0);
   const player = playerId ? world.getAllPlayers().find(candidate => candidate.id === playerId) : undefined;
   const bound = player ? i18n.forPlayer(player) : undefined;
   const rows: GraveListRow[] = !bound
@@ -40,80 +42,70 @@ export default function GraveListScreen({ playerId, onOpen }: GraveListScreenPro
           waypoint: !record.noWaypoint,
         }));
   const pages = Math.max(1, Math.ceil(rows.length / ROWS_PER_PAGE));
-  const currentPage = Math.min(page, pages - 1);
+  const currentPage = Math.min(Number.isSafeInteger(page) ? Math.max(0, page) : 0, pages - 1);
   const shown = rows.slice(currentPage * ROWS_PER_PAGE, (currentPage + 1) * ROWS_PER_PAGE);
 
   return (
     <Screen>
-      <Card flexDirection={'column'} padding={0} gap={0}>
-        <Header title={i18n.key($ => $.list.title)} onClose={exit} />
-        <Button
-          position={'absolute'}
-          top={4}
-          left={4}
-          zIndex={2}
-          variant={'transparent'}
-          width={18}
-          height={18}
-          paddingLeft={0}
-          paddingRight={0}
-          paddingTop={0}
-          paddingBottom={0}
-          background={'textures/ui/settings_glyph_color_2x'}
-          backgroundHover={'textures/ui/settings_glyph_color_2x'}
-          backgroundPressed={'textures/ui/settings_glyph_color_2x'}
-          onPress={() => {
-            if (player) {
-              void config.open(player);
-            }
-          }}
+      <Card flex={1} minHeight={0} maxHeight={'100%'} flexDirection={'column'} padding={0} gap={0}>
+        <GravePageHeader
+          title={i18n.key($ => $.list.title)}
+          onClose={exit}
+          onSettings={() => player ? config.open(player) : undefined}
         />
-        <Panel flexGrow={1} flexDirection={'column'} padding={spacing.sm} gap={spacing.xs}>
+        <Panel flex={1} minHeight={0} flexDirection={'column'} padding={spacing.sm} gap={spacing.xs}>
           <Text wordBreak={'break-word'}>{i18n.key($ => $.list.waypointHint)}</Text>
-          <Text visible={rows.length === 0}>{i18n.key($ => $.list.empty)}</Text>
-          <Panel flexGrow={1}>
-            <Scroll>
-              <List
-                max={ROWS_PER_PAGE}
-                items={shown}
-                gap={spacing.xs}
-                row={(row: GraveListRow | undefined): JSX.Element => (
-                  <Panel flexDirection={'row'} alignItems={'center'} gap={spacing.xs}>
-                    <Panel flexGrow={1}>
-                      <MenuRow
-                        title={row?.title ?? ''}
-                        subtitle={row?.subtitle ?? ''}
-                        titleMaxLength={32}
-                        subtitleMaxLength={72}
-                        enabled={row !== undefined}
-                        onPress={() => {
-                          if (row) {
-                            onOpen?.(row.graveId);
-                          }
-                        }}
-                      />
-                    </Panel>
-                    <Checkbox
-                      on={row?.waypoint ?? false}
-                      enabled={row !== undefined}
-                      onChange={(shown): void => {
-                        const record = row && graveDirectory.get()?.records[row.graveId];
-
-                        if (record) {
-                          graveDirectory.patch({ records: { [record.id]: { ...record, noWaypoint: shown ? undefined : true } } });
-                        }
-                      }}
-                    />
-                  </Panel>
-                )}
-              />
-            </Scroll>
-          </Panel>
-          <Panel flexDirection={'row'} justifyContent={'center'} alignItems={'center'} gap={spacing.sm}>
-            <Button variant={'secondary'} enabled={currentPage > 0} onPress={() => setPage(value => Math.max(0, value - 1))}>{'<'}</Button>
-            <Text maxLength={12}>{`${String(currentPage + 1)} of ${String(pages)}`}</Text>
-            <Button variant={'secondary'} enabled={currentPage + 1 < pages} onPress={() => setPage(value => Math.min(pages - 1, value + 1))}>{'>'}</Button>
-          </Panel>
+          <Text liveVisible visible={rows.length === 0}>{i18n.key($ => $.list.empty)}</Text>
+          <Scroll flex={1} minHeight={0}>
+            <List
+              max={ROWS_PER_PAGE}
+              items={shown}
+              gap={spacing.xs}
+              row={(row: GraveListRow | undefined, index: number): JSX.Element => (
+                <Panel flexDirection={'row'} alignItems={'center'} gap={spacing.xs}>
+                  <MenuRow
+                    flex={1}
+                    minWidth={0}
+                    title={row?.title ?? ''}
+                    subtitle={row?.subtitle ?? ''}
+                    titleMaxLength={32}
+                    subtitleMaxLength={72}
+                    enabled={row !== undefined}
+                    onPress={() => {
+                      if (row && player) {
+                        openGraveDetail(player, row.graveId);
+                      }
+                    }}
+                  />
+                  <Checkbox
+                    key={`waypoint-${row?.graveId ?? String(index)}-${String(row?.waypoint ?? false)}`}
+                    defaultValue={row?.waypoint ?? false}
+                    flexShrink={0}
+                    enabled={row !== undefined}
+                    onChange={(visible): void => {
+                      if (row) {
+                        setWaypointVisibility(row.graveId, visible);
+                      }
+                    }}
+                  />
+                </Panel>
+              )}
+            />
+          </Scroll>
+          <GravePagination
+            page={currentPage}
+            pages={pages}
+            onPrevious={() => {
+              if (player) {
+                openGraveList(player, Math.max(0, currentPage - 1), true);
+              }
+            }}
+            onNext={() => {
+              if (player) {
+                openGraveList(player, Math.min(pages - 1, currentPage + 1), true);
+              }
+            }}
+          />
         </Panel>
       </Card>
     </Screen>

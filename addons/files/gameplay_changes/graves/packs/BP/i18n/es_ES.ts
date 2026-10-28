@@ -3,7 +3,7 @@
  * parity in both directions, including each key's {{variable}} set.
  */
 export default {
-  meta: {
+  pack: {
     name: 'Tumbas',
     description: 'Al morir, una tumba guarda todos tus objetos. Ábrela para recuperarlos.',
     creator: 'Bedrock Tweaks, DrAv0011',

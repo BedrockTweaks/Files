@@ -1,5 +1,6 @@
 /** Navigation between the grave list, details and administration screens. */
-import { render } from '@bedrock-core/ui';
+import { compiledKeyOf } from '@bedrock-core/ui';
+import { navigate } from '@bedrock-core/ui/navigation';
 import type { Player } from '@minecraft/server';
 import graveAdminScreen from './grave_admin.screen';
 import graveDetailScreen from './grave_detail.screen';
@@ -9,14 +10,24 @@ const GraveAdminScreen = graveAdminScreen;
 const GraveDetailScreen = graveDetailScreen;
 const GraveListScreen = graveListScreen;
 
-const openGraveDetail = (player: Player, graveId: string, onBack: () => void): void => {
-  render(<GraveDetailScreen playerId={player.id} graveId={graveId} onBack={onBack} />, player);
+const open = (screen: unknown, player: Player, params: Readonly<Record<string, unknown>>, replace = false): void => {
+  const key = compiledKeyOf(screen);
+
+  if (key === undefined) {
+    throw new Error('The Graves screen is not compiled. Rebuild the addon with its UI screens.');
+  }
+
+  navigate(key, player, { params, replace });
 };
 
-export const openGraveList = (player: Player): void => {
-  render(<GraveListScreen playerId={player.id} onOpen={graveId => openGraveDetail(player, graveId, () => openGraveList(player))} />, player);
+export const openGraveDetail = (player: Player, graveId: string): void => {
+  open(GraveDetailScreen, player, { playerId: player.id, graveId });
 };
 
-export const openAdminPanel = (player: Player): void => {
-  render(<GraveAdminScreen playerId={player.id} onOpen={graveId => openGraveDetail(player, graveId, () => openAdminPanel(player))} />, player);
+export const openGraveList = (player: Player, page = 0, replace = false): void => {
+  open(GraveListScreen, player, { playerId: player.id, page }, replace);
+};
+
+export const openAdminPanel = (player: Player, page = 0, replace = false): void => {
+  open(GraveAdminScreen, player, { playerId: player.id, page }, replace);
 };

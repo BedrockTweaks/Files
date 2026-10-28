@@ -21,17 +21,7 @@
 		"rootDir": ".",
 		"jsx": "react-jsx",
 		"jsxImportSource": "@bedrock-core/ui",
-		"paths": {
-			"@bedrock-core/generated/i18n": [
-				"./packs/data/i18n/i18n.generated.json"
-			],
-			"@bedrock-core/generated/guides": [
-				"./packs/data/guides/guides.generated.json"
-			],
-			"@bedrock-core/generated/ui": [
-				"./packs/data/ui/ui.generated.ts"
-			]
-		}
+		"preserveSymlinks": true
 	},
 	"files": [
 		"packs/BP/scripts/main.ts"
@@ -41,7 +31,8 @@
 		"packs/BP/blocks/**/*",
 		"packs/BP/entities/**/*",
 		"packs/BP/items/**/*",
-		"packs/data/**/*"
+		"packs/BP/i18n/**/*",
+		".bedrock-core/generated/**/*.d.ts"
 	],
 	"exclude": [
 		"node_modules",

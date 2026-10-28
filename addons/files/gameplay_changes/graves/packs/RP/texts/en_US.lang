@@ -1,2 +1,1 @@
-## The pack's own name and description come from `meta.*` in packs/data/i18n/,
-## emitted here by the i18n filter as <namespace>.meta.* — edit them there.
+## Pack metadata is translated in packs/BP/i18n/.

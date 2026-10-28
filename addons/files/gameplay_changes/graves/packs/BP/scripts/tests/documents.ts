@@ -5,8 +5,9 @@ import { solvePlacement } from '../death/placement';
 import { graveContainer } from '../inventory';
 import { updateGraveContainer } from '../open/container';
 import { core } from '../registration';
-import { graveDocuments, graveDirectory } from '../storage/documents';
+import { graveDocuments, graveDirectory, graveRecords } from '../storage/documents';
 import { reconcileGrave } from '../storage/reconcile';
+import { setWaypointVisibility } from '../UI/waypoints';
 import type { GravesRPC } from '../types';
 import {
   LOCKED_TICKS, TAG_STATE, arrive, die, giveItem, graveOf, graveTestAsync,
@@ -112,5 +113,38 @@ graveTestAsync('repelling_tag_and_rpc', async (test) => {
     }
   }
 
+  test.succeed();
+}, options);
+
+graveTestAsync('waypoint_visibility_round_trip', async (test) => {
+  await withServerConfig(test, defaults, async () => {
+    const player = arrive(test, 'waypoint_toggle');
+
+    giveItem(player, 0, MinecraftItemTypes.Diamond, 2);
+    await test.idle(2);
+    const record = await die(test, player);
+
+    setWaypointVisibility(record.id, false);
+    await test.idle(1);
+    test.assert(graveDirectory.get()?.records[record.id]?.noWaypoint === true, 'hiding a waypoint persists the disabled preference');
+    test.assert(graveRecords.get()?.records[record.id]?.noWaypoint === true, 'the UI receives the disabled preference');
+    setWaypointVisibility(record.id, true);
+    await test.idle(1);
+    const shown = must(graveDirectory.get()?.records[record.id], 'the grave remains registered');
+
+    test.assert(shown.noWaypoint === undefined, 'showing a waypoint removes the disabled preference');
+    test.assert(graveRecords.get()?.records[record.id]?.noWaypoint === undefined, 'the UI receives the enabled preference');
+    test.assert(shown.owner === record.owner && shown.items === record.items, 'toggling a waypoint preserves grave contents and ownership');
+  });
+  test.succeed();
+}, options);
+
+graveTestAsync('waypoint_visibility_missing_record', async (test) => {
+  const graveId = '__missing_waypoint__';
+
+  test.assert(graveDirectory.get()?.records[graveId] === undefined, 'the stale grave is absent');
+  setWaypointVisibility(graveId, false);
+  setWaypointVisibility(graveId, true);
+  test.assert(graveDirectory.get()?.records[graveId] === undefined, 'a stale checkbox cannot create a grave record');
   test.succeed();
 }, options);

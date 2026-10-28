@@ -1,190 +1,82 @@
 {
-	"$schema": "https://raw.githubusercontent.com/Bedrock-OSS/regolith-schemas/main/config/v1.4.json",
-	"author": "DrAv0011",
-	"description": "When you die, it places a grave to save all your drops instead of dropping them.",
+	"$schema": "../../../../node_modules/@bedrock-core/builder/schemas/config.schema.json",
+	"targetVersion": "1.26.50",
+	"namespace": "bt_gc_graves",
 	"name": "gc_graves",
+	"description": "When you die, it places a grave to save all your drops instead of dropping them.",
+	"authors": [
+		"Bedrock Tweaks",
+		"DrAv0011"
+	],
 	"packs": {
 		"behaviorPack": "./packs/BP",
 		"resourcePack": "./packs/RP"
 	},
-	"regolith": {
-		"dataPath": "./packs/data",
-		"filterDefinitions": {
-			"core": {
-				"url": "github.com/bedrock-core/regolith-filters",
-				"version": "1.0.0"
-			},
-			"bundler": {
-				"url": "github.com/bedrock-core/regolith-filters",
-				"version": "1.2.0"
-			},
-			"generator": {
-				"url": "github.com/bedrock-core/regolith-filters",
-				"version": "1.2.0"
-			},
-			"guides": {
-				"url": "github.com/bedrock-core/regolith-filters",
-				"version": "1.2.0"
-			},
-			"i18n": {
-				"url": "github.com/bedrock-core/regolith-filters",
-				"version": "1.2.0"
-			},
-			"manifest": {
-				"url": "github.com/bedrock-core/regolith-filters",
-				"version": "2.0.0"
-			},
-			"ui-compiler": {
-				"url": "github.com/bedrock-core/regolith-filters",
-				"version": "0.1.0"
-			}
-		},
-		"formatVersion": "1.4.0",
+	"bedrockCore": {
+		"formatVersion": "1.0.0",
 		"profiles": {
 			"build": {
+				"debug": false,
+				"pretty": false,
+				"stages": {},
 				"export": {
-					"build": "standard",
-					"readOnly": true,
-					"target": "local"
-				},
-				"filters": [
-					{
-						"filter": "core",
-						"settings": {
-							"shared": {
-								"namespace": "bt_gc_graves",
-								"pretty": false
-							},
-							"generator": {
-								"include": [
-									"**/*.ts"
-								],
-								"exclude": [
-									"BP/scripts/**",
-									"data/**",
-									"**/*.d.ts"
-								],
-								"pretty": false
-							},
-							"bundler": {
-								"debug": false
-							}
-						}
-					}
-				]
+					"behaviorPack": "./build/gc_graves_bp",
+					"resourcePack": "./build/gc_graves_rp"
+				}
 			},
 			"default": {
-				"export": {
-					"build": "standard",
-					"readOnly": false,
-					"target": "development"
+				"debug": true,
+				"pretty": {
+					"indent": "tab"
 				},
-				"filters": [
-					{
-						"filter": "core",
-						"settings": {
-							"shared": {
-								"namespace": "bt_gc_graves",
-								"pretty": {
-									"indent": "tab"
-								}
-							},
-							"generator": {
-								"include": [
-									"**/*.ts"
-								],
-								"exclude": [
-									"BP/scripts/**",
-									"data/**",
-									"**/*.d.ts"
-								],
-								"pretty": true
-							},
-							"bundler": {
-								"debug": true
-							}
-						}
-					}
-				]
+				"stages": {},
+				"export": {
+					"behaviorPack": "%APPDATA%/Minecraft Bedrock/Users/Shared/games/com.mojang/development_behavior_packs/gc_graves_bp",
+					"resourcePack": "%APPDATA%/Minecraft Bedrock/Users/Shared/games/com.mojang/development_resource_packs/gc_graves_rp"
+				}
 			},
 			"test": {
-				"export": {
-					"build": "standard",
-					"readOnly": false,
-					"target": "development"
+				"debug": true,
+				"pretty": {
+					"indent": "tab"
 				},
-				"filters": [
-					{
-						"filter": "core",
-						"settings": {
-							"shared": {
-								"namespace": "bt_gc_graves",
-								"pretty": {
-									"indent": "tab"
-								}
-							},
-							"manifest": {
-								"manifestPath": "BP/manifest.test.json"
-							},
-							"generator": {
-								"include": [
-									"**/*.ts"
-								],
-								"exclude": [
-									"BP/scripts/**",
-									"data/**",
-									"**/*.d.ts"
-								],
-								"pretty": true
-							},
-							"bundler": {
-								"debug": true,
-								"tsConfigPath": "tsconfig.test.json"
-							}
-						}
+				"stages": {
+					"manifest": {
+						"manifestPath": "./packs/BP/manifest.test.json"
+					},
+					"bundler": {
+						"tsconfig": "tsconfig.test.json"
 					}
-				]
+				},
+				"export": {
+					"behaviorPack": "%APPDATA%/Minecraft Bedrock/Users/Shared/games/com.mojang/development_behavior_packs/gc_graves_bp",
+					"resourcePack": "%APPDATA%/Minecraft Bedrock/Users/Shared/games/com.mojang/development_resource_packs/gc_graves_rp"
+				}
 			},
 			"build-test": {
-				"export": {
-					"build": "standard",
-					"bpPath": "./build/test/BP",
-					"readOnly": false,
-					"rpPath": "./build/test/RP",
-					"target": "exact"
+				"debug": true,
+				"pretty": {
+					"indent": "tab"
 				},
-				"filters": [
-					{
-						"filter": "core",
-						"settings": {
-							"shared": {
-								"namespace": "bt_gc_graves",
-								"pretty": {
-									"indent": "tab"
-								}
-							},
-							"manifest": {
-								"manifestPath": "BP/manifest.test.json"
-							},
-							"generator": {
-								"include": [
-									"**/*.ts"
-								],
-								"exclude": [
-									"BP/scripts/**",
-									"data/**",
-									"**/*.d.ts"
-								],
-								"pretty": true
-							},
-							"bundler": {
-								"debug": true,
-								"tsConfigPath": "tsconfig.test.json"
-							}
-						}
+				"stages": {
+					"manifest": {
+						"manifestPath": "./packs/BP/manifest.test.json"
+					},
+					"bundler": {
+						"tsconfig": "tsconfig.test.json"
 					}
-				]
+				},
+				"export": {
+					"behaviorPack": "./build/test/BP",
+					"resourcePack": "./build/test/RP"
+				}
 			}
+		},
+		"staging": {
+			"exclude": [
+				"build",
+				"dist"
+			]
 		}
 	}
 }

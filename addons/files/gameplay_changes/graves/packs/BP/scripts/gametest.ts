@@ -1,9 +1,9 @@
 /**
  * GameTest entry point — bundled only by the `test` profile.
  *
- * `yarn build:test` points the bundler at tsconfig.test.json, which names THIS file as the entry
- * instead of main.ts, and pairs it with manifest.test.json, the only manifest that declares
- * @minecraft/server-gametest.
+ * The test profiles select manifest.test.json, which declares the beta module
+ * and selects scripts/gametest.js as the bundler entry. tsconfig.test.json
+ * supplies the test TypeScript configuration.
  *
  * Everything the release ships comes in through `./main`; the tests live in `./tests`. main.ts must
  * never import from here — that one rule is what keeps the beta module out of a release build.

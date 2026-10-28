@@ -1,10 +1,10 @@
 /**
  * Default locale — the shape contract. Every other locale (es_ES.ts) must
- * carry exactly this key set. `meta.*` feeds the pack manifests and the
+ * carry exactly this key set. `pack.*` feeds the pack manifests and the
  * bedrock-core registry; `config.*` keys are the schema labels/descriptions.
  */
 export default {
-  meta: {
+  pack: {
     name: 'Graves',
     description: 'When you die, a grave saves all your drops. Open it to get them back.',
     creator: 'Bedrock Tweaks, DrAv0011',

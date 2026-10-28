@@ -85,3 +85,18 @@ export const dateStamp = (ms: number): string => {
 
   return `${String(d.getUTCFullYear())}-${pad(d.getUTCMonth() + 1)}-${pad(d.getUTCDate())} ${pad(d.getUTCHours())}:${pad(d.getUTCMinutes())}`;
 };
+
+/** Complete player levels represented by a total number of experience points. */
+export const levelsForXp = (xp: number): number => {
+  const points = Math.max(0, Math.floor(xp));
+
+  if (points <= 352) {
+    return Math.floor(Math.sqrt(points + 9) - 3);
+  }
+
+  if (points <= 1507) {
+    return Math.floor((40.5 + Math.sqrt(10 * points - 1959.75)) / 5);
+  }
+
+  return Math.floor((162.5 + Math.sqrt(18 * points - 13553.75)) / 9);
+};

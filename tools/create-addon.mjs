@@ -1,221 +1,179 @@
 #!/usr/bin/env node
-/**
- * Bedrock Tweaks wrapper around `@bedrock-core/cli`.
- *
- * Scaffolds an addon straight into `addons/files/<category>/<addon_name>/`
- * with the BT conventions applied — no manual renaming or package surgery:
- *
- *   - project is scaffolded as `<category_initials>_<addon_name>` so the
- *     bedrock-core namespace becomes `bt_<category_initials>_<addon_name>`
- *     (creator id `bt` — every addon here belongs to Bedrock Tweaks)
- *   - the author stays YOU: `--author` flag, or your git user.name — it lands
- *     in config.json, the manifests, and the bedrock-core registry UI shows
- *     it as "Bedrock Tweaks, <author>"
- *   - the directory is renamed to just `<addon_name>`
- *   - package.json becomes a private `@bedrock-tweaks/<addon_name>` workspace
- *     package (machine-specific scripts dropped)
- *   - addon-local `yarn.lock` / `.yarnrc.yml` / `.yarn/` are removed
- *     (installs are managed from the repo root)
- *   - the category package.json gains the new workspace entry
- *
- * Usage:
- *   yarn create-addon <category>[/<subcategory>...] <addon_name> [--author <name>] [description...]
- *
- * Example:
- *   yarn create-addon gameplay_changes graves When you die, a grave saves all your drops.
- */
+/** Scaffold builder addons into the Bedrock Tweaks Yarn workspace. */
 import { spawnSync } from 'node:child_process';
-import { appendFileSync, existsSync, mkdirSync, readFileSync, renameSync, rmSync, writeFileSync } from 'node:fs';
+import { appendFileSync, existsSync, mkdirSync, readFileSync, readdirSync, renameSync, rmSync, writeFileSync } from 'node:fs';
+import { createRequire } from 'node:module';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import prompts from 'prompts';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const NAME_RE = /^[a-z][a-z0-9_]*$/;
 const BRAND = 'Bedrock Tweaks';
+const HELP = `Usage: yarn create-addon [category[/subcategory...]] [addon_name] [description...] [options]
 
-const fail = (message) => {
-	console.error(`❌ ${message}`);
-	process.exit(1);
-};
+Omit details to answer interactive prompts.
+  --author <name>       Author credit (defaults to git user.name)
+  --description <text>  Addon description
+  --preset <preset>    full, script, or resource (default: full)
+  --install            Install dependencies at the repository root
+  --yes                Use defaults without prompts; category and name are required
+  --help               Show this help
 
-const rawArgs = process.argv.slice(2);
-const authorFlag = rawArgs.indexOf('--author');
-let authorArg;
+Example: yarn create-addon gameplay_changes my_addon --author "Your Name"`;
 
-if (authorFlag !== -1) {
-	authorArg = rawArgs[authorFlag + 1];
-
-	// A bare `--author` used to fall through to the git name AND eat the next
-	// argument, silently turning the addon name into the description.
-	if (!authorArg || authorArg.startsWith('--')) {
-		fail('--author needs a name, e.g. --author "Your Name".');
-	}
-
-	rawArgs.splice(authorFlag, 2);
+export function parseArgs(args) {
+  const options = {};
+  const positional = [];
+  for (let i = 0; i < args.length; i++) {
+    const arg = args[i];
+    if (['--help', '-h', '--yes', '-y', '--install'].includes(arg)) {
+      options[arg === '-h' ? 'help' : arg === '-y' ? 'yes' : arg.slice(2)] = true;
+    } else if (['--author', '--description', '--preset'].includes(arg)) {
+      const value = args[++i];
+      if (!value?.trim() || value.startsWith('--')) throw new Error(`${arg} needs a value.`);
+      options[arg.slice(2)] = value;
+    } else if (arg.startsWith('-')) {
+      throw new Error(`Unknown option: ${arg}`);
+    } else {
+      positional.push(arg);
+    }
+  }
+  const [category, name, ...words] = positional;
+  return { ...options, category, name, description: options.description ?? (words.length ? words.join(' ') : undefined) };
 }
 
-const [category, name, ...descriptionWords] = rawArgs;
-
-if (!category || !name) {
-	console.error('Usage: yarn create-addon <category>[/<subcategory>...] <addon_name> [--author <name>] [description...]');
-	console.error('Example: yarn create-addon gameplay_changes graves When you die, a grave saves all your drops.');
-	process.exit(1);
+export function validateInput({ category, name, preset = 'full' }) {
+  if (!category || !category.split('/').every(segment => NAME_RE.test(segment))) {
+    throw new Error('Category must contain lowercase path segments, e.g. gameplay_changes or gameplay_changes/utility.');
+  }
+  if (!name || !NAME_RE.test(name)) throw new Error('Addon name must start with a lowercase letter and contain only lowercase letters, digits and underscores.');
+  if (!['full', 'script', 'resource'].includes(preset)) throw new Error('Preset must be full, script, or resource.');
 }
 
-const gitName = spawnSync('git', ['config', 'user.name'], { encoding: 'utf8' }).stdout?.trim();
-const author = authorArg || gitName || BRAND;
-
-const segments = category.split('/');
-
-for (const segment of segments) {
-	if (!NAME_RE.test(segment)) {
-		fail(`Invalid category segment '${segment}' — lowercase letters, digits and underscores only.`);
-	}
+export async function collectOptions(input, { base = root, interactive = Boolean(process.stdin.isTTY), ask = prompts } = {}) {
+  if (input.category && !input.category.split('/').every(segment => NAME_RE.test(segment))) throw new Error('Invalid category.');
+  if (input.name && !NAME_RE.test(input.name)) throw new Error('Invalid addon name.');
+  if (input.preset && !['full', 'script', 'resource'].includes(input.preset)) throw new Error('Invalid preset.');
+  const gitName = spawnSync('git', ['config', 'user.name'], { cwd: base, encoding: 'utf8' }).stdout?.trim();
+  const defaults = { author: gitName || BRAND, description: 'A Bedrock Tweaks addon.', preset: 'full', install: false };
+  const selected = { ...defaults, ...Object.fromEntries(Object.entries(input).filter(([, value]) => value !== undefined)) };
+  if (!input.yes && interactive) {
+    const categoriesDir = path.join(base, 'addons', 'files');
+    const categories = existsSync(categoriesDir) ? readdirSync(categoriesDir, { withFileTypes: true }).filter(entry => entry.isDirectory()).map(entry => entry.name).sort() : [];
+    const questions = [];
+    if (!input.category) {
+      questions.push({ type: 'select', name: 'categoryChoice', message: 'Addon category:', choices: [...categories.map(value => ({ title: value, value })), { title: 'New or nested category', value: '' }] });
+      questions.push({ type: (_, values) => values.categoryChoice === '' ? 'text' : null, name: 'newCategory', message: 'Category path:', validate: value => value.split('/').every(segment => NAME_RE.test(segment)) || 'Use lowercase letters, digits and underscores in every segment.' });
+    }
+    if (!input.name) questions.push({ type: 'text', name: 'name', message: 'Addon name:', validate: value => NAME_RE.test(value) || 'Use a lowercase name such as my_addon.' });
+    if (!input.author) questions.push({ type: 'text', name: 'author', message: 'Author:', initial: defaults.author, validate: value => Boolean(value.trim()) || 'Enter an author.' });
+    if (!input.description) questions.push({ type: 'text', name: 'description', message: 'Description:', initial: defaults.description, validate: value => Boolean(value.trim()) || 'Enter a description.' });
+    if (!input.preset) questions.push({ type: 'select', name: 'preset', message: 'Project preset:', choices: [{ title: 'Full Core addon with UI', value: 'full' }, { title: 'Behavior pack with scripts', value: 'script' }, { title: 'Resource pack', value: 'resource' }] });
+    if (!input.install) questions.push({ type: 'confirm', name: 'install', message: 'Install dependencies in the repository root?', initial: false });
+    let cancelled = false;
+    const answers = await ask(questions, { onCancel: () => { cancelled = true; return false; } });
+    if (cancelled) return undefined;
+    Object.assign(selected, answers);
+    if (!input.category) selected.category = answers.categoryChoice || answers.newCategory;
+  }
+  if (!selected.category || !selected.name) throw new Error(`Category and addon name are required without an interactive terminal.\n${HELP}`);
+  validateInput(selected);
+  return selected;
 }
 
-if (!NAME_RE.test(name)) {
-	fail(`Invalid addon name '${name}' — lowercase letters, digits and underscores only.`);
+function existingPackage(directory, packageName) {
+  if (!existsSync(directory)) return undefined;
+  const manifest = path.join(directory, 'package.json');
+  if (existsSync(manifest) && JSON.parse(readFileSync(manifest, 'utf8')).name === packageName) return directory;
+  for (const entry of readdirSync(directory, { withFileTypes: true })) {
+    if (!entry.isDirectory() || entry.name.startsWith('.') || ['node_modules', 'build', 'dist'].includes(entry.name)) continue;
+    const match = existingPackage(path.join(directory, entry.name), packageName);
+    if (match) return match;
+  }
+  return undefined;
 }
 
-// gameplay_changes -> gc; nested categories join their initials with '_'.
-const initials = (segment) => segment.split('_').filter(Boolean).map(word => word[0]).join('');
-const prefix = segments.map(initials).join('_');
-const projectName = `${prefix}_${name}`;
-const categoryDir = path.join(root, 'addons', 'files', ...segments);
-const scaffoldDir = path.join(categoryDir, projectName);
-const targetDir = path.join(categoryDir, name);
-const description = descriptionWords.join(' ') || 'A Bedrock Tweaks addon.';
-
-if (existsSync(targetDir)) {
-	fail(`${targetDir} already exists.`);
+export function scaffold(options, { base = root, run = spawnSync } = {}) {
+  validateInput(options);
+  const { category, name, author, description, preset = 'full' } = options;
+  const segments = category.split('/');
+  const prefix = segments.map(segment => segment.split('_').map(word => word[0]).join('')).join('_');
+  const projectName = `${prefix}_${name}`;
+  const categoryDir = path.join(base, 'addons', 'files', ...segments);
+  const scaffoldDir = path.join(categoryDir, projectName);
+  const targetDir = path.join(categoryDir, name);
+  if (existsSync(targetDir) || existsSync(scaffoldDir)) throw new Error(`Addon directory already exists: ${targetDir} or ${scaffoldDir}`);
+  const duplicate = existingPackage(path.join(base, 'addons', 'files'), `@bedrock-tweaks/${name}`);
+  if (duplicate) throw new Error(`Workspace @bedrock-tweaks/${name} already exists: ${duplicate}`);
+  const require = createRequire(import.meta.url);
+  const cli = process.env.BEDROCK_CORE_CLI || require.resolve('@bedrock-core/cli/dist/index.js');
+  mkdirSync(categoryDir, { recursive: true });
+  const args = [cli, projectName, '--author', author, '--description', description, '--creator-id', 'bt', '--pack-id', projectName, '--preset', preset, '--package-manager', 'none'];
+  const result = run(process.execPath, args, { cwd: categoryDir, stdio: 'inherit' });
+  if (result.error || result.status !== 0 || !existsSync(scaffoldDir)) throw new Error(`Core CLI failed to create the addon${result.error ? `: ${result.error.message}` : '.'}`);
+  renameSync(scaffoldDir, targetDir);
+  // The parent workspace owns Git metadata and package-manager state.
+  for (const file of ['.git', 'yarn.lock', '.yarnrc.yml', '.yarn']) rmSync(path.join(targetDir, file), { recursive: true, force: true });
+  const packagePath = path.join(targetDir, 'package.json');
+  const pkg = JSON.parse(readFileSync(packagePath, 'utf8'));
+  pkg.name = `@bedrock-tweaks/${name}`;
+  pkg.private = true;
+  delete pkg.packageManager;
+  pkg.scripts ??= {};
+  for (const script of ['loopback', 'loopback:preview', 'bds:fetch', 'bds:where']) delete pkg.scripts[script];
+  if (pkg.scripts['test:mc']) pkg.scripts['test:mc'] = pkg.scripts['test:mc'].replace('bc-bds run', 'yarn run -T bc-bds run');
+  if (pkg.scripts['build:optimized']) pkg.scripts['build:optimized'] = pkg.scripts['build:optimized'].replace('bc-bds optimize', 'yarn run -T bc-bds optimize');
+  if (pkg.devDependencies) delete pkg.devDependencies['@bedrock-core/bds-runner'];
+  writeFileSync(packagePath, `${JSON.stringify(pkg, null, '\t')}\n`);
+  appendFileSync(path.join(targetDir, '.gitignore'), '\n# Downloaded shared UI resource pack\ncore-ui-*.mcpack\n');
+  const configPath = path.join(targetDir, 'config.json');
+  const config = JSON.parse(readFileSync(configPath, 'utf8'));
+  config.authors = [...new Set([BRAND, author])];
+  config.$schema = path.relative(targetDir, path.join(base, 'node_modules', '@bedrock-core', 'builder', 'schemas', 'config.schema.json')).split(path.sep).join('/');
+  writeFileSync(configPath, `${JSON.stringify(config, null, '\t')}\n`);
+  for (const pack of ['BP', 'RP']) {
+    const file = path.join(targetDir, 'packs', pack, 'manifest.json');
+    if (!existsSync(file)) continue;
+    const manifest = JSON.parse(readFileSync(file, 'utf8'));
+    manifest.metadata = { ...manifest.metadata, authors: config.authors };
+    writeFileSync(file, `${JSON.stringify(manifest, null, '\t')}\n`);
+  }
+  // Register every category level so nested addons are reachable from root Yarn.
+  let parent = path.join(base, 'addons', 'files');
+  for (const segment of [...segments, name]) {
+    if (parent !== path.join(base, 'addons', 'files')) {
+      const file = path.join(parent, 'package.json');
+      const categoryPkg = existsSync(file) ? JSON.parse(readFileSync(file, 'utf8')) : { private: true, workspaces: [] };
+      categoryPkg.workspaces ??= [];
+      if (!categoryPkg.workspaces.includes(segment)) categoryPkg.workspaces.push(segment);
+      categoryPkg.workspaces.sort();
+      writeFileSync(file, `${JSON.stringify(categoryPkg, null, '\t')}\n`);
+    }
+    parent = path.join(parent, segment);
+  }
+  return { targetDir, namespace: `bt_${projectName}`, packageName: pkg.name };
 }
 
-if (existsSync(scaffoldDir)) {
-	fail(`${scaffoldDir} already exists.`);
+async function main() {
+  const input = parseArgs(process.argv.slice(2));
+  if (input.help) { console.info(HELP); return; }
+  const options = await collectOptions(input);
+  if (!options) { console.info('Creation cancelled.'); return; }
+  const result = scaffold(options);
+  if (options.install) {
+    const yarn = process.env.npm_execpath;
+    if (!yarn || !/yarn/i.test(yarn)) throw new Error('Addon created. Run yarn install at the repository root to install dependencies.');
+    const install = spawnSync(process.execPath, [yarn, 'install'], { cwd: root, stdio: 'inherit' });
+    if (install.error || install.status !== 0) throw new Error('Addon created; dependency installation failed. Run yarn install at the repository root.');
+  }
+  console.info(`\nCreated ${path.relative(root, result.targetDir)} (namespace ${result.namespace}).`);
+  if (!options.install) console.info('1. Run yarn install at the repository root.');
+  const next = options.install ? 1 : 2;
+  console.info(`${next}. Run yarn workspace ${result.packageName} build.`);
+  console.info(`${next + 1}. Add '${options.name}' to addons/packs.json under '${options.category}'.`);
 }
 
-mkdirSync(categoryDir, { recursive: true });
-
-// BEDROCK_CORE_CLI may point at a checked-out cli entry (dist/index.js).
-// The CLI author must be `bt` — it becomes the creator id half of the addon
-// namespace. The real author is patched in below; that split is a BT thing,
-// not a bedrock-core one.
-const cliArgs = [projectName, '--author', 'bt', '--description', description];
-
-// npm ships `npx` as a .cmd shim on Windows, and Node refuses to spawn those
-// without a shell (CVE-2024-27980). Running npm's own CLI entry through this
-// Node binary skips the shim, so the scaffold never needs a shell at all.
-const npxCli = () => {
-	const nodeDir = path.dirname(process.execPath);
-
-	return [
-		path.join(nodeDir, 'node_modules', 'npm', 'bin', 'npx-cli.js'),
-		path.join(nodeDir, '..', 'lib', 'node_modules', 'npm', 'bin', 'npx-cli.js'),
-	].find(existsSync);
-};
-
-// No shell, ever: the description is free text, and `$(...)`, backticks, `&`
-// or `%VAR%` in it would be read as syntax rather than as characters.
-const resolveCommand = () => {
-	if (process.env.BEDROCK_CORE_CLI) {
-		return [process.execPath, [process.env.BEDROCK_CORE_CLI, ...cliArgs]];
-	}
-
-	const npx = npxCli();
-
-	if (npx) {
-		return [process.execPath, [npx, '@bedrock-core/cli', ...cliArgs]];
-	}
-
-	if (process.platform === 'win32') {
-		fail("Could not find npm's npx-cli.js next to this Node install. Set BEDROCK_CORE_CLI to a checked-out @bedrock-core/cli entry point.");
-	}
-
-	return ['npx', ['@bedrock-core/cli', ...cliArgs]];
-};
-
-const [command, commandArgs] = resolveCommand();
-
-console.info(`▶ ${command} ${commandArgs.join(' ')}`);
-const result = spawnSync(command, commandArgs, { cwd: categoryDir, stdio: 'inherit' });
-
-if (result.status !== 0 || !existsSync(scaffoldDir)) {
-	fail('The bedrock-core CLI did not produce a project.');
+if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
+  main().catch(error => { console.error(error.message); process.exitCode = 1; });
 }
-
-renameSync(scaffoldDir, targetDir);
-
-// Monorepo adaptation — the root workspace owns installs.
-for (const file of ['yarn.lock', '.yarnrc.yml', '.yarn']) {
-	rmSync(path.join(targetDir, file), { recursive: true, force: true });
-}
-
-const packagePath = path.join(targetDir, 'package.json');
-const pkg = JSON.parse(readFileSync(packagePath, 'utf8'));
-
-pkg.name = `@bedrock-tweaks/${name}`;
-pkg.private = true;
-pkg.scripts ??= {};
-
-delete pkg.scripts.loopback;
-delete pkg.scripts['loopback:preview'];
-
-writeFileSync(packagePath, `${JSON.stringify(pkg, null, '\t')}\n`);
-
-// The render pack the CLI downloads is a build artifact, not source.
-appendFileSync(path.join(targetDir, '.gitignore'), '\n# Render pack (downloaded by the bedrock-core CLI, not committed)\ncore-ui-*.mcpack\n');
-
-// Authorship: creator id is `bt`, but the credit is the human author.
-const configPath = path.join(targetDir, 'config.json');
-const regolithConfig = JSON.parse(readFileSync(configPath, 'utf8'));
-
-regolithConfig.author = author;
-writeFileSync(configPath, `${JSON.stringify(regolithConfig, null, '\t')}\n`);
-
-// The bedrock-core registry UI shows the creator display name: author + brand.
-const i18nPath = path.join(targetDir, 'packs', 'data', 'i18n', 'en_US.ts');
-
-if (existsSync(i18nPath)) {
-	const i18nSource = readFileSync(i18nPath, 'utf8');
-
-	writeFileSync(i18nPath, i18nSource.replace("creator: 'bt'", `creator: '${author === BRAND ? BRAND : `${BRAND}, ${author}`}'`));
-}
-
-// Pack-list credits: the author of record plus the brand.
-for (const pack of ['BP', 'RP']) {
-	const manifestPath = path.join(targetDir, 'packs', pack, 'manifest.json');
-
-	if (!existsSync(manifestPath)) {
-		continue;
-	}
-
-	const manifest = JSON.parse(readFileSync(manifestPath, 'utf8'));
-	const authors = [...new Set([BRAND, author])];
-
-	manifest.metadata = { ...manifest.metadata, authors };
-	writeFileSync(manifestPath, `${JSON.stringify(manifest, null, '\t')}\n`);
-}
-
-// Register the addon in the category workspaces (creating the package if new).
-const categoryPackagePath = path.join(categoryDir, 'package.json');
-const categoryPkg = existsSync(categoryPackagePath)
-	? JSON.parse(readFileSync(categoryPackagePath, 'utf8'))
-	: { private: true, workspaces: [] };
-
-categoryPkg.workspaces ??= [];
-
-if (!categoryPkg.workspaces.includes(name)) {
-	categoryPkg.workspaces.push(name);
-	categoryPkg.workspaces.sort();
-}
-
-writeFileSync(categoryPackagePath, `${JSON.stringify(categoryPkg, null, '\t')}\n`);
-
-console.info('');
-console.info(`✔ addons/files/${segments.join('/')}/${name} — namespace bt_${projectName}`);
-console.info('');
-console.info('Next steps:');
-console.info('  1. yarn install                (repo root)');
-console.info(`  2. cd addons/files/${segments.join('/')}/${name}`);
-console.info('  3. yarn run regolith-install && yarn run build');
-console.info(`  4. Add the pack to addons/packs.json with id '${name}' under the '${segments.join('/')}' category`);
