@@ -9,7 +9,7 @@ import { GameRule, system, world } from '@minecraft/server';
 import { isOperator } from '@bedrock-core/server';
 import { config } from '../registration';
 import { worldState } from '../storage/documents';
-import { i18n } from '../UI/i18n';
+import { i18n } from '../../i18n';
 
 export const isAddonDisabled = (): boolean => worldState.get()?.disabled === true;
 

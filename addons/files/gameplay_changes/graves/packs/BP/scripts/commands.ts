@@ -20,8 +20,8 @@ import { graveDirectory as graves } from './storage/documents';
 import { GRAVE_KEY_ITEM } from './constants';
 import { forcePurge, isForcePurgeRunning, pendingTombstones, purgeGraves } from './storage/purge';
 import { disableAddon, enableAddon, isAddonDisabled } from './death/keepInventory';
-import { openAdminPanel, openGraveList } from './UI/navigation';
-import { i18n } from './UI/i18n';
+import { openAdminPanel, openGraveList } from '../ui/navigation';
+import { i18n } from '../i18n';
 import { isPlayer } from './util';
 
 const ADMIN_ACTIONS = ['panel', 'purge', 'purgestatus', 'forcepurge', 'enable', 'disable', 'forcedisable'] as const;

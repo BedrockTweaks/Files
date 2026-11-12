@@ -1,10 +1,10 @@
 /**
- * Config schema (§5), declared via `core.register({ config })` in main.ts.
+ * Config schema, installed by the addon's registration.
  * Every leaf becomes a widget in the shared bedrock-core config UI; labels and
- * descriptions are i18n keys resolved in each player's language. Exported as
- * a type so other addons can read it via `core.config.of<GravesConfigDef>()`.
+ * descriptions are i18n keys resolved in each player's language. The exported
+ * type describes the addon's config accessor.
  */
-import { i18n } from './UI/i18n';
+import { i18n } from '../i18n';
 
 export const configDef = {
   server: {

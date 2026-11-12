@@ -44,12 +44,12 @@ yarn run test   # the GameTest suite, headless on a dedicated server
   network. `yarn gametest --tag graves_placement` runs one group; add
   `--keep-alive` to join the server and inspect the plots. See
   `packs/BP/scripts/tests/index.ts` for the tags.
-- Install `core-ui-0.14.0.mcpack` in your test world to see the custom UI.
-  Download it from the matching [UI release](https://github.com/bedrock-core/ui/releases/tag/%40bedrock-core%2Fui%400.14.0).
+- Install `core-ui-0.15.0.mcpack` in your test world to see the custom UI.
+  Download it from the matching [UI release](https://github.com/bedrock-core/ui/releases/tag/%40bedrock-core%2Fui%400.15.0).
 - `config.json` defines builder profiles: `build` exports to `build/gc_graves_bp`
   and `build/gc_graves_rp`; `build-test` exports to `build/test/BP` and `build/test/RP`.
   Development profiles export to Minecraft development pack directories.
-- Translations live in `packs/BP/i18n/`; guides live in `packs/BP/guides/`.
+- Translations and their shared instance live in `packs/BP/i18n/`; guides live in `packs/BP/guides/`.
   Builder generates editor declarations and caches under `.bedrock-core/`.
 - The grave entity is unkillable by design; the only removal path is
   `entity.remove()` — never `/kill`, never `runCommand('kill ...')`.
@@ -57,7 +57,7 @@ yarn run test   # the GameTest suite, headless on a dedicated server
   directory and world state. The directory keeps graves discoverable while
   their entities are unloaded; entity documents allow recovery on chunk load.
 - `scripts/main.ts` initializes registration, documents and gameplay listeners.
-  `scripts/UI/navigation.tsx` opens the list, detail and administration screens.
+  `ui/navigation.tsx` opens the list, detail and administration screens.
 - `grave_container.screen.tsx` owns the 41 inventory cells. Container callbacks
   update item totals and award XP when emptied; framework protocol slots are
   excluded from inventory operations.
@@ -67,8 +67,10 @@ yarn run test   # the GameTest suite, headless on a dedicated server
 Operators can edit **Extra Impenetrable Blocks** and **Extra Repelling Entities**
 in settings. IDs without a namespace use `minecraft:`.
 
-Other add-ons can call `registerImpenetrable({ ids })` and
-`registerRepelling({ ids })` through `core.rpc.typed<GravesRPC>('bt_gc_graves')`.
+Other add-ons can import `API` from `@bedrock-tweaks/graves` and call
+`API.registerImpenetrable({ ids })` and `API.registerRepelling({ ids })`.
+Declare `{ "module_name": "@bedrock-tweaks/graves" }` in the consumer's manifest
+dependencies so Builder generates the client bindings.
 Registration deduplicates IDs and returns the runtime set size. Register on each
 world session; operator lists are persisted by the config app.
 

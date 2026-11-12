@@ -1,10 +1,10 @@
-import { graveRecords } from '../storage/documents';
+import { graveRecords } from '../scripts/storage/documents';
 import { List, Panel, Screen, Scroll, Text, useExit, useObservable, type JSX } from '@bedrock-core/ui';
 import { Card, Checkbox, MenuRow, theme } from '@bedrock-core/ui/ore-styled';
 import { world } from '@minecraft/server';
-import { config } from '../registration';
-import { agoStr, dimName, posStr } from '../util';
-import { i18n } from './i18n';
+import { config } from '../scripts/registration';
+import { agoStr, dimName, posStr } from '../scripts/util';
+import { i18n } from '../i18n';
 import { GravePageHeader, GravePagination } from './layout';
 import { setWaypointVisibility } from './waypoints';
 import { openGraveDetail, openGraveList } from './navigation';

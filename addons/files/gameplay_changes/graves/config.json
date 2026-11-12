@@ -1,7 +1,6 @@
 {
-	"$schema": "../../../../node_modules/@bedrock-core/builder/schemas/config.schema.json",
+	"$schema": "https://bedrock-core.drav.dev/schemas/builder/beta/config.schema.json",
 	"targetVersion": "1.26.50",
-	"namespace": "bt_gc_graves",
 	"name": "gc_graves",
 	"description": "When you die, it places a grave to save all your drops instead of dropping them.",
 	"authors": [

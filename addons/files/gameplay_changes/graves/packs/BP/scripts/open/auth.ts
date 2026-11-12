@@ -8,7 +8,7 @@ import type { Entity, Player } from '@minecraft/server';
 import { config } from '../registration';
 import { GRAVE_KEY_ITEM } from '../constants';
 import { graveDocuments } from '../storage/documents';
-import { i18n } from '../UI/i18n';
+import { i18n } from '../../i18n';
 
 export interface AuthResult {
   allowed: boolean;

@@ -1,6 +1,6 @@
 import { EntityComponentTypes, type Entity } from '@minecraft/server';
 import type { NamedContainer } from '@bedrock-core/ui';
-import { graveScreen } from './UI/grave_container';
+import { graveScreen } from '../ui/grave_container';
 
 export { EQUIP_SLOTS } from './constants';
 

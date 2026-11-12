@@ -2,7 +2,7 @@
 import type { Dimension, Entity, Player, RawMessage } from '@minecraft/server';
 import { world } from '@minecraft/server';
 import { MinecraftEntityTypes } from '@minecraft/vanilla-data';
-import { i18n } from './UI/i18n';
+import { i18n } from '../i18n';
 
 export const isPlayer = (entity: Entity): entity is Player => entity.typeId === MinecraftEntityTypes.Player;
 

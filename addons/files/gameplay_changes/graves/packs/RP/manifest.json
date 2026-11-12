@@ -1,5 +1,6 @@
 {
 	"format_version": 3,
+	"namespace": "bt_gc_graves",
 	"header": {
 		"name": "pack.name",
 		"description": "pack.description",

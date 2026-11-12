@@ -16,7 +16,7 @@ import {
   playerSlotForGraveSlot,
 } from '../constants';
 import { graveContainer } from '../inventory';
-import { i18n } from '../UI/i18n';
+import { i18n } from '../../i18n';
 import { dateStamp } from '../util';
 import type { GraveRecord, Placement } from '../types';
 

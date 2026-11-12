@@ -1,5 +1,6 @@
-import { entityTypes, schema, worldTarget, type Collection, type Document } from '@bedrock-core/server';
-import { observable } from '@bedrock-core/server/observable';
+import { entityTypes, schema, worldTarget, type Collection, type Document } from '@bedrock-core/db';
+import { createEngineDb } from '@bedrock-core/db/minecraft';
+import { observable } from '@bedrock-core/observable';
 import { system, world, type Entity } from '@minecraft/server';
 import { GRAVE_ENTITY } from '../constants';
 import { core } from '../registration';
@@ -19,8 +20,18 @@ export const graveRecords = observable<GraveCollectionDocument | undefined>(unde
 
 /** Called after addon registration, before subscribing gameplay handlers. */
 export const initDocuments = (): void => {
+  const database = core.install({
+    install(runtime, lifetime) {
+      const value = createEngineDb(runtime.namespace);
+
+      lifetime.defer(() => value.stop());
+
+      return { value };
+    },
+  });
+
   /** Metadata remains discoverable when the grave's entity is unloaded. */
-  graveDirectory = core.db.collection('graves', {
+  graveDirectory = database.collection('graves', {
     schema: schema<GraveCollectionDocument>({ version: 1, defaults: { records: {} } }),
     accept: worldTarget(),
   }).for(world);
@@ -29,12 +40,12 @@ export const initDocuments = (): void => {
   system.run(() => graveRecords.set(graveDirectory.get()));
 
   /** The entity keeps a recovery copy beside its engine-persisted inventory. */
-  graveDocuments = core.db.collection('grave', {
+  graveDocuments = database.collection('grave', {
     schema: schema<GraveRecord>({ version: 1 }),
     accept: entityTypes(GRAVE_ENTITY),
   });
 
-  worldState = core.db.collection('state', {
+  worldState = database.collection('state', {
     schema: schema<WorldState>({ version: 1 }),
     accept: worldTarget(),
   }).for(world);

@@ -16,12 +16,12 @@
 		"test:tools": "node --test tools/*.test.mjs"
 	},
 	"devDependencies": {
-		"@bedrock-core/bds-runner": "0.2.1",
-		"@bedrock-core/cli": "0.12.1",
+		"@bedrock-core/bds-runner": "0.3.0",
+		"@bedrock-core/cli": "0.13.0",
 		"prompts": "^2.4.2"
 	},
 	"engines": {
-		"node": ">=25.0.0"
+		"node": ">=26.13.0"
 	},
 	"repository": {
 		"type": "git",

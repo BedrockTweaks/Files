@@ -3,6 +3,10 @@
 	"version": "1.0.0",
 	"description": "When you die, it places a grave to save all your drops instead of dropping them.",
 	"private": true,
+	"exports": {
+		".": "./packs/BP/scripts/api/index.ts",
+		"./manifest.json": "./packs/BP/manifest.json"
+	},
 	"scripts": {
 		"build": "bc-builder build config.json build",
 		"build:test": "yarn pad && bc-builder build config.json build-test",
@@ -17,19 +21,21 @@
 		"typecheck": "tsc --noEmit"
 	},
 	"dependencies": {
-		"@bedrock-core/catalog": "0.2.1",
-		"@bedrock-core/config": "0.4.1",
-		"@bedrock-core/guides": "0.4.0",
-		"@bedrock-core/i18n": "0.2.0",
-		"@bedrock-core/server": "0.2.1",
-		"@bedrock-core/ui": "0.14.1",
+		"@bedrock-core/catalog": "0.3.0",
+		"@bedrock-core/config": "0.5.0",
+		"@bedrock-core/db": "0.2.0",
+		"@bedrock-core/guides": "0.4.1",
+		"@bedrock-core/i18n": "0.3.0",
+		"@bedrock-core/observable": "1.1.0",
+		"@bedrock-core/server": "0.3.0",
+		"@bedrock-core/ui": "0.15.0",
 		"@minecraft/common": "1.3.0",
 		"@minecraft/server": "2.10.0",
 		"@minecraft/server-ui": "2.2.0",
 		"@minecraft/vanilla-data": "1.26.50"
 	},
 	"devDependencies": {
-		"@bedrock-core/builder": "0.1.2",
+		"@bedrock-core/builder": "0.2.0",
 		"@eslint/js": "^10.0.1",
 		"@eslint/json": "^2.0.0",
 		"@minecraft/server-gametest": "1.0.0-beta.1.26.50-stable",

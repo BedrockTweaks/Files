@@ -1,9 +1,9 @@
 import { Button, Container, ContainerEvent, Hotbar, Image, Panel, PlayerInventory, Slot, Text, useExit, useState, type JSX } from '@bedrock-core/ui';
-import { GRAVE_ENTITY } from '../constants';
-import { graveDocuments } from '../storage/documents';
-import { retrieveAvailableItems, updateGraveContainer } from '../open/container';
-import { authorize, consumeKey } from '../open/auth';
-import { levelsForXp } from '../util';
+import { GRAVE_ENTITY } from '../scripts/constants';
+import { graveDocuments } from '../scripts/storage/documents';
+import { retrieveAvailableItems, updateGraveContainer } from '../scripts/open/container';
+import { authorize, consumeKey } from '../scripts/open/auth';
+import { levelsForXp } from '../scripts/util';
 
 const INVENTORY_ROWS = [0, 1, 2, 3] as const;
 const INVENTORY_COLUMNS = [0, 1, 2, 3, 4, 5, 6, 7, 8] as const;

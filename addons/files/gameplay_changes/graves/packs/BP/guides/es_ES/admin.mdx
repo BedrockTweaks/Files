@@ -47,5 +47,6 @@ Para dejar de controlar la regla:
 Una tumba nunca ocupa ni reemplaza bloques con la etiqueta
 `bt:gc_graves.impenetrable`. Las entidades con la etiqueta
 `bt:gc_graves.repelling` impiden que aparezcan tumbas en la celda que ocupan.
-Mediante RPC (`bt_gc_graves`), `registerImpenetrable` y `registerRepelling`
-aceptan `{ ids: string[] }`. Consulta `GravesRPC` para ver la interfaz tipada.
+Importa `API` de `@bedrock-tweaks/graves` para llamar a `registerImpenetrable` y
+`registerRepelling` con `{ ids: string[] }`. Declara el paquete en las
+dependencias del manifiesto del consumidor para que Builder genere su cliente.

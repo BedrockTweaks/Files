@@ -42,5 +42,6 @@ To hand the gamerule back:
 
 Blocks tagged `bt:gc_graves.impenetrable` are never occupied or replaced by a grave.
 Entities tagged `bt:gc_graves.repelling` keep graves out of their block cell.
-Over RPC (`bt_gc_graves`), `registerImpenetrable` and `registerRepelling` accept
-`{ ids: string[] }` — see `GravesRPC` for the typed interface.
+Import `API` from `@bedrock-tweaks/graves` to call `registerImpenetrable` and
+`registerRepelling` with `{ ids: string[] }`. Declare the package in the
+consumer's manifest dependencies so Builder generates its client bindings.

@@ -12,7 +12,7 @@ import { config } from '../registration';
 import { PLAYER_CONTAINER_SLOTS, playerSlotForGraveSlot } from '../constants';
 import { dropAt, grantXp, graveXp, removeGrave } from '../lifecycle';
 import { EQUIP_SLOTS, graveContainer } from '../inventory';
-import { i18n } from '../UI/i18n';
+import { i18n } from '../../i18n';
 
 export function restoreToPlayer(grave: Entity, player: Player): void {
   const container = graveContainer(grave);

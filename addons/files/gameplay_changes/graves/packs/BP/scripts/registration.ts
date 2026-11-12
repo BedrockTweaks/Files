@@ -1,26 +1,20 @@
 import { registerCatalog } from '@bedrock-core/catalog';
 import { registerConfig, type ConfigApp } from '@bedrock-core/config';
 import { registerGuides } from '@bedrock-core/guides';
-import { core } from '@bedrock-core/server';
+import { core, registerModule } from '@bedrock-core/server';
+import manifest from '../manifest.json';
+import { API } from './api';
 import { configDef, type GravesConfigDef } from './config';
-import { i18n } from './UI/i18n';
 
 export let config: ConfigApp<GravesConfigDef>;
 
 export const initRegistration = (): void => {
   ({ config } = core.register({
-    manifest: {
-      creator: 'bt',
-      pack: 'gc_graves',
-      packName: i18n.key($ => $.pack.name),
-      creatorName: i18n.key($ => $.pack.creator),
-      version: '1.0.0',
-      description: i18n.key($ => $.pack.description),
-      icon: 'textures/ui/icon.png',
-    },
+    manifest,
     catalog: registerCatalog(),
     config: registerConfig(configDef),
     guides: registerGuides(),
+    placement: registerModule(API),
   }));
 };
 

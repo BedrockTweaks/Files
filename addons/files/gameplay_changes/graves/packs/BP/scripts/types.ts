@@ -37,14 +37,6 @@ export interface GraveCollectionDocument {
   records: Record<string, GraveRecord>;
 }
 
-/** Cross-addon RPC surface (§7), served in rpc.ts via `core.rpc.serve<GravesRPC>`. */
-export interface GravesRPC {
-  /** §3b-i layer 3 — register block ids graves must never occupy or replace. */
-  registerImpenetrable(params: { ids: string[] }): number;
-  /** Register entity types that graves must not share a cell with. */
-  registerRepelling(params: { ids: string[] }): number;
-}
-
 export interface Placement {
   x: number;
   y: number;

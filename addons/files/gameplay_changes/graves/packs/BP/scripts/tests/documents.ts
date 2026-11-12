@@ -1,4 +1,5 @@
 import { MinecraftItemTypes } from '@minecraft/vanilla-data';
+import { API } from '../api';
 import { graveSlotForPlayerSlot } from '../constants';
 import { isRepelling, REPELLING_TAG } from '../death/repelling';
 import { solvePlacement } from '../death/placement';
@@ -7,8 +8,7 @@ import { updateGraveContainer } from '../open/container';
 import { core } from '../registration';
 import { graveDocuments, graveDirectory, graveRecords } from '../storage/documents';
 import { reconcileGrave } from '../storage/reconcile';
-import { setWaypointVisibility } from '../UI/waypoints';
-import type { GravesRPC } from '../types';
+import { setWaypointVisibility } from '../../ui/waypoints';
 import {
   LOCKED_TICKS, TAG_STATE, arrive, die, giveItem, graveOf, graveTestAsync,
   must, padWorld, revive, withServerConfig,
@@ -101,7 +101,7 @@ graveTestAsync('repelling_tag_and_rpc', async (test) => {
     entity.addTag(REPELLING_TAG);
     test.assert(isRepelling(entity), 'an entity tag opts into repelling');
     entity.removeTag(REPELLING_TAG);
-    const rpc = core.rpc.typed<GravesRPC>('bt_gc_graves');
+    const rpc = core.api.createModule(core.namespace, API);
     const count = await rpc.registerRepelling({ ids: ['sheep'] });
     const repeated = await rpc.registerRepelling({ ids: ['minecraft:sheep'] });
 

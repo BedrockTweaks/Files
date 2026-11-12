@@ -10,7 +10,7 @@ import { SHAKING_PROPERTY } from '../constants';
 import { dropAt, grantXp, graveXp, isGrave, removeGrave } from '../lifecycle';
 import { graveContainer } from '../inventory';
 import { authorize, consumeKey, refuse } from './auth';
-import { i18n } from '../UI/i18n';
+import { i18n } from '../../i18n';
 import { isPlayer } from '../util';
 
 /** Longer than the engine's damage invulnerability window. */

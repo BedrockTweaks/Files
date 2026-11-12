@@ -1,8 +1,8 @@
 import assert from 'node:assert/strict';
 import { spawnSync } from 'node:child_process';
-import { existsSync, mkdirSync, mkdtempSync, readFileSync, rmSync } from 'node:fs';
+import { existsSync, mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
-import { fileURLToPath } from 'node:url';
+import { fileURLToPath, pathToFileURL } from 'node:url';
 import test from 'node:test';
 import { collectOptions, parseArgs, scaffold, validateInput } from './create-addon.mjs';
 
@@ -53,14 +53,22 @@ test('cancellation creates nothing and noninteractive mode validates required fi
   assert.equal(options.preset, 'full');
 });
 
-for (const preset of ['script', 'resource']) test(`published Core CLI scaffolds a ${preset} workspace`, t => {
+for (const preset of ['full', 'script', 'resource']) test(`published Core CLI scaffolds a ${preset} workspace`, t => {
   const base = fixture(t);
+  const offline = path.join(base, 'offline.mjs');
+  writeFileSync(offline, "import https from 'node:https';\nhttps.get = () => { throw new Error('Network disabled by scaffold test'); };\n");
   const category = 'gameplay_changes/utility';
   const author = "O'Brien \\ \"Friends\" & $(literal)";
-  const result = scaffold({ category, name: 'sample', author, description: 'A "quoted" description & $HOME', preset }, { base, run: (command, args, options) => spawnSync(command, args, { ...options, stdio: 'pipe', timeout: 30000 }) });
+  const result = scaffold({ category, name: 'sample', author, description: 'A "quoted" description & $HOME', preset }, { base, run: (command, args, options) => spawnSync(command, ['--import', pathToFileURL(offline).href, ...args], { ...options, stdio: 'pipe', timeout: 30000 }) });
   assert.equal(result.namespace, 'bt_gc_u_sample');
   const config = json(path.join(result.targetDir, 'config.json'));
-  assert.equal(config.namespace, result.namespace);
+  assert.equal(config.$schema, 'https://bedrock-core.drav.dev/schemas/builder/beta/config.schema.json');
+  assert.equal(config.namespace, undefined);
+  for (const pack of Object.values(config.packs)) {
+    const manifest = json(path.join(result.targetDir, pack, 'manifest.json'));
+    assert.equal(manifest.namespace, result.namespace);
+    assert.deepEqual(manifest.metadata.authors, ['Bedrock Tweaks', author]);
+  }
   assert.deepEqual(config.authors, ['Bedrock Tweaks', author]);
   assert.ok(config.bedrockCore.profiles.build);
   assert.equal(config.regolith, undefined);
@@ -68,6 +76,29 @@ for (const preset of ['script', 'resource']) test(`published Core CLI scaffolds 
   assert.equal(pkg.name, '@bedrock-tweaks/sample');
   assert.equal(pkg.private, true);
   assert.match(pkg.scripts.build, /^bc-builder/);
+  assert.equal(pkg.devDependencies['@bedrock-core/bds-runner'], undefined);
+  assert.match(pkg.scripts['build:optimized'], /yarn run -T bc-bds optimize/);
+  if (preset !== 'resource') {
+    assert.equal(pkg.scripts.typecheck, 'tsc --noEmit');
+    assert.match(pkg.scripts['test:mc'], /yarn run -T bc-bds run/);
+    const manifest = json(path.join(result.targetDir, 'packs/BP/manifest.json'));
+    const testManifest = json(path.join(result.targetDir, 'packs/BP/manifest.test.json'));
+    assert.equal(manifest.modules.find(module => module.type === 'script').entry, 'scripts/main.ts');
+    assert.equal(testManifest.modules.find(module => module.type === 'script').entry, 'scripts/gametest.ts');
+  }
+  if (preset === 'full') {
+    const tsconfig = json(path.join(result.targetDir, 'tsconfig.json'));
+    assert.ok(tsconfig.include.includes('packs/BP/ui/**/*'));
+    assert.ok(existsSync(path.join(result.targetDir, 'packs/BP/ui/home.screen.tsx')));
+    assert.ok(existsSync(path.join(result.targetDir, 'packs/BP/i18n/index.ts')));
+    assert.equal(existsSync(path.join(result.targetDir, 'packs/BP/scripts/UI')), false);
+    const manifest = json(path.join(result.targetDir, 'packs/BP/manifest.json'));
+    assert.equal(manifest.dependencies.find(dependency => dependency.uuid === '761ecd37-ad1c-4a64-862a-d6cc38767426').version, `1.${pkg.dependencies['@bedrock-core/ui'].split('.').slice(1).join('.')}`);
+  }
+  if (preset === 'script') {
+    const check = spawnSync(process.execPath, ['--run', 'typecheck'], { cwd: result.targetDir, encoding: 'utf8', timeout: 30000 });
+    assert.equal(check.status, 0, check.stdout + check.stderr);
+  }
   assert.equal(pkg.packageManager, undefined);
   assert.equal(existsSync(path.join(result.targetDir, '.git')), false);
   assert.equal(existsSync(path.join(result.targetDir, 'yarn.lock')), false);

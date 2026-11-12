@@ -13,7 +13,7 @@ import { EQUIP_SLOTS } from '../inventory';
 import { solvePlacement } from './placement';
 import { spawnGrave, dimensionFor, type DeathSnapshot } from './spawn';
 import { isAddonDisabled } from './keepInventory';
-import { i18n } from '../UI/i18n';
+import { i18n } from '../../i18n';
 import { dimName, isPlayer } from '../util';
 
 /** drop_oldest: tombstone (or remove, if loaded) the owner's oldest grave. */

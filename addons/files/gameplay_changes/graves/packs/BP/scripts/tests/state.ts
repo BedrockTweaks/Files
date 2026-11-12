@@ -15,12 +15,12 @@ import { worldState } from '../storage/documents';
  */
 import { GameRule, world } from '@minecraft/server';
 import { MinecraftBlockTypes, MinecraftItemTypes } from '@minecraft/vanilla-data';
+import { API } from '../api';
 import { GRAVE_ENTITY } from '../constants';
 import { config, core } from '../registration';
 import { disableAddon, isAddonDisabled } from '../death/keepInventory';
 import { addRuntimeImpenetrable } from '../death/impenetrable';
 import { purgeGraves, pendingTombstones } from '../storage/purge';
-import type { GravesRPC } from '../types';
 import {
   LOCKED_TICKS,
   TAG_STATE,
@@ -233,7 +233,7 @@ graveTestAsync('state_disable_refused_with_graves', async (test) => {
 }, options);
 
 graveTestAsync('state_rpc_surface', async (test) => {
-  const graves = core.rpc.typed<GravesRPC>('bt_gc_graves');
+  const graves = core.api.createModule(core.namespace, API);
   const size = await graves.registerImpenetrable({ ids: [MinecraftBlockTypes.Sponge] });
 
   test.assert(size > 0, 'registerImpenetrable should report the runtime set size');

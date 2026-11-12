@@ -1,4 +1,4 @@
-import { graveDirectory } from '../storage/documents';
+import { graveDirectory } from '../scripts/storage/documents';
 
 /** Persist the locator preference for an existing grave. */
 export const setWaypointVisibility = (graveId: string, shown: boolean): void => {

@@ -2,7 +2,7 @@
  * GameTest entry point — bundled only by the `test` profile.
  *
  * The test profiles select manifest.test.json, which declares the beta module
- * and selects scripts/gametest.js as the bundler entry. tsconfig.test.json
+ * and selects scripts/gametest.ts as the bundler entry. tsconfig.test.json
  * supplies the test TypeScript configuration.
  *
  * Everything the release ships comes in through `./main`; the tests live in `./tests`. main.ts must
@@ -10,7 +10,7 @@
  */
 import './main';
 import './tests';
-import { graveScreen } from './UI/grave_container';
+import { graveScreen } from '../ui/grave_container';
 
 // GameTest can invalidate a simulated player before its delayed initial-spawn
 // event is delivered. The production container runtime correctly serves real

@@ -121,6 +121,7 @@ export function scaffold(options, { base = root, run = spawnSync } = {}) {
   pkg.private = true;
   delete pkg.packageManager;
   pkg.scripts ??= {};
+  if (pkg.scripts.typecheck) pkg.scripts.typecheck = pkg.scripts.typecheck.replace('node node_modules/typescript-native/bin/tsc', 'tsc');
   for (const script of ['loopback', 'loopback:preview', 'bds:fetch', 'bds:where']) delete pkg.scripts[script];
   if (pkg.scripts['test:mc']) pkg.scripts['test:mc'] = pkg.scripts['test:mc'].replace('bc-bds run', 'yarn run -T bc-bds run');
   if (pkg.scripts['build:optimized']) pkg.scripts['build:optimized'] = pkg.scripts['build:optimized'].replace('bc-bds optimize', 'yarn run -T bc-bds optimize');
@@ -130,7 +131,6 @@ export function scaffold(options, { base = root, run = spawnSync } = {}) {
   const configPath = path.join(targetDir, 'config.json');
   const config = JSON.parse(readFileSync(configPath, 'utf8'));
   config.authors = [...new Set([BRAND, author])];
-  config.$schema = path.relative(targetDir, path.join(base, 'node_modules', '@bedrock-core', 'builder', 'schemas', 'config.schema.json')).split(path.sep).join('/');
   writeFileSync(configPath, `${JSON.stringify(config, null, '\t')}\n`);
   for (const pack of ['BP', 'RP']) {
     const file = path.join(targetDir, 'packs', pack, 'manifest.json');

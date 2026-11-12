@@ -28,6 +28,7 @@
 	],
 	"include": [
 		"packs/BP/scripts/**/*",
+		"packs/BP/ui/**/*",
 		"packs/BP/blocks/**/*",
 		"packs/BP/entities/**/*",
 		"packs/BP/items/**/*",

@@ -1,14 +1,14 @@
-import { graveDirectory, graveRecords } from '../storage/documents';
+import { graveDirectory, graveRecords } from '../scripts/storage/documents';
 import { Panel, Screen, Scroll, Text, useExit, useObservable, type JSX } from '@bedrock-core/ui';
 import { Button, Card, Divider, Header, theme } from '@bedrock-core/ui/ore-styled';
 import { isOperator } from '@bedrock-core/server';
 import { back } from '@bedrock-core/ui/navigation';
 import { world } from '@minecraft/server';
 
-import { graveEntity, removeGrave } from '../lifecycle';
+import { graveEntity, removeGrave } from '../scripts/lifecycle';
 
-import { agoStr, causeText, dimensionOf, dimName, posStr } from '../util';
-import { i18n } from './i18n';
+import { agoStr, causeText, dimensionOf, dimName, posStr } from '../scripts/util';
+import { i18n } from '../i18n';
 import { openGraveList } from './navigation';
 
 const { spacing } = theme.tokens;
