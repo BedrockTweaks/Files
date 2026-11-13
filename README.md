@@ -37,7 +37,23 @@ This is a **Yarn 4 monorepo** where addons are managed as workspace packages and
 │   └── packs.json               # Addon catalog
 ├── resource_packs/              # Resource packs
 ├── crafting_tweaks/             # Crafting tweaks
+├── bds-runner.json              # Dedicated server build shared by every addon
+├── .bds/                        # Server cache, world and logs (generated)
 ```
+
+### GameTests
+
+Addons run their GameTests on one Bedrock Dedicated Server shared by the whole repository: the build
+is pinned in `bds-runner.json` and the server tree lives in `.bds/`, both at the repository root.
+
+```bash
+yarn bds where                # which build is selected and where it lives
+yarn bds fetch                # download and cache it
+yarn workspace @bedrock-tweaks/graves test
+```
+
+Each addon can also be tested from its own directory — `yarn test`, or `yarn gametest --tag <tag>`
+for a single group — and still uses the shared server.
 
 ## License
 

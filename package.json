@@ -8,13 +8,20 @@
 		"addons/files/*"
 	],
 	"scripts": {
-		"regolith-install": "yarn workspaces foreach -i -A --topological --jobs=1 run regolith-install",
+		"create-addon": "node tools/create-addon.mjs",
+		"bds": "bc-bds",
 		"build": "yarn workspaces foreach -i -A run build",
 		"lint": "yarn workspaces foreach -i -A run lint",
-		"test": "yarn workspaces foreach -i -A --continue run test"
+		"test": "yarn workspaces foreach -i -A --continue run test",
+		"test:tools": "node --test tools/*.test.mjs"
+	},
+	"devDependencies": {
+		"@bedrock-core/bds-runner": "0.3.0",
+		"@bedrock-core/cli": "0.13.0",
+		"prompts": "^2.4.2"
 	},
 	"engines": {
-		"node": ">=25.0.0"
+		"node": ">=26.13.0"
 	},
 	"repository": {
 		"type": "git",

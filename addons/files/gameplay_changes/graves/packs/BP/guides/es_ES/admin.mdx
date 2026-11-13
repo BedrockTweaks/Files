@@ -1,0 +1,52 @@
+---
+title: Para operadores
+sidebar_position: 4
+access: op
+description: El panel de administración, la purga y el funcionamiento de keepInventory.
+---
+
+# Para operadores
+
+## El panel de administración
+
+`/bt_gc_graves:gravesadmin panel` muestra todas las tumbas del mundo: su
+dueño, dimensión, posición, contenido y antigüedad, sin cargar ningún chunk.
+Desde la pantalla de detalles de una tumba puedes teletransportarte a ella o
+eliminarla.
+
+## Purgar tumbas
+
+- `/bt_gc_graves:gravesadmin purge [player]`: elimina inmediatamente las
+  tumbas cuyos chunks están cargados y *marca para eliminar* las demás.
+  Estas desaparecen en cuanto se vuelve a cargar su chunk. Las tumbas
+  marcadas no aparecen en ningún sitio ni consumen recursos.
+- `/bt_gc_graves:gravesadmin purgestatus`: muestra cuántas tumbas marcadas
+  quedan pendientes.
+- `/bt_gc_graves:gravesadmin forcepurge`: elimina inmediatamente todas las
+  tumbas marcadas al activar brevemente cada chunk. Úsalo antes de exportar
+  un mundo.
+
+## keepInventory
+
+La API de scripts de Bedrock no tiene un evento anterior a la muerte, así
+que Tumbas mantiene **activada** la regla `keepInventory` y se encarga de
+soltar los objetos. Así puede guardarlos sin pérdidas. Si algo desactiva
+la regla, Tumbas la vuelve a activar y avisa a los operadores.
+
+Para dejar de controlar la regla:
+
+- `/bt_gc_graves:gravesadmin disable`: no permite desactivarla mientras
+  queden tumbas.
+- `/bt_gc_graves:gravesadmin forcedisable`: deja de controlarla de inmediato
+  y restaura el valor que tenía `keepInventory` antes de instalar Tumbas.
+  Las tumbas existentes no se modifican y se pueden seguir abriendo.
+- `/bt_gc_graves:gravesadmin enable`: vuelve a activar todo el sistema.
+
+## Para desarrolladores de complementos
+
+Una tumba nunca ocupa ni reemplaza bloques con la etiqueta
+`bt:gc_graves.impenetrable`. Las entidades con la etiqueta
+`bt:gc_graves.repelling` impiden que aparezcan tumbas en la celda que ocupan.
+Importa `API` de `@bedrock-tweaks/graves` para llamar a `registerImpenetrable` y
+`registerRepelling` con `{ ids: string[] }`. Declara el paquete en las
+dependencias del manifiesto del consumidor para que Builder genere su cliente.

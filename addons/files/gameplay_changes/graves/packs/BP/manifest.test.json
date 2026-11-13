@@ -1,0 +1,39 @@
+{
+	"extends": "./manifest.json",
+	"dependencies": [
+		{
+			"uuid": "49af505d-e4b5-43b7-9e6e-847a41228ece",
+			"version": "1.0.0"
+		},
+		{
+			"uuid": "761ecd37-ad1c-4a64-862a-d6cc38767426",
+			"version": "1.15.0"
+		},
+		{
+			"module_name": "@minecraft/server",
+			"version": "2.10.0"
+		},
+		{
+			"module_name": "@minecraft/server-ui",
+			"version": "2.2.0"
+		},
+		{
+			"module_name": "@minecraft/server-gametest",
+			"version": "1.0.0-beta"
+		}
+	],
+	"modules": [
+		{
+			"type": "data",
+			"uuid": "3f2ff7a8-2482-49e7-9a76-5622b61c5318",
+			"version": "1.0.0"
+		},
+		{
+			"type": "script",
+			"language": "javascript",
+			"uuid": "8ec2e94f-b226-4d04-b966-69f89812700e",
+			"entry": "scripts/gametest.ts",
+			"version": "1.0.0"
+		}
+	]
+}

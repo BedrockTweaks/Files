@@ -14,18 +14,17 @@ To get started with contributing, follow these steps:
 2. Clone the forked repository to your local machine.
 3. Install Git LFS if you haven't already (visit <https://git-lfs.com> for installation instructions).
 4. Run `yarn install` on the root to install all dependencies.
-5. Run `yarn regolith-install` to install Regolith filters and dependencies for all addons.
-6. Run `git config core.hooksPath .githooks` to enable Git pre-commit linting hooks.
-7. Run `git lfs install` to set up Git LFS for your repository.
-8. Create a new branch for your changes.
-9. Make your desired changes.
+5. Run `git config core.hooksPath .githooks` to enable Git pre-commit linting hooks.
+6. Run `git lfs install` to set up Git LFS for your repository.
+7. Create a new branch for your changes.
+8. Make your desired changes.
 
 Before making a pack make sure:
 
 - There is not an existing [Pull Request](https://github.com/BedrockTweaks/Files/pulls) for the same pack.
 - The pack is a confirmed [Issue](https://github.com/BedrockTweaks/Files/issues) or [Discussion](https://github.com/BedrockTweaks/Files/discussions)
 
-10. Test your changes thoroughly.
+9. Test your changes thoroughly.
 
 Pack testing requirements:
 
@@ -113,38 +112,41 @@ If there is need to scale the template use closest neighbor instead of other sam
 
 JSON, JS and TS files should be formatted using 1 tab with size 4 for indentation.
 
+An addon may override this for its own JS/TS as long as its ESLint config is configured to match, so the linter and the editor agree.
+
 ### Addons (Yarn Monorepo Packages)
 
 Addons are managed as Yarn workspace packages. To start working in addons you will need to have the following:
 
 - Node.js 25+ (<https://nodejs.org/en/>)
 - Yarn 4.10+ (automatically available after `yarn install`)
-- Regolith <https://bedrock-oss.github.io/regolith/>
+- `@bedrock-core/builder` (installed with the workspace dependencies)
 
 It is recommended to use VSCode with the suggested extensions. On opening the project you will be prompted to install them at the bottom
 right of the IDE.
 
 **Creating a new addon:**
 
-1. Copy the template from `templates/addon/` to `addons/<category>/<addon_name>/`
-2. Update `addons/<category>/package.json` to include the new addon in workspaces
-3. Update `addons/<category>/<addon_name>/package.json` using the graves example as reference:
-4. Update UUIDs, pack name, and descriptions in BP/RP manifest.json and config.json
-5. Update module versions in config.json and package.json as needed
+Addons are built on the [bedrock-core](https://bedrock-core.drav.dev/) stack. Scaffold them with the repo wrapper around its CLI:
+
+1. Run `yarn create-addon` from the repo root for interactive category, name, author, description, preset and installation prompts. For command-line use, run `yarn create-addon <category> <addon_name> [--author <name>] [description...] --yes` (example: `yarn create-addon gameplay_changes my_addon When you die, a grave saves all your drops. --yes`)
+2. It scaffolds `addons/files/<category>/<addon_name>/` with creator `bt` and namespace `bt_<category_initials>_<addon_name>` (example: `bt_gc_graves`), credits you as the author (your git user.name, or `--author`) in `config.json`, the manifests and the bedrock-core addon list (`Bedrock Tweaks, <author>`), adapts the package to the monorepo (`@bedrock-tweaks/<addon_name>`, private, no addon-local yarn files) and registers it in the category workspaces
+3. Run `yarn install` at the root, then build the addon from its directory
+4. Add the pack entry to `addons/packs.json` with id `<addon_name>` under its category (the `bt_<category_initials>_<addon_name>` namespace is only for commands, tags and identifiers inside the addon)
+5. Use the latest stable Minecraft module versions and `min_engine_version`; experimental/beta APIs are not accepted
 
 **Development workflow:**
 
-After installing the monorepo with `yarn install`, run `yarn regolith-install` once to set up Regolith filters and dependencies.
+Install the monorepo with `yarn install`. Builder dependencies are managed by Yarn.
 
 Then, **open each addon as a standalone VSCode instance** and run commands from that directory:
 
-- **Watch mode** (live recompilation): `yarn run dev` (runs `regolith watch`)
-- **Build once**: `yarn run build` (runs `regolith run build`)
+- **Watch mode** (live recompilation): `yarn run watch` (runs `bc-builder watch config.json default`)
+- **Build once**: `yarn run build` (runs `bc-builder build config.json build`)
 - **Lint addon**: `yarn run lint` (runs `eslint .`)
 
 From the root directory, use these commands to manage the entire monorepo:
 
-- **Install Regolith for all addons**: `yarn regolith-install`
 - **Build all addons**: `yarn build`
 - **Lint all packages**: `yarn lint`
 - **Test all packages**: `yarn test` (skips packages without test script)
@@ -152,45 +154,22 @@ From the root directory, use these commands to manage the entire monorepo:
 **Before submitting PR:**
 
 - Lint the addon from its directory: `yarn run lint`
-- Bump versions in addon `package.json` and `addons/packs.json`
+- Bump the addon version in its `package.json` and BP/RP `manifest.json` (addons do not set versions in `addons/packs.json` — the version is inferred from the pack itself)
 - Test the addon in-game on at least 1 device
 
 **Monorepo structure:**
 
 - Addons are managed as Yarn workspace packages
-- Shared dependencies (TypeScript, ESLint, Regolith modules) are installed once at root
+- Shared dependencies (TypeScript, ESLint, builder packages) are installed once at root
 - Root `package.json` is used for validation, initial setup, and general monorepo management
 
-Regarding regolith filters, currently it is only accepted filters which run on node.
-
-Resource Pack JSON UI modifications for addons are not accepted at this moment.
+Custom builder plugins must run on Node.js.
 
 #### Technical Details
 
-- Addons should not have functions
+- Addons should not have functions, prefer custom commands
 - All settings and interactions should be in-game or in server forms
-- Addons should have a basic `/bt:<addon_name> config` (TBD specifics discuss in discord) base command which should open a config server form
-- Addon could have extra commands for quick access if necessary for commodity (for example tpa) but prefer server forms, easier for normal users
-- The code in the template is an example it could be removed and changed as long as it follows the structure
-- Prefer interfaces to types.
-- Prefer functional programming over object-oriented programming.
-- Prefer `const` and `let` over `var`.
-
-#### Keys to change
-
-When making an addon from the template you should look for these keys and replace them
-
-```md
-<pack_name>
-<pack_category>
-<description>
-<author name/username>
-<bp_uuid>
-<data_module_uuid>
-<scripting_uuid>
-<rp_uuid>
-<resources_module_uuid>
-```
+- Addon could have extra commands for quick access if necessary for commodity (for example tpa) but prefer ui, easier for normal users
 
 If you notice any files not following the Style Guide feel free to open a PR.
 
@@ -333,7 +312,9 @@ export interface PacksJSON {
   section: Section;
   // Global pack version, this will be the header.min_engine_version in the manifest.json
   // example: [1, 21, 0]
-  version: number[];
+  // * Not set for Addons: the server adds it when generating, as the min of the
+  //   minimum engine versions of all addons
+  version?: number[];
   categories: Category[];
   combinations: Combination[];
   deepMergeFiles: DeepMergeFile[];
@@ -364,22 +345,23 @@ export interface Pack {
   name: string;
   description: string;
   message?: Message;
-  version?: string; // * only Addons and CT
+  version?: string; // * only CT — addons do not carry a version here: it is inferred from the pack itself and added by the server, which builds the dependency tree and downloads all selected packs
   priority?: number; // Higher number, higher priority
   disabled?: boolean;
 }
 
 /**
- * Pack Version is a string as follows: "<minecraft_version> - <pack_version>" for addons
- * and just "<pack_version>" for crafting tweaks
- * minecraft_version is the minimum version of the game the pack is compatible with
+ * Pack Version is a string as follows: "<pack_version>" for crafting tweaks
  * pack_version is the version of the pack for that minecraft update, each mc update it resets
  * example:
- * (version update)     "1.21.50 - 1.0.0"
- * (bug fix)            "1.21.50 - 1.0.1"
- * (pack major revamp)  "1.21.50 - 2.0.0"
- * (pack improvements)  "1.21.50 - 2.1.0"
- * (version update)     "1.22.0 - 1.0.0"
+ * (version update)     "1.0.0"
+ * (bug fix)            "1.0.1"
+ * (pack major revamp)  "2.0.0"
+ * (pack improvements)  "2.1.0"
+ *
+ * Addons never author versions in packs.json: each addon is its own pack, its
+ * version and minimum engine version come from the pack manifest, and the
+ * server adds pack versions and the root version when generating.
  */
 
 export interface Combination {
