@@ -39,6 +39,30 @@ This is a **Yarn 4 monorepo** where addons are managed as workspace packages and
 ├── crafting_tweaks/             # Crafting tweaks
 ```
 
+### Resource pack incompatibilities
+
+Run `yarn check:incompatibilities` to find packs that contain the same PNG asset path.
+A category with `mutuallyExclusive: true` in `resource_packs/packs.json` allows
+one pick across its own packs and all subcategories. The checker counts overlaps within
+that subtree separately. Pack icons are excluded.
+Identical files and files supplied by a two-pack combination are ignored.
+Declare remaining conflicts using full `category/pack` IDs or literal category paths
+ending in `/` in a pack's `incompatibilities` list. One declaration covers both directions. An existing combination
+can list the pairs it resolves in `resolvesIncompatibilities`.
+The JSON report includes all overlapping files and known compatible overlaps.
+Add `--write` to apply detected conflicts and remove redundant direct
+declarations covered by a combination, compatible overlap, or exclusive category.
+Add `--write --prune` to also remove direct declarations without a detected PNG
+conflict. Review that diff for conflicts declared for other kinds of assets.
+Both write modes preserve category references and explicit combination resolutions
+and skip pairs affected by missing directories. If a larger combination covers
+an undeclared pair, add its `resolvesIncompatibilities` entry before writing that
+pair so the combination stays selectable.
+
+The checker exits with 1 for remaining undeclared conflicts or 2 for an incomplete
+or failed scan. Missing pack and combination directories are reported.
+Run `yarn typecheck:tools` to check the Node scripts with the tools TypeScript configuration.
+
 ## License
 
 By contributing to Bedrock Tweaks, you agree that your contributions will be licensed under the [License](LICENSE).
