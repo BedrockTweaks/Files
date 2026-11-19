@@ -326,28 +326,24 @@ updated pull_request_template.md
 
 ## packs.json
 
-These are the TS interfaces for the packs.json file.
+The interfaces below describe fields authored in `packs.json`. The API validates the catalog against the [shared Zod schemas](https://github.com/BedrockTweaks/codebase/blob/main/packages/types/src/schemas.ts).
 
 ```ts
 export interface PacksJSON {
   section: Section;
-  // Global pack version, this will be the header.min_engine_version in the manifest.json
-  // example: [1, 21, 0]
+  // Minimum engine version in the generated manifest, such as [1, 26, 20]
   version: number[];
   categories: Category[];
   combinations: Combination[];
   deepMergeFiles: DeepMergeFile[];
 }
 
-export enum Section {
-  ResourcePacks = 'resource_packs',
-  Addons = 'addons',
-  CraftingTweaks = 'crafting_tweaks'
-}
+export type Section = 'resource_packs' | 'addons' | 'crafting_tweaks';
 
 export interface Category {
   id: string;
-  name: string;
+  name?: string;
+  mutuallyExclusive?: boolean;
   packs: Pack[];
   message?: Message;
 }
@@ -361,25 +357,25 @@ export type Severity = 'success' | 'info' | 'warn' | 'error' | 'secondary';
 
 export interface Pack {
   id: string;
-  name: string;
-  description: string;
+  name?: string;
+  description?: string;
   message?: Message;
-  version?: string; // * only Addons and CT
+  version?: string; // Version of a crafting tweak
   priority?: number; // Higher number, higher priority
   disabled?: boolean;
+  incompatibilities?: string[];
 }
 
 /**
- * Pack Version is a string as follows: "<minecraft_version> - <pack_version>" for addons
- * and just "<pack_version>" for crafting tweaks
- * minecraft_version is the minimum version of the game the pack is compatible with
+ * Pack Version is a string as follows: "<pack_version>" for crafting tweaks
  * pack_version is the version of the pack for that minecraft update, each mc update it resets
  * example:
- * (version update)     "1.21.50 - 1.0.0"
- * (bug fix)            "1.21.50 - 1.0.1"
- * (pack major revamp)  "1.21.50 - 2.0.0"
- * (pack improvements)  "1.21.50 - 2.1.0"
- * (version update)     "1.22.0 - 1.0.0"
+ * (version update)     "1.0.0"
+ * (bug fix)            "1.0.1"
+ * (pack major revamp)  "2.0.0"
+ * (pack improvements)  "2.1.0"
+ *
+ * An addon's own version and minimum engine version are maintained in its manifests.
  */
 
 export interface Combination {
@@ -387,6 +383,7 @@ export interface Combination {
   id: string;
   // Contains an array of <pack_category>/<pack_id> of the packs which make the combination
   combines: string[];
+  resolvesIncompatibilities?: [string, string][];
 }
 
 // JSON files which will be deep merged into a single file
@@ -395,6 +392,31 @@ export interface DeepMergeFile {
   filepath: string;
 }
 ```
+
+### Pack Compatibility
+
+- Set `mutuallyExclusive: true` on the category that should allow one pick. The limit is shared by the category's own packs and all descendants. Category IDs with `/` define this hierarchy. For example, `gui/hearts` and `gui/hearts/lgbtq+_pride` share one pick when `gui/hearts` is marked. The highest marked ancestor sets the limit.
+- Use `Pack.incompatibilities` to list full `categoryId/packId` paths, such as `utility/mine_progress_bar`. A literal category path ending in `/`, such as `world_of_color/elytra/`, covers every pack in that category and its descendants. All path characters are literal. One declaration covers both directions. The picker shows the conflicting packs and blocks downloading while both are selected.
+- Use `Combination.resolvesIncompatibilities` when a combination makes a declared pair compatible. Both paths in each pair must also appear in `combines`. The pair is allowed once every pack in `combines` is selected. Category exclusivity still applies.
+- Record intentional PNG overlaps that work without a combination in [`tools/check-incompatibilities/compatible-overlaps.mts`](tools/check-incompatibilities/compatible-overlaps.mts). List the two pack or category paths, the exact PNG paths relative to the resource pack root, and why they work together. These entries apply only to the checker's listed files. The picker reads the catalog declarations.
+
+For example, the bamboo plank combination resolves the conflict between Consistent Bamboo Planks and Variated Planks when Old Planks is selected too.
+
+```json
+{
+  "id": "extras/hierarchy/consistent_oarless_old_variated_bamboo/consistent_old_variated_bamboo",
+  "combines": [
+    "aesthetic/consistent_bamboo_planks",
+    "retro/old_planks",
+    "variation/variated_planks"
+  ],
+  "resolvesIncompatibilities": [
+    ["aesthetic/consistent_bamboo_planks", "variation/variated_planks"]
+  ]
+}
+```
+
+After changing resource packs or their compatibility metadata, run `yarn check:incompatibilities` from the Files repo root to review overlapping PNGs and undeclared conflicts.
 
 ## Development Environment
 

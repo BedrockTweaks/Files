@@ -12,6 +12,9 @@
 			"packs": [
 				{
 					"id": "alternate_block_destruction",
+					"incompatibilities": [
+						"utility/mine_progress_bar"
+					],
 					"name": "Alternate Block Destruction",
 					"description": "Changes the breaking texture of blocks to a messy ring around the outside"
 				},
@@ -27,6 +30,9 @@
 				},
 				{
 					"id": "unbundled_hay_bales",
+					"incompatibilities": [
+						"retro/old_wool_colors"
+					],
 					"name": "Unbundled Hay Bales",
 					"description": "Gets rid of the red strings around Hay Bales"
 				},
@@ -47,6 +53,11 @@
 				},
 				{
 					"id": "desaturated_dark_oak",
+					"incompatibilities": [
+						"retro/old_planks",
+						"retro/pre_1_18_stripped_dark_oak",
+						"variation/variated_planks"
+					],
 					"name": "Desaturated Dark Oak",
 					"description": "Desaturates the color of Dark Oak wood",
 					"priority": 2
@@ -63,6 +74,9 @@
 				},
 				{
 					"id": "horizontal_nuggets",
+					"incompatibilities": [
+						"aesthetic/vertical_nuggets"
+					],
 					"name": "Horizontal Nuggets",
 					"description": "Rotates Copper and Gold Nuggets to be consistent with the Iron Nugget"
 				},
@@ -73,11 +87,18 @@
 				},
 				{
 					"id": "clean_wool",
+					"incompatibilities": [
+						"aesthetic/softer_wool",
+						"retro/old_wool_colors"
+					],
 					"name": "Clean Wool",
 					"description": "Makes all wool blocks have a clean texture"
 				},
 				{
 					"id": "softer_wool",
+					"incompatibilities": [
+						"retro/old_wool_colors"
+					],
 					"name": "Softer Wool",
 					"description": "Lowers the contrast and smoothens all wool blocks"
 				},
@@ -88,6 +109,9 @@
 				},
 				{
 					"id": "red_iron_golem_flowers",
+					"incompatibilities": [
+						"retro/old_spawn_eggs"
+					],
 					"name": "Red Iron Golem Flowers",
 					"description": "Changes the yellow flowers on the Iron Golem skin to red ones in order to match the poppies that they drop"
 				},
@@ -123,6 +147,9 @@
 				},
 				{
 					"id": "flint_tipped_arrows",
+					"incompatibilities": [
+						"retro/old_planks"
+					],
 					"name": "Flint Tipped Arrows",
 					"description": "Changes arrow sprites and entities to have Flint colored tips"
 				},
@@ -138,6 +165,10 @@
 				},
 				{
 					"id": "accurate_spyglass",
+					"incompatibilities": [
+						"fun/what",
+						"unobtrusive/no_spyglass_overlay"
+					],
 					"name": "Accurate Spyglass",
 					"description": "Recolors the Spyglass to use Copper and Amethyst colors, to reflect its crafting recipe"
 				},
@@ -148,12 +179,19 @@
 				},
 				{
 					"id": "smoother_warped_planks",
+					"incompatibilities": [
+						"retro/old_planks",
+						"variation/variated_planks"
+					],
 					"name": "Smoother Warped Planks",
 					"description": "Removes the harsh contrast from Warped Planks",
 					"priority": 2
 				},
 				{
 					"id": "consistent_bamboo_planks",
+					"incompatibilities": [
+						"variation/variated_planks"
+					],
 					"name": "Consistent Bamboo Planks",
 					"description": "Makes Bamboo Planks and Bamboo Mosaics match the textures of the other plank types",
 					"priority": 2
@@ -195,21 +233,39 @@
 				},
 				{
 					"id": "allay_elytra",
+					"incompatibilities": [
+						"aesthetic/dragon_elytra",
+						"aesthetic/phantom_elytra",
+						"aesthetic/vex_elytra",
+						"world_of_color/elytra/"
+					],
 					"name": "Allay Elytra",
 					"description": "Changes Elytra to look like Allay wings"
 				},
 				{
 					"id": "vex_elytra",
+					"incompatibilities": [
+						"world_of_color/elytra/"
+					],
 					"name": "Vex Elytra",
 					"description": "Changes Elytra to look like Vex wings"
 				},
 				{
 					"id": "phantom_elytra",
+					"incompatibilities": [
+						"aesthetic/vex_elytra",
+						"world_of_color/elytra/"
+					],
 					"name": "Phantom Elytra",
 					"description": "Changes Elytra to look like Phantom wings"
 				},
 				{
 					"id": "dragon_elytra",
+					"incompatibilities": [
+						"aesthetic/phantom_elytra",
+						"aesthetic/vex_elytra",
+						"world_of_color/elytra/"
+					],
 					"name": "Dragon Elytra",
 					"description": "Changes Elytra to look like Ender Dragon wings"
 				}
@@ -317,6 +373,9 @@
 				},
 				{
 					"id": "pebbleless_dirt",
+					"incompatibilities": [
+						"terrain/whiter_snow"
+					],
 					"name": "Pebbleless Dirt",
 					"description": "Gets rid of the pebbles in Dirt, Rooted Dirt, and all Grass Block types"
 				},
@@ -337,6 +396,9 @@
 				},
 				{
 					"id": "uniform_ores",
+					"incompatibilities": [
+						"utility/unlit_redstone_ore"
+					],
 					"name": "Uniform Ores",
 					"description": "Makes all ores take on the pattern of Diamond Ore"
 				},
@@ -378,16 +440,26 @@
 				},
 				{
 					"id": "lower_snowy_grass_sides",
+					"incompatibilities": [
+						"terrain/pebbleless_dirt"
+					],
 					"name": "Lower Snowy Grass Sides",
 					"description": "Lowers the sides of Grass Blocks to provide a smoother and whiter snowy landscape"
 				},
 				{
 					"id": "full_snowy_grass_sides",
+					"incompatibilities": [
+						"terrain/lower_and_full_sides/lower_snowy_grass_sides",
+						"terrain/pebbleless_dirt"
+					],
 					"name": "Full Snowy Grass Sides",
 					"description": "Completely covers the sides of Grass Blocks to provide a smoother and whiter snowy landscape"
 				},
 				{
 					"id": "lower_mycelium_sides",
+					"incompatibilities": [
+						"terrain/pebbleless_dirt"
+					],
 					"name": "Lower Mycelium Sides",
 					"description": "Lowers the sides of Mycelium Blocks to provide a smoother and mushroomier landscape"
 				},
@@ -398,6 +470,9 @@
 				},
 				{
 					"id": "lower_dirt_path_sides",
+					"incompatibilities": [
+						"terrain/pebbleless_dirt"
+					],
 					"name": "Lower Dirt Path Sides",
 					"description": "Lowers the sides of Path Blocks to provide a smoother-looking pathway"
 				},
@@ -408,6 +483,9 @@
 				},
 				{
 					"id": "lower_podzol_sides",
+					"incompatibilities": [
+						"terrain/pebbleless_dirt"
+					],
 					"name": "Lower Podzol Sides",
 					"description": "Lowers the sides of Podzol Blocks to provide a smoother and more consistent landscape"
 				},
@@ -920,6 +998,9 @@
 			"packs": [
 				{
 					"id": "ore_borders",
+					"incompatibilities": [
+						"utility/unlit_redstone_ore"
+					],
 					"name": "Ore Borders",
 					"description": "Places a border around ores for easier visibility within caves"
 				},
@@ -1068,16 +1149,25 @@
 				},
 				{
 					"id": "borderless_glass",
+					"incompatibilities": [
+						"unobtrusive/clean_glass"
+					],
 					"name": "Borderless Glass",
 					"description": "Gets rid of the border on the edges of Glass to make it cleaner and more transparent"
 				},
 				{
 					"id": "borderless_stained_glass",
+					"incompatibilities": [
+						"unobtrusive/clean_stained_glass"
+					],
 					"name": "Borderless Stained Glass",
 					"description": "Gets rid of the border on the edges of Stained Glass to make them cleaner and more transparent"
 				},
 				{
 					"id": "borderless_tinted_glass",
+					"incompatibilities": [
+						"unobtrusive/clean_tinted_glass"
+					],
 					"name": "Borderless Tinted Glass",
 					"description": "Gets rid of the border on the edges of Tinted Glass to make it cleaner and more transparent"
 				},
@@ -1123,6 +1213,9 @@
 				},
 				{
 					"id": "no_pumpkin_overlay",
+					"incompatibilities": [
+						"unobtrusive/translucent_pumpkin_overlay"
+					],
 					"name": "No Pumpkin Overlay",
 					"description": "Removes the Pumpkin overlay completely when worn"
 				},
@@ -1133,6 +1226,9 @@
 				},
 				{
 					"id": "no_spyglass_overlay",
+					"incompatibilities": [
+						"unobtrusive/translucent_spyglass_overlay"
+					],
 					"name": "No Spyglass Overlay",
 					"description": "Removes the Spyglass overlay completely when zooming in",
 					"priority": 2
@@ -1160,6 +1256,9 @@
 			"packs": [
 				{
 					"id": "3d_sun_and_moon",
+					"incompatibilities": [
+						"terrain/circular_sun_and_moon"
+					],
 					"name": "3D Sun & Moon",
 					"description": "Retextures the Sun and Moon textures to give the illusion of being 3D"
 				},
@@ -1176,6 +1275,23 @@
 			"packs": [
 				{
 					"id": "dark_ui",
+					"incompatibilities": [
+						"gui/hotbar_selector/black_hotbar_selector",
+						"gui/hotbar_selector/blue_hotbar_selector",
+						"gui/hotbar_selector/brown_hotbar_selector",
+						"gui/hotbar_selector/cyan_hotbar_selector",
+						"gui/hotbar_selector/gray_hotbar_selector",
+						"gui/hotbar_selector/green_hotbar_selector",
+						"gui/hotbar_selector/light_blue_hotbar_selector",
+						"gui/hotbar_selector/lime_hotbar_selector",
+						"gui/hotbar_selector/magenta_hotbar_selector",
+						"gui/hotbar_selector/orange_hotbar_selector",
+						"gui/hotbar_selector/pink_hotbar_selector",
+						"gui/hotbar_selector/purple_hotbar_selector",
+						"gui/hotbar_selector/red_hotbar_selector",
+						"gui/hotbar_selector/yellow_hotbar_selector",
+						"parity/java_inventory_slot_highlight"
+					],
 					"name": "Dark UI",
 					"description": "Changes all inventories and UIs to be darker"
 				},
@@ -1201,6 +1317,9 @@
 				},
 				{
 					"id": "translucent_tooltips",
+					"incompatibilities": [
+						"retro/beta_item_tooltip"
+					],
 					"name": "Translucent Tooltips",
 					"description": "Makes item tooltips translucent"
 				},
@@ -1228,6 +1347,7 @@
 		},
 		{
 			"id": "gui/fonts",
+			"mutuallyExclusive": true,
 			"name": "GUI / Fonts",
 			"packs": [
 				{
@@ -1264,6 +1384,7 @@
 		},
 		{
 			"id": "gui/crosshairs",
+			"mutuallyExclusive": true,
 			"name": "GUI / Crosshairs",
 			"packs": [
 				{
@@ -1340,6 +1461,7 @@
 		},
 		{
 			"id": "gui/hearts",
+			"mutuallyExclusive": true,
 			"name": "GUI / Hearts",
 			"packs": [
 				{
@@ -1562,6 +1684,7 @@
 		},
 		{
 			"id": "gui/hunger_bars",
+			"mutuallyExclusive": true,
 			"name": "GUI / Hunger Bars",
 			"packs": [
 				{
@@ -1733,6 +1856,7 @@
 		},
 		{
 			"id": "gui/armor_bars",
+			"mutuallyExclusive": true,
 			"name": "GUI / Armor Bars",
 			"packs": [
 				{
@@ -1769,6 +1893,7 @@
 		},
 		{
 			"id": "gui/experience_bars",
+			"mutuallyExclusive": true,
 			"name": "GUI / Experience Bars",
 			"packs": [
 				{
@@ -1840,6 +1965,7 @@
 		},
 		{
 			"id": "gui/hotbar_selector",
+			"mutuallyExclusive": true,
 			"name": "GUI / Hotbar Selector",
 			"packs": [
 				{
@@ -1930,10 +2056,14 @@
 		},
 		{
 			"id": "gui/menu_panoramas",
+			"mutuallyExclusive": true,
 			"name": "GUI / Menu Panoramas",
 			"packs": [
 				{
 					"id": "no_panorama_overlay",
+					"incompatibilities": [
+						"retro/dirt_background"
+					],
 					"name": "No Panorama Overlay",
 					"description": "Removes the translucent overlay gradient from the menu panorama if it has one"
 				},
@@ -1944,26 +2074,41 @@
 				},
 				{
 					"id": "ocean_panorama",
+					"incompatibilities": [
+						"retro/dirt_background"
+					],
 					"name": "Ocean Panorama",
 					"description": "Replaces the default Minecraft menu panorama with a 360° view of the ocean (from 1.13)"
 				},
 				{
 					"id": "village_panorama",
+					"incompatibilities": [
+						"retro/dirt_background"
+					],
 					"name": "Village Panorama",
 					"description": "Replaces the default Minecraft menu panorama with a 360° view of a village (from 1.14)"
 				},
 				{
 					"id": "bees_panorama",
+					"incompatibilities": [
+						"retro/dirt_background"
+					],
 					"name": "Bees Panorama",
 					"description": "Replaces the default Minecraft menu panorama with a 360° view of a group of happy bees! (from 1.15)"
 				},
 				{
 					"id": "nether_panorama",
+					"incompatibilities": [
+						"retro/dirt_background"
+					],
 					"name": "Nether Panorama",
 					"description": "Replaces the default Minecraft menu panorama with a 360° view of the Nether! (from 1.16)"
 				},
 				{
 					"id": "amethyst_geode_panorama",
+					"incompatibilities": [
+						"retro/dirt_background"
+					],
 					"name": "Amethyst Geode Panorama",
 					"description": "Replaces the default Minecraft menu panorama with a 360° view of an amethyst geode! (from 1.17)"
 				},
@@ -1974,6 +2119,9 @@
 				},
 				{
 					"id": "mangrove_swamp_panorama",
+					"incompatibilities": [
+						"retro/dirt_background"
+					],
 					"name": "Mangrove Swamp Panorama",
 					"description": "Replaces the default Minecraft menu panorama with a 360° view of a mangrove swamp (from 1.19)"
 				},
@@ -1984,11 +2132,17 @@
 				},
 				{
 					"id": "trial_chamber_panorama",
+					"incompatibilities": [
+						"retro/dirt_background"
+					],
 					"name": "Trial Chamber Panorama",
 					"description": "Replaces the default Minecraft menu panorama with a 360° view of a Trial Chamber (from 1.21)"
 				},
 				{
 					"id": "spring_to_life_panorama",
+					"incompatibilities": [
+						"retro/dirt_background"
+					],
 					"name": "Spring to Life Panorama",
 					"description": "Replaces the default Minecraft menu panorama with a 360° view of a forest and desert (from 1.21.70)"
 				},
@@ -2004,26 +2158,41 @@
 				},
 				{
 					"id": "copper_golem_village_panorama",
+					"incompatibilities": [
+						"retro/dirt_background"
+					],
 					"name": "Copper Golem Village Panorama",
 					"description": "Replaces the default Minecraft menu panorama with a 360° view of Copper Golems in a village! (from 1.21.111)"
 				},
 				{
 					"id": "mounts_of_mayhem_panorama",
+					"incompatibilities": [
+						"retro/dirt_background"
+					],
 					"name": "Mounts of Mayhem Panorama",
 					"description": "Replaces the default Minecraft menu panorama with a 360° view of Zombies and Drowneds riding Horses and Nautilus! (from 1.21.130)"
 				},
 				{
 					"id": "tiny_takeover_panorama",
+					"incompatibilities": [
+						"retro/dirt_background"
+					],
 					"name": "Tiny Takeover Panorama",
 					"description": "Replaces the default Minecraft menu panorama with a 360° view of baby mobs in a cherry grove! (from 26.10)"
 				},
 				{
 					"id": "sulfur_caves_panorama",
+					"incompatibilities": [
+						"retro/dirt_background"
+					],
 					"name": "Sulfur Caves Panorama",
 					"description": "Replaces the default Minecraft menu panorama with a 360° view of sulfur cubes in a sulfur cave! (from 26.30)"
 				},
 				{
 					"id": "the_end_panorama",
+					"incompatibilities": [
+						"retro/dirt_background"
+					],
 					"name": "The End Panorama",
 					"description": "Replaces the default Minecraft menu panorama with a 360° view of the main End island"
 				},
@@ -2034,21 +2203,33 @@
 				},
 				{
 					"id": "nostalgia_panorama",
+					"incompatibilities": [
+						"retro/dirt_background"
+					],
 					"name": "Nostalgia Panorama",
 					"description": "Replaces the default Minecraft menu panorama with a 360° view of a neon green plains biome from Alpha"
 				},
 				{
 					"id": "oceanside_extreme_hills_panorama",
+					"incompatibilities": [
+						"retro/dirt_background"
+					],
 					"name": "Oceanside Extreme Hills Panorama",
 					"description": "Replaces the default Minecraft menu panorama with a 360° view of an Oceanside Extreme Hills"
 				},
 				{
 					"id": "lakeside_sunset_panorama",
+					"incompatibilities": [
+						"retro/dirt_background"
+					],
 					"name": "Lakeside Sunset Panorama",
 					"description": "Replaces the default Minecraft menu panorama with a 360° view of a Lakeside Sunset"
 				},
 				{
 					"id": "underground_lava_pool_panorama",
+					"incompatibilities": [
+						"retro/dirt_background"
+					],
 					"name": "Underground Lava Pool Panorama",
 					"description": "Replaces the default Minecraft menu panorama with a 360° view of an underground lava pool"
 				},
@@ -2069,11 +2250,17 @@
 				},
 				{
 					"id": "tu69_tutorial_world_panorama_legacy_console",
+					"incompatibilities": [
+						"retro/dirt_background"
+					],
 					"name": "TU69 Tutorial World Panorama (Legacy Console)",
 					"description": "Replaces the default Minecraft menu panorama with a 360° view of Minecraft: Console Edition TU69's tutorial world"
 				},
 				{
 					"id": "strideys_resource_pack_dev_world_panorama",
+					"incompatibilities": [
+						"retro/dirt_background"
+					],
 					"name": "Stridey's Resource Pack Dev World Panorama",
 					"description": "Replaces the default Minecraft menu panorama with a 360° view of Stridey's resource pack development world"
 				}
@@ -2141,11 +2328,18 @@
 			"packs": [
 				{
 					"id": "alpha_minecraft_logo",
+					"incompatibilities": [
+						"retro/classic_minecraft_logo",
+						"retro/old_bedrock_menu_title"
+					],
 					"name": "Alpha Minecraft Logo",
 					"description": "Brings back the old hand-built Cobblestone Minecraft logo from the Alpha days!"
 				},
 				{
 					"id": "classic_minecraft_logo",
+					"incompatibilities": [
+						"retro/old_bedrock_menu_title"
+					],
 					"name": "Classic Minecraft Logo",
 					"description": "Brings back the classic pixelated Minecraft logo!"
 				},
@@ -2161,6 +2355,14 @@
 				},
 				{
 					"id": "alpha_foliage",
+					"incompatibilities": [
+						"terrain/darker_dark_oak_leaves",
+						"terrain/golden_savanna",
+						"terrain/lush_grass_all_round",
+						"terrain/pebbleless_dirt",
+						"terrain/shorter_short_grass",
+						"terrain/shorter_tall_grass"
+					],
 					"name": "Alpha Foliage",
 					"description": "Changes the foliage textures to those of Alpha Minecraft"
 				},
@@ -2171,6 +2373,9 @@
 				},
 				{
 					"id": "classic_ores",
+					"incompatibilities": [
+						"terrain/uniform_ores"
+					],
 					"name": "Classic Ores",
 					"description": "Reverts all ores to their pre-1.17 textures, including Deepslate and Copper ores"
 				},
@@ -2181,6 +2386,10 @@
 				},
 				{
 					"id": "old_planks",
+					"incompatibilities": [
+						"variation/variated_planks",
+						"retro/old_wool_colors"
+					],
 					"name": "Old Planks",
 					"description": "Reverts all planks and signs to their old textures, including modern plank types",
 					"priority": 1
@@ -2268,6 +2477,9 @@
 				},
 				{
 					"id": "bed_icons",
+					"incompatibilities": [
+						"retro/old_wool_colors"
+					],
 					"name": "Bed Icons",
 					"description": "Reverts Bed items to icons rather than models, like they were prior to 1.12"
 				},
@@ -2333,11 +2545,18 @@
 				},
 				{
 					"id": "old_dyes",
+					"incompatibilities": [
+						"world_of_color/alternate_dyes",
+						"world_of_color/paletteless_dyes"
+					],
 					"name": "Old Dyes",
 					"description": "Reverts all dyes to their pre-1.21.100 textures"
 				},
 				{
 					"id": "pre_26_0_stripped_spruce",
+					"incompatibilities": [
+						"terrain/circular_log_tops"
+					],
 					"name": "Pre-26.0 Stripped Spruce",
 					"description": "Reverts stripped spruce to use its pre-26.0 texture"
 				}
@@ -2364,6 +2583,9 @@
 				},
 				{
 					"id": "sus_sand_and_gravel",
+					"incompatibilities": [
+						"utility/suspicious_sand_and_gravel_borders"
+					],
 					"name": "Sus Sand and Gravel",
 					"description": "GET OUT OF MY HEAD GET OUT OF MY HEAD GET OUT OF MY HEAD!"
 				},
@@ -2379,11 +2601,17 @@
 				},
 				{
 					"id": "xisuma_turtle",
+					"incompatibilities": [
+						"retro/old_spawn_eggs"
+					],
 					"name": "Xisuma Turtle",
 					"description": "Changes the Turtle texture to the well-known Xisuma Turtle"
 				},
 				{
 					"id": "xisuma_squids",
+					"incompatibilities": [
+						"retro/old_spawn_eggs"
+					],
 					"name": "Xisuma Squids",
 					"description": "Changes the Squid and Glow Squid textures to the well-known Xisuma Squids"
 				},
@@ -2394,21 +2622,36 @@
 				},
 				{
 					"id": "darth_xisuma_piglins",
+					"incompatibilities": [
+						"retro/old_spawn_eggs"
+					],
 					"name": "Darth Xisuma Piglins",
 					"description": "Changes Piglins, Zombified Piglins and Piglin Brutes' textures to Xisuma's Darth Vader skin"
 				},
 				{
 					"id": "technoblade_pigs",
+					"incompatibilities": [
+						"retro/old_spawn_eggs"
+					],
 					"name": "Technoblade Pigs",
 					"description": "In honor of Technoblade. RIP"
 				},
 				{
 					"id": "stridey_striders",
+					"incompatibilities": [
+						"retro/old_spawn_eggs"
+					],
 					"name": "Stridey Striders",
 					"description": "Awful pack that makes Striders look like Stridey, Sorry"
 				},
 				{
 					"id": "emeralds_to_rubies",
+					"incompatibilities": [
+						"fun/wandering_xisuma",
+						"parity/dungeons_stone",
+						"parity/legacy_console_emerald",
+						"retro/classic_ores"
+					],
 					"name": "Emeralds to Rubies",
 					"description": "Replaces all Emerald items and blocks with Rubies!"
 				},
@@ -2424,6 +2667,11 @@
 				},
 				{
 					"id": "english_enchanting_table_translation",
+					"incompatibilities": [
+						"gui/fonts/blocky_font",
+						"gui/fonts/doodle_font",
+						"gui/fonts/smooth_font"
+					],
 					"name": "English Enchanting Table Translation",
 					"description": "Changes the Enchanting Table language (AKA Standard Galactic) to use English alphabet characters",
 					"message": {
@@ -2433,6 +2681,14 @@
 				},
 				{
 					"id": "standard_galactic_alphabet",
+					"incompatibilities": [
+						"gui/fonts/anti_alias_font",
+						"gui/fonts/blocky_font",
+						"gui/fonts/doodle_font",
+						"gui/fonts/small_caps_font",
+						"gui/fonts/smooth_font",
+						"gui/fonts/square_font"
+					],
 					"name": "Standard Galactic Alphabet",
 					"description": "Changes English alphabet characters to Standard Galactic alphabet characters. (AKA the Enchanting Table language) ∴⍑॥  ↸╎↸ ॥ᒍ⚍ ᒣ∷ᖋリϟ|:ᖋᒣᒷ ᒣ⍑╎ϟ?"
 				},
@@ -2443,17 +2699,30 @@
 				},
 				{
 					"id": "phantom_rain",
+					"incompatibilities": [
+						"unobtrusive/unobtrusive_rain",
+						"unobtrusive/unobtrusive_snow"
+					],
 					"name": "Phantom Rain",
 					"description": "Merges two of the most annoying features into one :)"
 				},
 				{
 					"id": "what",
+					"incompatibilities": [
+						"unobtrusive/no_spyglass_overlay",
+						"unobtrusive/translucent_spyglass_overlay"
+					],
 					"name": "WHAT",
 					"description": "Replaces the Spyglass overlay with the 'WHAT' meme template, including Earthbound's 'Sanctuary Guardian' music",
 					"priority": 1
 				},
 				{
 					"id": "useless_spyglass",
+					"incompatibilities": [
+						"fun/what",
+						"unobtrusive/no_spyglass_overlay",
+						"unobtrusive/translucent_spyglass_overlay"
+					],
 					"name": "Useless Spyglass",
 					"description": "Reverses the Spyglass overlay, making the middle opaque and the sides transparent. It's useless, what did you expect?"
 				},
@@ -2469,6 +2738,24 @@
 				},
 				{
 					"id": "honey_slime",
+					"incompatibilities": [
+						"utility/sticky_piston_sides",
+						"world_of_color/slimes/black_slime",
+						"world_of_color/slimes/blue_slime",
+						"world_of_color/slimes/brown_slime",
+						"world_of_color/slimes/cyan_slime",
+						"world_of_color/slimes/gray_slime",
+						"world_of_color/slimes/green_slime",
+						"world_of_color/slimes/light_blue_slime",
+						"world_of_color/slimes/light_gray_slime",
+						"world_of_color/slimes/magenta_slime",
+						"world_of_color/slimes/orange_slime",
+						"world_of_color/slimes/pink_slime",
+						"world_of_color/slimes/purple_slime",
+						"world_of_color/slimes/red_slime",
+						"world_of_color/slimes/white_slime",
+						"world_of_color/slimes/yellow_slime"
+					],
 					"name": "Honey Slime",
 					"description": "Replaces all things slimy with all things honey-y!",
 					"priority": 1
@@ -2493,6 +2780,7 @@
 		},
 		{
 			"id": "world_of_color/slimes",
+			"mutuallyExclusive": true,
 			"name": "World of Color / Slimes",
 			"packs": [
 				{
@@ -2589,6 +2877,7 @@
 		},
 		{
 			"id": "world_of_color/elytra",
+			"mutuallyExclusive": true,
 			"name": "World of Color / Elytra",
 			"packs": [
 				{
@@ -2670,6 +2959,7 @@
 		},
 		{
 			"id": "world_of_color/enchantment_glints",
+			"mutuallyExclusive": true,
 			"name": "World of Color / Enchantment Glints",
 			"packs": [
 				{
@@ -2705,6 +2995,11 @@
 			"packs": [
 				{
 					"id": "a_minecraft_movie_logo",
+					"incompatibilities": [
+						"retro/alpha_minecraft_logo",
+						"retro/classic_minecraft_logo",
+						"retro/old_bedrock_menu_title"
+					],
 					"name": "'A Minecraft Movie' Logo",
 					"description": "Gives the game its logo from 'A Minecraft Movie'"
 				},
@@ -2736,6 +3031,9 @@
 				},
 				{
 					"id": "dungeons_creepers",
+					"incompatibilities": [
+						"retro/old_spawn_eggs"
+					],
 					"name": "Dungeons Creepers",
 					"description": "Gives the Creeper its texture from Minecraft: Dungeons"
 				},
@@ -2746,11 +3044,26 @@
 				},
 				{
 					"id": "dungeons_dirt",
+					"incompatibilities": [
+						"retro/alpha_foliage",
+						"terrain/lower_and_full_sides/full_snowy_grass_sides",
+						"terrain/lower_and_full_sides/lower_dirt_path_sides",
+						"terrain/lower_and_full_sides/lower_mycelium_sides",
+						"terrain/lower_and_full_sides/lower_podzol_sides",
+						"terrain/lower_and_full_sides/lower_snowy_grass_sides",
+						"terrain/pebbleless_coarse_dirt",
+						"terrain/whiter_snow"
+					],
 					"name": "Dungeons Dirt",
 					"description": "Gives Dirt its texture from Minecraft: Dungeons"
 				},
 				{
 					"id": "dungeons_stone",
+					"incompatibilities": [
+						"retro/classic_ores",
+						"terrain/uniform_ores",
+						"variation/variated_stone"
+					],
 					"name": "Dungeons Stone",
 					"description": "Gives Stone its texture from Minecraft: Dungeons (with 12 texture variants)"
 				},
@@ -2761,6 +3074,9 @@
 				},
 				{
 					"id": "super_smash_bros_enderman",
+					"incompatibilities": [
+						"retro/old_spawn_eggs"
+					],
 					"name": "Super Smash Bros Enderman",
 					"description": "Recolors Endermen to have the same palette as they do in 'Super Smash Bros Ultimate' and makes them shorter!"
 				},
@@ -2771,6 +3087,9 @@
 				},
 				{
 					"id": "legacy_console_snowball",
+					"incompatibilities": [
+						"terrain/whiter_snow"
+					],
 					"name": "Legacy Console Snowball",
 					"description": "Gives the Snowball its texture from old legacy console editions of Minecraft"
 				},
@@ -2797,6 +3116,9 @@
 				},
 				{
 					"id": "redstone_wire_fix",
+					"incompatibilities": [
+						"utility/clean_redstone_dust"
+					],
 					"name": "Redstone Wire Fix",
 					"description": "Adds some extra pixels to the Redstone Wire texture to make sure the whole line joins up"
 				},
@@ -2812,6 +3134,9 @@
 				},
 				{
 					"id": "consistent_buckets",
+					"incompatibilities": [
+						"terrain/whiter_snow"
+					],
 					"name": "Consistent Buckets",
 					"description": "Moves empty, Water, Lava, and Powder Snow Buckets down by 1 pixel to make them consistent with Fish and Axolotl Buckets"
 				},
@@ -2847,6 +3172,9 @@
 				},
 				{
 					"id": "pixel_consistent_ghast",
+					"incompatibilities": [
+						"retro/old_ghasts"
+					],
 					"name": "Pixel Consistent Ghast",
 					"description": "Retextures the Ghast's texture to be consistent with its size"
 				},
@@ -2862,6 +3190,9 @@
 				},
 				{
 					"id": "pixel_consistent_signs",
+					"incompatibilities": [
+						"retro/old_planks"
+					],
 					"name": "Pixel Consistent Signs",
 					"description": "Retextures all sign textures to be consistent with their size"
 				},
@@ -2897,6 +3228,10 @@
 				},
 				{
 					"id": "nicer_fast_leaves",
+					"incompatibilities": [
+						"retro/alpha_foliage",
+						"terrain/darker_dark_oak_leaves"
+					],
 					"name": "Nicer Fast Leaves",
 					"description": "Replaces the random green parts in leaves to a darker green when having fancy leaves disabled"
 				},
@@ -3595,6 +3930,9 @@
 		},
 		{
 			"id": "extras/hierarchy/consistent_oarless_old_variated_bamboo/consistent_old_variated_bamboo",
+			"resolvesIncompatibilities": [
+				["aesthetic/consistent_bamboo_planks", "variation/variated_planks"]
+			],
 			"combines": [
 				"aesthetic/consistent_bamboo_planks",
 				"retro/old_planks",

@@ -11,7 +11,15 @@
 		"regolith-install": "yarn workspaces foreach -i -A --topological --jobs=1 run regolith-install",
 		"build": "yarn workspaces foreach -i -A run build",
 		"lint": "yarn workspaces foreach -i -A run lint",
-		"test": "yarn workspaces foreach -i -A --continue run test"
+		"test": "yarn workspaces foreach -i -A --continue run test",
+		"check:incompatibilities": "node tools/check-incompatibilities/index.mts",
+		"typecheck:tools": "tsc -p tools/tsconfig.json",
+		"test:tools": "node --test \"tools/**/*.test.mts\""
+	},
+	"devDependencies": {
+		"@types/node": "25.9.9",
+		"jsonc-parser": "3.3.1",
+		"typescript": "^6.0.3"
 	},
 	"engines": {
 		"node": ">=25.0.0"
