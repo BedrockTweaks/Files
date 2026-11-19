@@ -128,13 +128,6 @@ abc55, WavePlayz, r4isen1920, randomityguy, LukasPlaysGames, TheBlueShadow and a
                 </a>
             </td>
             <td align="center">
-                <a href="https://github.com/IdotIcom">
-                    <img src="https://avatars.githubusercontent.com/u/176992055?v=4" width="100;" alt="IdotIcom"/>
-                    <br />
-                    <sub><b>IdotIcom</b></sub>
-                </a>
-            </td>
-            <td align="center">
                 <a href="https://github.com/daniswastaken">
                     <img src="https://avatars.githubusercontent.com/u/143309460?v=4" width="100;" alt="daniswastaken"/>
                     <br />
