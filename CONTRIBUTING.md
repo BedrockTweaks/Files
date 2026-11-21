@@ -38,6 +38,17 @@ Pack testing requirements:
 12. Push your changes to your forked repository.
 13. Submit a pull request with the following format to the main repository.
 
+## Project structure
+
+The root `package.json` configures the Yarn 4 workspaces and shared commands. Each addon category registers its child workspaces in its own `package.json`.
+
+| Path | Contents |
+| --- | --- |
+| `addons/files/<category>/<addon>/` | Addon workspaces |
+| `resource_packs/files/` and `crafting_tweaks/files/` | Static pack files |
+| `packs.json` inside each section | The catalog for that section |
+| `tools/` and `out/` | Repository scripts and generated reports |
+
 ## Style Guide
 
 As a base we use the [Bedrock Wiki Style Guide](https://wiki.bedrock.dev/meta/style-guide.html#top) with some extras and modifications.
@@ -113,6 +124,8 @@ If there is need to scale the template use closest neighbor instead of other sam
 
 JSON, JS and TS files should be formatted using 1 tab with size 4 for indentation.
 
+Repository tools use two spaces in JS and TS files to match their ESLint config. Addons can define their own JS and TS formatting rules.
+
 ### Addons (Yarn Monorepo Packages)
 
 Addons are managed as Yarn workspace packages. To start working in addons you will need to have the following:
@@ -126,11 +139,13 @@ right of the IDE.
 
 **Creating a new addon:**
 
-1. Copy the template from `templates/addon/` to `addons/<category>/<addon_name>/`
-2. Update `addons/<category>/package.json` to include the new addon in workspaces
-3. Update `addons/<category>/<addon_name>/package.json` using the graves example as reference:
-4. Update UUIDs, pack name, and descriptions in BP/RP manifest.json and config.json
-5. Update module versions in config.json and package.json as needed
+Addons are built on the [bedrock-core](https://bedrock-core.drav.dev/) stack. Scaffold them with the repo wrapper around its CLI:
+
+1. Run `yarn run create` from the repo root for interactive category, name, author, description, preset and installation prompts. For command-line use, run `yarn run create <category> <addon_name> [--author <name>] [description...] --yes` (example: `yarn run create gameplay_changes my_addon When you die, a grave saves all your drops. --yes`)
+2. It scaffolds `addons/files/<category>/<addon_name>/` with creator `bt` and namespace `bt_<category_initials>_<addon_name>` (example: `bt_gc_graves`), credits you as the author (your git user.name, or `--author`) in `config.json`, the manifests and the bedrock-core addon list (`Bedrock Tweaks, <author>`), adapts the package to the monorepo (`@bedrock-tweaks/<addon_name>`, private, no addon-local yarn files) and registers it in the category workspaces
+3. Run `yarn install` at the root, then build the addon from its directory
+4. Add the pack entry to `addons/packs.json` with id `<addon_name>` under its category (the `bt_<category_initials>_<addon_name>` namespace is only for commands, tags and identifiers inside the addon)
+5. Use the latest stable Minecraft module versions and `min_engine_version`; experimental/beta APIs are not accepted
 
 **Development workflow:**
 
@@ -146,8 +161,9 @@ From the root directory, use these commands to manage the entire monorepo:
 
 - **Install Regolith for all addons**: `yarn regolith-install`
 - **Build all addons**: `yarn build`
-- **Lint all packages**: `yarn lint`
-- **Test all packages**: `yarn test` (skips packages without test script)
+- **Lint all addons**: `yarn lint`
+- **Typecheck all addons**: `yarn typecheck`
+- **Test all packages**: `yarn test`
 
 **Before submitting PR:**
 
@@ -155,19 +171,24 @@ From the root directory, use these commands to manage the entire monorepo:
 - Bump versions in addon `package.json` and `addons/packs.json`
 - Test the addon in-game on at least 1 device
 
-**Monorepo structure:**
+#### GameTests
 
-- Addons are managed as Yarn workspace packages
-- Shared dependencies (TypeScript, ESLint, Regolith modules) are installed once at root
-- Root `package.json` is used for validation, initial setup, and general monorepo management
+The repository pins the shared Bedrock Dedicated Server build in `bds-runner.json`. The server cache, worlds, and logs live under `.bds/`.
 
-Regarding regolith filters, currently it is only accepted filters which run on node.
+Run these commands from the repository root to inspect or cache the server and run an addon's GameTests.
 
-Resource Pack JSON UI modifications for addons are not accepted at this moment.
+```bash
+yarn bc-bds where
+yarn bc-bds fetch
+yarn workspace @bedrock-tweaks/graves test
+```
+
+Each addon defines its GameTest command in its own `package.json`. In the Graves workspace, run `yarn build:test` followed by `yarn gametest --tag <tag>` to run a single group.
 
 #### Technical Details
 
-- Addons should not have functions
+- Custom builder plugins must run on Node.js.
+- Addons should not have functions, prefer custom commands
 - All settings and interactions should be in-game or in server forms
 - Addons should have a basic `/bt:<addon_name> config` (TBD specifics discuss in discord) base command which should open a config server form
 - Addon could have extra commands for quick access if necessary for commodity (for example tpa) but prefer server forms, easier for normal users
@@ -193,6 +214,28 @@ When making an addon from the template you should look for these keys and replac
 ```
 
 If you notice any files not following the Style Guide feel free to open a PR.
+
+## Repository tools
+
+Run these commands from the repository root after `yarn install`.
+
+| Command | Purpose |
+| --- | --- |
+| `yarn run create` | Scaffold an addon and register its workspaces. See [addon setup](#addons-yarn-monorepo-packages). |
+| `yarn coverage` | Refresh the README badges and write `out/coverage.json` with Vanilla Tweaks matches, missing packs, and Bedrock-only packs. |
+| `yarn incompatibilities` | Report overlapping resource pack PNGs and write `out/incompatibilities.json`. |
+| `yarn lint:tools`, `yarn typecheck:tools`, `yarn test:tools` | Lint, typecheck, and test the tools. |
+
+### Resource pack incompatibility checker
+
+The default scan excludes pack icons and treats identical PNGs and PNGs supplied by two-pack combinations as compatible. The report counts overlaps within mutually exclusive categories separately and lists known compatible overlaps and missing directories. See [pack compatibility](#pack-compatibility) for declaring conflicts and resolutions.
+
+- `yarn incompatibilities --write` adds detected conflicts and removes direct declarations covered by combinations, intentional overlaps, or mutually exclusive categories.
+- `yarn incompatibilities --write --prune` also removes direct declarations without a detected PNG conflict. Review the diff for conflicts that involve other asset types.
+
+Both write modes preserve category references and explicit combination resolutions. They skip affected pairs when pack or combination directories are missing. If the report lists a pair under `conditionalResolutions`, record the pair in the larger combination's `resolvesIncompatibilities` before running `--write`.
+
+The checker exits with `0` after a complete scan with no undeclared conflicts, `1` when undeclared conflicts remain, or `2` when the scan is incomplete or fails.
 
 ## Git Formats
 
@@ -326,16 +369,18 @@ updated pull_request_template.md
 
 ## packs.json
 
-The interfaces below describe fields authored in `packs.json`. The API validates the catalog against the [shared Zod schemas](https://github.com/BedrockTweaks/codebase/blob/main/packages/types/src/schemas.ts).
+The three section catalogs use the [local JSON schema](schemas/packs.schema.json) for editor validation. The API validates them against the [shared Zod schemas](https://github.com/BedrockTweaks/codebase/blob/main/packages/types/src/schemas.ts).
+
+Omit `combinations` and `deepMergeFiles` when they are unused. Addon dependencies come from their pack manifests.
 
 ```ts
 export interface PacksJSON {
   section: Section;
-  // Minimum engine version in the generated manifest, such as [1, 26, 20]
+  // Catalog minimum engine version, such as [1, 26, 50]
   version: number[];
   categories: Category[];
-  combinations: Combination[];
-  deepMergeFiles: DeepMergeFile[];
+  combinations?: Combination[];
+  deepMergeFiles?: string[]; // Paths inside the pack, such as /textures/terrain_texture.json
 }
 
 export type Section = 'resource_packs' | 'addons' | 'crafting_tweaks';
@@ -386,11 +431,6 @@ export interface Combination {
   resolvesIncompatibilities?: [string, string][];
 }
 
-// JSON files which will be deep merged into a single file
-export interface DeepMergeFile {
-  filename: string;
-  filepath: string;
-}
 ```
 
 ### Pack Compatibility
@@ -398,7 +438,7 @@ export interface DeepMergeFile {
 - Set `mutuallyExclusive: true` on the category that should allow one pick. The limit is shared by the category's own packs and all descendants. Category IDs with `/` define this hierarchy. For example, `gui/hearts` and `gui/hearts/lgbtq+_pride` share one pick when `gui/hearts` is marked. The highest marked ancestor sets the limit.
 - Use `Pack.incompatibilities` to list full `categoryId/packId` paths, such as `utility/mine_progress_bar`. A literal category path ending in `/`, such as `world_of_color/elytra/`, covers every pack in that category and its descendants. All path characters are literal. One declaration covers both directions. The picker shows the conflicting packs and blocks downloading while both are selected.
 - Use `Combination.resolvesIncompatibilities` when a combination makes a declared pair compatible. Both paths in each pair must also appear in `combines`. The pair is allowed once every pack in `combines` is selected. Category exclusivity still applies.
-- Record intentional PNG overlaps that work without a combination in [`tools/check-incompatibilities/compatible-overlaps.mts`](tools/check-incompatibilities/compatible-overlaps.mts). List the two pack or category paths, the exact PNG paths relative to the resource pack root, and why they work together. These entries apply only to the checker's listed files. The picker reads the catalog declarations.
+- Record intentional PNG overlaps that work without a combination in [`tools/incompatibilities/compatible-overlaps.mts`](tools/incompatibilities/compatible-overlaps.mts). List the two pack or category paths, the exact PNG paths relative to the resource pack root, and why they work together. These entries apply only to the checker's listed files. The picker reads the catalog declarations.
 
 For example, the bamboo plank combination resolves the conflict between Consistent Bamboo Planks and Variated Planks when Old Planks is selected too.
 
@@ -416,7 +456,7 @@ For example, the bamboo plank combination resolves the conflict between Consiste
 }
 ```
 
-After changing resource packs or their compatibility metadata, run `yarn check:incompatibilities` from the Files repo root to review overlapping PNGs and undeclared conflicts.
+After changing resource packs or their compatibility metadata, run the [resource pack incompatibility checker](#resource-pack-incompatibility-checker).
 
 ## Development Environment
 

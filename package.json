@@ -8,18 +8,29 @@
 		"addons/files/*"
 	],
 	"scripts": {
-		"regolith-install": "yarn workspaces foreach -i -A --topological --jobs=1 run regolith-install",
 		"build": "yarn workspaces foreach -i -A run build",
 		"lint": "yarn workspaces foreach -i -A run lint",
-		"test": "yarn workspaces foreach -i -A --continue run test",
-		"check:incompatibilities": "node tools/check-incompatibilities/index.mts",
+		"typecheck": "yarn workspaces foreach -i -A run typecheck",
+		"test": "yarn workspaces foreach -i -A run test",
+		"lint:tools": "eslint tools",
 		"typecheck:tools": "tsc -p tools/tsconfig.json",
-		"test:tools": "node --test \"tools/**/*.test.mts\""
+		"test:tools": "node --test \"tools/**/*.test.mts\"",
+		"create": "node tools/create/index.mts",
+		"coverage": "node tools/coverage/index.mts",
+		"incompatibilities": "node tools/incompatibilities/index.mts"
 	},
 	"devDependencies": {
+		"@bedrock-core/bds-runner": "0.3.0",
+		"@bedrock-core/cli": "0.13.0",
+		"@eslint/js": "^10.0.1",
+		"@stylistic/eslint-plugin": "^5.10.0",
 		"@types/node": "25.9.9",
+		"@types/prompts": "2.4.9",
+		"eslint": "^10.4.1",
 		"jsonc-parser": "3.3.1",
-		"typescript": "^6.0.3"
+		"prompts": "^2.4.2",
+		"typescript": "^6.0.3",
+		"typescript-eslint": "^8.60.1"
 	},
 	"engines": {
 		"node": ">=25.0.0"

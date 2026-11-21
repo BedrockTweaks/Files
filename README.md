@@ -3,7 +3,12 @@
         height="130">
 </p>
 
-[![Better Stack Badge](https://uptime.betterstack.com/status-badges/v3/monitor/25yg7.svg)](https://uptime.betterstack.com/?utm_source=status_badge)
+[![Better Stack Badge](https://incidents.betterstack.com/status-badges/v1/monitor/25yg7.svg)](https://incidents.betterstack.com/?utm_source=status_badge)
+<!-- catalog-badges:start -->
+![Resource Packs 506/674 VT · 75.1% · +29 Bedrock](https://img.shields.io/badge/Resource%20Packs-506%2F674%20VT%20%C2%B7%2075.1%25%20%C2%B7%20%2B29%20Bedrock-blue?style=flat-square)
+![Addons 0/57 VT · 0.0% · +0 Bedrock](https://img.shields.io/badge/Addons-0%2F57%20VT%20%C2%B7%200.0%25%20%C2%B7%20%2B0%20Bedrock-blue?style=flat-square)
+![Crafting Tweaks 25/27 VT · 92.6% · +1 Bedrock](https://img.shields.io/badge/Crafting%20Tweaks-25%2F27%20VT%20%C2%B7%2092.6%25%20%C2%B7%20%2B1%20Bedrock-blue?style=flat-square)
+<!-- catalog-badges:end -->
 
 # Files
 
@@ -21,47 +26,15 @@ in or contributing to the project.
 
 ## Contributing
 
-For more detailed instructions, please refer to our [Contributing Guidelines](CONTRIBUTING.md).
+Find setup instructions, the project layout, and GameTest commands in the [contributing guide](CONTRIBUTING.md).
 
-### Project Structure
+### Tools
 
-This is a **Yarn 4 monorepo** where addons are managed as workspace packages and rest are static files:
+- `yarn run create` scaffolds a new addon.
+- `yarn coverage` refreshes the catalog coverage badges.
+- `yarn incompatibilities` reports overlapping resource pack textures.
 
-```md
-├── addons/                      # Yarn workspaces
-│   ├── package.json             # Root workspace
-│   ├── gameplay_changes/        # Category workspace
-│   │   ├── package.json         # Category-level workspace
-│   │   └── graves/              # Addon package
-│   │       └── package.json
-│   └── packs.json               # Addon catalog
-├── resource_packs/              # Resource packs
-├── crafting_tweaks/             # Crafting tweaks
-```
-
-### Resource pack incompatibilities
-
-Run `yarn check:incompatibilities` to find packs that contain the same PNG asset path.
-A category with `mutuallyExclusive: true` in `resource_packs/packs.json` allows
-one pick across its own packs and all subcategories. The checker counts overlaps within
-that subtree separately. Pack icons are excluded.
-Identical files and files supplied by a two-pack combination are ignored.
-Declare remaining conflicts using full `category/pack` IDs or literal category paths
-ending in `/` in a pack's `incompatibilities` list. One declaration covers both directions. An existing combination
-can list the pairs it resolves in `resolvesIncompatibilities`.
-The JSON report includes all overlapping files and known compatible overlaps.
-Add `--write` to apply detected conflicts and remove redundant direct
-declarations covered by a combination, compatible overlap, or exclusive category.
-Add `--write --prune` to also remove direct declarations without a detected PNG
-conflict. Review that diff for conflicts declared for other kinds of assets.
-Both write modes preserve category references and explicit combination resolutions
-and skip pairs affected by missing directories. If a larger combination covers
-an undeclared pair, add its `resolvesIncompatibilities` entry before writing that
-pair so the combination stays selectable.
-
-The checker exits with 1 for remaining undeclared conflicts or 2 for an incomplete
-or failed scan. Missing pack and combination directories are reported.
-Run `yarn typecheck:tools` to check the Node scripts with the tools TypeScript configuration.
+See [repository tool usage](CONTRIBUTING.md#repository-tools) for reports, flags, and validation commands.
 
 ## License
 
