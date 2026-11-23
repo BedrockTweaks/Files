@@ -1,4 +1,5 @@
 {
+	"$schema": "../schemas/packs.schema.json",
 	"section": "crafting_tweaks",
 	"version": [
 		1,
@@ -160,7 +161,5 @@
 				}
 			]
 		}
-	],
-	"combinations": [],
-	"deepMergeFiles": []
+	]
 }

@@ -1,0 +1,16 @@
+{
+	"resource_packs": {
+		"ClassicSheep": "parity/classic_java_sheep",
+		"KindaClassicSheep": "parity/kinda_classic_java_sheep",
+		"PackPngPanorama": "gui/menu_panoramas/pack_panorama",
+		"PotterySherdToShard": "retro/rename_pottery_sherds_to_pottery_shards",
+		"ColoredXpBarsBrown": "gui/experience_bars/brown_xp_bar",
+		"UniversalLushGrass": "terrain/lush_grass_all_round",
+		"DirtPanoramaOverlay": "retro/dirt_background",
+		"SGAToEnglish": "fun/english_enchanting_table_translation"
+	},
+	"crafting_tweaks": {
+		"blackstone cobblestone": "quality_of_life/alternate_cobblestone",
+		"craftable notch apples": "craftables/craftable_enchanted_golden_apple"
+	}
+}

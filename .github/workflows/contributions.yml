@@ -1,13 +1,22 @@
-name: Add contributors to README
+name: Update README and catalog coverage
 
 on:
   push:
     branches:
       - devel
+      - main
+    paths-ignore:
+      - README.md
+  workflow_dispatch:
+
+concurrency:
+  group: files-readme-${{ github.ref }}
+  cancel-in-progress: false
 
 jobs:
   contributions:
     name: Add contributions to README
+    if: github.event_name == 'push' && github.ref == 'refs/heads/devel'
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -20,3 +29,41 @@ jobs:
           auto_detect_branch_protection: false
         env:
           GITHUB_TOKEN: ${{ secrets.BT_CONTRIBUTORS_README_TOKEN }}
+
+  coverage:
+    name: Update catalog coverage
+    needs: contributions
+    if: ${{ !cancelled() && (github.ref == 'refs/heads/devel' || github.ref == 'refs/heads/main') }}
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Check out the current branch
+        uses: actions/checkout@v6
+        with:
+          ref: ${{ github.ref }}
+
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '26.13.0'
+
+      - name: Generate catalog coverage
+        run: npm run coverage
+
+      - name: Upload catalog coverage
+        uses: actions/upload-artifact@v7
+        with:
+          name: catalog-coverage
+          path: out/coverage.json
+          if-no-files-found: error
+
+      - name: Commit README badges
+        run: |
+          git add -- README.md
+          if git diff --cached --quiet; then
+            exit 0
+          fi
+          git -c user.name='github-actions[bot]' \
+              -c user.email='41898282+github-actions[bot]@users.noreply.github.com' \
+              commit -m 'Update catalog coverage badges'
+          git push origin "HEAD:$GITHUB_REF"

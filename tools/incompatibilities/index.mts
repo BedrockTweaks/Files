@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import { randomUUID } from 'node:crypto';
-import { readdir, readFile, rename, rm, writeFile } from 'node:fs/promises';
+import { mkdir, readdir, readFile, rename, rm, writeFile } from 'node:fs/promises';
 import { dirname, isAbsolute, join, relative, resolve, sep } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { applyEdits, modify } from 'jsonc-parser';
@@ -14,7 +14,7 @@ interface CatalogCategory {
 
 interface Catalog {
   categories: CatalogCategory[];
-  combinations: { id: string; combines: string[]; resolvesIncompatibilities?: [string, string][] }[];
+  combinations?: { id: string; combines: string[]; resolvesIncompatibilities?: [string, string][] }[];
 }
 
 export interface Conflict {
@@ -69,22 +69,27 @@ function compatibleOverlapReason(a: string, b: string, file: string): string | u
 function within(root: string, path: string): string {
   const target = resolve(root, path);
   const suffix = relative(root, target);
+
   if (isAbsolute(suffix) || suffix === '..' || suffix.startsWith(`..${sep}`)) {
     throw new Error(`Catalog path escapes resource_packs: ${path}`);
   }
+
   return target;
 }
 
 async function pngFiles(root: string, prefix = ''): Promise<string[]> {
   const files: string[] = [];
+
   for (const entry of await readdir(join(root, prefix), { withFileTypes: true })) {
     const path = prefix ? `${prefix}/${entry.name}` : entry.name;
+
     if (entry.isDirectory()) {
       files.push(...await pngFiles(root, path));
     } else if (entry.isFile() && entry.name.toLowerCase().endsWith('.png') && entry.name !== 'pack_icon.png') {
       files.push(path);
     }
   }
+
   return files.sort(compare);
 }
 
@@ -99,26 +104,33 @@ export async function checkIncompatibilities(
   const catalog: Catalog = JSON.parse(catalogSource);
   const exclusiveCategories = catalog.categories.filter(category => category.mutuallyExclusive)
     .sort((a, b) => a.id.length - b.id.length);
-  const packEntries = catalog.categories.flatMap(category => {
+  const packEntries = catalog.categories.flatMap((category) => {
     const root = exclusiveCategories.find(candidate => category.id === candidate.id || category.id.startsWith(`${candidate.id}/`));
+
     return category.packs.map(pack => [`${category.id}/${pack.id}`, root] as const);
   });
   const exclusiveRootByPack = new Map<string, CatalogCategory | undefined>(packEntries);
-  if (exclusiveRootByPack.size !== packEntries.length) throw new Error('Resource pack catalog contains duplicate pack paths.');
+
+  if (exclusiveRootByPack.size !== packEntries.length) { throw new Error('Resource pack catalog contains duplicate pack paths.'); }
+
   const packs = [...exclusiveRootByPack.keys()].sort(compare);
   const declarations = new Set<string>();
+
   for (const category of catalog.categories) {
     for (const pack of category.packs) {
       const path = `${category.id}/${pack.id}`;
+
       for (const reference of pack.incompatibilities ?? []) {
         const targets = reference.endsWith('/')
           ? packs.filter(target => matchesPackReference(reference, target))
           : [reference].filter(target => target !== path && exclusiveRootByPack.has(target));
+
         if (targets.length === 0) {
           throw new Error(`Invalid incompatibility on ${path}: ${reference}`);
         }
+
         for (const target of targets) {
-          if (target !== path) declarations.add(pairKey(path, target));
+          if (target !== path) { declarations.add(pairKey(path, target)); }
         }
       }
     }
@@ -128,10 +140,12 @@ export async function checkIncompatibilities(
   const missingPacks: string[] = [];
   const missingCombinations: string[] = [];
   let cursor = 0;
+
   await Promise.all(Array.from({ length: Math.min(8, packs.length) }, async () => {
     while (cursor < packs.length) {
       const pack = packs[cursor++];
       let files: string[];
+
       try {
         files = await pngFiles(within(resourceRoot, `files/${pack}`));
       } catch (error) {
@@ -139,10 +153,13 @@ export async function checkIncompatibilities(
           missingPacks.push(pack);
           continue;
         }
+
         throw new Error(`Cannot scan resource pack ${pack}`, { cause: error });
       }
+
       for (const file of files) {
         const owners = pngOwners.get(file) ?? [];
+
         owners.push(pack);
         pngOwners.set(file, owners);
       }
@@ -151,10 +168,14 @@ export async function checkIncompatibilities(
 
   const twoPackCombinations = new Map<string, Set<string>>();
   const largerCombinations: { id: string; combines: string[]; files: Set<string> }[] = [];
-  for (const combination of catalog.combinations) {
-    if (combination.combines.length < 2 || new Set(combination.combines).size !== combination.combines.length) continue;
-    if (!combination.combines.every(pack => exclusiveRootByPack.has(pack))) continue;
+
+  for (const combination of catalog.combinations ?? []) {
+    if (combination.combines.length < 2 || new Set(combination.combines).size !== combination.combines.length) { continue; }
+
+    if (!combination.combines.every(pack => exclusiveRootByPack.has(pack))) { continue; }
+
     let files: string[];
+
     try {
       files = await pngFiles(within(resourceRoot, combination.id));
     } catch (error) {
@@ -162,12 +183,16 @@ export async function checkIncompatibilities(
         missingCombinations.push(combination.id);
         continue;
       }
+
       throw error;
     }
+
     if (combination.combines.length === 2) {
       const key = pairKey(combination.combines[0], combination.combines[1]);
       const covered = twoPackCombinations.get(key) ?? new Set<string>();
-      for (const file of files) covered.add(file);
+
+      for (const file of files) { covered.add(file); }
+
       twoPackCombinations.set(key, covered);
     } else {
       largerCombinations.push({ ...combination, files: new Set(files) });
@@ -178,36 +203,51 @@ export async function checkIncompatibilities(
   const acceptedOverlaps = new Map<string, Conflict & { reason: string }>();
   const categoryCoveredPairs = new Set<string>();
   const contents = new Map<string, Promise<Buffer>>();
+
   const readAsset = (pack: string, file: string): Promise<Buffer> => {
     const path = within(resourceRoot, `files/${pack}/${file}`);
     const cached = contents.get(path) ?? readFile(path);
+
     contents.set(path, cached);
+
     return cached;
   };
+
   for (const [file, owners] of [...pngOwners.entries()].sort(([a], [b]) => compare(a, b))) {
     owners.sort(compare);
+
     for (let i = 0; i < owners.length; i++) {
       const root = exclusiveRootByPack.get(owners[i]);
+
       for (let j = i + 1; j < owners.length; j++) {
         const a = owners[i];
         const b = owners[j];
         const key = pairKey(a, b);
-        if (twoPackCombinations.get(key)?.has(file)) continue;
+
+        if (twoPackCombinations.get(key)?.has(file)) { continue; }
+
         if (root && root === exclusiveRootByPack.get(b)) {
           categoryCoveredPairs.add(key);
           continue;
         }
+
         const reason = compatibleOverlapReason(a, b, file);
+
         if (reason) {
           const overlapKey = JSON.stringify([key, reason]);
           const overlap = acceptedOverlaps.get(overlapKey) ?? { packs: [a, b], files: [], reason };
+
           overlap.files.push(file);
           acceptedOverlaps.set(overlapKey, overlap);
           continue;
         }
+
         const [first, second] = await Promise.all([readAsset(a, file), readAsset(b, file)]);
-        if (first.equals(second)) continue;
+
+        if (first.equals(second)) { continue; }
+
         const conflict = conflicts.get(key) ?? { packs: [a, b], files: [] };
+
         conflict.files.push(file);
         conflicts.set(key, conflict);
       }
@@ -242,10 +282,13 @@ export async function checkIncompatibilities(
       ...report.compatibleOverlaps.map(overlap => pairKey(...overlap.packs)),
     ]);
     const { updatedSource, changes } = updateDeclarations(catalogSource, catalog, report, coveredPairs, prune);
+
     if (updatedSource !== catalogSource) {
       await saveCatalog(catalogPath, catalogSource, updatedSource);
     }
+
     const addedPairs = new Set(changes.added.map(pair => pairKey(...pair)));
+
     report.undeclaredConflicts = report.undeclaredConflicts.filter(({ packs }) => !addedPairs.has(pairKey(...packs)));
     report.changes = changes;
   }
@@ -261,14 +304,15 @@ function updateDeclarations(
   prune: boolean,
 ): { updatedSource: string; changes: NonNullable<IncompatibilityReport['changes']> } {
   const conflicts = new Set(report.conflicts.map(conflict => pairKey(...conflict.packs)));
-  const resolutionsByCombination = new Map(catalog.combinations.map(combination => [
+  const combinations = catalog.combinations ?? [];
+  const resolutionsByCombination = new Map(combinations.map(combination => [
     combination.id,
     new Set((combination.resolvesIncompatibilities ?? []).map(pair => pairKey(...pair))),
   ]));
   const resolvedDeclarations = new Set([...resolutionsByCombination.values()].flatMap(pairs => [...pairs]));
   const missingPacks = new Set(report.missingPacks);
   const missingCombinations = new Set(report.missingCombinations);
-  const incompletePairs = new Set(catalog.combinations
+  const incompletePairs = new Set(combinations
     .filter(combination => missingCombinations.has(combination.id))
     .flatMap(({ combines }) => combines.flatMap((pack, index) =>
       combines.slice(index + 1).map(target => pairKey(pack, target)),
@@ -278,11 +322,14 @@ function updateDeclarations(
     .map(({ packs }) => pairKey(...packs)));
   const additions = new Map<string, string[]>();
   const changes: NonNullable<IncompatibilityReport['changes']> = { added: [], removed: [] };
+
   for (const { packs: [pack, target] } of report.undeclaredConflicts) {
     const key = pairKey(pack, target);
-    if (incompletePairs.has(key) || pairsNeedingResolution.has(key)) continue;
+
+    if (incompletePairs.has(key) || pairsNeedingResolution.has(key)) { continue; }
 
     const targets = additions.get(pack) ?? [];
+
     targets.push(target);
     additions.set(pack, targets);
     changes.added.push([pack, target]);
@@ -291,27 +338,33 @@ function updateDeclarations(
   const indent = source.match(/\r?\n([ \t]+)"/)?.[1] ?? '\t';
   const formattingOptions = { insertSpaces: !indent.includes('\t'), tabSize: indent.length, eol: source.includes('\r\n') ? '\r\n' : '\n' };
   let updatedSource = source;
+
   for (const [categoryIndex, category] of catalog.categories.entries()) {
     for (const [packIndex, pack] of category.packs.entries()) {
       const path = `${category.id}/${pack.id}`;
       const existing = pack.incompatibilities ?? [];
-      const next = existing.filter(target => {
+      const next = existing.filter((target) => {
         const key = pairKey(path, target);
+
         if (target.endsWith('/') || missingPacks.has(path) || missingPacks.has(target) || incompletePairs.has(key)
           || conflicts.has(key) || resolvedDeclarations.has(key) || (!prune && !coveredPairs.has(key))) {
           return true;
         }
+
         changes.removed.push([path, target]);
+
         return false;
       });
       const added = additions.get(path) ?? [];
-      if (next.length === existing.length && added.length === 0) continue;
+
+      if (next.length === existing.length && added.length === 0) { continue; }
 
       next.push(...added);
       const edits = modify(updatedSource, ['categories', categoryIndex, 'packs', packIndex, 'incompatibilities'], next.length ? next : undefined, {
         formattingOptions,
         getInsertionIndex: keys => keys.indexOf('id') + 1,
       });
+
       updatedSource = applyEdits(updatedSource, edits);
     }
   }
@@ -321,11 +374,14 @@ function updateDeclarations(
 
 async function saveCatalog(path: string, original: string, updated: string): Promise<void> {
   const temporary = join(dirname(path), `.packs-${randomUUID()}.tmp`);
+
   try {
     await writeFile(temporary, updated, { flag: 'wx' });
+
     if (await readFile(path, 'utf8') !== original) {
       throw new Error('packs.json changed during the scan. Run the checker again.');
     }
+
     await rename(temporary, path);
   } finally {
     await rm(temporary, { force: true });
@@ -334,22 +390,32 @@ async function saveCatalog(path: string, original: string, updated: string): Pro
 
 async function main(args: string[]): Promise<void> {
   if (args.includes('--help') || args.includes('-h')) {
-    console.log(`Usage: node tools/check-incompatibilities/index.mts [--write [--prune]]
-Reports resource-pack PNG overlaps and catalog declarations as JSON.
+    console.info(`Usage: yarn incompatibilities [--write [--prune]]
+Reports resource-pack PNG overlaps and catalog declarations as JSON on stdout and in out/incompatibilities.json.
 --write adds detected conflicts and removes direct declarations covered by compatibility rules, categories, or combinations.
 --prune also removes direct declarations without detected conflicts. Review the catalog diff for manually declared conflicts.
-Record intentional PNG overlaps in tools/check-incompatibilities/compatible-overlaps.mts.
+Record intentional PNG overlaps in tools/incompatibilities/compatible-overlaps.mts.
 Exit codes: 0 = all conflicts declared, 1 = undeclared conflicts, 2 = scan incomplete or failed.`);
+
     return;
   }
+
   const unknown = args.find(arg => !['--write', '--prune'].includes(arg));
-  if (unknown) throw new Error(`Unknown option: ${unknown}`);
+
+  if (unknown) { throw new Error(`Unknown option: ${unknown}`); }
+
   const write = args.includes('--write');
   const prune = args.includes('--prune');
-  if (prune && !write) throw new Error('--prune requires --write.');
+
+  if (prune && !write) { throw new Error('--prune requires --write.'); }
 
   const report = await checkIncompatibilities(repositoryRoot, { write, prune });
-  console.log(JSON.stringify(report, null, 2));
+  const json = JSON.stringify(report, null, 2);
+  const out = join(repositoryRoot, 'out');
+
+  await mkdir(out, { recursive: true });
+  await writeFile(join(out, 'incompatibilities.json'), `${json}\n`);
+  console.info(json);
   process.exitCode = report.missingPacks.length || report.missingCombinations.length ? 2 : report.undeclaredConflicts.length ? 1 : 0;
 }
 

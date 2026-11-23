@@ -1,0 +1,120 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"title": "Bedrock Tweaks pack catalog",
+	"type": "object",
+	"required": ["section", "version", "categories"],
+	"additionalProperties": false,
+	"properties": {
+		"$schema": { "type": "string" },
+		"section": { "enum": ["resource_packs", "addons", "crafting_tweaks"] },
+		"version": {
+			"description": "Minimum Minecraft version for the catalog.",
+			"type": "array",
+			"items": { "type": "number" }
+		},
+		"categories": {
+			"type": "array",
+			"items": { "$ref": "#/definitions/category" }
+		},
+		"combinations": {
+			"description": "Asset combinations applied when the listed packs are selected together. Omit when unused.",
+			"type": "array",
+			"items": { "$ref": "#/definitions/combination" }
+		},
+		"deepMergeFiles": {
+			"description": "Paths inside the pack that are merged from the selected packs. Omit when unused.",
+			"type": "array",
+			"items": { "type": "string", "minLength": 1 }
+		}
+	},
+	"definitions": {
+		"packId": {
+			"description": "Pack directory name within its category.",
+			"type": "string",
+			"pattern": "^[A-Za-z0-9_+-][A-Za-z0-9_.+-]*$"
+		},
+		"relativePath": {
+			"description": "Relative directory path using forward slashes.",
+			"type": "string",
+			"pattern": "^[A-Za-z0-9_+-][A-Za-z0-9_.+-]*(/[A-Za-z0-9_+-][A-Za-z0-9_.+-]*)*$"
+		},
+		"packReference": {
+			"description": "Full category and pack path, such as world_of_color/slimes/red_slime.",
+			"allOf": [{ "$ref": "#/definitions/relativePath" }, { "pattern": "/" }]
+		},
+		"incompatibilityReference": {
+			"description": "Full pack path or a literal category path ending in /, including its descendants.",
+			"type": "string",
+			"pattern": "^([A-Za-z0-9_+-][A-Za-z0-9_.+-]*/)+([A-Za-z0-9_+-][A-Za-z0-9_.+-]*)?$"
+		},
+		"message": {
+			"type": "object",
+			"required": ["text", "severity"],
+			"additionalProperties": false,
+			"properties": {
+				"text": { "type": "string" },
+				"severity": { "enum": ["success", "info", "warn", "error", "secondary"] }
+			}
+		},
+		"category": {
+			"type": "object",
+			"required": ["id", "packs"],
+			"additionalProperties": false,
+			"properties": {
+				"id": { "$ref": "#/definitions/relativePath" },
+				"name": { "type": "string" },
+				"mutuallyExclusive": {
+					"description": "Allows one selected pack across this category and all its descendants.",
+					"type": "boolean"
+				},
+				"packs": {
+					"type": "array",
+					"items": { "$ref": "#/definitions/pack" }
+				},
+				"message": { "$ref": "#/definitions/message" }
+			}
+		},
+		"pack": {
+			"type": "object",
+			"required": ["id"],
+			"additionalProperties": false,
+			"properties": {
+				"id": { "$ref": "#/definitions/packId" },
+				"name": { "type": "string" },
+				"description": { "type": "string" },
+				"message": { "$ref": "#/definitions/message" },
+				"version": { "type": "string" },
+				"priority": { "type": "number" },
+				"disabled": { "type": "boolean" },
+				"incompatibilities": {
+					"type": "array",
+					"items": { "$ref": "#/definitions/incompatibilityReference" }
+				}
+			}
+		},
+		"combination": {
+			"type": "object",
+			"required": ["id", "combines"],
+			"additionalProperties": false,
+			"properties": {
+				"id": { "$ref": "#/definitions/relativePath" },
+				"combines": {
+					"type": "array",
+					"minItems": 2,
+					"uniqueItems": true,
+					"items": { "$ref": "#/definitions/packReference" }
+				},
+				"resolvesIncompatibilities": {
+					"description": "Exact pairs that can be selected together when every pack in combines is selected.",
+					"type": "array",
+					"items": {
+						"type": "array",
+						"minItems": 2,
+						"maxItems": 2,
+						"items": { "$ref": "#/definitions/packReference" }
+					}
+				}
+			}
+		}
+	}
+}

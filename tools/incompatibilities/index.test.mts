@@ -26,7 +26,7 @@ async function fixture(t: test.TestContext, combinations: { id: string; combines
   return { root, put };
 }
 
-test('reports shared output PNG paths once per pair, excluding metadata and other file types', async t => {
+void test('reports shared output PNG paths once per pair, excluding metadata and other file types', async t => {
   const { root, put } = await fixture(t);
   for (const pack of ['a', 'b']) {
     await put(`files/category/nested/${pack}/textures/blocks/stone.png`, pack);
@@ -43,7 +43,7 @@ test('reports shared output PNG paths once per pair, excluding metadata and othe
   }]);
 });
 
-test('a two-pack combination covers its pair, but a three-pack combination needs its third pack', async t => {
+void test('a two-pack combination covers its pair, but a three-pack combination needs its third pack', async t => {
   const { root, put } = await fixture(t, [
     { id: 'extras/ab', combines: ['category/nested/a', 'category/nested/b'] },
     { id: 'extras/abc', combines: ['category/nested/a', 'category/nested/b', 'category/nested/c'] },
@@ -62,7 +62,7 @@ test('a two-pack combination covers its pair, but a three-pack combination needs
   assert.deepEqual(written.undeclaredConflicts, result.undeclaredConflicts);
 });
 
-test('counts overlaps within each mutually exclusive subtree and reports overlaps across its boundary', async t => {
+void test('counts overlaps within each mutually exclusive subtree and reports overlaps across its boundary', async t => {
   const { root, put } = await fixture(t);
   await put('packs.json', JSON.stringify({
     categories: [
@@ -87,7 +87,7 @@ test('counts overlaps within each mutually exclusive subtree and reports overlap
   ]);
 });
 
-test('accepts literal category declarations for descendants and rejects glob patterns', async t => {
+void test('accepts literal category declarations for descendants and rejects glob patterns', async t => {
   const { root, put } = await fixture(t);
   const source = { id: 'dragon', incompatibilities: ['colors/elytra/'] };
   const catalog = {
@@ -112,7 +112,7 @@ test('accepts literal category declarations for descendants and rejects glob pat
   await assert.rejects(checkIncompatibilities(root), { message: 'Invalid incompatibility on aesthetic/dragon: colors/*/' });
 });
 
-test('ignores identical files and checks what a combination actually covers', async t => {
+void test('ignores identical files and checks what a combination actually covers', async t => {
   const { root, put } = await fixture(t, [
     { id: 'extras/ab', combines: ['category/nested/a', 'category/nested/b'] },
   ]);
@@ -126,7 +126,7 @@ test('ignores identical files and checks what a combination actually covers', as
   assert.deepEqual(conflicts.map(conflict => conflict.files), [['textures/uncovered.png']]);
 });
 
-test('accepts only listed PNG paths for Sticky Piston Sides and slime colors', async t => {
+void test('accepts only listed PNG paths for Sticky Piston Sides and slime colors', async t => {
   const { root, put } = await fixture(t);
   const piston = 'utility/sticky_piston_sides';
   const redSlime = 'world_of_color/slimes/red_slime';
@@ -160,7 +160,7 @@ test('accepts only listed PNG paths for Sticky Piston Sides and slime colors', a
   assert.deepEqual(report.undeclaredConflicts, report.conflicts.slice(1));
 });
 
-test('reports missing catalog pack directories without hiding conflicts in the rest of the catalog', async t => {
+void test('reports missing catalog pack directories without hiding conflicts in the rest of the catalog', async t => {
   const { root } = await fixture(t);
   await writeFile(join(root, 'resource_packs', 'packs.json'), JSON.stringify({
     categories: [{ id: 'category', packs: [{ id: 'missing' }] }], combinations: [],
@@ -170,7 +170,7 @@ test('reports missing catalog pack directories without hiding conflicts in the r
   assert.equal(report.packsScanned, 0);
 });
 
-test('a missing combination folder is reported and does not suppress a conflict', async t => {
+void test('a missing combination folder is reported and does not suppress a conflict', async t => {
   const { root, put } = await fixture(t);
   await put('packs.json', JSON.stringify({
     categories: [{ id: 'category/nested', packs: [{ id: 'a' }, { id: 'b' }] }],
@@ -182,7 +182,7 @@ test('a missing combination folder is reported and does not suppress a conflict'
   assert.equal(report.conflicts.length, 1);
 });
 
-test('writes detected conflicts, removes resolved pairs, and prunes other stale entries on request', async t => {
+void test('writes detected conflicts, removes resolved pairs, and prunes other stale entries on request', async t => {
   const a = 'category/nested/a';
   const b = 'category/nested/b';
   const c = 'category/nested/c';
@@ -236,7 +236,7 @@ test('writes detected conflicts, removes resolved pairs, and prunes other stale 
   assert.equal(await readFile(catalogPath, 'utf8'), prunedSource);
 });
 
-test('writes unaffected pairs and keeps declarations for missing packs or combinations', async t => {
+void test('writes unaffected pairs and keeps declarations for missing packs or combinations', async t => {
   const a = 'category/nested/a';
   const b = 'category/nested/b';
   const c = 'category/nested/c';
@@ -256,11 +256,13 @@ test('writes unaffected pairs and keeps declarations for missing packs or combin
   const report = await checkIncompatibilities(root, { write: true, prune: true });
   assert.deepEqual(report.changes, { added: [[a, c]], removed: [] });
   assert.deepEqual(report.undeclaredConflicts.map(conflict => conflict.packs), [[a, b]]);
-  const updatedCatalog = JSON.parse(await readFile(join(root, 'resource_packs', 'packs.json'), 'utf8'));
+  const updatedCatalog = JSON.parse(await readFile(join(root, 'resource_packs', 'packs.json'), 'utf8')) as {
+    categories: { packs: { incompatibilities?: string[] }[] }[];
+  };
   assert.deepEqual(updatedCatalog.categories[0].packs[0].incompatibilities, [missing, c]);
 });
 
-test('rejects catalog paths outside resource_packs', async t => {
+void test('rejects catalog paths outside resource_packs', async t => {
   const { root } = await fixture(t);
   await writeFile(join(root, 'resource_packs', 'packs.json'), JSON.stringify({
     categories: [{ id: '../../outside', packs: [{ id: 'pack' }] }], combinations: [],
